@@ -1,57 +1,103 @@
 @import "tailwindcss";
 
 @layer base {
+  :root {
+    --bg-main: #F4F4F5;
+    --text-main: #1C1917;
+    --panel-bg: #FFFFFF;
+    --panel-border: rgba(28, 25, 23, 0.15);
+  }
+
+  .dark {
+    --bg-main: #0B101E;
+    --text-main: #F8FAFC;
+    --panel-bg: rgba(20, 21, 24, 0.75);
+    --panel-border: rgba(255, 255, 255, 0.12);
+  }
+
   body {
-    background-color: #0B101E;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .dark body, body.dark {
     background-image: 
-      radial-gradient(circle at 50% 0%, rgba(0, 240, 255, 0.08) 0%, transparent 60%),
-      radial-gradient(circle at 100% 100%, rgba(255, 215, 0, 0.04) 0%, transparent 40%),
+      radial-gradient(circle at 50% 0%, rgba(217, 16, 35, 0.07) 0%, transparent 60%),
+      radial-gradient(circle at 100% 100%, rgba(212, 175, 55, 0.05) 0%, transparent 40%),
       repeating-radial-gradient(ellipse at 50% 50%, rgba(255, 255, 255, 0.015) 0, rgba(255, 255, 255, 0.015) 1px, transparent 2px, transparent 40px);
     background-attachment: fixed;
-    color: #F8FAFC;
-    font-family: 'Inter', sans-serif;
+  }
+
+  body:not(.dark) {
+    background-image:
+      radial-gradient(circle at 50% 0%, rgba(217, 16, 35, 0.04) 0%, transparent 60%),
+      radial-gradient(circle at 100% 100%, rgba(75, 83, 32, 0.06) 0%, transparent 40%),
+      linear-gradient(rgba(28, 25, 23, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(28, 25, 23, 0.03) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 32px 32px, 32px 32px;
+    background-attachment: fixed;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Rajdhani', 'Quantico', sans-serif;
     letter-spacing: 0.05em;
   }
 }
 
-/* Glassmorphism táctico */
+/* Glassmorphism táctico adaptativo (Dark / Light) */
 .glass-panel {
-  background: rgba(20, 21, 24, 0.65);
+  background: var(--panel-bg);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--panel-border);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dark .glass-panel {
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.65);
+}
+
+:not(.dark) .glass-panel {
+  box-shadow: 3px 3px 0px 0px rgba(28, 25, 23, 0.85), 0 8px 24px rgba(0, 0, 0, 0.04);
+  border: 2px solid rgba(28, 25, 23, 0.15);
 }
 
 .glass-panel-cyan {
-  background: rgba(11, 20, 46, 0.7);
+  background: rgba(11, 20, 46, 0.75);
   backdrop-filter: blur(16px);
-  border: 1px solid rgba(0, 240, 255, 0.3);
-  box-shadow: 0 0 25px rgba(0, 240, 255, 0.15);
+  border: 1px solid rgba(217, 16, 35, 0.4);
+  box-shadow: 0 0 25px rgba(217, 16, 35, 0.15);
 }
 
-/* Animación sutil de scanline táctico */
-.scanline {
-  position: relative;
-  overflow: hidden;
-}
-.scanline::after {
-  content: " ";
-  display: block;
-  position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0;
-  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
-  z-index: 20;
-  background-size: 100% 3px, 6px 100%;
-  pointer-events: none;
+:not(.dark) .glass-panel-cyan {
+  background: #FFFFFF;
+  border: 2px solid #4B5320;
+  box-shadow: 4px 4px 0px 0px #363C17;
 }
 
-/* Cinta patriótica del Perú */
+/* Cinta patriótica del Perú (Rojo - Blanco - Rojo) */
 .peru-ribbon {
   height: 4px;
   width: 100%;
   background: linear-gradient(90deg, #D91023 0%, #D91023 33.3%, #FFFFFF 33.3%, #FFFFFF 66.6%, #D91023 66.6%, #D91023 100%);
+  box-shadow: 0 1px 6px rgba(217, 16, 35, 0.4);
+}
+
+/* Scanline táctico nocturno */
+.scanline {
+  position: relative;
+  overflow: hidden;
+}
+
+.dark .scanline::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
+  z-index: 20;
+  background-size: 100% 3px, 6px 100%;
+  pointer-events: none;
 }
