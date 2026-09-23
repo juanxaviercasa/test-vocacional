@@ -27,8 +27,6 @@ const MILITARY_SCHOOLS = [
     rama: 'Fuerza Aérea',
     rango: 'Oficial',
     icono: '✈️',
-    badgeClass: 'bg-sky-500/10 text-sky-400 border-sky-500/30',
-    cardBorder: 'hover:border-sky-400',
     descripcion: 'Balotario oficial para futuros pilotos de caza, transporte, helicópteros y defensa aérea.'
   },
   {
@@ -38,8 +36,6 @@ const MILITARY_SCHOOLS = [
     rama: 'Ejército del Perú',
     rango: 'Oficial',
     icono: '⚔️',
-    badgeClass: 'bg-amber-600/10 text-amber-400 border-amber-600/30',
-    cardBorder: 'hover:border-amber-500',
     descripcion: 'Alma mater del Ejército. Ciencias militares, infantería, blindados e ingeniería de combate.'
   },
   {
@@ -49,8 +45,6 @@ const MILITARY_SCHOOLS = [
     rama: 'Marina de Guerra',
     rango: 'Oficial',
     icono: '⚓',
-    badgeClass: 'bg-blue-600/10 text-blue-400 border-blue-600/30',
-    cardBorder: 'hover:border-blue-500',
     descripcion: 'Formación náutica, comando naval, ingeniería de propulsión y operaciones en altamar.'
   },
   {
@@ -60,8 +54,6 @@ const MILITARY_SCHOOLS = [
     rama: 'Marina de Guerra',
     rango: 'Suboficial',
     icono: '🚢',
-    badgeClass: 'bg-cyan-600/10 text-cyan-400 border-cyan-600/30',
-    cardBorder: 'hover:border-cyan-500',
     descripcion: 'Carreras técnicas navales: sistemas de control, electrónica, armamento y maquinaria marina.'
   },
   {
@@ -71,8 +63,6 @@ const MILITARY_SCHOOLS = [
     rama: 'Fuerza Aérea',
     rango: 'Suboficial',
     icono: '🚀',
-    badgeClass: 'bg-indigo-500/10 text-indigo-400 border-indigo-500/30',
-    cardBorder: 'hover:border-indigo-400',
     descripcion: 'Mantenimiento de aeronaves de combate, aviónica, radares y telemetría espacial.'
   },
   {
@@ -82,8 +72,6 @@ const MILITARY_SCHOOLS = [
     rama: 'Ejército del Perú',
     rango: 'Suboficial',
     icono: '🛡️',
-    badgeClass: 'bg-emerald-600/10 text-emerald-400 border-emerald-600/30',
-    cardBorder: 'hover:border-emerald-500',
     descripcion: 'Suboficiales técnicos de armamento, telecomunicaciones tácticas y mecatrónica.'
   },
   {
@@ -93,8 +81,6 @@ const MILITARY_SCHOOLS = [
     rama: 'Policía Nacional',
     rango: 'Oficial',
     icono: '👮',
-    badgeClass: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/30',
-    cardBorder: 'hover:border-emerald-400',
     descripcion: 'Liderazgo policial, investigación criminalística, orden público y seguridad ciudadana.'
   },
   {
@@ -104,8 +90,6 @@ const MILITARY_SCHOOLS = [
     rama: 'Policía Nacional',
     rango: 'Suboficial',
     icono: '🚓',
-    badgeClass: 'bg-teal-500/10 text-teal-400 border-teal-500/30',
-    cardBorder: 'hover:border-teal-400',
     descripcion: 'Suboficiales de intervención táctica, tránsito, patrullaje y rescate de emergencia.'
   },
 ];
@@ -289,65 +273,74 @@ export default function Pillar4Knowledge() {
             <span>PILAR 4 // PROTOCOLO DE CONOCIMIENTOS ACADÉMICOS</span>
           </div>
 
-          <h1 className="font-military text-2xl sm:text-4xl text-charcoal dark:text-white uppercase tracking-wide">
+          <h1 className="font-military text-2xl sm:text-4xl text-white uppercase tracking-wide">
             SELECCIONA TU ESCUELA MATRIZ OBJETIVO
           </h1>
 
-          <p className="text-xs sm:text-sm text-stone-600 dark:text-gray-300 font-inter mt-2 leading-relaxed">
+          <p className="text-xs sm:text-sm text-gray-300 font-inter mt-2 leading-relaxed">
             Cada institución evalúa con su propio balotario reglamentario 2026/2027. El simulador extraerá 
-            <strong className="text-charcoal dark:text-white font-semibold"> 20 preguntas equitativas</strong> con un temporizador de 
-            <strong className="text-charcoal dark:text-white font-semibold"> 72 segundos por reactivo</strong>. 
-            Aciertos: <span className="text-emerald-500 font-bold">+20 pts</span> | Errores: <span className="text-alert-red font-bold">-1.25 pts</span>.
+            <strong className="text-white font-semibold"> 20 preguntas equitativas</strong> con un temporizador de 
+            <strong className="text-white font-semibold"> 72 segundos por reactivo</strong>. 
+            Aciertos: <span className="text-emerald-400 font-bold">+20 pts</span> | Errores: <span className="text-alert-red font-bold">-1.25 pts</span>.
           </p>
         </div>
 
-        {/* Cuadrícula Limpia de las 8 Escuelas (Sin Scrollbars Horizontales) */}
+        {/* Cuadrícula Limpia de las 8 Escuelas */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {MILITARY_SCHOOLS.map((esc) => (
-            <div
-              key={esc.id}
-              onClick={() => handleStartTest(esc.id)}
-              className={`group relative bg-[#141518] border border-gray-700 rounded-2xl p-5 cursor-pointer transition-all duration-200 hover:scale-[1.02] hover:shadow-xl ${esc.cardBorder} flex flex-col justify-between`}
-            >
-              <div>
-                {/* Header de la Tarjeta */}
-                <div className="flex items-center justify-between gap-2 mb-3">
-                  <span className="text-2xl select-none">{esc.icono}</span>
-                  <span className={`px-2 py-0.5 rounded text-[10px] font-rajdhani font-bold uppercase tracking-wider border ${esc.badgeClass}`}>
-                    {esc.rango}
-                  </span>
+          {MILITARY_SCHOOLS.map((esc) => {
+            const isOficial = esc.rango.toUpperCase() === 'OFICIAL';
+            return (
+              <div
+                key={esc.id}
+                onClick={() => handleStartTest(esc.id)}
+                className="group relative bg-[#141518]/80 backdrop-blur-sm border border-gray-800 rounded-lg p-5 cursor-pointer hover:border-[#00F0FF]/50 hover:bg-[#1A1C23] transition-colors duration-300 flex flex-col justify-between select-none"
+              >
+                <div>
+                  {/* Header de la Tarjeta */}
+                  <div className="flex items-center justify-between gap-2 mb-3">
+                    <span className="text-2xl select-none">{esc.icono}</span>
+                    <span className={`px-2.5 py-0.5 rounded text-[10px] font-rajdhani font-bold uppercase tracking-wider border ${
+                      isOficial
+                        ? "bg-blue-900/30 text-blue-400 border-blue-800"
+                        : "bg-teal-900/30 text-teal-400 border-teal-800"
+                    }`}>
+                      {esc.rango}
+                    </span>
+                  </div>
+
+                  {/* Títulos de Escuelas (Ej. "EMCH", "EOFAP"): text-white font-bold text-xl */}
+                  <h3 className="text-white font-bold text-xl font-military tracking-wide group-hover:text-[#00F0FF] transition-colors">
+                    {esc.sigla}
+                  </h3>
+                  <h4 className="font-rajdhani text-xs text-yellow-400 font-bold uppercase tracking-wider mt-0.5">
+                    {esc.rama}
+                  </h4>
+
+                  {/* Descripciones: text-gray-300 text-sm leading-relaxed */}
+                  <p className="text-gray-300 text-sm leading-relaxed font-inter mt-2.5">
+                    {esc.descripcion}
+                  </p>
                 </div>
 
-                {/* Sigla y Nombre Oficial */}
-                <h3 className="font-military text-xl text-white group-hover:text-neon-cyan transition-colors tracking-wide">
-                  {esc.sigla}
-                </h3>
-                <h4 className="font-rajdhani text-xs text-yellow-400 font-bold uppercase tracking-wider mt-0.5">
-                  {esc.rama}
-                </h4>
-                <p className="font-inter text-xs text-gray-300 mt-2 leading-snug line-clamp-2">
-                  {esc.descripcion}
-                </p>
+                {/* Call to Action: text-[#00F0FF] font-semibold text-xs tracking-wider flex justify-between items-center */}
+                <div className="mt-5 pt-3 border-t border-gray-800 text-[#00F0FF] font-semibold text-xs tracking-wider flex justify-between items-center">
+                  <span>20 REACTIVOS OFICIALES</span>
+                  <span className="inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                    <span>INICIAR</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </span>
+                </div>
               </div>
-
-              {/* Botón de Acción Táctico */}
-              <div className="mt-5 pt-3 border-t border-gray-800 flex items-center justify-between text-xs font-rajdhani font-bold text-gray-300 group-hover:text-white">
-                <span className="text-[11px] text-gray-400">20 REACTIVOS OFICIALES</span>
-                <span className="inline-flex items-center gap-1 text-neon-cyan group-hover:translate-x-1 transition-transform">
-                  <span>INICIAR</span>
-                  <Play className="w-3.5 h-3.5 fill-current" />
-                </span>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* Botón Volver al Pilar 3 */}
-        <div className="flex justify-start mt-8 pt-4 border-t border-stone-300 dark:border-gray-800">
+        <div className="flex justify-start mt-8 pt-4 border-t border-gray-800">
           <button
             type="button"
             onClick={prevPillar}
-            className="flex items-center gap-2 px-5 py-2.5 rounded-xl border border-stone-300 dark:border-gray-700 text-stone-600 dark:text-gray-300 hover:text-charcoal dark:hover:text-white font-rajdhani font-bold text-xs tracking-wider uppercase transition-colors"
+            className="flex items-center gap-2 px-5 py-2.5 rounded-xl border border-gray-800 bg-[#141518]/80 text-gray-300 hover:text-white hover:border-gray-700 font-rajdhani font-bold text-xs tracking-wider uppercase transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
             <span>Volver a Pilar 3 (Intereses Operacionales)</span>

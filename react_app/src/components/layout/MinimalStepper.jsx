@@ -15,22 +15,22 @@ export default function MinimalStepper() {
   const activeMeta = PILLARS_METADATA.find(p => p.id === currentPillar) || PILLARS_METADATA[0];
 
   return (
-    <div className="w-full bg-combat-sand/80 dark:bg-night-deep/90 border-b border-stone-300 dark:border-white/10 backdrop-blur-md transition-colors duration-300">
+    <div className="w-full bg-transparent">
       <div className="max-w-6xl mx-auto px-4 py-2.5 flex items-center justify-between gap-4">
         
         {/* Identificador Táctico Activo */}
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-lg bg-peru-red/10 dark:bg-peru-red/20 border border-peru-red/40 flex items-center justify-center text-peru-red dark:text-peru-red-light shadow-sm flex-shrink-0">
+          <div className="w-8 h-8 rounded-lg bg-peru-red/10 border border-peru-red/40 flex items-center justify-center text-peru-red shadow-sm flex-shrink-0">
             <activeMeta.icon className="w-4 h-4" />
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <span className="font-teko text-xs uppercase font-bold text-peru-red dark:text-peru-red-light tracking-widest leading-none">
+              <span className="font-teko text-xs uppercase font-bold text-peru-red tracking-widest leading-none">
                 FASE {activeMeta.id} DE 5
               </span>
               <span className="w-1.5 h-1.5 rounded-full bg-peru-red animate-pulse" />
             </div>
-            <h2 className="font-rajdhani text-sm sm:text-base font-bold text-charcoal dark:text-white tracking-wide uppercase truncate max-w-[190px] sm:max-w-none leading-none mt-0.5">
+            <h2 className="font-rajdhani text-sm sm:text-base font-bold text-white tracking-wide uppercase truncate max-w-[190px] sm:max-w-none leading-none mt-0.5">
               {activeMeta.name}
             </h2>
           </div>
@@ -48,10 +48,10 @@ export default function MinimalStepper() {
                 onClick={() => goToPillar(p.id)}
                 className={`relative px-2.5 sm:px-3 py-1 rounded-lg font-rajdhani font-bold text-xs tracking-wider transition-all duration-200 flex items-center gap-1.5 select-none ${
                   isActive
-                    ? "bg-peru-red dark:bg-peru-red text-white shadow-tactical-red scale-105"
+                    ? "bg-peru-red text-white shadow-tactical-red scale-105"
                     : isCompleted
-                    ? "bg-military-olive/20 dark:bg-emerald-950/60 text-military-olive dark:text-emerald-400 border border-military-olive/30 dark:border-emerald-500/40 hover:scale-102"
-                    : "bg-white/60 dark:bg-white/5 text-stone-500 dark:text-slate-400 border border-stone-300 dark:border-white/10 hover:border-stone-400 dark:hover:border-white/20"
+                    ? "bg-emerald-950/60 text-emerald-400 border border-emerald-500/40 hover:scale-102"
+                    : "bg-[#141518]/80 text-gray-400 border border-gray-800 hover:border-gray-700 hover:text-white"
                 }`}
               >
                 <span>{p.id}</span>
@@ -64,7 +64,7 @@ export default function MinimalStepper() {
       </div>
 
       {/* Barra de Progreso Patriótica Tricolor */}
-      <div className="w-full h-1 bg-stone-200 dark:bg-slate-900 relative overflow-hidden">
+      <div className="w-full h-1 bg-gray-900 relative overflow-hidden">
         <div
           className="h-full bg-gradient-to-r from-peru-red via-yellow-400 to-peru-red transition-all duration-500 shadow-sm"
           style={{ width: `${(currentPillar / 5) * 100}%` }}
