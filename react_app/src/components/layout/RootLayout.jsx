@@ -10,7 +10,7 @@ import MinimalStepper from './MinimalStepper';
  */
 export default function RootLayout({ children }) {
   return (
-    <div className="min-h-screen flex flex-col bg-slate-50 dark:bg-[#0B101E] text-slate-900 dark:text-gray-100 scanline overflow-x-hidden transition-colors duration-300">
+    <div className="min-h-screen flex flex-col bg-slate-50 dark:bg-[#0B101E] text-slate-900 dark:text-gray-100 overflow-x-hidden transition-colors duration-300">
       
       {/* 1. Cinta Patriótica Nacional (Rojo - Blanco - Rojo) */}
       <div className="peru-ribbon" />
@@ -25,10 +25,10 @@ export default function RootLayout({ children }) {
 
             <div className="flex flex-col">
               <div className="flex items-center gap-2">
-                <span className="hidden xs:inline-block px-1.5 py-0.2 rounded bg-peru-red text-white text-[9px] font-military font-bold uppercase tracking-wider">
+                <span className="hidden xs:inline-block px-1.5 py-0.2 rounded bg-peru-red text-white text-[9px] font-sans font-black uppercase tracking-wider">
                   FFAA & PNP
                 </span>
-                <h1 className="font-military text-base sm:text-xl text-slate-900 dark:text-white uppercase tracking-wider leading-none">
+                <h1 className="font-sans font-black text-base sm:text-xl text-slate-900 dark:text-white uppercase tracking-tight leading-none">
                   COMANDO DE ADMISIÓN
                 </h1>
               </div>

@@ -3,7 +3,7 @@ import MinimalStepper from './MinimalStepper';
 
 export default function TacticalHUDLayout({ children }) {
   return (
-    <div className="min-h-screen flex flex-col bg-night-deep text-slate-100 scanline overflow-x-hidden">
+    <div className="min-h-screen flex flex-col bg-night-deep text-slate-100 overflow-x-hidden">
       
       {/* Cinta tricolor peruana */}
       <div className="peru-ribbon" />

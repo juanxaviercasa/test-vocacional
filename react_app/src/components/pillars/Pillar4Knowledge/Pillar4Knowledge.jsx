@@ -27,7 +27,7 @@ const MILITARY_SCHOOLS = [
     rama: 'Fuerza Aérea del Perú',
     rango: 'Oficial',
     icono: '✈️',
-    bgImage: '/assets/schools/eofap-bg.jpg',
+    bgImage: 'https://images.unsplash.com/photo-1569154941061-e231b4725ef1?auto=format&fit=crop&q=80&w=600',
     descripcion: 'Balotario oficial para futuros pilotos de caza, transporte, helicópteros y defensa aérea.'
   },
   {
@@ -37,7 +37,7 @@ const MILITARY_SCHOOLS = [
     rama: 'Ejército del Perú',
     rango: 'Oficial',
     icono: '⚔️',
-    bgImage: '/assets/schools/emch-bg.jpg',
+    bgImage: 'https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&q=80&w=600',
     descripcion: 'Alma mater del Ejército. Ciencias militares, infantería, blindados e ingeniería de combate.'
   },
   {
@@ -47,7 +47,7 @@ const MILITARY_SCHOOLS = [
     rama: 'Marina de Guerra del Perú',
     rango: 'Oficial',
     icono: '⚓',
-    bgImage: '/assets/schools/enp-bg.jpg',
+    bgImage: 'https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&q=80&w=600',
     descripcion: 'Formación náutica, comando naval, ingeniería de propulsión y operaciones en altamar.'
   },
   {
@@ -57,7 +57,7 @@ const MILITARY_SCHOOLS = [
     rama: 'Marina de Guerra del Perú',
     rango: 'Suboficial',
     icono: '🚢',
-    bgImage: '/assets/schools/citen-bg.jpg',
+    bgImage: 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&q=80&w=600',
     descripcion: 'Carreras técnicas navales: sistemas de control, electrónica, armamento y maquinaria marina.'
   },
   {
@@ -67,7 +67,7 @@ const MILITARY_SCHOOLS = [
     rama: 'Fuerza Aérea del Perú',
     rango: 'Suboficial',
     icono: '🚀',
-    bgImage: '/assets/schools/esofa-bg.jpg',
+    bgImage: 'https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&q=80&w=600',
     descripcion: 'Mantenimiento de aeronaves de combate, aviónica, radares y telemetría espacial.'
   },
   {
@@ -77,7 +77,7 @@ const MILITARY_SCHOOLS = [
     rama: 'Ejército del Perú',
     rango: 'Suboficial',
     icono: '🛡️',
-    bgImage: '/assets/schools/ete-bg.jpg',
+    bgImage: 'https://images.unsplash.com/photo-1579829366248-204fe8413f31?auto=format&fit=crop&q=80&w=600',
     descripcion: 'Suboficiales técnicos de armamento, telecomunicaciones tácticas y mecatrónica.'
   },
   {
@@ -87,7 +87,7 @@ const MILITARY_SCHOOLS = [
     rama: 'Policía Nacional del Perú',
     rango: 'Oficial',
     icono: '👮',
-    bgImage: '/assets/schools/eo_pnp-bg.jpg',
+    bgImage: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=600',
     descripcion: 'Liderazgo policial, investigación criminalística, orden público y seguridad ciudadana.'
   },
   {
@@ -97,7 +97,7 @@ const MILITARY_SCHOOLS = [
     rama: 'Policía Nacional del Perú',
     rango: 'Suboficial',
     icono: '🚓',
-    bgImage: '/assets/schools/eestp_pnp-bg.jpg',
+    bgImage: 'https://images.unsplash.com/photo-1471958680802-1345a694ba6d?auto=format&fit=crop&q=80&w=600',
     descripcion: 'Suboficiales de intervención táctica, tránsito, patrullaje y rescate de emergencia.'
   },
 ];
@@ -227,7 +227,7 @@ export default function Pillar4Knowledge() {
       <div className="w-full max-w-2xl mx-auto px-4 py-16 text-center">
         <div className="bg-[#141518] p-10 rounded-2xl border border-gray-700 shadow-2xl">
           <div className="w-12 h-12 rounded-full border-4 border-neon-cyan border-t-transparent animate-spin mx-auto mb-4" />
-          <h3 className="text-xl font-military font-bold text-white uppercase tracking-wider">
+          <h3 className="text-xl font-sans font-black text-white uppercase tracking-tight">
             DESPLEGANDO BALOTARIO MILITAR...
           </h3>
           <p className="text-xs text-gray-300 font-inter mt-2">
@@ -276,16 +276,16 @@ export default function Pillar4Knowledge() {
         
         {/* Cabecera Táctica del Pre-Test */}
         <div className="text-center max-w-3xl mx-auto mb-8">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-peru-red/10 border border-peru-red/30 text-peru-red text-xs font-teko font-bold uppercase tracking-widest mb-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-peru-red/10 border border-peru-red/30 text-peru-red text-xs font-rajdhani font-bold uppercase tracking-widest mb-3">
             <Shield className="w-3.5 h-3.5" />
             <span>PILAR 4 // PROTOCOLO DE CONOCIMIENTOS ACADÉMICOS</span>
           </div>
 
-          <h1 className="font-military text-2xl sm:text-4xl text-slate-900 dark:text-white uppercase tracking-wide">
+          <h1 className="font-sans font-black tracking-tight sm:tracking-tighter text-2xl sm:text-4xl text-slate-900 dark:text-white uppercase">
             SELECCIONA TU ESCUELA MATRIZ OBJETIVO
           </h1>
 
-          <p className="text-xs sm:text-sm text-slate-700 dark:text-gray-300 font-inter mt-2 leading-relaxed">
+          <p className="text-xs sm:text-sm text-slate-600 dark:text-gray-300 font-inter mt-2 leading-relaxed">
             Cada institución evalúa con su propio balotario reglamentario 2026/2027. El simulador extraerá 
             <strong className="text-slate-900 dark:text-white font-semibold"> 20 preguntas equitativas</strong> con un temporizador de 
             <strong className="text-slate-900 dark:text-white font-semibold"> 72 segundos por reactivo</strong>. 
@@ -293,44 +293,49 @@ export default function Pillar4Knowledge() {
           </p>
         </div>
 
-        {/* Cuadrícula de las 8 Escuelas (Modern Image Cards) */}
+        {/* Cuadrícula de las 8 Escuelas (Modern Image Cards con Fallback y Degradado) */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {MILITARY_SCHOOLS.map((esc) => {
             return (
               <div
                 key={esc.id}
                 onClick={() => handleStartTest(esc.id)}
-                className="group relative overflow-hidden rounded-xl min-h-[340px] border border-slate-200 dark:border-gray-800 shadow-md hover:shadow-2xl transition-all duration-300 cursor-pointer flex flex-col justify-end select-none"
+                className="group relative overflow-hidden rounded-xl min-h-[340px] bg-slate-200 dark:bg-slate-800 border border-slate-200 dark:border-gray-800 shadow-md hover:shadow-2xl transition-all duration-300 cursor-pointer flex flex-col justify-end select-none"
               >
-                {/* 1. FONDO (Imagen) */}
-                <img
-                  src={esc.bgImage}
-                  alt={esc.name}
-                  loading="lazy"
-                  className="object-cover w-full h-full absolute inset-0 transition-transform duration-500 group-hover:scale-105"
-                />
+                {/* 1. FONDO (Imagen con fallback bg-slate-200 dark:bg-slate-800) */}
+                <div className="absolute inset-0 w-full h-full bg-slate-200 dark:bg-slate-800 overflow-hidden">
+                  <img
+                    src={esc.bgImage}
+                    alt={esc.name}
+                    loading="lazy"
+                    onError={(e) => {
+                      e.currentTarget.classList.add('opacity-0');
+                    }}
+                    className="object-cover w-full h-full absolute inset-0 transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
 
-                {/* 2. CAPA DE DEGRADADO (Overlay de transparente a sólido) */}
-                <div className="absolute inset-0 bg-gradient-to-t from-white via-white/90 to-transparent dark:from-[#0B101E] dark:via-[#0B101E]/80 dark:to-transparent pointer-events-none transition-colors duration-300" />
+                {/* 2. CAPA DE DEGRADADO (Overlay directo sobre la imagen para proteger el texto) */}
+                <div className="absolute inset-0 bg-gradient-to-t from-white via-white/90 to-transparent dark:from-[#0B101E] dark:via-[#0B101E]/80 dark:to-transparent pointer-events-none transition-colors duration-300 z-10" />
 
-                {/* 3. CONTENIDO (Texto en la parte inferior) */}
-                <div className="absolute bottom-0 p-5 w-full flex flex-col gap-2 z-10">
-                  {/* Etiqueta "EJÉRCITO DEL PERÚ" (Usa el Rojo Bandera sin opacidad) */}
-                  <span className="text-xs font-bold text-[#D91023] tracking-widest uppercase font-rajdhani leading-none">
+                {/* 3. CONTENIDO (Texto en la parte inferior sobre el degradado) */}
+                <div className="relative p-5 w-full flex flex-col gap-2 z-20">
+                  {/* Etiqueta Rama Militar (Rojo brillante en Dark Mode) */}
+                  <span className="text-[#D91023] dark:text-red-400 font-bold text-xs tracking-widest uppercase font-rajdhani leading-none">
                     {esc.rama}
                   </span>
 
-                  {/* Título de la Escuela (Ej. "EMCH"): text-2xl font-bold text-slate-900 dark:text-white */}
-                  <h3 className="text-2xl font-bold text-slate-900 dark:text-white font-military tracking-wide leading-none">
+                  {/* Título de la Escuela (Sans-serif pesada sin serif) */}
+                  <h3 className="text-2xl font-black font-sans tracking-tight text-slate-900 dark:text-white leading-none">
                     {esc.sigla}
                   </h3>
 
-                  {/* Descripción: text-sm text-slate-700 dark:text-gray-300 line-clamp-3 */}
-                  <p className="text-sm text-slate-700 dark:text-gray-300 line-clamp-3 font-inter leading-snug">
+                  {/* Descripción: texto brillante y legible */}
+                  <p className="text-sm text-slate-600 dark:text-gray-300 line-clamp-3 font-inter leading-snug">
                     {esc.descripcion}
                   </p>
 
-                  {/* Botón "INICIAR": bg-slate-900 text-white dark:bg-[#00F0FF]/10 dark:text-[#00F0FF] dark:border dark:border-[#00F0FF]/30 hover:scale-105 transition-transform */}
+                  {/* Botón "INICIAR" */}
                   <button
                     type="button"
                     className="mt-1 w-full py-2.5 px-4 rounded-lg bg-slate-900 text-white dark:bg-[#00F0FF]/10 dark:text-[#00F0FF] dark:border dark:border-[#00F0FF]/30 hover:scale-105 transition-transform flex items-center justify-center gap-2 font-rajdhani font-bold text-xs uppercase tracking-wider cursor-pointer shadow-sm"
@@ -375,7 +380,7 @@ export default function Pillar4Knowledge() {
             <span className="font-teko text-sm text-neon-cyan uppercase font-bold tracking-widest block">
               EVALUACIÓN ACADÉMICA CONCLUIDA // {activeSchoolMeta.sigla}
             </span>
-            <h2 className="font-military text-2xl sm:text-3xl text-white uppercase tracking-wider mt-1">
+            <h2 className="font-sans font-black text-2xl sm:text-3xl text-white uppercase tracking-tight mt-1">
               DICTAMEN DE RENDIMIENTO
             </h2>
             <p className="text-xs sm:text-sm text-gray-300 font-inter mt-2">
@@ -389,7 +394,7 @@ export default function Pillar4Knowledge() {
               <span className="text-xs font-rajdhani font-bold text-gray-400 uppercase tracking-wider block mb-1">
                 Nota Vigesimal (0 - 20)
               </span>
-              <div className="text-4xl sm:text-5xl font-military text-neon-cyan leading-tight">
+              <div className="text-4xl sm:text-5xl font-sans font-black text-neon-cyan leading-tight">
                 {score.vigesimalScore.toFixed(2)}
               </div>
               <span className={`inline-block px-2.5 py-0.5 mt-2 rounded text-[11px] font-rajdhani font-bold uppercase tracking-wider ${
@@ -405,7 +410,7 @@ export default function Pillar4Knowledge() {
               <span className="text-xs font-rajdhani font-bold text-gray-400 uppercase tracking-wider block mb-1">
                 Puntaje Bruto
               </span>
-              <div className="text-4xl sm:text-5xl font-military text-white leading-tight">
+              <div className="text-4xl sm:text-5xl font-sans font-black text-white leading-tight">
                 {score.rawScore} <span className="text-xs text-gray-500 font-inter">/ {score.maxPossibleScore}</span>
               </div>
               <span className="text-[11px] text-gray-400 block mt-2">
@@ -417,7 +422,7 @@ export default function Pillar4Knowledge() {
               <span className="text-xs font-rajdhani font-bold text-gray-400 uppercase tracking-wider block mb-1">
                 Desglose (20 Reactivos)
               </span>
-              <div className="flex justify-center items-baseline gap-4 mt-2 font-military">
+              <div className="flex justify-center items-baseline gap-4 mt-2 font-sans font-bold">
                 <div>
                   <span className="text-2xl text-emerald-400 block">{score.correctCount}</span>
                   <span className="text-[10px] text-gray-400 font-rajdhani uppercase">Aciertos</span>
@@ -509,7 +514,7 @@ export default function Pillar4Knowledge() {
               <span className="text-[10px] font-teko uppercase font-bold text-peru-red tracking-widest block leading-none">
                 SIMULACRO OFICIAL EN CURSO
               </span>
-              <h2 className="font-military text-base sm:text-lg text-white uppercase tracking-wider leading-none mt-0.5">
+              <h2 className="font-sans font-black text-base sm:text-lg text-white uppercase tracking-tight leading-none mt-0.5">
                 {activeSchoolMeta.sigla} · <span className="text-gray-400 font-rajdhani text-xs">{activeSchoolMeta.rama}</span>
               </h2>
             </div>
@@ -542,7 +547,7 @@ export default function Pillar4Knowledge() {
               <div className="text-[9px] font-rajdhani font-bold text-gray-400 uppercase tracking-widest leading-none">
                 TIEMPO LÍMITE
               </div>
-              <div className={`text-lg font-military tracking-wider leading-none mt-0.5 ${timerTheme.color}`}>
+              <div className={`text-lg font-mono font-bold tracking-wider leading-none mt-0.5 ${timerTheme.color}`}>
                 00:{String(timeRemaining).padStart(2, '0')}s
               </div>
             </div>
@@ -612,9 +617,9 @@ export default function Pillar4Knowledge() {
                     >
                       <div className="flex items-center gap-3.5 flex-1 min-w-0">
                         {/* Chip con la Letra */}
-                        <span className={`w-8 h-8 rounded-lg border font-military text-sm flex items-center justify-center flex-shrink-0 transition-colors ${
+                        <span className={`w-8 h-8 rounded-lg border font-rajdhani font-bold text-sm flex items-center justify-center flex-shrink-0 transition-colors ${
                           isSelected
-                            ? "border-neon-cyan bg-neon-cyan text-night-deep font-bold"
+                            ? "border-neon-cyan bg-neon-cyan text-night-deep"
                             : "border-gray-600 bg-black/60 text-gray-300"
                         }`}>
                           {opt.id}

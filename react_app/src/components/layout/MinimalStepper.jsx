@@ -62,14 +62,6 @@ export default function MinimalStepper() {
         </div>
 
       </div>
-
-      {/* Barra de Progreso Patriótica Tricolor */}
-      <div className="w-full h-1 bg-slate-200 dark:bg-gray-900 relative overflow-hidden">
-        <div
-          className="h-full bg-gradient-to-r from-peru-red via-yellow-400 to-peru-red transition-all duration-500 shadow-sm"
-          style={{ width: `${(currentPillar / 5) * 100}%` }}
-        />
-      </div>
     </div>
   );
 }

@@ -36,12 +36,12 @@ export default {
         'alert-amber': '#F59E0B',
       },
       fontFamily: {
-        military: ['"Black Ops One"', 'Quantico', 'sans-serif'],
-        stencil: ['Quantico', 'sans-serif'],
-        teko: ['Teko', 'sans-serif'],
-        rajdhani: ['Rajdhani', 'sans-serif'],
-        inter: ['Inter', 'sans-serif'],
-        montserrat: ['Montserrat', 'sans-serif'],
+        military: ['"Rajdhani"', '"Black Ops One"', 'ui-sans-serif', 'system-ui', '-apple-system', 'sans-serif'],
+        stencil: ['"Quantico"', 'ui-sans-serif', 'sans-serif'],
+        teko: ['"Teko"', 'ui-sans-serif', 'sans-serif'],
+        rajdhani: ['"Rajdhani"', 'ui-sans-serif', 'sans-serif'],
+        inter: ['"Inter"', 'ui-sans-serif', 'sans-serif'],
+        sans: ['"Inter"', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'sans-serif'],
       },
       boxShadow: {
         'tactical-brutal': '4px 4px 0px 0px rgba(28, 25, 23, 0.9)',
