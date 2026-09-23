@@ -91,7 +91,8 @@ const BRANCHES = [
 export default function TransparenciaPage() {
   const [selectedBranch, setSelectedBranch] = useState('ALL');
   const [searchQuery, setSearchQuery] = useState('');
-  const [activeModalProspecto, setActiveModalProspecto] = useState(null);
+  const [selectedSchoolDetail, setSelectedSchoolDetail] = useState(null);
+  const [detailTab, setDetailTab] = useState('temario'); // 'temario' | 'fisico' | 'medico' | 'requisitos'
   const { startAcademicDiagnostic } = useAssessmentStore();
 
   // Scroll suave automático al hash si se llega con #pdf-emch, etc.
@@ -99,29 +100,447 @@ export default function TransparenciaPage() {
     const hash = window.location.hash;
     if (hash) {
       const targetId = hash.replace(/^#/, '');
-      const el = document.getElementById(targetId);
-      if (el) {
-        setTimeout(() => {
-          el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }, 150);
+      const matched = OFFICIAL_PROSPECTUSES.find(
+        (p) => `pdf-${p.sigla.toLowerCase().replace(/[-_]/g, '')}` === targetId
+      );
+      if (matched) {
+        setSelectedSchoolDetail(matched);
+      } else {
+        const el = document.getElementById(targetId);
+        if (el) {
+          setTimeout(() => {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }, 150);
+        }
       }
     }
   }, []);
 
-  // Cerrar modal con tecla Escape
+  // Volver a la lista con Escape
   useEffect(() => {
     const handleKeyDown = (e) => {
-      if (e.key === 'Escape') {
-        setActiveModalProspecto(null);
+      if (e.key === 'Escape' && selectedSchoolDetail) {
+        setSelectedSchoolDetail(null);
       }
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, []);
+  }, [selectedSchoolDetail]);
 
   const filteredBranches = selectedBranch === 'ALL'
     ? BRANCHES
     : BRANCHES.filter(b => b.id === selectedBranch);
+
+  // =========================================================================
+  // VISTA A PANTALLA COMPLETA: DESGLOSE TÉCNICO OFICIAL DEL PROSPECTO (PDF)
+  // =========================================================================
+  if (selectedSchoolDetail) {
+    const isOficiales = ['EMCH', 'ENP', 'EOFAP', 'EO_PNP'].includes(selectedSchoolDetail.id);
+    const schoolImage = SCHOOL_IMAGES[selectedSchoolDetail.id] || '/assets/general/hero-joint-forces.jpg';
+
+    return (
+      <div className="w-full max-w-7xl mx-auto px-3 sm:px-6 py-6 sm:py-8 space-y-6 sm:space-y-8 animate-in fade-in duration-200">
+        
+        {/* Barra Superior de Navegación y Retorno Rápido */}
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-2 border-b border-slate-200 dark:border-gray-800">
+          <button
+            type="button"
+            onClick={() => setSelectedSchoolDetail(null)}
+            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-300 dark:border-gray-700 bg-white dark:bg-[#141518] hover:border-cyan-500 text-slate-800 dark:text-slate-200 hover:text-cyan-600 dark:hover:text-neon-cyan font-rajdhani font-black text-xs uppercase tracking-wider transition-all cursor-pointer shadow-sm w-fit"
+          >
+            <span>&larr; Volver al Listado de Escuelas</span>
+          </button>
+
+          <div className="flex items-center gap-2.5 flex-wrap">
+            <a
+              href={selectedSchoolDetail.pdfUrl}
+              download={`${selectedSchoolDetail.sigla}_Prospecto_Oficial_2026.pdf`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-500 hover:to-blue-600 text-white font-rajdhani font-black text-xs uppercase tracking-wider shadow-md hover:shadow-cyan-glow transition-all"
+            >
+              <Download className="w-4 h-4" />
+              <span>Descargar Prospecto Oficial PDF</span>
+            </a>
+
+            <button
+              type="button"
+              onClick={() => startAcademicDiagnostic(selectedSchoolDetail.sigla)}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-neon-cyan text-night-deep font-rajdhani font-black text-xs uppercase tracking-wider shadow-cyan-glow hover:bg-cyan-300 transition-all cursor-pointer"
+            >
+              <span>Rendir Simulacro Académico</span>
+              <ArrowRight className="w-4 h-4" />
+            </button>
+          </div>
+        </div>
+
+        {/* Cabecera Panorámica 16:9 de la Escuela Matriz Seleccionada */}
+        <div className="relative overflow-hidden rounded-3xl bg-night-deep border border-slate-700/80 dark:border-cyan-500/40 shadow-2xl">
+          <div className="relative aspect-video sm:aspect-[21/9] w-full overflow-hidden bg-slate-900">
+            <img
+              src={schoolImage}
+              alt={`Campus de ${selectedSchoolDetail.nombre}`}
+              className="w-full h-full object-cover object-center"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0B101E] via-[#0B101E]/80 to-black/40" />
+            
+            <div className="absolute top-4 left-4 sm:top-6 sm:left-6 flex items-center gap-3">
+              <span className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-black/70 backdrop-blur-md border border-cyan-400/50 flex items-center justify-center text-3xl shadow-lg">
+                {selectedSchoolDetail.icono}
+              </span>
+              <div>
+                <span className={`px-3 py-1 rounded-full text-[10px] sm:text-xs font-rajdhani font-black uppercase tracking-wider border backdrop-blur-md ${
+                  isOficiales ? 'bg-cyan-950/80 text-cyan-300 border-cyan-500/50' : 'bg-amber-950/80 text-amber-300 border-amber-500/50'
+                }`}>
+                  {isOficiales ? 'ESCUELA DE OFICIALES · 5 AÑOS DE FORMACIÓN' : 'ESCUELA DE SUBOFICIALES · 3 AÑOS DE FORMACIÓN'}
+                </span>
+                <span className="block text-xs font-mono text-slate-300 mt-1 uppercase">
+                  {selectedSchoolDetail.fuerza}
+                </span>
+              </div>
+            </div>
+
+            <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 space-y-1">
+              <h1 className="text-xl sm:text-3xl lg:text-4xl font-sans font-black text-white uppercase tracking-tight leading-tight drop-shadow-md">
+                {selectedSchoolDetail.nombre}
+              </h1>
+              <p className="text-xs sm:text-sm font-mono text-cyan-300 flex items-center gap-2">
+                <span>⚖️ {selectedSchoolDetail.resolucionOficial}</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Pestañas de Navegación del Desglose Técnico Completo */}
+        <div className="flex flex-wrap items-center gap-2 border-b border-slate-200 dark:border-gray-800 pb-2">
+          {[
+            { id: 'temario', label: '1. Temario Académico DECO', icon: BookOpen },
+            { id: 'fisico', label: '2. Baremos Físicos Oficiales', icon: Activity },
+            { id: 'medico', label: '3. Antropometría & Examen Médico', icon: ShieldCheck },
+            { id: 'requisitos', label: '4. Requisitos & Base Legal', icon: FileCheck2 }
+          ].map((tab) => {
+            const Icon = tab.icon;
+            const isActive = detailTab === tab.id;
+            return (
+              <button
+                key={tab.id}
+                type="button"
+                onClick={() => setDetailTab(tab.id)}
+                className={`px-4 py-2.5 rounded-xl font-rajdhani font-bold text-xs sm:text-sm uppercase tracking-wider transition-all cursor-pointer flex items-center gap-2 border ${
+                  isActive
+                    ? 'bg-neon-cyan text-night-deep border-neon-cyan shadow-[0_0_15px_rgba(0,240,255,0.4)] font-black'
+                    : 'bg-white dark:bg-[#121624] border-slate-200 dark:border-gray-800 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5'
+                }`}
+              >
+                <Icon className="w-4 h-4" />
+                <span>{tab.label}</span>
+              </button>
+            );
+          })}
+        </div>
+
+        {/* CONTENIDO DESGLOSADO DE CADA PESTAÑA */}
+        <div className="bg-white dark:bg-[#121624] rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-gray-800 shadow-md space-y-6">
+          
+          {/* TAB 1: TEMARIO ACADÉMICO DECO */}
+          {detailTab === 'temario' && (
+            <div className="space-y-6">
+              <div className="flex items-center justify-between flex-wrap gap-2 pb-3 border-b border-slate-100 dark:border-gray-800">
+                <div>
+                  <h3 className="text-xl sm:text-2xl font-sans font-black text-slate-900 dark:text-white uppercase tracking-tight">
+                    Balotario de Ciencias y Letras (Metodología DECO)
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 font-inter mt-1">
+                    {selectedSchoolDetail.paginasTemario}
+                  </p>
+                </div>
+                <div className="px-3 py-1.5 rounded-xl bg-cyan-50 dark:bg-cyan-950/60 border border-cyan-300 dark:border-cyan-500/30 text-cyan-800 dark:text-cyan-300 text-xs font-mono font-bold">
+                  100 Preguntas · 3 Horas · 72s por Reactivo
+                </div>
+              </div>
+
+              {/* Matriz de Materias y Contenidos Extraídos del PDF Oficial */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                
+                <div className="p-4 rounded-2xl bg-slate-50 dark:bg-black/30 border border-slate-200 dark:border-gray-800 space-y-2">
+                  <div className="flex items-center gap-2 text-cyan-600 dark:text-cyan-400 font-rajdhani font-bold text-base uppercase">
+                    <span>📐 Álgebra, Aritmética y Trigonometría</span>
+                  </div>
+                  <ul className="text-xs sm:text-sm text-slate-700 dark:text-slate-300 space-y-1.5 font-inter list-disc list-inside">
+                    <li>Ecuaciones lineales, sistemas cuadráticos y logaritmos.</li>
+                    <li>Matrices, determinantes y progresiones aritméticas/geométricas.</li>
+                    <li>Identidades trigonométricas fundamentales, ángulos compuestos y cónicas.</li>
+                    <li>Razones, proporciones, porcentajes y regla de tres compuesta.</li>
+                  </ul>
+                </div>
+
+                <div className="p-4 rounded-2xl bg-slate-50 dark:bg-black/30 border border-slate-200 dark:border-gray-800 space-y-2">
+                  <div className="flex items-center gap-2 text-cyan-600 dark:text-cyan-400 font-rajdhani font-bold text-base uppercase">
+                    <span>⚡ Física Clásica y Mecánica</span>
+                  </div>
+                  <ul className="text-xs sm:text-sm text-slate-700 dark:text-slate-300 space-y-1.5 font-inter list-disc list-inside">
+                    <li>Cinemática escalar y vectorial (MRU, MRUV, MCU, Tiro Parabólico).</li>
+                    <li>Leyes de Newton, estática, dinámica lineal y fuerza de rozamiento.</li>
+                    <li>Trabajo mecánico, potencia y conservación de la energía mecánica.</li>
+                    <li>Hidrostática (Presión, Principio de Pascal y Arquímedes) y electrostática.</li>
+                  </ul>
+                </div>
+
+                <div className="p-4 rounded-2xl bg-slate-50 dark:bg-black/30 border border-slate-200 dark:border-gray-800 space-y-2">
+                  <div className="flex items-center gap-2 text-cyan-600 dark:text-cyan-400 font-rajdhani font-bold text-base uppercase">
+                    <span>📖 Comunicación, Razonamiento Verbal & DECO</span>
+                  </div>
+                  <ul className="text-xs sm:text-sm text-slate-700 dark:text-slate-300 space-y-1.5 font-inter list-disc list-inside">
+                    <li>Comprensión lectora contextualizada bajo escenarios de resolución táctica.</li>
+                    <li>Inferencias lógicas, sentido contextual y coherencia textual.</li>
+                    <li>Analogías operacionales, conectores lógicos y precisión léxica.</li>
+                    <li>Sintaxis, ortografía de la lengua española y redacción técnica.</li>
+                  </ul>
+                </div>
+
+                <div className="p-4 rounded-2xl bg-slate-50 dark:bg-black/30 border border-slate-200 dark:border-gray-800 space-y-2">
+                  <div className="flex items-center gap-2 text-cyan-600 dark:text-cyan-400 font-rajdhani font-bold text-base uppercase">
+                    <span>🇵🇪 Historia del Perú, Geografía y Geopolítica</span>
+                  </div>
+                  <ul className="text-xs sm:text-sm text-slate-700 dark:text-slate-300 space-y-1.5 font-inter list-disc list-inside">
+                    <li>Proceso emancipador, Campañas de Junín y Ayacucho.</li>
+                    <li>Guerra del Pacífico: Campaña Naval de Grau y terrestre de Bolognesi y Cáceres.</li>
+                    <li>Conflictos del Cenepa y pacificación nacional.</li>
+                    <li>Geografía física del Perú: relieve, fronteras territoriales y soberanía marítima.</li>
+                  </ul>
+                </div>
+
+              </div>
+
+              {/* Sistema de Calificación y Penalización Oficial */}
+              <div className="p-4 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div className="space-y-1 text-xs sm:text-sm text-slate-800 dark:text-slate-200 font-inter">
+                  <strong className="text-amber-600 dark:text-amber-400 uppercase font-rajdhani block text-base">
+                    Baremo Oficial de Calificación DECO:
+                  </strong>
+                  <span>• Acierto: <strong>+20.00 puntos</strong> | Error: <strong>-1.25 puntos</strong> (penalización oficial por azar) | Blanco: <strong>0.00 puntos</strong>.</span>
+                  <span className="block text-xs text-slate-500 dark:text-slate-400">Nota mínima aprobatoria institucional: <strong>12.00 puntos</strong> en escala vigesimal.</span>
+                </div>
+
+                <button
+                  type="button"
+                  onClick={() => startAcademicDiagnostic(selectedSchoolDetail.sigla)}
+                  className="px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-night-deep font-rajdhani font-black text-xs uppercase tracking-wider shadow-md whitespace-nowrap cursor-pointer"
+                >
+                  Practicar con Reactivos Oficiales &rarr;
+                </button>
+              </div>
+            </div>
+          )}
+
+          {/* TAB 2: BAREMOS FÍSICOS OFICIALES */}
+          {detailTab === 'fisico' && (
+            <div className="space-y-6">
+              <div className="pb-3 border-b border-slate-100 dark:border-gray-800">
+                <h3 className="text-xl sm:text-2xl font-sans font-black text-slate-900 dark:text-white uppercase tracking-tight">
+                  Pruebas Físicas de Esfuerzo Máximo y Tablas Oficiales
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 font-inter mt-1">
+                  {selectedSchoolDetail.paginasFisico}
+                </p>
+              </div>
+
+              {/* Grid de 4 Pruebas Físicas con Datos Oficiales */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                
+                <div className="p-4 rounded-2xl bg-slate-50 dark:bg-black/30 border border-slate-200 dark:border-gray-800 space-y-2">
+                  <div className="relative aspect-video w-full rounded-xl overflow-hidden mb-2 shadow-inner">
+                    <img src="/assets/general/cadets-physical-training.jpg" alt="Trote Cooper" className="w-full h-full object-cover" />
+                  </div>
+                  <h4 className="font-rajdhani font-bold text-base text-slate-900 dark:text-white uppercase">
+                    🏃 Trote de Cooper 2,400m
+                  </h4>
+                  <div className="text-xs text-slate-600 dark:text-slate-300 space-y-1 font-inter">
+                    <div>• 20 Pts: <strong>&lt; 9 min 30 s</strong></div>
+                    <div>• 16 Pts: <strong>10 min 15 s</strong></div>
+                    <div>• 12 Pts (Mínimo): <strong>11 min 30 s</strong></div>
+                    <div className="text-red-500 font-bold">• Descalificación: &gt; 11:31 min</div>
+                  </div>
+                </div>
+
+                <div className="p-4 rounded-2xl bg-slate-50 dark:bg-black/30 border border-slate-200 dark:border-gray-800 space-y-2">
+                  <div className="relative aspect-video w-full rounded-xl overflow-hidden mb-2 shadow-inner">
+                    <img src="/assets/general/physical-test-pullups.jpg" alt="Barras de Tracción" className="w-full h-full object-cover" />
+                  </div>
+                  <h4 className="font-rajdhani font-bold text-base text-slate-900 dark:text-white uppercase">
+                    💪 Barras Fijas de Tracción
+                  </h4>
+                  <div className="text-xs text-slate-600 dark:text-slate-300 space-y-1 font-inter">
+                    <div>• 20 Pts: <strong>16 repeticiones</strong></div>
+                    <div>• 16 Pts: <strong>12 repeticiones</strong></div>
+                    <div>• 12 Pts (Mínimo): <strong>8 repeticiones</strong></div>
+                    <div className="text-slate-400 text-[11px]">Estrictas, mentón sobre barra, sin balanceo.</div>
+                  </div>
+                </div>
+
+                <div className="p-4 rounded-2xl bg-slate-50 dark:bg-black/30 border border-slate-200 dark:border-gray-800 space-y-2">
+                  <div className="relative aspect-video w-full rounded-xl overflow-hidden mb-2 shadow-inner">
+                    <img src="/assets/general/physical-test-swimming.jpg" alt="Natación Militar" className="w-full h-full object-cover" />
+                  </div>
+                  <h4 className="font-rajdhani font-bold text-base text-slate-900 dark:text-white uppercase">
+                    🏊 Natación Militar Utilitaria
+                  </h4>
+                  <div className="text-xs text-slate-600 dark:text-slate-300 space-y-1 font-inter">
+                    <div>• Distancia: <strong>50 metros libres</strong></div>
+                    <div>• 20 Pts: <strong>&lt; 40 segundos</strong></div>
+                    <div>• 12 Pts (Mínimo): <strong>&lt; 60 segundos</strong></div>
+                    <div className="text-slate-400 text-[11px]">Estilo crol o pecho continuo sin tocar bordes.</div>
+                  </div>
+                </div>
+
+                <div className="p-4 rounded-2xl bg-slate-50 dark:bg-black/30 border border-slate-200 dark:border-gray-800 space-y-2">
+                  <div className="relative aspect-video w-full rounded-xl overflow-hidden mb-2 shadow-inner">
+                    <img src="/assets/general/glossary-diving-valor.jpg" alt="Salto de Valor" className="w-full h-full object-cover" />
+                  </div>
+                  <h4 className="font-rajdhani font-bold text-base text-slate-900 dark:text-white uppercase">
+                    🎖️ Salto de Valor (5 Metros)
+                  </h4>
+                  <div className="text-xs text-slate-600 dark:text-slate-300 space-y-1 font-inter">
+                    <div>• Altura: <strong>5.00 metros</strong> a fosa olímpica</div>
+                    <div>• Condición: <strong>Aprobado / Descalificado</strong></div>
+                    <div>• Posición: <strong>Firmeza vertical</strong>, brazos pegados</div>
+                    <div className="text-red-500 font-bold">• Descarte: Titubeo mayor a 3 segundos</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          )}
+
+          {/* TAB 3: ANTROPOMETRÍA Y EXAMEN MÉDICO */}
+          {detailTab === 'medico' && (
+            <div className="space-y-6">
+              <div className="pb-3 border-b border-slate-100 dark:border-gray-800">
+                <h3 className="text-xl sm:text-2xl font-sans font-black text-slate-900 dark:text-white uppercase tracking-tight">
+                  Tabla Antropométrica Oficial y Perfil de Salud
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 font-inter mt-1">
+                  {selectedSchoolDetail.paginasMedico}
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                
+                <div className="p-5 rounded-2xl bg-slate-50 dark:bg-black/30 border border-slate-200 dark:border-gray-800 space-y-3">
+                  <div className="text-cyan-600 dark:text-cyan-400 font-rajdhani font-bold text-lg uppercase flex items-center gap-2">
+                    <span>📏 Talla Mínima Descalzo</span>
+                  </div>
+                  <div className="space-y-2 text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-inter">
+                    <div>• Varones: <strong>1.68 m</strong> (FFAA) / <strong>1.67 m</strong> (PNP)</div>
+                    <div>• Damas: <strong>1.60 m</strong> (FFAA) / <strong>1.58 m</strong> (PNP)</div>
+                    <p className="text-xs text-slate-500 dark:text-slate-400 pt-1">
+                      Medido con estadiómetro calibrado y talones juntos. Cero milímetros de tolerancia por debajo de la valla.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="p-5 rounded-2xl bg-slate-50 dark:bg-black/30 border border-slate-200 dark:border-gray-800 space-y-3">
+                  <div className="text-cyan-600 dark:text-cyan-400 font-rajdhani font-bold text-lg uppercase flex items-center gap-2">
+                    <span>⚖️ Índice de Masa Corporal (IMC)</span>
+                  </div>
+                  <div className="space-y-2 text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-inter">
+                    <div>• Oficiales: <strong>18.5 a 27.5 kg/m²</strong></div>
+                    <div>• Suboficiales: <strong>18.5 a 28.0 kg/m²</strong></div>
+                    <p className="text-xs text-slate-500 dark:text-slate-400 pt-1">
+                      Descarte directo por desnutrición (IMC &lt; 18.5) o por sobrepeso/obesidad según tabla MINDEF.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="p-5 rounded-2xl bg-slate-50 dark:bg-black/30 border border-slate-200 dark:border-gray-800 space-y-3">
+                  <div className="text-cyan-600 dark:text-cyan-400 font-rajdhani font-bold text-lg uppercase flex items-center gap-2">
+                    <span>👁️ Agudeza Visual & Salud</span>
+                  </div>
+                  <div className="space-y-2 text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-inter">
+                    <div>• Armas / Vuelo: <strong>20/20 estricto</strong> sin lentes</div>
+                    <div>• Servicios / Técnica: Hasta <strong>20/40</strong> corregible</div>
+                    <div>• Test de Ishihara: Visión cromática 100% normal (cero daltonismo).</div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div className="p-4 rounded-2xl bg-slate-100 dark:bg-black/40 border border-slate-200 dark:border-gray-800 text-xs sm:text-sm text-slate-600 dark:text-slate-300 space-y-1 font-inter">
+                <strong>🩺 Batería de Exámenes Clínicos Eliminatorios:</strong>
+                <p>Electrocardiograma en reposo y esfuerzo, radiografía panorámica de columna y tórax, odontología (máx. 2 piezas faltantes no contiguas) y panel toxicológico de 5 sustancias.</p>
+              </div>
+            </div>
+          )}
+
+          {/* TAB 4: REQUISITOS Y MARCO LEGAL */}
+          {detailTab === 'requisitos' && (
+            <div className="space-y-6">
+              <div className="pb-3 border-b border-slate-100 dark:border-gray-800">
+                <h3 className="text-xl sm:text-2xl font-sans font-black text-slate-900 dark:text-white uppercase tracking-tight">
+                  Requisitos Civiles, Legales y Base Doctrinal
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 font-inter mt-1">
+                  {selectedSchoolDetail.resolucionOficial} · {selectedSchoolDetail.notaAuditoria}
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5 text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-inter">
+                
+                <div className="p-5 rounded-2xl bg-slate-50 dark:bg-black/30 border border-slate-200 dark:border-gray-800 space-y-2">
+                  <h4 className="font-rajdhani font-bold text-base text-slate-900 dark:text-white uppercase">
+                    📜 Requisitos de Inscripción Obligatorios
+                  </h4>
+                  <ul className="space-y-1.5 list-disc list-inside">
+                    <li>Ser peruano(a) de nacimiento.</li>
+                    <li>Estado civil soltero(a), sin hijos ni dependientes familiares.</li>
+                    <li>Edad: Mínimo 15 años y máximo 21 años, 11 meses y 29 días al año de ingreso.</li>
+                    <li>Certificados de secundaria completa visados por UGEL / MINEDU.</li>
+                    <li>No haber sido separado de ninguna institución armada ni civil por sanción disciplinaria.</li>
+                  </ul>
+                </div>
+
+                <div className="p-5 rounded-2xl bg-slate-50 dark:bg-black/30 border border-slate-200 dark:border-gray-800 space-y-2">
+                  <h4 className="font-rajdhani font-bold text-base text-slate-900 dark:text-white uppercase">
+                    ⚖️ Marco Legal y Decretos Supremos
+                  </h4>
+                  <ul className="space-y-1.5 list-disc list-inside">
+                    <li>Ley N° 29248 (Ley del Servicio Militar) y reglamentos complementarios.</li>
+                    <li>Decreto Legislativo N° 1267 (Ley de la Policía Nacional del Perú).</li>
+                    <li>Directivas Generales de Admisión CCFFAA / Comando Conjunto.</li>
+                    <li>Certificado de Antecedentes Policiales, Penales y Judiciales inmaculados.</li>
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+          )}
+
+        </div>
+
+        {/* Footer de Retorno al Listado General */}
+        <div className="p-6 rounded-2xl bg-white dark:bg-[#121624] border border-slate-200 dark:border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
+          <button
+            type="button"
+            onClick={() => setSelectedSchoolDetail(null)}
+            className="px-6 py-3 rounded-xl border border-slate-300 dark:border-gray-700 hover:border-cyan-500 font-rajdhani font-bold text-xs uppercase tracking-wider text-slate-700 dark:text-slate-200 hover:text-cyan-600 dark:hover:text-neon-cyan transition-colors cursor-pointer"
+          >
+            &larr; Volver al Listado de Escuelas
+          </button>
+
+          <a
+            href={selectedSchoolDetail.pdfUrl}
+            download={`${selectedSchoolDetail.sigla}_Prospecto_Oficial_2026.pdf`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-500 hover:to-blue-600 text-white font-rajdhani font-black text-xs uppercase tracking-wider shadow-md hover:shadow-cyan-glow transition-all"
+          >
+            Descargar Documento Oficial Completo (PDF)
+          </a>
+        </div>
+
+      </div>
+    );
+  }
 
   return (
     <div className="w-full max-w-7xl mx-auto px-3 sm:px-6 py-6 sm:py-8 space-y-8 sm:space-y-10">
@@ -307,8 +726,8 @@ export default function TransparenciaPage() {
                       id={cardAnchorId}
                       className="h-full flex flex-col justify-between rounded-2xl transition-all duration-300 overflow-hidden border bg-white dark:bg-[#111625] border-slate-200 dark:border-gray-800 hover:border-slate-400 dark:hover:border-cyan-500/50 shadow-md group"
                     >
-                      {/* Cabecera Fotográfica Panorámica de la Escuela Matriz */}
-                      <div className="relative h-44 sm:h-48 w-full overflow-hidden bg-slate-900 flex-shrink-0">
+                      {/* Cabecera Fotográfica Panorámica en Proporción 16:9 Natural */}
+                      <div className="relative aspect-video w-full overflow-hidden bg-slate-900 flex-shrink-0 shadow-inner">
                         <img
                           src={schoolImage}
                           alt={`Campus y Cadetes de ${prospecto.sigla}`}
@@ -371,15 +790,15 @@ export default function TransparenciaPage() {
                             <span>Descargar Prospecto Oficial PDF</span>
                           </a>
 
-                          {/* Acciones Secundarias: Apertura de Modal DECO y Simulación */}
+                          {/* Acciones Secundarias: Apertura de Desglose Completo y Simulación */}
                           <div className="flex items-center justify-between pt-1 text-xs">
                             <button
                               type="button"
-                              onClick={() => setActiveModalProspecto(prospecto)}
+                              onClick={() => setSelectedSchoolDetail(prospecto)}
                               className="font-rajdhani font-bold text-cyan-600 dark:text-neon-cyan hover:underline flex items-center gap-1.5 cursor-pointer py-1"
                             >
                               <BookOpen className="w-3.5 h-3.5" />
-                              <span>Ver Temario DECO & Baremos</span>
+                              <span>Ver Desglose Completo & Temario DECO</span>
                             </button>
 
                             <button
@@ -405,102 +824,6 @@ export default function TransparenciaPage() {
           );
         })}
       </div>
-
-      {/* 4. MODAL TÁCTICO DE TEMARIO OFICIAL Y BAREMOS (MANTIENE LA SIMETRÍA DEL GRID) */}
-      {activeModalProspecto && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-in fade-in duration-200">
-          <div className="relative w-full max-w-2xl bg-white dark:bg-[#0e1424] border-2 border-cyan-500/50 rounded-3xl shadow-[0_0_50px_rgba(0,240,255,0.2)] overflow-hidden flex flex-col max-h-[90vh]">
-            
-            {/* Cabecera del Modal con Fotografía y Emblema */}
-            <div className="p-6 bg-gradient-to-r from-slate-900 via-[#141d34] to-slate-900 border-b border-cyan-500/30 flex items-center justify-between text-white">
-              <div className="flex items-center gap-3">
-                <span className="text-3xl select-none">{activeModalProspecto.icono}</span>
-                <div>
-                  <div className="flex items-center gap-2">
-                    <span className="font-sans font-black text-xl text-white uppercase tracking-tight">
-                      {activeModalProspecto.sigla} · TEMARIO & BAREMOS
-                    </span>
-                    <span className="px-2 py-0.5 rounded bg-cyan-950/80 border border-cyan-500/40 text-neon-cyan text-[10px] font-mono font-bold">
-                      OFICIAL 2026
-                    </span>
-                  </div>
-                  <p className="text-xs text-slate-300 font-inter line-clamp-1">
-                    {activeModalProspecto.nombre}
-                  </p>
-                </div>
-              </div>
-
-              <button
-                type="button"
-                onClick={() => setActiveModalProspecto(null)}
-                className="p-2 rounded-xl bg-white/10 hover:bg-white/20 text-white transition-colors cursor-pointer"
-                aria-label="Cerrar ventana"
-              >
-                <X className="w-5 h-5 text-slate-300 hover:text-white" />
-              </button>
-            </div>
-
-            {/* Contenido con Scroll Suave y Pestañas / Bloques */}
-            <div className="p-6 overflow-y-auto space-y-5 text-slate-800 dark:text-slate-200 text-sm font-inter">
-              <div className="p-4 rounded-2xl bg-cyan-500/10 border border-cyan-500/30">
-                <div className="flex items-center gap-2 text-cyan-600 dark:text-neon-cyan font-rajdhani font-black text-sm uppercase tracking-wider mb-1">
-                  <BookOpen className="w-4 h-4" />
-                  <span>📚 Balotario Oficial de Ciencias y Letras:</span>
-                </div>
-                <p className="text-xs sm:text-sm leading-relaxed">{activeModalProspecto.paginasTemario}</p>
-              </div>
-
-              <div className="p-4 rounded-2xl bg-emerald-500/10 border border-emerald-500/30">
-                <div className="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-rajdhani font-black text-sm uppercase tracking-wider mb-1">
-                  <Activity className="w-4 h-4" />
-                  <span>🏃 Baremos de Aptitud Física de Combate:</span>
-                </div>
-                <p className="text-xs sm:text-sm leading-relaxed">{activeModalProspecto.paginasFisico}</p>
-              </div>
-
-              <div className="p-4 rounded-2xl bg-amber-500/10 border border-amber-500/30">
-                <div className="flex items-center gap-2 text-amber-600 dark:text-amber-400 font-rajdhani font-black text-sm uppercase tracking-wider mb-1">
-                  <ShieldCheck className="w-4 h-4" />
-                  <span>🩺 Tabla Médica y Perfil Antropométrico:</span>
-                </div>
-                <p className="text-xs sm:text-sm leading-relaxed">{activeModalProspecto.paginasMedico}</p>
-              </div>
-
-              <div className="p-3 rounded-xl bg-slate-100 dark:bg-black/40 border border-slate-200 dark:border-gray-800 text-xs font-mono text-slate-500 dark:text-slate-400">
-                ⚖️ <strong>Marco Legal Oficial:</strong> {activeModalProspecto.resolucionOficial} · {activeModalProspecto.notaAuditoria}
-              </div>
-            </div>
-
-            {/* Acciones Rápidas del Modal */}
-            <div className="p-4 bg-slate-50 dark:bg-[#0a0e1a] border-t border-slate-200 dark:border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-3">
-              <a
-                href={activeModalProspecto.pdfUrl}
-                download={`${activeModalProspecto.sigla}_Prospecto_Oficial_2026.pdf`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-neon-cyan text-night-deep font-rajdhani font-black text-xs uppercase tracking-wider shadow-cyan-glow hover:bg-cyan-300 transition-all cursor-pointer"
-              >
-                <Download className="w-4 h-4" />
-                <span>Descargar PDF Completo</span>
-              </a>
-
-              <button
-                type="button"
-                onClick={() => {
-                  const sigla = activeModalProspecto.sigla;
-                  setActiveModalProspecto(null);
-                  startAcademicDiagnostic(sigla);
-                }}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl border border-slate-300 dark:border-gray-700 bg-white dark:bg-[#141518] hover:border-neon-cyan text-slate-700 dark:text-white font-rajdhani font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer"
-              >
-                <span>Simular Examen de Admisión</span>
-                <ArrowRight className="w-4 h-4" />
-              </button>
-            </div>
-
-          </div>
-        </div>
-      )}
 
       {/* 5. FOOTER TÉCNICO Y RETORNO */}
       <div className="p-6 rounded-2xl bg-white dark:bg-[#121624] border border-slate-200 dark:border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">

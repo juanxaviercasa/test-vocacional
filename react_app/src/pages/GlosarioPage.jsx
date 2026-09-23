@@ -99,7 +99,6 @@ export default function GlosarioPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState('TODAS');
   const [highlightedId, setHighlightedId] = useState('');
-  const [copiedId, setCopiedId] = useState('');
 
   const termsList = Object.values(TACTICAL_GLOSSARY);
 
@@ -119,16 +118,6 @@ export default function GlosarioPage() {
       return () => clearTimeout(timer);
     }
   }, [currentHash]);
-
-  const handleCopyLink = (termId) => {
-    const url = `${window.location.origin}/glosario#${termId}`;
-    navigator.clipboard.writeText(url);
-    setCopiedId(termId);
-    setHighlightedId(termId);
-    setTimeout(() => {
-      setCopiedId('');
-    }, 2000);
-  };
 
   const filteredTerms = termsList.filter((item) => {
     const matchesSearch =
@@ -254,8 +243,8 @@ export default function GlosarioPage() {
               }`}
             >
               <div>
-                {/* Cabecera Ilustrativa Fotográfica del Término */}
-                <div className="relative h-36 sm:h-40 w-full overflow-hidden rounded-2xl bg-slate-900 mb-4 border border-slate-200 dark:border-slate-800">
+                {/* Cabecera Ilustrativa Fotográfica del Término en Proporción 16:9 Natural */}
+                <div className="relative aspect-video w-full overflow-hidden rounded-2xl bg-slate-900 mb-4 border border-slate-200 dark:border-slate-800 shadow-inner">
                   <img
                     src={visual.image}
                     alt={item.termino}
@@ -293,30 +282,26 @@ export default function GlosarioPage() {
                 </p>
               </div>
 
-              {/* Pie de tarjeta con fuente completa sin truncar y botón de enlace */}
-              <div className="mt-6 pt-4 border-t border-slate-100 dark:border-gray-800 flex items-start justify-between gap-3 text-xs font-inter text-slate-500 dark:text-slate-400">
+              {/* Pie de tarjeta con fuente completa y enlace directo sin sobreesfuerzo */}
+              <div className="mt-6 pt-4 border-t border-slate-100 dark:border-gray-800 flex items-center justify-between gap-3 text-xs font-inter text-slate-500 dark:text-slate-400">
                 <div className="flex-1 break-words leading-relaxed">
                   <strong className="text-slate-700 dark:text-slate-300 font-semibold">Fuente Oficial:</strong> {item.referencia}
                 </div>
 
-                <button
-                  type="button"
-                  onClick={() => handleCopyLink(item.id)}
-                  title="Copiar enlace directo al término"
-                  className="p-2 rounded-xl bg-slate-100 dark:bg-white/5 hover:bg-slate-200 dark:hover:bg-white/10 text-slate-600 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-neon-cyan transition-colors cursor-pointer flex-shrink-0 flex items-center gap-1.5"
+                <a
+                  href={`#${item.id}`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.location.hash = item.id;
+                    setHighlightedId(item.id);
+                    document.getElementById(item.id)?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                  }}
+                  title={`Enlace directo al término ${item.termino}`}
+                  className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-cyan-50 dark:bg-cyan-950/60 hover:bg-cyan-100 dark:hover:bg-cyan-900/60 text-cyan-700 dark:text-neon-cyan font-rajdhani font-bold text-xs uppercase tracking-wider transition-all border border-cyan-300 dark:border-cyan-500/40 hover:scale-[1.03] cursor-pointer flex-shrink-0 shadow-sm"
                 >
-                  {isCopied ? (
-                    <>
-                      <Check className="w-3.5 h-3.5 text-emerald-500" />
-                      <span className="text-[10px] font-rajdhani font-bold text-emerald-500 uppercase">Copiado</span>
-                    </>
-                  ) : (
-                    <>
-                      <Copy className="w-3.5 h-3.5" />
-                      <span className="text-[10px] font-rajdhani font-bold uppercase hidden xs:inline">Enlace</span>
-                    </>
-                  )}
-                </button>
+                  <ExternalLink className="w-3.5 h-3.5" />
+                  <span>Ver Término</span>
+                </a>
               </div>
             </div>
           );

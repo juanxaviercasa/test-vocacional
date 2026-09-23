@@ -167,8 +167,8 @@ export default function EntrenamientoPage() {
           
           {/* NODO 1: COGNITIVO */}
           <div className="group rounded-3xl bg-white dark:bg-[#121624] border-2 border-cyan-500/40 dark:border-cyan-500/30 shadow-lg hover:border-cyan-500 hover:shadow-cyan-glow/20 transition-all flex flex-col justify-between overflow-hidden">
-            {/* Imagen Fotográfica Oficial */}
-            <div className="relative h-44 w-full overflow-hidden bg-slate-900">
+            {/* Imagen Fotográfica Oficial en 16:9 Natural */}
+            <div className="relative aspect-video w-full overflow-hidden bg-slate-900 shadow-inner">
               <img
                 src="/assets/general/cadets-study-habits.jpg"
                 alt="Cadetes en estudio técnico militar y resolución DECO"
@@ -203,8 +203,8 @@ export default function EntrenamientoPage() {
 
           {/* NODO 2: FÍSICO */}
           <div className="group rounded-3xl bg-white dark:bg-[#121624] border-2 border-emerald-500/40 dark:border-emerald-500/30 shadow-lg hover:border-emerald-500 hover:shadow-emerald-glow/20 transition-all flex flex-col justify-between overflow-hidden">
-            {/* Imagen Fotográfica Oficial */}
-            <div className="relative h-44 w-full overflow-hidden bg-slate-900">
+            {/* Imagen Fotográfica Oficial en 16:9 Natural */}
+            <div className="relative aspect-video w-full overflow-hidden bg-slate-900 shadow-inner">
               <img
                 src="/assets/general/cadets-physical-training.jpg"
                 alt="Cadetes en pista de combate y esfuerzo físico de alto rendimiento"
@@ -239,8 +239,8 @@ export default function EntrenamientoPage() {
 
           {/* NODO 3: PSICOLÓGICO */}
           <div className="group rounded-3xl bg-white dark:bg-[#121624] border-2 border-amber-500/40 dark:border-amber-500/30 shadow-lg hover:border-amber-500 hover:shadow-amber-glow/20 transition-all flex flex-col justify-between overflow-hidden">
-            {/* Imagen Fotográfica Oficial */}
-            <div className="relative h-44 w-full overflow-hidden bg-slate-900">
+            {/* Imagen Fotográfica Oficial en 16:9 Natural */}
+            <div className="relative aspect-video w-full overflow-hidden bg-slate-900 shadow-inner">
               <img
                 src="/assets/general/military-psychological-board.jpg"
                 alt="Junta examinadora y entrevista de admisión con oficiales superiores"
@@ -430,22 +430,34 @@ export default function EntrenamientoPage() {
             </div>
           </div>
 
-          {/* Grid de 4 Baremos Físicos de la Escuela Seleccionada */}
+          {/* Grid de 4 Baremos Físicos Ilustrados en 16:9 Natural de la Escuela Seleccionada */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             
             {/* Prueba 1: Trote 2,400m */}
-            <div className="p-5 rounded-2xl bg-white dark:bg-[#121624] border border-slate-200 dark:border-gray-800 shadow-sm space-y-2 flex flex-col justify-between">
+            <div className="group p-5 rounded-2xl bg-white dark:bg-[#121624] border border-slate-200 dark:border-gray-800 hover:border-emerald-500/50 shadow-sm space-y-3 flex flex-col justify-between overflow-hidden transition-all">
               <div>
-                <div className="flex items-center justify-between mb-1">
-                  <span className="text-xl">🏃</span>
-                  <span className="text-[10px] font-mono text-emerald-700 dark:text-emerald-400 font-bold bg-emerald-50 dark:bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-300 dark:border-emerald-500/30">
-                    AERÓBICO
-                  </span>
+                {/* Imagen 16:9 Oficial del Trote Cooper Militar */}
+                <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-slate-900 mb-3 border border-slate-200 dark:border-slate-800 shadow-inner">
+                  <img
+                    src="/assets/general/cadets-physical-training.jpg"
+                    alt="Trote de Cooper 2,400m Militar"
+                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
+                  <div className="absolute bottom-2 left-2 right-2 flex items-center justify-between">
+                    <span className="text-[10px] font-mono text-emerald-300 font-bold bg-black/70 px-2 py-0.5 rounded backdrop-blur-sm">
+                      🏃 AERÓBICO
+                    </span>
+                    <span className="text-[10px] font-mono text-white/90 font-bold">
+                      2,400M
+                    </span>
+                  </div>
                 </div>
+
                 <h4 className="font-rajdhani font-bold text-base text-slate-900 dark:text-white uppercase tracking-wider">
                   Trote de Cooper ({currentBenchmark.trote.distancia})
                 </h4>
-                <div className="text-sm font-sans font-black text-emerald-600 dark:text-emerald-400 my-1">
+                <div className="text-base font-sans font-black text-emerald-600 dark:text-emerald-400 my-1">
                   {currentBenchmark.trote.tiempoMeta}
                 </div>
               </div>
@@ -454,19 +466,31 @@ export default function EntrenamientoPage() {
               </p>
             </div>
 
-            {/* Prueba 2: Barras Fijas */}
-            <div className="p-5 rounded-2xl bg-white dark:bg-[#121624] border border-slate-200 dark:border-gray-800 shadow-sm space-y-2 flex flex-col justify-between">
+            {/* Prueba 2: Barras Fijas / Tracción Militar */}
+            <div className="group p-5 rounded-2xl bg-white dark:bg-[#121624] border border-slate-200 dark:border-gray-800 hover:border-emerald-500/50 shadow-sm space-y-3 flex flex-col justify-between overflow-hidden transition-all">
               <div>
-                <div className="flex items-center justify-between mb-1">
-                  <span className="text-xl">💪</span>
-                  <span className="text-[10px] font-mono text-emerald-700 dark:text-emerald-400 font-bold bg-emerald-50 dark:bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-300 dark:border-emerald-500/30">
-                    FUERZA PURA
-                  </span>
+                {/* Imagen 16:9 Oficial de Barras de Tracción Militar */}
+                <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-slate-900 mb-3 border border-slate-200 dark:border-slate-800 shadow-inner">
+                  <img
+                    src="/assets/general/physical-test-pullups.jpg"
+                    alt="Barras de Tracción Militar Estricta"
+                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
+                  <div className="absolute bottom-2 left-2 right-2 flex items-center justify-between">
+                    <span className="text-[10px] font-mono text-emerald-300 font-bold bg-black/70 px-2 py-0.5 rounded backdrop-blur-sm">
+                      💪 FUERZA PURA
+                    </span>
+                    <span className="text-[10px] font-mono text-white/90 font-bold">
+                      TREN SUPERIOR
+                    </span>
+                  </div>
                 </div>
+
                 <h4 className="font-rajdhani font-bold text-base text-slate-900 dark:text-white uppercase tracking-wider">
                   {currentBenchmark.fuerzaTrenSuperior.ejercicio}
                 </h4>
-                <div className="text-sm font-sans font-black text-emerald-600 dark:text-emerald-400 my-1">
+                <div className="text-base font-sans font-black text-emerald-600 dark:text-emerald-400 my-1">
                   {currentBenchmark.fuerzaTrenSuperior.repeticiones}
                 </div>
               </div>
@@ -476,18 +500,30 @@ export default function EntrenamientoPage() {
             </div>
 
             {/* Prueba 3: Natación Utilitaria */}
-            <div className="p-5 rounded-2xl bg-white dark:bg-[#121624] border border-slate-200 dark:border-gray-800 shadow-sm space-y-2 flex flex-col justify-between">
+            <div className="group p-5 rounded-2xl bg-white dark:bg-[#121624] border border-slate-200 dark:border-gray-800 hover:border-emerald-500/50 shadow-sm space-y-3 flex flex-col justify-between overflow-hidden transition-all">
               <div>
-                <div className="flex items-center justify-between mb-1">
-                  <span className="text-xl">🏊</span>
-                  <span className="text-[10px] font-mono text-emerald-700 dark:text-emerald-400 font-bold bg-emerald-50 dark:bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-300 dark:border-emerald-500/30">
-                    MEDIO ACUÁTICO
-                  </span>
+                {/* Imagen 16:9 Oficial de Natación Militar */}
+                <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-slate-900 mb-3 border border-slate-200 dark:border-slate-800 shadow-inner">
+                  <img
+                    src="/assets/general/physical-test-swimming.jpg"
+                    alt="Natación Militar Utilitaria"
+                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
+                  <div className="absolute bottom-2 left-2 right-2 flex items-center justify-between">
+                    <span className="text-[10px] font-mono text-emerald-300 font-bold bg-black/70 px-2 py-0.5 rounded backdrop-blur-sm">
+                      🏊 MEDIO ACUÁTICO
+                    </span>
+                    <span className="text-[10px] font-mono text-white/90 font-bold">
+                      ESTILO CROL/PECHO
+                    </span>
+                  </div>
                 </div>
+
                 <h4 className="font-rajdhani font-bold text-base text-slate-900 dark:text-white uppercase tracking-wider">
                   Natación ({currentBenchmark.natacion.distancia})
                 </h4>
-                <div className="text-sm font-sans font-black text-emerald-600 dark:text-emerald-400 my-1">
+                <div className="text-base font-sans font-black text-emerald-600 dark:text-emerald-400 my-1">
                   {currentBenchmark.natacion.tiempoMeta}
                 </div>
               </div>
@@ -497,18 +533,30 @@ export default function EntrenamientoPage() {
             </div>
 
             {/* Prueba 4: Salto de Valor / Agilidad */}
-            <div className="p-5 rounded-2xl bg-white dark:bg-[#121624] border border-slate-200 dark:border-gray-800 shadow-sm space-y-2 flex flex-col justify-between">
+            <div className="group p-5 rounded-2xl bg-white dark:bg-[#121624] border border-slate-200 dark:border-gray-800 hover:border-emerald-500/50 shadow-sm space-y-3 flex flex-col justify-between overflow-hidden transition-all">
               <div>
-                <div className="flex items-center justify-between mb-1">
-                  <span className="text-xl">🎖️</span>
-                  <span className="text-[10px] font-mono text-emerald-700 dark:text-emerald-400 font-bold bg-emerald-50 dark:bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-300 dark:border-emerald-500/30">
-                    TEMPLE MARCIAL
-                  </span>
+                {/* Imagen 16:9 Oficial del Salto de Valor */}
+                <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-slate-900 mb-3 border border-slate-200 dark:border-slate-800 shadow-inner">
+                  <img
+                    src="/assets/general/glossary-diving-valor.jpg"
+                    alt="Salto de Valor desde 5 Metros"
+                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
+                  <div className="absolute bottom-2 left-2 right-2 flex items-center justify-between">
+                    <span className="text-[10px] font-mono text-emerald-300 font-bold bg-black/70 px-2 py-0.5 rounded backdrop-blur-sm">
+                      🎖️ TEMPLE MARCIAL
+                    </span>
+                    <span className="text-[10px] font-mono text-white/90 font-bold">
+                      5 METROS
+                    </span>
+                  </div>
                 </div>
+
                 <h4 className="font-rajdhani font-bold text-base text-slate-900 dark:text-white uppercase tracking-wider">
                   {currentBenchmark.saltoValor.ejercicio}
                 </h4>
-                <div className="text-sm font-sans font-black text-emerald-600 dark:text-emerald-400 my-1">
+                <div className="text-base font-sans font-black text-emerald-600 dark:text-emerald-400 my-1">
                   {currentBenchmark.saltoValor.requisito}
                 </div>
               </div>
@@ -590,7 +638,7 @@ export default function EntrenamientoPage() {
             {/* Pautas Clave de Entrevista ante el Estado Mayor */}
             <div className="p-6 sm:p-8 rounded-3xl bg-white dark:bg-[#121624] border border-slate-200 dark:border-gray-800 shadow-sm space-y-4 flex flex-col justify-between overflow-hidden relative">
               <div className="space-y-4">
-                <div className="relative h-36 w-full rounded-2xl overflow-hidden bg-slate-900 border border-amber-500/20">
+                <div className="relative aspect-video w-full rounded-2xl overflow-hidden bg-slate-900 border border-amber-500/20 shadow-inner">
                   <img
                     src="/assets/general/military-psychological-board.jpg"
                     alt="Consejo de Admisión y Entrevista Personal"
