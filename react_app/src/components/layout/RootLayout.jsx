@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import InsigniaConjunta from '../common/InsigniaConjunta';
 import ThemeToggle from '../common/ThemeToggle';
+import TacticalOnboardingTour from '../common/TacticalOnboardingTour';
 import MinimalStepper from './MinimalStepper';
 import Tooltip from '../common/Tooltip';
 import { Link, useAppRouter } from '../../router/AppRouter';
@@ -25,7 +26,7 @@ import {
  * Erradica desbordamientos, rupturas de texto y sobrecargas en la barra superior.
  */
 export default function RootLayout({ children }) {
-  const { activeModule, switchToModule, academicStep, academicSchool } = useAssessmentStore();
+  const { activeModule, switchToModule, academicStep, academicSchool, startTour } = useAssessmentStore();
   const { currentPath } = useAppRouter();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -66,8 +67,11 @@ export default function RootLayout({ children }) {
             </div>
           </Link>
 
-          {/* Navegación Principal en Desktop (> 1024px) */}
-          <nav className="hidden lg:flex items-center gap-1 bg-slate-100 dark:bg-black/40 p-1 rounded-2xl border border-slate-200 dark:border-gray-800">
+          {/* Navegación Principal en Desktop (> 1024px) (Enfocable en Tour) */}
+          <nav
+            id="tour-navigation"
+            className="hidden lg:flex items-center gap-1 bg-slate-100 dark:bg-black/40 p-1 rounded-2xl border border-slate-200 dark:border-gray-800"
+          >
             {NAV_ITEMS.map((item) => {
               const Icon = item.icon;
               const isActive = currentPath === item.href;
@@ -89,7 +93,7 @@ export default function RootLayout({ children }) {
             })}
           </nav>
 
-          {/* Acciones del Header: Estado Táctico + Conmutador de Tema + Menú Móvil/Tablet */}
+          {/* Acciones del Header: Estado Táctico + Conmutador de Tema + Guía + Menú Móvil/Tablet */}
           <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
             
             {/* Terminal Status (Visible en pantallas extra grandes) */}
@@ -101,6 +105,18 @@ export default function RootLayout({ children }) {
                 <Tooltip termino="Baremo">BAREMO 2026</Tooltip>
               </span>
             </div>
+
+            {/* Botón Iniciar Modo Entrenamiento (Guía Interactiva) */}
+            <button
+              type="button"
+              onClick={startTour}
+              className="flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-xl border border-cyan-500/40 bg-cyan-950/20 text-cyan-600 dark:text-[#00F0FF] hover:bg-cyan-500/20 hover:border-[#00F0FF] text-xs font-rajdhani font-bold tracking-wider uppercase transition-all duration-200 cursor-pointer shadow-sm hover:shadow-cyan-glow"
+              title="Iniciar Modo Entrenamiento (Guía de Usuario Interactiva)"
+            >
+              <Compass className="w-3.5 h-3.5 text-cyan-500 dark:text-[#00F0FF]" />
+              <span className="hidden sm:inline">INICIAR MODO ENTRENAMIENTO (GUÍA)</span>
+              <span className="sm:hidden">GUÍA</span>
+            </button>
 
             {/* Toggle de Modo Claro / Oscuro (Day Ops / Night Ops) */}
             <ThemeToggle />
@@ -161,9 +177,12 @@ export default function RootLayout({ children }) {
         )}
       </header>
 
-      {/* 3. Barra de Progresión Táctica (Visible en Ruta Principal '/') */}
+      {/* 3. Barra de Progresión Táctica (Visible en Ruta Principal '/') (Enfocable en Tour) */}
       {currentPath === '/' ? (
-        <div className="w-full bg-slate-100/90 dark:bg-[#0B101E]/80 border-b border-slate-200 dark:border-gray-800 backdrop-blur-sm transition-colors duration-300">
+        <div
+          id="tour-stepper"
+          className="w-full bg-slate-100/90 dark:bg-[#0B101E]/80 border-b border-slate-200 dark:border-gray-800 backdrop-blur-sm transition-colors duration-300"
+        >
           {activeModule === 'vocational' ? (
             <MinimalStepper />
           ) : (
@@ -286,6 +305,9 @@ export default function RootLayout({ children }) {
 
         </div>
       </footer>
+
+      {/* Sistema de Onboarding Interactivo (Guía de Usuario con Overlay y Foco Secuencial) */}
+      <TacticalOnboardingTour />
 
     </div>
   );

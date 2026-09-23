@@ -35,7 +35,7 @@ const slideVariants = {
 };
 
 export default function Pillar1Legal() {
-  const { candidate, updateCandidate, nextPillar } = useAssessmentStore();
+  const { candidate, updateCandidate, nextPillar, loadDemoCandidate } = useAssessmentStore();
   
   // Regla 2: Estado currentStep
   // 0: Hero Banner, 1: Biometría, 2: Aptitud Médica y Legal, 3: Dictamen de Elegibilidad
@@ -43,11 +43,45 @@ export default function Pillar1Legal() {
   const [currentStep, setCurrentStep] = useState(urlParamStep);
   const [direction, setDirection] = useState(1);
   const [isProcessing, setIsProcessing] = useState(false);
+  const [demoLoadedNotification, setDemoLoadedNotification] = useState(false);
   const [evaluationResult, setEvaluationResult] = useState(() => urlParamStep === 3 ? evaluateLegalCandidate(candidate) : null);
+
+  // Validación en tiempo real Fase A (Parámetros Biométricos)
+  const isStep1Valid = Boolean(
+    candidate.nombre?.trim() &&
+    (candidate.sexo === 'M' || candidate.sexo === 'F') &&
+    Number(candidate.talla_cm) >= 120 &&
+    Number(candidate.peso_kg) >= 30 &&
+    Number(candidate.edad) >= 14 &&
+    Number(candidate.talla_sentado_cm || 90) >= 60
+  );
+
+  // Validación en tiempo real Fase B (Aptitud Médica y Requisitos Legales)
+  const isStep2Valid = Boolean(
+    candidate.agudeza_visual_20_20 !== null &&
+    candidate.daltonismo !== null &&
+    candidate.estado_civil &&
+    candidate.tiene_hijos !== null &&
+    candidate.tiene_antecedentes !== null &&
+    candidate.tiene_tatuajes !== null &&
+    candidate.secundaria_completa !== null
+  );
+
+  // Validación integral del Pilar 1
+  const isPilar1Complete = isStep1Valid && isStep2Valid;
 
   const goToStep = (step) => {
     setDirection(step >= currentStep ? 1 : -1);
     setCurrentStep(step);
+  };
+
+  // Manejador del botón Auto-Llenado Táctico (Demo Mode)
+  const handleLoadDemo = () => {
+    loadDemoCandidate();
+    setDemoLoadedNotification(true);
+    setTimeout(() => {
+      setDemoLoadedNotification(false);
+    }, 2500);
   };
 
   // Regla 3: Procesar elegibilidad al hacer clic en el botón
@@ -63,21 +97,31 @@ export default function Pillar1Legal() {
     }, 600);
   };
 
-  // Cálculo en vivo de IMC para la vista biométrica
-  const h_m = candidate.talla_cm > 3 ? candidate.talla_cm / 100 : candidate.talla_cm;
-  const imc = h_m > 0 ? parseFloat((candidate.peso_kg / (h_m * h_m)).toFixed(1)) : 22.0;
+  // Cálculo en vivo de IMC para la vista biométrica (Solo si hay datos numéricos válidos)
+  const hasValidBiometrics = Number(candidate.talla_cm) >= 100 && Number(candidate.peso_kg) >= 30;
+  const h_m = hasValidBiometrics
+    ? (candidate.talla_cm > 3 ? candidate.talla_cm / 100 : candidate.talla_cm)
+    : 0;
+  const imc = hasValidBiometrics && h_m > 0
+    ? parseFloat((candidate.peso_kg / (h_m * h_m)).toFixed(1))
+    : 0;
 
-  let imcStatus = "Óptimo Militar";
-  let imcColor = "text-emerald-400 border-emerald-500/40 bg-emerald-950/40";
-  if (imc < 18.5) {
-    imcStatus = "Bajo Peso";
-    imcColor = "text-amber-400 border-amber-500/40 bg-amber-950/40";
-  } else if (imc > 25 && imc <= 27.5) {
-    imcStatus = "Límite Máximo";
-    imcColor = "text-amber-400 border-amber-500/40 bg-amber-950/40";
-  } else if (imc > 27.5) {
-    imcStatus = "Sobrepeso";
-    imcColor = "text-alert-red border-alert-red/40 bg-red-950/40";
+  let imcStatus = "Pendiente de datos";
+  let imcColor = "text-slate-400 border-slate-700 bg-slate-900/40";
+  if (hasValidBiometrics && imc > 0) {
+    if (imc < 18.5) {
+      imcStatus = "Bajo Peso";
+      imcColor = "text-amber-400 border-amber-500/40 bg-amber-950/40";
+    } else if (imc <= 25) {
+      imcStatus = "Óptimo Militar";
+      imcColor = "text-emerald-400 border-emerald-500/40 bg-emerald-950/40";
+    } else if (imc <= 27.5) {
+      imcStatus = "Límite Máximo";
+      imcColor = "text-amber-400 border-amber-500/40 bg-amber-950/40";
+    } else {
+      imcStatus = "Sobrepeso";
+      imcColor = "text-alert-red border-alert-red/40 bg-red-950/40";
+    }
   }
 
   return (
@@ -167,14 +211,26 @@ export default function Pillar1Legal() {
                     </span>
                   </div>
 
-                  <div>
+                  <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
                     <button
+                      id="tour-start-cta"
                       type="button"
                       onClick={() => goToStep(1)}
                       className="w-full sm:w-auto inline-flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-neon-cyan text-night-deep font-rajdhani font-black text-sm sm:text-base tracking-wider uppercase shadow-cyan-glow-lg hover:bg-cyan-300 hover:scale-105 transition-all duration-300 cursor-pointer text-center"
                     >
                       <span>INICIAR EVALUACIÓN LEGAL Y FÍSICA</span>
                       <ArrowRight className="w-5 h-5 flex-shrink-0" />
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        handleLoadDemo();
+                        goToStep(1);
+                      }}
+                      className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-transparent border border-gray-700 text-gray-300 hover:text-white hover:border-[#00F0FF] hover:bg-cyan-950/20 text-xs font-rajdhani font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer shadow-sm"
+                      title="Cargar automáticamente datos de prueba válidos"
+                    >
+                      <span>⚡ CARGAR PERFIL DE PRUEBA</span>
                     </button>
                   </div>
                 </div>
@@ -199,8 +255,16 @@ export default function Pillar1Legal() {
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
                 
                 {/* Panel de Formulario Biométrico */}
-                <div className="lg:col-span-8 glass-panel p-6 sm:p-8 rounded-3xl border border-white/15 shadow-tactical-card">
+                <div className="lg:col-span-8 glass-panel p-6 sm:p-8 rounded-3xl border border-white/15 shadow-tactical-card relative">
                   
+                  {/* Notificación de carga de perfil de prueba */}
+                  {demoLoadedNotification && (
+                    <div className="absolute top-3 right-4 px-3 py-1 rounded-lg bg-emerald-950/90 border border-emerald-500/60 text-emerald-400 text-xs font-rajdhani font-bold tracking-wider uppercase flex items-center gap-1.5 shadow-green-glow animate-in fade-in slide-in-from-top duration-200 z-30">
+                      <CheckCircle2 className="w-3.5 h-3.5" />
+                      <span>PERFIL DE PRUEBA MILITAR CARGADO</span>
+                    </div>
+                  )}
+
                   <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-white/10 pb-4 mb-6">
                     <div>
                       <span className="text-xs font-rajdhani font-bold text-neon-cyan tracking-widest uppercase">
@@ -210,9 +274,22 @@ export default function Pillar1Legal() {
                         Parámetros Biométricos y <Tooltip termino="Antropometría">Antropometría</Tooltip>
                       </h2>
                     </div>
-                    <div className={`px-3 py-1.5 rounded-xl border text-xs font-rajdhani font-bold tracking-wider uppercase flex items-center gap-2 ${imcColor}`}>
-                      <Activity className="w-4 h-4" />
-                      <span><Tooltip termino="IMC">IMC</Tooltip>: {imc} ({imcStatus})</span>
+
+                    <div className="flex flex-wrap items-center gap-2.5">
+                      {/* Botón Auto-Llenado Táctico (Demo Mode) */}
+                      <button
+                        type="button"
+                        onClick={handleLoadDemo}
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-transparent border border-gray-700 text-gray-400 hover:text-white hover:border-[#00F0FF] hover:bg-cyan-950/20 text-xs font-rajdhani font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer shadow-sm"
+                        title="Cargar automáticamente un set de datos de prueba completo"
+                      >
+                        <span>⚡ CARGAR PERFIL DE PRUEBA</span>
+                      </button>
+
+                      <div className={`px-3 py-1.5 rounded-xl border text-xs font-rajdhani font-bold tracking-wider uppercase flex items-center gap-2 ${imcColor}`}>
+                        <Activity className="w-4 h-4" />
+                        <span><Tooltip termino="IMC">IMC</Tooltip>: {hasValidBiometrics ? imc : '--'} ({imcStatus})</span>
+                      </div>
                     </div>
                   </div>
 
@@ -220,21 +297,21 @@ export default function Pillar1Legal() {
                     {/* Nombre Completo */}
                     <div>
                       <label className="block text-sm font-rajdhani font-bold text-slate-200 uppercase tracking-wider mb-2">
-                        Nombre y Apellidos del Postulante
+                        Nombre y Apellidos del Postulante <span className="text-peru-red">*</span>
                       </label>
                       <input
                         type="text"
-                        value={candidate.nombre}
+                        value={candidate.nombre || ''}
                         onChange={(e) => updateCandidate('nombre', e.target.value)}
                         placeholder="Ej. Carlos Mendoza"
-                        className="w-full px-4 py-3 rounded-xl bg-night-deep/80 border border-white/15 focus:border-neon-cyan focus:ring-1 focus:ring-neon-cyan text-white text-base outline-none transition-all"
+                        className="w-full px-4 py-3 rounded-xl bg-night-deep/80 border border-white/15 focus:border-neon-cyan focus:ring-1 focus:ring-neon-cyan text-white text-base outline-none transition-all placeholder:text-slate-600"
                       />
                     </div>
 
                     {/* Sexo Biológico */}
                     <div>
                       <label className="block text-sm font-rajdhani font-bold text-slate-200 uppercase tracking-wider mb-2">
-                        Sexo Biológico (Según DNI)
+                        Sexo Biológico (Según DNI) <span className="text-peru-red">*</span>
                       </label>
                       <div className="grid grid-cols-2 gap-3">
                         <TacticalRadioCard
@@ -260,16 +337,20 @@ export default function Pillar1Legal() {
                     
                     <div className="p-4 rounded-xl bg-night-deep/80 border border-white/10">
                       <span className="text-[11px] font-rajdhani font-bold text-slate-400 uppercase tracking-wider block mb-1">
-                        Estatura Descalzo
+                        Estatura Descalzo <span className="text-peru-red">*</span>
                       </span>
                       <div className="flex items-baseline gap-2">
                         <input
                           type="number"
-                          min="140"
-                          max="210"
-                          value={candidate.talla_cm}
-                          onChange={(e) => updateCandidate('talla_cm', parseFloat(e.target.value) || 160)}
-                          className="w-full bg-transparent text-neon-cyan font-rajdhani font-bold text-3xl outline-none"
+                          min="120"
+                          max="220"
+                          value={candidate.talla_cm > 0 ? candidate.talla_cm : ''}
+                          placeholder="172"
+                          onChange={(e) => {
+                            const val = parseFloat(e.target.value);
+                            updateCandidate('talla_cm', isNaN(val) ? 0 : val);
+                          }}
+                          className="w-full bg-transparent text-neon-cyan font-rajdhani font-bold text-3xl outline-none placeholder:text-slate-600"
                         />
                         <span className="text-xs text-slate-500 font-bold">CM</span>
                       </div>
@@ -278,16 +359,20 @@ export default function Pillar1Legal() {
 
                     <div className="p-4 rounded-xl bg-night-deep/80 border border-white/10">
                       <span className="text-[11px] font-rajdhani font-bold text-slate-400 uppercase tracking-wider block mb-1">
-                        Peso Corporal
+                        Peso Corporal <span className="text-peru-red">*</span>
                       </span>
                       <div className="flex items-baseline gap-2">
                         <input
                           type="number"
-                          min="40"
-                          max="140"
-                          value={candidate.peso_kg}
-                          onChange={(e) => updateCandidate('peso_kg', parseFloat(e.target.value) || 60)}
-                          className="w-full bg-transparent text-neon-cyan font-rajdhani font-bold text-3xl outline-none"
+                          min="30"
+                          max="150"
+                          value={candidate.peso_kg > 0 ? candidate.peso_kg : ''}
+                          placeholder="70"
+                          onChange={(e) => {
+                            const val = parseFloat(e.target.value);
+                            updateCandidate('peso_kg', isNaN(val) ? 0 : val);
+                          }}
+                          className="w-full bg-transparent text-neon-cyan font-rajdhani font-bold text-3xl outline-none placeholder:text-slate-600"
                         />
                         <span className="text-xs text-slate-500 font-bold">KG</span>
                       </div>
@@ -296,16 +381,20 @@ export default function Pillar1Legal() {
 
                     <div className="p-4 rounded-xl bg-night-deep/80 border border-white/10">
                       <span className="text-[11px] font-rajdhani font-bold text-slate-400 uppercase tracking-wider block mb-1">
-                        Edad Cumplida
+                        Edad Cumplida <span className="text-peru-red">*</span>
                       </span>
                       <div className="flex items-baseline gap-2">
                         <input
                           type="number"
-                          min="15"
-                          max="26"
-                          value={candidate.edad}
-                          onChange={(e) => updateCandidate('edad', parseInt(e.target.value, 10) || 18)}
-                          className="w-full bg-transparent text-neon-cyan font-rajdhani font-bold text-3xl outline-none"
+                          min="14"
+                          max="30"
+                          value={candidate.edad > 0 ? candidate.edad : ''}
+                          placeholder="19"
+                          onChange={(e) => {
+                            const val = parseInt(e.target.value, 10);
+                            updateCandidate('edad', isNaN(val) ? 0 : val);
+                          }}
+                          className="w-full bg-transparent text-neon-cyan font-rajdhani font-bold text-3xl outline-none placeholder:text-slate-600"
                         />
                         <span className="text-xs text-slate-500 font-bold">AÑOS</span>
                       </div>
@@ -320,40 +409,54 @@ export default function Pillar1Legal() {
                       <span className="text-xs font-rajdhani font-bold text-slate-300 uppercase tracking-wider">
                         Talla Sentado (Tronco y Cabeza)
                       </span>
-                      <span className="text-sm font-rajdhani font-bold text-neon-cyan">{candidate.talla_sentado_cm} CM</span>
+                      <span className="text-sm font-rajdhani font-bold text-neon-cyan">
+                        {candidate.talla_sentado_cm > 0 ? `${candidate.talla_sentado_cm} CM` : "90 CM (Estándar)"}
+                      </span>
                     </div>
                     <input
                       type="range"
                       min="75"
                       max="110"
-                      value={candidate.talla_sentado_cm}
+                      value={candidate.talla_sentado_cm > 0 ? candidate.talla_sentado_cm : 90}
                       onChange={(e) => updateCandidate('talla_sentado_cm', parseFloat(e.target.value))}
                       className="w-full accent-neon-cyan cursor-pointer"
                     />
                     <span className="text-[10px] text-slate-400 block mt-1">
-                      Exigido para cabinas de caza EOFAP y vehículos blindados (Rango: 85 - 98 cm).
+                      Exigido para cabinas de caza EOFAP y vehículos blindados (Rango óptimo: 85 - 98 cm).
                     </span>
                   </div>
 
-                  {/* Botones de Navegación */}
-                  <div className="flex justify-between items-center pt-4 border-t border-white/10">
+                  {/* Botones de Navegación y Validación en Tiempo Real */}
+                  <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-4 border-t border-white/10">
                     <button
                       type="button"
                       onClick={() => goToStep(0)}
-                      className="flex items-center gap-2 px-5 py-2.5 rounded-xl border border-white/15 text-slate-400 hover:text-white font-rajdhani font-bold text-xs uppercase tracking-wider cursor-pointer"
+                      className="w-full sm:w-auto flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl border border-white/15 text-slate-400 hover:text-white font-rajdhani font-bold text-xs uppercase tracking-wider cursor-pointer"
                     >
                       <ArrowLeft className="w-4 h-4" />
                       <span>Volver a Inicio</span>
                     </button>
 
-                    <button
-                      type="button"
-                      onClick={() => goToStep(2)}
-                      className="flex items-center gap-2 px-6 py-3 rounded-xl bg-neon-cyan text-night-deep font-rajdhani font-bold text-sm uppercase tracking-wider shadow-cyan-glow hover:bg-cyan-300 transition-all cursor-pointer"
-                    >
-                      <span>Siguiente: Aptitud Médica y Legal</span>
-                      <ArrowRight className="w-4 h-4" />
-                    </button>
+                    <div className="w-full sm:w-auto flex items-center gap-3">
+                      {!isStep1Valid && (
+                        <span className="hidden sm:inline text-xs text-amber-400 font-inter">
+                          ⚠️ Completa los campos obligatorios (*)
+                        </span>
+                      )}
+                      <button
+                        type="button"
+                        disabled={!isStep1Valid}
+                        onClick={isStep1Valid ? () => goToStep(2) : undefined}
+                        className={`w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-rajdhani font-bold text-sm uppercase tracking-wider transition-all ${
+                          isStep1Valid
+                            ? "bg-neon-cyan text-night-deep shadow-cyan-glow hover:bg-cyan-300 cursor-pointer"
+                            : "bg-slate-800 text-slate-500 border border-slate-700 opacity-50 cursor-not-allowed"
+                        }`}
+                      >
+                        <span>Siguiente: Aptitud Médica y Legal</span>
+                        <ArrowRight className="w-4 h-4" />
+                      </button>
+                    </div>
                   </div>
 
                 </div>
@@ -382,15 +485,21 @@ export default function Pillar1Legal() {
                     <div className="space-y-2 text-xs">
                       <div className="flex items-center justify-between border-b border-white/10 pb-2">
                         <span className="font-rajdhani text-slate-400 uppercase">Estatura Actual:</span>
-                        <span className="font-mono font-bold text-white">{candidate.talla_cm} cm</span>
+                        <span className="font-mono font-bold text-white">
+                          {candidate.talla_cm > 0 ? `${candidate.talla_cm} cm` : "--"}
+                        </span>
                       </div>
                       <div className="flex items-center justify-between border-b border-white/10 pb-2">
                         <span className="font-rajdhani text-slate-400 uppercase">Masa Corporal:</span>
-                        <span className="font-mono font-bold text-white">{candidate.peso_kg} kg</span>
+                        <span className="font-mono font-bold text-white">
+                          {candidate.peso_kg > 0 ? `${candidate.peso_kg} kg` : "--"}
+                        </span>
                       </div>
                       <div className="flex items-center justify-between border-b border-white/10 pb-2">
                         <span className="font-rajdhani text-slate-400 uppercase">Índice IMC:</span>
-                        <span className="font-mono font-bold text-neon-cyan">{imc} ({imcStatus})</span>
+                        <span className="font-mono font-bold text-neon-cyan">
+                          {hasValidBiometrics ? `${imc} (${imcStatus})` : "--"}
+                        </span>
                       </div>
                     </div>
 
@@ -418,159 +527,244 @@ export default function Pillar1Legal() {
               className="w-full"
             >
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-                <div className="lg:col-span-8 glass-panel p-6 sm:p-8 rounded-3xl border border-white/15 shadow-tactical-card">
-                
-                <div className="flex items-center justify-between border-b border-white/10 pb-4 mb-6">
-                  <div>
-                    <span className="text-xs font-rajdhani font-bold text-neon-cyan tracking-widest uppercase">
-                      PILAR 1 // FASE B
-                    </span>
-                    <h2 className="text-2xl font-rajdhani font-bold text-white uppercase tracking-wide">
-                      Aptitud Médica y Requisitos Legales
-                    </h2>
-                  </div>
-                  <div className="px-3 py-1 rounded-lg bg-amber-950/40 border border-alert-amber/40 text-alert-amber text-xs font-rajdhani font-bold uppercase tracking-wider">
-                    FILTROS EXCLUYENTES
-                  </div>
-                </div>
-
-                <div className="space-y-6">
+                <div className="lg:col-span-8 glass-panel p-6 sm:p-8 rounded-3xl border border-white/15 shadow-tactical-card relative">
                   
-                  {/* Agudeza Visual */}
-                  <div>
-                    <label className="block text-xs font-rajdhani font-bold text-slate-300 uppercase tracking-wider mb-2">
-                      Agudeza Visual (Ambos Ojos)
-                    </label>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                      <TacticalRadioCard
-                        selected={candidate.agudeza_visual_20_20 && !candidate.hasGlasses}
-                        onClick={() => {
-                          updateCandidate('agudeza_visual_20_20', true);
-                          updateCandidate('hasGlasses', false);
-                        }}
-                        title="20/20 Natural Sin Lentes"
-                        subtitle="Exigido para pilotos de combate EOFAP y Oficiales de Armas"
-                        badge="PILOTO OK"
-                      />
-                      <TacticalRadioCard
-                        selected={!candidate.agudeza_visual_20_20 || candidate.hasGlasses}
-                        onClick={() => {
-                          updateCandidate('agudeza_visual_20_20', false);
-                          updateCandidate('hasGlasses', true);
-                        }}
-                        title="Uso Lentes Correctores"
-                        subtitle="Apto para especialidades técnicas, logísticas y servicios en tierra"
-                        badge="SERVICIOS / TIERRA"
-                      />
+                  {/* Notificación de carga de perfil de prueba */}
+                  {demoLoadedNotification && (
+                    <div className="absolute top-3 right-4 px-3 py-1 rounded-lg bg-emerald-950/90 border border-emerald-500/60 text-emerald-400 text-xs font-rajdhani font-bold tracking-wider uppercase flex items-center gap-1.5 shadow-green-glow animate-in fade-in slide-in-from-top duration-200 z-30">
+                      <CheckCircle2 className="w-3.5 h-3.5" />
+                      <span>PERFIL DE PRUEBA MILITAR CARGADO</span>
+                    </div>
+                  )}
+
+                  <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-white/10 pb-4 mb-6">
+                    <div>
+                      <span className="text-xs font-rajdhani font-bold text-neon-cyan tracking-widest uppercase">
+                        PILAR 1 // FASE B
+                      </span>
+                      <h2 className="text-2xl font-rajdhani font-bold text-white uppercase tracking-wide">
+                        Aptitud Médica y Requisitos Legales
+                      </h2>
+                    </div>
+
+                    <div className="flex flex-wrap items-center gap-2.5">
+                      {/* Botón Auto-Llenado Táctico (Demo Mode) */}
+                      <button
+                        type="button"
+                        onClick={handleLoadDemo}
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-transparent border border-gray-700 text-gray-400 hover:text-white hover:border-[#00F0FF] hover:bg-cyan-950/20 text-xs font-rajdhani font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer shadow-sm"
+                        title="Cargar automáticamente un set de datos de prueba completo"
+                      >
+                        <span>⚡ CARGAR PERFIL DE PRUEBA</span>
+                      </button>
+
+                      <div className="px-3 py-1 rounded-lg bg-amber-950/40 border border-alert-amber/40 text-alert-amber text-xs font-rajdhani font-bold uppercase tracking-wider">
+                        FILTROS EXCLUYENTES
+                      </div>
                     </div>
                   </div>
 
-                  {/* Tatuajes Visibles */}
-                  <div>
-                    <label className="block text-xs font-rajdhani font-bold text-slate-300 uppercase tracking-wider mb-2">
-                      Tatuajes en Zonas Visibles con Uniforme de Verano
-                    </label>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                      <TacticalRadioCard
-                        selected={!candidate.tiene_tatuajes}
-                        onClick={() => updateCandidate('tiene_tatuajes', false)}
-                        title="Sin Tatuajes Visibles"
-                        subtitle="Cumple la normativa de presentación reglamentaria"
-                        badge="APTO"
-                      />
-                      <TacticalRadioCard
-                        selected={candidate.tiene_tatuajes}
-                        onClick={() => updateCandidate('tiene_tatuajes', true)}
-                        title="Poseo Tatuajes Visibles"
-                        subtitle="En cuello, brazos o piernas visibles en formación"
-                        badge="OBSERVADO"
-                      />
+                  <div className="space-y-6">
+                    
+                    {/* 1. Agudeza Visual */}
+                    <div>
+                      <label className="block text-xs font-rajdhani font-bold text-slate-300 uppercase tracking-wider mb-2">
+                        1. Agudeza Visual (Ambos Ojos) <span className="text-peru-red">*</span>
+                      </label>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <TacticalRadioCard
+                          selected={candidate.agudeza_visual_20_20 === true}
+                          onClick={() => {
+                            updateCandidate('agudeza_visual_20_20', true);
+                            updateCandidate('hasGlasses', false);
+                          }}
+                          title="20/20 Natural Sin Lentes"
+                          subtitle="Exigido para pilotos de combate EOFAP y Oficiales de Armas"
+                          badge="PILOTO OK"
+                        />
+                        <TacticalRadioCard
+                          selected={candidate.agudeza_visual_20_20 === false}
+                          onClick={() => {
+                            updateCandidate('agudeza_visual_20_20', false);
+                            updateCandidate('hasGlasses', true);
+                          }}
+                          title="Uso Lentes Correctores"
+                          subtitle="Apto para especialidades técnicas, logísticas y servicios en tierra"
+                          badge="SERVICIOS / TIERRA"
+                        />
+                      </div>
                     </div>
+
+                    {/* 2. Percepción de Colores (Test de Ishihara) */}
+                    <div>
+                      <label className="block text-xs font-rajdhani font-bold text-slate-300 uppercase tracking-wider mb-2">
+                        2. Percepción Cromática (Test de Ishihara) <span className="text-peru-red">*</span>
+                      </label>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <TacticalRadioCard
+                          selected={candidate.daltonismo === false}
+                          onClick={() => updateCandidate('daltonismo', false)}
+                          title="Visión Cromática Normal"
+                          subtitle="Distingue con total claridad luces tácticas y cartas de navegación"
+                          badge="NORMAL"
+                        />
+                        <TacticalRadioCard
+                          selected={candidate.daltonismo === true}
+                          onClick={() => updateCandidate('daltonismo', true)}
+                          title="Dificultad de Colores (Daltonismo)"
+                          subtitle="Confusión de tonos o alteración en discriminación visual"
+                          badge="OBSERVADO"
+                        />
+                      </div>
+                    </div>
+
+                    {/* 3. Estado Civil y Dependientes */}
+                    <div>
+                      <label className="block text-xs font-rajdhani font-bold text-slate-300 uppercase tracking-wider mb-2">
+                        3. Estado Civil y Cargas Familiares <span className="text-peru-red">*</span>
+                      </label>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <TacticalRadioCard
+                          selected={candidate.estado_civil === 'soltero' && candidate.tiene_hijos === false}
+                          onClick={() => {
+                            updateCandidate('estado_civil', 'soltero');
+                            updateCandidate('tiene_hijos', false);
+                          }}
+                          title="Soltero(a) Sin Hijos"
+                          subtitle="Cumple requisito de dedicación exclusiva en régimen de internado"
+                          badge="APTO"
+                        />
+                        <TacticalRadioCard
+                          selected={candidate.estado_civil === 'casado' || candidate.tiene_hijos === true}
+                          onClick={() => {
+                            updateCandidate('estado_civil', 'casado');
+                            updateCandidate('tiene_hijos', true);
+                          }}
+                          title="Casado(a) o Con Hijos"
+                          subtitle="Incompatible con régimen de internado militar oficial"
+                          badge="EXCLUYENTE"
+                        />
+                      </div>
+                    </div>
+
+                    {/* 4. Tatuajes Visibles */}
+                    <div>
+                      <label className="block text-xs font-rajdhani font-bold text-slate-300 uppercase tracking-wider mb-2">
+                        4. Tatuajes en Zonas Visibles con Uniforme de Verano <span className="text-peru-red">*</span>
+                      </label>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <TacticalRadioCard
+                          selected={candidate.tiene_tatuajes === false}
+                          onClick={() => updateCandidate('tiene_tatuajes', false)}
+                          title="Sin Tatuajes Visibles"
+                          subtitle="Cumple la normativa de presentación reglamentaria"
+                          badge="APTO"
+                        />
+                        <TacticalRadioCard
+                          selected={candidate.tiene_tatuajes === true}
+                          onClick={() => updateCandidate('tiene_tatuajes', true)}
+                          title="Poseo Tatuajes Visibles"
+                          subtitle="En cuello, antebrazos o piernas visibles en formación"
+                          badge="OBSERVADO"
+                        />
+                      </div>
+                    </div>
+
+                    {/* 5. Antecedentes Penales / Policiales */}
+                    <div>
+                      <label className="block text-xs font-rajdhani font-bold text-slate-300 uppercase tracking-wider mb-2">
+                        5. Antecedentes Penales, Judiciales o Policiales <span className="text-peru-red">*</span>
+                      </label>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <TacticalRadioCard
+                          selected={candidate.tiene_antecedentes === false}
+                          onClick={() => updateCandidate('tiene_antecedentes', false)}
+                          title="Carezco de Antecedentes"
+                          subtitle="Hoja de vida intachable / Sin registros judiciales"
+                          badge="APTO"
+                        />
+                        <TacticalRadioCard
+                          selected={candidate.tiene_antecedentes === true}
+                          onClick={() => updateCandidate('tiene_antecedentes', true)}
+                          title="Registro Antecedentes"
+                          subtitle="Causal directa de descalificación por ley de admisión"
+                          badge="EXCLUYENTE"
+                        />
+                      </div>
+                    </div>
+
+                    {/* 6. Secundaria Regular */}
+                    <div>
+                      <label className="block text-xs font-rajdhani font-bold text-slate-300 uppercase tracking-wider mb-2">
+                        6. Educación Secundaria Regular <span className="text-peru-red">*</span>
+                      </label>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <TacticalRadioCard
+                          selected={candidate.secundaria_completa === true}
+                          onClick={() => updateCandidate('secundaria_completa', true)}
+                          title="Culminada / Cursando 5to"
+                          subtitle="Certificado oficial de estudios visado"
+                          badge="APTO"
+                        />
+                        <TacticalRadioCard
+                          selected={candidate.secundaria_completa === false}
+                          onClick={() => updateCandidate('secundaria_completa', false)}
+                          title="Incompleta"
+                          subtitle="No cumple requisito académico reglamentario mínimo"
+                          badge="NO APTO"
+                        />
+                      </div>
+                    </div>
+
                   </div>
 
-                  {/* Antecedentes */}
-                  <div>
-                    <label className="block text-xs font-rajdhani font-bold text-slate-300 uppercase tracking-wider mb-2">
-                      Antecedentes Penales, Judiciales o Policiales
-                    </label>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                      <TacticalRadioCard
-                        selected={!candidate.tiene_antecedentes}
-                        onClick={() => updateCandidate('tiene_antecedentes', false)}
-                        title="Carezco de Antecedentes"
-                        subtitle="Hoja de vida intachable / Sin registros judiciales"
-                        badge="APTO"
-                      />
-                      <TacticalRadioCard
-                        selected={candidate.tiene_antecedentes}
-                        onClick={() => updateCandidate('tiene_antecedentes', true)}
-                        title="Registro Antecedentes"
-                        subtitle="Causal directa de descalificación por ley de admisión"
-                        badge="EXCLUYENTE"
-                      />
+                  {/* Botones de Navegación y Botón Procesar Elegibilidad */}
+                  <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-6 border-t border-white/10 mt-6">
+                    <button
+                      type="button"
+                      onClick={() => goToStep(1)}
+                      className="w-full sm:w-auto flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl border border-white/15 text-slate-400 hover:text-white font-rajdhani font-bold text-xs uppercase tracking-wider cursor-pointer"
+                    >
+                      <ArrowLeft className="w-4 h-4" />
+                      <span>Volver a Biometría</span>
+                    </button>
+
+                    <div className="w-full sm:w-auto flex items-center gap-3">
+                      {!isStep2Valid && (
+                        <span className="hidden sm:inline text-xs text-amber-400 font-inter">
+                          ⚠️ Responde los 6 filtros obligatorios (*)
+                        </span>
+                      )}
+
+                      {/* Regla 3: Botón de "Procesar Elegibilidad" con Validación en Tiempo Real */}
+                      <button
+                        type="button"
+                        disabled={isProcessing || !isStep2Valid}
+                        onClick={!isProcessing && isStep2Valid ? handleProcessEligibility : undefined}
+                        className={`w-full sm:w-auto flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl font-rajdhani font-extrabold text-sm uppercase tracking-wider transition-all duration-300 ${
+                          isStep2Valid && !isProcessing
+                            ? "bg-neon-cyan text-night-deep shadow-cyan-glow-lg hover:bg-cyan-300 cursor-pointer"
+                            : "bg-slate-800 text-slate-500 border border-slate-700 opacity-50 cursor-not-allowed"
+                        }`}
+                      >
+                        {isProcessing ? (
+                          <>
+                            <span className="w-4 h-4 rounded-full border-2 border-night-deep border-t-transparent animate-spin"></span>
+                            <span>PROCESANDO BAREMOS...</span>
+                          </>
+                        ) : (
+                          <>
+                            <span>PROCESAR ELEGIBILIDAD</span>
+                            <ArrowRight className="w-5 h-5" />
+                          </>
+                        )}
+                      </button>
                     </div>
                   </div>
-
-                  {/* Secundaria */}
-                  <div>
-                    <label className="block text-xs font-rajdhani font-bold text-slate-300 uppercase tracking-wider mb-2">
-                      Educación Secundaria Regular
-                    </label>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                      <TacticalRadioCard
-                        selected={candidate.secundaria_completa}
-                        onClick={() => updateCandidate('secundaria_completa', true)}
-                        title="Culminada / Cursando 5to"
-                        subtitle="Certificado oficial de estudios visado"
-                        badge="APTO"
-                      />
-                      <TacticalRadioCard
-                        selected={!candidate.secundaria_completa}
-                        onClick={() => updateCandidate('secundaria_completa', false)}
-                        title="Incompleta"
-                        subtitle="No cumple requisito académico mínimo"
-                        badge="NO APTO"
-                      />
-                    </div>
-                  </div>
-
                 </div>
 
-                {/* Botones de Navegación y Botón Procesar Elegibilidad */}
-                <div className="flex justify-between items-center pt-6 border-t border-white/10 mt-6">
-                  <button
-                    type="button"
-                    onClick={() => goToStep(1)}
-                    className="flex items-center gap-2 px-5 py-2.5 rounded-xl border border-white/15 text-slate-400 hover:text-white font-rajdhani font-bold text-xs uppercase tracking-wider"
-                  >
-                    <ArrowLeft className="w-4 h-4" />
-                    <span>Volver a Biometría</span>
-                  </button>
-
-                  {/* Regla 3: Botón de "Procesar Elegibilidad" */}
-                  <button
-                    type="button"
-                    disabled={isProcessing}
-                    onClick={handleProcessEligibility}
-                    className="flex items-center gap-2 px-7 py-3.5 rounded-xl bg-neon-cyan text-night-deep font-rajdhani font-extrabold text-sm uppercase tracking-wider shadow-cyan-glow-lg hover:bg-cyan-300 transition-all duration-300"
-                  >
-                    {isProcessing ? (
-                      <>
-                        <span className="w-4 h-4 rounded-full border-2 border-night-deep border-t-transparent animate-spin"></span>
-                        <span>PROCESANDO BAREMOS...</span>
-                      </>
-                    ) : (
-                      <>
-                        <span>PROCESAR ELEGIBILIDAD</span>
-                        <ArrowRight className="w-5 h-5" />
-                      </>
-                    )}
-                  </button>
-                </div>
-              </div>
-
-              {/* Columna Lateral Fotográfica (Acompañamiento Visual Inmersivo) */}
-              <div className="hidden lg:flex lg:col-span-4 flex-col rounded-3xl overflow-hidden border border-white/15 bg-night-deep/80 shadow-tactical-card">
+                {/* Columna Lateral Fotográfica (Acompañamiento Visual Inmersivo) */}
+                <div className="hidden lg:flex lg:col-span-4 flex-col rounded-3xl overflow-hidden border border-white/15 bg-night-deep/80 shadow-tactical-card">
                   <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-900">
                     <img
                       src="/assets/general/hero-joint-forces.jpg"
@@ -593,20 +787,26 @@ export default function Pillar1Legal() {
                     <div className="space-y-2 text-xs">
                       <div className="flex items-center justify-between border-b border-white/10 pb-2">
                         <span className="font-rajdhani text-slate-400 uppercase">Visión 20/20:</span>
-                        <span className={`font-bold ${candidate.agudeza_visual_20_20 ? "text-emerald-400" : "text-amber-400"}`}>
-                          {candidate.agudeza_visual_20_20 ? "Normal" : "Uso de Lentes"}
+                        <span className={`font-bold ${candidate.agudeza_visual_20_20 === null ? "text-slate-500" : candidate.agudeza_visual_20_20 ? "text-emerald-400" : "text-amber-400"}`}>
+                          {candidate.agudeza_visual_20_20 === null ? "Pendiente" : candidate.agudeza_visual_20_20 ? "Normal" : "Uso de Lentes"}
+                        </span>
+                      </div>
+                      <div className="flex items-center justify-between border-b border-white/10 pb-2">
+                        <span className="font-rajdhani text-slate-400 uppercase">Estado Civil:</span>
+                        <span className={`font-bold ${!candidate.estado_civil ? "text-slate-500" : candidate.estado_civil === "soltero" && !candidate.tiene_hijos ? "text-emerald-400" : "text-alert-red"}`}>
+                          {!candidate.estado_civil ? "Pendiente" : candidate.estado_civil === "soltero" && !candidate.tiene_hijos ? "Soltero/Sin Hijos" : "Con Cargas"}
                         </span>
                       </div>
                       <div className="flex items-center justify-between border-b border-white/10 pb-2">
                         <span className="font-rajdhani text-slate-400 uppercase">Sin Antecedentes:</span>
-                        <span className={`font-bold ${!candidate.tiene_antecedentes ? "text-emerald-400" : "text-alert-red"}`}>
-                          {!candidate.tiene_antecedentes ? "Conforme" : "Registrado"}
+                        <span className={`font-bold ${candidate.tiene_antecedentes === null ? "text-slate-500" : !candidate.tiene_antecedentes ? "text-emerald-400" : "text-alert-red"}`}>
+                          {candidate.tiene_antecedentes === null ? "Pendiente" : !candidate.tiene_antecedentes ? "Conforme" : "Registrado"}
                         </span>
                       </div>
                       <div className="flex items-center justify-between border-b border-white/10 pb-2">
                         <span className="font-rajdhani text-slate-400 uppercase">Secundaria:</span>
-                        <span className={`font-bold ${candidate.secundaria_completa ? "text-emerald-400" : "text-alert-red"}`}>
-                          {candidate.secundaria_completa ? "Completa" : "Incompleta"}
+                        <span className={`font-bold ${candidate.secundaria_completa === null ? "text-slate-500" : candidate.secundaria_completa ? "text-emerald-400" : "text-alert-red"}`}>
+                          {candidate.secundaria_completa === null ? "Pendiente" : candidate.secundaria_completa ? "Completa" : "Incompleta"}
                         </span>
                       </div>
                     </div>
@@ -654,7 +854,7 @@ export default function Pillar1Legal() {
                   <button
                     type="button"
                     onClick={() => goToStep(2)}
-                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-white/15 text-slate-400 hover:text-white text-xs font-rajdhani font-bold uppercase tracking-wider"
+                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-white/15 text-slate-400 hover:text-white text-xs font-rajdhani font-bold uppercase tracking-wider cursor-pointer"
                   >
                     <RotateCcw className="w-3.5 h-3.5" />
                     <span>Modificar Datos</span>
@@ -720,16 +920,28 @@ export default function Pillar1Legal() {
                   })}
                 </div>
 
-                {/* Botón CTA para avanzar al Pilar 2 */}
+                {/* Botón CTA para avanzar al Pilar 2 con Validación en Tiempo Real */}
                 <div className="text-center pt-4 border-t border-white/10">
                   <button
                     type="button"
-                    onClick={nextPillar}
-                    className="inline-flex items-center justify-center gap-3 px-10 py-4 rounded-xl bg-neon-cyan text-night-deep font-rajdhani font-extrabold text-base tracking-widest uppercase shadow-cyan-glow-lg hover:bg-cyan-300 hover:scale-105 transition-all duration-300"
+                    disabled={!isPilar1Complete}
+                    onClick={isPilar1Complete ? nextPillar : undefined}
+                    className={`inline-flex items-center justify-center gap-3 px-10 py-4 rounded-xl font-rajdhani font-extrabold text-base tracking-widest uppercase transition-all duration-300 ${
+                      isPilar1Complete
+                        ? "bg-neon-cyan text-night-deep shadow-cyan-glow-lg hover:bg-cyan-300 hover:scale-105 cursor-pointer"
+                        : "bg-slate-800 text-slate-500 border border-slate-700 opacity-50 cursor-not-allowed"
+                    }`}
                   >
                     <span>INICIAR SIMULACIÓN TÁCTICA (PILAR 2: PSICOMETRÍA)</span>
                     <ArrowRight className="w-5 h-5" />
                   </button>
+
+                  {!isPilar1Complete && (
+                    <p className="text-xs text-amber-400 font-inter mt-3 flex items-center justify-center gap-1.5">
+                      <AlertTriangle className="w-4 h-4" />
+                      <span>Faltan campos obligatorios en el perfil para avanzar al Pilar 2.</span>
+                    </p>
+                  )}
                 </div>
 
               </div>

@@ -4,6 +4,48 @@ import { TACTICAL_DILEMMAS, getAdaptedDilemmas } from '../data/tacticalDilemmas.
 import { KNOWLEDGE_QUESTIONS } from '../data/knowledgeQuestions.js';
 import { computeConsolidatedViability, computeVocationalViability } from '../data/scoringEngine.js';
 
+export const INITIAL_CANDIDATE = {
+  nombre: '',
+  dni: '',
+  edad: 0,
+  age: 0,
+  sexo: '',
+  talla_cm: 0,
+  height: 0,
+  peso_kg: 0,
+  weight: 0,
+  talla_sentado_cm: 0,
+  estado_civil: '',
+  tiene_hijos: null,
+  tiene_antecedentes: null,
+  tiene_tatuajes: null,
+  secundaria_completa: null,
+  agudeza_visual_20_20: null,
+  hasGlasses: null,
+  daltonismo: null,
+};
+
+export const DEMO_CANDIDATE = {
+  nombre: 'Carlos Mendoza',
+  dni: '73491820',
+  edad: 19,
+  age: 19,
+  sexo: 'M',
+  talla_cm: 172,
+  height: 172,
+  peso_kg: 70,
+  weight: 70,
+  talla_sentado_cm: 91,
+  estado_civil: 'soltero',
+  tiene_hijos: false,
+  tiene_antecedentes: false,
+  tiene_tatuajes: false,
+  secundaria_completa: true,
+  agudeza_visual_20_20: true,
+  hasGlasses: false,
+  daltonismo: false,
+};
+
 export const useAssessmentStore = create((set, get) => {
   const urlPillar = typeof window !== 'undefined' ? parseInt(new URLSearchParams(window.location.search).get('pillar') || '1', 10) : 1;
   const initialPillar = Math.min(4, Math.max(1, urlPillar));
@@ -23,27 +65,12 @@ export const useAssessmentStore = create((set, get) => {
     // Sub-pantallas de Paso 1 (Filtro Legal / Divulgación Progresiva)
     pilar1SubStep: 1, // 1: Identidad, 2: Antropometría, 3: Filtro Médico/Legal, 4: Desbloqueando
 
-    // Paso 1: Datos del Postulante y Restricciones Físicas Globales
-    candidate: {
-      nombre: 'Carlos Mendoza',
-      dni: '73491820',
-      edad: 19,
-      age: 19,
-      sexo: 'M',
-      talla_cm: 172,
-      height: 172,
-      peso_kg: 70,
-      weight: 70,
-      talla_sentado_cm: 91,
-      estado_civil: 'soltero',
-      tiene_hijos: false,
-      tiene_antecedentes: false,
-      tiene_tatuajes: false,
-      secundaria_completa: true,
-      agudeza_visual_20_20: true,
-      hasGlasses: false,
-      daltonismo: false,
-    },
+    // Paso 1: Datos del Postulante Inicializados Vacíos (Empty State por defecto)
+    candidate: { ...INITIAL_CANDIDATE },
+
+    // Modo Entrenamiento / Guía Interactiva (Onboarding Tour)
+    isTourOpen: false,
+    tourStep: 0,
 
     // Paso 2: Psicométrico IPIP-NEO (Modo Enfoque)
     psychIndex: 0,
@@ -165,15 +192,57 @@ export const useAssessmentStore = create((set, get) => {
       });
     },
 
+    // Inyección de Perfil de Prueba (Demo Mode) y Reseteo
+    loadDemoCandidate: () => {
+      set({ candidate: { ...DEMO_CANDIDATE } });
+    },
+
+    resetCandidate: () => {
+      set({ candidate: { ...INITIAL_CANDIDATE } });
+    },
+
+    // Sistema de Onboarding Interactivo (Guía de Usuario)
+    startTour: () => {
+      set({
+        activeModule: 'vocational',
+        currentPillar: 1,
+        direction: 1,
+        isTourOpen: true,
+        tourStep: 0,
+      });
+    },
+
+    nextTourStep: () => {
+      const current = get().tourStep;
+      if (current < 2) {
+        set({ tourStep: current + 1 });
+      } else {
+        set({ isTourOpen: false, tourStep: 0 });
+      }
+    },
+
+    prevTourStep: () => {
+      const current = get().tourStep;
+      if (current > 0) {
+        set({ tourStep: current - 1 });
+      }
+    },
+
+    closeTour: () => {
+      set({ isTourOpen: false, tourStep: 0 });
+    },
+
     // Selector helper para obtener las restricciones físicas calculadas
     getPhysicalRestrictions: () => {
       const { candidate } = get();
-      const hasGlasses = candidate.hasGlasses !== undefined
+      const hasGlasses = candidate.hasGlasses !== undefined && candidate.hasGlasses !== null
         ? Boolean(candidate.hasGlasses)
+        : candidate.agudeza_visual_20_20 === null
+        ? false
         : !candidate.agudeza_visual_20_20;
-      const age = Number(candidate.age ?? candidate.edad ?? 19);
-      const height = Number(candidate.height ?? candidate.talla_cm ?? 172);
-      const weight = Number(candidate.weight ?? candidate.peso_kg ?? 70);
+      const age = Number(candidate.age ?? candidate.edad ?? 0);
+      const height = Number(candidate.height ?? candidate.talla_cm ?? 0);
+      const weight = Number(candidate.weight ?? candidate.peso_kg ?? 0);
       const isMale = candidate.sexo === 'M';
 
       // Requisitos mínimos reglamentarios para Oficiales (EMCH, ENP, EOFAP, EO-PNP):
@@ -183,16 +252,17 @@ export const useAssessmentStore = create((set, get) => {
       const minHeightOfficer = isMale ? 167 : 158;
       const maxAgeOfficer = 22;
 
-      const isHeightOfficerExcluded = height < minHeightOfficer;
-      const isAgeOfficerExcluded = age > maxAgeOfficer;
+      // Si aún no ha ingresado talla/edad, no marcamos exclusión anticipada
+      const isHeightOfficerExcluded = height > 0 && height < minHeightOfficer;
+      const isAgeOfficerExcluded = age > 0 && age > maxAgeOfficer;
       const isOfficerExcluded = isHeightOfficerExcluded || isAgeOfficerExcluded;
       const isSubofficerOnly = isOfficerExcluded;
 
       // Exclusión específica de especialidades de vuelo de combate (EOFAP Piloto)
-      const isPilotExcluded = hasGlasses ||
+      const isPilotExcluded = Boolean(hasGlasses) ||
                               Boolean(candidate.daltonismo) ||
-                              Number(candidate.talla_sentado_cm) < 85 ||
-                              Number(candidate.talla_sentado_cm) > 98 ||
+                              (Number(candidate.talla_sentado_cm) > 0 &&
+                               (Number(candidate.talla_sentado_cm) < 85 || Number(candidate.talla_sentado_cm) > 98)) ||
                               isOfficerExcluded;
 
       return {
