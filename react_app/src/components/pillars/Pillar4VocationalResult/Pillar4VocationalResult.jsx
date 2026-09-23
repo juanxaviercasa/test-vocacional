@@ -122,11 +122,11 @@ export default function Pillar4VocationalResult() {
               <button
                 type="button"
                 onClick={() => startAcademicDiagnostic(topSigla)}
-                className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-neon-cyan via-teal-300 to-[#00F0FF] text-night-deep font-rajdhani font-black text-base sm:text-lg uppercase tracking-wider shadow-[0_0_35px_rgba(0,240,255,0.6)] hover:shadow-[0_0_45px_rgba(0,240,255,0.85)] hover:scale-[1.02] active:scale-[0.99] transition-all duration-200 flex items-center justify-center gap-3 cursor-pointer group"
+                className="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 rounded-2xl bg-gradient-to-r from-neon-cyan via-teal-300 to-[#00F0FF] text-night-deep font-rajdhani font-black text-sm sm:text-base uppercase tracking-wider shadow-[0_0_35px_rgba(0,240,255,0.6)] hover:shadow-[0_0_45px_rgba(0,240,255,0.85)] hover:scale-[1.02] active:scale-[0.99] transition-all duration-200 flex items-center justify-center gap-2.5 cursor-pointer group text-center"
               >
-                <Zap className="w-5 h-5 text-night-deep fill-current" />
-                <span>MEDIR MI NIVEL ACADÉMICO PARA {topSigla} -&gt;</span>
-                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1.5" />
+                <Zap className="w-5 h-5 text-night-deep fill-current flex-shrink-0" />
+                <span className="truncate">MEDIR MI NIVEL ACADÉMICO PARA {topSigla} -&gt;</span>
+                <ArrowRight className="w-5 h-5 flex-shrink-0 transition-transform group-hover:translate-x-1.5" />
               </button>
 
               <span className="text-xs sm:text-sm font-rajdhani font-medium text-slate-300 uppercase tracking-widest text-center sm:text-left">
@@ -401,23 +401,23 @@ export default function Pillar4VocationalResult() {
       </div>
 
       {/* 7. BOTÓN PRINCIPAL FLOTANTE REQUERIDO: DESCARGAR INFORME CLASIFICADO (PDF) */}
-      <div className="fixed bottom-6 right-6 z-50 no-print">
+      <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 no-print">
         <button
           type="button"
           onClick={handleDownloadPDF}
           disabled={isGeneratingPDF}
-          className="px-6 py-3.5 rounded-2xl bg-gradient-to-r from-neon-cyan via-teal-300 to-[#00F0FF] text-night-deep font-rajdhani font-black text-xs sm:text-sm uppercase tracking-wider shadow-[0_0_30px_rgba(0,240,255,0.7)] hover:shadow-[0_0_45px_rgba(0,240,255,0.9)] hover:scale-105 active:scale-95 transition-all duration-200 flex items-center gap-3 cursor-pointer border-2 border-white/80"
+          className="px-4 sm:px-6 py-2.5 sm:py-3.5 rounded-2xl bg-gradient-to-r from-neon-cyan via-teal-300 to-[#00F0FF] text-night-deep font-rajdhani font-black text-xs sm:text-sm uppercase tracking-wider shadow-[0_0_25px_rgba(0,240,255,0.7)] hover:shadow-[0_0_40px_rgba(0,240,255,0.9)] hover:scale-105 active:scale-95 transition-all duration-200 flex items-center gap-2 sm:gap-3 cursor-pointer border-2 border-white/80"
           title="Descargar informe oficial en PDF de alta resolución"
         >
           {isGeneratingPDF ? (
             <>
-              <Loader2 className="w-5 h-5 animate-spin text-night-deep" />
-              <span>COMPILANDO REPORTE CLASIFICADO...</span>
+              <Loader2 className="w-4 h-4 sm:w-5 sm:h-5 animate-spin text-night-deep flex-shrink-0" />
+              <span className="whitespace-nowrap">COMPILANDO REPORTE...</span>
             </>
           ) : (
             <>
-              <Download className="w-5 h-5 text-night-deep" />
-              <span>DESCARGAR INFORME CLASIFICADO (PDF)</span>
+              <Download className="w-4 h-4 sm:w-5 sm:h-5 text-night-deep flex-shrink-0" />
+              <span className="whitespace-nowrap">DESCARGAR INFORME (PDF)</span>
             </>
           )}
         </button>

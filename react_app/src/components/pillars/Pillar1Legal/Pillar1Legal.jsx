@@ -171,10 +171,10 @@ export default function Pillar1Legal() {
                     <button
                       type="button"
                       onClick={() => goToStep(1)}
-                      className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-neon-cyan text-night-deep font-rajdhani font-extrabold text-base tracking-widest uppercase shadow-cyan-glow-lg hover:bg-cyan-300 hover:scale-105 transition-all duration-300"
+                      className="w-full sm:w-auto inline-flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-neon-cyan text-night-deep font-rajdhani font-black text-sm sm:text-base tracking-wider uppercase shadow-cyan-glow-lg hover:bg-cyan-300 hover:scale-105 transition-all duration-300 cursor-pointer text-center"
                     >
                       <span>INICIAR EVALUACIÓN LEGAL Y FÍSICA</span>
-                      <ArrowRight className="w-5 h-5" />
+                      <ArrowRight className="w-5 h-5 flex-shrink-0" />
                     </button>
                   </div>
                 </div>

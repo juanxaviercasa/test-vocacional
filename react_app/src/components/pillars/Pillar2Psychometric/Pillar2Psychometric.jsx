@@ -81,24 +81,36 @@ export default function Pillar2Psychometric() {
                         : "bg-graphite-surface border-white/10 hover:border-white/30 hover:bg-white/[0.06] hover:scale-102"
                     }`}
                   >
-                    <span className={`text-xl sm:text-2xl font-rajdhani font-bold mb-1 transition-colors ${
+                    <span className={`text-xl sm:text-2xl font-rajdhani font-black mb-0.5 sm:mb-1 transition-colors ${
                       isSelected ? "text-neon-cyan" : "text-slate-200 group-hover:text-white"
                     }`}>
-                      {opt.short}
+                      {opt.value}
                     </span>
-                    <span className={`text-xs sm:text-sm font-inter text-center leading-tight line-clamp-2 transition-colors ${
-                      isSelected ? "text-cyan-200 font-semibold" : "text-slate-300 group-hover:text-white"
+                    <span className={`text-[10px] sm:text-xs font-rajdhani font-bold uppercase tracking-wider text-center leading-tight transition-colors hidden sm:block ${
+                      isSelected ? "text-cyan-200 font-black" : "text-slate-300 group-hover:text-white"
                     }`}>
                       {opt.label}
+                    </span>
+                    <span className={`text-[9px] font-rajdhani font-bold uppercase text-center leading-none transition-colors sm:hidden ${
+                      isSelected ? "text-cyan-300" : "text-slate-400"
+                    }`}>
+                      {opt.short}
                     </span>
 
                     {/* Resplandor inferior */}
                     {isSelected && (
-                      <div className="absolute -bottom-1 left-3 right-3 h-1 bg-neon-cyan rounded-full shadow-cyan-glow" />
+                      <div className="absolute -bottom-1 left-2 right-2 h-1 bg-neon-cyan rounded-full shadow-cyan-glow" />
                     )}
                   </button>
                 );
               })}
+            </div>
+
+            {/* Leyenda Dinámica de la Opción Seleccionada (Visible y limpia en móvil) */}
+            <div className="mt-4 sm:hidden flex items-center justify-center">
+              <span className="text-xs font-rajdhani font-bold px-3 py-1 rounded-full bg-cyan-950/80 border border-cyan-500/40 text-cyan-300 uppercase tracking-wider">
+                {selectedVal ? LIKERT_OPTIONS.find(o => o.value === selectedVal)?.label : 'Selecciona tu nivel de acuerdo'}
+              </span>
             </div>
 
             {/* Indicador de Auto-avance */}
