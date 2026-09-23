@@ -12,22 +12,102 @@ import {
   ArrowLeft,
   RotateCcw,
   Award,
-  Zap,
+  BarChart3,
+  Flame,
   Shield,
   HelpCircle,
-  Flame,
-  BarChart3
+  Play
 } from 'lucide-react';
 
 const MILITARY_SCHOOLS = [
-  { id: 'EOFAP', name: 'Escuela de Oficiales FAP', rama: 'Fuerza Aérea', badge: '✈️ EOFAP' },
-  { id: 'EMCH', name: 'Escuela Militar de Chorrillos', rama: 'Ejército', badge: '⚔️ EMCH' },
-  { id: 'ENP', name: 'Escuela Naval del Perú', rama: 'Marina de Guerra', badge: '⚓ ENP' },
-  { id: 'CITEN', name: 'Instituto Tecnológico Naval', rama: 'Marina de Guerra', badge: '🚢 CITEN' },
-  { id: 'ESOFA', name: 'Escuela de Suboficiales FAP', rama: 'Fuerza Aérea', badge: '🚀 ESOFA' },
-  { id: 'ETE', name: 'Escuela Técnica del Ejército', rama: 'Ejército', badge: '🛡️ ETE' },
-  { id: 'EO_PNP', name: 'Escuela de Oficiales PNP', rama: 'Policía Nacional', badge: '👮 EO-PNP' },
-  { id: 'EESTP_PNP', name: 'Escuela Técnica Superior PNP', rama: 'Policía Nacional', badge: '🚓 EESTP-PNP' },
+  {
+    id: 'EOFAP',
+    sigla: 'EOFAP',
+    name: 'Escuela de Oficiales de la Fuerza Aérea del Perú',
+    rama: 'Fuerza Aérea',
+    rango: 'Oficial',
+    icono: '✈️',
+    badgeClass: 'bg-sky-500/10 text-sky-400 border-sky-500/30',
+    cardBorder: 'hover:border-sky-400',
+    descripcion: 'Balotario oficial para futuros pilotos de caza, transporte, helicópteros y defensa aérea.'
+  },
+  {
+    id: 'EMCH',
+    sigla: 'EMCH',
+    name: 'Escuela Militar de Chorrillos',
+    rama: 'Ejército del Perú',
+    rango: 'Oficial',
+    icono: '⚔️',
+    badgeClass: 'bg-amber-600/10 text-amber-400 border-amber-600/30',
+    cardBorder: 'hover:border-amber-500',
+    descripcion: 'Alma mater del Ejército. Ciencias militares, infantería, blindados e ingeniería de combate.'
+  },
+  {
+    id: 'ENP',
+    sigla: 'ENP',
+    name: 'Escuela Naval del Perú',
+    rama: 'Marina de Guerra',
+    rango: 'Oficial',
+    icono: '⚓',
+    badgeClass: 'bg-blue-600/10 text-blue-400 border-blue-600/30',
+    cardBorder: 'hover:border-blue-500',
+    descripcion: 'Formación náutica, comando naval, ingeniería de propulsión y operaciones en altamar.'
+  },
+  {
+    id: 'CITEN',
+    sigla: 'CITEN',
+    name: 'Instituto Tecnológico Naval',
+    rama: 'Marina de Guerra',
+    rango: 'Suboficial',
+    icono: '🚢',
+    badgeClass: 'bg-cyan-600/10 text-cyan-400 border-cyan-600/30',
+    cardBorder: 'hover:border-cyan-500',
+    descripcion: 'Carreras técnicas navales: sistemas de control, electrónica, armamento y maquinaria marina.'
+  },
+  {
+    id: 'ESOFA',
+    sigla: 'ESOFA',
+    name: 'Escuela de Suboficiales de la FAP',
+    rama: 'Fuerza Aérea',
+    rango: 'Suboficial',
+    icono: '🚀',
+    badgeClass: 'bg-indigo-500/10 text-indigo-400 border-indigo-500/30',
+    cardBorder: 'hover:border-indigo-400',
+    descripcion: 'Mantenimiento de aeronaves de combate, aviónica, radares y telemetría espacial.'
+  },
+  {
+    id: 'ETE',
+    sigla: 'ETE',
+    name: 'Escuela Técnica del Ejército',
+    rama: 'Ejército del Perú',
+    rango: 'Suboficial',
+    icono: '🛡️',
+    badgeClass: 'bg-emerald-600/10 text-emerald-400 border-emerald-600/30',
+    cardBorder: 'hover:border-emerald-500',
+    descripcion: 'Suboficiales técnicos de armamento, telecomunicaciones tácticas y mecatrónica.'
+  },
+  {
+    id: 'EO_PNP',
+    sigla: 'EO-PNP',
+    name: 'Escuela de Oficiales PNP',
+    rama: 'Policía Nacional',
+    rango: 'Oficial',
+    icono: '👮',
+    badgeClass: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/30',
+    cardBorder: 'hover:border-emerald-400',
+    descripcion: 'Liderazgo policial, investigación criminalística, orden público y seguridad ciudadana.'
+  },
+  {
+    id: 'EESTP_PNP',
+    sigla: 'EESTP-PNP',
+    name: 'Escuela Técnico Superior PNP',
+    rama: 'Policía Nacional',
+    rango: 'Suboficial',
+    icono: '🚓',
+    badgeClass: 'bg-teal-500/10 text-teal-400 border-teal-500/30',
+    cardBorder: 'hover:border-teal-400',
+    descripcion: 'Suboficiales de intervención táctica, tránsito, patrullaje y rescate de emergencia.'
+  },
 ];
 
 const slideVariants = {
@@ -38,30 +118,25 @@ const slideVariants = {
   center: {
     x: 0,
     opacity: 1,
-    transition: {
-      duration: 0.35,
-      ease: [0.16, 1, 0.3, 1],
-    },
+    transition: { duration: 0.3, ease: [0.16, 1, 0.3, 1] },
   },
   exit: (direction) => ({
     x: direction > 0 ? -80 : 80,
     opacity: 0,
-    transition: {
-      duration: 0.25,
-      ease: [0.16, 1, 0.3, 1],
-    },
+    transition: { duration: 0.2, ease: [0.16, 1, 0.3, 1] },
   }),
 };
 
 export default function Pillar4Knowledge() {
-  const { candidate, nextPillar, prevPillar, answerKnowledgeQuestion } = useAssessmentStore();
+  const { nextPillar, prevPillar, answerKnowledgeQuestion } = useAssessmentStore();
+  
+  // Regla 1: Estado de Examen Iniciado
+  const [isTestStarted, setIsTestStarted] = useState(false);
   const [selectedSchool, setSelectedSchool] = useState('EOFAP');
   const [slideDirection, setSlideDirection] = useState(1);
   const [isAdvancing, setIsAdvancing] = useState(false);
 
-  // Hook Maestro de Evaluación Académica (Pilar 4)
   const {
-    schoolId,
     isLoading,
     error,
     questions,
@@ -80,11 +155,21 @@ export default function Pillar4Knowledge() {
     changeSchool,
   } = useKnowledgeTest(selectedSchool);
 
-  const handleSchoolChange = (newId) => {
-    setSelectedSchool(newId);
-    changeSchool(newId);
+  // Iniciar Examen para una Escuela Matriz
+  const handleStartTest = (schoolId) => {
+    setSelectedSchool(schoolId);
+    changeSchool(schoolId);
+    restartTest();
+    setIsTestStarted(true);
   };
 
+  // Abandonar o Cambiar Escuela (regresa a la vista Pre-Test)
+  const handleExitTest = () => {
+    setIsTestStarted(false);
+    restartTest();
+  };
+
+  // Registrar respuesta con auto-avance táctico
   const handleAnswerClick = (optionId) => {
     if (isAdvancing || isCompleted) return;
     selectAnswer(optionId);
@@ -111,13 +196,16 @@ export default function Pillar4Knowledge() {
     prevQuestion();
   };
 
-  // Temporizador de Estrés: formato y cálculo de porcentaje
+  // Datos de la escuela actualmente activa
+  const activeSchoolMeta = MILITARY_SCHOOLS.find(s => s.id === selectedSchool) || MILITARY_SCHOOLS[0];
+
+  // Cálculo del Temporizador
   const timerPercentage = Math.max(0, Math.min(100, (timeRemaining / 72) * 100));
   let timerTheme = {
     color: 'text-neon-cyan',
     border: 'border-neon-cyan/40',
-    bg: 'bg-cyan-950/30',
-    glow: 'shadow-cyan-glow',
+    bg: 'bg-cyan-950/40',
+    glow: 'shadow-cyan-glow-sm',
     barColor: 'bg-neon-cyan',
   };
 
@@ -125,7 +213,7 @@ export default function Pillar4Knowledge() {
     timerTheme = {
       color: 'text-alert-red animate-pulse',
       border: 'border-alert-red/70',
-      bg: 'bg-red-950/50',
+      bg: 'bg-red-950/60',
       glow: 'shadow-red-glow',
       barColor: 'bg-alert-red animate-pulse',
     };
@@ -133,182 +221,234 @@ export default function Pillar4Knowledge() {
     timerTheme = {
       color: 'text-alert-amber',
       border: 'border-alert-amber/50',
-      bg: 'bg-amber-950/30',
+      bg: 'bg-amber-950/40',
       glow: 'shadow-[0_0_15px_rgba(245,158,11,0.3)]',
       barColor: 'bg-alert-amber',
     };
   }
 
-  // Estado de carga inicial
-  if (isLoading) {
+  // =========================================================================
+  // ESTADO DE CARGA
+  // =========================================================================
+  if (isLoading && isTestStarted) {
     return (
-      <div className="w-full max-w-4xl mx-auto px-4 py-12 text-center">
-        <div className="glass-panel p-10 rounded-3xl border border-white/10 shadow-tactical-card max-w-md mx-auto">
+      <div className="w-full max-w-2xl mx-auto px-4 py-16 text-center">
+        <div className="bg-[#141518] p-10 rounded-2xl border border-gray-700 shadow-2xl">
           <div className="w-12 h-12 rounded-full border-4 border-neon-cyan border-t-transparent animate-spin mx-auto mb-4" />
-          <h3 className="text-xl font-rajdhani font-bold text-white uppercase tracking-wider">
-            CARGANDO BANCO OFICIAL DE PREGUNTAS...
+          <h3 className="text-xl font-military font-bold text-white uppercase tracking-wider">
+            DESPLEGANDO BALOTARIO MILITAR...
           </h3>
-          <p className="text-xs text-slate-400 font-inter mt-2">
-            Verificando sintaxis LaTeX y distribuyendo 20 reactivos equitativos para {selectedSchool}.
+          <p className="text-xs text-gray-300 font-inter mt-2">
+            Distribuyendo 20 reactivos académicos equitativos para <strong className="text-white">{activeSchoolMeta.sigla}</strong>.
           </p>
         </div>
       </div>
     );
   }
 
-  // Estado de error
-  if (error || !currentQuestion) {
+  // =========================================================================
+  // ESTADO DE ERROR
+  // =========================================================================
+  if (error && isTestStarted) {
     return (
-      <div className="w-full max-w-4xl mx-auto px-4 py-12 text-center">
-        <div className="glass-panel p-8 rounded-3xl border border-alert-red/40 shadow-tactical-card max-w-md mx-auto">
+      <div className="w-full max-w-2xl mx-auto px-4 py-16 text-center">
+        <div className="bg-[#141518] p-8 rounded-2xl border border-alert-red shadow-2xl">
           <AlertTriangle className="w-10 h-10 text-alert-red mx-auto mb-3" />
-          <h3 className="text-lg font-rajdhani font-bold text-white uppercase">
-            Error al Cargar Preguntas
-          </h3>
-          <p className="text-xs text-slate-400 my-2">{error || "No se encontraron preguntas disponibles."}</p>
-          <button
-            type="button"
-            onClick={restartTest}
-            className="mt-4 px-6 py-2.5 rounded-xl bg-neon-cyan text-night-deep font-rajdhani font-bold text-xs uppercase"
-          >
-            Reintentar Carga
-          </button>
+          <h3 className="text-lg font-rajdhani font-bold text-white uppercase">Error al Cargar Preguntas</h3>
+          <p className="text-xs text-gray-300 my-2">{error}</p>
+          <div className="flex justify-center gap-3 mt-4">
+            <button
+              onClick={handleExitTest}
+              className="px-5 py-2 rounded-xl border border-gray-600 text-gray-300 hover:text-white font-rajdhani font-bold text-xs uppercase"
+            >
+              Volver al Catálogo
+            </button>
+            <button
+              onClick={restartTest}
+              className="px-5 py-2 rounded-xl bg-neon-cyan text-night-deep font-rajdhani font-bold text-xs uppercase"
+            >
+              Reintentar
+            </button>
+          </div>
         </div>
       </div>
     );
   }
 
-  return (
-    <div className="w-full max-w-5xl mx-auto px-3 sm:px-6 py-4">
-      
-      {/* ------------------------------------------------------------------
-          1. HEADER TÁCTICO: SELECTOR DE ESCUELA Y ESTADO GENERAL
-          ------------------------------------------------------------------ */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
-        <div>
-          <div className="flex items-center gap-2 mb-1">
-            <span className="w-2 h-2 rounded-full bg-neon-cyan animate-pulse" />
-            <span className="text-xs font-rajdhani font-bold text-neon-cyan tracking-widest uppercase">
-              PILAR 4 // SIMULADOR DE CONOCIMIENTOS ACADÉMICOS
-            </span>
+  // =========================================================================
+  // 1. VISTA PRE-TEST (!isTestStarted): CATÁLOGO TÁCTICO DE LAS 8 ESCUELAS
+  // =========================================================================
+  if (!isTestStarted) {
+    return (
+      <div className="w-full max-w-6xl mx-auto px-4 py-6">
+        
+        {/* Cabecera Táctica del Pre-Test */}
+        <div className="text-center max-w-3xl mx-auto mb-8">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-peru-red/10 border border-peru-red/30 text-peru-red text-xs font-teko font-bold uppercase tracking-widest mb-3">
+            <Shield className="w-3.5 h-3.5" />
+            <span>PILAR 4 // PROTOCOLO DE CONOCIMIENTOS ACADÉMICOS</span>
           </div>
-          <h2 className="text-xl sm:text-2xl font-rajdhani font-extrabold text-white uppercase tracking-wide flex items-center gap-2">
-            <span>BATERÍA DE ADMISIÓN:</span>
-            <span className="text-neon-cyan">{selectedSchool}</span>
-          </h2>
+
+          <h1 className="font-military text-2xl sm:text-4xl text-charcoal dark:text-white uppercase tracking-wide">
+            SELECCIONA TU ESCUELA MATRIZ OBJETIVO
+          </h1>
+
+          <p className="text-xs sm:text-sm text-stone-600 dark:text-gray-300 font-inter mt-2 leading-relaxed">
+            Cada institución evalúa con su propio balotario reglamentario 2026/2027. El simulador extraerá 
+            <strong className="text-charcoal dark:text-white font-semibold"> 20 preguntas equitativas</strong> con un temporizador de 
+            <strong className="text-charcoal dark:text-white font-semibold"> 72 segundos por reactivo</strong>. 
+            Aciertos: <span className="text-emerald-500 font-bold">+20 pts</span> | Errores: <span className="text-alert-red font-bold">-1.25 pts</span>.
+          </p>
         </div>
 
-        {/* Selector Rápido de Escuela Matriz */}
-        <div className="flex items-center gap-1.5 overflow-x-auto pb-1 max-w-full">
-          {MILITARY_SCHOOLS.map((esc) => {
-            const isEscActive = selectedSchool === esc.id;
-            return (
-              <button
-                key={esc.id}
-                type="button"
-                onClick={() => handleSchoolChange(esc.id)}
-                className={`px-3 py-1.5 rounded-lg border text-xs font-rajdhani font-bold whitespace-nowrap transition-all duration-200 ${
-                  isEscActive
-                    ? "bg-cyan-950/80 border-neon-cyan text-white shadow-cyan-glow-sm scale-105"
-                    : "bg-graphite/60 border-white/10 text-slate-400 hover:text-white hover:border-white/25"
-                }`}
-              >
-                {esc.badge}
-              </button>
-            );
-          })}
+        {/* Cuadrícula Limpia de las 8 Escuelas (Sin Scrollbars Horizontales) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {MILITARY_SCHOOLS.map((esc) => (
+            <div
+              key={esc.id}
+              onClick={() => handleStartTest(esc.id)}
+              className={`group relative bg-[#141518] border border-gray-700 rounded-2xl p-5 cursor-pointer transition-all duration-200 hover:scale-[1.02] hover:shadow-xl ${esc.cardBorder} flex flex-col justify-between`}
+            >
+              <div>
+                {/* Header de la Tarjeta */}
+                <div className="flex items-center justify-between gap-2 mb-3">
+                  <span className="text-2xl select-none">{esc.icono}</span>
+                  <span className={`px-2 py-0.5 rounded text-[10px] font-rajdhani font-bold uppercase tracking-wider border ${esc.badgeClass}`}>
+                    {esc.rango}
+                  </span>
+                </div>
+
+                {/* Sigla y Nombre Oficial */}
+                <h3 className="font-military text-xl text-white group-hover:text-neon-cyan transition-colors tracking-wide">
+                  {esc.sigla}
+                </h3>
+                <h4 className="font-rajdhani text-xs text-yellow-400 font-bold uppercase tracking-wider mt-0.5">
+                  {esc.rama}
+                </h4>
+                <p className="font-inter text-xs text-gray-300 mt-2 leading-snug line-clamp-2">
+                  {esc.descripcion}
+                </p>
+              </div>
+
+              {/* Botón de Acción Táctico */}
+              <div className="mt-5 pt-3 border-t border-gray-800 flex items-center justify-between text-xs font-rajdhani font-bold text-gray-300 group-hover:text-white">
+                <span className="text-[11px] text-gray-400">20 REACTIVOS OFICIALES</span>
+                <span className="inline-flex items-center gap-1 text-neon-cyan group-hover:translate-x-1 transition-transform">
+                  <span>INICIAR</span>
+                  <Play className="w-3.5 h-3.5 fill-current" />
+                </span>
+              </div>
+            </div>
+          ))}
         </div>
+
+        {/* Botón Volver al Pilar 3 */}
+        <div className="flex justify-start mt-8 pt-4 border-t border-stone-300 dark:border-gray-800">
+          <button
+            type="button"
+            onClick={prevPillar}
+            className="flex items-center gap-2 px-5 py-2.5 rounded-xl border border-stone-300 dark:border-gray-700 text-stone-600 dark:text-gray-300 hover:text-charcoal dark:hover:text-white font-rajdhani font-bold text-xs tracking-wider uppercase transition-colors"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            <span>Volver a Pilar 3 (Intereses Operacionales)</span>
+          </button>
+        </div>
+
       </div>
+    );
+  }
 
-      {/* ------------------------------------------------------------------
-          2. PANTALLA DE RESULTADOS (CUANDO SE COMPLETAN LAS 20 PREGUNTAS)
-          ------------------------------------------------------------------ */}
-      {isCompleted ? (
-        <div className="glass-panel p-6 sm:p-10 rounded-3xl border border-neon-cyan/30 shadow-tactical-card">
+  // =========================================================================
+  // 2. VISTA DE RESULTADOS (CUANDO CONCLUYEN LAS 20 PREGUNTAS)
+  // =========================================================================
+  if (isCompleted) {
+    return (
+      <div className="w-full max-w-4xl mx-auto px-4 py-6">
+        <div className="bg-[#141518] p-6 sm:p-10 rounded-2xl border border-gray-700 shadow-2xl">
+          
           <div className="text-center max-w-2xl mx-auto mb-8">
             <div className="w-16 h-16 rounded-2xl bg-cyan-950/60 border border-neon-cyan/40 flex items-center justify-center text-neon-cyan mx-auto mb-4 shadow-cyan-glow">
               <Award className="w-8 h-8" />
             </div>
-            <span className="text-xs font-rajdhani font-bold text-neon-cyan tracking-widest uppercase">
-              EVALUACIÓN CONOCIMIENTOS CONCLUIDA // {selectedSchool}
+            <span className="font-teko text-sm text-neon-cyan uppercase font-bold tracking-widest block">
+              EVALUACIÓN ACADÉMICA CONCLUIDA // {activeSchoolMeta.sigla}
             </span>
-            <h3 className="text-3xl sm:text-4xl font-rajdhani font-extrabold text-white uppercase tracking-wider mt-1">
-              DICTAMEN DE RENDIMIENTO ACADÉMICO
-            </h3>
-            <p className="text-xs sm:text-sm text-slate-300 font-inter mt-2">
-              Puntaje calculado con baremo oficial de admisión: aciertos bonificados (+20 pts) y errores penalizados (-1.25 pts).
+            <h2 className="font-military text-2xl sm:text-3xl text-white uppercase tracking-wider mt-1">
+              DICTAMEN DE RENDIMIENTO
+            </h2>
+            <p className="text-xs sm:text-sm text-gray-300 font-inter mt-2">
+              Baremo oficial aplicado: aciertos bonificados (+20 pts) y errores penalizados (-1.25 pts).
             </p>
           </div>
 
-          {/* Tarjetas HUD de Puntaje */}
+          {/* Tarjetas de Puntaje */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-            <div className="p-5 rounded-2xl bg-night-deep/80 border border-white/10 text-center">
-              <span className="text-xs font-rajdhani font-bold text-slate-400 uppercase tracking-wider block mb-1">
+            <div className="p-5 rounded-xl bg-[#1b1c22] border border-gray-700 text-center">
+              <span className="text-xs font-rajdhani font-bold text-gray-400 uppercase tracking-wider block mb-1">
                 Nota Vigesimal (0 - 20)
               </span>
-              <div className="text-4xl sm:text-5xl font-rajdhani font-extrabold text-neon-cyan leading-tight">
+              <div className="text-4xl sm:text-5xl font-military text-neon-cyan leading-tight">
                 {score.vigesimalScore.toFixed(2)}
               </div>
               <span className={`inline-block px-2.5 py-0.5 mt-2 rounded text-[11px] font-rajdhani font-bold uppercase tracking-wider ${
                 score.isApproved
-                  ? "bg-emerald-950/60 border border-emerald-500/40 text-emerald-400"
-                  : "bg-red-950/60 border border-alert-red/40 text-alert-red"
+                  ? "bg-emerald-950/80 border border-emerald-500/50 text-emerald-400"
+                  : "bg-red-950/80 border border-alert-red/50 text-alert-red"
               }`}>
                 {score.isApproved ? "APTO ACADÉMICO" : "EN OBSERVACIÓN"}
               </span>
             </div>
 
-            <div className="p-5 rounded-2xl bg-night-deep/80 border border-white/10 text-center">
-              <span className="text-xs font-rajdhani font-bold text-slate-400 uppercase tracking-wider block mb-1">
-                Puntaje Bruto Acumulado
+            <div className="p-5 rounded-xl bg-[#1b1c22] border border-gray-700 text-center">
+              <span className="text-xs font-rajdhani font-bold text-gray-400 uppercase tracking-wider block mb-1">
+                Puntaje Bruto
               </span>
-              <div className="text-4xl sm:text-5xl font-rajdhani font-extrabold text-white leading-tight">
-                {score.rawScore} <span className="text-xs text-slate-500 font-bold">/ {score.maxPossibleScore}</span>
+              <div className="text-4xl sm:text-5xl font-military text-white leading-tight">
+                {score.rawScore} <span className="text-xs text-gray-500 font-inter">/ {score.maxPossibleScore}</span>
               </div>
-              <span className="text-[11px] text-slate-400 block mt-2">
-                Eficacia: <strong className="text-neon-cyan">{score.accuracy}%</strong> de precisión
+              <span className="text-[11px] text-gray-400 block mt-2">
+                Precisión: <strong className="text-neon-cyan">{score.accuracy}%</strong>
               </span>
             </div>
 
-            <div className="p-5 rounded-2xl bg-night-deep/80 border border-white/10 text-center">
-              <span className="text-xs font-rajdhani font-bold text-slate-400 uppercase tracking-wider block mb-1">
-                Desglose de Reactivos (20 P)
+            <div className="p-5 rounded-xl bg-[#1b1c22] border border-gray-700 text-center">
+              <span className="text-xs font-rajdhani font-bold text-gray-400 uppercase tracking-wider block mb-1">
+                Desglose (20 Reactivos)
               </span>
-              <div className="flex justify-center items-baseline gap-4 mt-2">
+              <div className="flex justify-center items-baseline gap-4 mt-2 font-military">
                 <div>
-                  <span className="text-2xl font-rajdhani font-extrabold text-emerald-400 block">{score.correctCount}</span>
-                  <span className="text-[10px] text-slate-400 uppercase">Aciertos</span>
+                  <span className="text-2xl text-emerald-400 block">{score.correctCount}</span>
+                  <span className="text-[10px] text-gray-400 font-rajdhani uppercase">Aciertos</span>
                 </div>
-                <div className="text-slate-600 font-bold">/</div>
+                <div className="text-gray-600 font-bold">/</div>
                 <div>
-                  <span className="text-2xl font-rajdhani font-extrabold text-alert-red block">{score.incorrectCount}</span>
-                  <span className="text-[10px] text-slate-400 uppercase">Errores</span>
+                  <span className="text-2xl text-alert-red block">{score.incorrectCount}</span>
+                  <span className="text-[10px] text-gray-400 font-rajdhani uppercase">Errores</span>
                 </div>
-                <div className="text-slate-600 font-bold">/</div>
+                <div className="text-gray-600 font-bold">/</div>
                 <div>
-                  <span className="text-2xl font-rajdhani font-extrabold text-slate-400 block">{score.blankCount}</span>
-                  <span className="text-[10px] text-slate-400 uppercase">En Blanco</span>
+                  <span className="text-2xl text-gray-400 block">{score.blankCount}</span>
+                  <span className="text-[10px] text-gray-400 font-rajdhani uppercase">En Blanco</span>
                 </div>
               </div>
-              <span className="text-[10px] text-slate-500 block mt-2">Penalización aplicada: -1.25 pts c/u</span>
             </div>
           </div>
 
-          {/* Desglose por Cursos Académicos */}
-          <div className="p-5 rounded-2xl bg-night-deep/60 border border-white/10 mb-8">
-            <h4 className="text-xs font-rajdhani font-bold text-slate-300 uppercase tracking-wider mb-3 flex items-center gap-2">
+          {/* Desglose por Cursos */}
+          <div className="p-5 rounded-xl bg-[#1a1b20] border border-gray-700 mb-8">
+            <h4 className="text-xs font-rajdhani font-bold text-gray-300 uppercase tracking-wider mb-3 flex items-center gap-2">
               <BarChart3 className="w-4 h-4 text-neon-cyan" />
-              <span>RENDIMIENTO POR CURSO EN EL BANCO DE {selectedSchool}:</span>
+              <span>RENDIMIENTO POR CURSO ({activeSchoolMeta.sigla}):</span>
             </h4>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
               {Object.entries(score.courseStats).map(([course, st]) => (
-                <div key={course} className="p-3 rounded-xl bg-graphite/40 border border-white/5">
-                  <span className="text-xs font-rajdhani font-bold text-slate-200 block truncate" title={course}>
+                <div key={course} className="p-3 rounded-lg bg-[#22232a] border border-gray-800">
+                  <span className="text-xs font-rajdhani font-bold text-gray-200 block truncate" title={course}>
                     {course}
                   </span>
                   <div className="flex items-center justify-between mt-1 text-xs">
-                    <span className="text-slate-400">{st.correct}/{st.total} correctas</span>
-                    <span className="font-bold text-neon-cyan">{st.pts > 0 ? `+${st.pts}` : st.pts} pts</span>
+                    <span className="text-gray-400">{st.correct}/{st.total} correctas</span>
+                    <span className="font-bold text-neon-cyan">{st.pts > 0 ? `+${st.pts}` : st.pts}</span>
                   </div>
                 </div>
               ))}
@@ -316,210 +456,233 @@ export default function Pillar4Knowledge() {
           </div>
 
           {/* Acciones Finales */}
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-4 border-t border-white/10">
-            <button
-              type="button"
-              onClick={restartTest}
-              className="flex items-center gap-2 px-6 py-3 rounded-xl border border-white/15 text-slate-300 hover:text-white font-rajdhani font-bold text-xs uppercase tracking-wider hover:bg-white/5"
-            >
-              <RotateCcw className="w-4 h-4" />
-              <span>Repetir Simulacro (Nuevas 20 Preguntas)</span>
-            </button>
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-4 border-t border-gray-800">
+            <div className="flex items-center gap-3">
+              <button
+                type="button"
+                onClick={handleExitTest}
+                className="px-4 py-2.5 rounded-xl border border-gray-700 text-gray-300 hover:text-white font-rajdhani font-bold text-xs uppercase transition-colors"
+              >
+                Elegir Otra Escuela
+              </button>
+              <button
+                type="button"
+                onClick={restartTest}
+                className="flex items-center gap-2 px-5 py-2.5 rounded-xl border border-gray-700 text-gray-300 hover:text-white font-rajdhani font-bold text-xs uppercase hover:bg-white/5 transition-colors"
+              >
+                <RotateCcw className="w-4 h-4" />
+                <span>Repetir Simulacro</span>
+              </button>
+            </div>
 
             <button
               type="button"
               onClick={nextPillar}
-              className="flex items-center gap-2 px-8 py-3.5 rounded-xl bg-neon-cyan text-night-deep font-rajdhani font-extrabold text-sm uppercase tracking-wider shadow-cyan-glow-lg hover:bg-cyan-300 transition-all duration-300"
+              className="flex items-center gap-2 px-7 py-3 rounded-xl bg-neon-cyan text-night-deep font-rajdhani font-extrabold text-sm uppercase tracking-wider shadow-cyan-glow hover:bg-cyan-300 transition-all"
             >
-              <span>CONTINUAR AL DASHBOARD FINAL (PILAR 5)</span>
+              <span>CONTINUAR AL DICTAMEN FINAL (PILAR 5)</span>
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>
-        </div>
-      ) : (
-        /* ------------------------------------------------------------------
-            3. VISTA INTERACTIVA DEL SIMULADOR: PREGUNTA Y TEMPORIZADOR HUD
-            ------------------------------------------------------------------ */
-        <div className="space-y-4">
-          
-          {/* Barra Superior con TopoProgressBar y Temporizador de Estrés Regresivo (72s) */}
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-4 rounded-2xl glass-panel border border-white/10">
-            <div className="flex-1">
-              <TopoProgressBar
-                current={currentIndex + 1}
-                total={totalQuestions}
-                label={`PILAR 4 // PREGUNTA ${currentIndex + 1} DE ${totalQuestions}: ${currentQuestion.curso?.toUpperCase() || 'GENERAL'}`}
-              />
-            </div>
 
-            {/* Temporizador de Estrés Regresivo Visual (Regla 3) */}
-            <div className={`flex items-center gap-3 px-4 py-2 rounded-xl border backdrop-blur-md transition-all duration-300 ${timerTheme.border} ${timerTheme.bg} ${timerTheme.glow}`}>
-              <div className="flex items-center gap-2">
-                <Clock className={`w-4 h-4 ${timerTheme.color}`} />
-                <div>
-                  <div className="text-[10px] font-rajdhani font-bold text-slate-400 uppercase tracking-widest leading-none">
-                    TIEMPO LÍMITE
-                  </div>
-                  <div className={`text-xl font-rajdhani font-extrabold tracking-wider leading-none mt-0.5 ${timerTheme.color}`}>
-                    00:{String(timeRemaining).padStart(2, '0')}s
-                  </div>
+        </div>
+      </div>
+    );
+  }
+
+  // =========================================================================
+  // 3. VISTA EXAMEN (isTestStarted): AISLADA, SIN TABS Y CON MÁXIMO CONTRASTE
+  // =========================================================================
+  return (
+    <div className="w-full max-w-4xl mx-auto px-3 sm:px-4 py-4">
+      
+      {/* Barra Superior del Examen: Escuela Fijada + TopoProgressBar + Cronómetro 72s */}
+      <div className="bg-[#141518] border border-gray-700 rounded-2xl p-4 mb-4">
+        
+        {/* Fila 1: Escuela Matriz Activa y Botón Abandonar */}
+        <div className="flex items-center justify-between gap-3 border-b border-gray-800 pb-3 mb-3">
+          <div className="flex items-center gap-2.5">
+            <span className="text-xl select-none">{activeSchoolMeta.icono}</span>
+            <div>
+              <span className="text-[10px] font-teko uppercase font-bold text-peru-red tracking-widest block leading-none">
+                SIMULACRO OFICIAL EN CURSO
+              </span>
+              <h2 className="font-military text-base sm:text-lg text-white uppercase tracking-wider leading-none mt-0.5">
+                {activeSchoolMeta.sigla} · <span className="text-gray-400 font-rajdhani text-xs">{activeSchoolMeta.rama}</span>
+              </h2>
+            </div>
+          </div>
+
+          <button
+            type="button"
+            onClick={handleExitTest}
+            title="Salir del examen y regresar a la selección de escuelas"
+            className="px-3 py-1.5 rounded-lg border border-gray-700 bg-black/40 text-gray-400 hover:text-alert-red hover:border-alert-red/50 text-[11px] font-rajdhani font-bold uppercase transition-colors"
+          >
+            Cancelar Examen
+          </button>
+        </div>
+
+        {/* Fila 2: Progreso Topológico y Temporizador de 72s */}
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div className="flex-1">
+            <TopoProgressBar
+              current={currentIndex + 1}
+              total={totalQuestions}
+              label={`PREGUNTA ${currentIndex + 1} DE ${totalQuestions} // ${currentQuestion?.curso?.toUpperCase() || 'GENERAL'}`}
+            />
+          </div>
+
+          {/* Temporizador Regresivo Militar */}
+          <div className={`flex items-center gap-3 px-3.5 py-1.5 rounded-xl border transition-all duration-300 ${timerTheme.border} ${timerTheme.bg} ${timerTheme.glow}`}>
+            <Clock className={`w-4 h-4 ${timerTheme.color}`} />
+            <div>
+              <div className="text-[9px] font-rajdhani font-bold text-gray-400 uppercase tracking-widest leading-none">
+                TIEMPO LÍMITE
+              </div>
+              <div className={`text-lg font-military tracking-wider leading-none mt-0.5 ${timerTheme.color}`}>
+                00:{String(timeRemaining).padStart(2, '0')}s
+              </div>
+            </div>
+            <div className="w-12 h-1.5 rounded-full bg-night-deep overflow-hidden border border-white/10">
+              <div className={`h-full transition-all duration-1000 ${timerTheme.barColor}`} style={{ width: `${timerPercentage}%` }} />
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      {/* Contenedor Sólido de la Pregunta (bg-[#141518] sin overlays que oscurezcan) */}
+      <div className="relative min-h-[380px]">
+        <AnimatePresence mode="wait" custom={slideDirection}>
+          <motion.div
+            key={`q-${currentQuestion?.id_pregunta}-${currentIndex}`}
+            custom={slideDirection}
+            variants={slideVariants}
+            initial="enter"
+            animate="center"
+            exit="exit"
+            className="w-full"
+          >
+            <div className="bg-[#141518] border border-gray-700 rounded-2xl p-6 sm:p-8 shadow-2xl relative">
+              
+              {/* Encabezado del Reactivo */}
+              <div className="flex flex-wrap items-center justify-between gap-2 border-b border-gray-800 pb-3 mb-5">
+                <div className="flex items-center gap-2">
+                  <span className="px-2.5 py-1 rounded bg-black/60 border border-gray-700 text-neon-cyan text-xs font-rajdhani font-bold uppercase tracking-wider">
+                    {currentQuestion?.curso}
+                  </span>
+                  <span className="text-xs font-rajdhani font-bold text-gray-300 uppercase tracking-wider">
+                    TEMA: {currentQuestion?.tema}
+                  </span>
+                </div>
+
+                <div className="flex items-center gap-2 text-xs font-rajdhani font-bold">
+                  <span className="px-2 py-0.5 rounded bg-emerald-950/60 text-emerald-400 border border-emerald-500/30">
+                    +{currentQuestion?.metricas?.pts_correcta ?? 20} PTS
+                  </span>
+                  <span className="px-2 py-0.5 rounded bg-red-950/60 text-alert-red border border-alert-red/30">
+                    {currentQuestion?.metricas?.pts_incorrecta ?? -1.25} PTS
+                  </span>
                 </div>
               </div>
 
-              {/* Minibarra de Progreso de Estrés */}
-              <div className="w-16 h-2 rounded-full bg-night-deep/80 overflow-hidden border border-white/10">
-                <div
-                  className={`h-full transition-all duration-1000 ${timerTheme.barColor}`}
-                  style={{ width: `${timerPercentage}%` }}
-                />
+              {/* Enunciado con Máximo Contraste y Soporte KaTeX */}
+              <div className="text-white text-base sm:text-lg font-inter leading-relaxed mb-6 font-normal">
+                <EnunciadoMatematico text={currentQuestion?.enunciado} />
               </div>
-            </div>
-          </div>
 
-          {/* Tarjeta de Pregunta con Animación Deslizante Framer Motion (Regla 4) */}
-          <div className="relative min-h-[420px] overflow-hidden">
-            <AnimatePresence mode="wait" custom={slideDirection}>
-              <motion.div
-                key={`question-${currentQuestion.id_pregunta}-${currentIndex}`}
-                custom={slideDirection}
-                variants={slideVariants}
-                initial="enter"
-                animate="center"
-                exit="exit"
-                className="w-full"
-              >
-                <div className="glass-panel p-6 sm:p-9 rounded-3xl border border-white/15 shadow-tactical-card relative">
-                  
-                  {/* Encabezado del Reactivo */}
-                  <div className="flex flex-wrap items-center justify-between gap-2 border-b border-white/10 pb-4 mb-6">
-                    <div className="flex items-center gap-2.5 flex-wrap">
-                      <span className="px-3 py-1 rounded-lg bg-cyan-950/70 border border-neon-cyan/40 text-neon-cyan text-xs font-rajdhani font-bold uppercase tracking-wider shadow-cyan-glow-sm">
-                        {currentQuestion.curso}
-                      </span>
-                      <span className="text-xs font-rajdhani font-bold text-slate-300 uppercase tracking-wider">
-                        TEMA: {currentQuestion.tema}
-                      </span>
-                    </div>
+              {/* Tarjetas de Opciones (A, B, C, D, E) */}
+              <div className="space-y-3">
+                {currentQuestion?.opciones?.map((opt) => {
+                  const isSelected = currentAnswer?.selectedOptionId === opt.id;
+                  return (
+                    <button
+                      key={opt.id}
+                      type="button"
+                      disabled={isAdvancing}
+                      onClick={() => handleAnswerClick(opt.id)}
+                      className={`w-full p-4 rounded-xl border text-left transition-all duration-200 flex items-center justify-between gap-4 cursor-pointer ${
+                        isSelected
+                          ? "bg-cyan-950/60 border-neon-cyan text-white shadow-cyan-glow-sm"
+                          : "bg-[#1a1b20] border-gray-700 text-gray-200 hover:border-neon-cyan hover:bg-[#22252e] hover:text-white"
+                      } ${isAdvancing ? 'cursor-default' : ''}`}
+                    >
+                      <div className="flex items-center gap-3.5 flex-1 min-w-0">
+                        {/* Chip con la Letra */}
+                        <span className={`w-8 h-8 rounded-lg border font-military text-sm flex items-center justify-center flex-shrink-0 transition-colors ${
+                          isSelected
+                            ? "border-neon-cyan bg-neon-cyan text-night-deep font-bold"
+                            : "border-gray-600 bg-black/60 text-gray-300"
+                        }`}>
+                          {opt.id}
+                        </span>
 
-                    <div className="flex items-center gap-2 text-xs font-rajdhani">
-                      <span className="px-2.5 py-0.5 rounded bg-emerald-950/40 text-emerald-400 border border-emerald-500/30 font-bold">
-                        +{currentQuestion.metricas?.pts_correcta ?? 20} PTS
-                      </span>
-                      <span className="px-2.5 py-0.5 rounded bg-red-950/40 text-alert-red border border-alert-red/30 font-bold">
-                        {currentQuestion.metricas?.pts_incorrecta ?? -1.25} PTS
-                      </span>
-                    </div>
-                  </div>
+                        {/* Texto de la Opción */}
+                        <div className="text-sm sm:text-base font-inter leading-snug break-words flex-1">
+                          <EnunciadoMatematico text={opt.texto} />
+                        </div>
+                      </div>
 
-                  {/* Enunciado con KaTeX (Regla 2: <EnunciadoMatematico />) */}
-                  <div className="text-base sm:text-lg font-inter text-slate-100 leading-relaxed mb-8">
-                    <EnunciadoMatematico text={currentQuestion.enunciado} />
-                  </div>
+                      {/* Icono de Selección */}
+                      <div className="flex-shrink-0">
+                        {isSelected ? (
+                          <CheckCircle2 className="w-5 h-5 text-neon-cyan" />
+                        ) : (
+                          <div className="w-5 h-5 rounded-full border border-gray-600" />
+                        )}
+                      </div>
+                    </button>
+                  );
+                })}
+              </div>
 
-                  {/* Opciones de Respuesta A, B, C, D, E (Regla 3: Radio Buttons Tácticos) */}
-                  <div className="space-y-3">
-                    {currentQuestion.opciones?.map((opt) => {
-                      const isSelected = currentAnswer?.selectedOptionId === opt.id;
-                      return (
-                        <button
-                          key={opt.id}
-                          type="button"
-                          disabled={isAdvancing}
-                          onClick={() => handleAnswerClick(opt.id)}
-                          className={`w-full p-4 rounded-2xl border text-left transition-all duration-200 flex items-center justify-between gap-4 group cursor-pointer ${
-                            isSelected
-                              ? "bg-cyan-950/80 border-neon-cyan shadow-cyan-glow"
-                              : "bg-graphite/40 border-white/10 hover:border-neon-cyan/40 hover:bg-cyan-950/20 hover:shadow-cyan-glow-sm"
-                          } ${isAdvancing ? 'cursor-default' : ''}`}
-                        >
-                          <div className="flex items-center gap-4 flex-1">
-                            {/* Chip con la Letra Táctica */}
-                            <span className={`w-8 h-8 rounded-xl border font-rajdhani font-extrabold text-sm flex items-center justify-center transition-all flex-shrink-0 ${
-                              isSelected
-                                ? "border-neon-cyan bg-neon-cyan text-night-deep shadow-cyan-glow-sm"
-                                : "border-white/15 bg-night-deep text-slate-300 group-hover:border-neon-cyan/50 group-hover:text-neon-cyan"
-                            }`}>
-                              {opt.id}
-                            </span>
-
-                            {/* Texto de la Opción Procesado con KaTeX */}
-                            <div className={`text-sm sm:text-base font-inter transition-colors leading-snug ${
-                              isSelected ? "text-white font-medium" : "text-slate-200 group-hover:text-white"
-                            }`}>
-                              <EnunciadoMatematico text={opt.texto} />
-                            </div>
-                          </div>
-
-                          {/* Indicador de Selección */}
-                          <div className="flex-shrink-0">
-                            {isSelected ? (
-                              <CheckCircle2 className="w-5 h-5 text-neon-cyan" />
-                            ) : (
-                              <div className="w-5 h-5 rounded-full border border-white/20 group-hover:border-neon-cyan/40" />
-                            )}
-                          </div>
-                        </button>
-                      );
-                    })}
-                  </div>
-
-                  {/* Aviso de Alerta si el tiempo es menor a 15 segundos */}
-                  {timeRemaining <= 15 && (
-                    <div className="mt-6 p-3 rounded-xl bg-alert-red/10 border border-alert-red/30 flex items-center gap-2 text-alert-red text-xs font-rajdhani font-bold tracking-wider uppercase animate-pulse">
-                      <Flame className="w-4 h-4 flex-shrink-0" />
-                      <span>¡ATENCIÓN TÁCTICA! MENOS DE 15 SEGUNDOS PARA RESPONDER ANTES DEL BLOQUEO EN BLANCO.</span>
-                    </div>
-                  )}
-
+              {/* Alerta de Menos de 15 Segundos */}
+              {timeRemaining <= 15 && (
+                <div className="mt-5 p-2.5 rounded-xl bg-alert-red/10 border border-alert-red/40 flex items-center gap-2 text-alert-red text-xs font-rajdhani font-bold tracking-wider uppercase animate-pulse">
+                  <Flame className="w-4 h-4 flex-shrink-0" />
+                  <span>TIEMPO CRÍTICO: MENOS DE 15 SEGUNDOS PARA RESPONDER ANTES DEL BLOQUEO EN BLANCO.</span>
                 </div>
-              </motion.div>
-            </AnimatePresence>
-          </div>
+              )}
 
-          {/* ------------------------------------------------------------------
-              4. NAVEGACIÓN Y CONTROLES INFERIORES
-              ------------------------------------------------------------------ */}
-          <div className="flex justify-between items-center pt-4 border-t border-white/10">
-            <button
-              type="button"
-              onClick={() => {
-                if (currentIndex > 0) {
-                  handlePrev();
-                } else {
-                  prevPillar();
-                }
-              }}
-              className="flex items-center gap-2 px-5 py-2.5 rounded-xl border border-white/15 text-slate-400 hover:text-white font-rajdhani font-bold text-xs tracking-wider uppercase transition-all hover:bg-white/5"
-            >
-              <ArrowLeft className="w-3.5 h-3.5" />
-              <span>{currentIndex > 0 ? "Pregunta Anterior" : "Volver a Pilar 3"}</span>
-            </button>
-
-            <div className="flex items-center gap-3">
-              {/* Opción Dejar en Blanco voluntariamente */}
-              <button
-                type="button"
-                onClick={() => {
-                  handleNext();
-                }}
-                className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-slate-400 hover:text-slate-200 text-xs font-rajdhani font-bold uppercase tracking-wider"
-              >
-                <span>Omitir Reactivo (0 Pts)</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={handleNext}
-                className="flex items-center gap-2 px-7 py-3 rounded-xl bg-neon-cyan text-night-deep font-rajdhani font-extrabold text-sm tracking-wider uppercase shadow-cyan-glow hover:bg-cyan-300 transition-all duration-300"
-              >
-                <span>{currentIndex < totalQuestions - 1 ? "Siguiente Pregunta" : "Finalizar Evaluación"}</span>
-                <ArrowRight className="w-4 h-4" />
-              </button>
             </div>
-          </div>
+          </motion.div>
+        </AnimatePresence>
+      </div>
 
+      {/* Barra de Navegación Inferior */}
+      <div className="flex justify-between items-center pt-4 border-t border-gray-800 mt-4">
+        <button
+          type="button"
+          onClick={() => {
+            if (currentIndex > 0) handlePrev();
+            else handleExitTest();
+          }}
+          className="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-gray-700 text-gray-300 hover:text-white font-rajdhani font-bold text-xs tracking-wider uppercase transition-colors"
+        >
+          <ArrowLeft className="w-3.5 h-3.5" />
+          <span>{currentIndex > 0 ? "Pregunta Anterior" : "Cambiar de Escuela"}</span>
+        </button>
+
+        <div className="flex items-center gap-3">
+          <button
+            type="button"
+            onClick={handleNext}
+            className="hidden sm:inline-flex items-center px-3.5 py-2 text-gray-400 hover:text-gray-200 text-xs font-rajdhani font-bold uppercase tracking-wider transition-colors"
+          >
+            Omitir Reactivo (0 Pts)
+          </button>
+
+          <button
+            type="button"
+            onClick={handleNext}
+            className="flex items-center gap-2 px-6 py-2.5 rounded-xl bg-neon-cyan text-night-deep font-rajdhani font-extrabold text-xs sm:text-sm tracking-wider uppercase shadow-cyan-glow hover:bg-cyan-300 transition-all"
+          >
+            <span>{currentIndex < totalQuestions - 1 ? "Siguiente Pregunta" : "Finalizar Examen"}</span>
+            <ArrowRight className="w-4 h-4" />
+          </button>
         </div>
-      )}
+      </div>
 
     </div>
   );
