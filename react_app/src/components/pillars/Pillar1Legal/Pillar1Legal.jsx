@@ -6,6 +6,10 @@ import TacticalRadioCard from '../../common/TacticalRadioCard';
 import Tooltip from '../../common/Tooltip';
 import {
   ShieldCheck,
+  Shield,
+  Brain,
+  Compass,
+  BookOpen,
   User,
   Activity,
   ArrowRight,
@@ -188,35 +192,103 @@ export default function Pillar1Legal() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0B101E] via-[#0B101E]/85 to-[#0B101E]/50 z-10" />
                 <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-neon-cyan/10 rounded-full blur-3xl pointer-events-none z-10" />
 
-                <div className="relative z-20 max-w-3xl mx-auto">
-                  <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-950/60 border border-neon-cyan/40 text-neon-cyan text-xs font-rajdhani font-bold tracking-widest uppercase mb-4 shadow-cyan-glow">
+                <div className="relative z-20 max-w-4xl mx-auto">
+                  <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-950/60 border border-neon-cyan/40 text-neon-cyan text-xs font-rajdhani font-bold tracking-widest uppercase mb-3 shadow-cyan-glow">
                     <Sparkles className="w-3.5 h-3.5" />
                     <span>SISTEMA TÁCTICO DE ORIENTACIÓN VOCACIONAL · FUERZAS ARMADAS DEL PERÚ</span>
                   </div>
 
-                  <h1 className="text-3xl sm:text-5xl font-rajdhani font-extrabold text-white uppercase tracking-wider mb-4 leading-tight">
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl font-rajdhani font-extrabold text-white uppercase tracking-wider mb-2 leading-tight">
                     ¿PARA QUÉ ESCUELA MILITAR NACISTE?
                   </h1>
 
-                  <p className="text-base sm:text-lg text-slate-100 font-inter leading-relaxed max-w-2xl mx-auto mb-8 font-normal">
-                    Simulador algorítmico de alta precisión matemática. Evalúa tu aptitud legal y <Tooltip termino="Antropometría">antropométrica</Tooltip> (Pilar 1), tu perfil de personalidad <Tooltip termino="Big Five">Big Five</Tooltip> (Pilar 2), tus intereses operacionales (Pilar 3) y tu rendimiento académico (Pilar 4) contra las exigencias oficiales de las 8 escuelas matrices del Perú.
+                  {/* Subtítulo Breve de Alto Impacto */}
+                  <p className="text-base sm:text-lg text-slate-200 font-inter leading-relaxed max-w-2xl mx-auto mb-6 font-medium">
+                    Simulador algorítmico de alta precisión para perfilamiento militar y policial.
                   </p>
 
-                  <div className="flex flex-wrap justify-center gap-3 mb-8">
-                    <span className="px-3 py-1 rounded-lg border border-neon-cyan/30 text-neon-cyan text-xs font-rajdhani font-bold uppercase tracking-wider bg-cyan-950/30">
-                      🎯 <Tooltip termino="Baremos">Baremación Multi-Pilar 100% Oficial</Tooltip>
-                    </span>
-                    <span className="px-3 py-1 rounded-lg border border-gold-primary/30 text-yellow-400 text-xs font-rajdhani font-bold uppercase tracking-wider bg-yellow-950/30">
-                      🔒 Terminal de Admisión Clasificada
-                    </span>
+                  {/* Feature Grid de 4 Columnas (Infografía de los 4 Pilares) */}
+                  <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-3.5 max-w-4xl mx-auto mb-8">
+                    {/* Tarjeta 1: Filtro Legal */}
+                    <div className="p-3 sm:p-3.5 rounded-2xl bg-[#0B101E]/75 border border-white/15 backdrop-blur-md hover:border-cyan-500/50 hover:bg-[#0B101E]/90 transition-all text-left flex flex-col justify-between group shadow-sm">
+                      <div className="flex items-center justify-between mb-2">
+                        <div className="w-8 h-8 rounded-xl bg-cyan-950/70 border border-cyan-500/40 flex items-center justify-center text-[#00F0FF] group-hover:scale-110 transition-transform">
+                          <Shield className="w-4 h-4" />
+                        </div>
+                        <span className="text-[10px] font-mono text-cyan-400 font-bold tracking-wider">PILAR 1</span>
+                      </div>
+                      <div>
+                        <h3 className="font-rajdhani font-bold text-sm text-white uppercase tracking-wider group-hover:text-[#00F0FF] transition-colors leading-snug">
+                          Filtro Legal
+                        </h3>
+                        <p className="text-[11px] text-slate-300 font-inter leading-tight mt-0.5">
+                          Talla, peso y requisitos.
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Tarjeta 2: Test Psicológico */}
+                    <div className="p-3 sm:p-3.5 rounded-2xl bg-[#0B101E]/75 border border-white/15 backdrop-blur-md hover:border-cyan-500/50 hover:bg-[#0B101E]/90 transition-all text-left flex flex-col justify-between group shadow-sm">
+                      <div className="flex items-center justify-between mb-2">
+                        <div className="w-8 h-8 rounded-xl bg-cyan-950/70 border border-cyan-500/40 flex items-center justify-center text-[#00F0FF] group-hover:scale-110 transition-transform">
+                          <Brain className="w-4 h-4" />
+                        </div>
+                        <span className="text-[10px] font-mono text-cyan-400 font-bold tracking-wider">PILAR 2</span>
+                      </div>
+                      <div>
+                        <h3 className="font-rajdhani font-bold text-sm text-white uppercase tracking-wider group-hover:text-[#00F0FF] transition-colors leading-snug">
+                          Test Psicológico
+                        </h3>
+                        <p className="text-[11px] text-slate-300 font-inter leading-tight mt-0.5">
+                          Perfil de personalidad.
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Tarjeta 3: Intereses Tácticos */}
+                    <div className="p-3 sm:p-3.5 rounded-2xl bg-[#0B101E]/75 border border-white/15 backdrop-blur-md hover:border-cyan-500/50 hover:bg-[#0B101E]/90 transition-all text-left flex flex-col justify-between group shadow-sm">
+                      <div className="flex items-center justify-between mb-2">
+                        <div className="w-8 h-8 rounded-xl bg-cyan-950/70 border border-cyan-500/40 flex items-center justify-center text-[#00F0FF] group-hover:scale-110 transition-transform">
+                          <Compass className="w-4 h-4" />
+                        </div>
+                        <span className="text-[10px] font-mono text-cyan-400 font-bold tracking-wider">PILAR 3</span>
+                      </div>
+                      <div>
+                        <h3 className="font-rajdhani font-bold text-sm text-white uppercase tracking-wider group-hover:text-[#00F0FF] transition-colors leading-snug">
+                          Intereses Tácticos
+                        </h3>
+                        <p className="text-[11px] text-slate-300 font-inter leading-tight mt-0.5">
+                          Dilemas operacionales.
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Tarjeta 4: Simulador Académico */}
+                    <div className="p-3 sm:p-3.5 rounded-2xl bg-[#0B101E]/75 border border-white/15 backdrop-blur-md hover:border-cyan-500/50 hover:bg-[#0B101E]/90 transition-all text-left flex flex-col justify-between group shadow-sm">
+                      <div className="flex items-center justify-between mb-2">
+                        <div className="w-8 h-8 rounded-xl bg-cyan-950/70 border border-cyan-500/40 flex items-center justify-center text-[#00F0FF] group-hover:scale-110 transition-transform">
+                          <BookOpen className="w-4 h-4" />
+                        </div>
+                        <span className="text-[10px] font-mono text-cyan-400 font-bold tracking-wider">PILAR 4</span>
+                      </div>
+                      <div>
+                        <h3 className="font-rajdhani font-bold text-sm text-white uppercase tracking-wider group-hover:text-[#00F0FF] transition-colors leading-snug">
+                          Simulador Académico
+                        </h3>
+                        <p className="text-[11px] text-slate-300 font-inter leading-tight mt-0.5">
+                          Medición de conocimientos.
+                        </p>
+                      </div>
+                    </div>
                   </div>
 
+                  {/* Acciones de Despliegue Operativo */}
                   <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
                     <button
                       id="tour-start-cta"
                       type="button"
                       onClick={() => goToStep(1)}
-                      className="w-full sm:w-auto inline-flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-neon-cyan text-night-deep font-rajdhani font-black text-sm sm:text-base tracking-wider uppercase shadow-cyan-glow-lg hover:bg-cyan-300 hover:scale-105 transition-all duration-300 cursor-pointer text-center"
+                      className="w-full sm:w-auto inline-flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-neon-cyan text-night-deep font-rajdhani font-black text-sm sm:text-base tracking-wider uppercase shadow-cyan-glow-lg hover:bg-cyan-300 hover:scale-105 transition-all duration-300 cursor-pointer text-center shrink-0"
                     >
                       <span>INICIAR EVALUACIÓN LEGAL Y FÍSICA</span>
                       <ArrowRight className="w-5 h-5 flex-shrink-0" />
@@ -227,7 +299,7 @@ export default function Pillar1Legal() {
                         handleLoadDemo();
                         goToStep(1);
                       }}
-                      className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-transparent border border-gray-700 text-gray-300 hover:text-white hover:border-[#00F0FF] hover:bg-cyan-950/20 text-xs font-rajdhani font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer shadow-sm"
+                      className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-transparent border border-gray-700 text-gray-300 hover:text-white hover:border-[#00F0FF] hover:bg-cyan-950/20 text-xs font-rajdhani font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer shadow-sm shrink-0"
                       title="Cargar automáticamente datos de prueba válidos"
                     >
                       <span>⚡ CARGAR PERFIL DE PRUEBA</span>
