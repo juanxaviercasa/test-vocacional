@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useAssessmentStore } from '../../store/useAssessmentStore';
+import Tooltip from '../common/Tooltip';
 import {
   Shield,
   Clock,
@@ -137,15 +138,15 @@ export default function SchoolSelector({ onSelectSchool }) {
           SELECCIONA TU ESCUELA MATRIZ OBJETIVO
         </h1>
 
-        <p className="text-xs sm:text-sm text-slate-600 dark:text-gray-300 font-inter mt-2 leading-relaxed">
-          Cada institución evalúa con su propio balotario temático 2026/2027. El simulador extraerá 
+        <p className="text-base sm:text-lg text-slate-700 dark:text-slate-200 font-inter mt-3 leading-relaxed">
+          Cada institución evalúa con su propio temario reglamentario 2026/2027 y sistema <Tooltip termino="DECO">DECO</Tooltip>. El simulador extraerá 
           <strong className="text-slate-900 dark:text-white font-semibold"> 20 reactivos equitativos</strong> con un límite de 
           <strong className="text-slate-900 dark:text-white font-semibold"> 72 segundos por reactivo</strong>. 
-          Aciertos: <span className="text-emerald-600 dark:text-emerald-400 font-bold">+20 pts</span> | Errores: <span className="text-red-600 dark:text-red-400 font-bold">-1.25 pts</span>.
+          Aciertos: <span className="text-emerald-600 dark:text-emerald-400 font-bold">+20 pts</span> | Errores: <span className="text-red-600 dark:text-red-400 font-bold">-1.25 pts</span> bajo el <Tooltip termino="Baremo">Baremo Institucional</Tooltip>.
         </p>
 
         {highlightedSchool && (
-          <div className="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-cyan-950/40 border border-cyan-500/40 text-cyan-300 text-xs font-rajdhani font-bold tracking-wider uppercase shadow-[0_0_15px_rgba(0,240,255,0.2)]">
+          <div className="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-cyan-950/40 border border-cyan-500/40 text-cyan-300 text-xs sm:text-sm font-rajdhani font-bold tracking-wider uppercase shadow-[0_0_15px_rgba(0,240,255,0.2)]">
             <Sparkles className="w-4 h-4 text-neon-cyan animate-pulse" />
             <span>Escuela recomendada por tu test vocacional: <strong className="text-neon-cyan">{highlightedSchool}</strong></span>
           </div>
@@ -250,12 +251,12 @@ export default function SchoolSelector({ onSelectSchool }) {
                       {esc.name}
                     </h4>
 
-                    <p className="text-xs sm:text-sm text-slate-600 dark:text-gray-300 font-inter leading-relaxed line-clamp-3">
+                    <p className="text-sm sm:text-base text-slate-700 dark:text-slate-200 font-inter leading-relaxed line-clamp-3">
                       {esc.descripcion}
                     </p>
 
                     {/* Metadatos Tácticos */}
-                    <div className="flex flex-wrap items-center gap-3 mt-4 pt-3 border-t border-slate-100 dark:border-gray-800/80 text-[11px] font-rajdhani font-bold uppercase tracking-wider text-slate-500 dark:text-gray-400">
+                    <div className="flex flex-wrap items-center gap-3 mt-4 pt-3 border-t border-slate-100 dark:border-gray-800/80 text-xs font-rajdhani font-bold uppercase tracking-wider text-slate-600 dark:text-slate-300">
                       <span className="flex items-center gap-1.5 text-emerald-600 dark:text-emerald-400">
                         <CheckCircle2 className="w-3.5 h-3.5" />
                         <span>20 Reactivos Oficiales</span>

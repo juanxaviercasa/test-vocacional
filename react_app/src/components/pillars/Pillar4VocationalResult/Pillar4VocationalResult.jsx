@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useAssessmentStore } from '../../../store/useAssessmentStore';
 import TacticalRadarChart from '../Pillar5Consolidated/TacticalRadarChart';
+import Tooltip from '../../common/Tooltip';
 import {
   ShieldCheck,
   Award,
@@ -80,12 +81,12 @@ export default function Pillar4VocationalResult() {
           
           {/* Columna Izquierda: Veredicto Institucional */}
           <div className="flex-1 text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950/80 border border-emerald-500/50 text-emerald-400 text-xs font-rajdhani font-bold tracking-widest uppercase mb-4 shadow-sm">
-              <ShieldCheck className="w-3.5 h-3.5" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950/80 border border-emerald-500/50 text-emerald-400 text-xs sm:text-sm font-rajdhani font-bold tracking-widest uppercase mb-4 shadow-sm">
+              <ShieldCheck className="w-4 h-4" />
               <span>DICTAMEN VOCACIONAL OFICIAL 2026/2027</span>
             </div>
 
-            <h1 className="text-xl sm:text-2xl font-rajdhani font-bold text-gray-300 uppercase tracking-wider">
+            <h1 className="text-xl sm:text-2xl font-rajdhani font-bold text-slate-200 uppercase tracking-wider">
               MÁXIMA AFINIDAD VOCACIONAL DETECTADA
             </h1>
             
@@ -93,8 +94,8 @@ export default function Pillar4VocationalResult() {
               {topSchool.escuela.nombre} ({topSigla})
             </h2>
 
-            <p className="text-xs sm:text-sm text-slate-300 font-inter mt-3 max-w-2xl leading-relaxed">
-              Postulante <strong className="text-white">{candidate.nombre}</strong> (DNI: {candidate.dni}). Tras el análisis multi-factorial de tu biometría reglamentaria, rasgos de personalidad Big Five e intereses operacionales, tu perfil presenta la más alta correlación táctica para formarte como <strong className="text-emerald-400">{topSchool.escuela.rango} en el/la {topSchool.escuela.rama}</strong>.
+            <p className="text-base sm:text-lg text-slate-200 font-inter mt-3 max-w-2xl leading-relaxed">
+              Postulante <strong className="text-white">{candidate.nombre}</strong> (DNI: {candidate.dni}). Tras el análisis multi-factorial de tu biometría reglamentaria (<Tooltip termino="Antropometría">Antropometría</Tooltip>), rasgos de personalidad <Tooltip termino="Big Five">Big Five</Tooltip> e intereses operacionales, tu perfil presenta la más alta correlación táctica bajo el <Tooltip termino="Baremo">Baremo Oficial</Tooltip> para formarte como <strong className="text-emerald-300 font-semibold">{topSchool.escuela.rango} en el/la {topSchool.escuela.rama}</strong>.
             </p>
 
             {/* BOTÓN PRINCIPAL DESTACADO (CALL TO ACTION REQUERIDO) */}
@@ -109,7 +110,7 @@ export default function Pillar4VocationalResult() {
                 <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1.5" />
               </button>
 
-              <span className="text-[11px] font-rajdhani text-gray-400 uppercase tracking-widest text-center sm:text-left">
+              <span className="text-xs sm:text-sm font-rajdhani font-medium text-slate-300 uppercase tracking-widest text-center sm:text-left">
                 Balotario Oficial de 20 preguntas con cronómetro
               </span>
             </div>
@@ -117,8 +118,8 @@ export default function Pillar4VocationalResult() {
 
           {/* Columna Derecha: Medidor de Compatibilidad */}
           <div className="flex flex-col items-center justify-center p-6 sm:p-8 rounded-2xl bg-black/60 border border-neon-cyan/50 shadow-cyan-glow min-w-[220px]">
-            <span className="text-xs font-rajdhani font-bold text-gray-400 uppercase tracking-widest flex items-center gap-1.5">
-              <Target className="w-3.5 h-3.5 text-neon-cyan" />
+            <span className="text-xs sm:text-sm font-rajdhani font-bold text-slate-300 uppercase tracking-widest flex items-center gap-1.5">
+              <Target className="w-4 h-4 text-neon-cyan" />
               <span>COMPATIBILIDAD</span>
             </span>
 
@@ -126,11 +127,11 @@ export default function Pillar4VocationalResult() {
               {topSchool.compatibilidad}%
             </div>
 
-            <span className="text-xs font-rajdhani font-extrabold px-3 py-1 rounded-md bg-emerald-950/90 border border-emerald-500 text-emerald-400 uppercase tracking-wider">
+            <span className="text-xs sm:text-sm font-rajdhani font-extrabold px-3 py-1 rounded-md bg-emerald-950/90 border border-emerald-500 text-emerald-400 uppercase tracking-wider">
               {topSchool.esApto ? "✓ APTO RECOMENDADO" : "OBSERVADO LEGAL"}
             </span>
 
-            <div className="mt-3 text-[11px] text-gray-400 font-rajdhani text-center space-y-0.5">
+            <div className="mt-3 text-xs text-slate-300 font-rajdhani text-center space-y-0.5">
               <div>Psicometría: <strong className="text-white">{topSchool.psychFit}%</strong></div>
               <div>Intereses: <strong className="text-white">{topSchool.interestFit}%</strong></div>
             </div>
@@ -143,46 +144,46 @@ export default function Pillar4VocationalResult() {
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         
         {/* Pilar 1: Legal */}
-        <div className="p-5 rounded-2xl bg-white dark:bg-[#121624] border border-slate-200 dark:border-gray-800 shadow-sm transition-colors">
-          <span className="text-[10px] font-rajdhani font-bold text-slate-500 dark:text-gray-400 uppercase tracking-wider block mb-1">
+        <div className="p-6 rounded-2xl bg-white dark:bg-[#121624] border border-slate-200 dark:border-gray-800 shadow-sm transition-colors">
+          <span className="text-xs font-rajdhani font-bold text-slate-500 dark:text-gray-400 uppercase tracking-wider block mb-1">
             FASE 01 // FILTRO LEGAL Y BIOMÉTRICO
           </span>
-          <div className="text-xl font-sans font-bold text-slate-900 dark:text-white mb-2">
+          <div className="text-2xl font-sans font-bold text-slate-900 dark:text-white mb-2">
             IMC: {legalEval.imc}
           </div>
-          <div className="text-xs text-slate-600 dark:text-slate-300 font-inter space-y-1">
-            <div>Estatura: <strong className="text-slate-900 dark:text-white">{candidate.talla_cm} cm</strong></div>
-            <div>Edad: <strong className="text-slate-900 dark:text-white">{candidate.edad} años</strong></div>
-            <div>Escuelas Habilitadas: <strong className="text-emerald-600 dark:text-emerald-400">{legalEval.totalAptas} de 8</strong></div>
+          <div className="text-sm sm:text-base text-slate-700 dark:text-slate-200 font-inter space-y-1.5 leading-relaxed">
+            <div>Estatura: <strong className="text-slate-900 dark:text-white font-semibold">{candidate.talla_cm} cm</strong></div>
+            <div>Edad: <strong className="text-slate-900 dark:text-white font-semibold">{candidate.edad} años</strong></div>
+            <div>Escuelas Habilitadas: <strong className="text-emerald-600 dark:text-emerald-400 font-semibold">{legalEval.totalAptas} de 8</strong></div>
           </div>
         </div>
 
         {/* Pilar 2: Psicometría */}
-        <div className="p-5 rounded-2xl bg-white dark:bg-[#121624] border border-slate-200 dark:border-gray-800 shadow-sm transition-colors">
-          <span className="text-[10px] font-rajdhani font-bold text-slate-500 dark:text-gray-400 uppercase tracking-wider block mb-1">
+        <div className="p-6 rounded-2xl bg-white dark:bg-[#121624] border border-slate-200 dark:border-gray-800 shadow-sm transition-colors">
+          <span className="text-xs font-rajdhani font-bold text-slate-500 dark:text-gray-400 uppercase tracking-wider block mb-1">
             FASE 02 // PERSONALIDAD MILITAR BIG FIVE
           </span>
-          <div className="text-xl font-sans font-bold text-slate-900 dark:text-white mb-2">
+          <div className="text-2xl font-sans font-bold text-slate-900 dark:text-white mb-2">
             Ajuste Conductual: {topSchool.psychFit}%
           </div>
-          <div className="text-xs text-slate-600 dark:text-slate-300 font-inter space-y-1">
-            <div>Estabilidad Emocional: <strong className="text-slate-900 dark:text-white">{100 - psychScores.N}%</strong></div>
-            <div>Liderazgo / Extraversión: <strong className="text-slate-900 dark:text-white">{psychScores.E}%</strong></div>
-            <div>Disciplina / Responsabilidad: <strong className="text-slate-900 dark:text-white">{psychScores.C}%</strong></div>
+          <div className="text-sm sm:text-base text-slate-700 dark:text-slate-200 font-inter space-y-1.5 leading-relaxed">
+            <div>Estabilidad Emocional: <strong className="text-slate-900 dark:text-white font-semibold">{100 - psychScores.N}%</strong></div>
+            <div>Liderazgo / Extraversión: <strong className="text-slate-900 dark:text-white font-semibold">{psychScores.E}%</strong></div>
+            <div>Disciplina / Responsabilidad: <strong className="text-slate-900 dark:text-white font-semibold">{psychScores.C}%</strong></div>
           </div>
         </div>
 
         {/* Pilar 3: Intereses */}
-        <div className="p-5 rounded-2xl bg-white dark:bg-[#121624] border border-slate-200 dark:border-gray-800 shadow-sm transition-colors">
-          <span className="text-[10px] font-rajdhani font-bold text-slate-500 dark:text-gray-400 uppercase tracking-wider block mb-1">
+        <div className="p-6 rounded-2xl bg-white dark:bg-[#121624] border border-slate-200 dark:border-gray-800 shadow-sm transition-colors">
+          <span className="text-xs font-rajdhani font-bold text-slate-500 dark:text-gray-400 uppercase tracking-wider block mb-1">
             FASE 03 // PREFERENCIA OPERACIONAL
           </span>
-          <div className="text-xl font-sans font-bold text-slate-900 dark:text-white mb-2">
+          <div className="text-2xl font-sans font-bold text-slate-900 dark:text-white mb-2">
             Afinidad Rama: {topSchool.interestFit}%
           </div>
-          <div className="text-xs text-slate-600 dark:text-slate-300 font-inter space-y-1">
-            <div>FAP: <strong className="text-slate-900 dark:text-white">{interestsEval.affinity.FAP}%</strong> · Marina: <strong className="text-slate-900 dark:text-white">{interestsEval.affinity.Marina}%</strong></div>
-            <div>Ejército: <strong className="text-slate-900 dark:text-white">{interestsEval.affinity.Ejército}%</strong> · PNP: <strong className="text-slate-900 dark:text-white">{interestsEval.affinity.PNP}%</strong></div>
+          <div className="text-sm sm:text-base text-slate-700 dark:text-slate-200 font-inter space-y-1.5 leading-relaxed">
+            <div>FAP: <strong className="text-slate-900 dark:text-white font-semibold">{interestsEval.affinity.FAP}%</strong> · Marina: <strong className="text-slate-900 dark:text-white font-semibold">{interestsEval.affinity.Marina}%</strong></div>
+            <div>Ejército: <strong className="text-slate-900 dark:text-white font-semibold">{interestsEval.affinity.Ejército}%</strong> · PNP: <strong className="text-slate-900 dark:text-white font-semibold">{interestsEval.affinity.PNP}%</strong></div>
           </div>
         </div>
 

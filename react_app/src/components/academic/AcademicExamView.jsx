@@ -292,8 +292,8 @@ export default function AcademicExamView({ schoolId, onComplete, onCancel }) {
                 </div>
               </div>
 
-              {/* Enunciado con KaTeX */}
-              <div className="text-white text-base sm:text-lg font-inter leading-relaxed mb-6 font-normal">
+              {/* Enunciado con KaTeX - Escalado Accesible AAA */}
+              <div className="text-white text-lg sm:text-xl font-inter leading-relaxed mb-6 font-normal">
                 <EnunciadoMatematico text={currentQuestion?.enunciado} />
               </div>
 
@@ -307,22 +307,22 @@ export default function AcademicExamView({ schoolId, onComplete, onCancel }) {
                       type="button"
                       disabled={isAdvancing}
                       onClick={() => handleAnswerClick(opt.id)}
-                      className={`w-full p-4 rounded-xl border text-left transition-all duration-200 flex items-center justify-between gap-4 cursor-pointer ${
+                      className={`w-full p-4 sm:p-5 rounded-xl border text-left transition-all duration-200 flex items-center justify-between gap-4 cursor-pointer ${
                         isSelected
-                          ? "bg-cyan-950/60 border-neon-cyan text-white shadow-cyan-glow-sm"
-                          : "bg-[#1a1b20] border-gray-700 text-gray-200 hover:border-neon-cyan hover:bg-[#22252e] hover:text-white"
+                          ? "bg-cyan-950/70 border-neon-cyan text-white shadow-cyan-glow-sm"
+                          : "bg-[#1a1b20] border-gray-700 text-slate-100 hover:border-neon-cyan hover:bg-[#22252e] hover:text-white"
                       } ${isAdvancing ? 'cursor-default' : ''}`}
                     >
                       <div className="flex items-center gap-3.5 flex-1 min-w-0">
-                        <span className={`w-8 h-8 rounded-lg border font-rajdhani font-bold text-sm flex items-center justify-center flex-shrink-0 transition-colors ${
+                        <span className={`w-9 h-9 rounded-lg border font-rajdhani font-bold text-base flex items-center justify-center flex-shrink-0 transition-colors ${
                           isSelected
                             ? "border-neon-cyan bg-neon-cyan text-night-deep font-black"
-                            : "border-gray-600 bg-black/60 text-gray-300"
+                            : "border-gray-600 bg-black/60 text-slate-200"
                         }`}>
                           {opt.id}
                         </span>
 
-                        <div className="text-sm sm:text-base font-inter leading-snug break-words flex-1">
+                        <div className="text-base sm:text-lg font-inter text-slate-100 leading-relaxed break-words flex-1">
                           <EnunciadoMatematico text={opt.texto} />
                         </div>
                       </div>

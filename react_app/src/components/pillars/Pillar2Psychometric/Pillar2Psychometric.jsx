@@ -3,6 +3,7 @@ import { useAssessmentStore } from '../../../store/useAssessmentStore';
 import { PSICOMETRIC_QUESTIONS, LIKERT_OPTIONS } from '../../../data/psychometricQuestions';
 import TopoProgressBar from '../../common/TopoProgressBar';
 import AnimatePillarContainer from '../../layout/AnimatePillarContainer';
+import Tooltip from '../../common/Tooltip';
 import { ArrowLeft, Brain, Sparkles } from 'lucide-react';
 
 export default function Pillar2Psychometric() {
@@ -50,63 +51,63 @@ export default function Pillar2Psychometric() {
             <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-96 h-96 bg-neon-cyan/5 rounded-full blur-3xl pointer-events-none" />
 
             {/* Badge del Dominio Psicológico */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-950/80 border border-neon-cyan/40 text-neon-cyan text-xs font-rajdhani font-bold uppercase tracking-widest mb-6 shadow-sm">
-              <Brain className="w-3.5 h-3.5" />
-              <span>Dimensión Evaluada: {currentQ.dominio}</span>
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-950/80 border border-neon-cyan/40 text-neon-cyan text-xs sm:text-sm font-rajdhani font-bold uppercase tracking-widest mb-6 shadow-sm">
+              <Brain className="w-4 h-4" />
+              <span>Dimensión <Tooltip termino="Big Five">Big Five</Tooltip>: {currentQ.dominio}</span>
             </div>
 
-          {/* Afirmación Central en Modo Enfoque */}
-          <h2 className="text-xl sm:text-3xl font-rajdhani font-bold text-white leading-relaxed tracking-wide max-w-2xl mx-auto my-4 min-h-[90px] flex items-center justify-center">
-            "{currentQ.enunciado}"
-          </h2>
+            {/* Afirmación Central en Modo Enfoque con Escala Accesible AAA */}
+            <h2 className="text-2xl sm:text-4xl font-rajdhani font-bold text-white leading-relaxed tracking-wide max-w-3xl mx-auto my-6 min-h-[90px] flex items-center justify-center">
+              "{currentQ.enunciado}"
+            </h2>
 
-          <p className="text-xs text-slate-400 font-inter max-w-md mx-auto mb-10">
-            Responde con espontaneidad. El sistema registrará tu patrón de consistencia conductual.
-          </p>
+            <p className="text-sm sm:text-base text-slate-200 font-inter max-w-xl mx-auto mb-10 leading-relaxed">
+              Responde con espontaneidad según el inventario <Tooltip termino="IPIP-NEO">IPIP-NEO</Tooltip>. El sistema computa tu consistencia conductual bajo el <Tooltip termino="Baremo">Baremo</Tooltip> institucional.
+            </p>
 
-          {/* Opciones Likert Horizontales Estilizadas */}
-          <div className="grid grid-cols-5 gap-2 sm:gap-4 max-w-2xl mx-auto">
-            {LIKERT_OPTIONS.map((opt) => {
-              const isSelected = selectedVal === opt.value;
-              return (
-                <button
-                  key={opt.value}
-                  type="button"
-                  disabled={isPsychAdvancing}
-                  onClick={() => answerPsychQuestion(currentQ.id, opt.value)}
-                  className={`group relative flex flex-col items-center justify-center p-3 sm:p-4 rounded-xl border transition-all duration-200 ${
-                    isSelected
-                      ? "bg-cyan-950/80 border-neon-cyan shadow-cyan-glow scale-105 z-10"
-                      : "bg-graphite-surface border-white/10 hover:border-white/30 hover:bg-white/[0.06] hover:scale-102"
-                  }`}
-                >
-                  <span className={`text-xl sm:text-2xl font-rajdhani font-bold mb-1 transition-colors ${
-                    isSelected ? "text-neon-cyan" : "text-slate-300 group-hover:text-white"
-                  }`}>
-                    {opt.short}
-                  </span>
-                  <span className={`text-[10px] sm:text-xs font-inter text-center leading-tight line-clamp-2 transition-colors ${
-                    isSelected ? "text-cyan-200 font-semibold" : "text-slate-400 group-hover:text-slate-200"
-                  }`}>
-                    {opt.label}
-                  </span>
+            {/* Opciones Likert Horizontales Estilizadas con Alto Contraste */}
+            <div className="grid grid-cols-5 gap-2 sm:gap-4 max-w-2xl mx-auto">
+              {LIKERT_OPTIONS.map((opt) => {
+                const isSelected = selectedVal === opt.value;
+                return (
+                  <button
+                    key={opt.value}
+                    type="button"
+                    disabled={isPsychAdvancing}
+                    onClick={() => answerPsychQuestion(currentQ.id, opt.value)}
+                    className={`group relative flex flex-col items-center justify-center p-3 sm:p-4 rounded-xl border transition-all duration-200 ${
+                      isSelected
+                        ? "bg-cyan-950/80 border-neon-cyan shadow-cyan-glow scale-105 z-10"
+                        : "bg-graphite-surface border-white/10 hover:border-white/30 hover:bg-white/[0.06] hover:scale-102"
+                    }`}
+                  >
+                    <span className={`text-xl sm:text-2xl font-rajdhani font-bold mb-1 transition-colors ${
+                      isSelected ? "text-neon-cyan" : "text-slate-200 group-hover:text-white"
+                    }`}>
+                      {opt.short}
+                    </span>
+                    <span className={`text-xs sm:text-sm font-inter text-center leading-tight line-clamp-2 transition-colors ${
+                      isSelected ? "text-cyan-200 font-semibold" : "text-slate-300 group-hover:text-white"
+                    }`}>
+                      {opt.label}
+                    </span>
 
-                  {/* Resplandor inferior */}
-                  {isSelected && (
-                    <div className="absolute -bottom-1 left-3 right-3 h-1 bg-neon-cyan rounded-full shadow-cyan-glow" />
-                  )}
-                </button>
-              );
-            })}
+                    {/* Resplandor inferior */}
+                    {isSelected && (
+                      <div className="absolute -bottom-1 left-3 right-3 h-1 bg-neon-cyan rounded-full shadow-cyan-glow" />
+                    )}
+                  </button>
+                );
+              })}
+            </div>
+
+            {/* Indicador de Auto-avance */}
+            <div className="mt-8 flex items-center justify-center gap-2 text-xs sm:text-sm font-rajdhani text-slate-300 tracking-wider uppercase">
+              <Sparkles className="w-3.5 h-3.5 text-neon-cyan animate-pulse" />
+              <span>Auto-avance instantáneo activado (300ms)</span>
+            </div>
+
           </div>
-
-          {/* Indicador de Auto-avance */}
-          <div className="mt-8 flex items-center justify-center gap-2 text-xs font-rajdhani text-slate-400 tracking-wider uppercase">
-            <Sparkles className="w-3.5 h-3.5 text-neon-cyan animate-pulse" />
-            <span>Auto-avance instantáneo activado (300ms)</span>
-          </div>
-
-        </div>
 
         </div>
 

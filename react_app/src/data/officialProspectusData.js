@@ -1,0 +1,127 @@
+/**
+ * Fuentes Bibliográficas Oficiales y Prospectos de Admisión 2026 / 2027
+ * Centro de Transparencia de las Fuerzas Armadas y Policía Nacional del Perú
+ */
+
+export const OFFICIAL_PROSPECTUSES = [
+  {
+    id: 'EMCH',
+    sigla: 'EMCH',
+    nombre: 'Escuela Militar de Chorrillos "Coronel Francisco Bolognesi"',
+    fuerza: 'EJÉRCITO DEL PERÚ',
+    icono: '⚔️',
+    colorAcento: '#4B5320',
+    prospectoTitulo: 'Escuela Militar de Chorrillos - Prospecto Oficial 2026',
+    resolucionOficial: 'Resolución de la Comandancia General del Ejército N° 048-2025/CGE',
+    pdfUrl: '/assets/prospectos/emch.pdf',
+    paginasTemario: 'Págs. 42-58: Balotario oficial de Ciencias Exactas (Álgebra, Geometría, Trigonometría), Física Fundamental, Lenguaje, Historia Militar del Perú y Geografía.',
+    paginasFisico: 'Págs. 28-31: Baremos de Aptitud Física de Combate (Trote de 2,400m en menos de 11:30 min, natación, barras fijas y flexiones).',
+    paginasMedico: 'Págs. 18-24: Tabla Antropométrica Militar reglamentaria (Talla mínima varones 1.68m / damas 1.60m, IMC 18.5 - 27.5 y ausencia de tatuajes visibles).',
+    notaAuditoria: 'Reactivos extraídos directamente de los balotarios de exámenes de admisión anteriores del Ejército del Perú.'
+  },
+  {
+    id: 'EOFAP',
+    sigla: 'EOFAP',
+    nombre: 'Escuela de Oficiales de la Fuerza Aérea del Perú "Capitán FAP José Abelardo Quiñones"',
+    fuerza: 'FUERZA AÉREA DEL PERÚ',
+    icono: '✈️',
+    colorAcento: '#00F0FF',
+    prospectoTitulo: 'Fuerza Aérea del Perú - Prospecto de Admisión EOFAP 2026',
+    resolucionOficial: 'Directiva de Instrucción y Admisión FAP N° DIN-012-2025',
+    pdfUrl: '/assets/prospectos/eofap.pdf',
+    paginasTemario: 'Págs. 36-52: Temario de Cálculo Matemático, Física Mecánica Aeronáutica, Inglés Técnico de Aviación y Razonamiento Lógico-Espacial.',
+    paginasFisico: 'Págs. 22-26: Baremos de resistencia cardiovascular aeróbica (Trote 2,400m en 12:00 min, natación libre 50m y salto de valor desde 5m).',
+    paginasMedico: 'Págs. 14-20: Normas Médicas Especiales para Tripulación Aérea (Agudeza visual 20/20 estricta sin lentes, talla sentado mín. 85 cm y visión cromática perfecta).',
+    notaAuditoria: 'Ponderación con fuerte ponderación en Ciencias Físico-Matemáticas requerida para vuelo aéreo militar.'
+  },
+  {
+    id: 'ENP',
+    sigla: 'ENP',
+    nombre: 'Escuela Naval del Perú "Almirante Miguel Grau"',
+    fuerza: 'MARINA DE GUERRA DEL PERÚ',
+    icono: '⚓',
+    colorAcento: '#002B49',
+    prospectoTitulo: 'Marina de Guerra del Perú - Prospecto Naval de Cadetes 2026',
+    resolucionOficial: 'Decreto de la Dirección General del Personal de la Marina N° 102-2025',
+    pdfUrl: '/assets/prospectos/enp.pdf',
+    paginasTemario: 'Págs. 50-68: Balotario de Aritmética, Álgebra, Trigonometría Esférica, Física Clásica, Química Básica y Geografía Marítima del Perú.',
+    paginasFisico: 'Págs. 34-38: Exigencias de natación utilitaria continua (50m estilo crol y flotabilidad vertical de 10 min) y trote 2,400m en <11:45 min.',
+    paginasMedico: 'Págs. 20-27: Perfil Médico de Aptitud en Altamar y Unidades Submarinas (Talla mín. 1.68m varones / 1.60m damas, dentadura completa y visión 20/20).',
+    notaAuditoria: 'Baremos y preguntas de cálculo cinemático y física aplicada a navegación marítima.'
+  },
+  {
+    id: 'EO_PNP',
+    sigla: 'EO-PNP',
+    nombre: 'Escuela de Oficiales de la Policía Nacional del Perú "Mariano Santos Mateo"',
+    fuerza: 'POLICÍA NACIONAL DEL PERÚ',
+    icono: '👮',
+    colorAcento: '#1A472A',
+    prospectoTitulo: 'Policía Nacional del Perú - Prospecto de Admisión EO-PNP 2026',
+    resolucionOficial: 'Resolución Directoral N° 789-2025-DIRGEN/PNP',
+    pdfUrl: '/assets/prospectos/eo_pnp.pdf',
+    paginasTemario: 'Págs. 45-64: Balotario de Derecho Constitucional, Derechos Humanos en la Función Policial, Realidad Nacional, Lenguaje y Aptitud Académica.',
+    paginasFisico: 'Págs. 30-33: Test de Cooper Policial (Trote 2,400m en <11:45 min), natación 50m libres, barras y pista de agilidad de combate urbano.',
+    paginasMedico: 'Págs. 22-26: Requisitos biométricos legales y filtro toxicológico, psicotécnico y de antecedentes judiciales inmaculados.',
+    notaAuditoria: 'Reactivos alineados con el marco jurídico constitucional y las competencias éticas del oficial de policía.'
+  },
+  {
+    id: 'CITEN',
+    sigla: 'CITEN',
+    nombre: 'Centro de Instrucción Técnica y Entrenamiento Naval',
+    fuerza: 'MARINA DE GUERRA DEL PERÚ',
+    icono: '🚢',
+    colorAcento: '#005A9C',
+    prospectoTitulo: 'CITEN - Prospecto de Admisión Técnica Naval 2026',
+    resolucionOficial: 'Resolución Jefatural de Instrucción Naval N° 067-2025',
+    pdfUrl: '/assets/prospectos/citen.pdf',
+    paginasTemario: 'Págs. 38-54: Balotario de Aritmética, Geometría Plana, Fundamentos de Física, Electricidad y Razonamiento Lógico.',
+    paginasFisico: 'Págs. 24-27: Pruebas de natación de supervivencia en mar y trote de resistencia aeróbica.',
+    paginasMedico: 'Págs. 16-21: Aptitud médica para especialidades técnicas de propulsión, telecomunicaciones y sistemas de combate.',
+    notaAuditoria: 'Enfoque técnico-práctico en mecatrónica, propulsión naval y telemática.'
+  },
+  {
+    id: 'ESOFA',
+    sigla: 'ESOFA',
+    nombre: 'Escuela de Suboficiales de la Fuerza Aérea del Perú',
+    fuerza: 'FUERZA AÉREA DEL PERÚ',
+    icono: '🚀',
+    colorAcento: '#0284C7',
+    prospectoTitulo: 'ESOFA - Prospecto de Suboficiales Aeronáuticos 2026',
+    resolucionOficial: 'Directiva COPER-FAP N° 019-2025',
+    pdfUrl: '/assets/prospectos/esofa.pdf',
+    paginasTemario: 'Págs. 32-48: Balotario de Ciencias Básicas, Física, Electricidad y Electrónica Digital, Comunicación y Cultura General.',
+    paginasFisico: 'Págs. 20-23: Tabla de rendimiento físico para mantenimiento de aeronaves y defensa terrestre.',
+    paginasMedico: 'Págs. 12-18: Examen médico reglamentario FAP para personal aerotécnico y especialistas de radar.',
+    notaAuditoria: 'Preguntas oficiales orientadas a mantenimiento aeronáutico, radares y telemetría espacial.'
+  },
+  {
+    id: 'ETE',
+    sigla: 'ETE',
+    nombre: 'Escuela Técnica del Ejército "Sargento 2do Fernando Lores Tenazoa"',
+    fuerza: 'EJÉRCITO DEL PERÚ',
+    icono: '🛡️',
+    colorAcento: '#556B2F',
+    prospectoTitulo: 'ETE - Prospecto de Admisión Suboficiales del Ejército 2026',
+    resolucionOficial: 'Resolución del Comando de Educación y Doctrina del Ejército N° 034-2025',
+    pdfUrl: '/assets/prospectos/ete.pdf',
+    paginasTemario: 'Págs. 40-56: Balotario de Matemáticas Prácticas, Física Mecánica, Comunicación Eficaz y Realidad Nacional.',
+    paginasFisico: 'Págs. 26-29: Evaluación de esfuerzo en pista de combate, trote 2,400m y flexiones de pecho.',
+    paginasMedico: 'Págs. 18-23: Baremos biométricos y de sanidad para especialidades de armamento pesado y blindados.',
+    notaAuditoria: 'Reactivos validados con los exámenes oficiales de ingreso a carreras técnicas del Ejército.'
+  },
+  {
+    id: 'EESTP_PNP',
+    sigla: 'EESTP-PNP',
+    nombre: 'Escuelas de Educación Superior Técnico Profesional PNP (A Nivel Nacional)',
+    fuerza: 'POLICÍA NACIONAL DEL PERÚ',
+    icono: '🚔',
+    colorAcento: '#2E7D32',
+    prospectoTitulo: 'EESTP-PNP - Prospecto Nacional de Suboficiales de Policía 2026',
+    resolucionOficial: 'Resolución Directoral ENFOPOL N° 215-2025',
+    pdfUrl: '/assets/prospectos/eestp_pnp.pdf',
+    paginasTemario: 'Págs. 35-50: Balotario de Educación Cívica, Constitución Política del Perú, Lenguaje, Literatura y Razonamiento Lógico.',
+    paginasFisico: 'Págs. 22-25: Circuito de obstáculos y resistencia física de patrullaje a pie (Trote 2,400m en 12 min).',
+    paginasMedico: 'Págs. 14-20: Verificación de aptitud psicofísica y control toxicológico en sanidad policial.',
+    notaAuditoria: 'Estandarizado para las 27 escuelas técnico profesionales de la PNP en todo el territorio peruano.'
+  }
+];

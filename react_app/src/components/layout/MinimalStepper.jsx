@@ -1,5 +1,6 @@
 import React from 'react';
 import { useAssessmentStore } from '../../store/useAssessmentStore';
+import Tooltip from '../common/Tooltip';
 import { Shield, Brain, Compass, Award } from 'lucide-react';
 
 const PILLARS_METADATA = [
@@ -30,7 +31,11 @@ export default function MinimalStepper() {
               <span className="w-1.5 h-1.5 rounded-full bg-peru-red animate-pulse" />
             </div>
             <h2 className="font-rajdhani text-sm sm:text-base font-bold text-slate-900 dark:text-white tracking-wide uppercase truncate max-w-[190px] sm:max-w-none leading-none mt-0.5">
-              {activeMeta.name}
+              {activeMeta.id === 2 ? (
+                <>Psicometría <Tooltip termino="IPIP-NEO">IPIP-NEO</Tooltip></>
+              ) : (
+                activeMeta.name
+              )}
             </h2>
           </div>
         </div>

@@ -94,41 +94,41 @@ export default function Pillar3Interests() {
                 key={opt.id}
                 type="button"
                 onClick={() => handleSelectOption(opt.id)}
-                className={`relative p-5 rounded-2xl border text-left transition-all duration-300 group overflow-hidden flex flex-col justify-between ${
+                className={`relative p-5 sm:p-6 rounded-2xl border text-left transition-all duration-300 group overflow-hidden flex flex-col justify-between ${
                   isSelected
                     ? "bg-cyan-950/40 border-neon-cyan shadow-cyan-glow scale-[1.01]"
                     : "bg-graphite-surface border-white/10 hover:border-neon-cyan/50 hover:shadow-[0_0_20px_rgba(0,240,255,0.2)] hover:bg-white/[0.05]"
                 }`}
               >
                 <div>
-                  <div className="flex items-center justify-between gap-2 mb-2">
-                    <span className={`text-xs font-rajdhani font-bold px-2.5 py-1 rounded-md border uppercase tracking-wider transition-colors ${
+                  <div className="flex items-center justify-between gap-2 mb-3">
+                    <span className={`text-xs sm:text-sm font-rajdhani font-bold px-2.5 py-1 rounded-md border uppercase tracking-wider transition-colors ${
                       isSelected
                         ? "border-neon-cyan text-neon-cyan bg-neon-cyan/10"
-                        : "border-slate-700 text-slate-400 group-hover:border-neon-cyan/40 group-hover:text-neon-cyan"
+                        : "border-slate-700 text-slate-300 group-hover:border-neon-cyan/40 group-hover:text-neon-cyan"
                     }`}>
                       Opción {opt.id} // {opt.rama}
                     </span>
 
-                    <div className={`w-5 h-5 rounded-full border flex items-center justify-center transition-all ${
+                    <div className={`w-6 h-6 rounded-full border flex items-center justify-center transition-all ${
                       isSelected ? "border-neon-cyan bg-neon-cyan" : "border-slate-600 bg-transparent"
                     }`}>
-                      {isSelected && <ShieldCheck className="w-3.5 h-3.5 text-night-deep" />}
+                      {isSelected && <ShieldCheck className="w-4 h-4 text-night-deep" />}
                     </div>
                   </div>
 
-                  <h3 className={`text-base font-rajdhani font-bold uppercase tracking-wide transition-colors ${
-                    isSelected ? "text-white" : "text-slate-200 group-hover:text-white"
+                  <h3 className={`text-xl md:text-2xl font-rajdhani font-bold uppercase tracking-wide transition-colors ${
+                    isSelected ? "text-white" : "text-slate-100 group-hover:text-white"
                   }`}>
                     {opt.titulo}
                   </h3>
 
-                  <p className="text-xs text-slate-300 font-inter mt-2 leading-relaxed">
+                  <p className="text-sm sm:text-base text-slate-200 font-inter mt-3 leading-relaxed">
                     {opt.texto}
                   </p>
                 </div>
 
-                <div className="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-[11px] font-rajdhani font-bold text-slate-400 uppercase tracking-wider">
+                <div className="mt-5 pt-3 border-t border-white/10 flex items-center justify-between text-xs sm:text-sm font-rajdhani font-bold text-slate-300 uppercase tracking-wider">
                   <span>Afinidad Institucional:</span>
                   <span className="text-neon-cyan">{opt.escuelas.join(" · ")}</span>
                 </div>

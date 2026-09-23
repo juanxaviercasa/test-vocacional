@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useAssessmentStore } from '../../../store/useAssessmentStore';
 import { evaluateLegalCandidate } from '../../../data/legalRequirements';
 import TacticalRadioCard from '../../common/TacticalRadioCard';
+import Tooltip from '../../common/Tooltip';
 import {
   ShieldCheck,
   User,
@@ -153,13 +154,13 @@ export default function Pillar1Legal() {
                     ¿PARA QUÉ ESCUELA MILITAR NACISTE?
                   </h1>
 
-                  <p className="text-sm sm:text-base text-slate-300 font-inter leading-relaxed max-w-2xl mx-auto mb-8">
-                    Simulador algorítmico de alta precisión matemática. Evalúa tu aptitud legal y antropométrica (Pilar 1), tu perfil de personalidad Big Five (Pilar 2), tus intereses operacionales (Pilar 3) y tu rendimiento académico (Pilar 4) contra las exigencias oficiales de las 8 escuelas matrices del Perú.
+                  <p className="text-base sm:text-lg text-slate-100 font-inter leading-relaxed max-w-2xl mx-auto mb-8 font-normal">
+                    Simulador algorítmico de alta precisión matemática. Evalúa tu aptitud legal y <Tooltip termino="Antropometría">antropométrica</Tooltip> (Pilar 1), tu perfil de personalidad <Tooltip termino="Big Five">Big Five</Tooltip> (Pilar 2), tus intereses operacionales (Pilar 3) y tu rendimiento académico (Pilar 4) contra las exigencias oficiales de las 8 escuelas matrices del Perú.
                   </p>
 
                   <div className="flex flex-wrap justify-center gap-3 mb-8">
                     <span className="px-3 py-1 rounded-lg border border-neon-cyan/30 text-neon-cyan text-xs font-rajdhani font-bold uppercase tracking-wider bg-cyan-950/30">
-                      🎯 Baremación Multi-Pilar 100% Oficial
+                      🎯 <Tooltip termino="Baremos">Baremación Multi-Pilar 100% Oficial</Tooltip>
                     </span>
                     <span className="px-3 py-1 rounded-lg border border-gold-primary/30 text-yellow-400 text-xs font-rajdhani font-bold uppercase tracking-wider bg-yellow-950/30">
                       🔒 Terminal de Admisión Clasificada
@@ -205,20 +206,20 @@ export default function Pillar1Legal() {
                       <span className="text-xs font-rajdhani font-bold text-neon-cyan tracking-widest uppercase">
                         PILAR 1 // FASE A
                       </span>
-                      <h2 className="text-2xl font-rajdhani font-bold text-white uppercase tracking-wide">
-                        Parámetros Biométricos y Antropometría
+                      <h2 className="text-2xl sm:text-3xl font-rajdhani font-bold text-white uppercase tracking-wide">
+                        Parámetros Biométricos y <Tooltip termino="Antropometría">Antropometría</Tooltip>
                       </h2>
                     </div>
                     <div className={`px-3 py-1.5 rounded-xl border text-xs font-rajdhani font-bold tracking-wider uppercase flex items-center gap-2 ${imcColor}`}>
                       <Activity className="w-4 h-4" />
-                      <span>IMC: {imc} ({imcStatus})</span>
+                      <span><Tooltip termino="IMC">IMC</Tooltip>: {imc} ({imcStatus})</span>
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {/* Nombre Completo */}
                     <div>
-                      <label className="block text-xs font-rajdhani font-bold text-slate-300 uppercase tracking-wider mb-2">
+                      <label className="block text-sm font-rajdhani font-bold text-slate-200 uppercase tracking-wider mb-2">
                         Nombre y Apellidos del Postulante
                       </label>
                       <input
@@ -226,13 +227,13 @@ export default function Pillar1Legal() {
                         value={candidate.nombre}
                         onChange={(e) => updateCandidate('nombre', e.target.value)}
                         placeholder="Ej. Carlos Mendoza"
-                        className="w-full px-4 py-3 rounded-xl bg-night-deep/80 border border-white/15 focus:border-neon-cyan focus:ring-1 focus:ring-neon-cyan text-white text-sm outline-none transition-all"
+                        className="w-full px-4 py-3 rounded-xl bg-night-deep/80 border border-white/15 focus:border-neon-cyan focus:ring-1 focus:ring-neon-cyan text-white text-base outline-none transition-all"
                       />
                     </div>
 
                     {/* Sexo Biológico */}
                     <div>
-                      <label className="block text-xs font-rajdhani font-bold text-slate-300 uppercase tracking-wider mb-2">
+                      <label className="block text-sm font-rajdhani font-bold text-slate-200 uppercase tracking-wider mb-2">
                         Sexo Biológico (Según DNI)
                       </label>
                       <div className="grid grid-cols-2 gap-3">
