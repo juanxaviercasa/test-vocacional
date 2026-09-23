@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { PSICOMETRIC_QUESTIONS } from '../data/psychometricQuestions.js';
-import { TACTICAL_DILEMMAS } from '../data/tacticalDilemmas.js';
+import { TACTICAL_DILEMMAS, getAdaptedDilemmas } from '../data/tacticalDilemmas.js';
 import { KNOWLEDGE_QUESTIONS } from '../data/knowledgeQuestions.js';
 import { computeConsolidatedViability, computeVocationalViability } from '../data/scoringEngine.js';
 
@@ -23,14 +23,17 @@ export const useAssessmentStore = create((set, get) => {
     // Sub-pantallas de Paso 1 (Filtro Legal / Divulgación Progresiva)
     pilar1SubStep: 1, // 1: Identidad, 2: Antropometría, 3: Filtro Médico/Legal, 4: Desbloqueando
 
-    // Paso 1: Datos del Postulante
+    // Paso 1: Datos del Postulante y Restricciones Físicas Globales
     candidate: {
       nombre: 'Carlos Mendoza',
       dni: '73491820',
       edad: 19,
+      age: 19,
       sexo: 'M',
       talla_cm: 172,
+      height: 172,
       peso_kg: 70,
+      weight: 70,
       talla_sentado_cm: 91,
       estado_civil: 'soltero',
       tiene_hijos: false,
@@ -38,6 +41,7 @@ export const useAssessmentStore = create((set, get) => {
       tiene_tatuajes: false,
       secundaria_completa: true,
       agudeza_visual_20_20: true,
+      hasGlasses: false,
       daltonismo: false,
     },
 
@@ -137,9 +141,74 @@ export const useAssessmentStore = create((set, get) => {
     },
 
     updateCandidate: (field, value) => {
-      set((state) => ({
-        candidate: { ...state.candidate, [field]: value }
-      }));
+      set((state) => {
+        const next = { ...state.candidate, [field]: value };
+        // Sincronizaciones bidireccionales automáticas para restricciones físicas:
+        if (field === 'agudeza_visual_20_20') {
+          next.hasGlasses = !value;
+        } else if (field === 'hasGlasses') {
+          next.agudeza_visual_20_20 = !value;
+        } else if (field === 'edad') {
+          next.age = value;
+        } else if (field === 'age') {
+          next.edad = value;
+        } else if (field === 'talla_cm') {
+          next.height = value;
+        } else if (field === 'height') {
+          next.talla_cm = value;
+        } else if (field === 'peso_kg') {
+          next.weight = value;
+        } else if (field === 'weight') {
+          next.peso_kg = value;
+        }
+        return { candidate: next };
+      });
+    },
+
+    // Selector helper para obtener las restricciones físicas calculadas
+    getPhysicalRestrictions: () => {
+      const { candidate } = get();
+      const hasGlasses = candidate.hasGlasses !== undefined
+        ? Boolean(candidate.hasGlasses)
+        : !candidate.agudeza_visual_20_20;
+      const age = Number(candidate.age ?? candidate.edad ?? 19);
+      const height = Number(candidate.height ?? candidate.talla_cm ?? 172);
+      const weight = Number(candidate.weight ?? candidate.peso_kg ?? 70);
+      const isMale = candidate.sexo === 'M';
+
+      // Requisitos mínimos reglamentarios para Oficiales (EMCH, ENP, EOFAP, EO-PNP):
+      // Varones: mín 167-168 cm (EO-PNP 167, FFAA 168 cm).
+      // Damas: mín 158-160 cm (EMCH/EOFAP 158, EO-PNP 159, ENP 160 cm).
+      // Edad máxima oficial: 21 años (FFAA) o 22 años (PNP).
+      const minHeightOfficer = isMale ? 167 : 158;
+      const maxAgeOfficer = 22;
+
+      const isHeightOfficerExcluded = height < minHeightOfficer;
+      const isAgeOfficerExcluded = age > maxAgeOfficer;
+      const isOfficerExcluded = isHeightOfficerExcluded || isAgeOfficerExcluded;
+      const isSubofficerOnly = isOfficerExcluded;
+
+      // Exclusión específica de especialidades de vuelo de combate (EOFAP Piloto)
+      const isPilotExcluded = hasGlasses ||
+                              Boolean(candidate.daltonismo) ||
+                              Number(candidate.talla_sentado_cm) < 85 ||
+                              Number(candidate.talla_sentado_cm) > 98 ||
+                              isOfficerExcluded;
+
+      return {
+        hasGlasses,
+        age,
+        height,
+        weight,
+        isOfficerExcluded,
+        isSubofficerOnly,
+        isHeightOfficerExcluded,
+        isAgeOfficerExcluded,
+        isPilotExcluded,
+        isMale,
+        minHeightOfficer,
+        maxAgeOfficer
+      };
     },
 
     // Acciones Paso 2 (Psicometría con auto-avance táctico)
@@ -193,25 +262,29 @@ export const useAssessmentStore = create((set, get) => {
     // CÁLCULO DE RESULTADOS
     // =========================================================================
     calculateVocationalResults: () => {
-      const { candidate, psychAnswers, interestsAnswers } = get();
+      const { candidate, psychAnswers, interestsAnswers, getPhysicalRestrictions } = get();
+      const restrictions = getPhysicalRestrictions();
+      const adaptedDilemmas = getAdaptedDilemmas(TACTICAL_DILEMMAS, restrictions);
       const verdict = computeVocationalViability(
         candidate,
         psychAnswers,
         interestsAnswers,
-        TACTICAL_DILEMMAS
+        adaptedDilemmas
       );
       set({ vocationalVerdict: verdict });
       return verdict;
     },
 
     calculateFinalResults: () => {
-      const { candidate, psychAnswers, interestsAnswers, knowledgeAnswers } = get();
+      const { candidate, psychAnswers, interestsAnswers, knowledgeAnswers, getPhysicalRestrictions } = get();
+      const restrictions = getPhysicalRestrictions();
+      const adaptedDilemmas = getAdaptedDilemmas(TACTICAL_DILEMMAS, restrictions);
       const verdict = computeConsolidatedViability(
         candidate,
         psychAnswers,
         interestsAnswers,
         knowledgeAnswers,
-        TACTICAL_DILEMMAS,
+        adaptedDilemmas,
         KNOWLEDGE_QUESTIONS
       );
       set({ finalVerdict: verdict });

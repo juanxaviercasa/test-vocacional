@@ -443,18 +443,24 @@ export default function Pillar1Legal() {
                     </label>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       <TacticalRadioCard
-                        selected={candidate.agudeza_visual_20_20}
-                        onClick={() => updateCandidate('agudeza_visual_20_20', true)}
+                        selected={candidate.agudeza_visual_20_20 && !candidate.hasGlasses}
+                        onClick={() => {
+                          updateCandidate('agudeza_visual_20_20', true);
+                          updateCandidate('hasGlasses', false);
+                        }}
                         title="20/20 Natural Sin Lentes"
                         subtitle="Exigido para pilotos de combate EOFAP y Oficiales de Armas"
                         badge="PILOTO OK"
                       />
                       <TacticalRadioCard
-                        selected={!candidate.agudeza_visual_20_20}
-                        onClick={() => updateCandidate('agudeza_visual_20_20', false)}
+                        selected={!candidate.agudeza_visual_20_20 || candidate.hasGlasses}
+                        onClick={() => {
+                          updateCandidate('agudeza_visual_20_20', false);
+                          updateCandidate('hasGlasses', true);
+                        }}
                         title="Uso Lentes Correctores"
-                        subtitle="Apto para especialidades técnicas, logísticas y servicios"
-                        badge="SERVICIOS"
+                        subtitle="Apto para especialidades técnicas, logísticas y servicios en tierra"
+                        badge="SERVICIOS / TIERRA"
                       />
                     </div>
                   </div>

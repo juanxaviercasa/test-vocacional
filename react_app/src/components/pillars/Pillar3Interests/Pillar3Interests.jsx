@@ -1,9 +1,9 @@
 import React from 'react';
 import { useAssessmentStore } from '../../../store/useAssessmentStore';
-import { TACTICAL_DILEMMAS } from '../../../data/tacticalDilemmas';
+import { TACTICAL_DILEMMAS, resolveDilemmaOptions } from '../../../data/tacticalDilemmas';
 import TopoProgressBar from '../../common/TopoProgressBar';
 import AnimatePillarContainer from '../../layout/AnimatePillarContainer';
-import { Compass, ArrowLeft, ArrowRight, ShieldCheck, Crosshair } from 'lucide-react';
+import { Compass, ArrowLeft, ArrowRight, ShieldCheck, Crosshair, Sparkles, AlertCircle } from 'lucide-react';
 
 export default function Pillar3Interests() {
   const {
@@ -13,12 +13,17 @@ export default function Pillar3Interests() {
     nextInterestDilemma,
     prevInterestDilemma,
     direction,
-    prevPillar
+    prevPillar,
+    getPhysicalRestrictions
   } = useAssessmentStore();
 
+  const restrictions = getPhysicalRestrictions ? getPhysicalRestrictions() : {};
   const currentDilemma = TACTICAL_DILEMMAS[interestsIndex] || TACTICAL_DILEMMAS[0];
   const selectedOptionId = interestsAnswers[currentDilemma.id];
   const total = TACTICAL_DILEMMAS.length;
+
+  // Renderizado condicional adaptativo según restricciones físicas del Pilar 1
+  const adaptedOptions = resolveDilemmaOptions(currentDilemma, restrictions);
 
   const handleSelectOption = (optId) => {
     answerInterestDilemma(currentDilemma.id, optId);
@@ -33,6 +38,30 @@ export default function Pillar3Interests() {
         total={total}
         label={`Pilar 3 // Intereses Operacionales: Dilema Táctico ${interestsIndex + 1} de ${total}`}
       />
+
+      {/* Indicador de Calibración Biométrica Activa (Contexto Pilar 1) */}
+      {(restrictions.hasGlasses || restrictions.isSubofficerOnly) && (
+        <div className="mb-4 p-3 rounded-2xl bg-[#0B101E]/90 border border-cyan-500/30 flex flex-wrap items-center justify-between gap-3 text-xs font-inter shadow-md">
+          <div className="flex items-center gap-2">
+            <Sparkles className="w-4 h-4 text-neon-cyan animate-pulse" />
+            <span className="font-rajdhani font-bold text-slate-200 uppercase tracking-wider">
+              Calibración Biométrica Activa (Pilar 1):
+            </span>
+          </div>
+          <div className="flex flex-wrap items-center gap-2">
+            {restrictions.hasGlasses && (
+              <span className="px-2.5 py-1 rounded-lg bg-cyan-950/80 border border-cyan-400/40 text-cyan-300 font-rajdhani font-bold text-[11px] uppercase tracking-wider">
+                👓 Perfil Visual Adaptado (Roles en Tierra & Servicios)
+              </span>
+            )}
+            {restrictions.isSubofficerOnly && (
+              <span className="px-2.5 py-1 rounded-lg bg-amber-950/80 border border-alert-amber/40 text-amber-300 font-rajdhani font-bold text-[11px] uppercase tracking-wider">
+                🛡️ Escalafón Técnico (Escuelas de Suboficiales)
+              </span>
+            )}
+          </div>
+        </div>
+      )}
 
       <AnimatePillarContainer animationKey={`dil-q-${interestsIndex}`} direction={direction}>
         
@@ -78,16 +107,16 @@ export default function Pillar3Interests() {
                 DIRECTIVA OPERATIVA DEL COMANDO CONJUNTO // ELECCIÓN DE RUTA TÁCTICA:
               </span>
             </div>
-            <p className="text-sm sm:text-base text-slate-100 font-inter leading-relaxed">
+            <p className="text-base sm:text-lg text-slate-100 font-inter leading-relaxed">
               {currentDilemma.escenario}
             </p>
           </div>
 
         </div>
 
-        {/* 4 Tarjetas de Decisión con Hover Glow */}
+        {/* 4 Tarjetas de Decisión con Renderizado Condicional Adaptativo */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {currentDilemma.opciones.map((opt) => {
+          {adaptedOptions.map((opt) => {
             const isSelected = selectedOptionId === opt.id;
             return (
               <button
@@ -102,13 +131,23 @@ export default function Pillar3Interests() {
               >
                 <div>
                   <div className="flex items-center justify-between gap-2 mb-3">
-                    <span className={`text-xs sm:text-sm font-rajdhani font-bold px-2.5 py-1 rounded-md border uppercase tracking-wider transition-colors ${
-                      isSelected
-                        ? "border-neon-cyan text-neon-cyan bg-neon-cyan/10"
-                        : "border-slate-700 text-slate-300 group-hover:border-neon-cyan/40 group-hover:text-neon-cyan"
-                    }`}>
-                      Opción {opt.id} // {opt.rama}
-                    </span>
+                    <div className="flex flex-wrap items-center gap-2">
+                      <span className={`text-xs sm:text-sm font-rajdhani font-bold px-2.5 py-1 rounded-md border uppercase tracking-wider transition-colors ${
+                        isSelected
+                          ? "border-neon-cyan text-neon-cyan bg-neon-cyan/10"
+                          : "border-slate-700 text-slate-300 group-hover:border-neon-cyan/40 group-hover:text-neon-cyan"
+                      }`}>
+                        Opción {opt.id} // {opt.rama}
+                      </span>
+
+                      {/* Badge Táctico de Adaptación por Perfil Físico */}
+                      {opt.isAdapted && opt.adaptationBadge && (
+                        <span className="text-[10px] sm:text-xs font-rajdhani font-extrabold px-2 py-0.5 rounded bg-cyan-950/90 border border-cyan-400/50 text-cyan-300 uppercase tracking-wider shadow-sm flex items-center gap-1">
+                          <span>⚡</span>
+                          <span>{opt.adaptationBadge}</span>
+                        </span>
+                      )}
+                    </div>
 
                     <div className={`w-6 h-6 rounded-full border flex items-center justify-center transition-all ${
                       isSelected ? "border-neon-cyan bg-neon-cyan" : "border-slate-600 bg-transparent"
