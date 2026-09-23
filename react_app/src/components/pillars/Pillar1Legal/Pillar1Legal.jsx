@@ -207,79 +207,105 @@ export default function Pillar1Legal() {
                     Simulador algorítmico de alta precisión para perfilamiento militar y policial.
                   </p>
 
-                  {/* Feature Grid de 4 Columnas (Infografía de los 4 Pilares) */}
-                  <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-3.5 max-w-4xl mx-auto mb-8">
-                    {/* Tarjeta 1: Filtro Legal */}
-                    <div className="p-3 sm:p-3.5 rounded-2xl bg-[#0B101E]/75 border border-white/15 backdrop-blur-md hover:border-cyan-500/50 hover:bg-[#0B101E]/90 transition-all text-left flex flex-col justify-between group shadow-sm">
-                      <div className="flex items-center justify-between mb-2">
-                        <div className="w-8 h-8 rounded-xl bg-cyan-950/70 border border-cyan-500/40 flex items-center justify-center text-[#00F0FF] group-hover:scale-110 transition-transform">
-                          <Shield className="w-4 h-4" />
-                        </div>
-                        <span className="text-[10px] font-mono text-cyan-400 font-bold tracking-wider">PILAR 1</span>
-                      </div>
+                  {/* Feature Grid de 4 Pilares Tácticos (Mayor Escala, Tipografía Legible y Descripciones Detalladas) */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 sm:gap-5 max-w-5xl mx-auto mb-10 text-left">
+                    
+                    {/* Tarjeta 1: Filtro Legal y Biométrico */}
+                    <div className="p-5 sm:p-6 rounded-2xl sm:rounded-3xl bg-[#0B101E]/85 dark:bg-[#0B101E]/90 border border-white/15 dark:border-cyan-500/30 hover:border-[#00F0FF] hover:bg-[#0B101E]/95 shadow-[0_10px_30px_rgba(0,0,0,0.5)] hover:shadow-[0_0_25px_rgba(0,240,255,0.25)] transition-all duration-300 flex flex-col justify-between group min-h-[220px]">
                       <div>
-                        <h3 className="font-rajdhani font-bold text-sm text-white uppercase tracking-wider group-hover:text-[#00F0FF] transition-colors leading-snug">
-                          Filtro Legal
+                        <div className="flex items-center justify-between mb-3">
+                          <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-cyan-950/70 border border-cyan-500/50 flex items-center justify-center text-[#00F0FF] group-hover:scale-110 shadow-cyan-glow transition-transform flex-shrink-0">
+                            <Shield className="w-5 h-5 sm:w-6 sm:h-6" />
+                          </div>
+                          <span className="text-xs font-mono font-bold text-cyan-400 px-2 py-0.5 rounded bg-cyan-950/60 border border-cyan-500/40 tracking-wider">
+                            PILAR 01
+                          </span>
+                        </div>
+                        <h3 className="font-rajdhani font-black text-lg sm:text-xl text-white uppercase tracking-wider group-hover:text-[#00F0FF] transition-colors leading-tight mb-2">
+                          Filtro Legal y Físico
                         </h3>
-                        <p className="text-[11px] text-slate-300 font-inter leading-tight mt-0.5">
-                          Talla, peso y requisitos.
+                        <p className="text-xs sm:text-sm text-slate-200 dark:text-slate-300 font-inter leading-relaxed">
+                          Auditoría biométrica oficial: estatura mínima descalzo, rango de peso militar (IMC), agudeza visual 20/20 y requisitos legales excluyentes (antecedentes y estado civil).
                         </p>
+                      </div>
+                      <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-[11px] font-rajdhani font-bold text-cyan-400/90 uppercase tracking-wider">
+                        <span>⚖️ Baremos Oficiales 2026</span>
+                        <span className="text-peru-red">Excluyente</span>
                       </div>
                     </div>
 
-                    {/* Tarjeta 2: Test Psicológico */}
-                    <div className="p-3 sm:p-3.5 rounded-2xl bg-[#0B101E]/75 border border-white/15 backdrop-blur-md hover:border-cyan-500/50 hover:bg-[#0B101E]/90 transition-all text-left flex flex-col justify-between group shadow-sm">
-                      <div className="flex items-center justify-between mb-2">
-                        <div className="w-8 h-8 rounded-xl bg-cyan-950/70 border border-cyan-500/40 flex items-center justify-center text-[#00F0FF] group-hover:scale-110 transition-transform">
-                          <Brain className="w-4 h-4" />
-                        </div>
-                        <span className="text-[10px] font-mono text-cyan-400 font-bold tracking-wider">PILAR 2</span>
-                      </div>
+                    {/* Tarjeta 2: Test Psicológico IPIP-NEO */}
+                    <div className="p-5 sm:p-6 rounded-2xl sm:rounded-3xl bg-[#0B101E]/85 dark:bg-[#0B101E]/90 border border-white/15 dark:border-cyan-500/30 hover:border-[#00F0FF] hover:bg-[#0B101E]/95 shadow-[0_10px_30px_rgba(0,0,0,0.5)] hover:shadow-[0_0_25px_rgba(0,240,255,0.25)] transition-all duration-300 flex flex-col justify-between group min-h-[220px]">
                       <div>
-                        <h3 className="font-rajdhani font-bold text-sm text-white uppercase tracking-wider group-hover:text-[#00F0FF] transition-colors leading-snug">
+                        <div className="flex items-center justify-between mb-3">
+                          <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-cyan-950/70 border border-cyan-500/50 flex items-center justify-center text-[#00F0FF] group-hover:scale-110 shadow-cyan-glow transition-transform flex-shrink-0">
+                            <Brain className="w-5 h-5 sm:w-6 sm:h-6" />
+                          </div>
+                          <span className="text-xs font-mono font-bold text-cyan-400 px-2 py-0.5 rounded bg-cyan-950/60 border border-cyan-500/40 tracking-wider">
+                            PILAR 02
+                          </span>
+                        </div>
+                        <h3 className="font-rajdhani font-black text-lg sm:text-xl text-white uppercase tracking-wider group-hover:text-[#00F0FF] transition-colors leading-tight mb-2">
                           Test Psicológico
                         </h3>
-                        <p className="text-[11px] text-slate-300 font-inter leading-tight mt-0.5">
-                          Perfil de personalidad.
+                        <p className="text-xs sm:text-sm text-slate-200 dark:text-slate-300 font-inter leading-relaxed">
+                          Evaluación psicométrica basada en el modelo Big Five adaptado a las Fuerzas Armadas: temple marcial bajo fuego, estabilidad emocional, disciplina y liderazgo operativo.
                         </p>
+                      </div>
+                      <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-[11px] font-rajdhani font-bold text-cyan-400/90 uppercase tracking-wider">
+                        <span>🧠 Big Five Militar</span>
+                        <span className="text-emerald-400">Psicometría</span>
                       </div>
                     </div>
 
-                    {/* Tarjeta 3: Intereses Tácticos */}
-                    <div className="p-3 sm:p-3.5 rounded-2xl bg-[#0B101E]/75 border border-white/15 backdrop-blur-md hover:border-cyan-500/50 hover:bg-[#0B101E]/90 transition-all text-left flex flex-col justify-between group shadow-sm">
-                      <div className="flex items-center justify-between mb-2">
-                        <div className="w-8 h-8 rounded-xl bg-cyan-950/70 border border-cyan-500/40 flex items-center justify-center text-[#00F0FF] group-hover:scale-110 transition-transform">
-                          <Compass className="w-4 h-4" />
-                        </div>
-                        <span className="text-[10px] font-mono text-cyan-400 font-bold tracking-wider">PILAR 3</span>
-                      </div>
+                    {/* Tarjeta 3: Intereses Tácticos & Vocación */}
+                    <div className="p-5 sm:p-6 rounded-2xl sm:rounded-3xl bg-[#0B101E]/85 dark:bg-[#0B101E]/90 border border-white/15 dark:border-cyan-500/30 hover:border-[#00F0FF] hover:bg-[#0B101E]/95 shadow-[0_10px_30px_rgba(0,0,0,0.5)] hover:shadow-[0_0_25px_rgba(0,240,255,0.25)] transition-all duration-300 flex flex-col justify-between group min-h-[220px]">
                       <div>
-                        <h3 className="font-rajdhani font-bold text-sm text-white uppercase tracking-wider group-hover:text-[#00F0FF] transition-colors leading-snug">
+                        <div className="flex items-center justify-between mb-3">
+                          <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-cyan-950/70 border border-cyan-500/50 flex items-center justify-center text-[#00F0FF] group-hover:scale-110 shadow-cyan-glow transition-transform flex-shrink-0">
+                            <Compass className="w-5 h-5 sm:w-6 sm:h-6" />
+                          </div>
+                          <span className="text-xs font-mono font-bold text-cyan-400 px-2 py-0.5 rounded bg-cyan-950/60 border border-cyan-500/40 tracking-wider">
+                            PILAR 03
+                          </span>
+                        </div>
+                        <h3 className="font-rajdhani font-black text-lg sm:text-xl text-white uppercase tracking-wider group-hover:text-[#00F0FF] transition-colors leading-tight mb-2">
                           Intereses Tácticos
                         </h3>
-                        <p className="text-[11px] text-slate-300 font-inter leading-tight mt-0.5">
-                          Dilemas operacionales.
+                        <p className="text-xs sm:text-sm text-slate-200 dark:text-slate-300 font-inter leading-relaxed">
+                          Dilemas operacionales situacionales condicionados a tu perfil físico: combate terrestre (Ejército), operaciones navales (Marina), aviación (FAP) o pacificación (Policía Nacional).
                         </p>
+                      </div>
+                      <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-[11px] font-rajdhani font-bold text-cyan-400/90 uppercase tracking-wider">
+                        <span>🎯 Simulación Real</span>
+                        <span className="text-yellow-400">Vocación</span>
                       </div>
                     </div>
 
-                    {/* Tarjeta 4: Simulador Académico */}
-                    <div className="p-3 sm:p-3.5 rounded-2xl bg-[#0B101E]/75 border border-white/15 backdrop-blur-md hover:border-cyan-500/50 hover:bg-[#0B101E]/90 transition-all text-left flex flex-col justify-between group shadow-sm">
-                      <div className="flex items-center justify-between mb-2">
-                        <div className="w-8 h-8 rounded-xl bg-cyan-950/70 border border-cyan-500/40 flex items-center justify-center text-[#00F0FF] group-hover:scale-110 transition-transform">
-                          <BookOpen className="w-4 h-4" />
-                        </div>
-                        <span className="text-[10px] font-mono text-cyan-400 font-bold tracking-wider">PILAR 4</span>
-                      </div>
+                    {/* Tarjeta 4: Simulador Académico & Brechas */}
+                    <div className="p-5 sm:p-6 rounded-2xl sm:rounded-3xl bg-[#0B101E]/85 dark:bg-[#0B101E]/90 border border-white/15 dark:border-cyan-500/30 hover:border-[#00F0FF] hover:bg-[#0B101E]/95 shadow-[0_10px_30px_rgba(0,0,0,0.5)] hover:shadow-[0_0_25px_rgba(0,240,255,0.25)] transition-all duration-300 flex flex-col justify-between group min-h-[220px]">
                       <div>
-                        <h3 className="font-rajdhani font-bold text-sm text-white uppercase tracking-wider group-hover:text-[#00F0FF] transition-colors leading-snug">
+                        <div className="flex items-center justify-between mb-3">
+                          <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-cyan-950/70 border border-cyan-500/50 flex items-center justify-center text-[#00F0FF] group-hover:scale-110 shadow-cyan-glow transition-transform flex-shrink-0">
+                            <BookOpen className="w-5 h-5 sm:w-6 sm:h-6" />
+                          </div>
+                          <span className="text-xs font-mono font-bold text-cyan-400 px-2 py-0.5 rounded bg-cyan-950/60 border border-cyan-500/40 tracking-wider">
+                            PILAR 04
+                          </span>
+                        </div>
+                        <h3 className="font-rajdhani font-black text-lg sm:text-xl text-white uppercase tracking-wider group-hover:text-[#00F0FF] transition-colors leading-tight mb-2">
                           Simulador Académico
                         </h3>
-                        <p className="text-[11px] text-slate-300 font-inter leading-tight mt-0.5">
-                          Medición de conocimientos.
+                        <p className="text-xs sm:text-sm text-slate-200 dark:text-slate-300 font-inter leading-relaxed">
+                          Simulacro oficial tipo admisión con fórmulas en LaTeX de matemáticas, física, psicotécnico y letras. Proyecta tu puntaje y calcula tus brechas cognitivas por institución.
                         </p>
                       </div>
+                      <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-[11px] font-rajdhani font-bold text-cyan-400/90 uppercase tracking-wider">
+                        <span>📊 Banco Oficial</span>
+                        <span className="text-cyan-400">Diagnóstico</span>
+                      </div>
                     </div>
+
                   </div>
 
                   {/* Acciones de Despliegue Operativo */}
