@@ -25,6 +25,7 @@ const MILITARY_SCHOOLS = [
     sigla: 'EOFAP',
     name: 'Escuela de Oficiales de la Fuerza Aérea del Perú',
     rama: 'Fuerza Aérea del Perú',
+    fuerza: 'FUERZA AÉREA',
     rango: 'Oficial',
     icono: '✈️',
     bgImage: 'https://images.unsplash.com/photo-1569154941061-e231b4725ef1?auto=format&fit=crop&q=80&w=600',
@@ -35,6 +36,7 @@ const MILITARY_SCHOOLS = [
     sigla: 'EMCH',
     name: 'Escuela Militar de Chorrillos',
     rama: 'Ejército del Perú',
+    fuerza: 'EJÉRCITO',
     rango: 'Oficial',
     icono: '⚔️',
     bgImage: 'https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&q=80&w=600',
@@ -45,6 +47,7 @@ const MILITARY_SCHOOLS = [
     sigla: 'ENP',
     name: 'Escuela Naval del Perú',
     rama: 'Marina de Guerra del Perú',
+    fuerza: 'MARINA',
     rango: 'Oficial',
     icono: '⚓',
     bgImage: 'https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&q=80&w=600',
@@ -55,6 +58,7 @@ const MILITARY_SCHOOLS = [
     sigla: 'CITEN',
     name: 'Instituto Tecnológico Naval',
     rama: 'Marina de Guerra del Perú',
+    fuerza: 'MARINA',
     rango: 'Suboficial',
     icono: '🚢',
     bgImage: 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&q=80&w=600',
@@ -65,6 +69,7 @@ const MILITARY_SCHOOLS = [
     sigla: 'ESOFA',
     name: 'Escuela de Suboficiales de la FAP',
     rama: 'Fuerza Aérea del Perú',
+    fuerza: 'FUERZA AÉREA',
     rango: 'Suboficial',
     icono: '🚀',
     bgImage: 'https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&q=80&w=600',
@@ -75,6 +80,7 @@ const MILITARY_SCHOOLS = [
     sigla: 'ETE',
     name: 'Escuela Técnica del Ejército',
     rama: 'Ejército del Perú',
+    fuerza: 'EJÉRCITO',
     rango: 'Suboficial',
     icono: '🛡️',
     bgImage: 'https://images.unsplash.com/photo-1579829366248-204fe8413f31?auto=format&fit=crop&q=80&w=600',
@@ -85,6 +91,7 @@ const MILITARY_SCHOOLS = [
     sigla: 'EO-PNP',
     name: 'Escuela de Oficiales PNP',
     rama: 'Policía Nacional del Perú',
+    fuerza: 'POLICÍA',
     rango: 'Oficial',
     icono: '👮',
     bgImage: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=600',
@@ -95,11 +102,20 @@ const MILITARY_SCHOOLS = [
     sigla: 'EESTP-PNP',
     name: 'Escuela Técnico Superior PNP',
     rama: 'Policía Nacional del Perú',
+    fuerza: 'POLICÍA',
     rango: 'Suboficial',
     icono: '🚓',
     bgImage: 'https://images.unsplash.com/photo-1471958680802-1345a694ba6d?auto=format&fit=crop&q=80&w=600',
     descripcion: 'Suboficiales de intervención táctica, tránsito, patrullaje y rescate de emergencia.'
   },
+];
+
+const FILTER_TABS = [
+  { id: 'TODAS', label: 'TODAS', activeClass: 'bg-slate-900 text-white border-slate-900 dark:bg-peru-red dark:text-white dark:border-peru-red shadow-sm' },
+  { id: 'EJÉRCITO', label: 'EJÉRCITO', activeClass: 'bg-[#4B5320] text-white border-[#4B5320] shadow-[0_0_15px_rgba(75,83,32,0.4)]' },
+  { id: 'MARINA', label: 'MARINA', activeClass: 'bg-[#003865] text-white border-[#003865] shadow-[0_0_15px_rgba(0,56,101,0.4)]' },
+  { id: 'FUERZA AÉREA', label: 'FUERZA AÉREA', activeClass: 'bg-[#0284C7] text-white border-[#0284C7] shadow-[0_0_15px_rgba(2,132,199,0.4)]' },
+  { id: 'POLICÍA', label: 'POLICÍA', activeClass: 'bg-[#065F46] text-white border-[#065F46] shadow-[0_0_15px_rgba(6,95,70,0.4)]' },
 ];
 
 const slideVariants = {
@@ -122,8 +138,9 @@ const slideVariants = {
 export default function Pillar4Knowledge() {
   const { nextPillar, prevPillar, answerKnowledgeQuestion } = useAssessmentStore();
   
-  // Regla 1: Estado de Examen Iniciado
+  // Estado de Examen Iniciado y Filtro Táctico
   const [isTestStarted, setIsTestStarted] = useState(false);
+  const [activeFilter, setActiveFilter] = useState('TODAS');
   const [selectedSchool, setSelectedSchool] = useState('EOFAP');
   const [slideDirection, setSlideDirection] = useState(1);
   const [isAdvancing, setIsAdvancing] = useState(false);
@@ -271,6 +288,10 @@ export default function Pillar4Knowledge() {
   // 1. VISTA PRE-TEST (!isTestStarted): CATÁLOGO TÁCTICO DE LAS 8 ESCUELAS
   // =========================================================================
   if (!isTestStarted) {
+    const filteredSchools = activeFilter === 'TODAS'
+      ? MILITARY_SCHOOLS
+      : MILITARY_SCHOOLS.filter(esc => esc.fuerza === activeFilter);
+
     return (
       <div className="w-full max-w-6xl mx-auto px-4 py-6">
         
@@ -293,60 +314,92 @@ export default function Pillar4Knowledge() {
           </p>
         </div>
 
-        {/* Cuadrícula de las 8 Escuelas (Modern Image Cards con Fallback y Degradado) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {MILITARY_SCHOOLS.map((esc) => {
+        {/* 1. BARRA DE FILTRADO TÁCTICO HORIZONTAL (Pills) */}
+        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-8">
+          {FILTER_TABS.map((tab) => {
+            const isActive = activeFilter === tab.id;
             return (
-              <div
-                key={esc.id}
-                onClick={() => handleStartTest(esc.id)}
-                className="group relative overflow-hidden rounded-xl min-h-[340px] bg-slate-200 dark:bg-slate-800 border border-slate-200 dark:border-gray-800 shadow-md hover:shadow-2xl transition-all duration-300 cursor-pointer flex flex-col justify-end select-none"
+              <button
+                key={tab.id}
+                type="button"
+                onClick={() => setActiveFilter(tab.id)}
+                className={`px-4 sm:px-5 py-2 rounded-xl font-rajdhani font-bold text-xs sm:text-sm tracking-wider uppercase transition-all duration-200 cursor-pointer border select-none ${
+                  isActive
+                    ? tab.activeClass
+                    : "bg-transparent border-slate-300 dark:border-gray-800 text-slate-700 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white hover:border-slate-400 dark:hover:border-gray-600"
+                }`}
               >
-                {/* 1. FONDO (Imagen con fallback bg-slate-200 dark:bg-slate-800) */}
-                <div className="absolute inset-0 w-full h-full bg-slate-200 dark:bg-slate-800 overflow-hidden">
-                  <img
-                    src={esc.bgImage}
-                    alt={esc.name}
-                    loading="lazy"
-                    onError={(e) => {
-                      e.currentTarget.classList.add('opacity-0');
-                    }}
-                    className="object-cover w-full h-full absolute inset-0 transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-
-                {/* 2. CAPA DE DEGRADADO (Overlay directo sobre la imagen para proteger el texto) */}
-                <div className="absolute inset-0 bg-gradient-to-t from-white via-white/90 to-transparent dark:from-[#0B101E] dark:via-[#0B101E]/80 dark:to-transparent pointer-events-none transition-colors duration-300 z-10" />
-
-                {/* 3. CONTENIDO (Texto en la parte inferior sobre el degradado) */}
-                <div className="relative p-5 w-full flex flex-col gap-2 z-20">
-                  {/* Etiqueta Rama Militar (Rojo brillante en Dark Mode) */}
-                  <span className="text-[#D91023] dark:text-red-400 font-bold text-xs tracking-widest uppercase font-rajdhani leading-none">
-                    {esc.rama}
-                  </span>
-
-                  {/* Título de la Escuela (Sans-serif pesada sin serif) */}
-                  <h3 className="text-2xl font-black font-sans tracking-tight text-slate-900 dark:text-white leading-none">
-                    {esc.sigla}
-                  </h3>
-
-                  {/* Descripción: texto brillante y legible */}
-                  <p className="text-sm text-slate-600 dark:text-gray-300 line-clamp-3 font-inter leading-snug">
-                    {esc.descripcion}
-                  </p>
-
-                  {/* Botón "INICIAR" */}
-                  <button
-                    type="button"
-                    className="mt-1 w-full py-2.5 px-4 rounded-lg bg-slate-900 text-white dark:bg-[#00F0FF]/10 dark:text-[#00F0FF] dark:border dark:border-[#00F0FF]/30 hover:scale-105 transition-transform flex items-center justify-center gap-2 font-rajdhani font-bold text-xs uppercase tracking-wider cursor-pointer shadow-sm"
-                  >
-                    <span>INICIAR</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
-                </div>
-              </div>
+                {tab.label}
+              </button>
             );
           })}
+        </div>
+
+        {/* 2. CUADRÍCULA EN FORMATO PANORÁMICO (16:9, 2 Columnas) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+          <AnimatePresence mode="popLayout">
+            {filteredSchools.map((esc) => {
+              return (
+                <motion.div
+                  key={esc.id}
+                  layout
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.95 }}
+                  transition={{ duration: 0.2 }}
+                  onClick={() => handleStartTest(esc.id)}
+                  className="group relative overflow-hidden rounded-2xl aspect-video bg-slate-200 dark:bg-slate-800 border border-slate-200 dark:border-gray-800 shadow-md hover:shadow-2xl transition-all duration-300 cursor-pointer select-none flex flex-col justify-end"
+                >
+                  {/* FONDO (Imagen en formato 16:9 con fallback) */}
+                  <div className="absolute inset-0 w-full h-full bg-slate-200 dark:bg-slate-800 overflow-hidden">
+                    <img
+                      src={esc.bgImage}
+                      alt={esc.name}
+                      loading="lazy"
+                      onError={(e) => {
+                        e.currentTarget.classList.add('opacity-0');
+                      }}
+                      className="object-cover w-full h-full absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-105"
+                    />
+                  </div>
+
+                  {/* CAPA DE DEGRADADO (Overlay inferior oscuro que se hace más alto en hover) */}
+                  <div className="absolute inset-x-0 bottom-0 h-3/5 group-hover:h-full bg-gradient-to-t from-white via-white/90 to-transparent dark:from-[#0B101E] dark:via-[#0B101E]/90 dark:to-transparent pointer-events-none transition-all duration-300 z-10" />
+
+                  {/* 3. MICRO-INTERACCIÓN DE SIGLAS (Hover Reveal UX) */}
+                  <div className="relative p-5 sm:p-6 w-full flex items-end justify-between gap-4 z-20">
+                    <div className="flex-1 min-w-0">
+                      {/* Etiqueta Rama Militar */}
+                      <span className="text-[#D91023] dark:text-red-400 font-bold text-xs tracking-widest uppercase font-rajdhani block mb-1">
+                        {esc.rama}
+                      </span>
+
+                      {/* Bloque de Sigla con traslación group-hover:-translate-y-2 */}
+                      <div className="transition-transform duration-300 ease-out group-hover:-translate-y-2">
+                        <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black font-sans tracking-tight text-slate-900 dark:text-white leading-none">
+                          {esc.sigla}
+                        </h3>
+
+                        {/* Revelado suave del significado de las siglas en hover */}
+                        <p className="text-xs sm:text-sm text-slate-700 dark:text-gray-300 font-inter font-medium leading-snug opacity-0 group-hover:opacity-100 transition-opacity duration-300 max-h-0 group-hover:max-h-12 overflow-hidden mt-0 group-hover:mt-1.5 max-w-sm line-clamp-2">
+                          {esc.name}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Botón "INICIAR" */}
+                    <button
+                      type="button"
+                      className="flex-shrink-0 py-2.5 px-5 rounded-xl bg-slate-900 text-white dark:bg-[#00F0FF]/10 dark:text-[#00F0FF] dark:border dark:border-[#00F0FF]/30 hover:scale-105 transition-transform flex items-center justify-center gap-2 font-rajdhani font-bold text-xs sm:text-sm uppercase tracking-wider cursor-pointer shadow-sm"
+                    >
+                      <span>INICIAR</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </button>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </AnimatePresence>
         </div>
 
         {/* Botón Volver al Pilar 3 */}

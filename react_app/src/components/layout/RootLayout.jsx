@@ -85,7 +85,9 @@ export default function RootLayout({ children }) {
           <div className="pt-2 border-t border-slate-200 dark:border-gray-800 flex flex-col sm:flex-row items-center justify-center gap-1.5 text-xs text-slate-600 dark:text-gray-300 font-inter">
             <span>Desarrollado por</span>
             <a
-              href="#"
+              href="https://xavier.cabellosalirrosas.com"
+              target="_blank"
+              rel="noopener noreferrer"
               title="Portafolio de Xavier Cabello"
               className="font-bold underline decoration-dotted underline-offset-4 transition-all duration-200 text-slate-900 dark:text-white hover:text-peru-red hover:decoration-solid"
             >
