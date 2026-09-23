@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useAssessmentStore } from '../../store/useAssessmentStore';
 import { SCHOOL_PHYSICAL_BENCHMARKS, TACTICAL_STUDY_HABITS } from '../../data/strategicBenchmarks';
 import Tooltip from '../common/Tooltip';
-import CentroDeTransparencia from '../common/CentroDeTransparencia';
+import { Link } from '../../router/AppRouter';
 import {
   Award,
   BarChart3,
@@ -38,7 +38,6 @@ const SCHOOL_IMAGE_MAP = {
 
 export default function DashboardEstrategico({ results, onRestart, onSelectOtherSchool }) {
   const { candidate, switchToModule, vocationalVerdict } = useAssessmentStore();
-  const [isTransparencyOpen, setIsTransparencyOpen] = useState(false);
 
   if (!results) {
     return (
@@ -91,16 +90,15 @@ export default function DashboardEstrategico({ results, onRestart, onSelectOther
               Postulante <strong className="text-white font-semibold">{candidate.nombre}</strong> (DNI: {candidate.dni}). Hemos procesado tu rendimiento en los 20 reactivos oficiales de la <strong className="text-cyan-300 font-semibold">{schoolMeta.name}</strong> bajo la metodología <Tooltip termino="DECO">DECO</Tooltip>. A continuación se detallan tus brechas académicas, metas de acondicionamiento físico reglamentario y pautas de disciplina táctica.
             </p>
 
-            {/* Botón Acceso Rápido a Fuentes Oficiales en el Dashboard */}
+            {/* Enlace Directo a Fuentes Oficiales en Centro de Transparencia */}
             <div className="mt-4 flex flex-wrap items-center gap-3">
-              <button
-                type="button"
-                onClick={() => setIsTransparencyOpen(true)}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-cyan-950/70 border border-neon-cyan/50 text-neon-cyan hover:bg-neon-cyan hover:text-night-deep text-xs sm:text-sm font-rajdhani font-bold uppercase tracking-wider transition-all duration-200 shadow-sm cursor-pointer"
+              <Link
+                href={`/transparencia#pdf-${schoolSigla.toLowerCase().replace(/[-_]/g, '')}`}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-cyan-950/70 border border-neon-cyan/50 text-neon-cyan hover:bg-neon-cyan hover:text-night-deep text-xs sm:text-sm font-rajdhani font-bold uppercase tracking-wider transition-all duration-200 shadow-sm"
               >
                 <FileText className="w-4 h-4" />
                 <span>Fuentes y Validez Oficial · Prospecto {schoolMeta.sigla} 2026</span>
-              </button>
+              </Link>
             </div>
           </div>
 
@@ -492,12 +490,6 @@ export default function DashboardEstrategico({ results, onRestart, onSelectOther
           </button>
         </div>
       </div>
-
-      {/* Modal de Transparencia y Prospectos Oficiales */}
-      <CentroDeTransparencia
-        isOpen={isTransparencyOpen}
-        onClose={() => setIsTransparencyOpen(false)}
-      />
 
     </div>
   );

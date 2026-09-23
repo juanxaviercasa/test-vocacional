@@ -1,177 +1,129 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { HelpCircle, Sparkles } from 'lucide-react';
+import React from 'react';
+import { Link } from '../../router/AppRouter';
 
+/**
+ * Diccionario centralizado de jerga técnica y militar
+ */
 export const TACTICAL_GLOSSARY = {
   'IPIP-NEO': {
-    term: 'IPIP-NEO',
-    category: 'Psicometría Científica',
-    definition: 'Inventario de Personalidad de 120 ítems respaldado científicamente para evaluar los 5 grandes rasgos (Big Five): Neuroticismo, Extraversión, Apertura, Amabilidad y Responsabilidad.',
+    id: 'ipip-neo',
+    termino: 'IPIP-NEO',
+    categoria: 'Psicometría',
+    definicion: 'Inventario de Personalidad de 120 ítems respaldado científicamente para evaluar los 5 grandes rasgos (Big Five) y calibrar la templanza del cadete ante el combate.',
+    referencia: 'Goldberg, L. R. (1999) / International Personality Item Pool.'
   },
   'Baremo': {
-    term: 'Baremo Oficial',
-    category: 'Normativa de Admisión',
-    definition: 'Tabla de puntuaciones oficiales que establece el peso exacto de aciertos (+20 pts) y penalización de errores (-1.25 pts) según la institución militar.',
+    id: 'baremo',
+    termino: 'Baremo',
+    categoria: 'Admisión',
+    definicion: 'Tabla de puntuaciones y ponderaciones oficiales que establece el peso exacto de aciertos (+20), errores (-1.25) y marcas físicas mínimas según la institución.',
+    referencia: 'Reglamento General de Admisión a las Fuerzas Armadas del Perú (CCFFAA).'
   },
   'Baremos': {
-    term: 'Baremos Oficiales',
-    category: 'Normativa de Admisión',
-    definition: 'Tablas de puntuaciones oficiales que establecen la ponderación exacta de aciertos y la penalización de errores reglamentaria.',
+    id: 'baremo',
+    termino: 'Baremos',
+    categoria: 'Admisión',
+    definicion: 'Tablas de puntuaciones y ponderaciones oficiales que establecen el peso exacto de aciertos (+20), errores (-1.25) y marcas físicas mínimas según la institución.',
+    referencia: 'Reglamento General de Admisión a las Fuerzas Armadas del Perú (CCFFAA).'
   },
   'DECO': {
-    term: 'Modelo DECO',
-    category: 'Diseño Curricular',
-    definition: 'Diseño de Evaluación de Competencias y Habilidades aplicado en exámenes de admisión para medir razonamiento contextualizado en situaciones operacionales reales.',
+    id: 'deco',
+    termino: 'DECO',
+    categoria: 'Evaluación Cognitiva',
+    definicion: 'Metodología de Destrezas Cognitivas que evalúa el razonamiento crítico, contextualizado y resolución de problemas bajo estrés, en lugar de la simple memorización.',
+    referencia: 'Estándar de Evaluación de Conocimientos para Academias y Escuelas Matrices.'
   },
   'Protocolo MIL-STD': {
-    term: 'Protocolo MIL-STD',
-    category: 'Estándar Militar',
-    definition: 'Estándar militar unificado de requisitos físicos, psicológicos y biométricos reglamentarios de las Fuerzas Armadas del Perú.',
-  },
-  'MIL-STD': {
-    term: 'Norma MIL-STD',
-    category: 'Estándar Militar',
-    definition: 'Norma militar técnica estandarizada para garantizar rigor, repetibilidad y fiabilidad en procesos de evaluación y selección castrense.',
+    id: 'protocolo-mil-std',
+    termino: 'Protocolo MIL-STD',
+    categoria: 'Estándar Militar',
+    definicion: 'Estándar de rigurosidad militar que determina umbrales estrictos de tolerancia fisiológica, disciplina operativa, estabilidad psicológica y resistencia al esfuerzo.',
+    referencia: 'Military Standard Protocols / Doctrina Conjunta de las Fuerzas Armadas del Perú.'
   },
   'Big Five': {
-    term: 'Big Five (Cinco Grandes)',
-    category: 'Psicometría Militar',
-    definition: 'Modelo de los Cinco Grandes Factores de la Personalidad reconocido internacionalmente para predecir liderazgo, templanza y resiliencia bajo presión de combate.',
+    id: 'big-five',
+    termino: 'Big Five',
+    categoria: 'Psicología Militar',
+    definicion: 'Modelo de los Cinco Grandes Factores de la personalidad: Neuroticismo (estabilidad), Extraversión (liderazgo), Apertura (estrategia), Amabilidad (cohesión) y Responsabilidad (disciplina).',
+    referencia: 'Costa & McCrae (1992) / Adaptación para Escuelas de Oficiales y Suboficiales.'
   },
   'Antropometría': {
-    term: 'Antropometría Militar',
-    category: 'Sanidad y Aptitud',
-    definition: 'Medición técnica de proporciones corporales (talla de pie, talla sentado, peso e IMC) requerida para la operación segura de aeronaves y blindados.',
+    id: 'antropometria',
+    termino: 'Antropometría',
+    categoria: 'Evaluación Médica',
+    definicion: 'Medición sistemática del cuerpo humano (estatura descalzo, longitud de tronco en posición sentado, masa corporal y perímetro torácico) exigida en el examen médico.',
+    referencia: 'Tabla Antropométrica Oficial MINDEF - Comando Conjunto de las FFAA.'
   },
   'IMC': {
-    term: 'IMC (Índice de Masa Corporal)',
-    category: 'Biometría',
-    definition: 'Relación peso/talla² calculada en el examen médico de admisión. El rango reglamentario apto en las FFAA y PNP es estrictamente de 18.5 a 27.5.',
+    id: 'imc',
+    termino: 'IMC (Índice de Masa Corporal)',
+    categoria: 'Biometría',
+    definicion: 'Razón matemática entre peso y talla al cuadrado (kg/m²). En las FFAA y PNP se exige un rango estricto entre 18.5 y 27.5 (Oficiales) o 28.0 (Suboficiales) para ser declarado Apto.',
+    referencia: 'Directiva Médica General de Selección de Personal Militar y Policial.'
   },
   'Nota Vigesimal': {
-    term: 'Nota Vigesimal (0-20)',
-    category: 'Evaluación Académica',
-    definition: 'Sistema de calificación oficial de 0 a 20 puntos exigido por la Ley de Admisión Militar del Perú, con nota mínima aprobatoria de 12.00.',
+    id: 'nota-vigesimal',
+    termino: 'Nota Vigesimal',
+    categoria: 'Calificación Académica',
+    definicion: 'Escala oficial de evaluación de 0 a 20 puntos utilizada en el sistema educativo peruano y en los exámenes de conocimientos de las 8 escuelas matrices.',
+    referencia: 'Nota mínima aprobatoria institucional: 12.00 puntos.'
   },
   'Test de Cooper': {
-    term: 'Test de Cooper (2,400m)',
-    category: 'Aptitud Física',
-    definition: 'Prueba de resistencia aeróbica continua de 2,400 metros para medir el consumo máximo de oxígeno (VO2 máx) y la capacidad cardiopulmonar.',
+    id: 'test-de-cooper',
+    termino: 'Test de Cooper (2,400 Metros)',
+    categoria: 'Capacidad Física',
+    definicion: 'Prueba de resistencia aeróbica y capacidad cardiopulmonar en la que el postulante debe cubrir 2,400 metros planos en pista atlética en un tiempo inferior a 9:30 - 10:30 minutos.',
+    referencia: 'Directiva de Esfuerzo Físico de Admisión a Escuelas de las FFAA y PNP.'
   },
   'Salto de Valor': {
-    term: 'Salto de Valor (5m)',
-    category: 'Prueba de Temple',
-    definition: 'Lanzamiento controlado desde una plataforma de 5 metros a una fosa de agua reglamentaria para medir la superación del pánico y el reflejo instantáneo de mando.',
+    id: 'salto-de-valor',
+    termino: 'Salto de Valor',
+    categoria: 'Aptitud Militar',
+    definicion: 'Prueba eliminatoria de temple y ausencia de acrofobia que consiste en lanzarse desde una plataforma de 5 metros a una fosa olímpica de natación, manteniendo posición de atención.',
+    referencia: 'Manual de Pruebas Físicas de la Escuela Naval del Perú y Fuerza Aérea.'
   },
   'Pomodoro Militar': {
-    term: 'Pomodoro Militar (50/10)',
-    category: 'Disciplina Intelectual',
-    definition: 'Técnica de enfoque extremo en bloques de 50 minutos ininterrumpidos de estudio sin pantallas, seguidos de 10 minutos de recuperación activa.',
-  },
+    id: 'pomodoro-militar',
+    termino: 'Pomodoro Militar (50/10)',
+    categoria: 'Hábitos Tácticos',
+    definicion: 'Técnica de alta concentración que consiste en 50 minutos de estudio intensivo de reactivos tipo examen con cero distracciones, seguidos de 10 minutos de calistenia o descanso activo.',
+    referencia: 'Protocolo de Rendimiento Cognitivo para Cadetes de Alta Exigencia.'
+  }
 };
 
 /**
- * Componente reutilizable de Glosario Interactivo con Tooltip táctico
- * Props:
- * - termino: string (el término a buscar o mostrar)
- * - definicion: string (opcional si existe en TACTICAL_GLOSSARY)
- * - categoria: string (opcional)
- * - children: ReactNode (opcional si se desea envolver un texto específico)
- * - className: string
+ * Convierte un término a slug URL amigable
  */
-export default function Tooltip({
-  termino = 'Baremo',
-  definicion,
-  categoria,
-  children,
-  className = ''
-}) {
-  const [isOpen, setIsOpen] = useState(false);
-  const containerRef = useRef(null);
+export function getTermSlug(termino) {
+  if (!termino) return 'glosario';
+  const clean = termino.trim();
+  if (TACTICAL_GLOSSARY[clean]) {
+    return TACTICAL_GLOSSARY[clean].id;
+  }
+  return clean
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)+/g, '');
+}
 
-  const matched = TACTICAL_GLOSSARY[termino] || {};
-  const displayTerm = children || termino;
-  const finalDef = definicion || matched.definition || 'Término reglamentario del sistema de admisión militar.';
-  const finalCategory = categoria || matched.category || 'Glosario Táctico';
-
-  // Cerrar al hacer clic fuera (en dispositivos móviles/táctiles)
-  useEffect(() => {
-    function handleClickOutside(e) {
-      if (containerRef.current && !containerRef.current.contains(e.target)) {
-        setIsOpen(false);
-      }
-    }
-    if (isOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
-      document.addEventListener('touchstart', handleClickOutside);
-    }
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-      document.removeEventListener('touchstart', handleClickOutside);
-    };
-  }, [isOpen]);
+/**
+ * Componente <Tooltip /> refactorizado a enlace sutil con redirección y scroll suave hacia /glosario#termino
+ * Elimina ventanas emergentes y modales flotantes que dañaban la legibilidad de la interfaz.
+ */
+export default function Tooltip({ termino, definicion, children, className = '' }) {
+  const displayLabel = children || termino;
+  const termSlug = getTermSlug(termino || (typeof children === 'string' ? children : ''));
 
   return (
-    <span
-      ref={containerRef}
-      className={`relative inline-block ${className}`}
-      onMouseEnter={() => setIsOpen(true)}
-      onMouseLeave={() => setIsOpen(false)}
-      onFocus={() => setIsOpen(true)}
-      onBlur={() => setIsOpen(false)}
+    <Link
+      href={`/glosario#${termSlug}`}
+      title={`Ver definición oficial de "${termino || displayLabel}" en el Glosario Táctico`}
+      className={`inline-flex items-center gap-0.5 text-cyan-400 dark:text-neon-cyan font-medium underline decoration-dotted decoration-cyan-500/70 underline-offset-4 hover:decoration-solid hover:text-white hover:bg-cyan-950/40 px-1 py-0.5 rounded transition-all cursor-pointer ${className}`}
     >
-      {/* Texto activador con subrayado punteado táctico */}
-      <button
-        type="button"
-        onClick={(e) => {
-          e.stopPropagation();
-          setIsOpen(prev => !prev);
-        }}
-        className="inline-flex items-center gap-0.5 underline decoration-dotted decoration-cyan-500/80 hover:decoration-solid underline-offset-4 cursor-help font-inherit text-inherit transition-all focus:outline-none focus:ring-1 focus:ring-neon-cyan/50 rounded-sm"
-        title="Toca o pasa el cursor para ver la definición técnica"
-        aria-expanded={isOpen}
-      >
-        <span>{displayTerm}</span>
-        <HelpCircle className="w-3.5 h-3.5 text-cyan-400/80 inline-block ml-0.5 flex-shrink-0" />
-      </button>
-
-      {/* Globo flotante (Tooltip) */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: 6, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 4, scale: 0.96 }}
-            transition={{ duration: 0.16, ease: 'easeOut' }}
-            className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2.5 w-72 sm:w-80 p-3.5 rounded-2xl bg-[#0B101E]/95 backdrop-blur-xl border border-neon-cyan/50 shadow-[0_10px_30px_rgba(0,0,0,0.8),0_0_20px_rgba(0,240,255,0.25)] text-left z-50 pointer-events-auto"
-            role="tooltip"
-          >
-            {/* Header del Tooltip */}
-            <div className="flex items-center justify-between gap-2 border-b border-white/10 pb-2 mb-2">
-              <span className="text-[10px] font-teko uppercase font-bold text-neon-cyan tracking-widest flex items-center gap-1">
-                <Sparkles className="w-3 h-3 fill-current" />
-                <span>{finalCategory}</span>
-              </span>
-              <span className="text-[9px] font-mono text-slate-400 bg-white/5 px-1.5 py-0.5 rounded border border-white/10">
-                GLOSARIO OFICIAL
-              </span>
-            </div>
-
-            {/* Término */}
-            <div className="text-sm font-rajdhani font-bold text-white uppercase tracking-wide mb-1">
-              {matched.term || termino}
-            </div>
-
-            {/* Definición */}
-            <p className="text-xs text-slate-200 font-inter leading-relaxed">
-              {finalDef}
-            </p>
-
-            {/* Flecha indicadora inferior */}
-            <div className="absolute top-full left-1/2 -translate-x-1/2 -mt-[1px] border-solid border-t-[#0B101E] border-t-8 border-x-transparent border-x-8 border-b-0 filter drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]" />
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </span>
+      <span>{displayLabel}</span>
+      <span className="text-[10px] text-cyan-500/80 font-mono no-underline select-none">↗</span>
+    </Link>
   );
 }

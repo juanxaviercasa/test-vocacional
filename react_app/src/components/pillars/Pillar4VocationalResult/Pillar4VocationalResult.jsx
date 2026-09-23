@@ -1,6 +1,8 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useAssessmentStore } from '../../../store/useAssessmentStore';
 import TacticalRadarChart from '../Pillar5Consolidated/TacticalRadarChart';
+import TacticalFODAMap from '../../report/TacticalFODAMap';
+import { generateTacticalPDF } from '../../../utils/pdfGenerator';
 import Tooltip from '../../common/Tooltip';
 import {
   ShieldCheck,
@@ -12,7 +14,10 @@ import {
   Zap,
   Target,
   CheckCircle2,
-  AlertTriangle
+  AlertTriangle,
+  Download,
+  Loader2,
+  FileCheck2
 } from 'lucide-react';
 
 const SCHOOL_IMAGE_MAP = {
@@ -38,6 +43,20 @@ export default function Pillar4VocationalResult() {
     candidate
   } = useAssessmentStore();
 
+  const [isGeneratingPDF, setIsGeneratingPDF] = useState(false);
+
+  const handleDownloadPDF = async () => {
+    try {
+      setIsGeneratingPDF(true);
+      await generateTacticalPDF('vocational-report-container', candidate.nombre, candidate.dni);
+    } catch (err) {
+      console.error('Error generando PDF clasificado:', err);
+      alert('Ocurrió un inconveniente al compilar el PDF. Puede utilizar la opción de Imprimir Ficha Vocacional como alternativa inmediata.');
+    } finally {
+      setIsGeneratingPDF(false);
+    }
+  };
+
   useEffect(() => {
     if (!vocationalVerdict) {
       calculateVocationalResults();
@@ -60,7 +79,7 @@ export default function Pillar4VocationalResult() {
   const topSigla = topSchool.escuela.sigla || topSchool.escuela.id;
 
   return (
-    <div className="w-full max-w-6xl mx-auto px-3 sm:px-4 py-6 space-y-8">
+    <div id="vocational-report-container" className="w-full max-w-6xl mx-auto px-3 sm:px-4 py-6 space-y-8 relative">
       
       {/* 1. TARJETA HERO DEL RESULTADO VOCACIONAL CON IMAGEN AUTÉNTICA */}
       <div className="relative overflow-hidden rounded-3xl bg-slate-900 text-white p-6 sm:p-10 border border-neon-cyan/40 shadow-2xl">
@@ -232,7 +251,10 @@ export default function Pillar4VocationalResult() {
         </div>
       </div>
 
-      {/* 4. CUADRO COMPARATIVO DE LAS 8 ESCUELAS */}
+      {/* 4. MAPA MENTAL SIMPLIFICADO: FODA TÁCTICO (4 CUADRANTES) */}
+      <TacticalFODAMap verdict={verdict} />
+
+      {/* 5. CUADRO COMPARATIVO DE LAS 8 ESCUELAS */}
       <div className="space-y-4">
         <div>
           <h3 className="text-xl sm:text-2xl font-rajdhani font-bold text-slate-900 dark:text-white uppercase tracking-wider">
@@ -338,8 +360,27 @@ export default function Pillar4VocationalResult() {
         </div>
       </div>
 
-      {/* 5. ACCIONES SECUNDARIAS */}
+      {/* 6. ACCIONES SECUNDARIAS */}
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6 border-t border-slate-200 dark:border-gray-800 no-print">
+        <button
+          type="button"
+          onClick={handleDownloadPDF}
+          disabled={isGeneratingPDF}
+          className="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-neon-cyan text-night-deep hover:bg-cyan-300 font-rajdhani font-black text-xs uppercase tracking-wider shadow-lg hover:shadow-cyan-glow transition-all cursor-pointer"
+        >
+          {isGeneratingPDF ? (
+            <>
+              <Loader2 className="w-4 h-4 animate-spin text-night-deep" />
+              <span>COMPILANDO INFORME...</span>
+            </>
+          ) : (
+            <>
+              <Download className="w-4 h-4 text-night-deep" />
+              <span>DESCARGAR INFORME OFICIAL (PDF)</span>
+            </>
+          )}
+        </button>
+
         <button
           type="button"
           onClick={() => window.print()}
@@ -356,6 +397,29 @@ export default function Pillar4VocationalResult() {
         >
           <RotateCcw className="w-4 h-4" />
           <span>Reiniciar Test Vocacional</span>
+        </button>
+      </div>
+
+      {/* 7. BOTÓN PRINCIPAL FLOTANTE REQUERIDO: DESCARGAR INFORME CLASIFICADO (PDF) */}
+      <div className="fixed bottom-6 right-6 z-50 no-print">
+        <button
+          type="button"
+          onClick={handleDownloadPDF}
+          disabled={isGeneratingPDF}
+          className="px-6 py-3.5 rounded-2xl bg-gradient-to-r from-neon-cyan via-teal-300 to-[#00F0FF] text-night-deep font-rajdhani font-black text-xs sm:text-sm uppercase tracking-wider shadow-[0_0_30px_rgba(0,240,255,0.7)] hover:shadow-[0_0_45px_rgba(0,240,255,0.9)] hover:scale-105 active:scale-95 transition-all duration-200 flex items-center gap-3 cursor-pointer border-2 border-white/80"
+          title="Descargar informe oficial en PDF de alta resolución"
+        >
+          {isGeneratingPDF ? (
+            <>
+              <Loader2 className="w-5 h-5 animate-spin text-night-deep" />
+              <span>COMPILANDO REPORTE CLASIFICADO...</span>
+            </>
+          ) : (
+            <>
+              <Download className="w-5 h-5 text-night-deep" />
+              <span>DESCARGAR INFORME CLASIFICADO (PDF)</span>
+            </>
+          )}
         </button>
       </div>
 
