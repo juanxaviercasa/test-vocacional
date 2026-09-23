@@ -129,7 +129,7 @@ export default function Pillar1Legal() {
   }
 
   return (
-    <div className="w-full max-w-5xl mx-auto px-4 py-4">
+    <div className="w-full max-w-7xl 2xl:max-w-[1400px] mx-auto px-2 sm:px-4 py-4">
       
       {/* Indicador de Sub-Paso Minimalista */}
       <div className="flex items-center justify-between mb-6 px-2">
@@ -179,7 +179,7 @@ export default function Pillar1Legal() {
               exit="exit"
               className="w-full"
             >
-              <div className="relative rounded-3xl overflow-hidden border border-neon-cyan/25 shadow-tactical-card p-8 sm:p-12 text-center bg-night-deep/90 min-h-[460px] flex items-center justify-center">
+              <div className="relative rounded-3xl overflow-hidden border border-neon-cyan/25 shadow-tactical-card p-6 sm:p-8 lg:p-10 text-center bg-night-deep/90 min-h-[460px] flex items-center justify-center">
                 
                 {/* Fondo Fotográfico Auténtico FFAA y PNP del Perú */}
                 <img
@@ -192,117 +192,232 @@ export default function Pillar1Legal() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0B101E] via-[#0B101E]/85 to-[#0B101E]/50 z-10" />
                 <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-neon-cyan/10 rounded-full blur-3xl pointer-events-none z-10" />
 
-                <div className="relative z-20 max-w-4xl mx-auto">
-                  <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-950/60 border border-neon-cyan/40 text-neon-cyan text-xs font-rajdhani font-bold tracking-widest uppercase mb-3 shadow-cyan-glow">
-                    <Sparkles className="w-3.5 h-3.5" />
-                    <span>SISTEMA TÁCTICO DE ORIENTACIÓN VOCACIONAL · FUERZAS ARMADAS DEL PERÚ</span>
+                <div className="relative z-20 w-full max-w-[1360px] mx-auto">
+                  {/* Badge de Orientación Vocacional con Tipografía Grande, Legible y Destacada */}
+                  <div className="inline-flex items-center gap-2.5 px-5 sm:px-7 py-2.5 rounded-full bg-[#0B101E]/95 border-2 border-neon-cyan text-neon-cyan text-xs sm:text-sm md:text-base font-rajdhani font-black tracking-widest uppercase mb-4 shadow-[0_0_25px_rgba(0,240,255,0.4)]">
+                    <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-neon-cyan shrink-0 animate-pulse" />
+                    <span className="drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                      SISTEMA TÁCTICO DE ORIENTACIÓN VOCACIONAL · FUERZAS ARMADAS DEL PERÚ
+                    </span>
                   </div>
 
-                  <h1 className="text-3xl sm:text-4xl md:text-5xl font-rajdhani font-extrabold text-white uppercase tracking-wider mb-2 leading-tight">
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-rajdhani font-black text-white uppercase tracking-wider mb-2 leading-tight drop-shadow-md">
                     ¿PARA QUÉ ESCUELA MILITAR NACISTE?
                   </h1>
 
                   {/* Subtítulo Breve de Alto Impacto */}
-                  <p className="text-base sm:text-lg text-slate-200 font-inter leading-relaxed max-w-2xl mx-auto mb-6 font-medium">
+                  <p className="text-base sm:text-lg md:text-xl text-slate-200 font-inter leading-relaxed max-w-3xl mx-auto mb-8 font-medium">
                     Simulador algorítmico de alta precisión para perfilamiento militar y policial.
                   </p>
 
-                  {/* Feature Grid de 4 Pilares Tácticos (Mayor Escala, Tipografía Legible y Descripciones Detalladas) */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 sm:gap-5 max-w-5xl mx-auto mb-10 text-left">
+                  {/* Cuadrícula de 4 Pilares Monumentales Clásicos (Capitel, Fuste Acanalado y Basa de Pedestal) */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 lg:gap-6 w-full mx-auto mb-10 text-left items-stretch">
                     
-                    {/* Tarjeta 1: Filtro Legal y Biométrico */}
-                    <div className="p-5 sm:p-6 rounded-2xl sm:rounded-3xl bg-[#0B101E]/85 dark:bg-[#0B101E]/90 border border-white/15 dark:border-cyan-500/30 hover:border-[#00F0FF] hover:bg-[#0B101E]/95 shadow-[0_10px_30px_rgba(0,0,0,0.5)] hover:shadow-[0_0_25px_rgba(0,240,255,0.25)] transition-all duration-300 flex flex-col justify-between group min-h-[220px]">
-                      <div>
-                        <div className="flex items-center justify-between mb-3">
-                          <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-cyan-950/70 border border-cyan-500/50 flex items-center justify-center text-[#00F0FF] group-hover:scale-110 shadow-cyan-glow transition-transform flex-shrink-0">
-                            <Shield className="w-5 h-5 sm:w-6 sm:h-6" />
-                          </div>
-                          <span className="text-xs font-mono font-bold text-cyan-400 px-2 py-0.5 rounded bg-cyan-950/60 border border-cyan-500/40 tracking-wider">
-                            PILAR 01
+                    {/* COLUMNA / PILAR I: FILTRO LEGAL Y BIOMÉTRICO */}
+                    <div className="relative flex flex-col justify-between rounded-2xl bg-gradient-to-b from-[#101728] via-[#090d18] to-[#0e1424] border-2 border-slate-700/80 dark:border-cyan-500/40 hover:border-[#00F0FF] shadow-[0_12px_35px_rgba(0,0,0,0.6)] hover:shadow-[0_0_30px_rgba(0,240,255,0.3)] transition-all duration-300 group overflow-hidden">
+                      
+                      {/* Capitel Monumental (Corona Superior con Triglifos Arquitectónicos y Medallón) */}
+                      <div className="relative bg-gradient-to-r from-slate-900 via-[#151f38] to-slate-900 border-b-2 border-cyan-500/40 p-3 sm:p-3.5 flex items-center justify-between shadow-sm">
+                        {/* Triglifos clásicos decorativos (ranuras de columna clásica) */}
+                        <div className="flex gap-1 opacity-70">
+                          <span className="w-1 h-5 bg-cyan-400/60 rounded-full" />
+                          <span className="w-1 h-5 bg-cyan-400/60 rounded-full" />
+                          <span className="w-1 h-5 bg-cyan-400/60 rounded-full" />
+                        </div>
+
+                        {/* Medallón central en relieve con el escudo */}
+                        <div className="w-11 h-11 rounded-xl bg-cyan-950/90 border-2 border-neon-cyan flex items-center justify-center text-[#00F0FF] shadow-cyan-glow group-hover:scale-110 transition-transform">
+                          <Shield className="w-5 h-5 sm:w-6 sm:h-6" />
+                        </div>
+
+                        {/* Placa de Numeración Clásica */}
+                        <div className="flex items-center gap-1.5">
+                          <span className="px-2.5 py-0.5 rounded bg-cyan-950/80 border border-neon-cyan/50 text-neon-cyan font-mono font-black text-xs tracking-wider shadow-sm">
+                            PILAR I
                           </span>
                         </div>
-                        <h3 className="font-rajdhani font-black text-lg sm:text-xl text-white uppercase tracking-wider group-hover:text-[#00F0FF] transition-colors leading-tight mb-2">
-                          Filtro Legal y Físico
-                        </h3>
-                        <p className="text-xs sm:text-sm text-slate-200 dark:text-slate-300 font-inter leading-relaxed">
-                          Auditoría biométrica oficial: estatura mínima descalzo, rango de peso militar (IMC), agudeza visual 20/20 y requisitos legales excluyentes (antecedentes y estado civil).
-                        </p>
                       </div>
-                      <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-[11px] font-rajdhani font-bold text-cyan-400/90 uppercase tracking-wider">
-                        <span>⚖️ Baremos Oficiales 2026</span>
-                        <span className="text-peru-red">Excluyente</span>
+
+                      {/* Fuste Acanalado (Cuerpo de la Columna) */}
+                      <div className="relative px-5 py-5 sm:px-6 sm:py-6 flex-1 flex flex-col justify-between">
+                        {/* Estrías arquitectónicas laterales sutiles */}
+                        <div className="absolute top-0 bottom-0 left-1 w-0.5 bg-gradient-to-b from-cyan-500/30 via-white/5 to-cyan-500/30 pointer-events-none" />
+                        <div className="absolute top-0 bottom-0 right-1 w-0.5 bg-gradient-to-b from-cyan-500/30 via-white/5 to-cyan-500/30 pointer-events-none" />
+
+                        <div>
+                          <div className="text-[10px] font-mono font-bold text-slate-400 dark:text-cyan-400/80 uppercase tracking-widest mb-1">
+                            COLUMNA DE APTITUD FÍSICA
+                          </div>
+                          <h3 className="font-rajdhani font-black text-xl sm:text-2xl text-white uppercase tracking-wider group-hover:text-[#00F0FF] transition-colors leading-tight mb-3">
+                            Filtro Legal y Físico
+                          </h3>
+                          <p className="text-xs sm:text-sm text-slate-200 dark:text-slate-300 font-inter leading-relaxed">
+                            Auditoría biométrica oficial: estatura mínima descalzo, rango de peso militar (IMC), agudeza visual y requisitos legales de aptitud.
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Basa y Plinto Monumental (Pedestal Escalonado con Sello Oficial) */}
+                      <div className="bg-gradient-to-r from-slate-900 via-[#12192c] to-slate-900 border-t-2 border-cyan-500/40 px-4 py-3 flex items-center justify-between text-[11px] font-rajdhani font-bold uppercase tracking-wider shadow-inner">
+                        <span className="text-cyan-300 flex items-center gap-1.5">
+                          <span>⚖️ Baremos 2026</span>
+                        </span>
+                        <span className="px-2 py-0.5 rounded bg-peru-red/20 border border-peru-red/60 text-peru-red font-mono text-[10px] font-bold">
+                          Excluyente
+                        </span>
                       </div>
                     </div>
 
-                    {/* Tarjeta 2: Test Psicológico IPIP-NEO */}
-                    <div className="p-5 sm:p-6 rounded-2xl sm:rounded-3xl bg-[#0B101E]/85 dark:bg-[#0B101E]/90 border border-white/15 dark:border-cyan-500/30 hover:border-[#00F0FF] hover:bg-[#0B101E]/95 shadow-[0_10px_30px_rgba(0,0,0,0.5)] hover:shadow-[0_0_25px_rgba(0,240,255,0.25)] transition-all duration-300 flex flex-col justify-between group min-h-[220px]">
-                      <div>
-                        <div className="flex items-center justify-between mb-3">
-                          <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-cyan-950/70 border border-cyan-500/50 flex items-center justify-center text-[#00F0FF] group-hover:scale-110 shadow-cyan-glow transition-transform flex-shrink-0">
-                            <Brain className="w-5 h-5 sm:w-6 sm:h-6" />
-                          </div>
-                          <span className="text-xs font-mono font-bold text-cyan-400 px-2 py-0.5 rounded bg-cyan-950/60 border border-cyan-500/40 tracking-wider">
-                            PILAR 02
+                    {/* COLUMNA / PILAR II: TEST PSICOLÓGICO */}
+                    <div className="relative flex flex-col justify-between rounded-2xl bg-gradient-to-b from-[#101728] via-[#090d18] to-[#0e1424] border-2 border-slate-700/80 dark:border-cyan-500/40 hover:border-[#00F0FF] shadow-[0_12px_35px_rgba(0,0,0,0.6)] hover:shadow-[0_0_30px_rgba(0,240,255,0.3)] transition-all duration-300 group overflow-hidden">
+                      
+                      {/* Capitel Monumental */}
+                      <div className="relative bg-gradient-to-r from-slate-900 via-[#151f38] to-slate-900 border-b-2 border-cyan-500/40 p-3 sm:p-3.5 flex items-center justify-between shadow-sm">
+                        <div className="flex gap-1 opacity-70">
+                          <span className="w-1 h-5 bg-cyan-400/60 rounded-full" />
+                          <span className="w-1 h-5 bg-cyan-400/60 rounded-full" />
+                          <span className="w-1 h-5 bg-cyan-400/60 rounded-full" />
+                        </div>
+
+                        <div className="w-11 h-11 rounded-xl bg-cyan-950/90 border-2 border-neon-cyan flex items-center justify-center text-[#00F0FF] shadow-cyan-glow group-hover:scale-110 transition-transform">
+                          <Brain className="w-5 h-5 sm:w-6 sm:h-6" />
+                        </div>
+
+                        <div className="flex items-center gap-1.5">
+                          <span className="px-2.5 py-0.5 rounded bg-cyan-950/80 border border-neon-cyan/50 text-neon-cyan font-mono font-black text-xs tracking-wider shadow-sm">
+                            PILAR II
                           </span>
                         </div>
-                        <h3 className="font-rajdhani font-black text-lg sm:text-xl text-white uppercase tracking-wider group-hover:text-[#00F0FF] transition-colors leading-tight mb-2">
-                          Test Psicológico
-                        </h3>
-                        <p className="text-xs sm:text-sm text-slate-200 dark:text-slate-300 font-inter leading-relaxed">
-                          Evaluación psicométrica basada en el modelo Big Five adaptado a las Fuerzas Armadas: temple marcial bajo fuego, estabilidad emocional, disciplina y liderazgo operativo.
-                        </p>
                       </div>
-                      <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-[11px] font-rajdhani font-bold text-cyan-400/90 uppercase tracking-wider">
-                        <span>🧠 Big Five Militar</span>
-                        <span className="text-emerald-400">Psicometría</span>
+
+                      {/* Fuste Acanalado */}
+                      <div className="relative px-5 py-5 sm:px-6 sm:py-6 flex-1 flex flex-col justify-between">
+                        <div className="absolute top-0 bottom-0 left-1 w-0.5 bg-gradient-to-b from-cyan-500/30 via-white/5 to-cyan-500/30 pointer-events-none" />
+                        <div className="absolute top-0 bottom-0 right-1 w-0.5 bg-gradient-to-b from-cyan-500/30 via-white/5 to-cyan-500/30 pointer-events-none" />
+
+                        <div>
+                          <div className="text-[10px] font-mono font-bold text-slate-400 dark:text-cyan-400/80 uppercase tracking-widest mb-1">
+                            COLUMNA DE TEMPLE MARCIAL
+                          </div>
+                          <h3 className="font-rajdhani font-black text-xl sm:text-2xl text-white uppercase tracking-wider group-hover:text-[#00F0FF] transition-colors leading-tight mb-3">
+                            Test Psicológico
+                          </h3>
+                          <p className="text-xs sm:text-sm text-slate-200 dark:text-slate-300 font-inter leading-relaxed">
+                            Evaluación psicométrica Big Five militar: temple marcial bajo presión, estabilidad emocional, disciplina y liderazgo operativo.
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Basa y Plinto Monumental */}
+                      <div className="bg-gradient-to-r from-slate-900 via-[#12192c] to-slate-900 border-t-2 border-cyan-500/40 px-4 py-3 flex items-center justify-between text-[11px] font-rajdhani font-bold uppercase tracking-wider shadow-inner">
+                        <span className="text-cyan-300 flex items-center gap-1.5">
+                          <span>🧠 Big Five Militar</span>
+                        </span>
+                        <span className="px-2 py-0.5 rounded bg-emerald-950/40 border border-emerald-500/60 text-emerald-400 font-mono text-[10px] font-bold">
+                          Psicometría
+                        </span>
                       </div>
                     </div>
 
-                    {/* Tarjeta 3: Intereses Tácticos & Vocación */}
-                    <div className="p-5 sm:p-6 rounded-2xl sm:rounded-3xl bg-[#0B101E]/85 dark:bg-[#0B101E]/90 border border-white/15 dark:border-cyan-500/30 hover:border-[#00F0FF] hover:bg-[#0B101E]/95 shadow-[0_10px_30px_rgba(0,0,0,0.5)] hover:shadow-[0_0_25px_rgba(0,240,255,0.25)] transition-all duration-300 flex flex-col justify-between group min-h-[220px]">
-                      <div>
-                        <div className="flex items-center justify-between mb-3">
-                          <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-cyan-950/70 border border-cyan-500/50 flex items-center justify-center text-[#00F0FF] group-hover:scale-110 shadow-cyan-glow transition-transform flex-shrink-0">
-                            <Compass className="w-5 h-5 sm:w-6 sm:h-6" />
-                          </div>
-                          <span className="text-xs font-mono font-bold text-cyan-400 px-2 py-0.5 rounded bg-cyan-950/60 border border-cyan-500/40 tracking-wider">
-                            PILAR 03
+                    {/* COLUMNA / PILAR III: INTERESES TÁCTICOS */}
+                    <div className="relative flex flex-col justify-between rounded-2xl bg-gradient-to-b from-[#101728] via-[#090d18] to-[#0e1424] border-2 border-slate-700/80 dark:border-cyan-500/40 hover:border-[#00F0FF] shadow-[0_12px_35px_rgba(0,0,0,0.6)] hover:shadow-[0_0_30px_rgba(0,240,255,0.3)] transition-all duration-300 group overflow-hidden">
+                      
+                      {/* Capitel Monumental */}
+                      <div className="relative bg-gradient-to-r from-slate-900 via-[#151f38] to-slate-900 border-b-2 border-cyan-500/40 p-3 sm:p-3.5 flex items-center justify-between shadow-sm">
+                        <div className="flex gap-1 opacity-70">
+                          <span className="w-1 h-5 bg-cyan-400/60 rounded-full" />
+                          <span className="w-1 h-5 bg-cyan-400/60 rounded-full" />
+                          <span className="w-1 h-5 bg-cyan-400/60 rounded-full" />
+                        </div>
+
+                        <div className="w-11 h-11 rounded-xl bg-cyan-950/90 border-2 border-neon-cyan flex items-center justify-center text-[#00F0FF] shadow-cyan-glow group-hover:scale-110 transition-transform">
+                          <Compass className="w-5 h-5 sm:w-6 sm:h-6" />
+                        </div>
+
+                        <div className="flex items-center gap-1.5">
+                          <span className="px-2.5 py-0.5 rounded bg-cyan-950/80 border border-neon-cyan/50 text-neon-cyan font-mono font-black text-xs tracking-wider shadow-sm">
+                            PILAR III
                           </span>
                         </div>
-                        <h3 className="font-rajdhani font-black text-lg sm:text-xl text-white uppercase tracking-wider group-hover:text-[#00F0FF] transition-colors leading-tight mb-2">
-                          Intereses Tácticos
-                        </h3>
-                        <p className="text-xs sm:text-sm text-slate-200 dark:text-slate-300 font-inter leading-relaxed">
-                          Dilemas operacionales situacionales condicionados a tu perfil físico: combate terrestre (Ejército), operaciones navales (Marina), aviación (FAP) o pacificación (Policía Nacional).
-                        </p>
                       </div>
-                      <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-[11px] font-rajdhani font-bold text-cyan-400/90 uppercase tracking-wider">
-                        <span>🎯 Simulación Real</span>
-                        <span className="text-yellow-400">Vocación</span>
+
+                      {/* Fuste Acanalado */}
+                      <div className="relative px-5 py-5 sm:px-6 sm:py-6 flex-1 flex flex-col justify-between">
+                        <div className="absolute top-0 bottom-0 left-1 w-0.5 bg-gradient-to-b from-cyan-500/30 via-white/5 to-cyan-500/30 pointer-events-none" />
+                        <div className="absolute top-0 bottom-0 right-1 w-0.5 bg-gradient-to-b from-cyan-500/30 via-white/5 to-cyan-500/30 pointer-events-none" />
+
+                        <div>
+                          <div className="text-[10px] font-mono font-bold text-slate-400 dark:text-cyan-400/80 uppercase tracking-widest mb-1">
+                            COLUMNA DE APTITUD TÁCTICA
+                          </div>
+                          <h3 className="font-rajdhani font-black text-xl sm:text-2xl text-white uppercase tracking-wider group-hover:text-[#00F0FF] transition-colors leading-tight mb-3">
+                            Intereses Tácticos
+                          </h3>
+                          <p className="text-xs sm:text-sm text-slate-200 dark:text-slate-300 font-inter leading-relaxed">
+                            Dilemas operacionales situacionales condicionados por aptitud: combate terrestre, naval, aviación o pacificación policial.
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Basa y Plinto Monumental */}
+                      <div className="bg-gradient-to-r from-slate-900 via-[#12192c] to-slate-900 border-t-2 border-cyan-500/40 px-4 py-3 flex items-center justify-between text-[11px] font-rajdhani font-bold uppercase tracking-wider shadow-inner">
+                        <span className="text-cyan-300 flex items-center gap-1.5">
+                          <span>🎯 Simulación Real</span>
+                        </span>
+                        <span className="px-2 py-0.5 rounded bg-yellow-950/40 border border-yellow-500/60 text-yellow-400 font-mono text-[10px] font-bold">
+                          Vocación
+                        </span>
                       </div>
                     </div>
 
-                    {/* Tarjeta 4: Simulador Académico & Brechas */}
-                    <div className="p-5 sm:p-6 rounded-2xl sm:rounded-3xl bg-[#0B101E]/85 dark:bg-[#0B101E]/90 border border-white/15 dark:border-cyan-500/30 hover:border-[#00F0FF] hover:bg-[#0B101E]/95 shadow-[0_10px_30px_rgba(0,0,0,0.5)] hover:shadow-[0_0_25px_rgba(0,240,255,0.25)] transition-all duration-300 flex flex-col justify-between group min-h-[220px]">
-                      <div>
-                        <div className="flex items-center justify-between mb-3">
-                          <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-cyan-950/70 border border-cyan-500/50 flex items-center justify-center text-[#00F0FF] group-hover:scale-110 shadow-cyan-glow transition-transform flex-shrink-0">
-                            <BookOpen className="w-5 h-5 sm:w-6 sm:h-6" />
-                          </div>
-                          <span className="text-xs font-mono font-bold text-cyan-400 px-2 py-0.5 rounded bg-cyan-950/60 border border-cyan-500/40 tracking-wider">
-                            PILAR 04
+                    {/* COLUMNA / PILAR IV: SIMULADOR ACADÉMICO */}
+                    <div className="relative flex flex-col justify-between rounded-2xl bg-gradient-to-b from-[#101728] via-[#090d18] to-[#0e1424] border-2 border-slate-700/80 dark:border-cyan-500/40 hover:border-[#00F0FF] shadow-[0_12px_35px_rgba(0,0,0,0.6)] hover:shadow-[0_0_30px_rgba(0,240,255,0.3)] transition-all duration-300 group overflow-hidden">
+                      
+                      {/* Capitel Monumental */}
+                      <div className="relative bg-gradient-to-r from-slate-900 via-[#151f38] to-slate-900 border-b-2 border-cyan-500/40 p-3 sm:p-3.5 flex items-center justify-between shadow-sm">
+                        <div className="flex gap-1 opacity-70">
+                          <span className="w-1 h-5 bg-cyan-400/60 rounded-full" />
+                          <span className="w-1 h-5 bg-cyan-400/60 rounded-full" />
+                          <span className="w-1 h-5 bg-cyan-400/60 rounded-full" />
+                        </div>
+
+                        <div className="w-11 h-11 rounded-xl bg-cyan-950/90 border-2 border-neon-cyan flex items-center justify-center text-[#00F0FF] shadow-cyan-glow group-hover:scale-110 transition-transform">
+                          <BookOpen className="w-5 h-5 sm:w-6 sm:h-6" />
+                        </div>
+
+                        <div className="flex items-center gap-1.5">
+                          <span className="px-2.5 py-0.5 rounded bg-cyan-950/80 border border-neon-cyan/50 text-neon-cyan font-mono font-black text-xs tracking-wider shadow-sm">
+                            PILAR IV
                           </span>
                         </div>
-                        <h3 className="font-rajdhani font-black text-lg sm:text-xl text-white uppercase tracking-wider group-hover:text-[#00F0FF] transition-colors leading-tight mb-2">
-                          Simulador Académico
-                        </h3>
-                        <p className="text-xs sm:text-sm text-slate-200 dark:text-slate-300 font-inter leading-relaxed">
-                          Simulacro oficial tipo admisión con fórmulas en LaTeX de matemáticas, física, psicotécnico y letras. Proyecta tu puntaje y calcula tus brechas cognitivas por institución.
-                        </p>
                       </div>
-                      <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-[11px] font-rajdhani font-bold text-cyan-400/90 uppercase tracking-wider">
-                        <span>📊 Banco Oficial</span>
-                        <span className="text-cyan-400">Diagnóstico</span>
+
+                      {/* Fuste Acanalado */}
+                      <div className="relative px-5 py-5 sm:px-6 sm:py-6 flex-1 flex flex-col justify-between">
+                        <div className="absolute top-0 bottom-0 left-1 w-0.5 bg-gradient-to-b from-cyan-500/30 via-white/5 to-cyan-500/30 pointer-events-none" />
+                        <div className="absolute top-0 bottom-0 right-1 w-0.5 bg-gradient-to-b from-cyan-500/30 via-white/5 to-cyan-500/30 pointer-events-none" />
+
+                        <div>
+                          <div className="text-[10px] font-mono font-bold text-slate-400 dark:text-cyan-400/80 uppercase tracking-widest mb-1">
+                            COLUMNA DE BRECHAS COGNITIVAS
+                          </div>
+                          <h3 className="font-rajdhani font-black text-xl sm:text-2xl text-white uppercase tracking-wider group-hover:text-[#00F0FF] transition-colors leading-tight mb-3">
+                            Simulador Académico
+                          </h3>
+                          <p className="text-xs sm:text-sm text-slate-200 dark:text-slate-300 font-inter leading-relaxed">
+                            Simulacro oficial tipo admisión con fórmulas en LaTeX: matemática, física, letras y cálculo de brechas cognitivas por escuela.
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Basa y Plinto Monumental */}
+                      <div className="bg-gradient-to-r from-slate-900 via-[#12192c] to-slate-900 border-t-2 border-cyan-500/40 px-4 py-3 flex items-center justify-between text-[11px] font-rajdhani font-bold uppercase tracking-wider shadow-inner">
+                        <span className="text-cyan-300 flex items-center gap-1.5">
+                          <span>📊 Banco Oficial</span>
+                        </span>
+                        <span className="px-2 py-0.5 rounded bg-cyan-950/40 border border-cyan-500/60 text-neon-cyan font-mono text-[10px] font-bold">
+                          Diagnóstico
+                        </span>
                       </div>
                     </div>
 

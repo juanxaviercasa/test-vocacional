@@ -17,7 +17,8 @@ import {
   Target,
   Layers,
   ChevronRight,
-  ExternalLink
+  ExternalLink,
+  Download
 } from 'lucide-react';
 
 /**
@@ -32,7 +33,7 @@ export default function RootLayout({ children }) {
 
   const NAV_ITEMS = [
     { href: '/', label: 'Evaluación', sub: 'Test y Diagnóstico', icon: Target },
-    { href: '/transparencia', label: 'Organigrama & PDFs', sub: 'Fuentes Oficiales', icon: Layers },
+    { href: '/transparencia', label: 'Descarga Prospectos', sub: '8 Escuelas Matrices', icon: Download },
     { href: '/entrenamiento', label: 'Hub Entrenamiento', sub: 'Preparación 360°', icon: Compass },
     { href: '/glosario', label: 'Glosario', sub: 'Términos Militares', icon: BookOpen }
   ];
@@ -47,31 +48,37 @@ export default function RootLayout({ children }) {
       <header className="bg-white/95 dark:bg-[#0B101E]/95 border-b border-slate-200 dark:border-gray-800 backdrop-blur-md sticky top-0 z-40 transition-colors duration-300 shadow-sm w-full">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 py-2.5 flex items-center justify-between gap-3 sm:gap-4">
           
-          {/* Logo Oficial + Títulos Institucionales Blindados (Sin Desbordes) */}
+          {/* Logo Oficial + Títulos Institucionales Reestructurados y Legibles */}
           <Link href="/" className="flex items-center gap-2.5 sm:gap-3 group shrink-0 select-none">
-            <InsigniaConjunta className="w-9 h-9 sm:w-11 sm:h-11 shrink-0" glow={true} />
+            <InsigniaConjunta className="w-10 h-10 sm:w-12 sm:h-12 shrink-0" glow={true} />
 
             <div className="flex flex-col shrink-0">
-              <div className="flex items-center gap-1.5 sm:gap-2">
-                <span className="px-1.5 py-0.5 rounded bg-peru-red text-white text-[9px] font-sans font-black uppercase tracking-wider shrink-0">
-                  FFAA & PNP
-                </span>
-                <span className="font-sans font-black text-sm sm:text-base lg:text-lg text-slate-900 dark:text-white uppercase tracking-tight leading-none group-hover:text-cyan-600 dark:group-hover:text-neon-cyan transition-colors whitespace-nowrap">
-                  COMANDO DE ADMISIÓN
-                </span>
-              </div>
+              <span className="text-[11px] sm:text-xs font-rajdhani font-black tracking-wider text-peru-red dark:text-peru-red-light uppercase leading-none">
+                FUERZAS ARMADAS Y POLICÍA NACIONAL DEL PERÚ
+              </span>
 
-              <div className="flex items-center gap-1.5 mt-1">
-                <span className="text-[10px] sm:text-xs font-rajdhani font-bold text-cyan-600 dark:text-[#00F0FF] uppercase tracking-wider leading-none whitespace-nowrap">
-                  TEST VOCACIONAL & SIMULADOR ACADÉMICO
-                </span>
-                <span className="hidden md:inline text-slate-300 dark:text-gray-700">·</span>
-                <span className="hidden md:inline font-teko text-[11px] text-military-olive dark:text-yellow-400 font-semibold tracking-wider uppercase leading-none whitespace-nowrap">
-                  8 ESCUELAS MATRICES
-                </span>
-              </div>
+              <span className="font-sans font-black text-base sm:text-lg lg:text-xl text-slate-900 dark:text-white uppercase tracking-tight leading-tight group-hover:text-cyan-600 dark:group-hover:text-neon-cyan transition-colors whitespace-nowrap mt-0.5">
+                COMANDO DE ADMISIÓN
+              </span>
+
+              <span className="text-[11px] sm:text-xs font-rajdhani font-bold text-cyan-600 dark:text-[#00F0FF] uppercase tracking-wider leading-none whitespace-nowrap mt-0.5">
+                TEST VOCACIONAL & SIMULADOR ACADÉMICO
+              </span>
             </div>
           </Link>
+
+          {/* Badge Distintivo de las 8 Escuelas Matrices (Espacio Propio, Destacado y Legible) */}
+          <div className="hidden lg:flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-[#141d30] border border-slate-300 dark:border-cyan-500/30 shadow-sm shrink-0">
+            <ShieldCheck className="w-4 h-4 text-military-olive dark:text-yellow-400 shrink-0" />
+            <div className="flex flex-col text-left">
+              <span className="font-rajdhani font-black text-xs uppercase tracking-wider text-slate-900 dark:text-yellow-400 leading-none">
+                8 ESCUELAS MATRICES
+              </span>
+              <span className="text-[10px] font-rajdhani font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest leading-none mt-0.5">
+                OFICIALES & SUBOFICIALES
+              </span>
+            </div>
+          </div>
 
           {/* Navegación Principal en Pantallas Grandes (>= 1280px / xl) */}
           <nav
@@ -99,25 +106,19 @@ export default function RootLayout({ children }) {
             })}
           </nav>
 
-          {/* Acciones del Header: Conmutador de Tema + Guía + Menú Móvil/Tablet */}
+          {/* Acciones del Header: Guía Rápida + Menú Móvil/Tablet */}
           <div className="flex items-center gap-2 sm:gap-3 shrink-0">
             
-            {/* Botón Iniciar Modo Entrenamiento (Guía Interactiva) */}
+            {/* Botón Guía Táctica del Sistema (Conciso, Resumido y Elegante) */}
             <button
               type="button"
               onClick={startTour}
-              className="flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-xl border border-cyan-500/40 bg-cyan-950/20 text-cyan-600 dark:text-[#00F0FF] hover:bg-cyan-500/20 hover:border-[#00F0FF] text-xs font-rajdhani font-bold tracking-wider uppercase transition-all duration-200 cursor-pointer shadow-sm hover:shadow-cyan-glow shrink-0 whitespace-nowrap"
-              title="Iniciar Modo Entrenamiento (Guía de Usuario Interactiva)"
+              className="flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 rounded-xl border border-cyan-500/40 bg-cyan-950/20 text-cyan-600 dark:text-[#00F0FF] hover:bg-cyan-500/20 hover:border-[#00F0FF] text-xs font-rajdhani font-black tracking-wider uppercase transition-all duration-200 cursor-pointer shadow-sm hover:shadow-cyan-glow shrink-0 whitespace-nowrap"
+              title="Iniciar Guía Interactiva del Sistema"
             >
-              <Compass className="w-3.5 h-3.5 text-cyan-500 dark:text-[#00F0FF] shrink-0" />
-              <span className="hidden sm:inline">INICIAR MODO ENTRENAMIENTO (GUÍA)</span>
-              <span className="sm:hidden">ENTRENAMIENTO</span>
+              <Compass className="w-4 h-4 text-cyan-500 dark:text-[#00F0FF] shrink-0" />
+              <span>GUÍA</span>
             </button>
-
-            {/* Toggle de Modo Claro / Oscuro (Day Ops / Night Ops) */}
-            <div className="shrink-0">
-              <ThemeToggle />
-            </div>
 
             {/* Botón Hamburguesa Móvil/Tablet (< 1280px) */}
             <button
@@ -136,6 +137,20 @@ export default function RootLayout({ children }) {
         {/* Menú Desplegable Táctico en Móvil y Tablet (< 1280px) */}
         {isMobileMenuOpen && (
           <div className="xl:hidden border-t border-slate-200 dark:border-gray-800 bg-white dark:bg-[#0B101E] px-4 py-4 space-y-2 shadow-2xl animate-in slide-in-from-top duration-200">
+            
+            {/* Distintivo 8 Escuelas Matrices en Móvil */}
+            <div className="flex items-center justify-between p-2.5 rounded-xl bg-slate-100 dark:bg-[#141d30] border border-slate-200 dark:border-cyan-500/30 mb-1">
+              <div className="flex items-center gap-2">
+                <ShieldCheck className="w-4 h-4 text-military-olive dark:text-yellow-400" />
+                <span className="font-rajdhani font-black text-xs uppercase tracking-wider text-slate-900 dark:text-yellow-400">
+                  8 ESCUELAS MATRICES OFICIALES
+                </span>
+              </div>
+              <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-peru-red/10 text-peru-red border border-peru-red/30 font-bold uppercase">
+                BAREMOS 2026
+              </span>
+            </div>
+
             <div className="text-[10px] font-rajdhani font-black text-slate-500 dark:text-gray-400 uppercase tracking-widest px-2 mb-1">
               NAVEGACIÓN PRINCIPAL DEL SISTEMA
             </div>
@@ -171,6 +186,14 @@ export default function RootLayout({ children }) {
                 </Link>
               );
             })}
+
+            {/* Control de Tema Táctico en Menú Móvil/Tablet */}
+            <div className="pt-3 border-t border-slate-200 dark:border-gray-800 flex items-center justify-between px-2">
+              <span className="text-xs font-rajdhani font-bold text-slate-600 dark:text-gray-400 uppercase tracking-wider">
+                MODO VISUAL TÁCTICO:
+              </span>
+              <ThemeToggle />
+            </div>
           </div>
         )}
       </header>
@@ -226,7 +249,7 @@ export default function RootLayout({ children }) {
               <Link href="/" className="hover:text-cyan-500 transition-colors">Comando de Admisión</Link>
               <span className="text-slate-400">/</span>
               <span className="text-cyan-600 dark:text-neon-cyan truncate max-w-[200px] sm:max-w-none">
-                {currentPath === '/transparencia' && 'Organigrama & Centro de Transparencia'}
+                {currentPath === '/transparencia' && 'Descarga de Prospectos Oficiales 2026'}
                 {currentPath === '/entrenamiento' && 'Hub Estratégico de Entrenamiento'}
                 {currentPath === '/glosario' && 'Glosario Técnico de Términos Militares'}
               </span>
@@ -244,7 +267,7 @@ export default function RootLayout({ children }) {
       )}
 
       {/* 4. Lienzo Principal */}
-      <main className="flex-1 w-full max-w-6xl mx-auto px-3 sm:px-6 py-6 flex flex-col justify-center">
+      <main className="flex-1 w-full max-w-7xl 2xl:max-w-[1400px] mx-auto px-3 sm:px-6 py-6 flex flex-col justify-center">
         {children}
       </main>
 
@@ -252,14 +275,14 @@ export default function RootLayout({ children }) {
       <footer className="border-t border-slate-200 dark:border-gray-800 bg-white/90 dark:bg-[#0B101E]/90 backdrop-blur-md py-8 text-center px-4 no-print transition-colors duration-300">
         <div className="max-w-4xl mx-auto space-y-4">
           
-          {/* Botón Central Destacado: Enlace Directo a la Página de Transparencia */}
+          {/* Botón Central Destacado: Enlace Directo a la Descarga de Prospectos */}
           <div className="flex justify-center">
             <Link
               href="/transparencia"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-cyan-950/40 hover:bg-cyan-900/60 border border-cyan-500/50 text-cyan-300 dark:text-neon-cyan font-rajdhani font-bold text-xs sm:text-sm uppercase tracking-wider transition-all duration-200 shadow-[0_0_15px_rgba(0,240,255,0.15)] hover:shadow-[0_0_25px_rgba(0,240,255,0.3)] hover:scale-[1.02]"
             >
               <ShieldCheck className="w-4 h-4 text-neon-cyan flex-shrink-0" />
-              <span>100% Basado en Prospectos Oficiales de Admisión · Ver Organigrama y PDFs</span>
+              <span>100% Basado en Prospectos Oficiales de Admisión · Descargar PDFs</span>
             </Link>
           </div>
 
@@ -267,11 +290,19 @@ export default function RootLayout({ children }) {
           <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs font-rajdhani font-bold uppercase tracking-wider text-slate-600 dark:text-gray-400">
             <Link href="/" className="hover:text-cyan-500 transition-colors">Test Vocacional</Link>
             <span className="hidden sm:inline text-slate-300 dark:text-gray-700">•</span>
-            <Link href="/transparencia" className="hover:text-cyan-500 transition-colors">Centro de Transparencia & PDFs</Link>
+            <Link href="/transparencia" className="hover:text-cyan-500 transition-colors">Descarga de Prospectos</Link>
             <span className="hidden sm:inline text-slate-300 dark:text-gray-700">•</span>
             <Link href="/entrenamiento" className="hover:text-cyan-500 transition-colors">Hub de Entrenamiento</Link>
             <span className="hidden sm:inline text-slate-300 dark:text-gray-700">•</span>
             <Link href="/glosario" className="hover:text-cyan-500 transition-colors">Glosario Técnico</Link>
+          </div>
+
+          {/* Selector de Modo Táctico (Day Ops / Night Ops) Reubicado en la Parte Baja con Espacio Holgado */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-2.5 pt-3 pb-1">
+            <span className="text-xs font-rajdhani font-bold text-slate-500 dark:text-gray-400 uppercase tracking-widest flex items-center gap-1.5">
+              <span>MODO OPERATIVO:</span>
+            </span>
+            <ThemeToggle />
           </div>
 
           {/* Identificación de Escuelas Matrices */}

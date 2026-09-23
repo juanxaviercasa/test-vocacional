@@ -42,9 +42,10 @@
   box-shadow: 0 0 25px rgba(0, 240, 255, 0.15);
 }
 
-/* Cinta patriótica del Perú (Rojo - Blanco - Rojo) */
+/* Cinta patriótica del Perú (Rojo - Blanco - Rojo) Oficial */
 .peru-ribbon {
-  height: 3px;
+  height: 8px;
   width: 100%;
-  background: linear-gradient(90deg, #D91023 0%, #D91023 33.3%, #FFFFFF 33.3%, #FFFFFF 66.6%, #D91023 66.6%, #D91023 100%);
+  background: linear-gradient(90deg, #D91023 0%, #D91023 33.333%, #FFFFFF 33.333%, #FFFFFF 66.666%, #D91023 66.666%, #D91023 100%);
+  box-shadow: 0 2px 8px rgba(217, 16, 35, 0.45);
 }
