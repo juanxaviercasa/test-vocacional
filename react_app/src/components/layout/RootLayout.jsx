@@ -279,9 +279,9 @@ export default function RootLayout({ children }) {
           <div className="flex justify-center">
             <Link
               href="/transparencia"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-cyan-950/40 hover:bg-cyan-900/60 border border-cyan-500/50 text-cyan-300 dark:text-neon-cyan font-rajdhani font-bold text-xs sm:text-sm uppercase tracking-wider transition-all duration-200 shadow-[0_0_15px_rgba(0,240,255,0.15)] hover:shadow-[0_0_25px_rgba(0,240,255,0.3)] hover:scale-[1.02]"
+              className="inline-flex items-center gap-2.5 px-6 py-3 rounded-full bg-slate-900 hover:bg-slate-950 text-cyan-300 hover:text-cyan-200 dark:bg-[#10192e] dark:hover:bg-[#15223e] dark:text-neon-cyan border-2 border-cyan-500/60 dark:border-neon-cyan/50 font-rajdhani font-black text-xs sm:text-sm uppercase tracking-wider transition-all duration-200 shadow-md hover:shadow-cyan-glow hover:scale-[1.02] cursor-pointer"
             >
-              <ShieldCheck className="w-4 h-4 text-neon-cyan flex-shrink-0" />
+              <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5 text-cyan-400 dark:text-neon-cyan flex-shrink-0" />
               <span>100% Basado en Prospectos Oficiales de Admisión · Descargar PDFs</span>
             </Link>
           </div>
