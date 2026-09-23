@@ -1,0 +1,1405 @@
+[
+  {
+    "institucion_id": "EMCH",
+    "institucion_nombre": "Escuela Militar de Chorrillos Coronel Francisco Bolognesi",
+    "fuerza": "Ejército del Perú",
+    "rango": "Oficiales",
+    "parametros_globales": {
+      "tiempo_total_minutos": 360,
+      "cantidad_total_preguntas": 200,
+      "segundos_limite_por_pregunta": 108
+    },
+    "sistema_calificacion": {
+      "escala": "Vigesimal (00.00 - 20.00)",
+      "nota_minima_aprobatoria": 12.0,
+      "puntos_respuesta_correcta": 1.0,
+      "puntos_respuesta_incorrecta": -0.25,
+      "puntos_respuesta_blanco": 0.0
+    },
+    "distribucion_por_cursos": [
+      {
+        "curso": "Razonamiento Matemático",
+        "cantidad_preguntas_en_examen": 50,
+        "temario_completo": [
+          "Sucesiones Lógicas, Numéricas y Alfanuméricas",
+          "Distribuciones y Analogías Numéricas",
+          "Operadores Matemáticos Arbitrarios",
+          "Métodos Operativos (Falsa Suposición, Rombo, Cangrejo, Diferencias)",
+          "Planteo de Ecuaciones",
+          "Problemas sobre Edades",
+          "Móviles (Problemas de Encuentro y Alcance)",
+          "Cronometría y Campanadas",
+          "Conteo de Figuras",
+          "Razonamiento Espacial, Giros y Vistas Tridimensionales",
+          "Psicotécnico (Desarrollo de Sólidos, Dados, Dominó)",
+          "Cortes, Estacas y Pastillas",
+          "Fracciones y Tanto por Ciento Aplicado",
+          "Análisis Combinatorio (Permutaciones y Combinaciones)",
+          "Cálculo de Probabilidades"
+        ]
+      },
+      {
+        "curso": "Razonamiento Verbal",
+        "cantidad_preguntas_en_examen": 50,
+        "temario_completo": [
+          "Etimología y Prefijos Griegos y Latinos",
+          "Sinónimos y Antónimos",
+          "Sinonimia Contextual y Antonimia Contextual",
+          "Precisión Léxica",
+          "Analogías Verbales",
+          "Campo Semántico",
+          "Término Excluido",
+          "Definición Esencial",
+          "Conectores Lógicos y Marcadores Discursivos",
+          "Oraciones Incompletas",
+          "Plan de Redacción",
+          "Eliminación de Oraciones (Criterios de Impertinencia y Redundancia)",
+          "Textos Análogos",
+          "Comprensión de Lectura (Tema Central, Idea Principal, Inferencia, Extrapolación)",
+          "Tipología Textual (Textos Continuos, Discontinuos, Argumentativos, Científicos)"
+        ]
+      },
+      {
+        "curso": "Aritmética",
+        "cantidad_preguntas_en_examen": 10,
+        "temario_completo": [
+          "Razones y Proporciones",
+          "Serie de Razones Iguales",
+          "Promedios",
+          "Proporcionalidad y Reparto Proporcional",
+          "Regla de Tres Simple y Compuesta",
+          "Tanto por Ciento y Aplicaciones Comerciales",
+          "Regla de Interés",
+          "Regla de Descuento",
+          "Mezcla y Aleación",
+          "Lógica Proposicional y Tablas de Verdad",
+          "Teoría de Conjuntos",
+          "Sistema de Numeración",
+          "Conteo de Números y Sucesiones",
+          "Cuatro Operaciones (Suma, Resta, Multiplicación, División)",
+          "Divisibilidad y Criterios de Divisibilidad",
+          "Números Primos y Compuestos",
+          "Máximo Común Divisor (MCD) y Mínimo Común Múltiplo (MCM)",
+          "Números Racionales y Fracciones"
+        ]
+      },
+      {
+        "curso": "Álgebra",
+        "cantidad_preguntas_en_examen": 10,
+        "temario_completo": [
+          "Teoría de Exponentes y Radicación",
+          "Ecuaciones Exponenciales",
+          "Grados, Polinomios y Cambio de Variable",
+          "Productos Notables",
+          "División Algebraica (Método de Horner y Ruffini)",
+          "Cocientes Notables",
+          "Radicación y Racionalización",
+          "Números Complejos",
+          "Factorización de Expresiones Algebraicas",
+          "Fracciones Algebraicas",
+          "Ecuaciones Lineales y Cuadráticas",
+          "Intervalos y Valor Absoluto",
+          "Desigualdades e Inecuaciones",
+          "Logaritmos y Propiedades",
+          "Relaciones Binarias",
+          "Funciones Reales de Variable Real",
+          "Progresiones Aritméticas y Geométricas"
+        ]
+      },
+      {
+        "curso": "Geometría",
+        "cantidad_preguntas_en_examen": 10,
+        "temario_completo": [
+          "Líneas Notables y Ángulos entre Paralelas",
+          "Triángulos y Puntos Notables",
+          "Congruencia de Triángulos",
+          "Triángulos Rectángulos Notables y Teorema de Pitágoras",
+          "Polígonos y Propiedades Generales",
+          "Cuadriláteros (Paralelogramos, Trapecios y Trapezoides)",
+          "Circunferencia y Ángulos en la Circunferencia",
+          "Posiciones Relativas de Circunferencias",
+          "Relaciones Métricas en el Triángulo Rectángulo",
+          "Relaciones Métricas en el Triángulo Oblicuángulo",
+          "Relaciones Métricas en la Circunferencia",
+          "Áreas de Regiones Poligonales Triangulares y Cuadrangulares",
+          "Relaciones de Áreas",
+          "Geometría del Espacio: Rectas, Planos y Ángulo Diedro-Triedro",
+          "Poliedros Regulares",
+          "Prisma y Cilindro Circular Recto",
+          "Pirámide, Cono y Troncos de Sólidos",
+          "Esfera y Superficie Esférica",
+          "Geometría Analítica Plana"
+        ]
+      },
+      {
+        "curso": "Trigonometría",
+        "cantidad_preguntas_en_examen": 10,
+        "temario_completo": [
+          "Sistemas de Medición Angular (Sexagesimal, Centesimal y Radial)",
+          "Longitud de Arco y Área de Sector Circular",
+          "Razones Trigonométricas de Ángulos Agudos",
+          "Razones Trigonométricas de Ángulos Notables",
+          "Ángulos de Elevación y Depresión",
+          "Razones Trigonométricas de Ángulos en Posición Normal",
+          "Reducción al Primer Cuadrante",
+          "Circunferencia Trigonométrica (Líneas Trigonométricas)",
+          "Identidades Trigonométricas Fundamentales",
+          "Razones Trigonométricas de Arcos Compuestos",
+          "Razones Trigonométricas de Arcos Múltiples (Ángulo Doble y Triple)",
+          "Transformaciones Trigonométricas a Producto",
+          "Ecuaciones Trigonométricas",
+          "Resolución de Triángulos Oblicuángulos (Ley de Senos y Cosenos)"
+        ]
+      },
+      {
+        "curso": "Física",
+        "cantidad_preguntas_en_examen": 10,
+        "temario_completo": [
+          "Análisis Dimensional y Ecuaciones Dimensionales",
+          "Análisis Vectorial",
+          "Estática (Primera y Segunda Condición de Equilibrio)",
+          "Cinemática (MRU y MRUV)",
+          "Movimiento Vertical de Caída Libre (MVCL)",
+          "Movimiento Parabólico de Caída Libre",
+          "Movimiento Circular Uniforme y Variado",
+          "Dinámica Lineal y Circular (Leyes de Newton)",
+          "Trabajo Mecánico y Potencia Mecánica",
+          "Energía Mecánica y Ley de Conservación de la Energía",
+          "Cantidad de Movimiento, Impulso y Choques",
+          "Hidrostática (Presión Hidrostática, Principio de Pascal y Arquímedes)",
+          "Máquinas Simples (Palancas y Poleas)",
+          "Calorimetría y Termodinámica",
+          "Electrostática (Ley de Coulomb y Campo Eléctrico)",
+          "Electrodinámica (Ley de Ohm y Circuitos Eléctricos)",
+          "Electromagnetismo y Fuerzas Magnéticas"
+        ]
+      },
+      {
+        "curso": "Química",
+        "cantidad_preguntas_en_examen": 10,
+        "temario_completo": [
+          "La Materia, Estados de Agregación y Fenómenos Físicos y Químicos",
+          "Estructura Atómica y Núclidos (Z y A)",
+          "Radioactividad y Reacciones Nucleares",
+          "Configuración Electrónica y Números Cuánticos",
+          "Tabla Periódica Moderna y Propiedades Periódicas",
+          "Enlace Químico (Iónico, Covalente y Metálico)",
+          "Formulación y Nomenclatura de Compuestos Inorgánicos",
+          "Estado Gaseoso y Leyes de los Gases Ideales",
+          "Reacciones Químicas y Métodos de Balance",
+          "Soluciones Químicas y Unidades de Concentración",
+          "Estequiometría y Leyes Ponderales",
+          "Ácidos, Bases, Neutralización y Escala de pH",
+          "Química Orgánica: Hidrocarburos (Alcanos, Alquenos y Alquinos)",
+          "Química Militar y Explosivos"
+        ]
+      },
+      {
+        "curso": "Lenguaje y Comunicación",
+        "cantidad_preguntas_en_examen": 10,
+        "temario_completo": [
+          "La Comunicación Humana y Funciones del Lenguaje",
+          "Fonética y Fonología",
+          "Acentuación General y Diacrítica",
+          "Concurrencia Vocálica: Diptongo, Triptongo y Hiato",
+          "Morfología: El Sustantivo, Adjetivo y Verbo",
+          "Concordancia Nominal y Verbal",
+          "Sintaxis de la Oración Simple y Compuesta",
+          "Ortografía Puntual: Uso de Signos de Puntuación",
+          "Técnicas de Exposición de un Tema",
+          "Coherencia y Cohesión Textual",
+          "Marcadores Discursivos",
+          "Redacción de Textos Argumentativos y Administrativos"
+        ]
+      },
+      {
+        "curso": "Historia del Perú y Universal",
+        "cantidad_preguntas_en_examen": 10,
+        "temario_completo": [
+          "Culturas Prehispánicas (Chavín, Paracas, Moche, Nazca, Wari, Tiahuanaco)",
+          "El Tahuantinsuyo: Origen, Organización Social, Política y Expansión Militar",
+          "Invasión Española y Conquista del Tahuantinsuyo",
+          "El Virreinato del Perú y Organización Colonial",
+          "Rebeliones Anticoloniales (Túpac Amaru II)",
+          "Proceso de Emancipación e Independencia del Perú",
+          "Primer Militarismo y Prosperidad Falaz",
+          "Guerra del Pacífico: Campaña Marítima, Campaña Terrestre y Resistencia de la Breña",
+          "Héroes Nacionales del Ejército y Fuerzas Armadas",
+          "Operación Militar Chavín de Huántar y Pacificación Nacional",
+          "Solución del Diferendo Marítimo con Chile ante la Corte de La Haya",
+          "Historia Universal: Antigüedad Clásica, Edad Media, Primera y Segunda Guerra Mundial, y Guerra Fría"
+        ]
+      },
+      {
+        "curso": "Geografía del Perú y del Mundo",
+        "cantidad_preguntas_en_examen": 10,
+        "temario_completo": [
+          "Estudio Geográfico de la Tierra, Cartografía y Coordenadas Geográficas",
+          "Climatología y Zonas Climáticas",
+          "El Territorio Peruano: Localización, Puntos Extremos y Fronteras Internacionales",
+          "Tratados Limítrofes y Delimitación Territorial",
+          "Morfología y Relieve Peruano: Costa, Andes y Selva",
+          "Las Ocho Regiones Naturales del Perú y Once Ecorregiones",
+          "Cuencas Hidrográficas del Perú (Pacífico, Amazonas y Titicaca)",
+          "El Mar de Grau y Corrientes Marinas",
+          "Recursos Naturales y Áreas Naturales Protegidas",
+          "Medio Ambiente y Contaminación Ambiental",
+          "Población Peruana y Demografía",
+          "El Perú y la Antártida",
+          "Geografía Económica del Perú",
+          "Geopolítica: El Estado Peruano, Fronteras Vivas y Seguridad Nacional"
+        ]
+      },
+      {
+        "curso": "Informática y Tecnologías de la Información",
+        "cantidad_preguntas_en_examen": 10,
+        "temario_completo": [
+          "Introducción a la Informática, Datos, Información y Tecnología",
+          "El Sistema Operativo y Administración de Archivos",
+          "Procesador de Textos: Formato, Configuración de Página y Presentación de Documentos",
+          "Procesador de Textos: Edición de Documentos e Inserción de Elementos y Objetos",
+          "Hojas de Cálculo: Manejo de Fórmulas y Datos",
+          "Presentador de Diapositivas: Diseño, Edición y Configuración de Presentaciones",
+          "Internet, Navegadores y Motores de Búsqueda",
+          "Seguridad de la Información y Manejo Seguro de Datos"
+        ]
+      }
+    ]
+  },
+  {
+    "institucion_id": "ETE",
+    "institucion_nombre": "Instituto de Educación Superior Tecnológico Público del Ejército - ETE",
+    "fuerza": "Ejército del Perú",
+    "rango": "Suboficiales",
+    "parametros_globales": {
+      "tiempo_total_minutos": 420,
+      "cantidad_total_preguntas": 200,
+      "segundos_limite_por_pregunta": 126
+    },
+    "sistema_calificacion": {
+      "escala": "Vigesimal (00.00 - 20.00)",
+      "nota_minima_aprobatoria": 12.0,
+      "puntos_respuesta_correcta": 1.0,
+      "puntos_respuesta_incorrecta": -0.25,
+      "puntos_respuesta_blanco": 0.0
+    },
+    "distribucion_por_cursos": [
+      {
+        "curso": "Razonamiento Matemático",
+        "cantidad_preguntas_en_examen": 60,
+        "temario_completo": [
+          "Relaciones numéricas: Sucesiones numéricas y alfanuméricas",
+          "Operadores matemáticos y operaciones arbitrarias",
+          "Situaciones lógicas, traslados, trasvases y pesadas",
+          "Métodos matemáticos (Rombo, Cangrejo, Falsa Suposición y Diferencias)",
+          "Problemas con conectores y razonamiento inductivo-deductivo",
+          "Problemas sobre edades y líneas de tiempo",
+          "Problemas sobre certezas, máximos y mínimos",
+          "Cronometría, adelantos, atrasos y manecillas de reloj",
+          "Probabilidades y conteo combinatorio",
+          "Calendarios y ordenamiento temporal",
+          "Análisis factorial y combinatorio",
+          "Magnitudes proporcionales y reparto proporcional",
+          "Lógica proposicional y tablas de verdad",
+          "Planteo de ecuaciones e inecuaciones",
+          "Razonamiento abstracto, giros de figuras y desarrollo de sólidos",
+          "Razonamiento espacial y conteo de superficies"
+        ]
+      },
+      {
+        "curso": "Razonamiento Verbal",
+        "cantidad_preguntas_en_examen": 40,
+        "temario_completo": [
+          "Semántica léxica: Sinónimos directos y contextuales",
+          "Antónimos absolutos, relativos y contextuales",
+          "Analogías gramaticales y relaciones asociativas",
+          "Relaciones semánticas: Series verbales",
+          "Oraciones incompletas y precisión semántica",
+          "Conectores lógicos y marcadores textuales",
+          "Plan de redacción (Criterios de temporalidad, generalidad y causalidad)",
+          "Analogía semántica: Hiperonimia, hiponimia y cohiponimia",
+          "Término excluido por sinonimia, antonimia y campo semántico",
+          "Término ilógico e interferencia léxica",
+          "Término esencial y definición conceptual",
+          "Interpretación de textos: Texto análogo y texto excluido",
+          "Ordenamiento de párrafos y coherencia pragmática",
+          "Comprensión de lectura: Textos científicos, humanísticos y militares"
+        ]
+      },
+      {
+        "curso": "Aritmética",
+        "cantidad_preguntas_en_examen": 8,
+        "temario_completo": [
+          "Razones y proporciones aritméticas y geométricas",
+          "Serie de razones geométricas equivalentes",
+          "Promedios: Aritmético, geométrico y armónico",
+          "Regla de tres simple (directa e inversa) y regla de tres compuesta",
+          "Tanto por ciento, aumentos y descuentos sucesivos, y aplicaciones comerciales",
+          "Regla de interés simple y compuesto",
+          "Lógica proposicional, tablas de verdad y tautologías",
+          "Teoría de conjuntos, relaciones de pertenencia e inclusión, operaciones entre conjuntos",
+          "Sistemas de numeración decimal y bases alternas",
+          "Cuatro operaciones fundamentales y métodos operativos",
+          "Divisibilidad, propiedades y criterios de divisibilidad por 2, 3, 4, 5, 7, 9 y 11",
+          "Números primos, números compuestos y descomposición canónica",
+          "Máximo Común Divisor (MCD) y Mínimo Común Múltiplo (MCM)",
+          "Números racionales, números fraccionarios y clasificación de fracciones"
+        ]
+      },
+      {
+        "curso": "Álgebra",
+        "cantidad_preguntas_en_examen": 8,
+        "temario_completo": [
+          "Teoría de exponentes y leyes de radicación",
+          "Ecuaciones exponenciales",
+          "Polinomios: Grado relativo, grado absoluto y polinomios especiales",
+          "Productos notables y desarrollos algebraicos clásicos",
+          "División de polinomios: Métodos de Guillermo Horner, Paolo Ruffini y Teorema del Resto",
+          "Cocientes notables y término enésimo",
+          "Factorización de polinomios (Factor común, identidades, aspa simple y doble)",
+          "Ecuaciones de primer y segundo grado, discriminante y propiedades de las raíces",
+          "Desigualdades e inecuaciones lineales y cuadráticas",
+          "Valor absoluto y propiedades de intervalos",
+          "Funciones reales: Dominio, rango y gráficas elementales"
+        ]
+      },
+      {
+        "curso": "Geometría",
+        "cantidad_preguntas_en_examen": 8,
+        "temario_completo": [
+          "Ángulos entre rectas paralelas cortadas por una secante",
+          "Triángulos: Clasificación, propiedades angulares y teoremas fundamentales",
+          "Líneas notables en el triángulo (Mediana, mediatriz, altura, bisectriz)",
+          "Congruencia de triángulos y teoremas de aplicación",
+          "Triángulos rectángulos notables y Teorema de Pitágoras",
+          "Polígonos: Suma de ángulos interiores, exteriores y número total de diagonales",
+          "Cuadriláteros: Trapecios, rombos, rectángulos y cuadrados",
+          "Circunferencia: Propiedades de tangencia y ángulos en la circunferencia",
+          "Relaciones métricas en el triángulo rectángulo y oblicuángulo",
+          "Cálculo de áreas de regiones triangulares y cuadrangulares",
+          "Geometría del espacio: Prisma recto, cilindro, pirámide y esfera"
+        ]
+      },
+      {
+        "curso": "Trigonometría",
+        "cantidad_preguntas_en_examen": 8,
+        "temario_completo": [
+          "Sistemas de medición angular: Sexagesimal, Centesimal y Radial",
+          "Fórmulas de conversión entre sistemas angulares",
+          "Longitud de arco de circunferencia y área del sector circular",
+          "Razones trigonométricas en el triángulo rectángulo",
+          "Razones trigonométricas de ángulos notables y aproximados",
+          "Ángulos verticales: Ángulos de elevación y depresión",
+          "Razones trigonométricas de ángulos en posición normal o estándar",
+          "Signos de las razones trigonométricas en los cuatro cuadrantes",
+          "Reducción de ángulos al primer cuadrante",
+          "Identidades trigonométricas fundamentales (Pitagóricas, recíprocas y por cociente)",
+          "Ecuaciones trigonométricas elementales",
+          "Resolución de triángulos oblicuángulos: Ley de senos y ley de cosenos"
+        ]
+      },
+      {
+        "curso": "Física",
+        "cantidad_preguntas_en_examen": 8,
+        "temario_completo": [
+          "Sistema Internacional de Unidades (SI) y análisis dimensional",
+          "Vectores en el plano y en el espacio, método del polígono y componentes rectangulares",
+          "Cinemática: Movimiento Rectilíneo Uniforme (MRU)",
+          "Movimiento Rectilíneo Uniformemente Variado (MRUV)",
+          "Movimiento Vertical de Caída Libre (MVCL)",
+          "Movimiento parabólico de proyectiles",
+          "Estática: Primera y segunda condición de equilibrio",
+          "Diagrama de Cuerpo Libre (DCL)",
+          "Dinámica lineal: Segunda ley de Newton",
+          "Trabajo mecánico, potencia mecánica y rendimiento",
+          "Energía mecánica: Cinética, potencial gravitatoria y potencial elástica",
+          "Conservación de la energía mecánica",
+          "Hidrostática: Presión hidrostática, Principio de Pascal y Principio de Arquímedes",
+          "Termometría y calorimetría",
+          "Electrostática y electrodinámica básica (Ley de Ohm)"
+        ]
+      },
+      {
+        "curso": "Química",
+        "cantidad_preguntas_en_examen": 5,
+        "temario_completo": [
+          "Materia, sustancias puras, mezclas homogéneas y heterogéneas",
+          "Estructura atómica: Partículas subatómicas fundamentales, número atómico (Z) y masa (A)",
+          "Números cuánticos y configuración electrónica",
+          "Tabla periódica moderna y familias de elementos",
+          "Enlace químico: Enlace iónico, covalente y metálico",
+          "Nomenclatura inorgánica: Óxidos, hidróxidos, ácidos y sales",
+          "Reacciones químicas y balance por el método del tanteo y redox",
+          "Química orgánica básica: Hidrocarburos alcanos, alquenos y alquinos",
+          "Nociones de química de explosivos y sustancias combustibles",
+          "Medio ambiente y ecología: Contaminación y conservación"
+        ]
+      },
+      {
+        "curso": "Informática",
+        "cantidad_preguntas_en_examen": 5,
+        "temario_completo": [
+          "Introducción a la informática: Computadora, hardware y software",
+          "Sistemas operativos: Entorno, administración de carpetas y archivos",
+          "Procesador de textos (Microsoft Word): Configuración de página, edición e inserción de tablas",
+          "Hoja de cálculo (Microsoft Excel): Fórmulas básicas, operadores matemáticos y gráficos",
+          "Presentador de diapositivas (PowerPoint): Transiciones y animaciones",
+          "Internet: Navegadores, motores de búsqueda y seguridad de datos básica"
+        ]
+      },
+      {
+        "curso": "Lenguaje y Literatura",
+        "cantidad_preguntas_en_examen": 10,
+        "temario_completo": [
+          "La lingüística, comunicación humana y niveles de uso de la lengua",
+          "Técnicas de lectura compresiva, estructura del texto y redacción formal",
+          "Fonología, separación silábica, concurrencia vocálica (Diptongo, triptongo, hiato)",
+          "Acentuación ortográfica general, diacrítica y enfática",
+          "Categorías gramaticales: Sustantivo, adjetivo, determinante y pronombre",
+          "El verbo: Conjugación de verbos regulares e irregulares y verboides",
+          "Elementos de enlace: Preposiciones y conjunciones",
+          "La oración simple: Sujeto, predicado y concordancias",
+          "La oración compuesta: Proposiciones coordinadas y subordinadas",
+          "Teoría literaria: Géneros literarios y figuras retóricas (Metáfora, símil, anáfora, hipérbole)",
+          "Literatura peruana prehispánica y colonial: El drama Ollantay y el Inca Garcilaso de la Vega",
+          "Literatura de la emancipación y república: Mariano Melgar, Ricardo Palma y Manuel González Prada"
+        ]
+      },
+      {
+        "curso": "Literatura Actual",
+        "cantidad_preguntas_en_examen": 5,
+        "temario_completo": [
+          "Vanguardismo peruano: César Vallejo (Los heraldos negros, Trilce)",
+          "Indigenismo: Ciro Alegría y José María Arguedas",
+          "Generación del 50: Julio Ramón Ribeyro (Los gallinazos sin plumas)",
+          "El Boom Latinoamericano: Gabriel García Márquez, Carlos Fuentes y Mario Vargas Llosa"
+        ]
+      },
+      {
+        "curso": "Historia del Perú, del Mundo e Historia Militar",
+        "cantidad_preguntas_en_examen": 10,
+        "temario_completo": [
+          "Proceso de hominización y prehistoria",
+          "Culturas antiguas de Oriente y Occidente: Egipto, Mesopotamia, Grecia y Roma",
+          "Poblamiento de América y culturas prehispánicas peruanas (Caral, Chavín, Paracas, Mochica, Nazca, Wari)",
+          "El Imperio Incaico: Estructura socioeconómica, religión y campañas militares",
+          "Conquista y Virreinato del Perú: Organización política y reformas borbónicas",
+          "Emancipación y Campañas libertadoras de San Martín y Bolívar",
+          "Inicios de la República y la Guerra del Pacífico: Campaña marítima y terrestre",
+          "Héroes militares nacionales: Bolognesi, Cáceres, Quiñones y Grau",
+          "Conflictos del siglo XX: Primera y Segunda Guerra Mundial, Guerra Fría",
+          "Guerra de 1941, conflicto del Falso Paquisha (1981) y Guerra del Cenepa (1995)",
+          "Lucha contra el terrorismo y Operación Militar Chavín de Huántar"
+        ]
+      },
+      {
+        "curso": "Geografía del Perú y del Mundo",
+        "cantidad_preguntas_en_examen": 5,
+        "temario_completo": [
+          "La Tierra en el espacio: Coordenadas geográficas y cartografía",
+          "El territorio peruano: Límites fronterizos y tratados limítrofes",
+          "Morfología del territorio: Costa, Sierra y Selva",
+          "Las 8 regiones naturales de Javier Pulgar Vidal y 11 ecorregiones de Antonio Brack Egg",
+          "Cuencas hidrográficas peruanas y el Mar de Grau",
+          "Recursos naturales, áreas naturales protegidas y desarrollo sostenible"
+        ]
+      },
+      {
+        "curso": "Idioma Inglés (Básico)",
+        "cantidad_preguntas_en_examen": 20,
+        "temario_completo": [
+          "Verb 'To Be', personal pronouns and possessive adjectives",
+          "Simple Present: Affirmative, negative and interrogative structures",
+          "Daily routines and adverbs of frequency",
+          "Countable and uncountable nouns (There is / There are, Some / Any)",
+          "Prepositions of place and time (In, On, At)",
+          "WH- Questions in Present and Past",
+          "Past Simple of regular and irregular verbs",
+          "Present Continuous for ongoing actions",
+          "Basic military and technical English vocabulary",
+          "Reading comprehension of elementary texts"
+        ]
+      }
+    ]
+  },
+  {
+    "institucion_id": "ENP",
+    "institucion_nombre": "Escuela Naval del Perú",
+    "fuerza": "Marina de Guerra del Perú",
+    "rango": "Oficiales",
+    "parametros_globales": {
+      "tiempo_total_minutos": 180,
+      "cantidad_total_preguntas": 100,
+      "segundos_limite_por_pregunta": 108
+    },
+    "sistema_calificacion": {
+      "escala": "Vigesimal (00.00 - 20.00)",
+      "nota_minima_aprobatoria": 12.0,
+      "puntos_respuesta_correcta": 1.0,
+      "puntos_respuesta_incorrecta": -0.25,
+      "puntos_respuesta_blanco": 0.0
+    },
+    "distribucion_por_cursos": [
+      {
+        "curso": "Razonamiento Matemático",
+        "cantidad_preguntas_en_examen": 20,
+        "temario_completo": [
+          "Razonamiento numérico y secuencias lógicas",
+          "Razonamiento inductivo y deductivo",
+          "Razonamiento espacial y giros tridimensionales",
+          "Secuencias numéricas, sucesiones y series",
+          "Planteo de ecuaciones y problemas con fracciones",
+          "Problemas sobre edades y cronometría",
+          "Máximos y mínimos y situaciones lógicas",
+          "Análisis combinatorio y cálculo de probabilidades"
+        ]
+      },
+      {
+        "curso": "Razonamiento Verbal",
+        "cantidad_preguntas_en_examen": 20,
+        "temario_completo": [
+          "Sinónimos y antónimos contextuales",
+          "Término excluido y campo semántico",
+          "Analogías verbales clásicas y duales",
+          "Completar oraciones con precisión léxica",
+          "Conectores lógicos y marcadores textuales",
+          "Plan de redacción",
+          "Comprensión de lectura: Textos analíticos, científicos y humanísticos",
+          "Extrapolación e inferencia textual"
+        ]
+      },
+      {
+        "curso": "Aritmética",
+        "cantidad_preguntas_en_examen": 8,
+        "temario_completo": [
+          "Fracciones y números racionales",
+          "Razones y proporciones",
+          "Magnitudes proporcionales y reparto proporcional",
+          "Regla de tres simple y compuesta",
+          "Porcentajes, promedios y aplicaciones comerciales",
+          "Regla de interés",
+          "Sistema de numeración",
+          "Cuatro operaciones",
+          "Divisibilidad y criterios de divisibilidad",
+          "Números primos y compuestos",
+          "Máximo común divisor y mínimo común múltiplo",
+          "Lógica proposicional y teoría de conjuntos",
+          "Introducción a la estadística y probabilidades"
+        ]
+      },
+      {
+        "curso": "Álgebra",
+        "cantidad_preguntas_en_examen": 8,
+        "temario_completo": [
+          "Teoría de exponentes y radicales",
+          "Polinomios y polinomios especiales",
+          "Productos notables",
+          "División algebraica y teorema del resto",
+          "Cocientes notables y divisibilidad",
+          "Factorización",
+          "Racionalización y variable compleja",
+          "Ecuaciones lineales y de grado superior",
+          "Inecuaciones algebraicas",
+          "Análisis combinatorio y binomio de Newton",
+          "Logaritmos y matrices"
+        ]
+      },
+      {
+        "curso": "Geometría",
+        "cantidad_preguntas_en_examen": 8,
+        "temario_completo": [
+          "Rectas, planos y ángulos",
+          "Triángulos, puntos y líneas notables",
+          "Polígonos y cuadriláteros",
+          "Circunferencia y ángulos en la circunferencia",
+          "Proporcionalidad de segmentos y semejanza de triángulos",
+          "Relaciones métricas en el triángulo rectángulo y oblicuángulo",
+          "Áreas de regiones poligonales y circulares",
+          "Geometría del espacio (Poliedros, cilindro, cono y esfera)"
+        ]
+      },
+      {
+        "curso": "Trigonometría",
+        "cantidad_preguntas_en_examen": 8,
+        "temario_completo": [
+          "Ángulo trigonométrico y sistemas de medición angular",
+          "Longitud de arco y área de sector circular",
+          "Razones trigonométricas de ángulos agudos y notables",
+          "Cálculo de lados en el triángulo rectángulo",
+          "Ángulos verticales y horizontales (Rumbo y azimut)",
+          "Sistema cartesiano y ángulos en posición normal",
+          "Reducción al primer cuadrante",
+          "Circunferencia trigonométrica y líneas auxiliares",
+          "Identidades trigonométricas fundamentales y compuestas",
+          "Transformaciones trigonométricas",
+          "Funciones trigonométricas y ecuaciones trigonométricas",
+          "Resolución de triángulos oblicuángulos"
+        ]
+      },
+      {
+        "curso": "Física",
+        "cantidad_preguntas_en_examen": 10,
+        "temario_completo": [
+          "Análisis vectorial",
+          "Cinemática (MRU, MRUV, Caída libre y Parabólico)",
+          "Movimiento circunferencial",
+          "Estática y equilibrio",
+          "Dinámica lineal y circular",
+          "Trabajo, potencia y energía",
+          "Movimiento oscilatorio y ondas mecánicas",
+          "Hidrostática y flotabilidad naval (Principio de Arquímedes)",
+          "Electrostática y condensadores",
+          "Electrodinámica y circuitos eléctricos"
+        ]
+      },
+      {
+        "curso": "Química",
+        "cantidad_preguntas_en_examen": 8,
+        "temario_completo": [
+          "Materia: Clasificación y propiedades",
+          "Estructura atómica y configuración electrónica",
+          "Tabla periódica de los elementos",
+          "Enlaces químicos (Iónico, covalente y metálico)",
+          "Nomenclatura química inorgánica",
+          "Unidades químicas de masa y composición porcentual",
+          "Estado gaseoso y leyes universales",
+          "Reacciones químicas y estequiometría",
+          "Soluciones y concentraciones químicas",
+          "Ácidos y bases (pH y neutralización)"
+        ]
+      },
+      {
+        "curso": "Lenguaje y Literatura",
+        "cantidad_preguntas_en_examen": 4,
+        "temario_completo": [
+          "Comunicación humana y funciones del lenguaje",
+          "Ortografía, acentuación y tildación",
+          "Uso de mayúsculas y signos de puntuación",
+          "La palabra: Morfología, sustantivo, adjetivo y verbo",
+          "La preposición, interjección y adverbio",
+          "Principales escritores peruanos y latinoamericanos",
+          "Redacción de texto argumentativo (Ensayo)"
+        ]
+      },
+      {
+        "curso": "Historia del Perú y del Mundo",
+        "cantidad_preguntas_en_examen": 4,
+        "temario_completo": [
+          "Acontecimientos históricos cronológicos mundiales",
+          "El Tahuantinsuyo y desarrollo andino",
+          "La Independencia del Perú",
+          "La Guerra del Pacífico (Campaña naval y terrestre)",
+          "Combates Navales del 2 de Mayo y de Angamos",
+          "Héroes de la Marina de Guerra del Perú: Miguel Grau Seminario",
+          "Primera y Segunda Guerra Mundial",
+          "Historia del Perú contemporáneo: 1940 a la fecha"
+        ]
+      },
+      {
+        "curso": "Geografía del Perú y del Mundo",
+        "cantidad_preguntas_en_examen": 4,
+        "temario_completo": [
+          "El sistema planetario solar",
+          "División política y límites fronterizos del Perú",
+          "Las regiones naturales del Perú",
+          "El Mar Peruano: Corriente del Niño y Corriente Peruana",
+          "Principales puertos del Perú y del mundo",
+          "Principales ríos y cuencas mundiales",
+          "El Perú en la Antártida y Tratado Antártico",
+          "Océanos, mares, estrechos y canales estratégicos mundiales"
+        ]
+      },
+      {
+        "curso": "Informática",
+        "cantidad_preguntas_en_examen": 3,
+        "temario_completo": [
+          "Nociones sobre hardware y arquitectura de computadoras",
+          "Software de sistema y software aplicativo",
+          "Principales tipos de ataques informáticos y ciberseguridad",
+          "Protección de redes y entornos navales seguros"
+        ]
+      },
+      {
+        "curso": "Inglés Básico",
+        "cantidad_preguntas_en_examen": 3,
+        "temario_completo": [
+          "Vocabulario y gramática en nivel básico A1/A2",
+          "Comprensión lectora de textos marítimos breves",
+          "Terminología estándar internacional"
+        ]
+      }
+    ]
+  },
+  {
+    "institucion_id": "CITEN",
+    "institucion_nombre": "Instituto de Educación Superior Tecnológico Público Naval - CITEN",
+    "fuerza": "Marina de Guerra del Perú",
+    "rango": "Suboficiales",
+    "parametros_globales": {
+      "tiempo_total_minutos": 180,
+      "cantidad_total_preguntas": 100,
+      "segundos_limite_por_pregunta": 108
+    },
+    "sistema_calificacion": {
+      "escala": "Vigesimal (00.00 - 20.00)",
+      "nota_minima_aprobatoria": 12.0,
+      "puntos_respuesta_correcta": 1.0,
+      "puntos_respuesta_incorrecta": -0.25,
+      "puntos_respuesta_blanco": 0.0
+    },
+    "distribucion_por_cursos": [
+      {
+        "curso": "Razonamiento Matemático",
+        "cantidad_preguntas_en_examen": 25,
+        "temario_completo": [
+          "Operadores matemáticos y operaciones combinadas",
+          "Series notables y sumatorias",
+          "Planteo de ecuaciones lineales y cuadráticas",
+          "Razonamiento inductivo y deductivo",
+          "Tabla de decisiones y orden de información",
+          "Problemas con fracciones y reducciones a la unidad",
+          "Problemas sobre edades y cronología",
+          "Certezas, situaciones lógicas y pesadas",
+          "Sucesiones numéricas, literales y alfanuméricas",
+          "Relojes, atrasos, adelantos y calendarios",
+          "Máximos y mínimos",
+          "Perímetros y cálculo de áreas de regiones sombreadas"
+        ]
+      },
+      {
+        "curso": "Razonamiento Verbal",
+        "cantidad_preguntas_en_examen": 25,
+        "temario_completo": [
+          "Sinónimos absolutos y relativos",
+          "Sinónimo contextual",
+          "Antónimos absolutos y relativos",
+          "Antónimo contextual",
+          "Analogías verbales y relaciones lógicas",
+          "Términos excluidos",
+          "Series verbales",
+          "Oraciones incompletas y coherencia léxica",
+          "Oraciones eliminadas (Redundancia e impertinencia)",
+          "Conectores lógicos y marcadores discursivos",
+          "Plan de redacción",
+          "Comprensión de textos continuos y discontinuos"
+        ]
+      },
+      {
+        "curso": "Historia del Perú y del Mundo",
+        "cantidad_preguntas_en_examen": 10,
+        "temario_completo": [
+          "Teoría del origen del hombre americano y el Perú antiguo",
+          "Los Incas y la organización del Tahuantinsuyo",
+          "Descubrimiento de América e invasión al Tahuantinsuyo",
+          "La conquista y el Virreinato del Perú",
+          "La Revolución Francesa y la Independencia del Perú",
+          "El Primer y Segundo Militarismo",
+          "La era del guano y la Guerra del Pacífico",
+          "Las Guerras Mundiales y la Guerra Fría",
+          "La República Aristocrática y el Oncenio de Leguía",
+          "El Trapecio Amazónico y el conflicto de Leticia",
+          "Papel de las Fuerzas Armadas en la lucha contra el terrorismo",
+          "Demanda del Perú ante la Corte de La Haya sobre el diferendo marítimo",
+          "Conflictos contemporáneos: Rusia-Ucrania, Israel-Palestina"
+        ]
+      },
+      {
+        "curso": "Geografía del Perú y del Mundo",
+        "cantidad_preguntas_en_examen": 10,
+        "temario_completo": [
+          "La Tierra: Características, forma, dimensiones y movimientos",
+          "Continentes y océanos del mundo",
+          "Regiones naturales del Perú y cuencas hidrográficas",
+          "Características del Mar Peruano (Mar de Grau)",
+          "El Perú y las 200 Millas Marítimas",
+          "El Perú ante el Nuevo Derecho del Mar: Convención del Mar (CONVEMAR)",
+          "El Perú en la región Antártica y Base Machu Picchu",
+          "Fenómeno de El Niño y La Niña (ENSO)",
+          "Contaminación ambiental, cambio climático y Objetivos de Desarrollo Sostenible al 2030"
+        ]
+      },
+      {
+        "curso": "Lenguaje y Literatura",
+        "cantidad_preguntas_en_examen": 10,
+        "temario_completo": [
+          "La comunicación y el signo lingüístico",
+          "Ortografía, reglas de acentuación y puntuación",
+          "Vicios del lenguaje: Barbarismo, solecismo, anfibología y redundancia",
+          "Morfología de las palabras y frase nominal",
+          "La preposición y la conjunción",
+          "Sintaxis: Estructura de la oración simple y compuesta",
+          "Tipos de texto: Narrativo, expositivo, descriptivo y argumentativo",
+          "El Vanguardismo y sus máximos representantes",
+          "El Indigenismo peruano: Ciro Alegría y José María Arguedas",
+          "Narrativa de Mario Vargas Llosa y literatura contemporánea"
+        ]
+      },
+      {
+        "curso": "Informática y Redes",
+        "cantidad_preguntas_en_examen": 10,
+        "temario_completo": [
+          "Conceptos de Hardware y Software",
+          "Componentes de una computadora y periféricos",
+          "Sistemas operativos: Windows, Linux y gestión de archivos",
+          "Conocimiento de programas en Microsoft Office (Word, Excel, PowerPoint)",
+          "Navegadores web y técnicas avanzadas de búsqueda de información",
+          "Almacenamiento en la nube (Google Drive, Dropbox, OneDrive)",
+          "Conceptos básicos de redes (LAN, WAN, Intranet)",
+          "Seguridad informática básica: Virus, malware, phishing y ransomware"
+        ]
+      },
+      {
+        "curso": "Idioma Inglés",
+        "cantidad_preguntas_en_examen": 10,
+        "temario_completo": [
+          "Verbo 'To Be' y pronombres personales",
+          "Uso de 'There is' y 'There are'",
+          "Sustantivos contables e incontables",
+          "Presente simple y pasado continuo",
+          "Preposiciones de lugar y tiempo",
+          "Preguntas con 'Wh-' (What, Where, When, Who, Why, How)",
+          "Verbos regulares e irregulares en pasado simple",
+          "Artículos, adjetivos y adverbios"
+        ]
+      }
+    ]
+  },
+  {
+    "institucion_id": "EOFAP",
+    "institucion_nombre": "Escuela de Oficiales de la Fuerza Aérea del Perú Capitán FAP José Abelardo Quiñones",
+    "fuerza": "Fuerza Aérea del Perú",
+    "rango": "Oficiales",
+    "parametros_globales": {
+      "tiempo_total_minutos": 180,
+      "cantidad_total_preguntas": 100,
+      "segundos_limite_por_pregunta": 108
+    },
+    "sistema_calificacion": {
+      "escala": "Vigesimal (00.00 - 20.00)",
+      "nota_minima_aprobatoria": 12.0,
+      "puntos_respuesta_correcta": 1.0,
+      "puntos_respuesta_incorrecta": -0.25,
+      "puntos_respuesta_blanco": 0.0
+    },
+    "distribucion_por_cursos": [
+      {
+        "curso": "Álgebra",
+        "cantidad_preguntas_en_examen": 12,
+        "temario_completo": [
+          "Teoría de exponentes, potenciación y leyes de radicación",
+          "Ecuaciones algebraicas y exponenciales",
+          "Polinomios de una y varias variables, grado absoluto y relativo",
+          "Productos notables y simplificaciones algebraicas complejas",
+          "División de polinomios y Teorema de Descartes",
+          "Cocientes notables y término general",
+          "Factorización y fracciones algebraicas",
+          "Ecuaciones cuadráticas, naturaleza de las raíces y Teorema de Cardano-Vieta",
+          "Matrices y determinantes de orden 2 y 3",
+          "Sistemas de ecuaciones lineales (Regla de Cramer)",
+          "Desigualdades, inecuaciones lineales y cuadráticas",
+          "Funciones reales, dominio, rango y función inversa",
+          "Logaritmos: Definición, propiedades y ecuaciones logarítmicas"
+        ]
+      },
+      {
+        "curso": "Aritmética",
+        "cantidad_preguntas_en_examen": 12,
+        "temario_completo": [
+          "Lógica proposicional, operadores lógicos y circuitos conmutadores",
+          "Teoría de conjuntos y problemas con diagramas de Venn",
+          "Sistemas de numeración y cambios de base",
+          "Cuatro operaciones fundamentales y complementos aritméticos",
+          "Divisibilidad y criterios de multiplicidad",
+          "Números primos, teorema fundamental de la aritmética y cantidad de divisores",
+          "Máximo Común Divisor y Mínimo Común Múltiplo (Algoritmo de Euclides)",
+          "Números racionales y fracciones continuas",
+          "Razones, proporciones y series de razones geométricas",
+          "Regla de tres simple y compuesta",
+          "Tanto por ciento y aplicaciones financieras comerciales",
+          "Regla de interés simple y compuesto",
+          "Nociones fundamentales de probabilidad clásica"
+        ]
+      },
+      {
+        "curso": "Geometría y Trigonometría",
+        "cantidad_preguntas_en_examen": 14,
+        "temario_completo": [
+          "Ángulos y rectas paralelas cortadas por una secante",
+          "Triángulos: Propiedades, líneas y puntos notables (Ortocentro, Baricentro, Circuncentro, Incentro)",
+          "Congruencia y semejanza de triángulos",
+          "Relaciones métricas en el triángulo rectángulo y Teorema de Pitágoras",
+          "Polígonos regulares y circunferencias",
+          "Áreas de regiones poligonales y circulares",
+          "Geometría del espacio: Rectas, planos, poliedros regulares y cuerpos redondos",
+          "Sistemas de medida angular (Sexagesimal, centesimal y radial)",
+          "Longitud de arco y sector circular",
+          "Razones trigonométricas de ángulos agudos, notables y en posición normal",
+          "Identidades trigonométricas fundamentales y de arcos compuestos",
+          "Ángulo doble, mitad y triple",
+          "Ecuaciones trigonométricas y resolución de triángulos oblicuángulos (Leyes de Senos y Cosenos)"
+        ]
+      },
+      {
+        "curso": "Física Elemental y Mecánica Celeste",
+        "cantidad_preguntas_en_examen": 14,
+        "temario_completo": [
+          "Análisis dimensional y ecuaciones homogéneas",
+          "Vectores en dos y tres dimensiones (Producto escalar y vectorial)",
+          "Cinemática lineal y circular: MRU, MRUV, Caída libre, Tiro parabólico y MCU/MCUV",
+          "Dinámica lineal y circular: Leyes de Newton y fuerzas centrípetas",
+          "Estática: Condiciones de equilibrio y momentos de fuerza (Torque)",
+          "Trabajo, energía cinética, energía potencial y ley de conservación mecánica",
+          "Impulso y cantidad de movimiento: Choques elásticos e inelásticos",
+          "Gravitación universal y leyes de Kepler de movimiento planetario",
+          "Hidrostática y principios aerodinámicos: Presión, Principio de Pascal y Principio de Bernoulli",
+          "Termometría, calorimetría y leyes de la termodinámica",
+          "Electrostática (Ley de Coulomb y campo eléctrico)",
+          "Electrodinámica y Ley de Ohm",
+          "Electromagnetismo e inducción electromagnética"
+        ]
+      },
+      {
+        "curso": "Química General",
+        "cantidad_preguntas_en_examen": 8,
+        "temario_completo": [
+          "La materia: Clasificación, estados físicos y cambios de fase",
+          "Estructura atómica moderna, modelos atómicos y números cuánticos",
+          "Configuración electrónica según el principio de Aufbau",
+          "Tabla periódica moderna y periodicidad de propiedades",
+          "Enlaces químicos: Iónico, covalente y fuerzas intermoleculares",
+          "Nomenclatura química inorgánica (Óxidos, hidróxidos, ácidos y sales)",
+          "Gases ideales: Ecuación universal y leyes de Boyle, Charles y Gay-Lussac",
+          "Reacciones químicas y balance estequiométrico",
+          "Combustibles de aviación (Kerosene JET A-1), termoquímica y combustión"
+        ]
+      },
+      {
+        "curso": "Lenguaje y Comunicación",
+        "cantidad_preguntas_en_examen": 12,
+        "temario_completo": [
+          "La comunicación: Elementos, fases y funciones del lenguaje",
+          "Fonología, fonética y división silábica",
+          "Acentuación ortográfica: General, especial, diacrítica y enfática",
+          "Uso reglamentario de mayúsculas y grafías dudosas (B-V, C-S-Z, G-J)",
+          "Signos de puntuación y entonación",
+          "Morfología: Clases de palabras y flexión nominal/verbal",
+          "Sintaxis: Estructura del sujeto, predicado y complementos",
+          "Coherencia, cohesión y conectores discursivos",
+          "Técnicas de redacción formal, ensayos y análisis de textos argumentativos"
+        ]
+      },
+      {
+        "curso": "Historia del Perú y Universal",
+        "cantidad_preguntas_en_examen": 10,
+        "temario_completo": [
+          "Primeros pobladores de los Andes y civilizaciones preincas",
+          "El Tahuantinsuyo: Gobierno, expansión militar y decadencia",
+          "Conquista, Virreinato y el proceso de emancipación nacional",
+          "La Guerra del Pacífico: Campañas militares y lecciones tácticas",
+          "Historia aeronáutica nacional: Jorge Chávez y el cruce de los Alpes",
+          "El héroe nacional Capitán FAP José Abelardo Quiñones en el combate de Quebrada Seca (1941)",
+          "Guerra de 1941, conflicto del Falso Paquisha (1981) y Guerra del Cenepa (1995)",
+          "Conflictos aeroespaciales del siglo XX: Primera y Segunda Guerra Mundial, y la era de los jets en la Guerra Fría"
+        ]
+      },
+      {
+        "curso": "Geografía y Geopolítica",
+        "cantidad_preguntas_en_examen": 8,
+        "temario_completo": [
+          "Cartografía, coordenadas geográficas y husos horarios mundiales",
+          "Estructura del espacio aéreo peruano y convenios internacionales",
+          "Relieve peruano, cordillera de los Andes y valles interandinos",
+          "Climas del Perú y meteorología aeronáutica básica",
+          "El Mar de Grau y soberanía marítimo-aérea",
+          "Geopolítica del Perú: Fronteras vivas, soberanía nacional y proyección en la Cuenca del Pacífico y la Antártida"
+        ]
+      },
+      {
+        "curso": "Computación e Informática",
+        "cantidad_preguntas_en_examen": 5,
+        "temario_completo": [
+          "Arquitectura de computadoras y unidades de procesamiento",
+          "Sistemas operativos modernos y seguridad informática",
+          "Herramientas de ofimática avanzada (Hojas de cálculo y bases de datos)",
+          "Redes, protocolos de comunicación y ciberseguridad militar"
+        ]
+      },
+      {
+        "curso": "Idioma Inglés Aeronáutico y General",
+        "cantidad_preguntas_en_examen": 5,
+        "temario_completo": [
+          "Estructuras gramaticales en presente, pasado y futuro",
+          "Voz pasiva y oraciones condicionales (Zero, First, Second conditional)",
+          "Vocabulario aeronáutico internacional de la OACI",
+          "Comprensión de lectura de manuales técnicos en inglés"
+        ]
+      }
+    ]
+  },
+  {
+    "institucion_id": "ESOFA",
+    "institucion_nombre": "Escuela de Suboficiales de la Fuerza Aérea del Perú Manuel Polo Jiménez",
+    "fuerza": "Fuerza Aérea del Perú",
+    "rango": "Suboficiales",
+    "parametros_globales": {
+      "tiempo_total_minutos": 360,
+      "cantidad_total_preguntas": 200,
+      "segundos_limite_por_pregunta": 108
+    },
+    "sistema_calificacion": {
+      "escala": "Vigesimal (00.00 - 20.00)",
+      "nota_minima_aprobatoria": 12.0,
+      "puntos_respuesta_correcta": 1.0,
+      "puntos_respuesta_incorrecta": -0.25,
+      "puntos_respuesta_blanco": 0.0
+    },
+    "distribucion_por_cursos": [
+      {
+        "curso": "Razonamiento Matemático",
+        "cantidad_preguntas_en_examen": 50,
+        "temario_completo": [
+          "Razonamiento numérico: Sucesiones, analogías y distribuciones",
+          "Razonamiento abstracto: Giros espaciales y desarrollo de sólidos",
+          "Razonamiento espacial y conteo de superficies",
+          "Operadores matemáticos y operaciones binarias",
+          "Planteo de ecuaciones lineales y fraccionarias",
+          "Problemas sobre edades y cronometría",
+          "Máximos, mínimos y certezas",
+          "Análisis combinatorio y probabilidades elementales"
+        ]
+      },
+      {
+        "curso": "Razonamiento Académico / Verbal",
+        "cantidad_preguntas_en_examen": 50,
+        "temario_completo": [
+          "Comprensión lectora de textos expositivos y técnicos",
+          "Sinónimos y antónimos directos y contextuales",
+          "Término excluido y analogías verbales",
+          "Oraciones incompletas y precisión léxica",
+          "Conectores lógicos y marcadores de discurso",
+          "Plan de redacción y eliminación de oraciones"
+        ]
+      },
+      {
+        "curso": "Aritmética",
+        "cantidad_preguntas_en_examen": 8,
+        "temario_completo": [
+          "Lógica proposicional y teoría de conjuntos",
+          "Sistemas de numeración y cuatro operaciones",
+          "Divisibilidad y criterios de divisibilidad",
+          "Números primos, MCM y MCD",
+          "Fracciones, razones y proporciones",
+          "Regla de tres simple y compuesta",
+          "Porcentajes y aplicaciones comerciales"
+        ]
+      },
+      {
+        "curso": "Álgebra",
+        "cantidad_preguntas_en_examen": 8,
+        "temario_completo": [
+          "Teoría de exponentes y polinomios",
+          "Productos notables y división algebraica",
+          "Factorización y fracciones algebraicas",
+          "Ecuaciones lineales y cuadráticas",
+          "Desigualdades e inecuaciones",
+          "Logaritmos y funciones reales"
+        ]
+      },
+      {
+        "curso": "Geometría",
+        "cantidad_preguntas_en_examen": 8,
+        "temario_completo": [
+          "Ángulos y triángulos: Líneas y puntos notables",
+          "Congruencia de triángulos y Teorema de Pitágoras",
+          "Polígonos, cuadriláteros y circunferencia",
+          "Relaciones métricas y áreas de regiones poligonales",
+          "Geometría del espacio (Prisma, cilindro y esfera)"
+        ]
+      },
+      {
+        "curso": "Trigonometría",
+        "cantidad_preguntas_en_examen": 8,
+        "temario_completo": [
+          "Sistemas de medida angular y longitud de arco",
+          "Razones trigonométricas de ángulos agudos y notables",
+          "Ángulos verticales (Elevación y depresión)",
+          "Razones trigonométricas en posición normal",
+          "Identidades trigonométricas y ecuaciones trigonométricas",
+          "Resolución de triángulos oblicuángulos"
+        ]
+      },
+      {
+        "curso": "Física",
+        "cantidad_preguntas_en_examen": 8,
+        "temario_completo": [
+          "Análisis dimensional y vectores",
+          "Cinemática (MRU, MRUV, Caída libre y Parabólico)",
+          "Estática y dinámica lineal de Newton",
+          "Trabajo, potencia y energía mecánica",
+          "Hidrostática (Presión, Principio de Pascal y Arquímedes)",
+          "Termometría y calorimetría",
+          "Electrostática y circuitos eléctricos (Ley de Ohm)"
+        ]
+      },
+      {
+        "curso": "Química",
+        "cantidad_preguntas_en_examen": 5,
+        "temario_completo": [
+          "Materia, propiedades y estados de agregación",
+          "Estructura atómica moderna y configuración electrónica",
+          "Tabla periódica de los elementos",
+          "Enlaces químicos y nomenclatura inorgánica",
+          "Reacciones químicas y nociones de hidrocarburos"
+        ]
+      },
+      {
+        "curso": "Informática",
+        "cantidad_preguntas_en_examen": 5,
+        "temario_completo": [
+          "Componentes de hardware y periféricos de computadora",
+          "Sistemas operativos y manejo de archivos",
+          "Ofimática: Procesadores de textos y hojas de cálculo",
+          "Internet, navegación segura y prevención de virus informáticos"
+        ]
+      },
+      {
+        "curso": "Lenguaje y Literatura",
+        "cantidad_preguntas_en_examen": 18,
+        "temario_completo": [
+          "La comunicación humana y niveles del lenguaje",
+          "Ortografía, sílaba, acentuación y signos de puntuación",
+          "Morfología: Sustantivo, adjetivo, pronombre y verbo",
+          "Sintaxis: Oración simple y compuesta",
+          "Géneros y figuras literarias",
+          "Literatura peruana y universal destacada"
+        ]
+      },
+      {
+        "curso": "Historia y Geografía del Perú",
+        "cantidad_preguntas_en_examen": 16,
+        "temario_completo": [
+          "Culturas prehispánicas y el Imperio Incaico",
+          "Conquista, Virreinato e Independencia del Perú",
+          "Guerra del Pacífico y héroes de la aviación peruana",
+          "Geografía física del Perú: Regiones naturales y cuencas",
+          "El Mar de Grau y geopolítica de fronteras"
+        ]
+      },
+      {
+        "curso": "Cultura General y Actualidad",
+        "cantidad_preguntas_en_examen": 8,
+        "temario_completo": [
+          "Acontecimientos cívicos y constitucionales del Perú",
+          "Estructura de los poderes del Estado Peruano",
+          "Acontecimientos geopolíticos mundiales recientes",
+          "Organizaciones internacionales (ONU, OEA, OTAN)"
+        ]
+      },
+      {
+        "curso": "Idioma Inglés",
+        "cantidad_preguntas_en_examen": 8,
+        "temario_completo": [
+          "Gramática básica en tiempo presente y pasado",
+          "Pronombres, preposiciones y vocabulario general",
+          "Comprensión de oraciones y textos breves"
+        ]
+      }
+    ]
+  },
+  {
+    "institucion_id": "EO_PNP",
+    "institucion_nombre": "Escuela de Oficiales de la Policía Nacional del Perú Mariano Santos Mateo",
+    "fuerza": "Policía Nacional del Perú",
+    "rango": "Oficiales",
+    "parametros_globales": {
+      "tiempo_total_minutos": 180,
+      "cantidad_total_preguntas": 100,
+      "segundos_limite_por_pregunta": 108
+    },
+    "sistema_calificacion": {
+      "escala": "Vigesimal (00.00 - 20.00)",
+      "nota_minima_aprobatoria": 11.0,
+      "puntos_respuesta_correcta": 1.0,
+      "puntos_respuesta_incorrecta": -0.25,
+      "puntos_respuesta_blanco": 0.0
+    },
+    "distribucion_por_cursos": [
+      {
+        "curso": "Matemáticas",
+        "cantidad_preguntas_en_examen": 15,
+        "temario_completo": [
+          "Operaciones algebraicas fundamentales y factorización",
+          "Ecuaciones lineales y cuadráticas",
+          "Suma de ángulos en el triángulo y polígonos",
+          "Teorema de Pitágoras y relaciones métricas básicas",
+          "Funciones trigonométricas en el triángulo rectángulo",
+          "Razones y proporciones y regla de tres simple"
+        ]
+      },
+      {
+        "curso": "Comunicación",
+        "cantidad_preguntas_en_examen": 15,
+        "temario_completo": [
+          "Reglas ortográficas y uso de grafías (B-V, C-S-Z, G-J, H)",
+          "Acentuación general, diacrítica y especial",
+          "La oración gramatical: Sujeto, predicado y concordancias",
+          "La narración: Estructura, elementos y tipos de textos",
+          "Literatura peruana representativa (Época prehispánica, colonial, republicana y contemporánea)"
+        ]
+      },
+      {
+        "curso": "Ciencias Sociales",
+        "cantidad_preguntas_en_examen": 10,
+        "temario_completo": [
+          "Proceso de hominización y poblamiento de América",
+          "El Tahuantinsuyo: Evolución histórica, estructura social y política",
+          "Parques, santuarios y reservas nacionales del Perú",
+          "Ecosistemas, tecnología y desarrollo sostenido",
+          "Redes viales del Perú: Características, tipos e importancia para el desarrollo y seguridad nacional"
+        ]
+      },
+      {
+        "curso": "Ciencia, Tecnología y Ambiente",
+        "cantidad_preguntas_en_examen": 15,
+        "temario_completo": [
+          "Materia y energía: Estados físicos y propiedades de la materia",
+          "El sistema solar y el planeta Tierra (Capas de la Tierra)",
+          "Tabla periódica de los elementos químicos y símbolos fundamentales",
+          "Los vegetales, estructura celular y el proceso de fotosíntesis",
+          "Fenómenos naturales, desastres ecológicos y cambio climático"
+        ]
+      },
+      {
+        "curso": "Persona, Familia y Relaciones Humanas",
+        "cantidad_preguntas_en_examen": 15,
+        "temario_completo": [
+          "Cultura de paz, convivencia ciudadana, diálogo y resolución pacífica de conflictos",
+          "Derechos Humanos y garantías constitucionales",
+          "Identidad personal, identidad nacional y normas de convivencia social",
+          "Autoestima, inteligencia emocional y autocuidado",
+          "Funciones de la familia, roles y prevención de la violencia familiar y de género"
+        ]
+      },
+      {
+        "curso": "Razonamiento Matemático",
+        "cantidad_preguntas_en_examen": 15,
+        "temario_completo": [
+          "Sucesiones numéricas, literales y gráficas",
+          "Razonamiento lógico inductivo y deductivo",
+          "Planteo de ecuaciones y problemas de edades",
+          "Fracciones, reducción a la unidad y porcentajes",
+          "Tanto por ciento y aplicaciones cotidianas"
+        ]
+      },
+      {
+        "curso": "Razonamiento Verbal",
+        "cantidad_preguntas_en_examen": 15,
+        "temario_completo": [
+          "Sinónimos y precisión léxica",
+          "Antónimos contextuales",
+          "Comprensión de lectura (Identificación de tema principal e inferencias)",
+          "Conectores lógicos y cohesión textual",
+          "Plan de redacción y ordenamiento de enunciados"
+        ]
+      }
+    ]
+  },
+  {
+    "institucion_id": "EESTP_PNP",
+    "institucion_nombre": "Escuelas de Educación Superior Técnico Profesional de la Policía Nacional del Perú",
+    "fuerza": "Policía Nacional del Perú",
+    "rango": "Suboficiales",
+    "parametros_globales": {
+      "tiempo_total_minutos": 180,
+      "cantidad_total_preguntas": 100,
+      "segundos_limite_por_pregunta": 108
+    },
+    "sistema_calificacion": {
+      "escala": "Vigesimal (00.00 - 20.00)",
+      "nota_minima_aprobatoria": 11.0,
+      "puntos_respuesta_correcta": 1.0,
+      "puntos_respuesta_incorrecta": -0.25,
+      "puntos_respuesta_blanco": 0.0
+    },
+    "distribucion_por_cursos": [
+      {
+        "curso": "Matemáticas",
+        "cantidad_preguntas_en_examen": 15,
+        "temario_completo": [
+          "Operaciones algebraicas básicas, polinomios y factorización",
+          "Ecuaciones e inecuaciones de primer y segundo grado",
+          "Geometría plana: Triángulos, cuadriláteros y polígonos regulares",
+          "Teorema de Pitágoras y propiedades métricas fundamentales",
+          "Funciones trigonométricas elementales (Seno, Coseno, Tangente)",
+          "Aritmética comercial: Razones, proporciones, porcentajes y regla de tres"
+        ]
+      },
+      {
+        "curso": "Comunicación",
+        "cantidad_preguntas_en_examen": 15,
+        "temario_completo": [
+          "Reglas ortográficas de escritura y uso de mayúsculas",
+          "Acentuación ortográfica general, especial y diacrítica",
+          "Morfosintaxis: La oración gramatical, concordancia sujeto-predicado",
+          "La narración: Estructura de inicio, nudo, desenlace y elementos del relato",
+          "Literatura peruana básica: Representantes de la narrativa y poesía nacional"
+        ]
+      },
+      {
+        "curso": "Ciencias Sociales",
+        "cantidad_preguntas_en_examen": 10,
+        "temario_completo": [
+          "El proceso de hominización y restos fósiles",
+          "El Tahuantinsuyo: Gobierno incaico, agricultura, cosmovisión y ejército",
+          "Áreas naturales protegidas: Parques, santuarios y reservas nacionales del Perú",
+          "Ecosistemas, tecnología, desarrollo sostenido y conservación ambiental",
+          "Redes viales peruanas: Rutas nacionales, departamentales e integración territorial"
+        ]
+      },
+      {
+        "curso": "Ciencia, Tecnología y Ambiente",
+        "cantidad_preguntas_en_examen": 15,
+        "temario_completo": [
+          "Materia y energía: Estados físicos, propiedades generales y particulares",
+          "El sistema solar, movimientos terrestres y atmósfera",
+          "Tabla periódica moderna de los elementos y símbolos químicos",
+          "El reino vegetal, fotosíntesis y equilibrio biológico",
+          "Fenómenos naturales, prevención de desastres y cambio climático"
+        ]
+      },
+      {
+        "curso": "Persona, Familia y Relaciones Humanas",
+        "cantidad_preguntas_en_examen": 15,
+        "temario_completo": [
+          "Cultura de paz, convivencia social, mediación y resolución de controversias",
+          "Declaración Universal de los Derechos Humanos y Constitución Política del Perú",
+          "Identidad ciudadana, civismo y cumplimiento de las normas de convivencia",
+          "Autoestima, inteligencia emocional y prevención de conductas de riesgo",
+          "La familia como núcleo social, valores éticos y prevención de la violencia intrafamiliar"
+        ]
+      },
+      {
+        "curso": "Razonamiento Matemático",
+        "cantidad_preguntas_en_examen": 15,
+        "temario_completo": [
+          "Sucesiones numéricas, alfanuméricas y series lógicas",
+          "Razonamiento lógico inductivo y deductivo",
+          "Planteo de ecuaciones y problemas sobre edades",
+          "Problemas de fracciones y reducción a la unidad",
+          "Tanto por ciento y aplicaciones mercantiles simples"
+        ]
+      },
+      {
+        "curso": "Razonamiento Verbal",
+        "cantidad_preguntas_en_examen": 15,
+        "temario_completo": [
+          "Sinónimos absolutos y relativos",
+          "Antónimos y antonimia contextual",
+          "Comprensión de textos (Identificación de tema central, idea principal e inferencia)",
+          "Conectores lógicos y marcadores discursivos",
+          "Plan de redacción y eliminación de oraciones por redundancia o impertinencia"
+        ]
+      }
+    ]
+  }
+]

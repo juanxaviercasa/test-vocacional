@@ -1,0 +1,302 @@
+[
+  {
+    "id": 1,
+    "domain": "E",
+    "text": "Soy el alma de las fiestas y reuniones.",
+    "reversed": false
+  },
+  {
+    "id": 2,
+    "domain": "E",
+    "text": "No hablo mucho en situaciones sociales.",
+    "reversed": true
+  },
+  {
+    "id": 3,
+    "domain": "E",
+    "text": "Me siento muy cómodo y seguro rodeado de gente.",
+    "reversed": false
+  },
+  {
+    "id": 4,
+    "domain": "E",
+    "text": "Prefiero mantenerme en segundo plano y pasar desapercibido.",
+    "reversed": true
+  },
+  {
+    "id": 5,
+    "domain": "E",
+    "text": "Tomo la iniciativa para entablar conversaciones y liderar.",
+    "reversed": false
+  },
+  {
+    "id": 6,
+    "domain": "E",
+    "text": "Tengo poco que decir cuando estoy en grupos grandes.",
+    "reversed": true
+  },
+  {
+    "id": 7,
+    "domain": "E",
+    "text": "Converso con facilidad con muchas personas diferentes.",
+    "reversed": false
+  },
+  {
+    "id": 8,
+    "domain": "E",
+    "text": "No me gusta llamar la atención sobre mí mismo.",
+    "reversed": true
+  },
+  {
+    "id": 9,
+    "domain": "E",
+    "text": "No me importa ser el centro de atención en una reunión.",
+    "reversed": false
+  },
+  {
+    "id": 10,
+    "domain": "E",
+    "text": "Suelo ser callado y reservado con personas desconocidas.",
+    "reversed": true
+  },
+  {
+    "id": 11,
+    "domain": "A",
+    "text": "Siento poco interés o preocupación por los problemas de los demás.",
+    "reversed": true
+  },
+  {
+    "id": 12,
+    "domain": "A",
+    "text": "Me intereso sinceramente por el bienestar de las personas.",
+    "reversed": false
+  },
+  {
+    "id": 13,
+    "domain": "A",
+    "text": "A veces insulto o hago sentir mal a otros cuando me provocan.",
+    "reversed": true
+  },
+  {
+    "id": 14,
+    "domain": "A",
+    "text": "Comprendo con facilidad los sentimientos y emociones ajenas.",
+    "reversed": false
+  },
+  {
+    "id": 15,
+    "domain": "A",
+    "text": "No me conmueven fácilmente las dificultades de los demás.",
+    "reversed": true
+  },
+  {
+    "id": 16,
+    "domain": "A",
+    "text": "Tengo un corazón compasivo y presto auxilio a quien lo requiere.",
+    "reversed": false
+  },
+  {
+    "id": 17,
+    "domain": "A",
+    "text": "Raras veces me intereso por lo que sienten otras personas.",
+    "reversed": true
+  },
+  {
+    "id": 18,
+    "domain": "A",
+    "text": "Dedico tiempo y esfuerzo para ayudar a mis compañeros.",
+    "reversed": false
+  },
+  {
+    "id": 19,
+    "domain": "A",
+    "text": "Siento una auténtica empatía por los que sufren.",
+    "reversed": false
+  },
+  {
+    "id": 20,
+    "domain": "A",
+    "text": "Hago que la gente a mi alrededor se sienta valorada y cómoda.",
+    "reversed": false
+  },
+  {
+    "id": 21,
+    "domain": "C",
+    "text": "Siempre estoy preparado y con mi equipo listo con anticipación.",
+    "reversed": false
+  },
+  {
+    "id": 22,
+    "domain": "C",
+    "text": "A menudo dejo mis pertenencias y área de trabajo desordenadas.",
+    "reversed": true
+  },
+  {
+    "id": 23,
+    "domain": "C",
+    "text": "Presto minuciosa atención a los detalles y procedimientos.",
+    "reversed": false
+  },
+  {
+    "id": 24,
+    "domain": "C",
+    "text": "Suelo cometer descuidos o desorganizaciones en mis deberes.",
+    "reversed": true
+  },
+  {
+    "id": 25,
+    "domain": "C",
+    "text": "Cumplo con mis tareas y obligaciones de inmediato sin postergarlas.",
+    "reversed": false
+  },
+  {
+    "id": 26,
+    "domain": "C",
+    "text": "A veces olvido regresar las cosas a su lugar correspondiente.",
+    "reversed": true
+  },
+  {
+    "id": 27,
+    "domain": "C",
+    "text": "Me gusta trabajar siguiendo un orden, horario y método estricto.",
+    "reversed": false
+  },
+  {
+    "id": 28,
+    "domain": "C",
+    "text": "A veces evado o esquivo mis deberes y responsabilidades.",
+    "reversed": true
+  },
+  {
+    "id": 29,
+    "domain": "C",
+    "text": "Trabajo arduamente y con tenacidad hasta lograr mis metas.",
+    "reversed": false
+  },
+  {
+    "id": 30,
+    "domain": "C",
+    "text": "Suelo actuar con rigor y meticulosidad en todo lo que hago.",
+    "reversed": false
+  },
+  {
+    "id": 31,
+    "domain": "N",
+    "text": "Me estreso y altero con facilidad ante los imprevistos.",
+    "reversed": false
+  },
+  {
+    "id": 32,
+    "domain": "N",
+    "text": "La mayor parte del tiempo me mantengo sereno y relajado.",
+    "reversed": true
+  },
+  {
+    "id": 33,
+    "domain": "N",
+    "text": "Me preocupo en exceso por cosas que escapan de mi control.",
+    "reversed": false
+  },
+  {
+    "id": 34,
+    "domain": "N",
+    "text": "Rara vez me siento triste, desanimado o deprimido.",
+    "reversed": true
+  },
+  {
+    "id": 35,
+    "domain": "N",
+    "text": "Me irrito y molesto con rapidez cuando las cosas no salen bien.",
+    "reversed": false
+  },
+  {
+    "id": 36,
+    "domain": "N",
+    "text": "Me recupero rápidamente después de una experiencia estresante.",
+    "reversed": true
+  },
+  {
+    "id": 37,
+    "domain": "N",
+    "text": "A menudo cambio de estado de ánimo de manera repentina.",
+    "reversed": false
+  },
+  {
+    "id": 38,
+    "domain": "N",
+    "text": "Rara vez pierdo la compostura o la calma ante una crisis.",
+    "reversed": true
+  },
+  {
+    "id": 39,
+    "domain": "N",
+    "text": "Con frecuencia me siento abrumado o ansioso sin motivo claro.",
+    "reversed": false
+  },
+  {
+    "id": 40,
+    "domain": "N",
+    "text": "Me mantengo firme, enfocado y tranquilo bajo alta presión.",
+    "reversed": true
+  },
+  {
+    "id": 41,
+    "domain": "O",
+    "text": "Poseo un vocabulario amplio y facilidad para conceptos abstractos.",
+    "reversed": false
+  },
+  {
+    "id": 42,
+    "domain": "O",
+    "text": "Tengo dificultad para entender ideas abstractas o teorías complejas.",
+    "reversed": true
+  },
+  {
+    "id": 43,
+    "domain": "O",
+    "text": "Tengo una imaginación fértil y visualizo soluciones creativas.",
+    "reversed": false
+  },
+  {
+    "id": 44,
+    "domain": "O",
+    "text": "No tengo interés en discusiones filosóficas, teóricas o artísticas.",
+    "reversed": true
+  },
+  {
+    "id": 45,
+    "domain": "O",
+    "text": "Disfruto reflexionando y aprendiendo sobre tecnología y ciencia.",
+    "reversed": false
+  },
+  {
+    "id": 46,
+    "domain": "O",
+    "text": "Raras veces imagino o fantaseo sobre escenarios hipotéticos.",
+    "reversed": true
+  },
+  {
+    "id": 47,
+    "domain": "O",
+    "text": "Capto las cosas con rapidez y aprendo procedimientos técnicos ágilmente.",
+    "reversed": false
+  },
+  {
+    "id": 48,
+    "domain": "O",
+    "text": "Prefiero lo tradicional conocido antes que probar métodos nuevos.",
+    "reversed": true
+  },
+  {
+    "id": 49,
+    "domain": "O",
+    "text": "Me gusta analizar problemas complejos desde múltiples perspectivas.",
+    "reversed": false
+  },
+  {
+    "id": 50,
+    "domain": "O",
+    "text": "Me considero una persona intelectualmente curiosa y reflexiva.",
+    "reversed": false
+  }
+]

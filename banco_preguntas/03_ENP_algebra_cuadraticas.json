@@ -1,0 +1,542 @@
+[
+  {
+    "id_pregunta": "ENP_ALG_CUA_001",
+    "curso": "Álgebra",
+    "tema": "Ecuaciones Cuadráticas",
+    "nivel_dificultad": 1,
+    "enunciado": "Si $x = 2$ es una de las soluciones de la ecuación cuadrática $3x^2 - mx + 8 = 0$, determine el valor del parámetro $m$.",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$m = 10$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$m = 8$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$m = -10$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$m = 14$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$m = 7$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Sustituimos $x = 2$ en la ecuación: $3(2)^2 - m(2) + 8 = 0 \\implies 12 - 2m + 8 = 0 \\implies 20 = 2m \\implies m = 10$."
+  },
+  {
+    "id_pregunta": "ENP_ALG_CUA_002",
+    "curso": "Álgebra",
+    "tema": "Ecuaciones Cuadráticas",
+    "nivel_dificultad": 1,
+    "enunciado": "Encuentre el valor constante de $c$ para que la ecuación $x^2 + 10x + c = 0$ admita una solución única en el conjunto de los reales.",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$25$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$100$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$50$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$5$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$-25$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Solución única implica $\\Delta = 0 \\implies b^2 - 4ac = 10^2 - 4(1)(c) = 0 \\implies 100 - 4c = 0 \\implies c = 25$."
+  },
+  {
+    "id_pregunta": "ENP_ALG_CUA_003",
+    "curso": "Álgebra",
+    "tema": "Ecuaciones Cuadráticas",
+    "nivel_dificultad": 1,
+    "enunciado": "Dada la ecuación cuadrática $4x^2 + 12x - 7 = 0$, calcule la suma de sus raíces.",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$-3$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$3$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$-\\frac{7}{4}$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$\\frac{7}{4}$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$-12$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Por el teorema de Cardano-Vieta: $S = -\\frac{b}{a} = -\\frac{12}{4} = -3$."
+  },
+  {
+    "id_pregunta": "ENP_ALG_CUA_004",
+    "curso": "Álgebra",
+    "tema": "Ecuaciones Cuadráticas",
+    "nivel_dificultad": 1,
+    "enunciado": "En la ecuación $6x^2 - 5x - 18 = 0$, determine el producto de sus raíces.",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$-3$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$3$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$\\frac{5}{6}$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$-\\frac{5}{6}$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$-18$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "$P = \\frac{c}{a} = \\frac{-18}{6} = -3$."
+  },
+  {
+    "id_pregunta": "ENP_ALG_CUA_005",
+    "curso": "Álgebra",
+    "tema": "Ecuaciones Cuadráticas",
+    "nivel_dificultad": 2,
+    "enunciado": "Si las raíces $\\alpha$ y $\\beta$ de la ecuación $x^2 - 6x + c = 0$ verifican la condición $\\alpha^2 + \\beta^2 = 20$, determine el valor del término independiente $c$.",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$8$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$16$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$4$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$10$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$12$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "De la ecuación, $\\alpha + \\beta = 6$ y $\\alpha\\beta = c$. Sabemos que $\\alpha^2 + \\beta^2 = (\\alpha + \\beta)^2 - 2\\alpha\\beta$. Sustituyendo: $20 = (6)^2 - 2c \\implies 20 = 36 - 2c \\implies 2c = 16 \\implies c = 8$."
+  },
+  {
+    "id_pregunta": "ENP_ALG_CUA_006",
+    "curso": "Álgebra",
+    "tema": "Ecuaciones Cuadráticas",
+    "nivel_dificultad": 2,
+    "enunciado": "Determine el conjunto de valores de $k$ para los cuales la ecuación $x^2 + 2(k - 1)x + (k + 5) = 0$ posee raíces reales y distintas.",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$k \\in \\langle -\\infty, -1 \\rangle \\cup \\langle 4, +\\infty \\rangle$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$k \\in [-1, 4]$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$k \\in \\langle -1, 4 \\rangle$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$k \\in \\langle -\\infty, -4 \\rangle \\cup \\langle 1, +\\infty \\rangle$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$k > 4$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Para raíces reales y distintas: $\\Delta > 0 \\implies [2(k-1)]^2 - 4(1)(k+5) > 0 \\implies 4(k^2 - 2k + 1) - 4(k+5) > 0 \\implies k^2 - 3k - 4 > 0 \\implies (k - 4)(k + 1) > 0$. Los puntos críticos dan $k < -1$ o $k > 4$."
+  },
+  {
+    "id_pregunta": "ENP_ALG_CUA_007",
+    "curso": "Álgebra",
+    "tema": "Ecuaciones Cuadráticas",
+    "nivel_dificultad": 2,
+    "enunciado": "Calcule la suma de los cuadrados de todas las raíces reales de la ecuación bicuadrada: $$x^4 - 13x^2 + 36 = 0$$",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$26$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$13$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$52$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$36$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$169$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Factorizando como aspa simple: $(x^2 - 9)(x^2 - 4) = 0 \\implies x = \\pm 3$ y $x = \\pm 2$. La suma de sus cuadrados es: $3^2 + (-3)^2 + 2^2 + (-2)^2 = 9 + 9 + 4 + 4 = 26$."
+  },
+  {
+    "id_pregunta": "ENP_ALG_CUA_008",
+    "curso": "Álgebra",
+    "tema": "Ecuaciones Cuadráticas",
+    "nivel_dificultad": 2,
+    "enunciado": "En la ecuación $x^2 - 8x + k = 0$, determine el valor de $k$ sabiendo que una de sus raíces es el triple de la otra ($x_1 = 3x_2$).",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$12$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$16$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$15$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$9$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$6$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Suma: $x_1 + x_2 = 3x_2 + x_2 = 4x_2 = 8 \\implies x_2 = 2 \\implies x_1 = 6$. Producto: $k = x_1 x_2 = (6)(2) = 12$."
+  },
+  {
+    "id_pregunta": "ENP_ALG_CUA_009",
+    "curso": "Álgebra",
+    "tema": "Ecuaciones Cuadráticas",
+    "nivel_dificultad": 3,
+    "enunciado": "Desde una fragata misilera de la Marina de Guerra en el Mar de Grau, se lanza un cohete bengala de iluminación naval cuya altitud $h(t)$ (en metros) respecto a la superficie del mar en función del tiempo $t$ (en segundos) está dada por: $$h(t) = -5t^2 + 100t$$ ¿En qué instantes de tiempo la bengala se encuentra a una cota exacta de $420\\text{{ metros}}$ sobre el nivel del mar?",
+    "apoyo_visual": {
+      "requiere_grafico": true,
+      "imagen_url": null,
+      "descripcion_para_diseñador": "Trayectoria balística parabólica de bengala sobre el mar, con corte horizontal en h = 420 m identificando los instantes t = 6 s (ascenso) y t = 14 s (descenso)."
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$t = 4\\text{ s y } t = 16\\text{ s}$",
+        "es_correcta": false
+      },
+      {
+        "id": "B",
+        "texto": "$t = 6\\text{ s y } t = 14\\text{ s}$",
+        "es_correcta": true
+      },
+      {
+        "id": "C",
+        "texto": "$t = 5\\text{ s y } t = 15\\text{ s}$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$t = 7\\text{ s y } t = 13\\text{ s}$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$t = 8\\text{ s y } t = 12\\text{ s}$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Igualamos $h(t) = 420 \\implies -5t^2 + 100t = 420 \\implies 5t^2 - 100t + 420 = 0$. Dividiendo entre 5: $t^2 - 20t + 84 = 0 \\implies (t - 6)(t - 14) = 0$. Las soluciones son $t = 6\\text{ s}$ (fase de ascenso) y $t = 14\\text{ s}$ (fase de caída)."
+  },
+  {
+    "id_pregunta": "ENP_ALG_CUA_010",
+    "curso": "Álgebra",
+    "tema": "Ecuaciones Cuadráticas",
+    "nivel_dificultad": 3,
+    "enunciado": "Dos patrulleras marítimas de la Dirección de Capitanías y Guardacostas zarpan simultáneamente de la Base Naval del Callao siguiendo rumbos rectilíneos perpendiculares entre sí (Norte y Este). La patrullera Alfa navega a una velocidad de crucero constante que supera en $7\\text{ nudos}$ a la patrullera Bravo. Si transcurridas $2\\text{ horas}$ la distancia en línea recta entre ambos buques es de exactamente $26\\text{ millas náuticas}$, determine la velocidad de navegación de la patrullera Bravo.",
+    "apoyo_visual": {
+      "requiere_grafico": true,
+      "imagen_url": null,
+      "descripcion_para_diseñador": "Triángulo rectángulo de navegación: origen en Callao, cateto vertical hacia el Norte recorrido por patrullera Alfa (2*(v+7)), cateto horizontal hacia el Este recorrido por patrullera Bravo (2v), e hipotenusa de 26 millas náuticas."
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$4\\text{ nudos}$",
+        "es_correcta": false
+      },
+      {
+        "id": "B",
+        "texto": "$5\\text{ nudos}$",
+        "es_correcta": true
+      },
+      {
+        "id": "C",
+        "texto": "$6\\text{ nudos}$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$7\\text{ nudos}$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$8\\text{ nudos}$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Distancia de Bravo: $d_B = 2v$. Distancia de Alfa: $d_A = 2(v + 7)$. Por Pitágoras: $[2(v + 7)]^2 + (2v)^2 = 26^2 \\implies 4(v + 7)^2 + 4v^2 = 676$. Dividiendo entre 4: $(v + 7)^2 + v^2 = 169 \\implies 2v^2 + 14v + 49 = 169 \\implies 2v^2 + 14v - 120 = 0 \\implies v^2 + 7v - 60 = 0 \\implies (v + 12)(v - 5) = 0$. Como la velocidad es positiva: $v = 5\\text{ nudos}$."
+  },
+  {
+    "id_pregunta": "ENP_ALG_CUA_011",
+    "curso": "Álgebra",
+    "tema": "Ecuaciones Cuadráticas",
+    "nivel_dificultad": 3,
+    "enunciado": "Si $r_1$ y $r_2$ son las raíces de la ecuación $2x^2 - 6x + 1 = 0$, construya la ecuación cuadrática mónica cuyas raíces sean $\\frac{1}{r_1^2}$ y $\\frac{1}{r_2^2}$.",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$x^2 - 32x + 4 = 0$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$x^2 - 36x + 4 = 0$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$x^2 - 16x + 2 = 0$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$x^2 + 32x + 4 = 0$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$x^2 - 34x + 1 = 0$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "$r_1 + r_2 = 3$ y $r_1 r_2 = \\frac{1}{2}$. Entonces $r_1^2 + r_2^2 = 3^2 - 2(1/2) = 8$. Nueva suma: $S' = \\frac{r_1^2 + r_2^2}{(r_1 r_2)^2} = \\frac{8}{(1/2)^2} = \\frac{8}{1/4} = 32$. Nuevo producto: $P' = \\frac{1}{(r_1 r_2)^2} = \\frac{1}{1/4} = 4$. La ecuación es $x^2 - 32x + 4 = 0$."
+  },
+  {
+    "id_pregunta": "ENP_ALG_CUA_012",
+    "curso": "Álgebra",
+    "tema": "Ecuaciones Cuadráticas",
+    "nivel_dificultad": 3,
+    "enunciado": "En un buque hidrográfico naval, el transductor sonar emite pulsos de rastreo en un sector de barrido triangular cuya base en el fondo marino excede en $30\\text{{ metros}}$ al doble de la profundidad operativa $p$. Si el área de dicho triángulo de exploración submarina es de $4500\\text{{ m}}^2$, determine la profundidad de trabajo $p$ (en metros).",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$50\\text{{ m}}$",
+        "es_correcta": false
+      },
+      {
+        "id": "B",
+        "texto": "$60\\text{{ m}}$",
+        "es_correcta": true
+      },
+      {
+        "id": "C",
+        "texto": "$70\\text{{ m}}$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$75\\text{{ m}}$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$45\\text{{ m}}$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Base: $b = 2p + 30$. Altura: $p$. Área: $\\frac{b \\cdot p}{2} = \\frac{(2p + 30)p}{2} = p(p + 15) = 4500 \\implies p^2 + 15p - 4500 = 0 \\implies (p - 60)(p + 75) = 0$. Como $p > 0$, la profundidad es $p = 60\\text{{ metros}}$."
+  }
+]

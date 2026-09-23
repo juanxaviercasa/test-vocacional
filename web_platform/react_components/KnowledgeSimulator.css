@@ -1,0 +1,509 @@
+/**
+ * KnowledgeSimulator.css
+ * Estilos específicos para el Simulador de Conocimientos, renderizado de LaTeX con KaTeX
+ * y visualización centrada de gráficos vectoriales (SVG) sobre fondo oscuro (#0B101E).
+ */
+
+/* ==========================================================================
+   1. PROTECCIÓN GLOBAL ANTIDISTORSIÓN PARA KATEX
+   ========================================================================== */
+
+/* Aislamiento contra resets globales agresivos (* { line-height, box-sizing, font-family }) */
+.katex {
+  font-size: 1.12em !important;
+  text-rendering: auto !important;
+  color: #f8fafc !important; /* Alto contraste sobre fondo oscuro */
+  line-height: normal !important;
+  white-space: normal !important;
+}
+
+/* Evitar que box-sizing rompa las tablas internas de KaTeX (.vlist, .vlist-t, etc.) */
+.katex * {
+  box-sizing: content-box !important;
+  border-color: currentColor;
+}
+
+/* Fórmulas en bloque (Display Mode) */
+.katex-display {
+  margin: 1rem 0 !important;
+  padding: 0.75rem 1rem !important;
+  background: rgba(15, 23, 42, 0.5) !important;
+  border: 1px solid rgba(212, 175, 55, 0.2) !important;
+  border-radius: 8px !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(212, 175, 55, 0.4) transparent;
+}
+
+.katex-display::-webkit-scrollbar {
+  height: 6px;
+}
+
+.katex-display::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.4);
+  border-radius: 4px;
+}
+
+/* Líneas de fracciones nítidas y visibles */
+.katex .frac-line {
+  border-bottom-color: #cbd5e1 !important;
+  border-bottom-width: 1.5px !important;
+}
+
+/* Símbolo de raíz cuadrada (radicales) */
+.katex .sqrt-line {
+  border-top-color: #cbd5e1 !important;
+  border-top-width: 1.5px !important;
+}
+
+/* Operadores y símbolos matemáticos en contraste */
+.katex .mbin,
+.katex .mrel {
+  color: #fbbf24 !important; /* Acentos dorados para operadores clave (=, +, -, \times) */
+}
+
+.katex .mopen,
+.katex .mclose {
+  color: #94a3b8 !important;
+}
+
+.katex .mord.mathnormal {
+  color: #38bdf8 !important; /* Variables en azul cian luminoso */
+}
+
+/* Fallback de error */
+.katex-fallback-error {
+  color: #f87171;
+  font-family: monospace;
+  font-size: 0.9em;
+  background: rgba(239, 68, 68, 0.1);
+  padding: 0.1rem 0.3rem;
+  border-radius: 3px;
+}
+
+/* ==========================================================================
+   2. CONTENEDOR Y ESQUEMA DE LA PREGUNTA
+   ========================================================================== */
+
+.knowledge-simulator-root {
+  background: #0b101e;
+  color: #f1f5f9;
+  min-height: 100vh;
+  padding: 1.5rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.knowledge-question-card {
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 14px;
+  padding: 1.8rem 2rem;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Encabezado de la Tarjeta */
+.exam-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 1rem;
+  margin-bottom: 1.4rem;
+}
+
+.exam-card-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.exam-question-number-pill {
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: #d4af37;
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+}
+
+.exam-area-tag {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+}
+
+.exam-subtopic-tag {
+  font-size: 0.82rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+/* Enunciado */
+.exam-statement-container {
+  font-size: 1.15rem;
+  line-height: 1.65;
+  color: #ffffff;
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+}
+
+/* ==========================================================================
+   3. IMAGEN VECTORIAL CENTRADA (CONDICIONAL: 'imagen_url')
+   ========================================================================== */
+.exam-question-image-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1.25rem auto 1.75rem auto;
+  padding: 1.2rem;
+  background: rgba(11, 16, 30, 0.85);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 12px;
+  max-width: 580px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.6), inset 0 0 15px rgba(212, 175, 55, 0.04);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.exam-question-image-wrapper:hover {
+  border-color: rgba(212, 175, 55, 0.6);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7), inset 0 0 20px rgba(212, 175, 55, 0.08);
+}
+
+.exam-question-image {
+  max-width: 100%;
+  height: auto;
+  max-height: 290px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.6));
+  border-radius: 8px;
+}
+
+.exam-question-image-caption {
+  font-size: 0.78rem;
+  color: #94a3b8;
+  margin-top: 0.6rem;
+  font-style: italic;
+  text-align: center;
+}
+
+/* ==========================================================================
+   4. GRILLA DE OPCIONES DE RESPUESTA
+   ========================================================================== */
+.exam-options-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.exam-option-btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  padding: 0.85rem 1.25rem;
+  color: #e2e8f0;
+  font-size: 1.05rem;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.exam-option-btn:hover:not(:disabled) {
+  background: rgba(30, 41, 59, 0.95);
+  border-color: rgba(212, 175, 55, 0.5);
+  transform: translateX(4px);
+}
+
+.exam-option-btn.selected {
+  background: rgba(212, 175, 55, 0.18);
+  border-color: #d4af37;
+  color: #ffffff;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.25);
+}
+
+.exam-option-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-weight: 800;
+  font-size: 0.9rem;
+  color: #d4af37;
+}
+
+.exam-option-btn.selected .exam-option-indicator {
+  background: #d4af37;
+  color: #0b101e;
+  border-color: #d4af37;
+}
+
+.exam-option-label {
+  flex: 1;
+}
+
+/* Feedback de revisión */
+.exam-option-btn.is-correct {
+  background: rgba(16, 185, 129, 0.2) !important;
+  border-color: #10b981 !important;
+  color: #34d399 !important;
+}
+
+.exam-option-btn.is-incorrect {
+  background: rgba(239, 68, 68, 0.2) !important;
+  border-color: #ef4444 !important;
+  color: #f87171 !important;
+}
+
+/* ==========================================================================
+   5. BARRAS DE NAVEGACIÓN Y ACCIONES DEL SIMULADOR
+   ========================================================================== */
+.simulator-header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 900px;
+  margin: 0 auto 1.5rem auto;
+  padding: 0.8rem 1.2rem;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.simulator-target-badge {
+  font-weight: 800;
+  color: #fbbf24;
+  margin-right: 0.8rem;
+}
+
+.simulator-progress-text {
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+.simulator-nav-pills-row {
+  display: flex;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+  max-width: 480px;
+}
+
+.nav-pill-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+  color: #94a3b8;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.nav-pill-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.nav-pill-btn.current {
+  border-color: #d4af37;
+  color: #0b101e;
+  background: #d4af37;
+}
+
+.nav-pill-btn.answered {
+  border-color: #38bdf8;
+  color: #38bdf8;
+}
+
+.simulator-timer-box {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 0.4rem 0.9rem;
+  border-radius: 8px;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  font-family: monospace;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #fbbf24;
+}
+
+.simulator-timer-box.urgent {
+  border-color: #ef4444;
+  color: #ef4444;
+  animation: pulse-danger 1s infinite;
+}
+
+@keyframes pulse-danger {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.simulator-footer-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 900px;
+  margin: 1.5rem auto 0 auto;
+}
+
+.btn-sim-primary,
+.btn-sim-finish,
+.btn-sim-secondary {
+  padding: 0.75rem 1.6rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-sim-primary {
+  background: #d4af37;
+  color: #0b101e;
+  border: 1px solid #d4af37;
+}
+
+.btn-sim-primary:hover {
+  background: #fbbf24;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+}
+
+.btn-sim-finish {
+  background: #10b981;
+  color: #ffffff;
+  border: 1px solid #10b981;
+}
+
+.btn-sim-finish:hover {
+  background: #059669;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+}
+
+.btn-sim-secondary {
+  background: rgba(255, 255, 255, 0.08);
+  color: #cbd5e1;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.btn-sim-secondary:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.btn-sim-secondary:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.simulator-helper-hint {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.simulator-helper-hint strong {
+  color: #94a3b8;
+}
+
+/* Modal de Resultados */
+.simulator-result-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 1rem;
+}
+
+.simulator-result-modal-card {
+  background: #0f172a;
+  border: 1px solid #d4af37;
+  border-radius: 16px;
+  padding: 2.5rem;
+  max-width: 550px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+}
+
+.score-badge {
+  margin: 1.5rem auto;
+  padding: 1rem;
+  border-radius: 12px;
+  max-width: 200px;
+}
+
+.score-badge.approved {
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid #10b981;
+}
+
+.score-badge.failed {
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid #ef4444;
+}
+
+.score-number {
+  font-size: 3.2rem;
+  font-weight: 900;
+  line-height: 1;
+  color: #fbbf24;
+}
+
+.score-scale {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  margin-top: 0.4rem;
+}
+
+.status-verdict {
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin-bottom: 1.2rem;
+}
+
+.score-breakdown-row {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1.8rem;
+  font-size: 0.9rem;
+}
+
+.hit-count { color: #34d399; font-weight: 700; }
+.err-count { color: #f87171; font-weight: 700; }
+.blank-count { color: #94a3b8; font-weight: 700; }

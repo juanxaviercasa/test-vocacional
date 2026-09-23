@@ -1,0 +1,737 @@
+/* ==========================================================================
+   SISTEMA DE EVALUACIÓN Y TEST VOCACIONAL MILITAR DEL PERÚ
+   TACTICAL THEME & GLOBAL UI SYSTEM (ARQUITECTURA VISUAL DE ALTA PRECISIÓN)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Rajdhani:wght@500;600;700;800&display=swap');
+
+:root {
+  /* Tipografías Principales */
+  --font-primary: 'Rajdhani', sans-serif;
+  --font-secondary: 'Inter', 'Montserrat', sans-serif;
+
+  /* Paleta de Color Base */
+  --bg-night-deep: #0B101E;
+  --bg-graphite: #141518;
+  --bg-tactical-gradient: radial-gradient(circle at 50% 10%, #151d36 0%, #0B101E 55%, #070a13 100%);
+
+  /* Colores de Acento y Alta Visibilidad */
+  --accent-cyan: #00F0FF;
+  --accent-cyan-hover: #33f3ff;
+  --accent-cyan-glow: rgba(0, 240, 255, 0.45);
+  --accent-yellow: #FFD700;
+  --accent-yellow-glow: rgba(255, 215, 0, 0.45);
+
+  /* Superficies Glassmorphism Oscuro */
+  --surface-glass: rgba(255, 255, 255, 0.05);
+  --surface-glass-hover: rgba(255, 255, 255, 0.08);
+  --surface-glass-active: rgba(0, 240, 255, 0.07);
+  --surface-border: 1px solid rgba(255, 255, 255, 0.1);
+  --surface-border-cyan: 1px solid rgba(0, 240, 255, 0.4);
+  --surface-blur: blur(10px);
+  --surface-radius: 12px;
+
+  /* Estados Tácticos */
+  --status-check: #10B981;
+  --status-alert: #F59E0B;
+  --status-danger: #EF4444;
+
+  /* Sombras y Luces */
+  --glow-cyan-btn: 0 0 25px rgba(0, 240, 255, 0.5), inset 0 0 10px rgba(0, 240, 255, 0.2);
+  --glow-yellow-btn: 0 0 25px rgba(255, 215, 0, 0.5), inset 0 0 10px rgba(255, 215, 0, 0.2);
+  --shadow-tactical-card: 0 16px 40px rgba(0, 0, 0, 0.7);
+}
+
+/* ==========================================================================
+   RESET Y ESTILOS BASE CON TEXTURA TOPOGRÁFICA SUTIL
+   ========================================================================== */
+body {
+  font-family: var(--font-secondary);
+  background-color: var(--bg-night-deep);
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(0, 240, 255, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 100% 100%, rgba(255, 215, 0, 0.04) 0%, transparent 40%),
+    /* Patrón sutil topográfico táctico */
+    repeating-radial-gradient(ellipse at 50% 50%, rgba(255, 255, 255, 0.015) 0, rgba(255, 255, 255, 0.015) 1px, transparent 2px, transparent 40px),
+    linear-gradient(180deg, var(--bg-night-deep) 0%, var(--bg-graphite) 100%);
+  background-attachment: fixed;
+  color: #F8FAFC;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Títulos y Headers en Rajdhani Mayúsculas */
+h1, h2, h3, h4, h5, h6,
+.tactical-title,
+.hero-title,
+.brand-titles h1,
+.mission-compatible-title {
+  font-family: var(--font-primary) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   1. NAVBAR MINIMALISTA TÁCTICO (SIN SIDEBARS DISTRACTORAS)
+   ========================================================================== */
+.tactical-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(11, 16, 30, 0.85);
+  backdrop-filter: var(--surface-blur);
+  -webkit-backdrop-filter: var(--surface-blur);
+  border-bottom: 1px solid rgba(0, 240, 255, 0.15);
+  padding: 0.75rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tactical-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.tactical-badge-glow {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  background: rgba(0, 240, 255, 0.1);
+  border: 1px solid var(--accent-cyan);
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+
+.tactical-brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.tactical-brand-text h1 {
+  font-size: 1.25rem;
+  margin: 0;
+  line-height: 1.1;
+  color: #FFFFFF;
+}
+
+.tactical-brand-text p {
+  font-size: 0.75rem;
+  margin: 0;
+  color: var(--accent-cyan);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.tactical-status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.4rem 0.9rem;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-family: var(--font-primary);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-cyan);
+  box-shadow: 0 0 8px var(--accent-cyan);
+  animation: pulse-glow 2s infinite ease-in-out;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.4; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+/* ==========================================================================
+   2. HERO BANNER DE BIENVENIDA (INMERSIÓN CADETE EN EL HORIZONTE)
+   ========================================================================== */
+.tactical-hero-cadet {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 240, 255, 0.25);
+  box-shadow: var(--shadow-tactical-card);
+  margin-bottom: 2rem;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  background: #0B101E;
+}
+
+.tactical-hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center right;
+  opacity: 0.55;
+  filter: contrast(1.1) brightness(0.85);
+  transition: opacity 0.5s ease;
+}
+
+.tactical-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(11, 16, 30, 0.95) 0%, rgba(11, 16, 30, 0.8) 50%, rgba(11, 16, 30, 0.2) 100%),
+              radial-gradient(circle at 10% 20%, rgba(0, 240, 255, 0.12) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.tactical-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 680px;
+  padding: 3rem 2.5rem;
+}
+
+.tactical-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(0, 240, 255, 0.1);
+  color: var(--accent-cyan);
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  padding: 0.35rem 0.85rem;
+  border-radius: 4px;
+  font-family: var(--font-primary);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 1rem;
+}
+
+.tactical-hero-content h2 {
+  font-size: 2.5rem;
+  line-height: 1.1;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+}
+
+.tactical-hero-content p {
+  font-size: 1.05rem;
+  color: #CBD5E1;
+  line-height: 1.6;
+  margin-bottom: 1.8rem;
+}
+
+/* ==========================================================================
+   3. COMPONENTE UI: EVALUACIÓN DEL TEST (MÁXIMA CONCENTRACIÓN)
+   ========================================================================== */
+.tactical-evaluation-viewport {
+  width: 100%;
+  max-width: 820px;
+  margin: 0 auto;
+  min-height: 65vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1.5rem;
+}
+
+/* Barra de Progreso Lineal Cian Neón */
+.tactical-progress-track {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 2.5rem;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.tactical-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #00B4D8, var(--accent-cyan));
+  box-shadow: 0 0 15px var(--accent-cyan);
+  border-radius: 999px;
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Tarjeta Central de la Pregunta */
+.tactical-question-card {
+  width: 100%;
+  background: var(--surface-glass);
+  backdrop-filter: var(--surface-blur);
+  -webkit-backdrop-filter: var(--surface-blur);
+  border: var(--surface-border);
+  border-radius: 16px;
+  padding: 3rem 2.5rem;
+  box-shadow: var(--shadow-tactical-card);
+  text-align: center;
+  position: relative;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tactical-question-card:hover {
+  border-color: rgba(0, 240, 255, 0.3);
+}
+
+.tactical-question-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  font-family: var(--font-primary);
+  font-size: 0.95rem;
+  color: #94A3B8;
+  letter-spacing: 1px;
+}
+
+.tactical-question-number {
+  color: var(--accent-cyan);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.tactical-question-text {
+  font-family: var(--font-secondary);
+  font-size: 1.55rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-bottom: 2.5rem;
+  line-height: 1.4;
+}
+
+/* Input Numérico de Gran Tamaño con Rajdhani */
+.tactical-huge-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+  gap: 0.5rem;
+}
+
+.tactical-huge-input {
+  font-family: var(--font-primary) !important;
+  font-size: 4rem !important;
+  font-weight: 700 !important;
+  text-align: center;
+  width: 240px;
+  background: rgba(0, 0, 0, 0.4);
+  color: var(--accent-cyan);
+  border: 2px solid rgba(0, 240, 255, 0.4);
+  border-radius: 12px;
+  padding: 0.5rem 1rem;
+  outline: none;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.15);
+  transition: all 0.3s ease;
+}
+
+.tactical-huge-input:focus {
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 35px var(--accent-cyan-glow), inset 0 0 15px rgba(0, 240, 255, 0.2);
+}
+
+.tactical-unit-label {
+  font-family: var(--font-primary);
+  font-size: 1.1rem;
+  color: #94A3B8;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Opciones Radiales Tácticas */
+.tactical-options-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  text-align: left;
+}
+
+.tactical-option-btn {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.1rem 1.4rem;
+  border-radius: 10px;
+  color: #E2E8F0;
+  font-size: 1.05rem;
+  font-family: var(--font-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.25s ease;
+}
+
+.tactical-option-btn:hover {
+  background: rgba(0, 240, 255, 0.08);
+  border-color: var(--accent-cyan);
+  transform: translateX(4px);
+  color: #FFFFFF;
+}
+
+.tactical-option-btn.selected {
+  background: rgba(0, 240, 255, 0.15);
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.25);
+  color: var(--accent-cyan);
+  font-weight: 600;
+}
+
+.tactical-option-key {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.tactical-option-btn.selected .tactical-option-key {
+  background: var(--accent-cyan);
+  color: #0B101E;
+  border-color: var(--accent-cyan);
+}
+
+/* Botón de Acción Amplio con Glow */
+.tactical-btn-action {
+  font-family: var(--font-primary) !important;
+  font-size: 1.3rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 2px !important;
+  text-transform: uppercase !important;
+  background: linear-gradient(135deg, var(--accent-cyan) 0%, #00B4D8 100%) !important;
+  color: #070B14 !important;
+  border: none !important;
+  padding: 1.1rem 3.5rem !important;
+  border-radius: 8px !important;
+  cursor: pointer !important;
+  box-shadow: var(--glow-cyan-btn) !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.8rem !important;
+  min-width: 240px;
+}
+
+.tactical-btn-action:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 0 35px rgba(0, 240, 255, 0.75), inset 0 0 15px rgba(255, 255, 255, 0.4) !important;
+}
+
+.tactical-btn-action:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+/* ==========================================================================
+   4. TEXTURAS TÁCTICAS POR CATEGORÍA INSTITUCIONAL
+   ========================================================================== */
+.branch-texture-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.15;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.8s ease, filter 0.8s ease;
+}
+
+/* Marina: Sonar grid y ondas profundas */
+.theme-navy .branch-texture-layer {
+  background-image: radial-gradient(circle at 50% 50%, rgba(0, 240, 255, 0.08) 0%, transparent 60%),
+                    radial-gradient(circle at 50% 50%, transparent 20%, rgba(0, 240, 255, 0.04) 21%, transparent 22%),
+                    radial-gradient(circle at 50% 50%, transparent 40%, rgba(0, 240, 255, 0.04) 41%, transparent 42%),
+                    linear-gradient(180deg, #060e22 0%, #030712 100%);
+}
+
+/* Fuerza Aérea: Retícula HUD de alta cota */
+.theme-airforce .branch-texture-layer {
+  background-image: radial-gradient(circle at 50% 30%, rgba(56, 189, 248, 0.1) 0%, transparent 50%),
+                    linear-gradient(90deg, rgba(0, 240, 255, 0.03) 1px, transparent 1px),
+                    linear-gradient(0deg, rgba(0, 240, 255, 0.03) 1px, transparent 1px);
+  background-size: auto, 60px 60px, 60px 60px;
+}
+
+/* Ejército: Fibra de carbono militar y líneas topográficas */
+.theme-army .branch-texture-layer {
+  background-image: radial-gradient(circle at 20% 80%, rgba(34, 197, 94, 0.06) 0%, transparent 50%),
+                    repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.2) 0, rgba(0, 0, 0, 0.2) 2px, transparent 2px, transparent 6px);
+}
+
+/* Policía: Asfalto nocturno con sutil destello de emergencia */
+.theme-police .branch-texture-layer {
+  background-image: radial-gradient(circle at 10% 10%, rgba(239, 68, 68, 0.07) 0%, transparent 45%),
+                    radial-gradient(circle at 90% 10%, rgba(37, 99, 235, 0.07) 0%, transparent 45%);
+}
+
+/* ==========================================================================
+   5. PANTALLA DE RESULTADOS: TERMINAL DE COMANDO MILITAR DE ALTA PRECISIÓN
+   ========================================================================== */
+.tactical-terminal-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.tactical-terminal-header {
+  border-left: 4px solid var(--accent-cyan);
+  padding-left: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.tactical-clearance-pill {
+  display: inline-block;
+  font-family: var(--font-primary);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  background: rgba(0, 240, 255, 0.1);
+  color: var(--accent-cyan);
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.mission-compatible-title {
+  font-size: 2.2rem;
+  color: #FFFFFF;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: 2px;
+}
+
+.mission-subdesc {
+  color: #94A3B8;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Donut Chart Neón Central */
+.tactical-donut-card {
+  background: var(--surface-glass);
+  backdrop-filter: var(--surface-blur);
+  border: var(--surface-border-cyan);
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 0 35px rgba(0, 240, 255, 0.15), var(--shadow-tactical-card);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.tactical-donut-wrapper {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  margin: 1rem 0;
+}
+
+.tactical-donut-svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.tactical-donut-bg {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.08);
+  stroke-width: 14;
+}
+
+.tactical-donut-progress {
+  fill: none;
+  stroke: var(--accent-cyan);
+  stroke-width: 14;
+  stroke-linecap: round;
+  stroke-dasharray: 565.48; /* 2 * PI * 90 */
+  stroke-dashoffset: 565.48;
+  filter: drop-shadow(0 0 10px var(--accent-cyan));
+  transition: stroke-dashoffset 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tactical-donut-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tactical-donut-number {
+  font-family: var(--font-primary);
+  font-size: 3.8rem;
+  font-weight: 800;
+  line-height: 1;
+  color: #FFFFFF;
+  text-shadow: 0 0 20px var(--accent-cyan-glow);
+}
+
+.tactical-donut-label {
+  font-family: var(--font-primary);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent-cyan);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Cuadrícula Comparativa de 2 Columnas (Postulante vs Requisito Oficial) */
+.tactical-comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+
+.tactical-spec-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 1.2rem 1.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: border-color 0.25s ease;
+}
+
+.tactical-spec-card:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.tactical-spec-card.status-pass {
+  border-left: 3px solid var(--status-check);
+}
+
+.tactical-spec-card.status-warn {
+  border-left: 3px solid var(--status-alert);
+}
+
+.tactical-spec-title {
+  font-size: 0.85rem;
+  color: #94A3B8;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+}
+
+.tactical-spec-value {
+  font-family: var(--font-primary);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: 0.5px;
+}
+
+.tactical-spec-target {
+  font-size: 0.78rem;
+  color: #64748B;
+}
+
+.tactical-status-icon {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.tactical-status-icon.check {
+  color: var(--status-check);
+  text-shadow: 0 0 10px rgba(16, 185, 129, 0.4);
+}
+
+.tactical-status-icon.warn {
+  color: var(--status-alert);
+  text-shadow: 0 0 10px rgba(245, 158, 11, 0.4);
+}
+
+/* Botones de Llamado a la Acción (CTA) */
+.tactical-actions-row {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.tactical-btn-gold {
+  font-family: var(--font-primary) !important;
+  font-size: 1.15rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 1.5px !important;
+  text-transform: uppercase !important;
+  background: linear-gradient(135deg, var(--accent-yellow) 0%, #D97706 100%) !important;
+  color: #0B101E !important;
+  border: none !important;
+  padding: 1rem 2.5rem !important;
+  border-radius: 8px !important;
+  cursor: pointer !important;
+  box-shadow: var(--glow-yellow-btn) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.6rem !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease !important;
+}
+
+.tactical-btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 35px rgba(255, 215, 0, 0.75) !important;
+}
+
+/* ==========================================================================
+   RESPONSIVIDAD Y OPTIMIZACIÓN MÓVIL
+   ========================================================================== */
+@media (max-width: 768px) {
+  .tactical-hero-content h2 {
+    font-size: 1.85rem;
+  }
+  .tactical-hero-cadet {
+    min-height: auto;
+  }
+  .tactical-comparison-grid {
+    grid-template-columns: 1fr;
+  }
+  .tactical-huge-input {
+    font-size: 3rem !important;
+    width: 180px;
+  }
+  .tactical-question-text {
+    font-size: 1.25rem;
+  }
+  .tactical-question-card {
+    padding: 2rem 1.2rem;
+  }
+  .mission-compatible-title {
+    font-size: 1.6rem;
+  }
+}

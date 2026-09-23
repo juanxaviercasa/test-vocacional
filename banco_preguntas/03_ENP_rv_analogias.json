@@ -1,0 +1,542 @@
+[
+  {
+    "id_pregunta": "ENP_RV_ANA_001",
+    "curso": "Razonamiento Verbal",
+    "tema": "Analogías Verbales y Precisión Léxica",
+    "nivel_dificultad": 1,
+    "enunciado": "En el examen de admisión de Escuela Naval del Perú (ENP - Oficiales), determine la opción que presenta la relación análoga correcta para el par base en mayúsculas:\n\n**VALOR : HEROÍSMO ::**",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "TEMOR : PÁNICO",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "TRISTEZA : ALEGRÍA",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "DUDA : CERTEZA",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "CALMA : FURIA",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "ENFADO : RISA",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Relación de intensidad: el HEROÍSMO es el grado supremo del VALOR; del mismo modo, el PÁNICO es el grado superlativo del TEMOR."
+  },
+  {
+    "id_pregunta": "ENP_RV_ANA_002",
+    "curso": "Razonamiento Verbal",
+    "tema": "Analogías Verbales y Precisión Léxica",
+    "nivel_dificultad": 1,
+    "enunciado": "Elija la alternativa que mantiene la misma relación que el par base:\n\n**SOLDADO : EJÉRCITO ::**",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "MARINERO : TRIPULACIÓN",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "FUSIL : MUNICIÓN",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "CAPITÁN : CORONEL",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "CUARTEL : GUARDIA",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "ESCUDO : ESPADA",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Relación de elemento a conjunto específico: el SOLDADO conforma el EJÉRCITO, así como el MARINERO forma parte de la TRIPULACIÓN."
+  },
+  {
+    "id_pregunta": "ENP_RV_ANA_003",
+    "curso": "Razonamiento Verbal",
+    "tema": "Analogías Verbales y Precisión Léxica",
+    "nivel_dificultad": 1,
+    "enunciado": "Identifique el término que expresa el significado opuesto (antónimo) a la palabra subrayada en la siguiente afirmación militar:\n\n*«Las tropas mostraron una actitud **indómita** ante el asedio enemigo».*",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "Sumisa",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "Rebelde",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "Intrépida",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "Altiva",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "Inconmovible",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "'Indómita' significa difícil de someter o domesticar, rebelde o bravía. Su antónimo directo es 'sumisa' (obediente, dócil)."
+  },
+  {
+    "id_pregunta": "ENP_RV_ANA_004",
+    "curso": "Razonamiento Verbal",
+    "tema": "Analogías Verbales y Precisión Léxica",
+    "nivel_dificultad": 1,
+    "enunciado": "Determine el par análogo correspondiente a la relación agente - instrumento:\n\n**ARTILLERO : CAÑÓN ::**",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "FRANCOTIRADOR : FUSIL",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "PILOTO : PISTA",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "MÉDICO : HOSPITAL",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "GENERAL : BATALLA",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "POLICÍA : TRANSGRESIÓN",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Relación de agente a instrumento de trabajo/combate: el ARTILLERO opera el CAÑÓN, así como el FRANCOTIRADOR opera el FUSIL."
+  },
+  {
+    "id_pregunta": "ENP_RV_ANA_005",
+    "curso": "Razonamiento Verbal",
+    "tema": "Analogías Verbales y Precisión Léxica",
+    "nivel_dificultad": 2,
+    "enunciado": "Identifique la alternativa que reproduce la relación lógica del par base:\n\n**EMBOSCADA : CONFUSIÓN ::**",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "ALERTA : PREPARACIÓN",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "DERROTA : TRIUNFO",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "MARCHA : DESCANSO",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "ARMISTICIO : HOSTILIDAD",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "DISCIPLINA : INSUBORDINACIÓN",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Relación de causa a efecto: la EMBOSCADA genera CONFUSIÓN en el enemigo desprevenido, del mismo modo que la ALERTA produce PREPARACIÓN en las fuerzas defensoras."
+  },
+  {
+    "id_pregunta": "ENP_RV_ANA_006",
+    "curso": "Razonamiento Verbal",
+    "tema": "Analogías Verbales y Precisión Léxica",
+    "nivel_dificultad": 2,
+    "enunciado": "Elija el verbo con mayor precisión semántica para completar la oración:\n\n*«Las fuerzas combinadas lograron __________ exitosamente la incursión enemiga en la cabecera del valle».*",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "repeler",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "sacar",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "quitar",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "botar",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "mudar",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "'Repeler' es el verbo militar exacto que significa rechazar eficazmente un ataque, agresión o incursión hostil."
+  },
+  {
+    "id_pregunta": "ENP_RV_ANA_007",
+    "curso": "Razonamiento Verbal",
+    "tema": "Analogías Verbales y Precisión Léxica",
+    "nivel_dificultad": 2,
+    "enunciado": "Determine el par que cumple la relación análoga:\n\n**BRÚJULA : ORIENTACIÓN ::**",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "CRONÓMETRO : PRECISIÓN TEMPORAL",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "MAPA : DIBUJO",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "TERMÓMETRO : CLIMA",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "BALANZA : COMERCIO",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "TEODOLITO : LADRILLO",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Relación de instrumento a su fin fundamental: la BRÚJULA sirve para la ORIENTACIÓN, como el CRONÓMETRO sirve para la PRECISIÓN TEMPORAL."
+  },
+  {
+    "id_pregunta": "ENP_RV_ANA_008",
+    "curso": "Razonamiento Verbal",
+    "tema": "Analogías Verbales y Precisión Léxica",
+    "nivel_dificultad": 2,
+    "enunciado": "Elija los conectores lógicos que completan con coherencia el texto doctrinal:\n\n*«El oficial debe mantener la serenidad en el combate, __________ la vacilación infunde pánico en los subordinados; __________, su templanza moral constituye la mayor fortaleza de la unidad».*",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "porque - por ende",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "aunque - sin embargo",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "si bien - por el contrario",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "pero - no obstante",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "a pesar de que - es decir",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "El primer conector es causal ('porque') para justificar la necesidad de serenidad, y el segundo es ilativo o consecutivo ('por ende') para concluir."
+  },
+  {
+    "id_pregunta": "ENP_RV_ANA_009",
+    "curso": "Razonamiento Verbal",
+    "tema": "Analogías Verbales y Precisión Léxica",
+    "nivel_dificultad": 3,
+    "enunciado": "[Analogía Táctica Naval: Orientación y Flancos Náuticos (Proa, Popa, Babor, Estribor)]: Determine el par análogo que reproduce con exactitud la relación táctica entre los componentes de maniobra:\n\n**VANGUARDIA : EXPLORACIÓN ::**",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "RETAGUARDIA : COBERTURA",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "FLANCO : RETIRADA",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "RESERVA : DESPLIEGUE",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "COMANDO : INACCIÓN",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "COLUMNA : DISPERSIÓN",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Relación de escalón de combate a su misión esencial: la VANGUARDIA tiene como rol primario la EXPLORACIÓN y contacto, mientras que la RETAGUARDIA tiene por misión primordial la COBERTURA y seguridad de las líneas de comunicación."
+  },
+  {
+    "id_pregunta": "ENP_RV_ANA_010",
+    "curso": "Razonamiento Verbal",
+    "tema": "Analogías Verbales y Precisión Léxica",
+    "nivel_dificultad": 3,
+    "enunciado": "[Precisión Léxica Marítima en la Redacción del Cuaderno de Bitácora y Derrota]: Seleccione el término que confiere rigor técnico y formal a la instrucción operativa:\n\n*«Ante la presencia de fuego hostil no identificado, el comandante ordenó al destacamento __________ la posición defensiva y reportar las coordenadas a la Central».*",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "consolidar",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "aguantar",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "sujetar",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "amarrar",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "dejar",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "En doctrina táctica, 'consolidar' significa afianzar y organizar firmemente una posición conquistada o defensiva ante un posible contraataque."
+  },
+  {
+    "id_pregunta": "ENP_RV_ANA_011",
+    "curso": "Razonamiento Verbal",
+    "tema": "Analogías Verbales y Precisión Léxica",
+    "nivel_dificultad": 3,
+    "enunciado": "[Analogía Doctrinal: Miguel Grau y los Valores Morales del Oficial Naval]: Identifique el par análogo que refleja la relación de jerarquía, doctrina y toma de decisiones:\n\n**ESTADO MAYOR : PLANIFICACIÓN ::**",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "COMANDANTE GENERAL : DECISIÓN",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "CADETE : OBEDIENCIA CIEGA",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "TROPAS : DELIBERACIÓN",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "CENTINELA : SUEÑO",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "INSPECTOR : APATÍA",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "El ESTADO MAYOR tiene por función principal la PLANIFICACIÓN táctica y estratégica, mientras que el COMANDANTE GENERAL asume la responsabilidad exclusiva de la DECISIÓN operacional."
+  },
+  {
+    "id_pregunta": "ENP_RV_ANA_012",
+    "curso": "Razonamiento Verbal",
+    "tema": "Analogías Verbales y Precisión Léxica",
+    "nivel_dificultad": 3,
+    "enunciado": "[Terminología Naval y Órdenes de Maniobra en Puente de Comando de Fragatas]: Analice el significado doctrinal de la expresión. ¿Cuál de los siguientes enunciados define con exactitud la noción castrense de **«INMOLACIÓN PATRIÓTICA»**?",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "La entrega deliberada y voluntaria de la propia vida en cumplimiento del sagrado juramento de defender la soberanía y la Bandera Nacional",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "La muerte fortuita e involuntaria causada por desperfectos del material bélico en ejercicios de guarnición",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "La capitulación ordenada pactada con el enemigo para evitar daños colaterales a la infraestructura civil",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "La retirada apresurada de las fuerzas armadas para preservar el contingente ante una correlación desfavorable",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "El sometimiento a un arbitraje diplomático internacional tras el abandono del teatro de operaciones",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "La inmolación patriótica (como la de Bolognesi, Grau y Quiñones) representa el sacrificio supremo consciente y voluntario de la propia vida en defensa indoblegable de la soberanía nacional."
+  }
+]

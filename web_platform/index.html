@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema Integral de Admisión y Evaluación Militar del Perú | FFAA & PNP</title>
+  <meta name="description" content="Plataforma interactiva de simulación de admisión militar: evaluación psicométrica IPIP-NEO, simulador de conocimientos y psicotécnico con bancos oficiales, calculadora de esfuerzo físico y baremos antropométricos para EMCH, ETE, ENP, CITEN, EOFAP, ESOFA, EO-PNP y EESTP-PNP.">
+  
+  <!-- Tipografías Tácticas Rajdhani, Montserrat e Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Rajdhani:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- KaTeX para renderizado de fórmulas matemáticas complejas (Álgebra, Trigonometría) -->
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+
+  <!-- Estilos del Sistema -->
+  <link rel="stylesheet" href="css/styles.css?v=tactical_2026_5">
+  <link rel="stylesheet" href="css/vocational.css?v=tactical_2026_5">
+  <link rel="stylesheet" href="css/tactical_theme.css?v=tactical_2026_5">
+</head>
+<body class="theme-airforce">
+
+  <!-- Capa de Textura Táctica Dinámica por Categoría Institucional -->
+  <div class="branch-texture-layer"></div>
+
+  <!-- Cintillo Patriótico Peruano -->
+  <div class="peru-ribbon"></div>
+
+  <!-- Cabecera Institucional -->
+  <header class="header-military">
+    <div class="header-content">
+      <div class="header-brand">
+        <div class="coat-icon">🇵🇪</div>
+        <div class="brand-titles">
+          <h1>SISTEMA DE ADMISIÓN Y EVALUACIÓN MILITAR</h1>
+          <p>Fuerzas Armadas y Policía Nacional del Perú</p>
+        </div>
+      </div>
+      <div class="tactical-status-indicator">
+        <span class="pulse-dot"></span>
+        <span>TERMINAL EN LÍNEA // V.2026.4</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Eliminado nav de píldoras antiguas: Se conserva únicamente el Stepper Táctico -->
+
+  <!-- Contenedor Principal -->
+  <main class="main-container">
+
+    <!-- =========================================================================
+         PANEL 0: TEST VOCACIONAL MULTI-PILAR: ¿PARA QUÉ ESCUELA NACISTE?
+         ========================================================================= -->
+    <div id="panel-vocational" class="tab-panel">
+      <div class="voc-wizard-wrapper">
+        
+        <!-- Barra de Progreso de las 4 Fases -->
+        <div class="voc-stepper-track no-print">
+          <div class="voc-step-pill active" data-step="0">
+            <span class="voc-step-num">1</span>
+            <span>Filtro Legal (Pilar 1)</span>
+          </div>
+          <div class="voc-step-pill" data-step="1">
+            <span class="voc-step-num">2</span>
+            <span>Psicometría (15 P)</span>
+          </div>
+          <div class="voc-step-pill" data-step="2">
+            <span class="voc-step-num">3</span>
+            <span>Intereses (10 D)</span>
+          </div>
+          <div class="voc-step-pill" data-step="3">
+            <span class="voc-step-num">4</span>
+            <span>Conocimientos (20 P)</span>
+          </div>
+          <div class="voc-step-pill" data-step="4">
+            <span class="voc-step-num">5</span>
+            <span>Dashboard Vocacional</span>
+          </div>
+        </div>
+
+        <!-- FASE 0: WIZARD DE 4 SUB-PASOS (DIVULGACIÓN PROGRESIVA CON SLIDE) -->
+        <section id="voc-screen-0-legal">
+
+          <!-- -----------------------------------------------------------------
+               SUB-PASO 0: HERO BANNER CINEMATOGRÁFICO
+               ----------------------------------------------------------------- -->
+          <div id="step-view-0" class="step-view">
+            <div class="tactical-hero-cadet">
+              <img src="assets/hero_cadet.jpg" alt="Cadete militar peruano mirando al horizonte tecnológico" class="tactical-hero-bg">
+              <div class="tactical-hero-overlay"></div>
+              <div class="tactical-hero-content">
+                <div class="tactical-tag">⚡ SISTEMA TÁCTICO DE ORIENTACIÓN VOCACIONAL · FUERZAS ARMADAS DEL PERÚ</div>
+                <h2 class="hero-title">¿PARA QUÉ ESCUELA MILITAR NACISTE?</h2>
+                <p>
+                  Simulador algorítmico de alta precisión matemática. Cruza tu aptitud legal y antropométrica (Pilar 1), tu perfil de personalidad Big Five (Pilar 2), tus intereses táctico-operacionales (Pilar 3) y tu rendimiento académico (Pilar 4) contra las exigencias oficiales de las 8 escuelas matrices del Perú.
+                </p>
+                <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+                  <span class="inst-pill" style="border-color: var(--accent-cyan); color: #fff; background: rgba(0,240,255,0.1);">🎯 Baremación Multi-Pilar 100% Oficial</span>
+                  <span class="inst-pill" style="border-color: var(--accent-yellow); color: #fff; background: rgba(255,215,0,0.1);">🔒 Terminal de Admisión Clasificada</span>
+                </div>
+              </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem; margin-bottom: 1.5rem;">
+              <button id="btn-hero-start" type="button" class="tactical-cta-btn">
+                <span>INICIAR EVALUACIÓN LEGAL Y FÍSICA (PASO 1)</span>
+                <span>➜</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- -----------------------------------------------------------------
+               SUB-PASO 1: TARJETA DE PARÁMETROS BIOMÉTRICOS (DESLIZABLE)
+               ----------------------------------------------------------------- -->
+          <div id="step-view-1" class="step-view" style="display: none; max-width: 850px; margin: 1.5rem auto;">
+            <div class="tactical-glass-card">
+              <div class="tactical-glass-card-header">
+                <div>
+                  <span style="font-size: 0.72rem; color: var(--accent-cyan); font-weight: 700; letter-spacing: 1px; text-transform: uppercase;">MICRO-PASO 01 DE 03 // ANTROPOMETRÍA</span>
+                  <div class="tactical-glass-card-title" style="margin-top: 0.2rem;">
+                    <span>📏</span> PARÁMETROS BIOMÉTRICOS
+                  </div>
+                </div>
+                <div id="voc-imc-badge" class="voc-legal-badge apto" style="font-size: 0.78rem;">
+                  IMC: <strong>23.7</strong> (Óptimo Militar)
+                </div>
+              </div>
+
+              <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+                <!-- Nombre y Apellidos -->
+                <div>
+                  <label for="voc-cand-name" class="form-label" style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Postulante / Nombre Completo</label>
+                  <input type="text" id="voc-cand-name" class="form-control" placeholder="Ej. Carlos Mendoza" value="Carlos Mendoza" style="background: rgba(0,0,0,0.3); border-color: rgba(255,255,255,0.12);">
+                </div>
+
+                <!-- Sexo Biológico -->
+                <div>
+                  <label class="form-label" style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Sexo Biológico (Según DNI)</label>
+                  <select id="voc-cand-sex" style="display: none;">
+                    <option value="M" selected>M</option>
+                    <option value="F">F</option>
+                  </select>
+                  <div class="tactical-toggle-group" id="group-voc-sex">
+                    <button type="button" class="tactical-toggle-btn active" data-target="voc-cand-sex" data-value="M">
+                      <span style="font-size: 1.1rem;">♂</span> Varón (Masculino)
+                    </button>
+                    <button type="button" class="tactical-toggle-btn" data-target="voc-cand-sex" data-value="F">
+                      <span style="font-size: 1.1rem;">♀</span> Dama (Femenino)
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Estatura, Peso y Edad en 3 Cajas Tácticas -->
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.8rem;">
+                  <div style="background: rgba(0,0,0,0.35); border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; padding: 0.75rem 0.9rem;">
+                    <label for="voc-cand-height" style="display: block; font-size: 0.72rem; color: #94a3b8; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">Estatura (cm)</label>
+                    <div style="display: flex; align-items: baseline; gap: 0.3rem;">
+                      <input type="number" id="voc-cand-height" min="140" max="215" value="172" style="background: transparent; border: none; color: #00F0FF; font-family: var(--font-primary); font-weight: 700; font-size: 1.8rem; width: 100%; outline: none;">
+                      <span style="font-size: 0.75rem; color: #64748b; font-weight: 700;">CM</span>
+                    </div>
+                  </div>
+
+                  <div style="background: rgba(0,0,0,0.35); border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; padding: 0.75rem 0.9rem;">
+                    <label for="voc-cand-weight" style="display: block; font-size: 0.72rem; color: #94a3b8; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">Peso (kg)</label>
+                    <div style="display: flex; align-items: baseline; gap: 0.3rem;">
+                      <input type="number" id="voc-cand-weight" min="40" max="150" value="70" style="background: transparent; border: none; color: #00F0FF; font-family: var(--font-primary); font-weight: 700; font-size: 1.8rem; width: 100%; outline: none;">
+                      <span style="font-size: 0.75rem; color: #64748b; font-weight: 700;">KG</span>
+                    </div>
+                  </div>
+
+                  <div style="background: rgba(0,0,0,0.35); border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; padding: 0.75rem 0.9rem;">
+                    <label for="voc-cand-age" style="display: block; font-size: 0.72rem; color: #94a3b8; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">Edad Cumplida</label>
+                    <div style="display: flex; align-items: baseline; gap: 0.3rem;">
+                      <input type="number" id="voc-cand-age" min="15" max="35" value="19" style="background: transparent; border: none; color: #00F0FF; font-family: var(--font-primary); font-weight: 700; font-size: 1.8rem; width: 100%; outline: none;">
+                      <span style="font-size: 0.75rem; color: #64748b; font-weight: 700;">AÑOS</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Talla Sentado -->
+                <div style="background: rgba(0,0,0,0.25); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 0.9rem;">
+                  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+                    <label for="voc-cand-sitting-height" style="font-size: 0.78rem; text-transform: uppercase; color: #cbd5e1; font-weight: 600;">Talla Sentado (Tronco y Cabeza)</label>
+                    <span id="voc-sitting-val" style="font-family: var(--font-primary); font-size: 1.1rem; font-weight: 700; color: var(--accent-cyan);">91.0 CM</span>
+                  </div>
+                  <input type="range" id="voc-cand-sitting-height" min="70" max="115" value="91" style="width: 100%; accent-color: var(--accent-cyan); cursor: pointer;" oninput="document.getElementById('voc-sitting-val').textContent = this.value + '.0 CM'">
+                  <span style="font-size: 0.72rem; color: #64748b;">Parámetro clave para cabinas de caza EOFAP (Rango: 85 - 98 cm)</span>
+                </div>
+              </div>
+
+              <!-- Botones de Navegación del Paso 1 -->
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.08);">
+                <button id="btn-back-to-hero" type="button" class="tactical-toggle-btn" style="padding: 0.6rem 1.2rem; font-size: 0.85rem;">
+                  ← Volver al Inicio
+                </button>
+                <button id="btn-to-medical" type="button" class="tactical-cta-btn" style="padding: 0.7rem 1.8rem; font-size: 0.95rem;">
+                  <span>Siguiente: Aptitud Médica y Legal</span>
+                  <span>➜</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- -----------------------------------------------------------------
+               SUB-PASO 2: TARJETA DE APTITUD MÉDICA Y LEGAL (DESLIZABLE)
+               ----------------------------------------------------------------- -->
+          <div id="step-view-2" class="step-view" style="display: none; max-width: 850px; margin: 1.5rem auto;">
+            <div class="tactical-glass-card">
+              <div class="tactical-glass-card-header">
+                <div>
+                  <span style="font-size: 0.72rem; color: var(--accent-cyan); font-weight: 700; letter-spacing: 1px; text-transform: uppercase;">MICRO-PASO 02 DE 03 // FILTROS EXCLUYENTES</span>
+                  <div class="tactical-glass-card-title" style="margin-top: 0.2rem;">
+                    <span>⚖️</span> APTITUD MÉDICA Y REGISTRO LEGAL
+                  </div>
+                </div>
+                <span style="font-size: 0.75rem; color: #94a3b8; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">FILTROS EXCLUYENTES</span>
+              </div>
+
+              <div style="display: flex; flex-direction: column; gap: 1.1rem;">
+                <!-- Agudeza Visual -->
+                <div>
+                  <label class="form-label" style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Agudeza Visual (Ambos Ojos)</label>
+                  <select id="voc-cand-vision" style="display: none;">
+                    <option value="20_20" selected>20_20</option>
+                    <option value="con_lentes">con_lentes</option>
+                  </select>
+                  <div class="tactical-toggle-group">
+                    <button type="button" class="tactical-toggle-btn active" data-target="voc-cand-vision" data-value="20_20">
+                      20/20 Natural (Exigido Pilotos)
+                    </button>
+                    <button type="button" class="tactical-toggle-btn" data-target="voc-cand-vision" data-value="con_lentes">
+                      Uso Lentes Correctores
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Tatuajes Visibles -->
+                <div>
+                  <label class="form-label" style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Tatuajes Visibles en Uniforme de Verano</label>
+                  <select id="voc-cand-tattoos" style="display: none;">
+                    <option value="no" selected>no</option>
+                    <option value="si">si</option>
+                  </select>
+                  <div class="tactical-toggle-group">
+                    <button type="button" class="tactical-toggle-btn active" data-target="voc-cand-tattoos" data-value="no">
+                      Sin Tatuajes Visibles
+                    </button>
+                    <button type="button" class="tactical-toggle-btn" data-target="voc-cand-tattoos" data-value="si">
+                      Poseo Tatuajes Visibles
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Antecedentes Penales/Policiales -->
+                <div>
+                  <label class="form-label" style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Antecedentes Penales o Policiales</label>
+                  <select id="voc-cand-records" style="display: none;">
+                    <option value="no" selected>no</option>
+                    <option value="si">si</option>
+                  </select>
+                  <div class="tactical-toggle-group">
+                    <button type="button" class="tactical-toggle-btn active" data-target="voc-cand-records" data-value="no">
+                      Carezco de Antecedentes
+                    </button>
+                    <button type="button" class="tactical-toggle-btn" data-target="voc-cand-records" data-value="si">
+                      Registro Antecedentes
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Educación Secundaria -->
+                <div>
+                  <label class="form-label" style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Educación Secundaria</label>
+                  <select id="voc-cand-school" style="display: none;">
+                    <option value="si" selected>si</option>
+                    <option value="no">no</option>
+                  </select>
+                  <div class="tactical-toggle-group">
+                    <button type="button" class="tactical-toggle-btn active" data-target="voc-cand-school" data-value="si">
+                      Culminada / Cursando 5to
+                    </button>
+                    <button type="button" class="tactical-toggle-btn" data-target="voc-cand-school" data-value="no">
+                      Incompleta
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Selectores Auxiliares Ocultos pero Activos para el Motor -->
+                <select id="voc-cand-civil" style="display: none;"><option value="soltero" selected>soltero</option></select>
+                <select id="voc-cand-children" style="display: none;"><option value="no" selected>no</option></select>
+                <select id="voc-cand-dental" style="display: none;"><option value="optima" selected>optima</option></select>
+                <select id="voc-cand-daltonism" style="display: none;"><option value="no" selected>no</option></select>
+              </div>
+
+              <!-- Botones de Navegación del Paso 2 -->
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.08);">
+                <button id="btn-back-to-biometrics" type="button" class="tactical-toggle-btn" style="padding: 0.6rem 1.2rem; font-size: 0.85rem;">
+                  ← Volver a Biometría
+                </button>
+                <button id="btn-process-eligibility" type="button" class="tactical-cta-btn" style="padding: 0.7rem 2rem; font-size: 0.95rem;">
+                  <span>PROCESAR ELEGIBILIDAD</span>
+                  <span>➜</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- -----------------------------------------------------------------
+               SUB-PASO 3: DICTAMEN DE ELEGIBILIDAD (OCULTO POR DEFECTO - SOLO TRAS CLIC)
+               ----------------------------------------------------------------- -->
+          <div id="step-view-3" class="step-view" style="display: none; margin-top: 1.5rem;">
+            
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.8rem; margin-bottom: 1.2rem;">
+              <div>
+                <h3 style="font-family: var(--font-primary); color: #FFFFFF; font-size: 1.35rem; margin: 0; display: flex; align-items: center; gap: 0.5rem; letter-spacing: 1px;">
+                  <span>🎯</span> DICTAMEN DE ELEGIBILIDAD POR ESCUELA MATRIZ
+                </h3>
+                <p style="font-size: 0.85rem; color: #94A3B8; margin: 0.2rem 0 0;">
+                  Resultado preliminar antropométrico y legal: <strong id="voc-legal-apt-count" style="color: var(--status-success);">8 de 8 escuelas militares</strong>
+                </p>
+              </div>
+              <button id="btn-back-to-medical-from-grid" type="button" class="tactical-toggle-btn" style="padding: 0.4rem 1rem; font-size: 0.8rem;">
+                ← Modificar Parámetros
+              </button>
+            </div>
+
+            <!-- Cuadrícula Adaptable de 4 Columnas con Hover Glow y Marca de Agua -->
+            <div id="voc-legal-preview-grid" class="voc-legal-preview-grid">
+              <!-- Generado dinámicamente por vocational_flow.js al hacer clic en Procesar Elegibilidad -->
+            </div>
+
+            <!-- Botón de Acción Principal CTA Táctico con Pulso -->
+            <div style="text-align: center; margin-top: 3rem; margin-bottom: 2rem;">
+              <button id="voc-btn-start-test" type="button" class="tactical-cta-btn">
+                <span>INICIAR SIMULACIÓN TÁCTICA (PILAR 2: PSICOMETRÍA)</span>
+                <span>➜</span>
+              </button>
+            </div>
+
+          </div>
+
+        </section>
+
+        <!-- FASE 1: PILAR 2 (PSICOMETRÍA - 15 PREGUNTAS) -->
+        <section id="voc-screen-1-psico" style="display: none;">
+          <div id="voc-pilar2-container"></div>
+        </section>
+
+        <!-- FASE 2: PILAR 3 (INTERESES OPERATIVOS - 10 DILEMAS TÁCTICOS) -->
+        <section id="voc-screen-2-intereses" style="display: none;">
+          <div id="voc-pilar3-container"></div>
+        </section>
+
+        <!-- FASE 3: PILAR 4 (APTITUD Y CONOCIMIENTOS - 20 PREGUNTAS) -->
+        <section id="voc-screen-3-conocimientos" style="display: none;">
+          <div id="voc-pilar4-container"></div>
+        </section>
+
+        <!-- FASE 4: DASHBOARD INTERACTIVO "¿PARA QUÉ ESCUELA NACISTE?" -->
+        <section id="voc-screen-4-dashboard" style="display: none;">
+          <div id="voc-dashboard-container"></div>
+        </section>
+
+        <!-- FASE 5: SIMULACRO OFICIAL DE 100 PREGUNTAS POR INSTITUCIÓN (MEJORA 4) -->
+        <section id="voc-screen-5-mock100" style="display: none;">
+          <div id="voc-mock100-container"></div>
+        </section>
+
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         PANEL 1: TEST PSICOMÉTRICO IPIP-NEO Y MATCHING
+         ========================================================================= -->
+    <div id="panel-psychometric" class="tab-panel" style="display: none;">
+
+      <!-- PANTALLA 1: REGISTRO DEL POSTULANTE E INSTRUCCIONES -->
+      <section id="screen-registration" class="screen-section">
+        
+        <!-- Alerta de Restauración de Borrador -->
+        <div id="draft-restore-banner" class="card-glass" style="display: none; border-color: var(--gold-primary); margin-bottom: 1.5rem; padding: 1.2rem; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+          <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <span style="font-size: 1.6rem;">💾</span>
+            <div>
+              <strong style="color: #ffffff;">Se encontró una sesión no finalizada</strong>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">¿Desea continuar con las respuestas guardadas anteriormente?</p>
+            </div>
+          </div>
+          <div style="display: flex; gap: 0.6rem;">
+            <button id="btn-accept-draft" class="btn-gold" style="padding: 0.5rem 1.2rem; font-size: 0.85rem;">Continuar Test</button>
+            <button id="btn-discard-draft" class="btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Empezar de Cero</button>
+          </div>
+        </div>
+
+        <div class="card-glass">
+          <div class="hero-banner">
+            <div class="hero-tag">⚡ Baremación Oficial IPIP-NEO & Segmentación Conductual</div>
+            <h2 class="hero-title">Evaluación Psicométrica de Admisión y Aptitud Militar</h2>
+            <p class="hero-subtitle">
+              Sistema psicométrico especializado para determinar la compatibilidad con el perfil de ingreso a las Escuelas de Oficiales y Suboficiales del Perú, detectando fortalezas de liderazgo y alertas de descalificación institucional.
+            </p>
+          </div>
+
+          <!-- Ficha de Registro de Datos -->
+          <h3 style="font-family: var(--font-title); font-size: 1.25rem; color: var(--gold-light); margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.5rem;">
+            <span>📋</span> Datos del Postulante
+          </h3>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="cand-name" class="form-label">Nombre y Apellidos del Postulante</label>
+              <input type="text" id="cand-name" class="form-control" placeholder="Ej. Carlos Alberto Mendoza" value="Carlos Alberto Mendoza">
+            </div>
+            <div class="form-group">
+              <label for="cand-dni" class="form-label">DNI / Código de Postulante</label>
+              <input type="text" id="cand-dni" class="form-control" placeholder="Ej. 73491820" value="73491820">
+            </div>
+            <div class="form-group">
+              <label for="cand-sex" class="form-label">Sexo (Para Baremo Normativo)</label>
+              <select id="cand-sex" class="form-control">
+                <option value="M" selected>Masculino (Baremo Varones)</option>
+                <option value="F">Femenino (Baremo Damas)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="cand-age" class="form-label">Edad del Postulante</label>
+              <input type="number" id="cand-age" class="form-control" min="15" max="45" value="19">
+            </div>
+            <div class="form-group" style="grid-column: 1 / -1;">
+              <label for="cand-inst" class="form-label">Institución Militar o Policial de Preferencia Principal</label>
+              <select id="cand-inst" class="form-control" style="font-weight: 600; color: var(--gold-light);">
+                <option value="FAP" selected>✈️ FUERZA AÉREA DEL PERÚ (FAP - EOFAP / ESOFA)</option>
+                <option value="PNP">👮 POLICÍA NACIONAL DEL PERÚ (PNP - EO-PNP / EESTP)</option>
+                <option value="ENM">⚓ MARINA DE GUERRA DEL PERÚ / ESCUELA NAVAL (ENM / CITEN)</option>
+                <option value="EMCH">⚔️ EJÉRCITO DEL PERÚ / ESCUELA MILITAR DE CHORRILLOS (EMCH / ETE)</option>
+                <option value="ENAMM">🚢 ESCUELA NACIONAL DE MARINA MERCANTE (ENAMM / ENCE)</option>
+                <option value="VOCACIONAL_UNIV">🎓 PERFIL VOCACIONAL UNIVERSITARIO / ESPECIALIDADES TÉCNICAS</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Selector de Modo de Evaluación -->
+          <h3 style="font-family: var(--font-title); font-size: 1.25rem; color: var(--gold-light); margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.5rem;">
+            <span>⚙️</span> Seleccione la Modalidad de Evaluación
+          </h3>
+
+          <div class="mode-selector-grid">
+            <div class="mode-card selected" data-mode="120">
+              <div class="mode-badge-rec">⭐ Recomendado Oficial</div>
+              <div class="mode-header">
+                <span class="mode-icon">🎯</span>
+                <span class="mode-title">Test Integral IPIP-NEO-120</span>
+              </div>
+              <p class="mode-desc">
+                Evaluación exhaustiva con medición completa de los <strong>5 Grandes Factores</strong> y las <strong>30 Sub-facetas</strong> psicológicas (Vulnerabilidad al estrés, Sentido del deber, Moralidad, Asertividad, Orden y Cautela).
+              </p>
+              <div class="mode-meta">
+                <span>⏱️ ~15 - 20 minutos</span>
+                <span>📊 120 reactivos</span>
+                <span>🎖️ 30 facetas clínicas</span>
+              </div>
+            </div>
+
+            <div class="mode-card" data-mode="50">
+              <div class="mode-header">
+                <span class="mode-icon">⚡</span>
+                <span class="mode-title">Test Rápido de Tamizaje Vocacional</span>
+              </div>
+              <p class="mode-desc">
+                Versión condensada de 50 preguntas para despistaje rápido y cálculo de afinidad institucional general en los 5 macro-dominios Big-Five.
+              </p>
+              <div class="mode-meta">
+                <span>⏱️ ~5 - 8 minutos</span>
+                <span>📊 50 reactivos</span>
+                <span>🧭 5 macro-dominios</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="background: rgba(11, 20, 46, 0.6); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 1.5rem; margin-bottom: 2rem;">
+            <h4 style="color: #ffffff; margin-bottom: 0.5rem; font-size: 0.95rem;">💡 Pautas para responder el cuestionario:</h4>
+            <ul style="padding-left: 1.2rem; color: var(--text-muted); font-size: 0.88rem; line-height: 1.6;">
+              <li>Lea cada enunciado con serenidad y responda con <strong>total sinceridad</strong> según como usted actúa o se siente habitualmente.</li>
+              <li>No existen respuestas «correctas» o «incorrectas»; el test mide patrones de personalidad para evaluar el ajuste al régimen militar.</li>
+              <li>Puede responder con el ratón o directamente usando los números <strong>1 al 5 en su teclado</strong> para mayor rapidez.</li>
+            </ul>
+          </div>
+
+          <div style="text-align: center;">
+            <button id="btn-start-test" class="btn-gold" style="font-size: 1.15rem; padding: 1.1rem 3rem;">
+              <span>🚀 Comenzar Evaluación Psicométrica</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- PANTALLA 2: CUESTIONARIO INTERACTIVO -->
+      <section id="screen-survey" class="screen-section" style="display: none;">
+        <div class="survey-header-bar">
+          <div class="progress-info">
+            <div class="progress-labels">
+              <span id="survey-questions-count">Preguntas 1 - 3 de 120</span>
+              <span id="survey-progress-label">0% Completado</span>
+            </div>
+            <div class="progress-bar-track">
+              <div id="survey-progress-fill" class="progress-bar-fill" style="width: 0%;"></div>
+            </div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 1rem;">
+            <div class="timer-badge">
+              <span>⏱️</span>
+              <span id="survey-timer">00:00</span>
+            </div>
+            <button id="btn-demo-fill" class="btn-outline-gold" title="Rellena respuestas simuladas para pruebas rápidas">
+              ⚡ Simulación Rápida
+            </button>
+          </div>
+        </div>
+
+        <div id="questions-block-container">
+          <!-- Generado por app.js -->
+        </div>
+
+        <div class="survey-nav-actions">
+          <button id="btn-prev-page" class="btn-secondary" disabled>◂ Bloque Anterior</button>
+          <div style="font-size: 0.82rem; color: var(--text-dim);">💾 Respuestas guardadas en tiempo real</div>
+          <button id="btn-next-page" class="btn-gold" disabled>Siguiente Bloque ▸</button>
+        </div>
+      </section>
+
+      <!-- PANTALLA 3: RESULTADOS PSICOMÉTRICOS Y MATCHING -->
+      <section id="screen-results" class="screen-section" style="display: none;">
+        <div id="print-candidate-meta" style="display: none; padding: 0.5rem 0; margin-bottom: 1rem; border-bottom: 2px solid #0f172a; font-weight: 700; font-size: 11pt;"></div>
+
+        <div id="results-verdict-card" class="verdict-hero-card success">
+          <div class="verdict-gauge">
+            <svg width="140" height="140" class="gauge-circle">
+              <circle cx="70" cy="70" r="58" stroke="rgba(255,255,255,0.1)" stroke-width="12" fill="none"></circle>
+              <circle id="gauge-progress-stroke" cx="70" cy="70" r="58" stroke="var(--gold-primary)" stroke-width="12" fill="none" stroke-dasharray="364" stroke-dashoffset="50" stroke-linecap="round"></circle>
+            </svg>
+            <div class="gauge-pct-text">
+              <span id="verdict-fit-score" class="gauge-number">88.5</span>
+              <span class="gauge-unit">%</span>
+            </div>
+          </div>
+          <div class="verdict-details">
+            <div id="verdict-status-pill" class="verdict-status-pill success">APTO CON ALTA COMPATIBILIDAD</div>
+            <h2 id="verdict-inst-name">✈️ Fuerza Aérea del Perú</h2>
+            <p id="verdict-summary-text" class="verdict-summary-p">
+              El postulante cumple con los requerimientos de templanza y serenidad emocional exigidos para el servicio aeronáutico militar.
+            </p>
+          </div>
+        </div>
+
+        <div class="results-2col-grid">
+          <div class="card-glass" style="margin-bottom: 0;">
+            <h3 style="font-family: var(--font-title); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.3rem;">
+              🕸️ Radar de Ajuste Dimensional (Big-Five)
+            </h3>
+            <p style="font-size: 0.8rem; color: var(--text-dim); margin-bottom: 1rem;">
+              Comparativa del vector de personalidad frente al perfil ideal de la institución.
+            </p>
+            <div class="chart-container">
+              <canvas id="radarCanvas"></canvas>
+            </div>
+          </div>
+
+          <div class="card-glass" style="margin-bottom: 0;">
+            <h3 style="font-family: var(--font-title); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.3rem;">
+              📊 Ranking de Compatibilidad por Institución
+            </h3>
+            <p style="font-size: 0.8rem; color: var(--text-dim); margin-bottom: 1rem;">
+              Índice de afinidad psicométrica calculado según la distancia vectorial y pesos específicos.
+            </p>
+            <div id="ranking-list-container" class="ranking-list"></div>
+          </div>
+        </div>
+
+        <div id="red-flags-container"></div>
+
+        <div class="archetype-banner">
+          <div id="archetype-badge" class="arch-badge">🎖️</div>
+          <div>
+            <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--gold-light); font-weight: 700; letter-spacing: 0.05em;">
+              Arquetipo Conductual de Desempeño
+            </div>
+            <div id="archetype-title" class="arch-title">Líder Táctico y de Mando Operativo</div>
+            <div id="archetype-desc" class="arch-desc">
+              Perfil orientado al dinamismo de campo, capacidad de asertividad y toma de decisiones firmes bajo condiciones de incertidumbre.
+            </div>
+          </div>
+        </div>
+
+        <div id="facets-breakdown-section" class="card-glass">
+          <h3 style="font-family: var(--font-title); font-size: 1.3rem; color: var(--gold-light); margin-bottom: 0.3rem;">
+            🔬 Desglose Psicométrico Detallado (30 Facetas IPIP-NEO)
+          </h3>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.2rem;">
+            Puntuaciones percentilares (0 a 100) calibradas por edad y sexo.
+          </p>
+          <div id="facets-container" class="facets-grid"></div>
+        </div>
+
+        <div class="interview-box">
+          <h3><span>🎙️</span> Guía Estratégica para la Entrevista Personal ante el Jurado</h3>
+          <div class="interview-grid">
+            <div>
+              <div class="interview-section-title"><span>🛡️</span> Fortalezas a Demostrar con Porte Militar</div>
+              <ul id="interview-strengths-list" class="interview-list"></ul>
+              <div class="interview-section-title" style="margin-top: 1.2rem;"><span>⚠️</span> Aspectos a Vigilar / Puntos Ciegos</div>
+              <ul id="interview-watchouts-list" class="interview-list"></ul>
+            </div>
+            <div>
+              <div class="interview-section-title"><span>🎯</span> Preguntas Pronosticadas de la Junta Evaluadora</div>
+              <ul id="interview-questions-list" class="interview-list"></ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-glass no-print" style="text-align: center; display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
+          <button id="btn-print-report" class="btn-gold"><span>🖨️ Imprimir / Exportar Informe en PDF</span></button>
+          <button id="btn-restart-app" class="btn-secondary"><span>🔄 Realizar Nueva Evaluación</span></button>
+        </div>
+      </section>
+    </div>
+
+    <!-- =========================================================================
+         PANEL 2: SIMULADOR DE EXAMEN DE CONOCIMIENTOS Y PSICOTÉCNICO
+         ========================================================================= -->
+    <div id="panel-knowledge" class="tab-panel" style="display: none;">
+      
+      <!-- PANTALLA SETUP DEL EXAMEN -->
+      <section id="exam-screen-setup" class="card-glass">
+        <div class="hero-banner">
+          <div class="hero-tag">📚 Bancos Oficiales de Exámenes de Admisión 2026 / 2027</div>
+          <h2 class="hero-title">Simulador de Examen de Conocimientos y Psicotécnico</h2>
+          <p class="hero-subtitle">
+            Entrenamiento cronometrado y calificado bajo los estándares de las 8 escuelas matrices del Perú. Incluye penalización oficial (-0.25 por error), escala vigesimal (0-20) y desglose pedagógico paso a paso.
+          </p>
+        </div>
+
+        <h3 style="font-family: var(--font-title); font-size: 1.2rem; color: var(--gold-light); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+          <span>🎯</span> Seleccione la Escuela Militar o Policial Objetivo:
+        </h3>
+
+        <!-- Grilla de Selección de Escuelas -->
+        <div id="exam-institutions-grid" class="inst-select-grid">
+          <!-- Generado dinámicamente por admission_simulator.js -->
+        </div>
+
+        <div style="background: rgba(11, 20, 46, 0.7); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 1.5rem; margin-bottom: 2rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+            <div>
+              <h4 id="exam-target-title" style="color: #ffffff; font-size: 1.1rem; margin-bottom: 0.3rem;">Simulacro para: Escuela Militar de Chorrillos</h4>
+              <p id="exam-target-passing" style="color: var(--gold-light); font-size: 0.85rem; font-weight: 600;">Nota mínima aprobatoria: 12.00 en escala vigesimal</p>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.8rem;">
+              <label for="exam-questions-count-select" style="font-size: 0.9rem; color: var(--text-muted); font-weight: 600;">Cantidad de Preguntas:</label>
+              <select id="exam-questions-count-select" class="form-control" style="width: auto; padding: 0.5rem 1rem;">
+                <option value="15">⚡ Simulacro Rápido (15 preguntas ~ 25 min)</option>
+                <option value="30" selected>🎯 Simulacro Estándar (30 preguntas ~ 45 min)</option>
+                <option value="50">🔥 Simulacro Intensivo (50 preguntas ~ 90 min)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align: center;">
+          <button id="btn-start-exam" class="btn-gold" style="font-size: 1.15rem; padding: 1.1rem 3rem;">
+            <span>🚀 Comenzar Examen Cronometrado</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- PANTALLA EN VIVO DEL EXAMEN -->
+      <section id="exam-screen-running" class="exam-runner-box" style="display: none;">
+        <!-- Barra de Control del Examen -->
+        <div class="exam-header-bar">
+          <div>
+            <span id="exam-q-current-number" style="font-weight: 800; color: #ffffff; font-size: 1.1rem;">Pregunta 1</span>
+            <span id="exam-q-total-count" style="color: var(--text-dim); font-size: 0.9rem; margin-left: 0.3rem;">de 30</span>
+          </div>
+
+          <!-- Grilla de Navegación de Preguntas -->
+          <div id="exam-grid-nav" class="exam-grid-nav"></div>
+
+          <!-- Temporizador Regresivo -->
+          <div class="exam-timer-badge">
+            <span>⏱️</span>
+            <span id="exam-timer-display">45:00</span>
+          </div>
+        </div>
+
+        <!-- Tarjeta de la Pregunta Actual -->
+        <div class="exam-question-card">
+          <div id="exam-q-subject-badge" class="exam-q-badge">Razonamiento Matemático</div>
+          <div id="exam-q-text" class="exam-q-text">Cargando enunciado de la pregunta...</div>
+          <div id="exam-q-image-container" class="exam-question-image-wrapper" style="display: none;"></div>
+          <div id="exam-options-container" class="exam-options-container"></div>
+        </div>
+
+        <!-- Controles de Navegación -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+          <button id="btn-exam-prev" class="btn-secondary" disabled>◂ Pregunta Anterior</button>
+          <div style="font-size: 0.85rem; color: var(--text-dim);">💡 Puede presionar las teclas 1 al 5 en su teclado para responder</div>
+          <div style="display: flex; gap: 0.8rem;">
+            <button id="btn-exam-next" class="btn-gold">Siguiente Pregunta ▸</button>
+            <button id="btn-exam-finish" class="btn-outline-gold" style="border-color: var(--status-success); color: #34d399;">🏁 Finalizar Examen</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- PANTALLA DE RESULTADOS DEL EXAMEN -->
+      <section id="exam-screen-results" class="card-glass" style="display: none;">
+        <div class="verdict-hero-card success" style="margin-bottom: 2rem;">
+          <div class="verdict-gauge">
+            <div style="font-family: var(--font-title); font-size: 2.8rem; font-weight: 900; color: var(--gold-light); line-height: 1;">
+              <span id="exam-result-score">15.50</span>
+            </div>
+            <div style="font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase; font-weight: 700; margin-top: 0.2rem;">Escala Vigesimal (0-20)</div>
+          </div>
+          <div class="verdict-details">
+            <div id="exam-result-verdict" class="verdict-status-pill success">APTO EN CONOCIMIENTOS</div>
+            <h2 style="font-family: var(--font-title); color: #ffffff; font-size: 1.6rem; margin: 0.4rem 0;">Resultado Oficial del Simulacro</h2>
+            <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; margin-top: 0.6rem; font-size: 0.95rem;">
+              <span>✅ Correctas: <strong id="exam-result-correct" style="color: #34d399;">22</strong></span>
+              <span>❌ Incorrectas: <strong id="exam-result-incorrect" style="color: #f87171;">6</strong></span>
+              <span>⚪ En blanco: <strong id="exam-result-blank" style="color: #94a3b8;">2</strong></span>
+              <span>📊 Acierto: <strong id="exam-result-percentage" style="color: var(--gold-light);">73.3%</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Desglose por Materias Evaluadas -->
+        <h3 style="font-family: var(--font-title); font-size: 1.25rem; color: var(--gold-light); margin-bottom: 1rem;">
+          📊 Rendimiento por Asignaturas y Áreas del Temario
+        </h3>
+        <div id="exam-areas-feedback-list" style="display: flex; flex-direction: column; gap: 0.8rem; margin-bottom: 2.5rem;"></div>
+
+        <!-- Revisión Paso a Paso con Solucionario y Explicaciones -->
+        <h3 style="font-family: var(--font-title); font-size: 1.25rem; color: var(--gold-light); margin-bottom: 0.3rem;">
+          🔍 Solucionario Detallado y Justificación Pedagógica
+        </h3>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.2rem;">
+          Revise cada respuesta con la explicación oficial paso a paso para afianzar sus conocimientos:
+        </p>
+        <div id="exam-review-questions-list"></div>
+
+        <div style="text-align: center; margin-top: 2rem;">
+          <button id="btn-exam-retry" class="btn-gold" style="padding: 0.85rem 2.5rem;">
+            <span>🔄 Rendir Nuevo Simulacro</span>
+          </button>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- =========================================================================
+         PANEL 3: SIMULADOR DE ESFUERZO FÍSICO Y ANTROPOMETRÍA
+         ========================================================================= -->
+    <div id="panel-physical" class="tab-panel" style="display: none;">
+      <section class="card-glass">
+        <div class="hero-banner">
+          <div class="hero-tag">🏋️ Baremos Oficiales de Rendimiento Físico FFAA & PNP</div>
+          <h2 class="hero-title">Calculadora de Aptitud Física y Antropometría</h2>
+          <p class="hero-subtitle">
+            Simula las pruebas de esfuerzo físico con los tiempos y repeticiones de los prospectos de admisión. Evalúa de 0 a 20 con detección inmediata de marcas descalificatorias.
+          </p>
+        </div>
+
+        <!-- Sección Antropométrica -->
+        <h3 style="font-family: var(--font-title); font-size: 1.25rem; color: var(--gold-light); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+          <span>📏</span> 1. Evaluación Antropométrica (Talla y Peso)
+        </h3>
+
+        <div class="form-grid" style="margin-bottom: 2rem;">
+          <div class="form-group">
+            <label for="phys-inst-select" class="form-label">Institución Evaluada</label>
+            <select id="phys-inst-select" class="form-control" style="font-weight: 600; color: var(--gold-light);">
+              <option value="EMCH" selected>⚔️ EMCH (Varones: 1.68m | Damas: 1.58m)</option>
+              <option value="ETE">🛡️ ETE (Varones: 1.65m | Damas: 1.55m)</option>
+              <option value="ENP">⚓ ENP (Varones: 1.68m | Damas: 1.58m)</option>
+              <option value="CITEN">🚢 CITEN (Varones: 1.65m | Damas: 1.55m)</option>
+              <option value="EOFAP">✈️ EOFAP (Varones: 1.68m | Damas: 1.58m)</option>
+              <option value="ESOFA">🛩️ ESOFA (Varones: 1.65m | Damas: 1.55m)</option>
+              <option value="EO_PNP">👮 EO-PNP (Varones: 1.68m | Damas: 1.60m)</option>
+              <option value="EESTP_PNP">🚔 EESTP-PNP (Varones: 1.65m | Damas: 1.58m)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="phys-sex" class="form-label">Sexo del Postulante</label>
+            <select id="phys-sex" class="form-control">
+              <option value="M" selected>Masculino (Barras / Carrera Varones)</option>
+              <option value="F">Femenino (Suspensión / Carrera Damas)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="phys-height" class="form-label">Estatura descalzo (Metros)</label>
+            <input type="number" id="phys-height" class="form-control" step="0.01" min="1.40" max="2.15" value="1.72">
+          </div>
+          <div class="form-group">
+            <label for="phys-weight" class="form-label">Peso corporal (Kilogramos)</label>
+            <div style="display: flex; gap: 0.6rem; align-items: center;">
+              <input type="number" id="phys-weight" class="form-control" step="0.5" min="35" max="150" value="68">
+              <span id="phys-bmi-live-badge" class="status-pill-bmi success">IMC: 23.0 · Normal</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sección de Marcas de Pruebas Físicas -->
+        <h3 style="font-family: var(--font-title); font-size: 1.25rem; color: var(--gold-light); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+          <span>⚡</span> 2. Registro de Marcas y Tiempos de Esfuerzo Físico
+        </h3>
+
+        <div class="form-grid">
+          <!-- Campo condicional para varones -->
+          <div id="field-group-barras" class="form-group">
+            <label for="phys-pullups" class="form-label">Dominadas en Barra fija (Repeticiones)</label>
+            <input type="number" id="phys-pullups" class="form-control" min="0" max="40" value="12">
+            <span style="font-size: 0.75rem; color: var(--text-dim);">Técnica estricta: barbilla sobre la barra y brazos extendidos</span>
+          </div>
+
+          <!-- Campo condicional para damas -->
+          <div id="field-group-suspension" class="form-group" style="display: none;">
+            <label for="phys-suspension-sec" class="form-label">Suspensión en Barra (Segundos)</label>
+            <input type="number" id="phys-suspension-sec" class="form-control" min="0" max="120" value="35">
+            <span style="font-size: 0.75rem; color: var(--text-dim);">Mantener barbilla sobre la barra sin apoyar el pecho</span>
+          </div>
+
+          <div class="form-group">
+            <label for="phys-abs" class="form-label">Abdominales (Repeticiones en 1 min)</label>
+            <input type="number" id="phys-abs" class="form-control" min="0" max="80" value="36">
+            <span style="font-size: 0.75rem; color: var(--text-dim);">Codos tocan las rodillas y espalda regresa al suelo</span>
+          </div>
+
+          <div class="form-group">
+            <label for="phys-pushups" class="form-label">Flexiones de Brazos / Planchas (1 min)</label>
+            <input type="number" id="phys-pushups" class="form-control" min="0" max="80" value="36">
+            <span style="font-size: 0.75rem; color: var(--text-dim);">Pecho baja a 10 cm del suelo y brazos extienden</span>
+          </div>
+
+          <div class="form-group">
+            <label for="phys-jump" class="form-label">Salto Largo sin impulso (Metros)</label>
+            <input type="number" id="phys-jump" class="form-control" step="0.05" min="0.5" max="3.5" value="2.10">
+            <span style="font-size: 0.75rem; color: var(--text-dim);">Medición desde la línea de salida hasta el talón más retrasado</span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Carrera de Fondo (1500m / 1000m PNP)</label>
+            <div style="display: flex; gap: 0.5rem; align-items: center;">
+              <input type="number" id="phys-run-min" class="form-control" placeholder="Min" min="2" max="15" value="6" style="width: 80px;">
+              <span>min</span>
+              <input type="number" id="phys-run-sec" class="form-control" placeholder="Seg" min="0" max="59" value="10" style="width: 80px;">
+              <span>seg</span>
+            </div>
+            <span style="font-size: 0.75rem; color: var(--text-dim);">Ejemplo: 6 minutos y 10 segundos</span>
+          </div>
+
+          <div class="form-group">
+            <label for="phys-swim-sec" class="form-label">Natación Estilo Libre (Segundos)</label>
+            <input type="number" id="phys-swim-sec" class="form-control" min="10" max="180" value="38">
+            <span style="font-size: 0.75rem; color: var(--text-dim);">50 metros (FFAA) o 25 metros (PNP)</span>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 1.5rem;">
+          <button id="btn-calc-physical" class="btn-gold" style="font-size: 1.1rem; padding: 0.95rem 2.5rem;">
+            <span>⚡ Calcular Calificaciones de Esfuerzo Físico</span>
+          </button>
+        </div>
+
+        <!-- Cuadro de Resultados Físicos -->
+        <div id="physical-results-display" style="display: none; margin-top: 2rem; border-top: 1px solid var(--border-glass); padding-top: 1.5rem;">
+          <div class="verdict-hero-card success" style="margin-bottom: 1.5rem;">
+            <div class="verdict-gauge">
+              <div style="font-family: var(--font-title); font-size: 2.8rem; font-weight: 900; color: var(--gold-light); line-height: 1;">
+                <span id="phys-result-avg">16.50</span>
+              </div>
+              <div style="font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase; font-weight: 700; margin-top: 0.2rem;">Promedio Físico (0-20)</div>
+            </div>
+            <div class="verdict-details">
+              <div id="phys-result-verdict" class="verdict-status-pill success">APTO DESTACADO</div>
+              <h3 style="color: #ffffff; margin: 0.3rem 0; font-size: 1.3rem;">Dictamen de Rendimiento Físico</h3>
+              <p id="phys-result-anthro" style="font-size: 0.9rem; font-weight: 600; color: var(--status-success);"></p>
+              <p id="phys-result-rec" style="font-size: 0.85rem; color: var(--text-muted);"></p>
+            </div>
+          </div>
+
+          <h4 style="font-family: var(--font-title); font-size: 1.1rem; color: var(--gold-light); margin-bottom: 0.5rem;">
+            📋 Baremos Oficiales por Disciplina
+          </h4>
+          <div style="overflow-x: auto;">
+            <table class="phys-table">
+              <thead>
+                <tr>
+                  <th>Prueba Física</th>
+                  <th>Marca Registrada</th>
+                  <th>Nota Oficial (0-20)</th>
+                  <th>Mínimo Exigido</th>
+                  <th>Estado</th>
+                </tr>
+              </thead>
+              <tbody id="phys-disciplines-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- =========================================================================
+         PANEL 4: DICTAMEN CONSOLIDADO Y PROBABILIDAD DE INGRESO
+         ========================================================================= -->
+    <div id="panel-consolidated" class="tab-panel" style="display: none;">
+      <section class="card-glass">
+        <div class="hero-banner">
+          <div class="hero-tag">🇵🇪 Sistema de Admisión Militar del Perú · Fórmula Integral</div>
+          <h2 class="hero-title">Dictamen Consolidado y Probabilidad de Ingreso</h2>
+          <p class="hero-subtitle">
+            Integra las tres etapas eliminatorias oficiales: Aptitud Psicométrica (25%), Examen de Conocimientos (45%) y Esfuerzo Físico (30%) para proyectar su ubicación en el Cuadro de Mérito General.
+          </p>
+        </div>
+
+        <!-- Estado actual de las 3 fases -->
+        <div class="cons-pillars-grid">
+          <div class="cons-pillar-card">
+            <h4>🧠 1. Evaluación Psicométrica</h4>
+            <div id="consolidated-preview-psy" class="cons-pillar-score">82.0%</div>
+            <div class="cons-pillar-weight">Ponderación: 25% del puntaje</div>
+          </div>
+          <div class="cons-pillar-card">
+            <h4>📝 2. Examen Conocimientos</h4>
+            <div id="consolidated-preview-know" class="cons-pillar-score">14.5 / 20</div>
+            <div class="cons-pillar-weight">Ponderación: 45% del puntaje</div>
+          </div>
+          <div class="cons-pillar-card">
+            <h4>🏃 3. Rendimiento Físico</h4>
+            <div id="consolidated-preview-phys" class="cons-pillar-score">15.8 / 20</div>
+            <div class="cons-pillar-weight">Ponderación: 30% del puntaje</div>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin: 1.5rem 0;">
+          <button id="btn-generate-consolidated" class="btn-gold" style="font-size: 1.15rem; padding: 1rem 3rem;">
+            <span>🎖️ Emitir Dictamen Consolidado de Admisión</span>
+          </button>
+        </div>
+
+        <!-- Contenedor del Reporte Consolidado -->
+        <div id="consolidated-report-container" style="display: none; border-top: 1px solid var(--border-glass); padding-top: 2rem;">
+          
+          <div class="verdict-hero-card success" style="margin-bottom: 2rem;">
+            <div class="verdict-gauge">
+              <div style="font-family: var(--font-title); font-size: 3rem; font-weight: 900; color: var(--gold-light); line-height: 1;">
+                <span id="cons-final-score">16.20</span>
+              </div>
+              <div style="font-size: 0.85rem; color: var(--text-dim); text-transform: uppercase; font-weight: 700; margin-top: 0.3rem;">
+                Nota Final (<span id="cons-final-pct">81.0 / 100</span>)
+              </div>
+            </div>
+            <div class="verdict-details">
+              <div id="cons-probability-badge" class="verdict-status-pill success">Probabilidad: 92% - 98%</div>
+              <h2 id="cons-verdict-title" style="font-family: var(--font-title); color: #ffffff; font-size: 1.7rem; margin: 0.4rem 0;">
+                APTO DESTACADO - ALTA PROBABILIDAD DE VACANTE
+              </h2>
+              <p style="font-size: 0.95rem; color: var(--text-muted);">
+                Postulante evaluado para ingreso a: <strong id="cons-inst-target-name" style="color: var(--gold-light);">Escuela Militar de Chorrillos</strong>
+              </p>
+            </div>
+          </div>
+
+          <!-- Tabla de Viabilidad Definitiva para las 8 Escuelas Matrices -->
+          <div class="card-glass" style="margin-bottom: 2rem; background: rgba(11, 20, 46, 0.75);">
+            <h3 style="font-family: var(--font-title); font-size: 1.25rem; color: var(--gold-light); margin-bottom: 0.4rem; display: flex; align-items: center; gap: 0.5rem;">
+              <span>📊</span> Porcentaje de Viabilidad Definitivo por Escuela (8 Instituciones)
+            </h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.2rem;">
+              Ponderación consolidada de los Pasos 1, 2 y 3: Hard Filter Legal (investigacion_2.json), Distancia Euclidiana (psicometria.json) y Examen Pre-Militar (conocimientos.json).
+            </p>
+            <div id="cons-schools-ranking-list" class="schools-ranking-list"></div>
+          </div>
+
+          <!-- Recomendaciones Estratégicas -->
+          <div class="card-glass" style="background: rgba(11, 20, 46, 0.6);">
+            <h3 style="font-family: var(--font-title); font-size: 1.2rem; color: var(--gold-light); margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.5rem;">
+              <span>🧭</span> Recomendaciones Estratégicas para el Ingreso
+            </h3>
+            <ul id="cons-recommendations-list" style="padding-left: 1.5rem; color: #f1f5f9; font-size: 0.92rem; line-height: 1.7;"></ul>
+          </div>
+
+          <div class="no-print" style="text-align: center; margin-top: 2rem;">
+            <button onclick="window.print()" class="btn-gold" style="padding: 0.85rem 2.2rem;">
+              <span>🖨️ Imprimir / Guardar Dictamen en PDF</span>
+            </button>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <!-- =========================================================================
+         PANEL 5: MODO ENFOQUE TÁCTICO (1 REACTIVO POR PANTALLA · MÁXIMA CONCENTRACIÓN)
+         ========================================================================= -->
+    <div id="panel-tactical-focus" class="tab-panel" style="display: none;">
+      <div id="tactical-focus-container">
+        <!-- Renderizado dinámico e interactivo por TacticalUI -->
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Pie de Página Institucional -->
+  <footer class="footer-military no-print">
+    <p>
+      Sistema Integral de Admisión y Evaluación Militar del Perú · Desarrollado con base en IPIP-NEO y Prospectos Oficiales de Admisión 2026/2027.
+    </p>
+    <p style="margin-top: 0.3rem; color: var(--text-dim); font-size: 0.75rem;">
+      Compatible con normativas de admisión: EMCH · ETE · ENP · CITEN · EOFAP · ESOFA · EO-PNP · EESTP-PNP.
+    </p>
+  </footer>
+
+  <!-- Motor de Fórmulas Matemáticas KaTeX y Auto-Render -->
+  <script src="vendor/katex/katex.min.js"></script>
+  <script src="vendor/katex/auto-render.min.js"></script>
+
+  <!-- Scripts del Sistema -->
+  <script src="js/questions_data.js?v=tactical_2026_5"></script>
+  <script src="js/institutional_profiles.js?v=tactical_2026_5"></script>
+  <script src="js/scoring_engine.js?v=tactical_2026_5"></script>
+  <script src="js/app.js?v=tactical_2026_5"></script>
+  <script src="js/admission_simulator.js?v=tactical_2026_5"></script>
+  <script src="js/vocational_flow.js?v=tactical_2026_5"></script>
+  <script src="js/tactical_ui.js?v=tactical_2026_5"></script>
+</body>
+</html>

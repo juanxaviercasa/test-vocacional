@@ -1,0 +1,542 @@
+[
+  {
+    "id_pregunta": "EOFAP_ALG_CUA_001",
+    "curso": "Álgebra",
+    "tema": "Ecuaciones Cuadráticas",
+    "nivel_dificultad": 1,
+    "enunciado": "Dada la ecuación cuadrática $x^2 - 9x + 14 = 0$, calcule su conjunto solución en el concurso de admisión de EOFAP - Escuela de Oficiales FAP.",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$\\{2, 7\\}$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$\\{-2, -7\\}$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$\\{1, 14\\}$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$\\{-2, 7\\}$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$\\{3, 6\\}$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Factorizando por aspa simple: $(x - 7)(x - 2) = 0 \\implies x_1 = 7, x_2 = 2$."
+  },
+  {
+    "id_pregunta": "EOFAP_ALG_CUA_002",
+    "curso": "Álgebra",
+    "tema": "Ecuaciones Cuadráticas",
+    "nivel_dificultad": 1,
+    "enunciado": "Determine el valor del discriminante ($\\Delta$) para la ecuación $2x^2 - 3x + 1 = 0$.",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$1$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$-1$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$17$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$9$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$0$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "$\\Delta = (-3)^2 - 4(2)(1) = 9 - 8 = 1$."
+  },
+  {
+    "id_pregunta": "EOFAP_ALG_CUA_003",
+    "curso": "Álgebra",
+    "tema": "Ecuaciones Cuadráticas",
+    "nivel_dificultad": 1,
+    "enunciado": "Forme la ecuación cuadrática cuyas raíces son $x_1 = 4$ y $x_2 = 4$ (raíz doble).",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$x^2 - 8x + 16 = 0$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$x^2 + 8x + 16 = 0$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$x^2 - 16 = 0$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$x^2 - 4x + 16 = 0$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$x^2 - 8x - 16 = 0$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "$S = 4+4=8$, $P = 4(4)=16$. Ecuación: $x^2 - 8x + 16 = 0$."
+  },
+  {
+    "id_pregunta": "EOFAP_ALG_CUA_004",
+    "curso": "Álgebra",
+    "tema": "Ecuaciones Cuadráticas",
+    "nivel_dificultad": 1,
+    "enunciado": "En la ecuación $3x^2 + kx - 12 = 0$, si la suma de raíces es $2$, determine el valor del coeficiente $k$.",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$-6$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$6$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$-2$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$2$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$-3$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "$S = -\\frac{k}{3} = 2 \\implies k = -6$."
+  },
+  {
+    "id_pregunta": "EOFAP_ALG_CUA_005",
+    "curso": "Álgebra",
+    "tema": "Ecuaciones Cuadráticas",
+    "nivel_dificultad": 2,
+    "enunciado": "Calcule el valor de $m$ para que la ecuación $x^2 - (m - 1)x + 25 = 0$ admita raíces reales e iguales.",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$m \\in \\{-9, 11\\}$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$m \\in \\{-10, 10\\}$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$m = 11$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$m = 9$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$m \\in \\{-11, 9\\}$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "$\\Delta = (m - 1)^2 - 4(1)(25) = 0 \\implies (m - 1)^2 = 100 \\implies m - 1 = \\pm 10 \\implies m \\in \\{-9, 11\\}$."
+  },
+  {
+    "id_pregunta": "EOFAP_ALG_CUA_006",
+    "curso": "Álgebra",
+    "tema": "Ecuaciones Cuadráticas",
+    "nivel_dificultad": 2,
+    "enunciado": "Si $\\alpha$ y $\\beta$ son raíces de $2x^2 - 4x - 1 = 0$, calcule el valor de $K = \\alpha^2 + \\beta^2$.",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$5$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$4$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$3$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$6$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$\\frac{9}{2}$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "$\\alpha + \\beta = 2$, $\\alpha\\beta = -\\frac{1}{2}$. Luego $K = (\\alpha+\\beta)^2 - 2\\alpha\\beta = 2^2 - 2(-1/2) = 4 + 1 = 5$."
+  },
+  {
+    "id_pregunta": "EOFAP_ALG_CUA_007",
+    "curso": "Álgebra",
+    "tema": "Ecuaciones Cuadráticas",
+    "nivel_dificultad": 2,
+    "enunciado": "Resuelva en los reales la ecuación: $$(x - 3)(x + 2) = 14$$",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$\\{5, -4\\}$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$\\{-5, 4\\}$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$\\{7, -2\\}$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$\\{3, -2\\}$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$\\{10, -2\\}$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "$x^2 - x - 6 = 14 \\implies x^2 - x - 20 = 0 \\implies (x - 5)(x + 4) = 0 \\implies x_1 = 5, x_2 = -4$."
+  },
+  {
+    "id_pregunta": "EOFAP_ALG_CUA_008",
+    "curso": "Álgebra",
+    "tema": "Ecuaciones Cuadráticas",
+    "nivel_dificultad": 2,
+    "enunciado": "Dada la ecuación $x^2 - 7x + m = 0$, determine $m$ si se conoce que $x_1 - x_2 = 3$ ($x_1 > x_2$).",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$10$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$12$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$8$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$14$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$6$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "$x_1 + x_2 = 7$, $x_1 - x_2 = 3 \\implies 2x_1 = 10 \\implies x_1 = 5, x_2 = 2$. Luego $m = x_1 x_2 = 5(2) = 10$."
+  },
+  {
+    "id_pregunta": "EOFAP_ALG_CUA_009",
+    "curso": "Álgebra",
+    "tema": "Ecuaciones Cuadráticas",
+    "nivel_dificultad": 3,
+    "enunciado": "[Ascenso Balístico de Cazas Mirage 2000]: La cota de elevación operativa $y(t)$ en metros durante una maniobra responde a la función cuadrática $y(t) = -5t^2 + 50t$. ¿Durante cuántos segundos la posición se mantiene estrictamente por encima de $80\\text{ metros}$?",
+    "apoyo_visual": {
+      "requiere_grafico": true,
+      "imagen_url": null,
+      "descripcion_para_diseñador": "Parábola de trayectoria con línea horizontal en cota 80 m cortando en t = 2 y t = 8 s."
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$6\\text{ segundos}$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$4\\text{ segundos}$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$5\\text{ segundos}$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$8\\text{ segundos}$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$2\\text{ segundos}$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "$-5t^2 + 50t \\ge 80 \\implies 5t^2 - 50t + 80 \\le 0 \\implies t^2 - 10t + 16 \\le 0 \\implies (t - 2)(t - 8) \\le 0$. Duración: $8 - 2 = 6\\text{ segundos}$."
+  },
+  {
+    "id_pregunta": "EOFAP_ALG_CUA_010",
+    "curso": "Álgebra",
+    "tema": "Ecuaciones Cuadráticas",
+    "nivel_dificultad": 3,
+    "enunciado": "[Área de Seguridad de Pista Aérea]: Un perímetro rectangular de despliegue tiene una longitud frontal que supera en $15\\text{ metros}$ a su profundidad. Si el área confinada es de $1000\\text{ m}^2$, determine la longitud del perímetro total del cerramiento.",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$130\\text{ m}$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$120\\text{ m}$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$140\\text{ m}$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$65\\text{ m}$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$150\\text{ m}$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "$x(x + 15) = 1000 \\implies x^2 + 15x - 1000 = 0 \\implies (x - 25)(x + 40) = 0 \\implies x = 25\\text{ m}$. Dimensiones: $25\\text{ m}$ y $40\\text{ m}$. Perímetro: $2(25 + 40) = 130\\text{ metros}$."
+  },
+  {
+    "id_pregunta": "EOFAP_ALG_CUA_011",
+    "curso": "Álgebra",
+    "tema": "Ecuaciones Cuadráticas",
+    "nivel_dificultad": 3,
+    "enunciado": "[Vuelo de Enlace de Aeronave C-27J Spartan]: Un transporte de dotación institucional debe cubrir una distancia de $240\\text{ km}$ a velocidad constante $v$ en $\\text{km/h}$. Al incrementar la velocidad operativa en $20\\text{ km/h}$, el tiempo de arribo se reduce en $1\\text{ hora}$. Determine el valor planificado de $v$.",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$60\\text{ km/h}$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$50\\text{ km/h}$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$80\\text{ km/h}$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$40\\text{ km/h}$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$70\\text{ km/h}$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "$\\frac{240}{v} - \\frac{240}{v + 20} = 1 \\implies \\frac{240(20)}{v(v + 20)} = 1 \\implies v^2 + 20v - 4800 = 0 \\implies (v - 60)(v + 80) = 0 \\implies v = 60\\text{ km/h}$."
+  },
+  {
+    "id_pregunta": "EOFAP_ALG_CUA_012",
+    "curso": "Álgebra",
+    "tema": "Ecuaciones Cuadráticas",
+    "nivel_dificultad": 3,
+    "enunciado": "[Parámetros de Navegación Aérea Supersónica]: Si $\\alpha$ y $\\beta$ son raíces de la ecuación cuadrática $x^2 - 3x + 1 = 0$, calcule el valor numérico exacto de $\\alpha^4 + \\beta^4$.",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$47$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$49$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$45$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$51$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$43$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "$\\alpha+\\beta = 3, \\alpha\\beta = 1$. $\\alpha^2+\\beta^2 = 3^2 - 2(1) = 7$. Luego $\\alpha^4+\\beta^4 = (\\alpha^2+\\beta^2)^2 - 2(\\alpha\\beta)^2 = 7^2 - 2(1)^2 = 49 - 2 = 47$."
+  }
+]

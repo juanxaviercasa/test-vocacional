@@ -1,0 +1,542 @@
+[
+  {
+    "id_pregunta": "EMCH_FIS_CIN_001",
+    "curso": "Física",
+    "tema": "Cinemática y Balística",
+    "nivel_dificultad": 1,
+    "enunciado": "En la prueba de ciencias de Escuela Militar de Chorrillos (EMCH - Oficiales): Un proyectil balístico disparado en línea recta viaja con una velocidad constante de $850\\text{ m/s}$. Calcule la distancia que recorre en un intervalo de tiempo de $0.4\\text{ segundos}$.",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$340\\text{ metros}$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$425\\text{ metros}$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$280\\text{ metros}$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$380\\text{ metros}$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$320\\text{ metros}$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "En MRU: $d = v \\cdot t = 850\\text{ m/s} \\times 0.4\\text{ s} = 340\\text{ metros}$."
+  },
+  {
+    "id_pregunta": "EMCH_FIS_CIN_002",
+    "curso": "Física",
+    "tema": "Cinemática y Balística",
+    "nivel_dificultad": 1,
+    "enunciado": "Un vehículo de respuesta táctica parte del reposo ($v_0 = 0$) y acelera uniformemente a razón de $3.5\\text{ m/s}^2$ durante $8\\text{ segundos}$. Determine la velocidad alcanzada al cabo de dicho tiempo.",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$28\\text{ m/s}$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$24\\text{ m/s}$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$32\\text{ m/s}$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$21\\text{ m/s}$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$35\\text{ m/s}$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Fórmula de MRUV: $v_f = v_0 + at = 0 + (3.5\\text{ m/s}^2)(8\\text{ s}) = 28\\text{ m/s}$."
+  },
+  {
+    "id_pregunta": "EMCH_FIS_CIN_003",
+    "curso": "Física",
+    "tema": "Cinemática y Balística",
+    "nivel_dificultad": 1,
+    "enunciado": "Un proyectil de señalización es lanzado verticalmente hacia arriba con una velocidad inicial de $40\\text{ m/s}$. Despreciando la resistencia del aire y considerando $g = 10\\text{ m/s}^2$, calcule la altura máxima que alcanza.",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$80\\text{ metros}$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$100\\text{ metros}$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$60\\text{ metros}$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$120\\text{ metros}$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$75\\text{ metros}$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Fórmula de altura máxima en caída libre: $H_{max} = \\frac{v_0^2}{2g} = \\frac{40^2}{2(10)} = \\frac{1600}{20} = 80\\text{ metros}$."
+  },
+  {
+    "id_pregunta": "EMCH_FIS_CIN_004",
+    "curso": "Física",
+    "tema": "Cinemática y Balística",
+    "nivel_dificultad": 1,
+    "enunciado": "Un móvil parte del reposo y experimenta un MRUV con una aceleración de $6\\text{ m/s}^2$. ¿Qué distancia recorre exclusivamente durante el $4^\\circ\\text{ segundo}$ de su movimiento?",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$21\\text{ metros}$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$24\\text{ metros}$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$18\\text{ metros}$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$27\\text{ metros}$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$15\\text{ metros}$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Distancia en el enésimo segundo: $d_n = v_0 + \\frac{a}{2}(2n - 1) = 0 + \\frac{6}{2}(2(4) - 1) = 3(7) = 21\\text{ metros}$."
+  },
+  {
+    "id_pregunta": "EMCH_FIS_CIN_005",
+    "curso": "Física",
+    "tema": "Cinemática y Balística",
+    "nivel_dificultad": 2,
+    "enunciado": "Un camión blindado se desplaza a $72\\text{ km/h}$ y aplica los frenos bruscamente, desacelerando a razón constante de $5\\text{ m/s}^2$ hasta detenerse por completo. Determine la distancia de frenado.",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$40\\text{ metros}$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$30\\text{ metros}$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$50\\text{ metros}$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$45\\text{ metros}$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$36\\text{ metros}$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "$v_0 = 72\\text{ km/h} = 20\\text{ m/s}$. Por ecuación de Torricelli: $v_f^2 = v_0^2 - 2ad \\implies 0 = 20^2 - 2(5)d \\implies 10d = 400 \\implies d = 40\\text{ metros}$."
+  },
+  {
+    "id_pregunta": "EMCH_FIS_CIN_006",
+    "curso": "Física",
+    "tema": "Cinemática y Balística",
+    "nivel_dificultad": 2,
+    "enunciado": "Se dispara un proyectil con una velocidad de $100\\text{ m/s}$ y un ángulo de inclinación de $30^\\circ$ respecto a la horizontal. Considerando $g = 10\\text{ m/s}^2$, determine su alcance horizontal máximo sobre el plano de disparo.",
+    "apoyo_visual": {
+      "requiere_grafico": true,
+      "imagen_url": null,
+      "descripcion_para_diseñador": "Trayectoria parabólica de proyectil con velocidad 100 m/s y ángulo de 30 grados respecto a la horizontal."
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$500\\sqrt{3}\\text{ metros } (\\approx 866\\text{ m})$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$1000\\text{ metros}$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$400\\sqrt{3}\\text{ metros}$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$600\\sqrt{3}\\text{ metros}$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$750\\text{ metros}$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Fórmula del alcance: $R = \\frac{v_0^2 \\sin(2\\theta)}{g} = \\frac{100^2 \\sin(60^\\circ)}{10} = \\frac{10\\,000 (\\sqrt{3}/2)}{10} = 500\\sqrt{3}\\text{ metros} \\approx 866\\text{ m}$."
+  },
+  {
+    "id_pregunta": "EMCH_FIS_CIN_007",
+    "curso": "Física",
+    "tema": "Cinemática y Balística",
+    "nivel_dificultad": 2,
+    "enunciado": "Desde el suelo se lanza un cuerpo hacia arriba a $50\\text{ m/s}$, y simultáneamente se deja caer otro cuerpo desde una altura de $150\\text{ m}$ en la misma vertical. Considerando $g = 10\\text{ m/s}^2$, ¿a qué altura respecto al suelo se cruzan ambos cuerpos?",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$105\\text{ metros}$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$95\\text{ metros}$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$115\\text{ metros}$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$100\\text{ metros}$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$90\\text{ metros}$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Tiempo de encuentro en la vertical: $t = \\frac{H}{v_0} = \\frac{150}{50} = 3\\text{ s}$. Altura del proyectil ascendente: $y = v_0 t - \\frac{1}{2}gt^2 = 50(3) - 5(3^2) = 150 - 45 = 105\\text{ metros}$."
+  },
+  {
+    "id_pregunta": "EMCH_FIS_CIN_008",
+    "curso": "Física",
+    "tema": "Cinemática y Balística",
+    "nivel_dificultad": 2,
+    "enunciado": "En una prueba de aceleración, un móvil parte del reposo y alcanza $30\\text{ m/s}$ en $10\\text{ segundos}$, mantiene dicha velocidad durante $15\\text{ segundos}$ y luego desacelera uniformemente hasta detenerse en $5\\text{ segundos}$. Calcule la distancia total recorrida analizando el área de su gráfica $v - t$.",
+    "apoyo_visual": {
+      "requiere_grafico": true,
+      "imagen_url": null,
+      "descripcion_para_diseñador": "Gráfica velocidad vs tiempo con forma trapezoidal: sube de 0 a 30 en t=10s, se mantiene plana de t=10s a t=25s, y baja a 0 en t=30s."
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$675\\text{ metros}$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$600\\text{ metros}$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$750\\text{ metros}$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$650\\text{ metros}$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$700\\text{ metros}$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Área de un trapecio en $v-t$: base mayor $B = 30\\text{ s}$, base menor $b = 15\\text{ s}$, altura $h = 30\\text{ m/s}$. Distancia total: $D = \\frac{B + b}{2} \\cdot h = \\frac{30 + 15}{2} \\times 30 = \\frac{45}{2} \\times 30 = 45 \\times 15 = 675\\text{ metros}$."
+  },
+  {
+    "id_pregunta": "EMCH_FIS_CIN_009",
+    "curso": "Física",
+    "tema": "Cinemática y Balística",
+    "nivel_dificultad": 3,
+    "enunciado": "[Balística Exterior de Tiro de Mortero de 120mm en Cota Ascendente]: Se efectúa un disparo de artillería con un ángulo de elevación de $53^\\circ$ y una velocidad inicial de boca de $250\\text{ m/s}$ contra una posición enemiga situada a la misma cota del cañón. Considerando $g = 10\\text{ m/s}^2$, $\\sin(53^\\circ) = 0.8$ y $\\cos(53^\\circ) = 0.6$, determine el tiempo de vuelo total del proyectil hasta el impacto.",
+    "apoyo_visual": {
+      "requiere_grafico": true,
+      "imagen_url": null,
+      "descripcion_para_diseñador": "Tiro balístico parabólico con v0 = 250 m/s a 53° sobre blanco en el mismo plano horizontal."
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$40\\text{ segundos}$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$30\\text{ segundos}$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$50\\text{ segundos}$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$35\\text{ segundos}$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$45\\text{ segundos}$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Componente vertical: $v_{0y} = v_0 \\sin(53^\\circ) = 250(0.8) = 200\\text{ m/s}$. Tiempo de subida: $t_{sub} = \\frac{v_{0y}}{g} = \\frac{200}{10} = 20\\text{ s}$. Tiempo total de vuelo: $t_v = 2 t_{sub} = 2(20) = 40\\text{ segundos}$."
+  },
+  {
+    "id_pregunta": "EMCH_FIS_CIN_010",
+    "curso": "Física",
+    "tema": "Cinemática y Balística",
+    "nivel_dificultad": 3,
+    "enunciado": "[Disparo Balístico de Cañón de Tanque T-55 en Marcha hacia Blanco Fijo]: Un vehículo táctico blindado marcha hacia un objetivo a velocidad constante de $20\\text{ m/s}$. Cuando se encuentra a una distancia de $1200\\text{ m}$, dispara un proyectil horizontalmente con velocidad de $380\\text{ m/s}$ respecto al cañón. ¿Cuánto tiempo transcurrirá desde el momento del disparo hasta que el proyectil impacte en el blanco?",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$3\\text{ segundos}$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$3.15\\text{ segundos}$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$2.8\\text{ segundos}$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$4\\text{ segundos}$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$3.5\\text{ segundos}$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Velocidad absoluta del proyectil respecto al suelo: $v_{total} = v_{veh} + v_{rel} = 20 + 380 = 400\\text{ m/s}$. Distancia al blanco al momento del disparo: $1200\\text{ m}$. Tiempo de impacto: $t = \\frac{1200}{400} = 3\\text{ segundos}$."
+  },
+  {
+    "id_pregunta": "EMCH_FIS_CIN_011",
+    "curso": "Física",
+    "tema": "Cinemática y Balística",
+    "nivel_dificultad": 3,
+    "enunciado": "[Lanzamiento de Carga de Abastecimiento en Tiro Semiparabólico desde Mi-17]: Una aeronave vuela horizontalmente a una altitud constante de $500\\text{ m}$ con una velocidad de crucero de $80\\text{ m/s}$ y suelta un paquete de suministros de emergencia. Considerando $g = 10\\text{ m/s}^2$ y despreciando la resistencia aerodinámica, determine el desplazamiento horizontal que experimenta el paquete desde el instante de su liberación hasta tocar tierra.",
+    "apoyo_visual": {
+      "requiere_grafico": true,
+      "imagen_url": null,
+      "descripcion_para_diseñador": "Tiro semiparabólico con avión a h = 500 m y vx = 80 m/s liberando carga."
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$800\\text{ metros}$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$600\\text{ metros}$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$1000\\text{ metros}$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$750\\text{ metros}$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$900\\text{ metros}$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Tiempo de caída libre: $h = \\frac{1}{2}gt^2 \\implies 500 = 5t^2 \\implies t^2 = 100 \\implies t = 10\\text{ s}$. Desplazamiento horizontal: $x = v_x \\cdot t = 80\\text{ m/s} \\times 10\\text{ s} = 800\\text{ metros}$."
+  },
+  {
+    "id_pregunta": "EMCH_FIS_CIN_012",
+    "curso": "Física",
+    "tema": "Cinemática y Balística",
+    "nivel_dificultad": 3,
+    "enunciado": "[Desaceleración y Penetración de Proyectil Flecha APFSDS en Blindaje RHA]: Un proyectil balístico penetra en un bloque de blindaje con una velocidad de impacto de $600\\text{ m/s}$ y se detiene tras recorrer una profundidad de penetración de $18\\text{ cm}$ ($0.18\\text{ m}$). Asumiendo una desaceleración constante dentro del material, determine la magnitud de dicha desaceleración.",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$1.0 \\times 10^6\\text{ m/s}^2$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$2.0 \\times 10^6\\text{ m/s}^2$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$0.5 \\times 10^6\\text{ m/s}^2$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$1.5 \\times 10^6\\text{ m/s}^2$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$3.0 \\times 10^6\\text{ m/s}^2$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Por Torricelli: $v_f^2 = v_0^2 - 2ad \\implies 0 = 600^2 - 2a(0.18) \\implies 0.36 a = 360\\,000 \\implies a = \\frac{360\\,000}{0.36} = 1\\,000\\,000\\text{ m/s}^2 = 1.0 \\times 10^6\\text{ m/s}^2$."
+  }
+]

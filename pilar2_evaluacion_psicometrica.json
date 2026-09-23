@@ -1,0 +1,1116 @@
+{
+  "banco_reactivos_big_five": [
+    {
+      "id_reactivo": "N_01",
+      "enunciado": "Me preocupo con exceso ante situaciones imprevistas que todavía no han ocurrido.",
+      "dominio_evaluado": "Neuroticismo",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "N_02",
+      "enunciado": "Suelo perder la paciencia con facilidad cuando las cosas no salen como las tenía planeadas.",
+      "dominio_evaluado": "Neuroticismo",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "N_03",
+      "enunciado": "A menudo me siento tenso o con los nervios alterados durante jornadas de alta exigencia.",
+      "dominio_evaluado": "Neuroticismo",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "N_04",
+      "enunciado": "Me afecta profundamente cuando un superior me llama la atención o critica mi desempeño.",
+      "dominio_evaluado": "Neuroticismo",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "N_05",
+      "enunciado": "A veces me invaden sentimientos de desánimo o tristeza sin que exista un motivo claro.",
+      "dominio_evaluado": "Neuroticismo",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "N_06",
+      "enunciado": "Me cuesta conciliar el sueño si sé que al día siguiente debo afrontar una inspección rigurosa.",
+      "dominio_evaluado": "Neuroticismo",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "N_07",
+      "enunciado": "Me siento sobrepasado cuando tengo que atender varias emergencias de manera simultánea.",
+      "dominio_evaluado": "Neuroticismo",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "N_08",
+      "enunciado": "Tiendo a dudar de mi capacidad de resistencia cuando los ejercicios físicos son extremos.",
+      "dominio_evaluado": "Neuroticismo",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "N_09",
+      "enunciado": "Me da cólera rápidamente si percibo que una consigna o sanción es arbitraria.",
+      "dominio_evaluado": "Neuroticismo",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "N_10",
+      "enunciado": "En momentos de mucha presión siento que mis fuerzas flaquean y me cuesta concentrarme.",
+      "dominio_evaluado": "Neuroticismo",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "N_11",
+      "enunciado": "Me pongo muy ansioso antes de rendir una evaluación o examen determinante.",
+      "dominio_evaluado": "Neuroticismo",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "N_12",
+      "enunciado": "Me cuesta reponerme emocionalmente después de haber cometido una falla frente al pelotón.",
+      "dominio_evaluado": "Neuroticismo",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "N_13",
+      "enunciado": "A menudo experimento cambios repentinos en mi humor sin una causa justificada.",
+      "dominio_evaluado": "Neuroticismo",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "N_14",
+      "enunciado": "Me irrito con rapidez cuando mis compañeros cometen torpezas durante una maniobra.",
+      "dominio_evaluado": "Neuroticismo",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "N_15",
+      "enunciado": "Suelo ponerme en el peor escenario posible ante una orden de despliegue riesgosa.",
+      "dominio_evaluado": "Neuroticismo",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "N_16",
+      "enunciado": "Me siento inseguro cuando debo tomar una decisión rápida que compromete a terceros.",
+      "dominio_evaluado": "Neuroticismo",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "N_17",
+      "enunciado": "Tiendo a rumiar con culpa los errores cometidos durante mucho tiempo.",
+      "dominio_evaluado": "Neuroticismo",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "N_18",
+      "enunciado": "La posibilidad del fracaso en el servicio me causa una marcada intranquilidad.",
+      "dominio_evaluado": "Neuroticismo",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "N_19",
+      "enunciado": "Mantengo la compostura y la cabeza fría aun en medio del peligro o de una crisis.",
+      "dominio_evaluado": "Neuroticismo",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "N_20",
+      "enunciado": "Rara vez me siento desanimado; suelo conservar la moral en alto frente a las dificultades.",
+      "dominio_evaluado": "Neuroticismo",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "N_21",
+      "enunciado": "Tengo un dominio sólido sobre mis impulsos y no permito que el miedo nuble mi juicio.",
+      "dominio_evaluado": "Neuroticismo",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "N_22",
+      "enunciado": "En situaciones de conflicto o alarma permanezco sereno y enfocado en la solución.",
+      "dominio_evaluado": "Neuroticismo",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "N_23",
+      "enunciado": "Es sumamente difícil que una provocación me haga perder los papeles o actuar con violencia.",
+      "dominio_evaluado": "Neuroticismo",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "N_24",
+      "enunciado": "Acepto las correcciones y observaciones de mis superiores con madurez y sin guardar rencor.",
+      "dominio_evaluado": "Neuroticismo",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "N_25",
+      "enunciado": "Supero los momentos adversos con rapidez y me concentro de inmediato en el deber.",
+      "dominio_evaluado": "Neuroticismo",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "N_26",
+      "enunciado": "Descanso y duermo con tranquilidad incluso en campamentos o ambientes hostiles.",
+      "dominio_evaluado": "Neuroticismo",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "N_27",
+      "enunciado": "Confío plenamente en mi estabilidad emocional para liderar bajo condiciones críticas.",
+      "dominio_evaluado": "Neuroticismo",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "N_28",
+      "enunciado": "Tolero el cansancio extremo y las privaciones de campaña sin quejarme ni alterarme.",
+      "dominio_evaluado": "Neuroticismo",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "N_29",
+      "enunciado": "Rara vez siento zozobra o temor cuando se me encomienda una guardia de alta responsabilidad.",
+      "dominio_evaluado": "Neuroticismo",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "N_30",
+      "enunciado": "Permanezco ecuánime y lúcido cuando debo dar órdenes en momentos de tensión.",
+      "dominio_evaluado": "Neuroticismo",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "E_01",
+      "enunciado": "Me resulta muy fácil integrarme y hacer camaradería con nuevos compañeros de promoción.",
+      "dominio_evaluado": "Extraversion",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "E_02",
+      "enunciado": "Asumo la iniciativa de inmediato para organizar a mi grupo cuando nos asignan una tarea.",
+      "dominio_evaluado": "Extraversion",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "E_03",
+      "enunciado": "Me motivan las actividades que implican acción constante, dinamismo y esfuerzo físico en equipo.",
+      "dominio_evaluado": "Extraversion",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "E_04",
+      "enunciado": "Expreso mis puntos de vista con seguridad, voz firme y porte frente a los demás.",
+      "dominio_evaluado": "Extraversion",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "E_05",
+      "enunciado": "Me desenvuelvo con comodidad en ambientes bulliciosos, enérgicos y altamente competitivos.",
+      "dominio_evaluado": "Extraversion",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "E_06",
+      "enunciado": "Tengo facilidad para infundir entusiasmo y levantar el ánimo de mi sección cuando hay fatiga.",
+      "dominio_evaluado": "Extraversion",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "E_07",
+      "enunciado": "Me agrada hablar en público e impartir instrucciones claras con energía ante la tropa.",
+      "dominio_evaluado": "Extraversion",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "E_08",
+      "enunciado": "Suelo proyectar una actitud vigorosa, optimista y decidida en mis quehaceres diarios.",
+      "dominio_evaluado": "Extraversion",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "E_09",
+      "enunciado": "Busco activamente oportunidades para ejercer el mando y coordinar operaciones tácticas.",
+      "dominio_evaluado": "Extraversion",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "E_10",
+      "enunciado": "Me presento con aplomo, porte militar y convicción ante oficiales de alto rango.",
+      "dominio_evaluado": "Extraversion",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "E_11",
+      "enunciado": "Prefiero trabajar encuadrado en una patrulla operativa antes que realizar labores en solitario.",
+      "dominio_evaluado": "Extraversion",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "E_12",
+      "enunciado": "Actúo con prontitud y arrojo; no soporto la inactividad o quedarme de brazos cruzados.",
+      "dominio_evaluado": "Extraversion",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "E_13",
+      "enunciado": "Convenzo con naturalidad a mis subordinados para cumplir metas exigentes de instrucción.",
+      "dominio_evaluado": "Extraversion",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "E_14",
+      "enunciado": "Me considero una persona resuelta que no titubea en dar el primer paso en el terreno.",
+      "dominio_evaluado": "Extraversion",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "E_15",
+      "enunciado": "Disfruto los momentos de camaradería y celebrar los logros alcanzados por la unidad.",
+      "dominio_evaluado": "Extraversion",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "E_16",
+      "enunciado": "En reuniones de coordinación suelo ser quien toma la palabra y propone el plan de acción.",
+      "dominio_evaluado": "Extraversion",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "E_17",
+      "enunciado": "Me siento estimulado cuando lidero a un grupo hacia el cumplimiento de una misión rigurosa.",
+      "dominio_evaluado": "Extraversion",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "E_18",
+      "enunciado": "Me apasiona el ritmo acelerado de las operaciones de campo y la vida activa en cuarteles.",
+      "dominio_evaluado": "Extraversion",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "E_19",
+      "enunciado": "Prefiero mantenerme en un segundo plano durante las reuniones y pasar inadvertido.",
+      "dominio_evaluado": "Extraversion",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "E_20",
+      "enunciado": "Suelo ser una persona reservada que habla únicamente cuando se le pide de forma explícita.",
+      "dominio_evaluado": "Extraversion",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "E_21",
+      "enunciado": "Me cuesta alzar la voz o dar órdenes enérgicas delante de una formación numerosa.",
+      "dominio_evaluado": "Extraversion",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "E_22",
+      "enunciado": "Prefiero que otro compañero tome el liderazgo y yo limitarme a acatar las instrucciones.",
+      "dominio_evaluado": "Extraversion",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "E_23",
+      "enunciado": "Tiendo a agobiarme rápidamente si debo interactuar de manera constante con mucha gente.",
+      "dominio_evaluado": "Extraversion",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "E_24",
+      "enunciado": "Suelo sentir timidez al momento de presentarme ante personal que no conozco.",
+      "dominio_evaluado": "Extraversion",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "E_25",
+      "enunciado": "Prefiero pasar mis horas francas o de descanso en soledad antes que en reuniones sociales.",
+      "dominio_evaluado": "Extraversion",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "E_26",
+      "enunciado": "Me cuesta exteriorizar entusiasmo o celebrar efusivamente un triunfo con mis compañeros.",
+      "dominio_evaluado": "Extraversion",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "E_27",
+      "enunciado": "En debates de equipo suelo guardar silencio y dejar que el resto defina las prioridades.",
+      "dominio_evaluado": "Extraversion",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "E_28",
+      "enunciado": "Mantengo una actitud distante y retraída cuando llego a un nuevo puesto o destacamento.",
+      "dominio_evaluado": "Extraversion",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "E_29",
+      "enunciado": "Evito voluntariamente asumir la representación oficial o la vocería de mi promoción.",
+      "dominio_evaluado": "Extraversion",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "E_30",
+      "enunciado": "Rindo con mayor comodidad cuando me asignan labores administrativas en un puesto aislado.",
+      "dominio_evaluado": "Extraversion",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "O_01",
+      "enunciado": "Me interesa profundizar en el estudio de nuevas tecnologías bélicas, radares y ciberdefensa.",
+      "dominio_evaluado": "Apertura",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "O_02",
+      "enunciado": "Me adapto con agilidad cuando el comando implementa procedimientos o doctrinas actualizadas.",
+      "dominio_evaluado": "Apertura",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "O_03",
+      "enunciado": "Me gusta analizar una situación táctica desde múltiples ángulos antes de ejecutar el plan.",
+      "dominio_evaluado": "Apertura",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "O_04",
+      "enunciado": "Disfruto leyendo sobre la historia militar del Perú, estrategia naval y combates históricos.",
+      "dominio_evaluado": "Apertura",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "O_05",
+      "enunciado": "Tengo facilidad para idear soluciones creativas e ingeniosas frente a contratiempos logísticos.",
+      "dominio_evaluado": "Apertura",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "O_06",
+      "enunciado": "Me entusiasma recibir instrucción en terrenos desconocidos y climas agrestes de nuestra patria.",
+      "dominio_evaluado": "Apertura",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "O_07",
+      "enunciado": "Reflexiono a fondo sobre las lecciones aprendidas luego de cada ejercicio en el terreno.",
+      "dominio_evaluado": "Apertura",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "O_08",
+      "enunciado": "Tengo iniciativa para investigar de forma autodidacta sobre sistemas de navegación y armamento.",
+      "dominio_evaluado": "Apertura",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "O_09",
+      "enunciado": "Acepto con buen ánimo ser cambiado de colocación o trasladado a guarniciones lejanas.",
+      "dominio_evaluado": "Apertura",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "O_10",
+      "enunciado": "Me fascina comprender el funcionamiento técnico de motores aeronáuticos, buques y blindados.",
+      "dominio_evaluado": "Apertura",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "O_11",
+      "enunciado": "Considero que la constante modernización y el pensamiento crítico fortalecen a las FFAA y PNP.",
+      "dominio_evaluado": "Apertura",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "O_12",
+      "enunciado": "Valoro conocer y comprender las tradiciones de las comunidades nativas en zonas de frontera.",
+      "dominio_evaluado": "Apertura",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "O_13",
+      "enunciado": "Me agrada debatir planteamientos tácticos con personas que tienen perspectivas distintas.",
+      "dominio_evaluado": "Apertura",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "O_14",
+      "enunciado": "Tengo avidez intelectual por dominar manuales técnicos y reglamentos militares especializados.",
+      "dominio_evaluado": "Apertura",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "O_15",
+      "enunciado": "Me atrae asumir funciones operativas complejas que exijan aprender destrezas inéditas.",
+      "dominio_evaluado": "Apertura",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "O_16",
+      "enunciado": "Encuentro gran utilidad práctica en la teoría militar y los modelos geopolíticos modernos.",
+      "dominio_evaluado": "Apertura",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "O_17",
+      "enunciado": "Busco perfeccionar continuamente los métodos de patrullaje para no caer en la rutina predecible.",
+      "dominio_evaluado": "Apertura",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "O_18",
+      "enunciado": "Me resulta estimulante participar en ejercicios de simulación y juegos de guerra tácticos.",
+      "dominio_evaluado": "Apertura",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "O_19",
+      "enunciado": "Prefiero que el servicio militar se mantenga rígido a las viejas costumbres sin alterar nada.",
+      "dominio_evaluado": "Apertura",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "O_20",
+      "enunciado": "Desconfío de la incorporación de tecnologías digitales en las labores cotidianas de la tropa.",
+      "dominio_evaluado": "Apertura",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "O_21",
+      "enunciado": "Me aburre la lectura de reglamentos, análisis geopolíticos o manuales de doctrina militar.",
+      "dominio_evaluado": "Apertura",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "O_22",
+      "enunciado": "Prefiero realizar tareas repetitivas y estrictamente mecánicas donde no tenga que reflexionar.",
+      "dominio_evaluado": "Apertura",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "O_23",
+      "enunciado": "Me resisto a modificar mi forma de trabajo aunque me demuestren que existe un método más eficaz.",
+      "dominio_evaluado": "Apertura",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "O_24",
+      "enunciado": "Tengo poca paciencia para conceptos teóricos abstractos que no sean órdenes inmediatas.",
+      "dominio_evaluado": "Apertura",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "O_25",
+      "enunciado": "Me fastidia tener que adaptarme a modificaciones en las directivas institucionales vigentes.",
+      "dominio_evaluado": "Apertura",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "O_26",
+      "enunciado": "Considero una pérdida de tiempo buscar innovaciones si el sistema tradicional aún cumple la función.",
+      "dominio_evaluado": "Apertura",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "O_27",
+      "enunciado": "Me resulta muy incómodo adaptarme a cambios bruscos de clima, alimentación o régimen de vida.",
+      "dominio_evaluado": "Apertura",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "O_28",
+      "enunciado": "Rechazo de plano las sugerencias tácticas propuestas por personal subalterno o de menor antigüedad.",
+      "dominio_evaluado": "Apertura",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "O_29",
+      "enunciado": "Prefiero una vida de cuartel predecible y estática antes que enfrentar maniobras imprevistas.",
+      "dominio_evaluado": "Apertura",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "O_30",
+      "enunciado": "Tengo poco o ningún interés por los avances científicos en aeronáutica, radares o armamento.",
+      "dominio_evaluado": "Apertura",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "A_01",
+      "enunciado": "Siento un genuino compromiso con la protección y el auxilio del ciudadano en situación de peligro.",
+      "dominio_evaluado": "Amabilidad",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "A_02",
+      "enunciado": "Estoy siempre presto a compartir mi equipo, agua y raciones con un camarada extenuado.",
+      "dominio_evaluado": "Amabilidad",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "A_03",
+      "enunciado": "Trato con cortesía, dignidad y consideración a todo el personal, sin importar su jerarquía.",
+      "dominio_evaluado": "Amabilidad",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "A_04",
+      "enunciado": "Me intereso vivamente por el estado de salud, la moral y las necesidades de mis subordinados.",
+      "dominio_evaluado": "Amabilidad",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "A_05",
+      "enunciado": "Confío en la lealtad e integridad de mis compañeros de armas hasta que se demuestre lo opuesto.",
+      "dominio_evaluado": "Amabilidad",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "A_06",
+      "enunciado": "Prefiero recurrir a la persuasión y al diálogo firme para solucionar desavenencias en la unidad.",
+      "dominio_evaluado": "Amabilidad",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "A_07",
+      "enunciado": "Jamás dejaría atrás o desamparado a un compañero herido durante una misión u operativo.",
+      "dominio_evaluado": "Amabilidad",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "A_08",
+      "enunciado": "Escucho con respeto y ponderación los descargos y opiniones de los soldados a mi mando.",
+      "dominio_evaluado": "Amabilidad",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "A_09",
+      "enunciado": "Me conmueve la indefensión de las personas vulnerables y me esfuerzo por socorrerlas.",
+      "dominio_evaluado": "Amabilidad",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "A_10",
+      "enunciado": "Reconozco y felicito con franqueza los méritos y actos valerosos de mis compañeros.",
+      "dominio_evaluado": "Amabilidad",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "A_11",
+      "enunciado": "El espíritu de cuerpo, la solidaridad y la hermandad militar son normas rectoras en mi actuar.",
+      "dominio_evaluado": "Amabilidad",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "A_12",
+      "enunciado": "Sé disculpar las faltas involuntarias de camaradas jóvenes y orientarlos con paciencia para corregirlas.",
+      "dominio_evaluado": "Amabilidad",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "A_13",
+      "enunciado": "Me considero una persona veraz y franca que actúa sin doblez ni falsedad ante sus superiores.",
+      "dominio_evaluado": "Amabilidad",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "A_14",
+      "enunciado": "Presto apoyo espontáneo en las faenas comunes del cuartel sin esperar a que me lo ordenen.",
+      "dominio_evaluado": "Amabilidad",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "A_15",
+      "enunciado": "Cumplo mis compromisos con rectitud y guardo total fidelidad a la palabra empeñada.",
+      "dominio_evaluado": "Amabilidad",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "A_16",
+      "enunciado": "Promuevo un ambiente de compañerismo, unión y respeto dentro de la cuadra o dormitorio común.",
+      "dominio_evaluado": "Amabilidad",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "A_17",
+      "enunciado": "Mantengo el buen trato y la templanza inclusive ante ciudadanos hostiles durante intervenciones.",
+      "dominio_evaluado": "Amabilidad",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "A_18",
+      "enunciado": "Creo que la unión de la tropa y la confianza recíproca son la mayor fortaleza de un regimiento.",
+      "dominio_evaluado": "Amabilidad",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "A_19",
+      "enunciado": "Suelo desconfiar de las intenciones de los demás creyendo que buscan sacar provecho personal.",
+      "dominio_evaluado": "Amabilidad",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "A_20",
+      "enunciado": "En la vida militar cada quien debe velar por sí mismo sin esperar auxilio de sus compañeros.",
+      "dominio_evaluado": "Amabilidad",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "A_21",
+      "enunciado": "Me cuesta perdonar a quien comete una torpeza que termine perjudicando a toda la sección.",
+      "dominio_evaluado": "Amabilidad",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "A_22",
+      "enunciado": "Tiendo a ser hosco y distante con los nuevos reclutas o cadetes recién incorporados.",
+      "dominio_evaluado": "Amabilidad",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "A_23",
+      "enunciado": "Suelo valerme de comentarios mordaces o apodos para corregir o burlarme de los errores ajenos.",
+      "dominio_evaluado": "Amabilidad",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "A_24",
+      "enunciado": "Pienso que la clemencia y la comprensión son debilidades incompatibles con la vida castrense.",
+      "dominio_evaluado": "Amabilidad",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "A_25",
+      "enunciado": "Me da cierta satisfacción cuando un compañero que me desagrada recibe un severo arresto.",
+      "dominio_evaluado": "Amabilidad",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "A_26",
+      "enunciado": "Pierdo la paciencia con rapidez ante personas que no aprenden las instrucciones al primer intento.",
+      "dominio_evaluado": "Amabilidad",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "A_27",
+      "enunciado": "Priorizo mis propios reconocimientos y ascensos antes que el éxito colectivo de mi compañía.",
+      "dominio_evaluado": "Amabilidad",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "A_28",
+      "enunciado": "Juzgo con suma severidad a los soldados que demuestran cansancio durante las marchas forzadas.",
+      "dominio_evaluado": "Amabilidad",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "A_29",
+      "enunciado": "Me son totalmente indiferentes los problemas familiares o personales de mis camaradas.",
+      "dominio_evaluado": "Amabilidad",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "A_30",
+      "enunciado": "Trato de manera tajante e insensible a la tropa cuando estoy bajo estrés de servicio.",
+      "dominio_evaluado": "Amabilidad",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "C_01",
+      "enunciado": "Acató las órdenes recibidas con exactitud, estricta puntualidad y sentido del honor.",
+      "dominio_evaluado": "Responsabilidad",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "C_02",
+      "enunciado": "Mantengo mi uniforme reglamentario, armamento y equipo de campaña en impecable estado de revista.",
+      "dominio_evaluado": "Responsabilidad",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "C_03",
+      "enunciado": "Persevero con tenacidad hasta cumplir la misión asignada, sin importar el frío, hambre o fatiga.",
+      "dominio_evaluado": "Responsabilidad",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "C_04",
+      "enunciado": "Planifico minuciosamente cada detalle antes de una guardia o patrullaje para no dejar vacíos.",
+      "dominio_evaluado": "Responsabilidad",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "C_05",
+      "enunciado": "Soy implacable con la puntualidad militar; llegar un minuto tarde me resulta inaceptable.",
+      "dominio_evaluado": "Responsabilidad",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "C_06",
+      "enunciado": "Asumo con entereza y hombría de bien la responsabilidad absoluta de mis decisiones operativas.",
+      "dominio_evaluado": "Responsabilidad",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "C_07",
+      "enunciado": "Verifico con rigor el inventario del material de guerra asignado para descartar pérdidas.",
+      "dominio_evaluado": "Responsabilidad",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "C_08",
+      "enunciado": "Trabajo con la misma pulcritud y celo profesional tanto si me vigilan como si estoy sin supervisión.",
+      "dominio_evaluado": "Responsabilidad",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "C_09",
+      "enunciado": "Tengo objetivos profesionales nítidos y me esfuerzo diariamente por alcanzar la excelencia en la carrera.",
+      "dominio_evaluado": "Responsabilidad",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "C_10",
+      "enunciado": "Respeto el principio de jerarquía y subordinación militar por convicción y vocación profunda.",
+      "dominio_evaluado": "Responsabilidad",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "C_11",
+      "enunciado": "Entrego el máximo de mi capacidad física y mental en cada jornada de instrucción militar.",
+      "dominio_evaluado": "Responsabilidad",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "C_12",
+      "enunciado": "Custodio con celo patriótico los bienes del Estado y los vehículos o naves puestas bajo mi cargo.",
+      "dominio_evaluado": "Responsabilidad",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "C_13",
+      "enunciado": "Mantengo mi taquilla, litera y área común con orden espartano y disciplina absoluta.",
+      "dominio_evaluado": "Responsabilidad",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "C_14",
+      "enunciado": "Evalúo siempre la repercusión ética y legal de mis actos antes de ejecutar cualquier acción armada.",
+      "dominio_evaluado": "Responsabilidad",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "C_15",
+      "enunciado": "Me preparo físicamente todos los días para conservar una aptitud combativa de primer orden.",
+      "dominio_evaluado": "Responsabilidad",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "C_16",
+      "enunciado": "Honro mis deberes cívicos y militares con lealtad inquebrantable a la bandera nacional.",
+      "dominio_evaluado": "Responsabilidad",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "C_17",
+      "enunciado": "Poseo la constancia y disciplina necesarias para concluir tareas arduas o de larga duración.",
+      "dominio_evaluado": "Responsabilidad",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "C_18",
+      "enunciado": "Guardo conducta intachable y porte militar tanto vistiendo el uniforme como de civil.",
+      "dominio_evaluado": "Responsabilidad",
+      "polaridad_puntuacion": 1
+    },
+    {
+      "id_reactivo": "C_19",
+      "enunciado": "Tiendo a postergar el aseo de mi armamento o el orden de mi mochila hasta último momento.",
+      "dominio_evaluado": "Responsabilidad",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "C_20",
+      "enunciado": "A veces descuido detalles reglamentarios de mi vestimenta si sé que no pasaremos revista.",
+      "dominio_evaluado": "Responsabilidad",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "C_21",
+      "enunciado": "Me cuesta mantener la atención y la postura marcial durante academias teóricas prolongadas.",
+      "dominio_evaluado": "Responsabilidad",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "C_22",
+      "enunciado": "En ocasiones he buscado pretextos o bajas médicas fingidas para librarme de guardias nocturnas.",
+      "dominio_evaluado": "Responsabilidad",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "C_23",
+      "enunciado": "Suelo dilatar el cumplimiento de una disposición hasta que me la exigen por segunda vez.",
+      "dominio_evaluado": "Responsabilidad",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "C_24",
+      "enunciado": "Tiendo a ser desordenado con mis pertrechos y prendas dentro del alojamiento común.",
+      "dominio_evaluado": "Responsabilidad",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "C_25",
+      "enunciado": "A veces tomo atajos contrarios a la directiva con tal de terminar más rápido la guardia.",
+      "dominio_evaluado": "Responsabilidad",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "C_26",
+      "enunciado": "Me desanimo con facilidad y bajo el rendimiento cuando los ejercicios se tornan muy duros.",
+      "dominio_evaluado": "Responsabilidad",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "C_27",
+      "enunciado": "En ocasiones he actuado por mero impulso sin medir el impacto disciplinario de mi conducta.",
+      "dominio_evaluado": "Responsabilidad",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "C_28",
+      "enunciado": "Me cuesta acatar de inmediato órdenes con las cuales no me encuentro totalmente de acuerdo.",
+      "dominio_evaluado": "Responsabilidad",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "C_29",
+      "enunciado": "Me distraigo con facilidad y pierdo la concentración en ceremonias o paradas militares.",
+      "dominio_evaluado": "Responsabilidad",
+      "polaridad_puntuacion": -1
+    },
+    {
+      "id_reactivo": "C_30",
+      "enunciado": "Cumplo mis tareas con desgano y a medias si considero que nadie reconocerá mi esfuerzo.",
+      "dominio_evaluado": "Responsabilidad",
+      "polaridad_puntuacion": -1
+    }
+  ],
+  "escala_validez_deseabilidad_social": [
+    {
+      "id_reactivo": "VAL_01",
+      "enunciado": "Nunca en mi vida he sentido enojo o cólera con ninguna persona.",
+      "respuesta_alerta": "Verdadero"
+    },
+    {
+      "id_reactivo": "VAL_02",
+      "enunciado": "Jamás he dicho una mentira, ni siquiera pequeña o para no herir los sentimientos de alguien.",
+      "respuesta_alerta": "Verdadero"
+    },
+    {
+      "id_reactivo": "VAL_03",
+      "enunciado": "Nunca he sentido envidia de los logros o éxitos alcanzados por otros.",
+      "respuesta_alerta": "Verdadero"
+    },
+    {
+      "id_reactivo": "VAL_04",
+      "enunciado": "Siempre acato todas las órdenes y reglas de inmediato con una sonrisa, sin quejarme jamás mentalmente.",
+      "respuesta_alerta": "Verdadero"
+    },
+    {
+      "id_reactivo": "VAL_05",
+      "enunciado": "Nunca he llegado tarde ni un solo minuto a ningún compromiso en toda mi vida.",
+      "respuesta_alerta": "Verdadero"
+    },
+    {
+      "id_reactivo": "VAL_06",
+      "enunciado": "Jamás he hablado mal a espaldas de otra persona ni he hecho un comentario indiscreto.",
+      "respuesta_alerta": "Verdadero"
+    },
+    {
+      "id_reactivo": "VAL_07",
+      "enunciado": "Siempre digo toda la verdad sin importar las consecuencias, sin dudar ni un solo segundo.",
+      "respuesta_alerta": "Verdadero"
+    },
+    {
+      "id_reactivo": "VAL_08",
+      "enunciado": "Nunca he postergado una tarea o deber para después por pereza o desgano.",
+      "respuesta_alerta": "Verdadero"
+    },
+    {
+      "id_reactivo": "VAL_09",
+      "enunciado": "Jamás he perdido la paciencia con un familiar, profesor, superior o amigo.",
+      "respuesta_alerta": "Verdadero"
+    },
+    {
+      "id_reactivo": "VAL_10",
+      "enunciado": "Nunca me ha interesado ganar en un juego o competencia; solo me importa que todos se diviertan.",
+      "respuesta_alerta": "Verdadero"
+    },
+    {
+      "id_reactivo": "VAL_11",
+      "enunciado": "Siempre admito mis errores de inmediato sin buscar jamás ninguna excusa o disculpa.",
+      "respuesta_alerta": "Verdadero"
+    },
+    {
+      "id_reactivo": "VAL_12",
+      "enunciado": "Nunca he sentido resentimiento hacia alguien que me corrigió, sancionó o llamó la atención.",
+      "respuesta_alerta": "Verdadero"
+    },
+    {
+      "id_reactivo": "VAL_13",
+      "enunciado": "Jamás he tenido pensamientos egoístas o deseos de beneficiarme antes que a los demás.",
+      "respuesta_alerta": "Verdadero"
+    },
+    {
+      "id_reactivo": "VAL_14",
+      "enunciado": "Siempre mantengo mis pertenencias y mi habitación en perfecto orden militar sin excepción.",
+      "respuesta_alerta": "Verdadero"
+    },
+    {
+      "id_reactivo": "VAL_15",
+      "enunciado": "Nunca he tenido curiosidad por saber secretos, rumores o asuntos privados de otros.",
+      "respuesta_alerta": "Verdadero"
+    },
+    {
+      "id_reactivo": "VAL_16",
+      "enunciado": "Jamás me he burlado, ni siquiera en secreto, de los errores o torpezas de un compañero.",
+      "respuesta_alerta": "Verdadero"
+    },
+    {
+      "id_reactivo": "VAL_17",
+      "enunciado": "Nunca he sentido miedo, duda ni inseguridad ante una situación de peligro o examen difícil.",
+      "respuesta_alerta": "Verdadero"
+    },
+    {
+      "id_reactivo": "VAL_18",
+      "enunciado": "Siempre escucho con paciencia a todo el mundo sin distraerme ni aburrirme en lo absoluto.",
+      "respuesta_alerta": "Verdadero"
+    },
+    {
+      "id_reactivo": "VAL_19",
+      "enunciado": "Jamás he deseado tomar venganza o desquitarme cuando alguien fue injusto conmigo.",
+      "respuesta_alerta": "Verdadero"
+    },
+    {
+      "id_reactivo": "VAL_20",
+      "enunciado": "Nunca he roto ninguna norma de tránsito ni he cruzado la pista indebidamente en mi vida.",
+      "respuesta_alerta": "Verdadero"
+    }
+  ],
+  "perfiles_institucionales_esperados": {
+    "Ejercito_Peru": {
+      "Neuroticismo": {
+        "min": 0,
+        "max": 35,
+        "ideal": 18
+      },
+      "Extraversion": {
+        "min": 55,
+        "max": 95,
+        "ideal": 78
+      },
+      "Apertura": {
+        "min": 45,
+        "max": 80,
+        "ideal": 62
+      },
+      "Amabilidad": {
+        "min": 50,
+        "max": 85,
+        "ideal": 68
+      },
+      "Responsabilidad": {
+        "min": 80,
+        "max": 100,
+        "ideal": 92
+      }
+    },
+    "Marina_Guerra_Peru": {
+      "Neuroticismo": {
+        "min": 0,
+        "max": 28,
+        "ideal": 14
+      },
+      "Extraversion": {
+        "min": 45,
+        "max": 85,
+        "ideal": 65
+      },
+      "Apertura": {
+        "min": 60,
+        "max": 95,
+        "ideal": 80
+      },
+      "Amabilidad": {
+        "min": 55,
+        "max": 88,
+        "ideal": 72
+      },
+      "Responsabilidad": {
+        "min": 82,
+        "max": 100,
+        "ideal": 94
+      }
+    },
+    "Fuerza_Aerea_Peru": {
+      "Neuroticismo": {
+        "min": 0,
+        "max": 30,
+        "ideal": 15
+      },
+      "Extraversion": {
+        "min": 50,
+        "max": 90,
+        "ideal": 75
+      },
+      "Apertura": {
+        "min": 60,
+        "max": 100,
+        "ideal": 85
+      },
+      "Amabilidad": {
+        "min": 40,
+        "max": 80,
+        "ideal": 60
+      },
+      "Responsabilidad": {
+        "min": 75,
+        "max": 100,
+        "ideal": 90
+      }
+    },
+    "Policia_Nacional_Peru": {
+      "Neuroticismo": {
+        "min": 0,
+        "max": 32,
+        "ideal": 16
+      },
+      "Extraversion": {
+        "min": 60,
+        "max": 95,
+        "ideal": 80
+      },
+      "Apertura": {
+        "min": 50,
+        "max": 85,
+        "ideal": 68
+      },
+      "Amabilidad": {
+        "min": 55,
+        "max": 90,
+        "ideal": 75
+      },
+      "Responsabilidad": {
+        "min": 78,
+        "max": 100,
+        "ideal": 90
+      }
+    }
+  }
+}

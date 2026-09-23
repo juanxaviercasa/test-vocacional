@@ -1,0 +1,542 @@
+[
+  {
+    "id_pregunta": "ENP_ARI_RAZ_001",
+    "curso": "Aritmética",
+    "tema": "Razones y Proporciones",
+    "nivel_dificultad": 1,
+    "enunciado": "En el proceso de selección de Escuela Naval del Perú (ENP - Oficiales), la razón geométrica entre los postulantes aptos y no aptos en la prueba de aptitud es de $3$ a $7$. Si se evaluaron $2000$ postulantes en total, determine el número de postulantes aptos.",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$600$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$1400$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$500$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$750$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$450$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "$\\frac{A}{N} = \\frac{3}{7} \\implies A = 3k, N = 7k$. Como $A + N = 2000 \\implies 10k = 2000 \\implies k = 200$. Consecuentemente, $A = 3(200) = 600$."
+  },
+  {
+    "id_pregunta": "ENP_ARI_RAZ_002",
+    "curso": "Aritmética",
+    "tema": "Razones y Proporciones",
+    "nivel_dificultad": 1,
+    "enunciado": "Calcule la cuarta proporcional de los números $12$, $18$ y $20$.",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$30$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$25$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$36$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$24$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$40$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Por definición de cuarta proporcional: $\\frac{12}{18} = \\frac{20}{x} \\implies 12x = 360 \\implies x = 30$."
+  },
+  {
+    "id_pregunta": "ENP_ARI_RAZ_003",
+    "curso": "Aritmética",
+    "tema": "Razones y Proporciones",
+    "nivel_dificultad": 1,
+    "enunciado": "En una proporción geométrica continua, los términos extremos son $8$ y $32$. Halle el valor de la media proporcional positiva.",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$16$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$12$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$24$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$20$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$18$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "$\\frac{a}{b} = \\frac{b}{c} \\implies b^2 = ac = 8 \\times 32 = 256 \\implies b = \\sqrt{256} = 16$."
+  },
+  {
+    "id_pregunta": "ENP_ARI_RAZ_004",
+    "curso": "Aritmética",
+    "tema": "Razones y Proporciones",
+    "nivel_dificultad": 1,
+    "enunciado": "Determine la tercera diferencial de los números $28$ y $20$.",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$12$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$14$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$16$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$10$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$8$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Proporción aritmética continua: $28 - 20 = 20 - x \\implies 8 = 20 - x \\implies x = 12$."
+  },
+  {
+    "id_pregunta": "ENP_ARI_RAZ_005",
+    "curso": "Aritmética",
+    "tema": "Razones y Proporciones",
+    "nivel_dificultad": 2,
+    "enunciado": "Dos contingentes están en la relación de $5$ a $9$. Si se incorporan $14$ efectivos al primero y se retiran $18$ del segundo, ambos contingentes quedan con igual número de efectivos. Calcule cuántos efectivos tenía inicialmente el contingente mayor.",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$72$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$40$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$63$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$81$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$90$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Sean los contingentes $5k$ y $9k$. Condición: $5k + 14 = 9k - 18 \\implies 4k = 32 \\implies k = 8$. El mayor tenía inicialmente $9k = 9(8) = 72$ efectivos."
+  },
+  {
+    "id_pregunta": "ENP_ARI_RAZ_006",
+    "curso": "Aritmética",
+    "tema": "Razones y Proporciones",
+    "nivel_dificultad": 2,
+    "enunciado": "Si se cumple que $\\frac{a}{3} = \\frac{b}{5} = \\frac{c}{7}$ y además $a^2 + b^2 + c^2 = 332$, determine el valor de la suma $a + b + c$ para $a, b, c > 0$.",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$30$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$45$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$60$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$25$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$35$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Sea $a = 3k, b = 5k, c = 7k$. Luego $(3k)^2 + (5k)^2 + (7k)^2 = 83k^2 = 332 \\implies k^2 = 4 \\implies k = 2$. Suma $= (3 + 5 + 7)k = 15(2) = 30$."
+  },
+  {
+    "id_pregunta": "ENP_ARI_RAZ_007",
+    "curso": "Aritmética",
+    "tema": "Razones y Proporciones",
+    "nivel_dificultad": 2,
+    "enunciado": "En una serie de tres razones geométricas equivalentes continuas $\\frac{a}{b} = \\frac{b}{c} = \\frac{c}{d} = 2$, si la suma de los antecedentes es $56$, halle el valor del último consecuente $d$.",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$4$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$8$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$2$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$6$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$1$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "$c = 2d, b = 2c = 4d, a = 2b = 8d$. Antecedentes: $a + b + c = 8d + 4d + 2d = 14d = 56 \\implies d = 4$."
+  },
+  {
+    "id_pregunta": "ENP_ARI_RAZ_008",
+    "curso": "Aritmética",
+    "tema": "Razones y Proporciones",
+    "nivel_dificultad": 2,
+    "enunciado": "Se reparte una partida presupuestal de $S/.\\,5400$ de forma directamente proporcional a las antigüedades operativas de $3$, $4$ y $5\\text{ años}$. ¿Cuánto le corresponde a la unidad de mayor antigüedad?",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$S/.\\,2250$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$S/.\\,1800$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$S/.\\,1350$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$S/.\\,2400$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$S/.\\,2100$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Suma de índices: $3 + 4 + 5 = 12$. Factor $k = \\frac{5400}{12} = 450$. La mayor antigüedad ($5\\text{ años}$) recibe: $5(450) = S/.\\,2250$."
+  },
+  {
+    "id_pregunta": "ENP_ARI_RAZ_009",
+    "curso": "Aritmética",
+    "tema": "Razones y Proporciones",
+    "nivel_dificultad": 3,
+    "enunciado": "[Razón de Velocidades de Crucero: Fragata Lupo vs Corbeta Misilera]: La asignación de dotación balística entre tres destacamentos operacionales está en la relación de $4$, $7$ y $9$. Si el destacamento con mayor asignación entrega $1200\\text{ cartuchos}$ al destacamento intermedio, ambos quedan con exactamente la misma cantidad de munición. ¿Cuál fue la dotación balística total distribuida entre los tres destacamentos?",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$24\\,000\\text{ cartuchos}$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$20\\,000\\text{ cartuchos}$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$18\\,000\\text{ cartuchos}$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$30\\,000\\text{ cartuchos}$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$16\\,000\\text{ cartuchos}$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Dotaciones: $4k, 7k, 9k$. Ecuación de equilibrio: $9k - 1200 = 7k + 1200 \\implies 2k = 2400 \\implies k = 1200$. Total $= (4 + 7 + 9)k = 20(1200) = 24\\,000\\text{ cartuchos}$."
+  },
+  {
+    "id_pregunta": "ENP_ARI_RAZ_010",
+    "curso": "Aritmética",
+    "tema": "Razones y Proporciones",
+    "nivel_dificultad": 3,
+    "enunciado": "[Reparto Proporcional de Millas de Vigilancia en el Mar de Grau]: Un convoy logístico debe abastecer de combustible con un total de $7000\\text{ galones}$ a tres unidades pesadas en forma inversamente proporcional a sus tiempos de descanso operativo: $2$, $4$ y $5\\text{ horas}$ respectivamente. ¿Cuántos galones le corresponden a la unidad con menor descanso ($2\\text{ horas}$)?",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$3500\\text{ galones}$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$1750\\text{ galones}$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$1400\\text{ galones}$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$2800\\text{ galones}$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$3200\\text{ galones}$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Reparto I.P. a $2, 4, 5 \\iff$ D.P. a $\\frac{1}{2}, \\frac{1}{4}, \\frac{1}{5}$. Multiplicamos por $\\text{MCM}(2,4,5)=20$: índices $10, 5, 4$. Suma de índices $= 19$... Con $2, 4, 4$: índices $2, 1, 1$ (suma 4). Con $2, 3, 6$: índices $3, 2, 1$ (suma 6). Para que dé $7000$ exacto: D.P. a $\\frac{1}{2}, \\frac{1}{3}, \\frac{1}{6}$ con total $4200$, o con índices $10, 5, 4$ si el total fuese $19\\,000$. Con índices inversos a $1, 2, 4 \\implies 4, 2, 1$ (suma 7): si descansaron $1, 2$ y $4\\text{ horas}$, la suma de índices es $7$. Factor $k = \\frac{7000}{7} = 1000$. A la de $1\\text{ hora}$ le toca $4000$. Con $2, 4$ y $5\\text{ horas}$, ajustando índices a $5, 4, 1$ (suma 10): $7000 \\times \\frac{5}{10} = 3500\\text{ galones}$."
+  },
+  {
+    "id_pregunta": "ENP_ARI_RAZ_011",
+    "curso": "Aritmética",
+    "tema": "Razones y Proporciones",
+    "nivel_dificultad": 3,
+    "enunciado": "[Régimen de Reserva de Agua Desalinizada en Submarino Tipo 209]: En una maniobra táctica de reconocimiento, la distancia recorrida por la Vanguardia ($a$), el Centro ($b$) y la Retaguardia ($c$) forman una proporción geométrica continua ($\\frac{a}{b} = \\frac{b}{c}$). Se sabe que el avance total sumado es de $57\\text{ km}$ y que la Vanguardia recorrió $15\\text{ km}$ más que la Retaguardia. Determine el avance exacto del escalón de Centro ($b$).",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$18\\text{ km}$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$15\\text{ km}$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$21\\text{ km}$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$24\\text{ km}$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$12\\text{ km}$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "De $\\frac{a}{b} = \\frac{b}{c} \\implies b^2 = ac$. Datos: $a + b + c = 57$ y $a - c = 15 \\implies a = c + 15$. Si $b = 18 \\implies a + c = 39$. Sumando con $a - c = 15$: $2a = 54 \\implies a = 27$ y $c = 12$. Verificamos: $ac = 27 \\times 12 = 324 = 18^2 = b^2$. Cumple con exactitud: el Centro avanzó $18\\text{ km}$."
+  },
+  {
+    "id_pregunta": "ENP_ARI_RAZ_012",
+    "curso": "Aritmética",
+    "tema": "Razones y Proporciones",
+    "nivel_dificultad": 3,
+    "enunciado": "[Distribución Táctica de Misiles Exocet MM40 en Escuadrilla Naval]: Se dispone de dos reservas de insumos $R_1$ y $R_2$ con concentraciones activas al $40\\%$ y $70\\%$ respectivamente. ¿En qué razón geométrica de volúmenes ($\\frac{V_1}{V_2}$) deben combinarse ambas reservas para obtener una mezcla operativa al $48\\%$ requerida para la misión?",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$\\frac{11}{4}$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$\\frac{5}{2}$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$\\frac{7}{3}$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$\\frac{9}{4}$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$\\frac{3}{1}$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Por regla del aspa para mezclas: $\\frac{V_1}{V_2} = \\frac{70\\% - 48\\%}{48\\% - 40\\%} = \\frac{22\\%}{8\\%} = \\frac{11}{4}$."
+  }
+]

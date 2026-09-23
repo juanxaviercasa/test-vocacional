@@ -1,0 +1,302 @@
+[
+  {
+    "id_pregunta": "EMCH_ALG_CUA_001",
+    "curso": "Álgebra",
+    "tema": "Ecuaciones Cuadráticas",
+    "nivel_dificultad": 1,
+    "enunciado": "Dada la ecuación cuadrática $2x^2 - 8x + 5 = 0$, determine la suma de sus raíces ($x_1 + x_2$).",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      { "id": "A", "texto": "$4$", "es_correcta": true },
+      { "id": "B", "texto": "$-4$", "es_correcta": false },
+      { "id": "C", "texto": "$\\frac{5}{2}$", "es_correcta": false },
+      { "id": "D", "texto": "$8$", "es_correcta": false },
+      { "id": "E", "texto": "$-8$", "es_correcta": false }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Por el teorema de Cardano-Vieta, en toda ecuación $ax^2 + bx + c = 0$, la suma de raíces es $S = -\\frac{b}{a}$. Sustituyendo: $S = -\\frac{-8}{2} = 4$."
+  },
+  {
+    "id_pregunta": "EMCH_ALG_CUA_002",
+    "curso": "Álgebra",
+    "tema": "Ecuaciones Cuadráticas",
+    "nivel_dificultad": 1,
+    "enunciado": "Determine el valor real de $k$ para el cual la ecuación $x^2 - 6x + k = 0$ posee raíces reales e iguales (raíz doble).",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      { "id": "A", "texto": "$3$", "es_correcta": false },
+      { "id": "B", "texto": "$6$", "es_correcta": false },
+      { "id": "C", "texto": "$9$", "es_correcta": true },
+      { "id": "D", "texto": "$36$", "es_correcta": false },
+      { "id": "E", "texto": "$-9$", "es_correcta": false }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Para que una ecuación cuadrática presente raíces iguales, su discriminante debe ser nulo: $\\Delta = b^2 - 4ac = 0$. Luego, $(-6)^2 - 4(1)(k) = 0 \\implies 36 - 4k = 0 \\implies k = 9$."
+  },
+  {
+    "id_pregunta": "EMCH_ALG_CUA_003",
+    "curso": "Álgebra",
+    "tema": "Ecuaciones Cuadráticas",
+    "nivel_dificultad": 1,
+    "enunciado": "Reconstruya la ecuación cuadrática mónica cuyas raíces son $x_1 = 3$ y $x_2 = -5$.",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      { "id": "A", "texto": "$x^2 + 2x - 15 = 0$", "es_correcta": true },
+      { "id": "B", "texto": "$x^2 - 2x - 15 = 0$", "es_correcta": false },
+      { "id": "C", "texto": "$x^2 + 8x + 15 = 0$", "es_correcta": false },
+      { "id": "D", "texto": "$x^2 - 8x - 15 = 0$", "es_correcta": false },
+      { "id": "E", "texto": "$x^2 + 2x + 15 = 0$", "es_correcta": false }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Toda ecuación cuadrática mónica se estructura como $x^2 - Sx + P = 0$. Calculamos $S = 3 + (-5) = -2$ y $P = 3(-5) = -15$. Reemplazando: $x^2 - (-2)x + (-15) = 0 \\implies x^2 + 2x - 15 = 0$."
+  },
+  {
+    "id_pregunta": "EMCH_ALG_CUA_004",
+    "curso": "Álgebra",
+    "tema": "Ecuaciones Cuadráticas",
+    "nivel_dificultad": 1,
+    "enunciado": "En la ecuación cuadrática $(m - 3)x^2 + 8x + (2m - 10) = 0$, determine el valor de $m$ para que las raíces sean recíprocas.",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      { "id": "A", "texto": "$5$", "es_correcta": false },
+      { "id": "B", "texto": "$7$", "es_correcta": true },
+      { "id": "C", "texto": "$-7$", "es_correcta": false },
+      { "id": "D", "texto": "$13$", "es_correcta": false },
+      { "id": "E", "texto": "$3$", "es_correcta": false }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Para que las raíces sean recíprocas, su producto debe ser igual a $1$ ($x_1 \\cdot x_2 = \\frac{c}{a} = 1 \\implies c = a$). Igualando: $2m - 10 = m - 3 \\implies m = 7$. Verificamos que $a = 7-3 = 4 \\neq 0$."
+  },
+  {
+    "id_pregunta": "EMCH_ALG_CUA_005",
+    "curso": "Álgebra",
+    "tema": "Ecuaciones Cuadráticas",
+    "nivel_dificultad": 2,
+    "enunciado": "Si $x_1$ y $x_2$ son las raíces de la ecuación $x^2 - 5x + 3 = 0$, calcule el valor de $E = x_1^2 + x_2^2$.",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      { "id": "A", "texto": "$19$", "es_correcta": true },
+      { "id": "B", "texto": "$25$", "es_correcta": false },
+      { "id": "C", "texto": "$22$", "es_correcta": false },
+      { "id": "D", "texto": "$31$", "es_correcta": false },
+      { "id": "E", "texto": "$16$", "es_correcta": false }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "De la ecuación: $x_1 + x_2 = 5$ y $x_1 x_2 = 3$. Por productos notables: $x_1^2 + x_2^2 = (x_1 + x_2)^2 - 2x_1 x_2 = (5)^2 - 2(3) = 25 - 6 = 19$."
+  },
+  {
+    "id_pregunta": "EMCH_ALG_CUA_006",
+    "curso": "Álgebra",
+    "tema": "Ecuaciones Cuadráticas",
+    "nivel_dificultad": 2,
+    "enunciado": "Dada la ecuación $x^2 - kx + 12 = 0$, si la diferencia positiva de sus raíces es igual a $1$, determine el valor positivo de la constante $k$.",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      { "id": "A", "texto": "$5$", "es_correcta": false },
+      { "id": "B", "texto": "$6$", "es_correcta": false },
+      { "id": "C", "texto": "$7$", "es_correcta": true },
+      { "id": "D", "texto": "$8$", "es_correcta": false },
+      { "id": "E", "texto": "$\\sqrt{47}$", "es_correcta": false }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Sabemos que $(x_1 - x_2)^2 = (x_1 + x_2)^2 - 4x_1 x_2$. Reemplazando los datos: $1^2 = k^2 - 4(12) \\implies 1 = k^2 - 48 \\implies k^2 = 49$. Tomando el valor positivo: $k = 7$."
+  },
+  {
+    "id_pregunta": "EMCH_ALG_CUA_007",
+    "curso": "Álgebra",
+    "tema": "Ecuaciones Cuadráticas",
+    "nivel_dificultad": 2,
+    "enunciado": "Determine la cantidad total de soluciones reales distintas que posee la ecuación reducible a cuadrática: $$(x^2 - 2x)^2 - 11(x^2 - 2x) + 24 = 0$$",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      { "id": "A", "texto": "$1$", "es_correcta": false },
+      { "id": "B", "texto": "$2$", "es_correcta": false },
+      { "id": "C", "texto": "$3$", "es_correcta": false },
+      { "id": "D", "texto": "$4$", "es_correcta": true },
+      { "id": "E", "texto": "$0$", "es_correcta": false }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Efectuando el cambio de variable $u = x^2 - 2x$: $u^2 - 11u + 24 = 0 \\implies (u - 8)(u - 3) = 0$. Primer caso: $x^2 - 2x - 8 = 0 \\implies (x - 4)(x + 2) = 0$ ($x = 4, -2$). Segundo caso: $x^2 - 2x - 3 = 0 \\implies (x - 3)(x + 1) = 0$ ($x = 3, -1$). Se obtienen 4 soluciones reales y distintas."
+  },
+  {
+    "id_pregunta": "EMCH_ALG_CUA_008",
+    "curso": "Álgebra",
+    "tema": "Ecuaciones Cuadráticas",
+    "nivel_dificultad": 2,
+    "enunciado": "En la ecuación $2x^2 + (p^2 - 9)x - 18 = 0$, determine los valores de $p$ para los cuales la ecuación presenta raíces simétricas.",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      { "id": "A", "texto": "$p = 3$ exclusivamente", "es_correcta": false },
+      { "id": "B", "texto": "$p = -3$ exclusivamente", "es_correcta": false },
+      { "id": "C", "texto": "$p \\in \\{-3, 3\\}$", "es_correcta": true },
+      { "id": "D", "texto": "$p \\in \\{-9, 9\\}$", "es_correcta": false },
+      { "id": "E", "texto": "$p = 0$", "es_correcta": false }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Para que las raíces sean simétricas se requiere que su suma sea cero: $x_1 + x_2 = -\\frac{b}{a} = 0 \\implies b = 0$. Luego: $p^2 - 9 = 0 \\implies p = \\pm 3$. Como el discriminante $\\Delta = 0^2 - 4(2)(-18) = 144 > 0$, las raíces son efectivamente reales."
+  },
+  {
+    "id_pregunta": "EMCH_ALG_CUA_009",
+    "curso": "Álgebra",
+    "tema": "Ecuaciones Cuadráticas",
+    "nivel_dificultad": 3,
+    "enunciado": "En el polígono de tiro de la EMCH, la trayectoria balística de un proyectil de mortero de $120\\text{ mm}$ está modelada por la función $h(t) = -5t^2 + 60t - 100$, donde $h(t)$ es la cota vertical en metros respecto al búnker de comando y $t$ es el tiempo en segundos desde el disparo. ¿Durante cuántos segundos el proyectil se mantiene a una altura mayor o igual a $60\\text{ metros}$ sobre el búnker?",
+    "apoyo_visual": {
+      "requiere_grafico": true,
+      "imagen_url": null,
+      "descripcion_para_diseñador": "Parábola invertida cóncava hacia abajo con eje horizontal t (tiempo en s) y vertical h (altura en m). Línea horizontal discontinua de cota en h = 60 m cortando la trayectoria en t = 4 s y t = 8 s."
+    },
+    "opciones": [
+      { "id": "A", "texto": "$2\\text{ segundos}$", "es_correcta": false },
+      { "id": "B", "texto": "$4\\text{ segundos}$", "es_correcta": true },
+      { "id": "C", "texto": "$6\\text{ segundos}$", "es_correcta": false },
+      { "id": "D", "texto": "$8\\text{ segundos}$", "es_correcta": false },
+      { "id": "E", "texto": "$12\\text{ segundos}$", "es_correcta": false }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Planteamos la inecuación asociada a los instantes de cruce: $-5t^2 + 60t - 100 \\ge 60 \\implies -5t^2 + 60t - 160 \\ge 0$. Dividiendo entre $-5$ e invirtiendo la desigualdad: $t^2 - 12t + 32 \\le 0 \\implies (t - 4)(t - 8) \\le 0$. El proyectil supera la cota entre $t = 4\\text{ s}$ y $t = 8\\text{ s}$. El tiempo transcurrido en esa zona es $8 - 4 = 4\\text{ segundos}$."
+  },
+  {
+    "id_pregunta": "EMCH_ALG_CUA_010",
+    "curso": "Álgebra",
+    "tema": "Ecuaciones Cuadráticas",
+    "nivel_dificultad": 3,
+    "enunciado": "Una patrulla militar de reconocimiento en el VRAEM debe delimitar un vivac de campaña rectangular aprovechando un farallón rocoso natural como respaldo posterior. Para cercar los otros tres lados se dispone de $120\\text{ metros}$ de alambre de púas concertina. Si el área segura debe abarcar exactamente $1600\\text{ m}^2$, determine la mayor longitud posible (en metros) del lado frontal paralelo al farallón.",
+    "apoyo_visual": {
+      "requiere_grafico": true,
+      "imagen_url": null,
+      "descripcion_para_diseñador": "Esquema perimétrico de vivac táctico: pared de farallón rocoso en la parte superior, ancho perpendicular x a cada flanco y frente paralelo (120 - 2x). Área interior sombreada de 1600 m²."
+    },
+    "opciones": [
+      { "id": "A", "texto": "$40\\text{ m}$", "es_correcta": false },
+      { "id": "B", "texto": "$60\\text{ m}$", "es_correcta": false },
+      { "id": "C", "texto": "$80\\text{ m}$", "es_correcta": true },
+      { "id": "D", "texto": "$100\\text{ m}$", "es_correcta": false },
+      { "id": "E", "texto": "$50\\text{ m}$", "es_correcta": false }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Sea $x$ el ancho perpendicular del cerco. El frente paralelo mide $L = 120 - 2x$. El área es $x(120 - 2x) = 1600 \\implies 120x - 2x^2 = 1600 \\implies x^2 - 60x + 800 = 0 \\implies (x - 20)(x - 40) = 0$. Si $x = 20\\text{ m}$, el frente mide $L = 120 - 2(20) = 80\\text{ m}$. Si $x = 40\\text{ m}$, $L = 40\\text{ m}$. La mayor longitud frontal es $80\\text{ metros}$."
+  },
+  {
+    "id_pregunta": "EMCH_ALG_CUA_011",
+    "curso": "Álgebra",
+    "tema": "Ecuaciones Cuadráticas",
+    "nivel_dificultad": 3,
+    "enunciado": "Sean $\\alpha$ y $\\beta$ las raíces reales de la ecuación cuadrática $x^2 - 4x + 2 = 0$. Calcule el valor numérico exacto e irreductible de la expresión: $$M = \\frac{\\alpha^3 + \\beta^3}{\\alpha^2 + \\beta^2}$$",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      { "id": "A", "texto": "$\\frac{10}{3}$", "es_correcta": true },
+      { "id": "B", "texto": "$\\frac{7}{2}$", "es_correcta": false },
+      { "id": "C", "texto": "$\\frac{8}{3}$", "es_correcta": false },
+      { "id": "D", "texto": "$3$", "es_correcta": false },
+      { "id": "E", "texto": "$\\frac{5}{2}$", "es_correcta": false }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Por Cardano: $\\alpha + \\beta = 4$ y $\\alpha\\beta = 2$. Denominador: $\\alpha^2 + \\beta^2 = (\\alpha+\\beta)^2 - 2\\alpha\\beta = 4^2 - 2(2) = 12$. Numerador: $\\alpha^3 + \\beta^3 = (\\alpha+\\beta)^3 - 3\\alpha\\beta(\\alpha+\\beta) = 4^3 - 3(2)(4) = 64 - 24 = 40$. Consecuentemente: $M = \\frac{40}{12} = \\frac{10}{3}$."
+  },
+  {
+    "id_pregunta": "EMCH_ALG_CUA_012",
+    "curso": "Álgebra",
+    "tema": "Ecuaciones Cuadráticas",
+    "nivel_dificultad": 3,
+    "enunciado": "Un convoy logístico del Ejército debe transportar munición recorriendo una distancia de $360\\text{ km}$ a velocidad de crucero constante $v$ (en $\\text{km/h}$). Debido a densas nevadas en un paso cordillerano, el convoy se vio obligado a reducir su velocidad en $10\\text{ km/h}$, lo que incrementó el tiempo total de desplazamiento en $3\\text{ horas}$. Determine la velocidad de crucero original planificada $v$.",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      { "id": "A", "texto": "$30\\text{ km/h}$", "es_correcta": false },
+      { "id": "B", "texto": "$35\\text{ km/h}$", "es_correcta": false },
+      { "id": "C", "texto": "$40\\text{ km/h}$", "es_correcta": true },
+      { "id": "D", "texto": "$45\\text{ km/h}$", "es_correcta": false },
+      { "id": "E", "texto": "$50\\text{ km/h}$", "es_correcta": false }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Planteamos la ecuación temporal: $\\frac{360}{v - 10} - \\frac{360}{v} = 3$. Operando: $\\frac{360(10)}{v(v - 10)} = 3 \\implies \\frac{1200}{v^2 - 10v} = 1 \\implies v^2 - 10v - 1200 = 0$. Factorizando: $(v - 40)(v + 30) = 0$. Como la velocidad es positiva: $v = 40\\text{ km/h}$."
+  }
+]

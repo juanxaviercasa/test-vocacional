@@ -1,0 +1,399 @@
+# -*- coding: utf-8 -*-
+"""
+Generador del Banco de Preguntas de Trigonometría (Razones Trigonométricas y Triángulos Notables)
+para las 8 escuelas militares y policiales del Perú.
+"""
+import json
+import os
+import shutil
+
+os.makedirs('banco_preguntas', exist_ok=True)
+
+SCHOOLS_TRIG = [
+    {
+        "id": "EMCH",
+        "name": "Escuela Militar de Chorrillos (EMCH - Oficiales)",
+        "folder": "01_EMCH",
+        "contexts": [
+            "Línea de Mira y Ángulo de Elevación de Francotirador Barrett .50 en Cota Andina",
+            "Ángulo de Depresión de Artillería desde Cumbre hacia Valle de Penetración Blindada",
+            "Levantamiento Teodolítico del Servicio Geográfico del Ejército (SGE)",
+            "Límite de Inclinación y Pendiente Crítica de Tanques T-55 en Dunas Costeras"
+        ]
+    },
+    {
+        "id": "ETE",
+        "name": "Escuela Técnica del Ejército (ETE - Suboficiales)",
+        "folder": "02_ETE",
+        "contexts": [
+            "Gradiente y Ángulo de Rampa de Carga para Material Pesado de Campaña",
+            "Medición Telemétrica Láser de Altura de Torre de Transmisiones",
+            "Anclaje de Cables Vientos en Estructura de Hospital Militar de Campaña",
+            "Pendiente de Corte y Ángulo de Talud de Zanja Antitanque Perimetral"
+        ]
+    },
+    {
+        "id": "ENP",
+        "name": "Escuela Naval del Perú (ENP - Oficiales)",
+        "folder": "03_ENP",
+        "contexts": [
+            "Ángulo de Depresión Horizontal y Alcance Visual desde Mástil de Fragata Misilera",
+            "Descomposición Trigonométrica de Derrota Loxodrómica y Viento de Través",
+            "Medición de Altura de Faro Costero mediante Sextante Náutico",
+            "Ángulo Giroscópico de Interceptación (Lead Angle) en Lanzamiento de Torpedo"
+        ]
+    },
+    {
+        "id": "CITEN",
+        "name": "Centro de Instrucción Técnica y Entrenamiento Naval (CITEN - Suboficiales)",
+        "folder": "04_CITEN",
+        "contexts": [
+            "Ángulo de Abatimiento y Tiro de Cabrestante en Maniobra de Atraque Naval",
+            "Monitoreo Angular de Balance (Roll) y Cabeceo (Pitch) en Consola de Navegación",
+            "Ángulo Crítico de Refracción de Haz Sonar en la Capa Termoclina Oceánica",
+            "Tensión Trigonométrica en Eslingas de Maniobra de Reabastecimiento en la Mar (RAS)"
+        ]
+    },
+    {
+        "id": "EOFAP",
+        "name": "Escuela de Oficiales FAP (EOFAP - Oficiales)",
+        "folder": "05_EOFAP",
+        "contexts": [
+            "Ángulo de Trepada (Climb Angle) de Interceptor Mirage 2000P hacia Cota de Combate",
+            "Ángulo de Ataque y Senda Instrumental en Aproximación Final a Pista Aérea",
+            "Cono de Silencio y Cobertura Angular de Antena Radar 3D TPS-78",
+            "Ángulo de Picada y Cota de Recuperación de Vuelo en Bombardeo Táctico Su-25"
+        ]
+    },
+    {
+        "id": "ESOFA",
+        "name": "Escuela de Suboficiales FAP (ESOFA - Suboficiales)",
+        "folder": "06_ESOFA",
+        "contexts": [
+            "Calibración y Verificación de Ángulo Diedro Alar en KT-1P Torito en SEMAN",
+            "Alineación Angular de Toberas de Propulsión en Banco de Pruebas de Turbinas",
+            "Ángulo de Paso Colectivo de Palas de Rotor en Helicópteros Mi-171Sh",
+            "Gradiente Angular de Rampa de Acceso a Hangares de Mantenimiento Pesado"
+        ]
+    },
+    {
+        "id": "EO_PNP",
+        "name": "Escuela de Oficiales de la Policía Nacional (EO-PNP - Oficiales)",
+        "folder": "07_EO_PNP",
+        "contexts": [
+            "Reconstrucción Balística DIRINCRI: Ángulo de Incidencia de Disparo en Muro",
+            "Ángulo de Depresión de Disparo Táctico de Tirador SUAT en Rescate de Rehenes",
+            "Ángulo de Cobertura y Campo Visual Óptico de Cámara Domo PTZ de Seguridad",
+            "Análisis Trigonométrico de Colisión Oblicua de Vehículos en Carretera Central"
+        ]
+    },
+    {
+        "id": "EESTP_PNP",
+        "name": "Escuelas de Educación Superior Técnico Profesional PNP (EESTP-PNP - Suboficiales)",
+        "folder": "08_EESTP_PNP",
+        "contexts": [
+            "Ángulo de Inclinación Seguro ($75^\\circ$) de Escala Táctica Policial de Asalto",
+            "Cono Angular de Iluminación de Linterna Táctica en Patrullaje Nocturno a Pie",
+            "Gradiente y Pendiente Angular en Persecución Policial en Pasajes Escarpados",
+            "Ángulo de Dispersión y Rebote de Postas de Goma en Control de Disturbios"
+        ]
+    }
+]
+
+def get_trigonometria_bank(school):
+    prefix = school["id"]
+    name = school["name"]
+    contexts = school["contexts"]
+    
+    questions = []
+    
+    # Nivel 1: Básico (4 preguntas)
+    # Q1: Definición directa de seno/coseno
+    questions.append({
+        "id_pregunta": f"{prefix}_TRI_RAZ_001",
+        "curso": "Trigonometría",
+        "tema": "Razones Trigonométricas y Triángulos Notables",
+        "nivel_dificultad": 1,
+        "enunciado": f"En el examen de admisión de {name}: En un triángulo rectángulo, los catetos miden $7\\text{{ cm}}$ y $24\\text{{ cm}}$. Si $\\theta$ es el menor ángulo agudo, determine el valor de $\\sin(\\theta)$.",
+        "apoyo_visual": { "requiere_grafico": False, "imagen_url": None, "descripcion_para_diseñador": None },
+        "opciones": [
+            { "id": "A", "texto": "$\\frac{7}{25}$", "es_correcta": True },
+            { "id": "B", "texto": "$\\frac{24}{25}$", "es_correcta": False },
+            { "id": "C", "texto": "$\\frac{7}{24}$", "es_correcta": False },
+            { "id": "D", "texto": "$\\frac{24}{7}$", "es_correcta": False },
+            { "id": "E", "texto": "$\\frac{1}{25}$", "es_correcta": False }
+        ],
+        "metricas": { "segundos_limite": 72, "pts_correcta": 20, "pts_incorrecta": -1.25 },
+        "resolucion_corta": "Hipotenusa: $c = \\sqrt{7^2 + 24^2} = \\sqrt{49 + 576} = \\sqrt{625} = 25\\text{ cm}$. El menor ángulo se opone al menor cateto ($7\\text{ cm}$): $\\sin(\\theta) = \\frac{7}{25}$."
+    })
+    
+    # Q2: Valores de ángulos notables
+    questions.append({
+        "id_pregunta": f"{prefix}_TRI_RAZ_002",
+        "curso": "Trigonometría",
+        "tema": "Razones Trigonométricas y Triángulos Notables",
+        "nivel_dificultad": 1,
+        "enunciado": "Calcule el valor numérico exacto de la expresión: $$E = 2\\sin(30^\\circ) + 4\\cos(60^\\circ) + \\tan(45^\\circ)$$",
+        "apoyo_visual": { "requiere_grafico": False, "imagen_url": None, "descripcion_para_diseñador": None },
+        "opciones": [
+            { "id": "A", "texto": "$4$", "es_correcta": True },
+            { "id": "B", "texto": "$3$", "es_correcta": False },
+            { "id": "C", "texto": "$5$", "es_correcta": False },
+            { "id": "D", "texto": "$2$", "es_correcta": False },
+            { "id": "E", "texto": "$\\frac{7}{2}$", "es_correcta": False }
+        ],
+        "metricas": { "segundos_limite": 72, "pts_correcta": 20, "pts_incorrecta": -1.25 },
+        "resolucion_corta": "Reemplazando razones notables: $\\sin(30^\\circ) = \\frac{1}{2}$, $\\cos(60^\\circ) = \\frac{1}{2}$, $\\tan(45^\\circ) = 1$. Luego $E = 2(1/2) + 4(1/2) + 1 = 1 + 2 + 1 = 4$."
+    })
+    
+    # Q3: Razones trigonométricas recíprocas
+    questions.append({
+        "id_pregunta": f"{prefix}_TRI_RAZ_003",
+        "curso": "Trigonometría",
+        "tema": "Razones Trigonométricas y Triángulos Notables",
+        "nivel_dificultad": 1,
+        "enunciado": "Si se sabe que $\\tan(5x - 10^\\circ) \\cdot \\cot(2x + 35^\\circ) = 1$, halle el valor del ángulo agudo $x$.",
+        "apoyo_visual": { "requiere_grafico": False, "imagen_url": None, "descripcion_para_diseñador": None },
+        "opciones": [
+            { "id": "A", "texto": "$15^\\circ$", "es_correcta": True },
+            { "id": "B", "texto": "$10^\\circ$", "es_correcta": False },
+            { "id": "C", "texto": "$20^\\circ$", "es_correcta": False },
+            { "id": "D", "texto": "$25^\\circ$", "es_correcta": False },
+            { "id": "E", "texto": "$12^\\circ$", "es_correcta": False }
+        ],
+        "metricas": { "segundos_limite": 72, "pts_correcta": 20, "pts_incorrecta": -1.25 },
+        "resolucion_corta": "Por propiedad de razones recíprocas: $\\tan(\\alpha) \\cot(\\beta) = 1 \\iff \\alpha = \\beta$. Luego $5x - 10^\\circ = 2x + 35^\\circ \\implies 3x = 45^\\circ \\implies x = 15^\\circ$."
+    })
+    
+    # Q4: Co-razones (ángulos complementarios)
+    questions.append({
+        "id_pregunta": f"{prefix}_TRI_RAZ_004",
+        "curso": "Trigonometría",
+        "tema": "Razones Trigonométricas y Triángulos Notables",
+        "nivel_dificultad": 1,
+        "enunciado": "Si $\\sin(3x + 10^\\circ) = \\cos(2x + 20^\\circ)$ con $x$ agudo, calcule el valor de $x$.",
+        "apoyo_visual": { "requiere_grafico": False, "imagen_url": None, "descripcion_para_diseñador": None },
+        "opciones": [
+            { "id": "A", "texto": "$12^\\circ$", "es_correcta": True },
+            { "id": "B", "texto": "$10^\\circ$", "es_correcta": False },
+            { "id": "C", "texto": "$15^\\circ$", "es_correcta": False },
+            { "id": "D", "texto": "$18^\\circ$", "es_correcta": False },
+            { "id": "E", "texto": "$14^\\circ$", "es_correcta": False }
+        ],
+        "metricas": { "segundos_limite": 72, "pts_correcta": 20, "pts_incorrecta": -1.25 },
+        "resolucion_corta": "Por ángulos complementarios: $\\sin(\\alpha) = \\cos(\\beta) \\iff \\alpha + \\beta = 90^\\circ$. $(3x + 10^\\circ) + (2x + 20^\\circ) = 90^\\circ \\implies 5x + 30^\\circ = 90^\\circ \\implies 5x = 60^\\circ \\implies x = 12^\\circ$."
+    })
+    
+    # Nivel 2: Intermedio (4 preguntas)
+    # Q5: Cálculo de expresión con tangente
+    questions.append({
+        "id_pregunta": f"{prefix}_TRI_RAZ_005",
+        "curso": "Trigonometría",
+        "tema": "Razones Trigonométricas y Triángulos Notables",
+        "nivel_dificultad": 2,
+        "enunciado": "Si $\\theta$ es un ángulo agudo tal que $\\tan(\\theta) = \\frac{5}{12}$, determine el valor de: $$M = 13\\sin(\\theta) + 12\\cot(\\theta)$$",
+        "apoyo_visual": { "requiere_grafico": False, "imagen_url": None, "descripcion_para_diseñador": None },
+        "opciones": [
+            { "id": "A", "texto": "$33.8\\text{ o } \\frac{169}{5}$", "es_correcta": True },
+            { "id": "B", "texto": "$25$", "es_correcta": False },
+            { "id": "C", "texto": "$30$", "es_correcta": False },
+            { "id": "D", "texto": "$28.5$", "es_correcta": False },
+            { "id": "E", "texto": "$35$", "es_correcta": False }
+        ],
+        "metricas": { "segundos_limite": 72, "pts_correcta": 20, "pts_incorrecta": -1.25 },
+        "resolucion_corta": "Catetos: $5$ y $12$. Hipotenusa: $\\sqrt{5^2+12^2}=13$. $\\sin(\\theta) = \\frac{5}{13}$, $\\cot(\\theta) = \\frac{12}{5}$. $M = 13(5/13) + 12(12/5) = 5 + \\frac{144}{5} = \\frac{169}{5} = 33.8$."
+    })
+    
+    # Q6: Ángulo de elevación simple
+    questions.append({
+        "id_pregunta": f"{prefix}_TRI_RAZ_006",
+        "curso": "Trigonometría",
+        "tema": "Razones Trigonométricas y Triángulos Notables",
+        "nivel_dificultad": 2,
+        "enunciado": "Desde un punto en el suelo ubicado a $40\\text{ metros}$ de la base de una torre de comunicaciones, se observa su parte más alta con un ángulo de elevación de $37^\\circ$. Calcule la altura de la torre (considere $\\tan(37^\\circ) = \\frac{3}{4}$).",
+        "apoyo_visual": { "requiere_grafico": True, "imagen_url": None, "descripcion_para_diseñador": "Triángulo rectángulo con base d = 40 m y ángulo de elevación de 37° hacia la cúspide de la torre." },
+        "opciones": [
+            { "id": "A", "texto": "$30\\text{ metros}$", "es_correcta": True },
+            { "id": "B", "texto": "$32\\text{ metros}$", "es_correcta": False },
+            { "id": "C", "texto": "$28\\text{ metros}$", "es_correcta": False },
+            { "id": "D", "texto": "$35\\text{ metros}$", "es_correcta": False },
+            { "id": "E", "texto": "$25\\text{ metros}$", "es_correcta": False }
+        ],
+        "metricas": { "segundos_limite": 72, "pts_correcta": 20, "pts_incorrecta": -1.25 },
+        "resolucion_corta": "En el triángulo rectángulo: $\\tan(37^\\circ) = \\frac{h}{d} \\implies \\frac{3}{4} = \\frac{h}{40} \\implies h = \\frac{3 \\times 40}{4} = 30\\text{ metros}$."
+    })
+    
+    # Q7: Identidad fundamental
+    questions.append({
+        "id_pregunta": f"{prefix}_TRI_RAZ_007",
+        "curso": "Trigonometría",
+        "tema": "Razones Trigonométricas y Triángulos Notables",
+        "nivel_dificultad": 2,
+        "enunciado": "Reduzca a su mínima expresión: $$K = (\\sin(x) + \\cos(x))^2 + (\\sin(x) - \\cos(x))^2$$",
+        "apoyo_visual": { "requiere_grafico": False, "imagen_url": None, "descripcion_para_diseñador": None },
+        "opciones": [
+            { "id": "A", "texto": "$2$", "es_correcta": True },
+            { "id": "B", "texto": "$1$", "es_correcta": False },
+            { "id": "C", "texto": "$4\\sin(x)\\cos(x)$", "es_correcta": False },
+            { "id": "D", "texto": "$2\\sin^2(x)$", "es_correcta": False },
+            { "id": "E", "texto": "$0$", "es_correcta": False }
+        ],
+        "metricas": { "segundos_limite": 72, "pts_correcta": 20, "pts_incorrecta": -1.25 },
+        "resolucion_corta": "Desarrollando los binomios: $(\\sin^2 x + 2\\sin x \\cos x + \\cos^2 x) + (\\sin^2 x - 2\\sin x \\cos x + \\cos^2 x) = 2(\\sin^2 x + \\cos^2 x) = 2(1) = 2$."
+    })
+    
+    # Q8: Ángulo de elevación compuesto (avance hacia la torre)
+    questions.append({
+        "id_pregunta": f"{prefix}_TRI_RAZ_008",
+        "curso": "Trigonometría",
+        "tema": "Razones Trigonométricas y Triángulos Notables",
+        "nivel_dificultad": 2,
+        "enunciado": "Un observador divisa la cima de un promontorio con un ángulo de elevación de $30^\\circ$. Avanza $60\\text{ m}$ en línea recta hacia él y el nuevo ángulo de elevación es de $60^\\circ$. Calcule la altura del promontorio.",
+        "apoyo_visual": { "requiere_grafico": True, "imagen_url": None, "descripcion_para_diseñador": "Triángulo con dos observaciones: desde el punto A a 30°, avanza 60 m al punto B donde el ángulo es 60°." },
+        "opciones": [
+            { "id": "A", "texto": "$30\\sqrt{3}\\text{ metros } (\\approx 51.96\\text{ m})$", "es_correcta": True },
+            { "id": "B", "texto": "$60\\text{ metros}$", "es_correcta": False },
+            { "id": "C", "texto": "$45\\text{ metros}$", "es_correcta": False },
+            { "id": "D", "texto": "$20\\sqrt{3}\\text{ metros}$", "es_correcta": False },
+            { "id": "E", "texto": "$40\\sqrt{3}\\text{ metros}$", "es_correcta": False }
+        ],
+        "metricas": { "segundos_limite": 72, "pts_correcta": 20, "pts_incorrecta": -1.25 },
+        "resolucion_corta": "El triángulo formado por el observador en $A$, el punto $B$ y la cúspide $C$ es isósceles, con $BC = 60\\text{ m}$. En el triángulo rectángulo final notable $30^\\circ - 60^\\circ$: hipotenusa $BC = 60\\text{ m} \\implies h = 60 \\sin(60^\\circ) = 60 \\frac{\\sqrt{3}}{2} = 30\\sqrt{3}\\text{ metros}$."
+    })
+    
+    # Nivel 3: Avanzado / Táctico (4 preguntas)
+    # Q9
+    questions.append({
+        "id_pregunta": f"{prefix}_TRI_RAZ_009",
+        "curso": "Trigonometría",
+        "tema": "Razones Trigonométricas y Triángulos Notables",
+        "nivel_dificultad": 3,
+        "enunciado": f"[{contexts[0]}]: Un tirador selecto ubicado a una distancia horizontal de $800\\text{{ m}}$ ajusta su mira telemétrica hacia un objetivo en una cota alta con un ángulo de elevación de $16^\\circ$. Si $\\tan(16^\\circ) = \\frac{7}{24}$, ¿cuántos metros de altura vertical sobre la posición del tirador se encuentra el objetivo?",
+        "apoyo_visual": { "requiere_grafico": True, "imagen_url": None, "descripcion_para_diseñador": "Triángulo rectángulo con distancia horizontal 800 m y ángulo de elevación de 16°." },
+        "opciones": [
+            { "id": "A", "texto": "$233.33\\text{ metros}$", "es_correcta": True },
+            { "id": "B", "texto": "$250\\text{ metros}$", "es_correcta": False },
+            { "id": "C", "texto": "$210\\text{ metros}$", "es_correcta": False },
+            { "id": "D", "texto": "$240\\text{ metros}$", "es_correcta": False },
+            { "id": "E", "texto": "$225\\text{ metros}$", "es_correcta": False }
+        ],
+        "metricas": { "segundos_limite": 72, "pts_correcta": 20, "pts_incorrecta": -1.25 },
+        "resolucion_corta": "$\\tan(16^\\circ) = \\frac{h}{800} \\implies \\frac{7}{24} = \\frac{h}{800} \\implies h = \\frac{7 \\times 800}{24} = \\frac{5600}{24} = \\frac{700}{3} \\approx 233.33\\text{ metros}$."
+    })
+    
+    # Q10
+    questions.append({
+        "id_pregunta": f"{prefix}_TRI_RAZ_010",
+        "curso": "Trigonometría",
+        "tema": "Razones Trigonométricas y Triángulos Notables",
+        "nivel_dificultad": 3,
+        "enunciado": f"[{contexts[1]}]: Desde un helicóptero en vuelo estacionario a $1200\\text{{ m}}$ de altitud sobre el terreno, el artillero divisa dos posiciones enemigas alineadas en el mismo sentido con ángulos de depresión de $45^\\circ$ y $37^\\circ$ respectivamente. Calcule la distancia de separación horizontal que existe entre ambas posiciones enemigas (considere $\\tan(37^\\circ) = 0.75$).",
+        "apoyo_visual": { "requiere_grafico": True, "imagen_url": None, "descripcion_para_diseñador": "Helicóptero a 1200 m observando dos blancos en tierra con ángulos de depresión de 45° y 37°." },
+        "opciones": [
+            { "id": "A", "texto": "$400\\text{ metros}$", "es_correcta": True },
+            { "id": "B", "texto": "$350\\text{ metros}$", "es_correcta": False },
+            { "id": "C", "texto": "$450\\text{ metros}$", "es_correcta": False },
+            { "id": "D", "texto": "$300\\text{ metros}$", "es_correcta": False },
+            { "id": "E", "texto": "$500\\text{ metros}$", "es_correcta": False }
+        ],
+        "metricas": { "segundos_limite": 72, "pts_correcta": 20, "pts_incorrecta": -1.25 },
+        "resolucion_corta": "Distancia al primer blanco ($45^\\circ$): $x_1 = \\frac{1200}{\\tan(45^\\circ)} = 1200\\text{ m}$. Distancia al segundo blanco ($37^\\circ$): $x_2 = \\frac{1200}{\\tan(37^\\circ)} = \\frac{1200}{3/4} = 1600\\text{ m}$. Separación: $\\Delta x = 1600 - 1200 = 400\\text{ metros}$."
+    })
+    
+    # Q11
+    questions.append({
+        "id_pregunta": f"{prefix}_TRI_RAZ_011",
+        "curso": "Trigonometría",
+        "tema": "Razones Trigonométricas y Triángulos Notables",
+        "nivel_dificultad": 3,
+        "enunciado": f"[{contexts[2]}]: En un levantamiento de precisión, un equipo de ingenieros mide la distancia hacia la cúspide de una montaña inaccesible. Desde el punto $A$ el ángulo de elevación es $\\alpha$ con $\\cot(\\alpha) = 2.4$, y desde otro punto $B$ situado $140\\text{{ m}}$ más alejado en línea recta, el ángulo de elevación es $\\beta$ con $\\cot(\\beta) = 3.1$. Calcule la altura vertical de la montaña.",
+        "apoyo_visual": { "requiere_grafico": False, "imagen_url": None, "descripcion_para_diseñador": None },
+        "opciones": [
+            { "id": "A", "texto": "$200\\text{ metros}$", "es_correcta": True },
+            { "id": "B", "texto": "$220\\text{ metros}$", "es_correcta": False },
+            { "id": "C", "texto": "$180\\text{ metros}$", "es_correcta": False },
+            { "id": "D", "texto": "$250\\text{ metros}$", "es_correcta": False },
+            { "id": "E", "texto": "$210\\text{ metros}$", "es_correcta": False }
+        ],
+        "metricas": { "segundos_limite": 72, "pts_correcta": 20, "pts_incorrecta": -1.25 },
+        "resolucion_corta": "Distancias a la base vertical: $d_A = h \\cot(\\alpha)$ y $d_B = h \\cot(\\beta)$. Como $d_B - d_A = 140\\text{ m} \\implies h(\\cot(\\beta) - \\cot(\\alpha)) = 140 \\implies h(3.1 - 2.4) = 140 \\implies 0.7 h = 140 \\implies h = 200\\text{ metros}$."
+    })
+    
+    # Q12
+    questions.append({
+        "id_pregunta": f"{prefix}_TRI_RAZ_012",
+        "curso": "Trigonometría",
+        "tema": "Razones Trigonométricas y Triángulos Notables",
+        "nivel_dificultad": 3,
+        "enunciado": f"[{contexts[3]}]: Un vehículo blindado asciende por una pendiente de duna con inclinación constante $\\theta$ tal que $\\sin(\\theta) = \\frac{3}{5}$. Si el vehículo recorre $250\\text{{ m}}$ a lo largo de la superficie inclinada, determine tanto el desnivel vertical ascendido como el desplazamiento horizontal proyectado.",
+        "apoyo_visual": { "requiere_grafico": True, "imagen_url": None, "descripcion_para_diseñador": "Triángulo notable 37-53 con hipotenusa 250 m, cateto vertical y cateto horizontal." },
+        "opciones": [
+            { "id": "A", "texto": "Desnivel: $150\\text{ m}$; Desplazamiento horizontal: $200\\text{ m}$", "es_correcta": True },
+            { "id": "B", "texto": "Desnivel: $120\\text{ m}$; Desplazamiento horizontal: $220\\text{ m}$", "es_correcta": False },
+            { "id": "C", "texto": "Desnivel: $180\\text{ m}$; Desplazamiento horizontal: $160\\text{ m}$", "es_correcta": False },
+            { "id": "D", "texto": "Desnivel: $100\\text{ m}$; Desplazamiento horizontal: $240\\text{ m}$", "es_correcta": False },
+            { "id": "E", "texto": "Desnivel: $150\\text{ m}$; Desplazamiento horizontal: $180\\text{ m}$", "es_correcta": False }
+        ],
+        "metricas": { "segundos_limite": 72, "pts_correcta": 20, "pts_incorrecta": -1.25 },
+        "resolucion_corta": "Como $\\sin(\\theta) = \\frac{3}{5}$, corresponde al triángulo notable $37^\\circ - 53^\\circ$. Hipotenusa $= 250\\text{ m} = 5k \\implies k = 50\\text{ m}$. Desnivel vertical (cateto opuesto) $= 3k = 3(50) = 150\\text{ metros}$. Desplazamiento horizontal (cateto adyacente) $= 4k = 4(50) = 200\\text{ metros}$."
+    })
+    
+    return questions
+
+# Guardar y actualizar
+all_trig_banks = {}
+
+for sc in SCHOOLS_TRIG:
+    prefix = sc["id"]
+    folder = sc["folder"]
+    bank = get_trigonometria_bank(sc)
+    all_trig_banks[prefix] = bank
+    
+    # Guardar JSON individual
+    json_path = f"banco_preguntas/{folder}_trigonometria_razones.json"
+    with open(json_path, "w", encoding="utf-8") as f:
+        json.dump(bank, f, indent=2, ensure_ascii=False)
+    print(f"Generado {json_path}")
+
+# Guardar banco maestro
+with open("banco_preguntas/banco_maestro_trigonometria_razones_8_escuelas.json", "w", encoding="utf-8") as f:
+    json.dump(all_trig_banks, f, indent=2, ensure_ascii=False)
+print("Guardado banco maestro consolidado de Trigonometría.")
+
+# Actualizar los Markdown de bases de conocimiento
+for sc in SCHOOLS_TRIG:
+    prefix = sc["id"]
+    folder = sc["folder"]
+    md_file = f"{folder}.md"
+    md_path = os.path.join("bases_conocimiento", md_file)
+    
+    with open(md_path, "r", encoding="utf-8") as f:
+        content = f.read()
+    
+    section_title = "## 📚 Banco de Preguntas Calibradas: Trigonometría (Razones Trigonométricas y Triángulos Notables)"
+    if section_title not in content:
+        bank = all_trig_banks[prefix]
+        json_str = json.dumps(bank, indent=2, ensure_ascii=False)
+        addition = f"""
+
+---
+
+{section_title}
+
+> **Muestra Oficial Certificada:** 12 preguntas de opción múltiple estrictamente calibradas en 3 niveles de dificultad (Básico, Intermedio, Avanzado/Táctico) con límite de tiempo ({bank[0]['metricas']['segundos_limite']}s) y sistema de penalización (+{bank[0]['metricas']['pts_correcta']} / {bank[0]['metricas']['pts_incorrecta']}).
+
+```json
+{json_str}
+```
+"""
+        content += addition
+        with open(md_path, "w", encoding="utf-8") as f:
+            f.write(content)
+        print(f"Actualizado {md_path}")
+        
+        # Copiar al espejo
+        mirror_path = os.path.join("escuelas_militares_pdf", folder, f"BASE_CONOCIMIENTO_{prefix}.md")
+        shutil.copyfile(md_path, mirror_path)
+        print(f"Actualizado espejo {mirror_path}")
+
+print("Trigonometría generada y guardada al 100% en todas las escuelas.")

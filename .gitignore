@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+*/node_modules/
+
+# Python cache & virtual environments
+__pycache__/
+*/__pycache__/
+*.py[cod]
+*$py.class
+*.venv
+venv/
+env/
+.env
+
+# Build outputs (keep web_platform/react_app if deploying static site, or ignore temp build)
+react_app/dist/
+dist/
+
+# Scratch & temporary test files
+scratch/
+*.log
+
+# Databases & local sessions
+*.sqlite-journal
+
+# External reference repositories (cloned with their own .git)
+Big-Five-Personality-Analysis/
+bigfive-web/
+five-factor-e/
+
+# IDE & OS metadata
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

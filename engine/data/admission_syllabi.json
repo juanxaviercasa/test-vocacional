@@ -1,0 +1,385 @@
+{
+  "institutions": {
+    "EMCH": {
+      "id": "EMCH",
+      "nombre": "Escuela Militar de Chorrillos 'Coronel Francisco Bolognesi'",
+      "rama": "Ejército del Perú",
+      "nivel": "Oficiales",
+      "duracion": "5 años",
+      "grado_obtenido": "Subteniente / Alférez del Ejército del Perú",
+      "titulo_civil": "Licenciado en Ciencias Militares",
+      "nota_minima_aprobatoria": 12.0,
+      "tiempo_minutos": 180,
+      "total_preguntas_oficial": 100,
+      "areas": {
+        "ciencias": {
+          "nombre": "Ciencias Matemáticas y Naturales",
+          "peso_porcentaje": 40,
+          "materias": [
+            "Aritmética: Teoría de conjuntos, numeración, 4 operaciones, divisibilidad, MCM y MCD, razones y proporciones, regla de tres, porcentajes",
+            "Álgebra: Leyes de exponentes, polinomios, productos notables, división algebraica, ecuaciones e inecuaciones lineales y cuadráticas",
+            "Geometría: Ángulos, triángulos, congruencia, cuadriláteros, polígonos, circunferencia, áreas y volúmenes",
+            "Trigonometría: Razones trigonométricas, resolución de triángulos rectángulos, identidades fundamentales",
+            "Física: Análisis vectorial, cinemática (MRU, MRUV), estática (1ra y 2da condición de equilibrio), dinámica lineal, trabajo y energía",
+            "Química: Materia y energía, estructura atómica, tabla periódica, enlaces químicos, nomenclatura inorgánica"
+          ]
+        },
+        "aptitud_academica": {
+          "nombre": "Aptitud Académica y Psicotécnico",
+          "peso_porcentaje": 30,
+          "materias": [
+            "Razonamiento Matemático: Sucesiones, analogías numéricas, operadores matemáticos, planteo de ecuaciones, edades, móviles, certeza",
+            "Razonamiento Verbal: Sinónimos, antónimos, analogías, términos excluidos, oraciones incompletas, comprensión lectora"
+          ]
+        },
+        "humanidades": {
+          "nombre": "Humanidades, Historia y Letras",
+          "peso_porcentaje": 20,
+          "materias": [
+            "Lenguaje y Literatura: Ortografía y tildación, morfología y sintaxis, literatura peruana (costumbrismo, realismo, indigenismo)",
+            "Historia del Perú y del Mundo: Culturas prehispánicas, Tahuantinsuyo, Conquista, Virreinato, Emancipación, Guerra del Pacífico, Batalla de Arica y Francisco Bolognesi, historia contemporánea",
+            "Geografía del Perú y del Mundo: Ocho regiones naturales, Mar de Grau, cuencas hidrográficas, geopolítica peruana"
+          ]
+        },
+        "ingles_informatica": {
+          "nombre": "Inglés Básico y Computación",
+          "peso_porcentaje": 10,
+          "materias": [
+            "Inglés: Verb to be, simple present, vocabulary, reading comprehension",
+            "Informática: Conceptos de hardware, software, sistemas operativos, seguridad informática"
+          ]
+        }
+      }
+    },
+    "ETE": {
+      "id": "ETE",
+      "nombre": "Escuela Técnica del Ejército 'Sargento 2do Fernando Lores Tenazoa'",
+      "rama": "Ejército del Perú",
+      "nivel": "Suboficiales",
+      "duracion": "3 años",
+      "grado_obtenido": "Suboficial de Tercera del Ejército del Perú",
+      "titulo_civil": "Profesional Técnico en la especialidad elegida",
+      "nota_minima_aprobatoria": 12.0,
+      "tiempo_minutos": 180,
+      "total_preguntas_oficial": 100,
+      "areas": {
+        "aptitud_academica": {
+          "nombre": "Aptitud Académica (60% Raz. Matemático / 40% Raz. Verbal)",
+          "peso_porcentaje": 40,
+          "materias": [
+            "Razonamiento Matemático: Sucesiones, operadores, métodos aritméticos, problemas sobre edades, certezas, cronometría",
+            "Razonamiento Verbal: Sinónimos, antónimos, analogías, oraciones eliminadas, comprensión de textos"
+          ]
+        },
+        "ciencias": {
+          "nombre": "Ciencias (Matemática, Física, Química e Informática)",
+          "peso_porcentaje": 30,
+          "materias": [
+            "Aritmética y Álgebra: Operaciones fundamentales, fracciones, exponentes, polinomios, ecuaciones de primer grado",
+            "Geometría y Trigonometría: Triángulos, cuadriláteros, perímetros, áreas, teorema de Pitágoras",
+            "Física y Química: Unidades SI, vectores, cinemática, materia, tabla periódica",
+            "Informática: Hardware, software, ofimática básica"
+          ]
+        },
+        "letras": {
+          "nombre": "Letras, Historia y Geografía",
+          "peso_porcentaje": 20,
+          "materias": [
+            "Lenguaje y Literatura: La comunicación, ortografía, funciones del lenguaje, autores peruanos representativos",
+            "Historia del Perú e Historia Militar: Héroe Patrono Fernando Lores Tenazoa (Combate de Güepí 1933), Guerra del Pacífico, proceso independentista",
+            "Geografía y Cultura General: Regiones del Perú, fronteras, actualidad nacional"
+          ]
+        },
+        "ingles": {
+          "nombre": "Idioma Inglés (Nivel Básico)",
+          "peso_porcentaje": 10,
+          "materias": [
+            "Gramática elemental: Pronombres, verbo to be, presente simple, vocabulario básico técnico"
+          ]
+        }
+      }
+    },
+    "ENP": {
+      "id": "ENP",
+      "nombre": "Escuela Naval del Perú 'Almirante Miguel Grau'",
+      "rama": "Marina de Guerra del Perú",
+      "nivel": "Oficiales",
+      "duracion": "5 años",
+      "grado_obtenido": "Alférez de Fragata de la Marina de Guerra del Perú",
+      "titulo_civil": "Bachiller y Licenciado en Ciencias Marítimas Navales",
+      "nota_minima_aprobatoria": 12.0,
+      "tiempo_minutos": 180,
+      "total_preguntas_oficial": 100,
+      "areas": {
+        "ciencias_exactas": {
+          "nombre": "Ciencias Matemáticas y Físico-Química",
+          "peso_porcentaje": 45,
+          "materias": [
+            "Aritmética y Álgebra: Fracciones, razones y proporciones, regla de tres, logaritmos, matrices, binomio de Newton, polinomios",
+            "Geometría y Trigonometría: Relaciones métricas, áreas, reducción al primer cuadrante, circunferencia trigonométrica, identidades y ecuaciones trigonométricas",
+            "Física: Análisis vectorial, cinemática, movimiento circunferencial, estática, dinámica, hidrostática, electrostática y electrodinámica",
+            "Química: Estructura atómica, configuración electrónica, tabla periódica, enlaces, estequiometría, soluciones, ácidos y bases"
+          ]
+        },
+        "aptitud_academica": {
+          "nombre": "Razonamiento Matemático y Verbal",
+          "peso_porcentaje": 25,
+          "materias": [
+            "Razonamiento Matemático: Razonamiento numérico, inductivo/deductivo, espacial, sucesiones y series",
+            "Razonamiento Verbal: Sinónimos contextuales, analogías, término excluido, comprensión y ensayo argumentativo"
+          ]
+        },
+        "humanidades_historia_naval": {
+          "nombre": "Humanidades e Historia Marítima",
+          "peso_porcentaje": 20,
+          "materias": [
+            "Historia Naval y del Perú: El Tahuantinsuyo, Independencia, Guerra del Pacífico, Combate de Angamos e Iquique, Almirante Miguel Grau Seminario, Primera y Segunda Guerra Mundial",
+            "Geografía Marítima: Mar de Grau, Corriente de Humboldt y del Niño, puertos mundiales, estrechos y canales estratégicos (Panamá, Suez, Malaca), la Antártida"
+          ]
+        },
+        "ingles_tecnologia": {
+          "nombre": "Inglés e Informática",
+          "peso_porcentaje": 10,
+          "materias": [
+            "Inglés Nivel Intermedio/Básico: Lectura comprensiva y estructuras gramaticales",
+            "Informática: Arquitectura de computadoras, redes, ciberseguridad y ataques informáticos"
+          ]
+        }
+      }
+    },
+    "CITEN": {
+      "id": "CITEN",
+      "nombre": "Centro de Instrucción Técnica y Entrenamiento Naval (CITEN)",
+      "rama": "Marina de Guerra del Perú",
+      "nivel": "Suboficiales",
+      "duracion": "3 años",
+      "grado_obtenido": "Oficial de Mar de Tercera de la Marina de Guerra del Perú",
+      "titulo_civil": "Profesional Técnico en la especialidad naval asignada",
+      "nota_minima_aprobatoria": 12.0,
+      "tiempo_minutos": 180,
+      "total_preguntas_oficial": 100,
+      "areas": {
+        "aptitud_academica": {
+          "nombre": "Aptitud Académica (Raz. Matemático y Raz. Verbal)",
+          "peso_porcentaje": 35,
+          "materias": [
+            "Razonamiento Matemático: Operadores matemáticos, series notables, planteo de ecuaciones, fracciones, porcentajes",
+            "Razonamiento Verbal: Sinónimos, antónimos, analogías, términos excluidos, oraciones eliminadas, comprensión de lectura"
+          ]
+        },
+        "ciencias": {
+          "nombre": "Ciencias Aplicadas",
+          "peso_porcentaje": 35,
+          "materias": [
+            "Álgebra y Aritmética: Teoría de exponentes, polinomios, MCD y MCM, ecuaciones de 1er y 2do grado",
+            "Geometría y Medición: Triángulos, polígonos, circunferencia, cálculo de áreas y perímetros",
+            "Física y Química: Vectores, cinemática, trabajo y potencia mecánica, estructura atómica, estados de la materia"
+          ]
+        },
+        "humanidades_mar_peruano": {
+          "nombre": "Humanidades y Dominio Marítimo",
+          "peso_porcentaje": 20,
+          "materias": [
+            "Lenguaje y Comunicación: Ortografía, vicios del lenguaje, comunicación eficaz",
+            "Geografía y Realidad Naval: La Tierra y sus dimensiones, el Mar Peruano, Convemar, soberanía marítima",
+            "Historia del Perú: Héroes navales, Combate de Angamos y tradición marítima nacional"
+          ]
+        },
+        "ingles_computacion": {
+          "nombre": "Inglés Básico y Computación",
+          "peso_porcentaje": 10,
+          "materias": [
+            "Inglés: Verb to be, there is/are, countable/uncountable nouns, present simple",
+            "Computación: Hardware, software, paquetes ofimáticos de Microsoft"
+          ]
+        }
+      }
+    },
+    "EOFAP": {
+      "id": "EOFAP",
+      "nombre": "Escuela de Oficiales de la Fuerza Aérea del Perú 'Capitán FAP José Abelardo Quiñones'",
+      "rama": "Fuerza Aérea del Perú",
+      "nivel": "Oficiales",
+      "duracion": "5 años",
+      "grado_obtenido": "Alférez de la Fuerza Aérea del Perú",
+      "titulo_civil": "Licenciado en Ciencias Aeroespaciales (Ley Universitaria N° 30220)",
+      "nota_minima_aprobatoria": 12.0,
+      "tiempo_minutos": 180,
+      "total_preguntas_oficial": 100,
+      "areas": {
+        "ciencias": {
+          "nombre": "Ciencias Físico-Matemáticas (60% del examen)",
+          "peso_porcentaje": 50,
+          "materias": [
+            "Aritmética y Álgebra: Teoría de números, funciones, matrices, logaritmos, ecuaciones",
+            "Geometría y Trigonometría: Geometría plana y del espacio, razones trigonométricas, cálculo vectorial",
+            "Física Aplicada: Mecánica clásica, cinemática, leyes de Newton, trabajo, potencia, energía, hidrodinámica y termodinámica básica",
+            "Química: Enlaces, gases ideales, reacciones químicas, estequiometría"
+          ]
+        },
+        "aptitud_academica": {
+          "nombre": "Aptitud Académica y Razonamiento Lógico-Espacial",
+          "peso_porcentaje": 25,
+          "materias": [
+            "Razonamiento Matemático: Lógica inductiva y deductiva, secuencias numéricas, orientación espacial y figuras rotadas",
+            "Razonamiento Verbal: Comprensión crítica de textos, precisión léxica, analogías complejas"
+          ]
+        },
+        "humanidades_aeroespacial": {
+          "nombre": "Humanidades, Historia y Geografía",
+          "peso_porcentaje": 15,
+          "materias": [
+            "Historia Aeronáutica y del Perú: Conflicto del Cenepa, Guerra de 1941 (Quebrada Seca), Capitán FAP José Abelardo Quiñones Gonzáles, Pedro Paulet Mostajo",
+            "Geografía y Espacio Aéreo: Atmósfera terrestre, capas atmosféricas, división política, recursos naturales del Perú"
+          ]
+        },
+        "ingles_tecnologia": {
+          "nombre": "Inglés Técnico Aeronáutico y Computación",
+          "peso_porcentaje": 10,
+          "materias": [
+            "Inglés: Estructura gramatical, vocabulario aeronáutico básico, comprensión lectora",
+            "Computación: Algoritmia básica, arquitectura de sistemas y ciberdefensa"
+          ]
+        }
+      }
+    },
+    "ESOFA": {
+      "id": "ESOFA",
+      "nombre": "Escuela de Suboficiales de la Fuerza Aérea del Perú 'Manuel Polo Jiménez'",
+      "rama": "Fuerza Aérea del Perú",
+      "nivel": "Suboficiales",
+      "duracion": "3 años",
+      "grado_obtenido": "Suboficial de Tercera de la Fuerza Aérea del Perú",
+      "titulo_civil": "Profesional Técnico en Especialidades Aeronáuticas",
+      "nota_minima_aprobatoria": 12.0,
+      "tiempo_minutos": 180,
+      "total_preguntas_oficial": 100,
+      "areas": {
+        "ciencias": {
+          "nombre": "Ciencias (Aritmética, Álgebra, Geometría, Física, Química)",
+          "peso_porcentaje": 40,
+          "materias": [
+            "Aritmética y Álgebra: Operaciones combinadas, fracciones, razones, regla de tres, ecuaciones de 1er y 2do grado",
+            "Geometría y Trigonometría: Triángulos, polígonos, áreas, teorema de Pitágoras, funciones trigonométricas",
+            "Física y Química: Magnitudes, cinemática, leyes de Newton, materia, tabla periódica, calor y temperatura"
+          ]
+        },
+        "aptitud_academica": {
+          "nombre": "Aptitud Académica y Psicotécnico",
+          "peso_porcentaje": 30,
+          "materias": [
+            "Razonamiento Matemático: Sucesiones, operadores, razonamiento lógico, cronometría",
+            "Razonamiento Verbal: Sinónimos, antónimos, analogías, términos excluidos, oraciones incompletas"
+          ]
+        },
+        "letras_historia": {
+          "nombre": "Letras, Historia del Perú y Cultura General",
+          "peso_porcentaje": 20,
+          "materias": [
+            "Lenguaje y Comunicación: Ortografía, concordancia gramatical, signos de puntuación",
+            "Historia y Geografía: Héroes aeronáuticos (Manuel Polo Jiménez, Quiñones), hitos de la historia nacional, regiones geográficas del Perú",
+            "Cultura General y Actualidad"
+          ]
+        },
+        "ingles_computacion": {
+          "nombre": "Inglés e Informática",
+          "peso_porcentaje": 10,
+          "materias": [
+            "Inglés: Presente simple, preguntas con WH, vocabulario técnico",
+            "Informática: Conceptos de hardware, periféricos, ofimática básica"
+          ]
+        }
+      }
+    },
+    "EO_PNP": {
+      "id": "EO_PNP",
+      "nombre": "Escuela de Oficiales de la Policía Nacional del Perú 'Mariano Santos Mateo'",
+      "rama": "Policía Nacional del Perú",
+      "nivel": "Oficiales",
+      "duracion": "5 años",
+      "grado_obtenido": "Alférez de la Policía Nacional del Perú",
+      "titulo_civil": "Licenciado en Administración y Ciencias Policiales",
+      "nota_minima_aprobatoria": 13.0,
+      "tiempo_minutos": 180,
+      "total_preguntas_oficial": 100,
+      "areas": {
+        "aptitud_academica": {
+          "nombre": "Aptitud Académica (30 preguntas)",
+          "peso_porcentaje": 30,
+          "materias": [
+            "Razonamiento Matemático (15 preguntas): Sucesiones, razonamiento lógico, planteo de ecuaciones, fracciones, tanto por ciento",
+            "Razonamiento Verbal (15 preguntas): Sinónimos, antónimos, analogías, oraciones incompletas, comprensión de textos"
+          ]
+        },
+        "ciencias_matematicas": {
+          "nombre": "Matemáticas y CTA (30 preguntas)",
+          "peso_porcentaje": 30,
+          "materias": [
+            "Matemáticas (15 preguntas): Aritmética, Álgebra, Teorema de Pitágoras, funciones trigonométricas, geometría plana",
+            "Ciencia, Tecnología y Ambiente (15 preguntas): Materia y energía, sistema solar y planeta Tierra, tabla periódica, fotosíntesis, fenómenos naturales y cambio climático"
+          ]
+        },
+        "sociedad_derechos_humanos": {
+          "nombre": "Persona, Familia, DDHH y Comunicación (30 preguntas)",
+          "peso_porcentaje": 30,
+          "materias": [
+            "Persona, Familia y Relaciones Humanas (15 preguntas): Cultura de Paz, diálogo y negociación, Derechos Humanos, identidad personal y nacional, normas sociales, autoestima y autocuidado, funciones de la familia y prevención de violencia",
+            "Comunicación (15 preguntas): Reglas ortográficas, la oración gramatical, la narración (estructura y elementos), literatura peruana"
+          ]
+        },
+        "ciencias_sociales": {
+          "nombre": "Ciencias Sociales (10 preguntas)",
+          "peso_porcentaje": 10,
+          "materias": [
+            "Ciencias Sociales (10 preguntas): Proceso de hominización, Tahuantinsuyo (evolución y organización), parques, santuarios y reservas nacionales, ecosistemas y desarrollo sostenido, redes viales nacionales"
+          ]
+        }
+      }
+    },
+    "EESTP_PNP": {
+      "id": "EESTP_PNP",
+      "nombre": "Escuelas de Educación Superior Técnico Profesional de la PNP",
+      "rama": "Policía Nacional del Perú",
+      "nivel": "Suboficiales",
+      "duracion": "3 años",
+      "grado_obtenido": "Suboficial de Tercera de la Policía Nacional del Perú",
+      "titulo_civil": "Profesional Técnico en Ciencias Administrativas y Policiales",
+      "nota_minima_aprobatoria": 13.0,
+      "tiempo_minutos": 180,
+      "total_preguntas_oficial": 100,
+      "areas": {
+        "aptitud_academica": {
+          "nombre": "Aptitud Académica (30 preguntas)",
+          "peso_porcentaje": 30,
+          "materias": [
+            "Razonamiento Matemático (15 preguntas): Sucesiones, lógica recreativa, ecuaciones, porcentajes",
+            "Razonamiento Verbal (15 preguntas): Sinónimos, antónimos, analogías verbales, comprensión lectora"
+          ]
+        },
+        "ciencias_matematicas": {
+          "nombre": "Matemáticas y CTA (30 preguntas)",
+          "peso_porcentaje": 30,
+          "materias": [
+            "Matemáticas (15 preguntas): Aritmética básica, álgebra elemental, geometría práctica y trigonometría",
+            "Ciencia, Tecnología y Ambiente (15 preguntas): Materia, ecosistemas peruanos, tabla periódica, cuidado del medio ambiente"
+          ]
+        },
+        "sociedad_derechos_humanos": {
+          "nombre": "Persona, Familia, DDHH y Comunicación (30 preguntas)",
+          "peso_porcentaje": 30,
+          "materias": [
+            "Persona, Familia y DDHH (15 preguntas): Derechos fundamentales de la persona, Constitución Política del Perú, prevención de la violencia, cultura de paz y ética",
+            "Comunicación (15 preguntas): Ortografía, acentuación, redacción, literatura peruana"
+          ]
+        },
+        "ciencias_sociales": {
+          "nombre": "Ciencias Sociales (10 preguntas)",
+          "peso_porcentaje": 10,
+          "materias": [
+            "Ciencias Sociales (10 preguntas): Historia del Perú republicano, geografía nacional, patrimonio cultural y vial del Perú"
+          ]
+        }
+      }
+    }
+  }
+}

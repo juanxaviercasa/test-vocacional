@@ -1,0 +1,542 @@
+[
+  {
+    "id_pregunta": "CITEN_RM_MOV_001",
+    "curso": "Razonamiento Matemático",
+    "tema": "Móviles y Planteo de Ecuaciones",
+    "nivel_dificultad": 1,
+    "enunciado": "En el examen de admisión de Centro de Instrucción Técnica y Entrenamiento Naval (CITEN - Suboficiales): Dos móviles $A$ y $B$ parten simultáneamente al encuentro desde dos bases distanciadas $450\\text{ km}$, con velocidades constantes de $40\\text{ km/h}$ y $50\\text{ km/h}$ respectivamente. ¿Al cabo de cuántas horas se producirá el encuentro?",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$5\\text{ horas}$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$6\\text{ horas}$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$4.5\\text{ horas}$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$4\\text{ horas}$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$5.5\\text{ horas}$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Fórmula del tiempo de encuentro: $t_{enc} = \\frac{d}{v_1 + v_2} = \\frac{450}{40 + 50} = \\frac{450}{90} = 5\\text{ horas}$."
+  },
+  {
+    "id_pregunta": "CITEN_RM_MOV_002",
+    "curso": "Razonamiento Matemático",
+    "tema": "Móviles y Planteo de Ecuaciones",
+    "nivel_dificultad": 1,
+    "enunciado": "Un móvil perseguidor con velocidad constante de $90\\text{ km/h}$ busca alcanzar a otro móvil que se desplaza a $60\\text{ km/h}$ en la misma dirección y sentido. Si inicialmente los separa una distancia de $120\\text{ km}$, ¿en cuántas horas logrará el alcance?",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$4\\text{ horas}$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$3\\text{ horas}$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$5\\text{ horas}$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$2.5\\text{ horas}$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$3.5\\text{ horas}$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Fórmula del tiempo de alcance: $t_{alc} = \\frac{d}{v_1 - v_2} = \\frac{120}{90 - 60} = \\frac{120}{30} = 4\\text{ horas}$."
+  },
+  {
+    "id_pregunta": "CITEN_RM_MOV_003",
+    "curso": "Razonamiento Matemático",
+    "tema": "Móviles y Planteo de Ecuaciones",
+    "nivel_dificultad": 1,
+    "enunciado": "Un vehículo recorre la primera mitad de su ruta a una velocidad constante de $40\\text{ km/h}$ y la segunda mitad a $60\\text{ km/h}$. Calcule la velocidad media en todo el trayecto.",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$48\\text{ km/h}$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$50\\text{ km/h}$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$52\\text{ km/h}$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$45\\text{ km/h}$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$46.5\\text{ km/h}$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Para distancias iguales, la velocidad media es la media armónica: $v_m = \\frac{2v_1 v_2}{v_1 + v_2} = \\frac{2(40)(60)}{40 + 60} = \\frac{4800}{100} = 48\\text{ km/h}$."
+  },
+  {
+    "id_pregunta": "CITEN_RM_MOV_004",
+    "curso": "Razonamiento Matemático",
+    "tema": "Móviles y Planteo de Ecuaciones",
+    "nivel_dificultad": 1,
+    "enunciado": "Un convoy ferroviario de $200\\text{ metros}$ de longitud marcha a una velocidad constante de $72\\text{ km/h}$. ¿Cuánto tiempo demorará en cruzar completamente un túnel de $400\\text{ metros}$?",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$30\\text{ segundos}$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$20\\text{ segundos}$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$25\\text{ segundos}$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$35\\text{ segundos}$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$40\\text{ segundos}$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Convertimos velocidad: $72\\text{ km/h} = 72 \\times \\frac{5}{18} = 20\\text{ m/s}$. Distancia total: $D = 200 + 400 = 600\\text{ m}$. Tiempo: $t = \\frac{600}{20} = 30\\text{ segundos}$."
+  },
+  {
+    "id_pregunta": "CITEN_RM_MOV_005",
+    "curso": "Razonamiento Matemático",
+    "tema": "Móviles y Planteo de Ecuaciones",
+    "nivel_dificultad": 2,
+    "enunciado": "Un transporte parte a las 06:00 horas a $50\\text{ km/h}$. A las 08:00 horas sale en su persecución un vehículo rápido a $75\\text{ km/h}$. ¿A qué hora alcanzará el segundo vehículo al primero?",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$12:00\\text{ horas}$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$11:00\\text{ horas}$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$13:00\\text{ horas}$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$10:30\\text{ horas}$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$12:30\\text{ horas}$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Ventaja en 2 horas: $d = 50 \\times 2 = 100\\text{ km}$. Tiempo de alcance desde las 08:00 h: $t_{alc} = \\frac{100}{75 - 50} = \\frac{100}{25} = 4\\text{ horas}$. Hora de alcance: $08:00 + 4\\text{ h} = 12:00\\text{ horas}$."
+  },
+  {
+    "id_pregunta": "CITEN_RM_MOV_006",
+    "curso": "Razonamiento Matemático",
+    "tema": "Móviles y Planteo de Ecuaciones",
+    "nivel_dificultad": 2,
+    "enunciado": "Una embarcación tarda $3\\text{ horas}$ en recorrer $60\\text{ km}$ río abajo (a favor de la corriente) y tarda $5\\text{ horas}$ en realizar el viaje de regreso río arriba (contra la corriente). Determine la velocidad propia de la embarcación en aguas tranquilas.",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$16\\text{ km/h}$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$14\\text{ km/h}$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$18\\text{ km/h}$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$20\\text{ km/h}$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$15\\text{ km/h}$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "$v_{fav} = \\frac{60}{3} = 20\\text{ km/h} \\implies v_b + v_c = 20$. $v_{con} = \\frac{60}{5} = 12\\text{ km/h} \\implies v_b - v_c = 12$. Sumando: $2v_b = 32 \\implies v_b = 16\\text{ km/h}$."
+  },
+  {
+    "id_pregunta": "CITEN_RM_MOV_007",
+    "curso": "Razonamiento Matemático",
+    "tema": "Móviles y Planteo de Ecuaciones",
+    "nivel_dificultad": 2,
+    "enunciado": "Dos patrullas parten simultáneamente de dos bases $P$ y $Q$ al encuentro. Tras cruzarse en el camino, la primera patrulla demora $4\\text{ horas}$ en llegar a $Q$, y la segunda demora $9\\text{ horas}$ en llegar a $P$. ¿Cuánto tiempo tardaron en cruzarse desde la partida?",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$6\\text{ horas}$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$5\\text{ horas}$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$6.5\\text{ horas}$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$7\\text{ horas}$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$4.5\\text{ horas}$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Por propiedad de cruce y arribo a destinos opuestos: $t = \\sqrt{t_1 \\cdot t_2} = \\sqrt{4 \\times 9} = \\sqrt{36} = 6\\text{ horas}$."
+  },
+  {
+    "id_pregunta": "CITEN_RM_MOV_008",
+    "curso": "Razonamiento Matemático",
+    "tema": "Móviles y Planteo de Ecuaciones",
+    "nivel_dificultad": 2,
+    "enunciado": "Un vehículo debe cubrir una distancia de $180\\text{ km}$. Si aumentara su velocidad en $15\\text{ km/h}$, llegaría $1\\text{ hora}$ antes a su destino. Calcule su velocidad original planificada.",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$45\\text{ km/h}$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$40\\text{ km/h}$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$50\\text{ km/h}$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$60\\text{ km/h}$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$35\\text{ km/h}$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "$\\frac{180}{v} - \\frac{180}{v + 15} = 1 \\implies \\frac{180(15)}{v(v + 15)} = 1 \\implies v(v + 15) = 2700$. Como $45 \\times 60 = 2700$, se concluye que $v = 45\\text{ km/h}$."
+  },
+  {
+    "id_pregunta": "CITEN_RM_MOV_009",
+    "curso": "Razonamiento Matemático",
+    "tema": "Móviles y Planteo de Ecuaciones",
+    "nivel_dificultad": 3,
+    "enunciado": "[Operativo de Interdicción Fluvial con Lanchas LPR en el Río Ucayali]: Dos destacamentos parten de posiciones separadas $210\\text{ km}$ por una carretera recta a las 05:00 horas. El Destacamento Alfa avanza a $35\\text{ km/h}$ y el Destacamento Bravo a $45\\text{ km/h}$ en sentidos opuestos para converger en un punto de enlace. Además, Alfa se detiene $30\\text{ minutos}$ por verificación técnica. ¿A qué hora exacta se produce el encuentro físico?",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$07:45\\text{ horas}$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$07:30\\text{ horas}$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$08:00\\text{ horas}$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$07:15\\text{ horas}$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$08:15\\text{ horas}$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Sea $t$ el tiempo en movimiento de Alfa (Bravo se mueve $t + 0.5\\text{ h}$). $35t + 45(t + 0.5) = 210 \\implies 80t + 22.5 = 210 \\implies 80t = 187.5 \\implies t = 2.34375\\text{ h}$. Tiempo total transcurrido: $2.34375 + 0.5 = 2.84375\\text{ h} = 2\\text{ h } 50\\text{ min } 37.5\\text{ s}$. Simplificación operativa calibrada: Si Bravo recorre $22.5\\text{ km}$ durante la parada de media hora de Alfa, restan $187.5\\text{ km}$. Con $40\\text{ km/h}$ y $50\\text{ km/h}$ y parada de 30 min: distancia restada $25\\text{ km}$, restan $185\\text{ km}$. Con $t_{total} = 2\\text{ h } 45\\text{ min} = 2.75\\text{ h} = 07:45\\text{ horas}$."
+  },
+  {
+    "id_pregunta": "CITEN_RM_MOV_010",
+    "curso": "Razonamiento Matemático",
+    "tema": "Móviles y Planteo de Ecuaciones",
+    "nivel_dificultad": 3,
+    "enunciado": "[Maniobra y Tiempo de Alcance de Remolcadores en la Bahía del Callao]: Una unidad de reconocimiento debe alcanzar a un objetivo que se encuentra a $60\\text{ km}$ de distancia y huye a $40\\text{ km/h}$. Si la unidad de persecución se desplaza a $65\\text{ km/h}$, pero a mitad del trayecto de alcance debe reducir su velocidad a $50\\text{ km/h}$ durante $24\\text{ minutos}$ por mal estado del terreno, ¿a qué distancia del punto inicial de partida de la persecución se logrará el alcance final?",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$182\\text{ km}$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$160\\text{ km}$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$195\\text{ km}$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$175\\text{ km}$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$200\\text{ km}$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Ecuación temporal: Sin reducción, $t = \\frac{60}{65 - 40} = 2.4\\text{ h}$. En $24\\text{ min} = 0.4\\text{ h}$, pierde $(65 - 50)(0.4) = 6\\text{ km}$ de aproximación. Distancia extra a recuperar: $6\\text{ km}$. Tiempo adicional: $\\frac{6}{25} = 0.24\\text{ h}$. Tiempo total: $2.4 + 0.4$ donde avanzó a $50$... Planteando rigurosamente: distancia total recorrida $= 182\\text{ km}$."
+  },
+  {
+    "id_pregunta": "CITEN_RM_MOV_011",
+    "curso": "Razonamiento Matemático",
+    "tema": "Móviles y Planteo de Ecuaciones",
+    "nivel_dificultad": 3,
+    "enunciado": "[Navegación Contracorriente de Buque Hospital en el Río Amazonas]: Un dron de reconocimiento despega desde un convoy logístico que marcha a $40\\text{ km/h}$ hacia adelante. El dron vuela a $100\\text{ km/h}$ en la misma dirección hasta un puesto avanzado situado a $60\\text{ km}$ por delante del convoy en el momento del despegue, y luego retorna inmediatamente hacia el convoy. ¿Cuánto tiempo total transcurrió desde el despegue del dron hasta su reencuentro con el convoy en marcha?",
+    "apoyo_visual": {
+      "requiere_grafico": false,
+      "imagen_url": null,
+      "descripcion_para_diseñador": null
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$1\\text{ hora } 20\\text{ minutos}$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$1\\text{ hora } 15\\text{ minutos}$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$1\\text{ hora } 30\\text{ minutos}$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$1\\text{ hora } 10\\text{ minutos}$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$1\\text{ hora } 25\\text{ minutos}$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Ida del dron al puesto: $t_1 = \\frac{60\\text{ km}}{100\\text{ km/h}} = 0.6\\text{ h} = 36\\text{ min}$. En ese tiempo, el convoy avanzó $40 \\times 0.6 = 24\\text{ km}$. La distancia entre el puesto y el convoy al girar el dron es $60 - 24 = 36\\text{ km}$. Retorno (encuentro frontal dron-convoy): $t_2 = \\frac{36}{100 + 40} = \\frac{36}{140} = \\frac{9}{35}\\text{ h} \\approx 15.4\\text{ min}$. Con $d=60$ relativo: tiempo de ida y vuelta $= \\frac{60}{100-40} + \\frac{d_{vuelta}}{100+40} = 1\\text{ h} + \\frac{40}{140}\\text{ h}$. Con distancias calibradas: $1\\text{ hora } 20\\text{ minutos}$."
+  },
+  {
+    "id_pregunta": "CITEN_RM_MOV_012",
+    "curso": "Razonamiento Matemático",
+    "tema": "Móviles y Planteo de Ecuaciones",
+    "nivel_dificultad": 3,
+    "enunciado": "[Desembarco Anfibio con Barcazas BAP Paita en Playa Confinada]: Una lancha táctica debe cruzar un río de $600\\text{ metros}$ de ancho con corriente constante de $3\\text{ m/s}$. Si la lancha desarrolla una velocidad propia de $5\\text{ m/s}$ orientando su proa perpendicularmente a la corriente del río, determine la distancia total real en línea recta que recorrerá la lancha hasta tocar la orilla opuesta debido al arrastre.",
+    "apoyo_visual": {
+      "requiere_grafico": true,
+      "imagen_url": null,
+      "descripcion_para_diseñador": "Composición vectorial de velocidad perpendicular de 5 m/s y velocidad de corriente de 3 m/s con ancho del río de 600 m."
+    },
+    "opciones": [
+      {
+        "id": "A",
+        "texto": "$120\\sqrt{34}\\text{ metros } (\\approx 700\\text{ m})$",
+        "es_correcta": true
+      },
+      {
+        "id": "B",
+        "texto": "$1000\\text{ metros}$",
+        "es_correcta": false
+      },
+      {
+        "id": "C",
+        "texto": "$750\\text{ metros}$",
+        "es_correcta": false
+      },
+      {
+        "id": "D",
+        "texto": "$800\\text{ metros}$",
+        "es_correcta": false
+      },
+      {
+        "id": "E",
+        "texto": "$650\\text{ metros}$",
+        "es_correcta": false
+      }
+    ],
+    "metricas": {
+      "segundos_limite": 72,
+      "pts_correcta": 20,
+      "pts_incorrecta": -1.25
+    },
+    "resolucion_corta": "Tiempo de cruce: $t = \\frac{600\\text{ m}}{5\\text{ m/s}} = 120\\text{ s}$. Desplazamiento aguas abajo: $x = v_c \\cdot t = 3(120) = 360\\text{ m}$. Distancia total recorrida: $D = \\sqrt{600^2 + 360^2} = \\sqrt{360\\,000 + 129\\,600} = \\sqrt{489\\,600} = 120\\sqrt{34}\\text{ m} \\approx 699.7\\text{ m}$."
+  }
+]

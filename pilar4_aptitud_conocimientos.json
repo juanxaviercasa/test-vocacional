@@ -1,0 +1,5486 @@
+{
+  "banco_preguntas_conocimientos": [
+    {
+      "id_pregunta": "PSI_01",
+      "area_academica": "Psicotécnico",
+      "tema_especifico": "Razonamiento Espacial",
+      "enunciado": "Al armar un cubo a partir de su desarrollo plano en cruz donde la cara central tiene un círculo negro, la cara superior un triángulo, la inferior un cuadrado y las laterales son blancas, ¿qué relación geométrica guardan el triángulo y el cuadrado en el cubo ensamblado?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Son caras opuestas paralelas entre sí.",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Son caras adyacentes perpendiculares.",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Comparten una arista diagonal.",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Coinciden en el mismo vértice frontal.",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP",
+        "EO-PNP"
+      ]
+    },
+    {
+      "id_pregunta": "PSI_02",
+      "area_academica": "Psicotécnico",
+      "tema_especifico": "Razonamiento Espacial",
+      "enunciado": "Se tiene un bloque cúbico sólido pintado de azul en todas sus caras exteriores. Si se realizan dos cortes horizontales, dos verticales longitudinales y dos verticales transversales dividiéndolo en 27 cubitos idénticos, ¿cuántos cubitos tendrán exactamente dos caras pintadas?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "8 cubitos",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "12 cubitos",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "6 cubitos",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "1 cubito",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 4,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP",
+        "CITEN"
+      ]
+    },
+    {
+      "id_pregunta": "PSI_03",
+      "area_academica": "Psicotécnico",
+      "tema_especifico": "Razonamiento Espacial",
+      "enunciado": "Si observas una figura piramidal de base cuadrangular desde la vista superior (vista de planta), ¿qué figura bidimensional se percibe proyectada en el plano?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Un cuadrado con dos diagonales que se intersecan en el centro.",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Un triángulo equilátero con una altura perpendicular.",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Un trapecio isósceles con líneas punteadas.",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Cuatro cuadrados adyacentes concéntricos.",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "PSI_04",
+      "area_academica": "Psicotécnico",
+      "tema_especifico": "Razonamiento Espacial",
+      "enunciado": "Una figura tridimensional en forma de 'L' compuesta por 4 cubos adosados gira 90° en sentido horario sobre el eje vertical 'Y' y luego 180° sobre el eje horizontal 'X'. ¿Cuál es su orientación resultante respecto a su posición original?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Invertida verticalmente con la base extendida hacia el cuadrante opuesto.",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Idéntica a la posición inicial sin variación angular.",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Reflejada en espejo lateral sin inversión de altura.",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Rotada 270° en el plano frontal bidimensional.",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 4,
+      "escuelas_relacionadas": [
+        "ENP",
+        "EOFAP",
+        "EMCH",
+        "EO-PNP"
+      ]
+    },
+    {
+      "id_pregunta": "PSI_05",
+      "area_academica": "Psicotécnico",
+      "tema_especifico": "Razonamiento Espacial",
+      "enunciado": "¿Cuántos cubos de 1 cm de arista faltan para completar un cubo compacto de 4 cm de arista si actualmente se dispone de una estructura escalonada de 28 cubitos?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "36 cubos",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "32 cubos",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "40 cubos",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "26 cubos",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "CITEN",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "PSI_06",
+      "area_academica": "Psicotécnico",
+      "tema_especifico": "Razonamiento Espacial",
+      "enunciado": "Al realizar un corte transversal oblicuo a un cilindro circular recto sin tocar las bases, ¿qué sección cónica plana se obtiene en la superficie de corte?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Una elipse perfecta.",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Una circunferencia de radio menor.",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Una parábola abierta.",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Un rectángulo simétrico.",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "ENP",
+        "EOFAP",
+        "EMCH"
+      ]
+    },
+    {
+      "id_pregunta": "PSI_07",
+      "area_academica": "Psicotécnico",
+      "tema_especifico": "Razonamiento Espacial",
+      "enunciado": "Un cilindro recto de madera con un orificio prismático triangular que lo atraviesa de base a base se mira desde su perfil lateral (vista de perfil). ¿Cómo se representan las aristas interiores del orificio no visibles?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Líneas segmentadas o de trazos discontinuos paralelas al eje del cilindro.",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Líneas continuas gruesas remarcadas en el centro.",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Líneas en espiral concéntrica decreciente.",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "No se representan en los planos de proyección normalizada.",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "ENP",
+        "CITEN",
+        "ETE",
+        "ESOFA"
+      ]
+    },
+    {
+      "id_pregunta": "PSI_08",
+      "area_academica": "Psicotécnico",
+      "tema_especifico": "Razonamiento Espacial",
+      "enunciado": "Se despliega un tetraedro regular en cuatro triángulos equiláteros unidos por sus lados formando un triángulo equilátero mayor. ¿Qué ocurre si se dobla cada triángulo exterior sobre las aristas interiores?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Los tres vértices exteriores convergen exactamente en una sola cúspide tridimensional.",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Las caras se superponen formando una figura plana de doble capa.",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Se obtiene una pirámide de base cuadrada abierta.",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Quedan dos aristas abiertas en ángulo de 45°.",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EOFAP",
+        "ENP",
+        "EMCH"
+      ]
+    },
+    {
+      "id_pregunta": "PSI_09",
+      "area_academica": "Psicotécnico",
+      "tema_especifico": "Razonamiento Espacial",
+      "enunciado": "Al proyectar ortogonalmente un segmento de recta de 10 cm inclinado a 60° respecto al plano horizontal, ¿cuál es la longitud de su sombra o traza proyectada?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "5 cm (aplicando coseno de 60°).",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "8.66 cm (aplicando seno de 60°).",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "10 cm sin variación longitudinal.",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "7.07 cm en ángulo recto.",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 4,
+      "escuelas_relacionadas": [
+        "ENP",
+        "EOFAP",
+        "EMCH"
+      ]
+    },
+    {
+      "id_pregunta": "PSI_10",
+      "area_academica": "Psicotécnico",
+      "tema_especifico": "Razonamiento Espacial",
+      "enunciado": "Una esfera perfecta de radio R es intersecada por un plano cuya distancia al centro de la esfera es de R/2. ¿Qué figura geométrica constituye el contorno de la intersección?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Una circunferencia de radio (R*sqrt(3))/2.",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Un círculo de radio R/2.",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Una elipse de eje mayor 2R.",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Un punto tangencial único.",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 4,
+      "escuelas_relacionadas": [
+        "ENP",
+        "EOFAP",
+        "EMCH"
+      ]
+    },
+    {
+      "id_pregunta": "PSI_11",
+      "area_academica": "Psicotécnico",
+      "tema_especifico": "Series Lógicas y Matrices",
+      "enunciado": "En la sucesión alfanumérica: A, 2, C, 5, F, 10, J, 17, ... ¿qué par término continúa la serie?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Ñ, 26",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "M, 24",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "N, 25",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "O, 27",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "PSI_12",
+      "area_academica": "Psicotécnico",
+      "tema_especifico": "Series Lógicas y Matrices",
+      "enunciado": "En una matriz gráfica de 3x3, en la primera fila un cuadrado rota 45° y suma un punto negro en su interior; en la segunda fila un triángulo rota 90° y suma dos puntos. Si en la tercera fila un pentágono rota 135° en sentido horario, ¿qué debe contener en su interior según la ley de formación?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Tres puntos negros ordenados triangularmente.",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Un punto blanco y dos rayas paralelas.",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Cuatro círculos concéntricos sombreados.",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Un rombo inscrito sin puntos interiores.",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP",
+        "EO-PNP"
+      ]
+    },
+    {
+      "id_pregunta": "PSI_13",
+      "area_academica": "Psicotécnico",
+      "tema_especifico": "Series Lógicas y Matrices",
+      "enunciado": "¿Qué número continúa coherentemente la sucesión: 3, 4, 9, 28, 113, ...?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "566",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "452",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "525",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "620",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 4,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP",
+        "CITEN",
+        "EO-PNP"
+      ]
+    },
+    {
+      "id_pregunta": "PSI_14",
+      "area_academica": "Psicotécnico",
+      "tema_especifico": "Series Lógicas y Matrices",
+      "enunciado": "Dada la ficha de dominó doble horizontal: [1|2], [2|4], [3|6], [4|1]... ¿Qué ficha de dominó continúa en la rueda cíclica de puntos (0 a 6)?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "[5|3]",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "[5|2]",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "[6|4]",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "[0|5]",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "CITEN",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "PSI_15",
+      "area_academica": "Psicotécnico",
+      "tema_especifico": "Series Lógicas y Matrices",
+      "enunciado": "Se define la operación en una estrella de 5 puntas donde el número del centro es la suma de los productos cruzados de las puntas opuestas. Si las puntas son (2, 4, 3, 5, 1), el número central correspondiente es:",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "38",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "32",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "45",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "29",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "PSI_16",
+      "area_academica": "Psicotécnico",
+      "tema_especifico": "Series Lógicas y Matrices",
+      "enunciado": "En la siguiente analogía de figuras: 'Círculo es a Esfera como Cuadrado es a Cubo'; entonces 'Triángulo equilátero es a...'",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Tetraedro regular.",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Pirámide octogonal.",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Prisma pentagonal.",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Cilindro oblicuo.",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "PSI_17",
+      "area_academica": "Psicotécnico",
+      "tema_especifico": "Series Lógicas y Matrices",
+      "enunciado": "¿Cuál es el valor que falta en la serie alterna: 2, 7, 4, 14, 8, 28, 16, ...?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "56",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "32",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "64",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "48",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "PSI_18",
+      "area_academica": "Psicotécnico",
+      "tema_especifico": "Series Lógicas y Matrices",
+      "enunciado": "Cinco soldados A, B, C, D y E hacen guardia en línea. B está a la derecha de C. A está entre D y C. D está en el extremo izquierdo. ¿Quién se encuentra en el centro de la formación?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "A",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "C",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "B",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "E",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "PSI_19",
+      "area_academica": "Psicotécnico",
+      "tema_especifico": "Series Lógicas y Matrices",
+      "enunciado": "Se sabe que todos los oficiales de artillería son expertos en balística y ningún experto en balística es descuidado con las tablas de tiro. Por lo tanto, se concluye necesariamente que:",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Ningún oficial de artillería es descuidado con las tablas de tiro.",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Todos los descuidados son oficiales de artillería.",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Algunos oficiales de artillería son descuidados.",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Todo experto en balística es oficial de artillería.",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP",
+        "EO-PNP"
+      ]
+    },
+    {
+      "id_pregunta": "PSI_20",
+      "area_academica": "Psicotécnico",
+      "tema_especifico": "Series Lógicas y Matrices",
+      "enunciado": "Si el ayer del anteayer del mañana del pasado mañana fue lunes, ¿qué día de la semana será el pasado mañana del ayer de hoy?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Martes",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Lunes",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Miércoles",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Jueves",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "PSI_21",
+      "area_academica": "Psicotécnico",
+      "tema_especifico": "Razonamiento Matemático",
+      "enunciado": "Un reloj se adelanta 3 minutos cada 4 horas. Si se sincroniza a la hora exacta a las 8:00 a.m. del lunes, ¿qué hora marcará cuando en realidad sean las 8:00 p.m. del miércoles de esa misma semana?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "8:45 p.m.",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "8:30 p.m.",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "9:00 p.m.",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "8:15 p.m.",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 4,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "PSI_22",
+      "area_academica": "Psicotécnico",
+      "tema_especifico": "Razonamiento Matemático",
+      "enunciado": "Un teniente distribuye cartuchos entre sus soldados: si entrega 8 a cada uno le sobran 14, pero si desea entregar 11 a cada uno le faltan 16 cartuchos. ¿Cuántos soldados integran la patrulla?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "10 soldados",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "8 soldados",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "12 soldados",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "15 soldados",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "PSI_23",
+      "area_academica": "Psicotécnico",
+      "tema_especifico": "Razonamiento Matemático",
+      "enunciado": "En un depósito de intendencia hay 40 barriles de combustible: unos de 50 litros y otros de 20 litros. Si en total se almacenan 1,400 litros, ¿cuántos barriles son de 50 litros?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "20 barriles",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "15 barriles",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "25 barriles",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "18 barriles",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "PSI_24",
+      "area_academica": "Psicotécnico",
+      "tema_especifico": "Razonamiento Matemático",
+      "enunciado": "La edad de un cadete es tal que al multiplicarla por 4, restarle 12, extraerle la raíz cuadrada al resultado, sumarle 6 y finalmente dividirlo entre 2, se obtiene 5. ¿Cuál es la edad del cadete?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "7 años... corrección: 7 no, 7*4=28-12=16, sqrt=4+6=10/2=5 -> 7 años.",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "9 años.",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "8 años.",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "10 años.",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "CITEN",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "PSI_25",
+      "area_academica": "Psicotécnico",
+      "tema_especifico": "Razonamiento Matemático",
+      "enunciado": "En una caja de pertrechos hay 15 granadas de humo, 12 granadas ofensivas y 18 granadas de gas lacrimógeno. ¿Cuántas se deben extraer al azar como mínimo para tener la certeza de poseer 5 de cada tipo?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "38 extracciones",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "35 extracciones",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "40 extracciones",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "30 extracciones",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 4,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP",
+        "EO-PNP"
+      ]
+    },
+    {
+      "id_pregunta": "PSI_26",
+      "area_academica": "Psicotécnico",
+      "tema_especifico": "Razonamiento Matemático",
+      "enunciado": "Dos patrullas parten simultáneamente de dos puntos A y B distantes 180 km y se dirigen al encuentro por carretera con rapideces de 40 km/h y 50 km/h. Un dron militar vuela entre ellas de un punto al otro a 120 km/h sin detenerse hasta que las patrullas se cruzan. ¿Qué distancia total recorrió el dron?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "240 km",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "180 km",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "300 km",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "200 km",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 4,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP",
+        "EO-PNP"
+      ]
+    },
+    {
+      "id_pregunta": "PSI_27",
+      "area_academica": "Psicotécnico",
+      "tema_especifico": "Razonamiento Matemático",
+      "enunciado": "Si 15 soldados cavan una trinchera de 60 metros en 4 horas, ¿cuántos soldados adicionales con el mismo rendimiento se requerirán para cavar una trinchera de 100 metros en 5 horas?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "5 soldados adicionales (total 20)",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "8 soldados adicionales",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "10 soldados adicionales",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "4 soldados adicionales",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "PSI_28",
+      "area_academica": "Psicotécnico",
+      "tema_especifico": "Razonamiento Matemático",
+      "enunciado": "Un recipiente de 60 litros está lleno de alcohol de 80°. ¿Cuántos litros de agua pura se deben agregar para rebajar la concentración a 60°?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "20 litros",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "15 litros",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "25 litros",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "30 litros",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 4,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP",
+        "EO-PNP"
+      ]
+    },
+    {
+      "id_pregunta": "PSI_29",
+      "area_academica": "Psicotécnico",
+      "tema_especifico": "Razonamiento Matemático",
+      "enunciado": "Se tienen 3 recipientes con capacidades de 12, 8 y 5 litros. El primero está totalmente lleno de agua y los otros dos vacíos. No poseen marcas de medición. ¿Cuál es el número mínimo de trasvases necesarios para obtener exactamente 6 litros en el primer recipiente?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "7 trasvases",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "5 trasvases",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "9 trasvases",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "6 trasvases",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 5,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP"
+      ]
+    },
+    {
+      "id_pregunta": "PSI_30",
+      "area_academica": "Psicotécnico",
+      "tema_especifico": "Razonamiento Matemático",
+      "enunciado": "¿Cuántas campanadas tocará el reloj de guardia del fuerte militar en un día completo si a cada hora en punto toca tantas campanadas como indica la hora (de 1 a 12) y a cada media hora toca una sola campanada?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "180 campanadas",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "156 campanadas",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "168 campanadas",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "192 campanadas",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "CITEN",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "PSI_31",
+      "area_academica": "Psicotécnico",
+      "tema_especifico": "Razonamiento Verbal",
+      "enunciado": "Identifique la analogía que reproduce con exactitud la relación: TIMÓN : NAVÍO ::",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Palanca de mando : Aeronave",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Rueda : Carretera",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Brújula : Polo",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Mástil : Viento",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "PSI_32",
+      "area_academica": "Psicotécnico",
+      "tema_especifico": "Razonamiento Verbal",
+      "enunciado": "Señale el término excluido del campo semántico de 'ACCIONES DE VIGILANCIA CASTRENSE':",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Claudicación",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Centinela",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Aposta",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Ronda",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "PSI_33",
+      "area_academica": "Psicotécnico",
+      "tema_especifico": "Razonamiento Verbal",
+      "enunciado": "Elija los conectores que completan con coherencia: 'El destacamento resistió el asedio _______ las municiones eran escasas, _______ sabían que la rendición significaba la pérdida del fuerte.'",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "a pesar de que - porque",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "por ende - aunque",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "ya que - sin embargo",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "no obstante - mas",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "PSI_34",
+      "area_academica": "Psicotécnico",
+      "tema_especifico": "Razonamiento Verbal",
+      "enunciado": "Determine el antónimo contextual de la palabra subrayada: 'El general mostró una actitud VENCEJERA e INDOMABLE ante las intimaciones del enemigo.'",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Sumisa y pusilánime",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Altiva y soberbia",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Ecuánime y flemática",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Audaz y temeraria",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 4,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP",
+        "EO-PNP"
+      ]
+    },
+    {
+      "id_pregunta": "PSI_35",
+      "area_academica": "Psicotécnico",
+      "tema_especifico": "Razonamiento Verbal",
+      "enunciado": "Indique el sinónimo léxico de 'CONSPICUO':",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Ilustre y sobresaliente",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Oscuro y recóndito",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Vulnerable y endeble",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Taciturno y sombrío",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "PSI_36",
+      "area_academica": "Psicotécnico",
+      "tema_especifico": "Razonamiento Verbal",
+      "enunciado": "Identifique la oración que debe ser eliminada por redundancia: I) La disciplina militar exige puntualidad absoluta. II) El horario reglamentario debe respetarse rigurosamente. III) Los cadetes reciben formación física y académica. IV) Llegar a la hora indicada es una obligación insoslayable en el cuartel.",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "IV (reitera innecesariamente el concepto de puntualidad)",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "III",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "I",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "II",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "PSI_37",
+      "area_academica": "Psicotécnico",
+      "tema_especifico": "Razonamiento Verbal",
+      "enunciado": "Complete la serie analógica verbal: INFANTERÍA : TIERRA :: FUERZA AÉREA : AIRE ::",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "MARINA DE GUERRA : MAR",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "ARTILLERÍA : CAÑÓN",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "CABALLERÍA : CABALLO",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "INGENIERÍA : PUENTE",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 1,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "PSI_38",
+      "area_academica": "Psicotécnico",
+      "tema_especifico": "Razonamiento Verbal",
+      "enunciado": "¿Cuál es el significado etimológico de la raíz griega 'CRACIA' en palabras como Democracia o Aristocracia?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Gobierno, poder o autoridad.",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Estudio, tratado o ciencia.",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Pueblo, raza o linaje.",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Medida, dimensión o peso.",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "PSI_39",
+      "area_academica": "Psicotécnico",
+      "tema_especifico": "Razonamiento Verbal",
+      "enunciado": "Lea el texto: 'El porte militar no radica en la rigidez vacía del cuerpo, sino en la prestancia moral que emana del respeto por la investidura que representa a la Nación.' Según el autor, el porte militar es primordialmente:",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Una manifestación externa de convicción moral y respeto patriótico.",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Una exigencia puramente gimnástica y muscular.",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Un protocolo reservado únicamente a los oficiales de alto rango.",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Una imposición coercitiva ajena a la voluntad del soldado.",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP",
+        "EO-PNP"
+      ]
+    },
+    {
+      "id_pregunta": "PSI_40",
+      "area_academica": "Psicotécnico",
+      "tema_especifico": "Razonamiento Verbal",
+      "enunciado": "Identifique el ordenamiento lógico del texto 'EL COMBATE DE ANGAMOS': 1. El Huáscar combate en desventaja frente a la escuadra enemiga. 2. Miguel Grau asume el mando en el puerto de Iquique. 3. La marina de Chile cerca al blindado peruano en Punta Angamos. 4. Una bomba en la torre de mando ciega la vida del Almirante. 5. La tripulación intenta hundir la nave antes de caer prisionera.",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "2 - 3 - 1 - 4 - 5",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "3 - 2 - 4 - 1 - 5",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "2 - 1 - 3 - 5 - 4",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "1 - 3 - 4 - 2 - 5",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "MAT_01",
+      "area_academica": "Ciencias Exactas",
+      "tema_especifico": "Aritmética - Conjuntos",
+      "enunciado": "De un grupo de 80 cadetes evaluados en instrucción militar, 48 aprobaron Tiro con Fusil, 36 aprobaron Natación de Combate y 12 no aprobaron ninguna de las dos disciplinas. ¿Cuántos cadetes aprobaron ambas disciplinas militares?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "16 cadetes",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "20 cadetes",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "14 cadetes",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "18 cadetes",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "MAT_02",
+      "area_academica": "Ciencias Exactas",
+      "tema_especifico": "Aritmética - Cuatro Operaciones",
+      "enunciado": "En una armería hay 60 piezas entre fusiles Galil y pistolas Beretta. Si el total de piezas de repuesto requeridas es 210, sabiendo que cada fusil requiere 4 piezas y cada pistola 3 piezas, ¿cuántos fusiles Galil se encuentran en la armería?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "30 fusiles",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "35 fusiles",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "25 fusiles",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "40 fusiles",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "CITEN",
+        "ESOFA",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "MAT_03",
+      "area_academica": "Ciencias Exactas",
+      "tema_especifico": "Aritmética - Divisibilidad y MCM",
+      "enunciado": "Tres patrullas de la Policía de Fronteras parten simultáneamente del Puesto de Vigilancia 'La Tina': la primera retorna cada 12 días, la segunda cada 15 días y la tercera cada 18 días. ¿Después de cuántos días como mínimo volverán a coincidir en el puesto de vigilancia?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "180 días",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "90 días",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "120 días",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "360 días",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "MAT_04",
+      "area_academica": "Ciencias Exactas",
+      "tema_especifico": "Aritmética - Razones y Proporciones",
+      "enunciado": "La razón geométrica entre el número de oficiales y suboficiales en una base aérea es de 3 a 7. Si se incorporan 15 oficiales y se retiran 5 suboficiales, la nueva relación es de 3 a 5. ¿Cuántos efectivos militares había inicialmente en dicha base aérea?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "100 efectivos",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "90 efectivos",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "120 efectivos",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "80 efectivos",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EOFAP",
+        "ESOFA",
+        "EMCH",
+        "CITEN"
+      ]
+    },
+    {
+      "id_pregunta": "MAT_05",
+      "area_academica": "Ciencias Exactas",
+      "tema_especifico": "Aritmética - Regla de Tres Compuesta",
+      "enunciado": "Una patrulla de 20 infantes de marina cuenta con raciones de campaña para 30 días a razón de 3 raciones diarias por efectivo. Si se incorporan 5 infantes más y la ración se reduce a 2 raciones diarias por hombre, ¿para cuántos días alcanzarán los suministros de víveres?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "36 días",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "32 días",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "40 días",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "28 días",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 4,
+      "escuelas_relacionadas": [
+        "ENP",
+        "CITEN",
+        "EMCH",
+        "EOFAP"
+      ]
+    },
+    {
+      "id_pregunta": "MAT_06",
+      "area_academica": "Ciencias Exactas",
+      "tema_especifico": "Aritmética - Tanto por Ciento",
+      "enunciado": "El comandante de una unidad de ingeniería adquiere repuestos para maquinaria pesada por S/. 12,000. Por pago en efectivo el proveedor militar le otorga dos descuentos sucesivos del 10% y 20%. ¿Cuál fue el precio final neto abonado por la unidad militar?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "S/. 8,640",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "S/. 8,400",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "S/. 9,000",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "S/. 7,800",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EO-PNP"
+      ]
+    },
+    {
+      "id_pregunta": "MAT_07",
+      "area_academica": "Ciencias Exactas",
+      "tema_especifico": "Aritmética - Promedios",
+      "enunciado": "En una prueba de tiro de combate de 4 rondas, un cadete obtuvo puntajes de 14, 16 y 18 en las tres primeras series de tiro. ¿Qué nota debe obtener en la cuarta ronda para que su promedio final ponderado sea de 17 puntos?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "20 puntos",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "19 puntos",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "18 puntos",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "17 puntos",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP",
+        "EO-PNP"
+      ]
+    },
+    {
+      "id_pregunta": "MAT_08",
+      "area_academica": "Ciencias Exactas",
+      "tema_especifico": "Aritmética - Fracciones",
+      "enunciado": "El depósito principal de combustible de una corbeta misilera se encuentra lleno hasta sus 3/5 de capacidad. Si se consumen 1,200 galones durante una maniobra táctica en alta mar, el nivel desciende a 1/3 de su capacidad total. ¿Cuál es la capacidad total en galones de dicho tanque?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "4,500 galones",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "3,800 galones",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "5,000 galones",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "4,200 galones",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA"
+      ]
+    },
+    {
+      "id_pregunta": "MAT_09",
+      "area_academica": "Ciencias Exactas",
+      "tema_especifico": "Aritmética - Sistema de Numeración",
+      "enunciado": "Un mensaje táctico codificado en el sistema quinario (base 5) registra la cantidad 432_((5)). Para ser interpretado por la computadora de tiro en el sistema decimal (base 10), ¿qué valor entero representa?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "117",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "112",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "125",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "108",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP",
+        "CITEN"
+      ]
+    },
+    {
+      "id_pregunta": "MAT_10",
+      "area_academica": "Ciencias Exactas",
+      "tema_especifico": "Aritmética - Números Primos y Divisores",
+      "enunciado": "¿Cuántos divisores positivos tiene el número 360, que representa los grados de azimut en una rosa náutica militar?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "24 divisores",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "18 divisores",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "30 divisores",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "20 divisores",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP",
+        "EO-PNP"
+      ]
+    },
+    {
+      "id_pregunta": "MAT_11",
+      "area_academica": "Ciencias Exactas",
+      "tema_especifico": "Álgebra - Leyes de Exponentes",
+      "enunciado": "Simplifique la siguiente expresión algebraica de potencia y radicación militar: $$E = \\frac{2^{n+4} - 2 \\cdot 2^n}{2 \\cdot 2^{n+3}}$$",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "$\\frac{7}{8}$",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "$\\frac{3}{4}$",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "$\\frac{1}{2}$",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "$1$",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP",
+        "CITEN",
+        "ESOFA"
+      ]
+    },
+    {
+      "id_pregunta": "MAT_12",
+      "area_academica": "Ciencias Exactas",
+      "tema_especifico": "Álgebra - Productos Notables",
+      "enunciado": "Si la suma de dos variables tácticas $x + y = 6$ y su producto $x \\cdot y = 7$, halle el valor numérico de la suma de sus cubos: $$E = x^3 + y^3$$",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "$90$",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "$102$",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "$84$",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "$96$",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP",
+        "EO-PNP"
+      ]
+    },
+    {
+      "id_pregunta": "MAT_13",
+      "area_academica": "Ciencias Exactas",
+      "tema_especifico": "Álgebra - Polinomios",
+      "enunciado": "Dado el polinomio $P(x, y) = 3x^{m+1}y^{n-2} + 5x^{m+2}y^n$, si su Grado Relativo respecto a $x$ es $\\operatorname{GR}(x) = 7$ y su Grado Absoluto $\\operatorname{GA} = 12$, halle el valor de $(m \\cdot n)$.",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "$25$",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "$20$",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "$30$",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "$15$",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP"
+      ]
+    },
+    {
+      "id_pregunta": "MAT_14",
+      "area_academica": "Ciencias Exactas",
+      "tema_especifico": "Álgebra - División Algebraica",
+      "enunciado": "Al dividir el polinomio dividendo $D(x) = 2x^4 + 3x^3 - x^2 + 5x - 2$ entre $d(x) = x^2 + x - 1$ aplicando el método de William G. Horner, ¿cuál es el resto o residuo $R(x)$ obtenido?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "$3x + 1$",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "$2x - 1$",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "$5x - 3$",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "$-x + 4$",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EO-PNP"
+      ]
+    },
+    {
+      "id_pregunta": "MAT_15",
+      "area_academica": "Ciencias Exactas",
+      "tema_especifico": "Álgebra - Factorización",
+      "enunciado": "Al factorizar por aspa simple el trinomio cuadrático $P(x) = 6x^2 - 11x - 10$, ¿cuál de los siguientes binomios representa uno de sus factores primos tácticos?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "$2x - 5$",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "$3x + 5$",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "$6x - 1$",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "$x + 2$",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP",
+        "EO-PNP"
+      ]
+    },
+    {
+      "id_pregunta": "MAT_16",
+      "area_academica": "Ciencias Exactas",
+      "tema_especifico": "Álgebra - Ecuaciones de Segundo Grado",
+      "enunciado": "Si $r_1$ y $r_2$ son las raíces de la ecuación cuadrática $2x^2 - 7x + 3 = 0$, calcule el valor de la expresión: $$E = \\frac{1}{r_1} + \\frac{1}{r_2}$$",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "$\\frac{7}{3}$",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "$\\frac{3}{7}$",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "$\\frac{7}{2}$",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "$\\frac{2}{3}$",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP",
+        "EO-PNP"
+      ]
+    },
+    {
+      "id_pregunta": "MAT_17",
+      "area_academica": "Ciencias Exactas",
+      "tema_especifico": "Álgebra - Sistemas de Ecuaciones Lineales",
+      "enunciado": "Resuelva el siguiente sistema lineal táctico de aprovisionamiento militar: $$\\begin{cases} 2x + 3y = 29 \\\\ 5x - 2y = 6 \\end{cases}$$ Halle el valor numérico de la suma $(x + y)$.",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "$11$",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "$9$",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "$13$",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "$10$",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "MAT_18",
+      "area_academica": "Ciencias Exactas",
+      "tema_especifico": "Álgebra - Inecuaciones de Segundo Grado",
+      "enunciado": "Determine el conjunto solución de la inecuación cuadrática que modela el rango balístico de seguridad: $$x^2 - 5x - 14 \\le 0$$",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "$[-2, 7]$",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "$\\langle -2, 7 \\rangle$",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "$\\langle -\\infty, -2] \\cup [7, +\\infty\\rangle$",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "$[-7, 2]$",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP",
+        "EO-PNP"
+      ]
+    },
+    {
+      "id_pregunta": "MAT_19",
+      "area_academica": "Ciencias Exactas",
+      "tema_especifico": "Álgebra - Funciones",
+      "enunciado": "La trayectoria parabólica de un proyectil de mortero viene dada por la función de altura h(t) = -5t^2 + 40t, donde h se mide en metros y t en segundos. ¿Cuál es la altura máxima alcanzada por el proyectil?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "80 metros",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "100 metros",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "60 metros",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "75 metros",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP",
+        "CITEN"
+      ]
+    },
+    {
+      "id_pregunta": "MAT_20",
+      "area_academica": "Ciencias Exactas",
+      "tema_especifico": "Álgebra - Logaritmos",
+      "enunciado": "Calcule el valor de $x$ en la siguiente ecuación logarítmica de frecuencia de radar: $$\\log_2(x + 3) + \\log_2(x - 3) = 4$$",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "$5$",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "$-5$",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "$\\pm 5$",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "$7$",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 4,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP"
+      ]
+    },
+    {
+      "id_pregunta": "MAT_21",
+      "area_academica": "Ciencias Exactas",
+      "tema_especifico": "Geometría - Ángulos entre Paralelas",
+      "enunciado": "Dos avenidas paralelas L_1 y L_2 son atravesadas por una vía transversal secante L_3. Si dos ángulos conjugados internos miden (3x + 10°) y (2x + 20°), ¿cuál es el valor del ángulo agudo formado?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "80°",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "70°",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "100°",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "30°",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "MAT_22",
+      "area_academica": "Ciencias Exactas",
+      "tema_especifico": "Geometría - Triángulos y Líneas Notables",
+      "enunciado": "En un triángulo acutángulo ABC de patrullaje táctico, el ángulo exterior en el vértice B mide 130°. Si los ángulos interiores en A y C están en la relación de 2 a 3, ¿cuánto mide el menor ángulo interior de dicho triángulo?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "50°",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "52°",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "48°",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "78°",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP",
+        "EO-PNP"
+      ]
+    },
+    {
+      "id_pregunta": "MAT_23",
+      "area_academica": "Ciencias Exactas",
+      "tema_especifico": "Geometría - Triángulos Notables y Pitágoras",
+      "enunciado": "Desde la cúspide de una torre de control militar de 45 metros de altura se observa un vehículo blindado bajo un ángulo visual que forma con el suelo un triángulo rectángulo de 37° y 53°. Si la distancia de la torre al objetivo es el cateto adyacente al ángulo de 37°, ¿a qué distancia de la base de la torre se ubica el vehículo?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "60 metros",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "55 metros",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "75 metros",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "45 metros",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP"
+      ]
+    },
+    {
+      "id_pregunta": "MAT_24",
+      "area_academica": "Ciencias Exactas",
+      "tema_especifico": "Geometría - Congruencia y Semejanza",
+      "enunciado": "Un mástil de comunicaciones militares de 8 m de altura proyecta sobre el terreno una sombra de 6 m. A esa misma hora y lugar, un edificio del cuartel general proyecta una sombra de 24 m. ¿Cuál es la altura del edificio militar?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "32 metros",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "30 metros",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "28 metros",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "36 metros",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "MAT_25",
+      "area_academica": "Ciencias Exactas",
+      "tema_especifico": "Geometría - Cuadriláteros",
+      "enunciado": "En un trapecio isósceles que delimita un perímetro de seguridad, la base mayor mide 28 m, la base menor mide 12 m y los lados no paralelos miden 10 m cada uno. Calcule el área del terreno encerrado por dicho trapecio.",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "120 m²",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "160 m²",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "140 m²",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "180 m²",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP",
+        "EO-PNP"
+      ]
+    },
+    {
+      "id_pregunta": "MAT_26",
+      "area_academica": "Ciencias Exactas",
+      "tema_especifico": "Geometría - Circunferencia",
+      "enunciado": "Desde un punto exterior P situado a 13 cm del centro de una antena de radar circular de radio r = 5 cm, se traza una línea tangente que hace contacto con la circunferencia en el punto T. ¿Cuál es la longitud del segmento tangente PT?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "12 cm",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "10 cm",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "11 cm",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "14 cm",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP",
+        "CITEN"
+      ]
+    },
+    {
+      "id_pregunta": "MAT_27",
+      "area_academica": "Ciencias Exactas",
+      "tema_especifico": "Geometría - Relaciones Métricas",
+      "enunciado": "En la figura geométrica adjunta, en el triángulo rectángulo $ABC$ recto en $B$, se traza la altura relativa a la hipotenusa $BH = h$. Si la hipotenusa mide $b = AC = 25\\text{ cm}$ y la altura $h = 12\\text{ cm}$, halle la longitud del cateto menor $c = AB$:",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "$15\\text{ cm}$",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "$20\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "$16\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "$18\\text{ cm}$",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP"
+      ],
+      "imagen_url": "/assets/math/geo_01.svg",
+      "imagen_alt": "Relaciones métricas en el triángulo rectángulo ABC recto en B"
+    },
+    {
+      "id_pregunta": "MAT_28",
+      "area_academica": "Ciencias Exactas",
+      "tema_especifico": "Geometría - Áreas de Regiones Poligonales",
+      "enunciado": "Un helipuerto militar tiene forma de círculo inscrito exactamente dentro de un terreno cuadrado de 20 metros de lado. Calcule el área de la superficie de aterrizaje circular (considere pi = 3.14).",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "314 m²",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "400 m²",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "157 m²",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "628 m²",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "MAT_29",
+      "area_academica": "Ciencias Exactas",
+      "tema_especifico": "Geometría del Espacio - Cilindro y Prisma",
+      "enunciado": "Un tanque cisterna para agua potable en campaña tiene forma cilíndrica circular recta de radio basal r = 2 m y altura h = 5 m. ¿Cuál es el volumen total de agua en metros cúbicos que puede almacenar a capacidad plena? (considere pi).",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "20*pi m³",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "10*pi m³",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "40*pi m³",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "25*pi m³",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP",
+        "CITEN"
+      ]
+    },
+    {
+      "id_pregunta": "MAT_30",
+      "area_academica": "Ciencias Exactas",
+      "tema_especifico": "Geometría Analítica Plana",
+      "enunciado": "En una cuadrícula cartográfica militar, la base Alfa está ubicada en las coordenadas A(2, 3) y el puesto avanzado Bravo en B(8, 11). Calcule la distancia en línea recta entre ambos emplazamientos tácticos.",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "10 unidades",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "12 unidades",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "14 unidades",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "8 unidades",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP",
+        "EO-PNP",
+        "CITEN"
+      ]
+    },
+    {
+      "id_pregunta": "MAT_31",
+      "area_academica": "Ciencias Exactas",
+      "tema_especifico": "Trigonometría - Sistemas de Medición Angular",
+      "enunciado": "En un goniómetro de artillería, se detecta un objetivo a un ángulo de 72 grados sexagesimales. ¿A cuántos radianes equivale dicho ángulo de tiro en el sistema radial?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "2*pi / 5 rad",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "3*pi / 5 rad",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "pi / 3 rad",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "4*pi / 5 rad",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "MAT_32",
+      "area_academica": "Ciencias Exactas",
+      "tema_especifico": "Trigonometría - Razones de Ángulos Agudos",
+      "enunciado": "En un triángulo rectángulo ABC recto en B, se conoce que tg(A) = 5/12. Halle el valor de la función trigonométrica cos(A).",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "12/13",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "5/13",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "13/12",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "12/5",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP",
+        "EO-PNP"
+      ]
+    },
+    {
+      "id_pregunta": "MAT_33",
+      "area_academica": "Ciencias Exactas",
+      "tema_especifico": "Trigonometría - Ángulos Notables",
+      "enunciado": "Calcule el valor numérico exacto de la expresión balística: E = sen(30°) + cos(60°) + tg(45°).",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "2",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "1.5",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "2.5",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "1",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 1,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "MAT_34",
+      "area_academica": "Ciencias Exactas",
+      "tema_especifico": "Trigonometría - Ángulos de Elevación y Depresión",
+      "enunciado": "Desde la proa de una fragata patrullera se divisa la cima de un faro costero con un ángulo de elevación de 30°. Si la distancia horizontal desde la nave hasta la base del faro es de 120 metros, ¿cuál es la altura del faro sobre el nivel del mar? (considere tg(30°) = sqrt(3)/3).",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "40 * sqrt(3) metros",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "60 * sqrt(3) metros",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "30 * sqrt(3) metros",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "80 metros",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "ENP",
+        "CITEN",
+        "EMCH",
+        "EOFAP"
+      ]
+    },
+    {
+      "id_pregunta": "MAT_35",
+      "area_academica": "Ciencias Exactas",
+      "tema_especifico": "Trigonometría - Ángulos en Posición Normal",
+      "enunciado": "En la circunferencia trigonométrica ilustrada en el gráfico vectorial, si el punto $P(-3, 4)$ pertenece al lado final de un ángulo $\\theta$ en posición normal, determine el valor de la expresión: $$E = 5\\operatorname{sen}(\\theta) + 4\\cos(\\theta)$$",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "$\\frac{8}{5}$",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "$\\frac{16}{5}$",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "$\\frac{4}{5}$",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "$2$",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP",
+        "EO-PNP"
+      ],
+      "imagen_url": "/assets/math/trig_01.svg",
+      "imagen_alt": "Circunferencia trigonométrica y ángulo θ en posición normal"
+    },
+    {
+      "id_pregunta": "MAT_36",
+      "area_academica": "Ciencias Exactas",
+      "tema_especifico": "Trigonometría - Reducción al Primer Cuadrante",
+      "enunciado": "Reduzca al primer cuadrante y determine el valor exacto de la razón trigonométrica: cos(150°).",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "-sqrt(3)/2",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "sqrt(3)/2",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "-1/2",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "1/2",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP"
+      ]
+    },
+    {
+      "id_pregunta": "MAT_37",
+      "area_academica": "Ciencias Exactas",
+      "tema_especifico": "Trigonometría - Identidades Fundamentales",
+      "enunciado": "Simplifique la siguiente expresión trigonométrica fundamental de artillería: $$E = \\frac{\\operatorname{sen}^2(x) + \\cos^2(x)}{1 + \\tan^2(x)}$$",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "$\\cos^2(x)$",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "$\\operatorname{sen}^2(x)$",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "$\\sec^2(x)$",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "$1$",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP",
+        "CITEN"
+      ]
+    },
+    {
+      "id_pregunta": "MAT_38",
+      "area_academica": "Ciencias Exactas",
+      "tema_especifico": "Trigonometría - Razones de Ángulos Compuestos",
+      "enunciado": "Calcule el valor exacto de $\\operatorname{sen}(75^\\circ)$ aplicando la identidad del seno de la suma de arcos notables: $$\\operatorname{sen}(45^\\circ + 30^\\circ) = \\operatorname{sen}(45^\\circ)\\cos(30^\\circ) + \\cos(45^\\circ)\\operatorname{sen}(30^\\circ)$$",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "$\\frac{\\sqrt{6} + \\sqrt{2}}{4}$",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "$\\frac{\\sqrt{6} - \\sqrt{2}}{4}$",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "$\\frac{\\sqrt{3} + 1}{2}$",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "$\\frac{\\sqrt{2}}{2}$",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 4,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP"
+      ]
+    },
+    {
+      "id_pregunta": "MAT_39",
+      "area_academica": "Ciencias Exactas",
+      "tema_especifico": "Trigonometría - Ángulo Doble",
+      "enunciado": "Si $\\operatorname{sen}(x) \\cdot \\cos(x) = \\frac{1}{4}$, determine el valor exacto del seno del ángulo doble $\\operatorname{sen}(2x)$:",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "$\\frac{1}{2}$",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "$\\frac{1}{4}$",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "$1$",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "$\\frac{\\sqrt{2}}{2}$",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP",
+        "EO-PNP"
+      ]
+    },
+    {
+      "id_pregunta": "MAT_40",
+      "area_academica": "Ciencias Exactas",
+      "tema_especifico": "Trigonometría - Resolución de Triángulos Oblicuángulos",
+      "enunciado": "Dos buques de guerra zarpan del puerto del Callao siguiendo rumbos rectilíneos que forman entre sí un ángulo de 60°. Si uno navega 8 millas y el otro navega 5 millas náuticas, ¿cuál es la distancia en millas que los separa? (Aplique la Ley de Cosenos: c² = a² + b² - 2ab*cos(60°)).",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "7 millas",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "sqrt(65) millas",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "9 millas",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "sqrt(89) millas",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 4,
+      "escuelas_relacionadas": [
+        "ENP",
+        "CITEN",
+        "EMCH",
+        "EOFAP"
+      ]
+    },
+    {
+      "id_pregunta": "CIE_01",
+      "area_academica": "Ciencias Naturales",
+      "tema_especifico": "Física - Análisis Dimensional",
+      "enunciado": "En balística militar, la energía cinética de un proyectil viene dada por E = (1/2) * m * v^2. ¿Cuáles son las dimensiones físicas de la energía [E] en el Sistema Internacional de Unidades?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "M * L^2 * T^(-2)",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "M * L * T^(-2)",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "M * L^2 * T^(-1)",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "M * L^(-1) * T^(-2)",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP",
+        "CITEN",
+        "ESOFA"
+      ]
+    },
+    {
+      "id_pregunta": "CIE_02",
+      "area_academica": "Ciencias Naturales",
+      "tema_especifico": "Física - Vectores",
+      "enunciado": "Dos patrullas de rescate de montaña aplican fuerzas de tracción sobre un vehículo atascado en el lodo con magnitudes de 300 N y 400 N formando un ángulo recto (90°) entre sí. ¿Cuál es la magnitud de la fuerza resultante aplicada sobre el móvil?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "500 N",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "700 N",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "100 N",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "350 N",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "CIE_03",
+      "area_academica": "Ciencias Naturales",
+      "tema_especifico": "Física - Cinemática MRU",
+      "enunciado": "Una patrullera fluvial de la Marina viaja en el río Ucayali a una velocidad constante de 36 km/h. ¿Cuántos metros recorre la embarcación táctica durante un patrullaje continuo de 25 segundos?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "250 metros",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "900 metros",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "360 metros",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "180 metros",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "ENP",
+        "CITEN",
+        "EMCH",
+        "EO-PNP"
+      ]
+    },
+    {
+      "id_pregunta": "CIE_04",
+      "area_academica": "Ciencias Naturales",
+      "tema_especifico": "Física - Cinemática MRUV",
+      "enunciado": "Un avión de combate Mirage 2000 parte del reposo en la pista de despegue de la Base Aérea de La Joya y acelera de manera constante a razón de 5 m/s² durante 12 segundos antes de levantar vuelo. ¿Qué velocidad alcanza al momento del despegue?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "60 m/s",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "50 m/s",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "72 m/s",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "45 m/s",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EOFAP",
+        "ESOFA",
+        "EMCH",
+        "ENP"
+      ]
+    },
+    {
+      "id_pregunta": "CIE_05",
+      "area_academica": "Ciencias Naturales",
+      "tema_especifico": "Física - Caída Libre",
+      "enunciado": "Desde un helicóptero MI-17 en vuelo estacionario a gran altitud, un paracaidista del Ejército realiza un salto libre. Si desciende en caída libre durante 4 segundos antes de abrir su paracaídas, ¿qué distancia vertical ha descendido? (considere g = 10 m/s²).",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "80 metros",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "40 metros",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "100 metros",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "120 metros",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "EOFAP",
+        "ENP",
+        "ETE"
+      ]
+    },
+    {
+      "id_pregunta": "CIE_06",
+      "area_academica": "Ciencias Naturales",
+      "tema_especifico": "Física - Movimiento Parabólico",
+      "enunciado": "Un mortero de infantería dispara una granada con una velocidad inicial de 50 m/s y un ángulo de tiro de 37° respecto a la horizontal. Calcule el tiempo total de vuelo del proyectil hasta impactar en el terreno plano. (sen(37°) = 0.6; g = 10 m/s²).",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "6 segundos",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "3 segundos",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "8 segundos",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "5 segundos",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP",
+        "EO-PNP"
+      ]
+    },
+    {
+      "id_pregunta": "CIE_07",
+      "area_academica": "Ciencias Naturales",
+      "tema_especifico": "Física - Movimiento Circular",
+      "enunciado": "La hélice propulsora de una lancha de interdicción marítima gira uniformemente a 1,200 revoluciones por minuto (RPM). ¿Cuál es la velocidad angular de giro en radianes por segundo?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "40*pi rad/s",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "20*pi rad/s",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "60*pi rad/s",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "120*pi rad/s",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA"
+      ]
+    },
+    {
+      "id_pregunta": "CIE_08",
+      "area_academica": "Ciencias Naturales",
+      "tema_especifico": "Física - Estática (Primera Condición)",
+      "enunciado": "Un reflector táctico de 60 N de peso cuelga en equilibrio del techo del hangar sostenido simétricamente por dos cuerdas tensas que forman ángulos iguales de 30° con la horizontal. ¿Cuál es el valor de la tensión en cada una de las dos cuerdas? (sen(30°) = 0.5).",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "60 N",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "30 N",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "120 N",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "45 N",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP",
+        "EO-PNP"
+      ]
+    },
+    {
+      "id_pregunta": "CIE_09",
+      "area_academica": "Ciencias Naturales",
+      "tema_especifico": "Física - Estática (Segunda Condición - Torque)",
+      "enunciado": "Una viga homogénea de 4 metros de longitud y 200 N de peso está apoyada horizontalmente en sus dos extremos A y B. Si una carga militar de 400 N se coloca a 1 metro del extremo A, ¿cuál es la fuerza de reacción ejercida por el soporte en el extremo A?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "400 N",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "300 N",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "350 N",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "500 N",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 4,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP",
+        "CITEN"
+      ]
+    },
+    {
+      "id_pregunta": "CIE_10",
+      "area_academica": "Ciencias Naturales",
+      "tema_especifico": "Física - Dinámica Lineal",
+      "enunciado": "Un vehículo blindado de transporte de personal de 4,000 kg de masa se desplaza sobre terreno horizontal. Si el motor ejerce una fuerza de empuje neta constante de 8,000 N, ¿cuál es la aceleración lineal que experimenta el blindado?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "2.0 m/s²",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "0.5 m/s²",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "4.0 m/s²",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "1.5 m/s²",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "CIE_11",
+      "area_academica": "Ciencias Naturales",
+      "tema_especifico": "Física - Dinámica Circular",
+      "enunciado": "Un avión cazabombardero de 8,000 kg efectúa un giro táctico horizontal a 200 m/s describiendo una trayectoria circular de radio 2,000 metros. ¿Cuál es el valor de la fuerza centrípeta requerida para mantener dicho radio de curvatura?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "160,000 N",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "80,000 N",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "320,000 N",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "40,000 N",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EOFAP",
+        "ESOFA",
+        "ENP",
+        "EMCH"
+      ]
+    },
+    {
+      "id_pregunta": "CIE_12",
+      "area_academica": "Ciencias Naturales",
+      "tema_especifico": "Física - Trabajo y Potencia",
+      "enunciado": "Un montacargas militar eleva un lote de pertrechos de 500 kg verticalmente a una altura de 6 metros a velocidad constante durante 15 segundos. ¿Cuál es la potencia media desarrollada por el motor del elevador? (g = 10 m/s²).",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "2,000 W",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "3,000 W",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "1,500 W",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "4,500 W",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "CITEN",
+        "ESOFA"
+      ]
+    },
+    {
+      "id_pregunta": "CIE_13",
+      "area_academica": "Ciencias Naturales",
+      "tema_especifico": "Física - Conservación de la Energía Mecánica",
+      "enunciado": "Un carro oruga de entrenamiento de 200 kg parte del reposo desde lo alto de una colina inclinada a 20 metros de altura sobre el suelo. Si se desprecia la fricción con el terreno, ¿con qué rapidez llega a la base de la colina? (g = 10 m/s²).",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "20 m/s",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "15 m/s",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "25 m/s",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "10 m/s",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP",
+        "CITEN"
+      ]
+    },
+    {
+      "id_pregunta": "CIE_14",
+      "area_academica": "Ciencias Naturales",
+      "tema_especifico": "Física - Cantidad de Movimiento e Impulso",
+      "enunciado": "Un fusil de asalto de 4 kg de masa dispara un proyectil de 0.02 kg (20 gramos) con una velocidad en boca de fuego de 800 m/s. Por el principio de conservación de la cantidad de movimiento lineal, ¿cuál es la rapidez de retroceso que experimenta el arma?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "4.0 m/s",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "2.0 m/s",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "8.0 m/s",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "1.5 m/s",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EO-PNP"
+      ]
+    },
+    {
+      "id_pregunta": "CIE_15",
+      "area_academica": "Ciencias Naturales",
+      "tema_especifico": "Física - Hidrostática (Arquímedes)",
+      "enunciado": "Un submarino sumergido en agua de mar (densidad = 1,025 kg/m³) desaloja un volumen de 100 m³. ¿Cuál es la magnitud del empuje hidrostático ascendente que experimenta el casco del submarino? (g = 10 m/s²).",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "1,025,000 N",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "102,500 N",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "2,050,000 N",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "512,500 N",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "ENP",
+        "CITEN",
+        "EMCH",
+        "EOFAP"
+      ]
+    },
+    {
+      "id_pregunta": "CIE_16",
+      "area_academica": "Ciencias Naturales",
+      "tema_especifico": "Física - Calorimetría",
+      "enunciado": "¿Qué cantidad de calor en calorías se necesita suministrar a 500 gramos de agua pura para elevar su temperatura de 20°C a 70°C en un calentador de campaña? (Calor específico del agua = 1 cal/g°C).",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "25,000 calorías",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "35,000 calorías",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "15,000 calorías",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "50,000 calorías",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "CITEN",
+        "ESOFA",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "CIE_17",
+      "area_academica": "Ciencias Naturales",
+      "tema_especifico": "Física - Electrostática",
+      "enunciado": "Dos cargas eléctricas puntuales de +4 microC y +9 microC se encuentran situadas en el vacío separadas por una distancia de 0.3 metros. Calcule la magnitud de la fuerza electrostática de repulsión entre ambas. (Constante k = 9 x 10^9 N*m²/C²).",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "3.6 N",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "1.2 N",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "7.2 N",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "0.9 N",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP"
+      ]
+    },
+    {
+      "id_pregunta": "CIE_18",
+      "area_academica": "Ciencias Naturales",
+      "tema_especifico": "Física - Circuitos Eléctricos y Ley de Ohm",
+      "enunciado": "Un equipo de comunicaciones tácticas HF de la patrulla militar se alimenta con una batería de 24 V de corriente continua. Si el circuito interno presenta una resistencia equivalente de 8 ohmios, ¿cuál es la intensidad de corriente eléctrica que circula por el equipo?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "3 Amperios",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "4 Amperios",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "2 Amperios",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "6 Amperios",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "CIE_19",
+      "area_academica": "Ciencias Naturales",
+      "tema_especifico": "Química - Materia y Fenómenos Químicos",
+      "enunciado": "¿Cuál de los siguientes procesos observados en operaciones tácticas corresponde a un fenómeno o cambio estrictamente químico?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "La combustión de la pólvora sin humo al detonar un cartucho.",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "La evaporación del rocío matinal sobre el blindaje de un tanque.",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "La fragmentación de una granada de instrucción en pedazos metálicos.",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "La disolución de sales de rehidratación oral en agua potable.",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "CIE_20",
+      "area_academica": "Ciencias Naturales",
+      "tema_especifico": "Química - Estructura Atómica",
+      "enunciado": "Un átomo neutro de titanio empleado en aleaciones aeronáuticas militares posee 22 protones y 26 neutrones en su núcleo. ¿Cuáles son su número atómico (Z) y su número de masa (A) respectivamente?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Z = 22, A = 48",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Z = 26, A = 48",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Z = 22, A = 26",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Z = 48, A = 22",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA"
+      ]
+    },
+    {
+      "id_pregunta": "CIE_21",
+      "area_academica": "Ciencias Naturales",
+      "tema_especifico": "Química - Configuración Electrónica",
+      "enunciado": "¿Cuál es la configuración electrónica en el estado basal de un átomo de hierro (Fe, Z = 26), elemento clave en la industria de blindajes y cañones militares?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d⁶",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "1s² 2s² 2p⁶ 3s² 3p⁶ 4s¹ 3d⁷",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "1s² 2s² 2p⁶ 3s² 3p⁶ 3d⁸",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "1s² 2s² 2p⁶ 3s² 3p⁴ 4s² 3d⁸",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP",
+        "CITEN"
+      ]
+    },
+    {
+      "id_pregunta": "CIE_22",
+      "area_academica": "Ciencias Naturales",
+      "tema_especifico": "Química - Tabla Periódica Moderna",
+      "enunciado": "En la Tabla Periódica Moderna, los elementos que pertenecen al Grupo 17 (VIIA), caracterizados por su alta reactividad y por formar sales desinfectantes como el cloro y el yodo, se denominan:",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Halógenos",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Metales alcalinotérreos",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Gases nobles",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Calcógenos o anfígenos",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "CIE_23",
+      "area_academica": "Ciencias Naturales",
+      "tema_especifico": "Química - Enlace Químico",
+      "enunciado": "¿Qué tipo de enlace químico predomina en la estructura del cloruro de sodio (NaCl), sustancia indispensable en la preservación de alimentos y equilibrio hidroelectrolítico de campaña?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Enlace iónico o electrovalente",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Enlace covalente apolar",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Enlace metálico puro",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Enlace por puente de hidrógeno",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP",
+        "EO-PNP"
+      ]
+    },
+    {
+      "id_pregunta": "CIE_24",
+      "area_academica": "Ciencias Naturales",
+      "tema_especifico": "Química - Nomenclatura Inorgánica",
+      "enunciado": "El hidróxido de aluminio, Al(OH)3, es un compuesto utilizado como retardante de fuego y antiácido estomacal para tropas. ¿Cuál es el estado de oxidación del aluminio en dicho compuesto?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "+3",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "+2",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "+1",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "-3",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EO-PNP"
+      ]
+    },
+    {
+      "id_pregunta": "CIE_25",
+      "area_academica": "Ciencias Naturales",
+      "tema_especifico": "Química - Reacciones Químicas y Balance",
+      "enunciado": "Balancee por tanteo la reacción de combustión completa del gas propano utilizado en las cocinas de campaña militar:\nC3H8 + O2 -> CO2 + H2O.\n¿Cuál es la suma total de los coeficientes estequiométricos enteros mínimos?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "13",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "10",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "12",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "15",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP",
+        "CITEN"
+      ]
+    },
+    {
+      "id_pregunta": "CIE_26",
+      "area_academica": "Ciencias Naturales",
+      "tema_especifico": "Química - Estequiometría",
+      "enunciado": "¿Cuántos moles de dióxido de carbono (CO2) se producen al quemar completamente 2 moles de gas propano (C3H8) según la ecuación: C3H8 + 5 O2 -> 3 CO2 + 4 H2O?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "6 moles",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "3 moles",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "5 moles",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "8 moles",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP"
+      ]
+    },
+    {
+      "id_pregunta": "CIE_27",
+      "area_academica": "Ciencias Naturales",
+      "tema_especifico": "Química - Gases Ideales",
+      "enunciado": "Un cilindro de oxígeno para rescate médico militar de 10 litros de volumen contiene gas a una presión de 4 atmósferas y una temperatura de 300 K. Si el volumen se reduce a la mitad (5 litros) manteniendo la temperatura constante (Ley de Boyle), ¿cuál será la nueva presión del gas?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "8 atmósferas",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "2 atmósferas",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "4 atmósferas",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "16 atmósferas",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "CIE_28",
+      "area_academica": "Ciencias Naturales",
+      "tema_especifico": "Química - Soluciones Químicas",
+      "enunciado": "Para desinfectar las instalaciones de un campamento militar se preparan 2 litros de una solución acuosa de hipoclorito de sodio con una concentración 0.5 Molar. ¿Cuántos moles de soluto contiene dicha solución desinfectante?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "1.0 mol",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "0.5 moles",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "2.0 moles",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "0.25 moles",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP",
+        "EO-PNP"
+      ]
+    },
+    {
+      "id_pregunta": "CIE_29",
+      "area_academica": "Ciencias Naturales",
+      "tema_especifico": "Química - Ácidos, Bases y pH",
+      "enunciado": "Una muestra de agua analizada por el personal de Sanidad en una zona ribereña presenta una concentración de iones hidrógeno [H+] = 10^(-8) M. ¿Cuál es el pH de la muestra y qué carácter químico posee?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "pH = 8, básica o alcalina",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "pH = 8, ácida",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "pH = 6, ácida",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "pH = 7, neutra",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP",
+        "EO-PNP"
+      ]
+    },
+    {
+      "id_pregunta": "CIE_30",
+      "area_academica": "Ciencias Naturales",
+      "tema_especifico": "Química - Química Orgánica (Hidrocarburos)",
+      "enunciado": "El octano (C8H18) es un hidrocarburo representativo de las gasolinas de alto octanaje empleadas en vehículos de reconocimiento. ¿A qué serie homóloga de hidrocarburos acíclicos saturados pertenece según su fórmula molecular C_n H_(2n+2)?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Alcanos o parafinas",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Alquenos u olefinas",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Alquinos o acetilenos",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Cicloalcanos",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "HUM_01",
+      "area_academica": "Letras y Humanidades",
+      "tema_especifico": "Lenguaje - Funciones del Lenguaje",
+      "enunciado": "En la orden de operaciones: '¡Soldados, aseguren el perímetro norte inmediatamente!', ¿qué función del lenguaje predomina en el mensaje del oficial al mando?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Función apelativa o conativa",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Función referencial o representativa",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Función expresiva o emotiva",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Función fática o de contacto",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "HUM_02",
+      "area_academica": "Letras y Humanidades",
+      "tema_especifico": "Lenguaje - Acentuación Diacrítica",
+      "enunciado": "Identifique la oración que presenta un uso correcto de la tilde diacrítica en la redacción de informes militares:",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Él comandante le pidió que dé más de sí en la instrucción.",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "El comandante le pidió que de mas de si en la instrucción.",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Él comandante le pidió que de más de si en la instrucción.",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "El comandante le pidió que dé mas de sí en la instrucción.",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP",
+        "EO-PNP"
+      ]
+    },
+    {
+      "id_pregunta": "HUM_03",
+      "area_academica": "Letras y Humanidades",
+      "tema_especifico": "Lenguaje - Concurrencia Vocálica",
+      "enunciado": "En la palabra 'GUARDIA', empleada habitualmente en el servicio militar, ¿qué fenómeno fonético vocálico se presenta en la última sílaba?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Diptongo creciente",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Hiato acentual",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Diptongo decreciente",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Triptongo homogéneo",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "HUM_04",
+      "area_academica": "Letras y Humanidades",
+      "tema_especifico": "Lenguaje - Signos de Puntuación",
+      "enunciado": "En la frase 'Cadetes, mantengan la posición hasta nueva orden', la coma utilizada después de la palabra 'Cadetes' cumple la función de:",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Coma vocativa",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Coma elíptica",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Coma explicativa o incidental",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Coma hiperbática",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "HUM_05",
+      "area_academica": "Letras y Humanidades",
+      "tema_especifico": "Lenguaje - Formación de Palabras",
+      "enunciado": "¿Mediante qué proceso morfológico se ha formado el término táctico 'PARACAIDISTA'?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Parasíntesis",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Composición propia",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Derivación simple",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Prefijación",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "EOFAP",
+        "ENP",
+        "CITEN"
+      ]
+    },
+    {
+      "id_pregunta": "HUM_06",
+      "area_academica": "Letras y Humanidades",
+      "tema_especifico": "Lenguaje - Morfología del Sustantivo y Adjetivo",
+      "enunciado": "Señale la alternativa que presenta concordancia gramatical correcta entre sustantivo y adjetivo en el contexto castrense:",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "El capitán demostró un valor y una disciplina ejemplares.",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "El capitán demostró un valor y una disciplina ejemplar.",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "El capitán demostró un valor y una disciplina ejemplarmente.",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "El capitán demostró unos valor y disciplina ejemplares.",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP",
+        "EO-PNP"
+      ]
+    },
+    {
+      "id_pregunta": "HUM_07",
+      "area_academica": "Letras y Humanidades",
+      "tema_especifico": "Lenguaje - Accidentes del Verbo",
+      "enunciado": "En la orden táctica 'Si las fuerzas especiales avanzaran con sigilo, sorprenderían al enemigo', los verbos subrayados se encuentran respectivamente en los modos:",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Subjuntivo e indicativo",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Imperativo e indicativo",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Subjuntivo y potencial imperativo",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Indicativo y subjuntivo",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP",
+        "EO-PNP"
+      ]
+    },
+    {
+      "id_pregunta": "HUM_08",
+      "area_academica": "Letras y Humanidades",
+      "tema_especifico": "Lenguaje - Sintaxis de la Oración",
+      "enunciado": "En la oración 'La patrulla de rescate localizó a los náufragos en altamar', el sintagma 'a los náufragos' cumple la función sintáctica de:",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Objeto directo",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Objeto indirecto",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Complemento circunstancial de modo",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Complemento agente",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "HUM_09",
+      "area_academica": "Letras y Humanidades",
+      "tema_especifico": "Lenguaje - Voz Pasiva y Complemento Agente",
+      "enunciado": "En la oración en voz pasiva 'El campamento clandestino fue destruido por la brigada antiterrorista', ¿cuál es el complemento agente?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "por la brigada antiterrorista",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "fue destruido",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "El campamento clandestino",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "clandestino",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "HUM_10",
+      "area_academica": "Letras y Humanidades",
+      "tema_especifico": "Lenguaje - Vicios del Lenguaje",
+      "enunciado": "En la frase 'El sargento vio al policía cuando salía de su casa', se comete el vicio de construcción conocido como:",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Anfibología u oscuridad de sentido",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Solecismo de régimen",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Pleonasmo o redundancia",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Barbarismo ortográfico",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "HUM_11",
+      "area_academica": "Letras y Humanidades",
+      "tema_especifico": "Historia del Perú - Culturas Prehispánicas",
+      "enunciado": "¿Qué civilización preincaica destacó por su avanzada ingeniería militar y defensiva amurallada en la costa norte, con fortalezas como Paramonga?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Cultura Chimú",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Cultura Chavín",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Cultura Paracas",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Cultura Vicús",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "HUM_12",
+      "area_academica": "Letras y Humanidades",
+      "tema_especifico": "Historia del Perú - Tahuantinsuyo",
+      "enunciado": "En la organización militar del Imperio Incaico, ¿quiénes eran los mensajeros del Estado que recorrían velozmente los caminos imperiales (Qhapaq Ñan) transmitiendo órdenes estratégicas?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Los chasquis",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Los mitimaes",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Los curacas",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Los yanaconas",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 1,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "HUM_13",
+      "area_academica": "Letras y Humanidades",
+      "tema_especifico": "Historia del Perú - Rebeliones Anticoloniales",
+      "enunciado": "La rebelión indígena y anticolonial de José Gabriel Condorcanqui (Túpac Amaru II) en 1780 se inició con la captura y ajusticiamiento del corregidor de Tinta llamado:",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Antonio de Arriaga",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "José Antonio de Areche",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Agustín de Jáuregui",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Manuel Amat y Juniet",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EO-PNP"
+      ]
+    },
+    {
+      "id_pregunta": "HUM_14",
+      "area_academica": "Letras y Humanidades",
+      "tema_especifico": "Historia del Perú - Independencia",
+      "enunciado": "La consolidación definitiva de la independencia del Perú y de América del Sur se selló el 9 de diciembre de 1824 en la histórica Batalla de:",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Ayacucho",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Junín",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Pichincha",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Boyacá",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 1,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "HUM_15",
+      "area_academica": "Letras y Humanidades",
+      "tema_especifico": "Historia del Perú - Primer Militarismo",
+      "enunciado": "El presidente que impulsó la modernización militar del Perú durante la bonanza del guano adquiriendo la fragata 'Amazonas' e inaugurando la Escuela Central de Marina fue:",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Ramón Castilla y Marquesado",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "José de la Mar",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Andrés de Santa Cruz",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Felipe Santiago Salaverry",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "ENP",
+        "CITEN",
+        "EMCH",
+        "EOFAP"
+      ]
+    },
+    {
+      "id_pregunta": "HUM_16",
+      "area_academica": "Letras y Humanidades",
+      "tema_especifico": "Historia del Perú - Guerra del Pacífico (Campaña Marítima)",
+      "enunciado": "El Almirante Miguel Grau Seminario, máximo héroe naval del Perú conocido como 'El Caballero de los Mares', ofrendó su vida a bordo del monitor Huáscar en el Combate Naval de:",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Angamos (8 de octubre de 1879)",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Iquique (21 de mayo de 1879)",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Abtao (7 de febrero de 1866)",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Callao (2 de mayo de 1866)",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 1,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "HUM_17",
+      "area_academica": "Letras y Humanidades",
+      "tema_especifico": "Historia del Perú - Guerra del Pacífico (Campaña Terrestre)",
+      "enunciado": "El Coronel Francisco Bolognesi Cervantes pronunció su célebre frase 'Tengo deberes sagrados que cumplir y los cumpliré hasta quemar el último cartucho' en la defensa de:",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "El Morro de Arica (7 de junio de 1880)",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "El Alto de la Alianza (26 de mayo de 1880)",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Tarapacá (27 de noviembre de 1879)",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Miraflores (15 de enero de 1881)",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 1,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "HUM_18",
+      "area_academica": "Letras y Humanidades",
+      "tema_especifico": "Historia del Perú - Resistencia de la Breña",
+      "enunciado": "¿Qué caudillo militar peruano, conocido como 'El Brujo de los Andes', lideró la victoriosa resistencia de montoneros indígenas contra la invasión enemiga en la sierra central?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Andrés Avelino Cáceres",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Nicolás de Piérola",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Lizardo Montero",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Justiniano Borgoño",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 1,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "HUM_19",
+      "area_academica": "Letras y Humanidades",
+      "tema_especifico": "Historia del Perú - Héroe Nacional de la Aviación",
+      "enunciado": "El Capitán FAP José Abelardo Quiñones Gonzales se inmoló heroicamente estrellando su avión caza North American NA-50 contra las baterías enemigas en Quebrada Seca durante el conflicto con el Ecuador en el año:",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "1941",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "1981",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "1995",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "1932",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 1,
+      "escuelas_relacionadas": [
+        "EOFAP",
+        "ESOFA",
+        "EMCH",
+        "ENP"
+      ]
+    },
+    {
+      "id_pregunta": "HUM_20",
+      "area_academica": "Letras y Humanidades",
+      "tema_especifico": "Historia del Perú - Héroe de la Policía Nacional",
+      "enunciado": "¿Qué guardia civil peruano se consagró como héroe nacional al arrebatar el estandarte del regimiento enemigo durante la Batalla de Tarapacá el 27 de noviembre de 1879?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Mariano Santos Mateo",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Alipio Ponce Vásquez",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Horacio Patiño Cruzatti",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Enrique Torres Valdivia",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 1,
+      "escuelas_relacionadas": [
+        "EO-PNP",
+        "EESTP_PNP",
+        "EMCH",
+        "ENP"
+      ]
+    },
+    {
+      "id_pregunta": "HUM_21",
+      "area_academica": "Letras y Humanidades",
+      "tema_especifico": "Historia del Perú - Operación Militar Chavín de Huántar",
+      "enunciado": "La exitosa operación militar de rescate de rehenes en la residencia del embajador de Japón ejecutada por comandos de las Fuerzas Armadas en abril de 1997 se denominó:",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Operación Chavín de Huántar",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Operación Cordillera del Cóndor",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Operación Victoria",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Operación Huallaga",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 1,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "HUM_22",
+      "area_academica": "Letras y Humanidades",
+      "tema_especifico": "Historia Universal - Antigüedad Clásica",
+      "enunciado": "En las Guerras Médicas de la antigua Grecia, el célebre combate donde 300 soldados espartanos liderados por el rey Leónidas contuvieron heroicamente al ejército persa fue:",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "La Batalla de las Termópilas",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "La Batalla de Maratón",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "La Batalla de Salamina",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "La Batalla de Platea",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP",
+        "EO-PNP"
+      ]
+    },
+    {
+      "id_pregunta": "HUM_23",
+      "area_academica": "Letras y Humanidades",
+      "tema_especifico": "Historia Universal - Segunda Guerra Mundial",
+      "enunciado": "El desembarco anfibio militar más grande de la historia moderna, conocido como el 'Día D' (Operación Overlord) en las costas de Normandía, tuvo lugar en el año:",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "1944",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "1942",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "1945",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "1939",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP",
+        "CITEN"
+      ]
+    },
+    {
+      "id_pregunta": "HUM_24",
+      "area_academica": "Letras y Humanidades",
+      "tema_especifico": "Historia Universal - Siglo XX y Guerra Fría",
+      "enunciado": "El acontecimiento geopolítico que marcó simbólicamente el inicio del fin de la Guerra Fría en noviembre de 1989 fue:",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "La caída del Muro de Berlín",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "La crisis de los misiles en Cuba",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "La firma del Tratado de Versalles",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "La invasión de Bahía de Cochinos",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP",
+        "EO-PNP"
+      ]
+    },
+    {
+      "id_pregunta": "HUM_25",
+      "area_academica": "Letras y Humanidades",
+      "tema_especifico": "Geografía del Perú - Ocho Regiones Naturales",
+      "enunciado": "Según la tesis del geógrafo Javier Pulgar Vidal, ¿a qué región natural corresponde la franja altitudinal situada entre los 4,000 y 4,800 m.s.n.m., caracterizada por mesetas de pajonales y clima muy frío?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Región Puna o Altoandina",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Región Quechua",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Región Suni o Jalca",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Región Janca o Cordillera",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "HUM_26",
+      "area_academica": "Letras y Humanidades",
+      "tema_especifico": "Geografía del Perú - Relieve Costero y Selva",
+      "enunciado": "¿Cómo se denomina la región geográfica que se ubica en el flanco oriental andino entre los 400 y 1,000 m.s.n.m., caracterizada por valles longitudinales fértiles, pongos y densa vegetación subtropical?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Rupa Rupa o Selva Alta",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Omagua o Selva Baja",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Yunga Fluvial",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Chala",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "HUM_27",
+      "area_academica": "Letras y Humanidades",
+      "tema_especifico": "Geografía del Perú - Hidrografía",
+      "enunciado": "El río más largo del territorio peruano, que se forma por la confluencia de los ríos Tambo y Urubamba y luego se une con el Marañón para formar el Amazonas, es el río:",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Ucayali",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Huallaga",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Madre de Dios",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Mantaro",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "ENP",
+        "CITEN",
+        "EMCH",
+        "EO-PNP"
+      ]
+    },
+    {
+      "id_pregunta": "HUM_28",
+      "area_academica": "Letras y Humanidades",
+      "tema_especifico": "Geografía del Perú - Mar de Grau",
+      "enunciado": "El Mar de Grau presenta aguas predominantemente frías y una rica biomasa pesquera en su sector centro-sur debido principalmente al fenómeno oceanográfico de:",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Afloramiento de aguas profundas (upwelling) impulsado por la Corriente Peruana.",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "La radiación solar tropical ecuatorial permanente.",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "El descenso exclusivo de aguas dulces de los ríos costeros.",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "El ingreso de corrientes marinas cálidas procedentes de la Polinesia.",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "ENP",
+        "CITEN",
+        "EMCH",
+        "EOFAP"
+      ]
+    },
+    {
+      "id_pregunta": "HUM_29",
+      "area_academica": "Letras y Humanidades",
+      "tema_especifico": "Geografía del Perú - Límites Fronterizos y Tratados",
+      "enunciado": "La delimitación definitiva de la frontera terrestre entre el Perú y el Ecuador se ratificó y consolidó mediante la suscripción del Acta Presidencial de Brasilia en el año:",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "1998",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "1995",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "1942",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "2001",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP",
+        "EO-PNP"
+      ]
+    },
+    {
+      "id_pregunta": "HUM_30",
+      "area_academica": "Letras y Humanidades",
+      "tema_especifico": "Geografía del Perú - Puntos Extremos del Territorio",
+      "enunciado": "El punto extremo más oriental (al este) del territorio peruano se localiza en el departamento de Madre de Dios, específicamente en la confluencia de los ríos:",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Heath y Madre de Dios",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Putumayo y Amazonas",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Güepí y Napo",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Yavary y Amazonas",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "HUM_31",
+      "area_academica": "Letras y Humanidades",
+      "tema_especifico": "Geografía del Perú - Geodinámica y Gestión de Desastres",
+      "enunciado": "¿Cuál es el organismo técnico del Estado peruano responsable de la formulación de planes de respuesta y ayuda humanitaria ante emergencias y desastres de origen natural?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "INDECI (Instituto Nacional de Defensa Civil)",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "CENEPRED",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "IGN (Instituto Geográfico Nacional)",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "SENAMHI",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "HUM_32",
+      "area_academica": "Letras y Humanidades",
+      "tema_especifico": "Geografía del Perú - Cordillera y Pasos Andinos",
+      "enunciado": "El paso o abra de Anticona (Ticlio), que comunica Lima con el valle del Mantaro y la sierra central a más de 4,818 m.s.n.m., atraviesa la Cordillera:",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Occidental de los Andes Centrales",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Oriental de los Andes del Norte",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "De Vilcabamba",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Carabaya de los Andes del Sur",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP",
+        "EO-PNP"
+      ]
+    },
+    {
+      "id_pregunta": "HUM_33",
+      "area_academica": "Letras y Humanidades",
+      "tema_especifico": "Educación Cívica - Constitución y FFAA",
+      "enunciado": "De acuerdo con el Artículo 165 de la Constitución Política del Perú de 1993, las Fuerzas Armadas tienen como finalidad primordial:",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Garantizar la independencia, la soberanía y la integridad territorial de la República.",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Garantizar el orden interno y la prevención del delito común.",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Administrar los recursos aduaneros y tributarios en las fronteras.",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Ejercer el control político de los poderes públicos del Estado.",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "HUM_34",
+      "area_academica": "Letras y Humanidades",
+      "tema_especifico": "Educación Cívica - Policía Nacional del Perú",
+      "enunciado": "Según el Artículo 166 de la Carta Magna, ¿cuál es la finalidad fundamental de la Policía Nacional del Perú?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Garantizar, mantener y restablecer el orden interno, proteger y prestar ayuda a las personas.",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Defender el territorio ante cualquier agresión externa bélica.",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Custodiar exclusivamente el Palacio de Gobierno y los ministerios.",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Promover el comercio exterior y los tratados bilaterales.",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EO-PNP",
+        "EESTP_PNP",
+        "EMCH",
+        "ENP",
+        "EOFAP"
+      ]
+    },
+    {
+      "id_pregunta": "HUM_35",
+      "area_academica": "Letras y Humanidades",
+      "tema_especifico": "Educación Cívica - Mando Supremo de las FFAA y PNP",
+      "enunciado": "Conforme al Artículo 167 de la Constitución, ¿quién ejerce la Jefatura Suprema de las Fuerzas Armadas y de la Policía Nacional del Perú?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "El Presidente de la República",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "El Ministro de Defensa",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "El Jefe del Comando Conjunto de las FFAA",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "El Presidente del Congreso de la República",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 1,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "HUM_36",
+      "area_academica": "Letras y Humanidades",
+      "tema_especifico": "Educación Cívica - Régimen de Excepción",
+      "enunciado": "Durante el Estado de Emergencia decretado según el Artículo 137 de la Constitución, ¿qué derechos fundamentales relativos a la libertad pueden ser suspendidos?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Libertad y seguridad personales, inviolabilidad del domicilio, y libertad de reunión y de tránsito.",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "El derecho a la vida, a la integridad física y a la nacionalidad.",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "El derecho a la propiedad privada y a la libertad de conciencia y culto.",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "El derecho al sufragio electoral y al debido proceso legal.",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 3,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "HUM_37",
+      "area_academica": "Letras y Humanidades",
+      "tema_especifico": "Educación Cívica - Garantías Constitucionales",
+      "enunciado": "La garantía constitucional que procede ante el hecho u omisión por parte de cualquier autoridad o persona que vulnera o amenaza la libertad individual de un ciudadano es:",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "El proceso de Hábeas Corpus",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "La Acción de Amparo",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "El proceso de Hábeas Data",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "La Acción Popular",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "HUM_38",
+      "area_academica": "Letras y Humanidades",
+      "tema_especifico": "Educación Cívica - Derecho Internacional Humanitario",
+      "enunciado": "¿Cuál es el instrumento jurídico internacional suscrito en 1949 que establece las normas para la protección de personas que no participan en las hostilidades bélicas (civiles, médicos y prisioneros de guerra)?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Los Convenios de Ginebra",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "El Pacto de San José de Costa Rica",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "El Tratado de No Proliferación Nuclear",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "El Estatuto de Roma",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ENP",
+        "EOFAP",
+        "EO-PNP"
+      ]
+    },
+    {
+      "id_pregunta": "HUM_39",
+      "area_academica": "Letras y Humanidades",
+      "tema_especifico": "Educación Cívica - Generaciones de Derechos Humanos",
+      "enunciado": "Los derechos civiles y políticos, tales como el derecho a la vida, a la libertad, a la igualdad ante la ley y al voto ciudadano, corresponden históricamente a los derechos de:",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Primera Generación",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Segunda Generación",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Tercera Generación",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Cuarta Generación",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    },
+    {
+      "id_pregunta": "HUM_40",
+      "area_academica": "Letras y Humanidades",
+      "tema_especifico": "Educación Cívica - Organismos Constitucionales Autónomos",
+      "enunciado": "El órgano constitucional autónomo encargado de defender los derechos constitucionales y fundamentales de la persona y de la comunidad, y supervisar el cumplimiento de los deberes de la administración estatal es:",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "La Defensoría del Pueblo",
+          "es_correcta": true
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "El Tribunal Constitucional",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "El Ministerio Público (Fiscalía de la Nación)",
+          "es_correcta": false
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "La Junta Nacional de Justicia",
+          "es_correcta": false
+        }
+      ],
+      "nivel_dificultad": 2,
+      "escuelas_relacionadas": [
+        "EMCH",
+        "ETE",
+        "ENP",
+        "CITEN",
+        "EOFAP",
+        "ESOFA",
+        "EO-PNP",
+        "EESTP_PNP"
+      ]
+    }
+  ]
+}

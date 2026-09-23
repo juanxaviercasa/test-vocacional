@@ -1,0 +1,4704 @@
+{
+  "banco_dilemas_vocacionales": [
+    {
+      "id_dilema": "VOC_01",
+      "categoria": "Entorno de Operaciones",
+      "escenario": "Tu unidad es desplegada ante una emergencia nacional por desastre natural en la sierra central. ¿En qué entorno sientes que aportarías mayor valor estratégico?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Pilotando aeronaves de transporte o helicópteros para establecer puentes aéreos sobre comunidades aisladas.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "A bordo de un buque multipropósito o patrullera, coordinando la evacuación y apoyo logístico desde el litoral marítimo o fluvial.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Marchando en terreno agreste con una patrulla de infantería para despejar rutas terrestres y auxiliar caseríos.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Desplegándote en la ciudad afectada para mantener el orden público, evitar desmanes y proteger centros de acopio.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_02",
+      "categoria": "Entorno de Operaciones",
+      "escenario": "Se planifica una operación de reconocimiento en una zona de densa vegetación selvática en el VRAEM. ¿Qué tarea preferirías asumir?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Efectuar vuelos de reconocimiento aéreo y designación láser de blancos desde un helicóptero artillado.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Infiltrarte silenciosamente por vías fluviales a bordo de una lancha de interdicción ribereña.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Rastrear a pie la espesura de la jungla integrando una patrulla de combate contraterrorista.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Allanar e intervenir laboratorios clandestinos de narcotráfico recopilando evidencias periciales.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_03",
+      "categoria": "Entorno de Operaciones",
+      "escenario": "Ante la detección de una incursión no autorizada en el territorio soberano del Perú, ¿en qué teatro preferirías actuar?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Despegando en un caza interceptor supersónico para custodiar y defender la soberanía del espacio aéreo.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Navegando a bordo de una fragata misilera o submarino para custodiar los límites del Mar de Grau.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Posicionando blindados y piezas de artillería en la línea de frontera terrestre para repeler cualquier agresión.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Cerrando los puestos de control fronterizo y neutralizando redes de contrabando o crimen transnacional.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_04",
+      "categoria": "Entorno de Operaciones",
+      "escenario": "Durante una misión en la cuenca hidrográfica del río Amazonas y Putumayo, ¿cuál sería tu enfoque de trabajo predilecto?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Operar hidroaviones y transportar víveres y medicinas a las guarniciones más remotas de la selva.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Comandar una cañonera fluvial patrullando las arterias navegables para salvaguardar la frontera acuática.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Instalar puestos de vigilancia terrestre y dominar las técnicas de supervivencia en bosque tropical húmedo.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Brindar seguridad ciudadana a los colonos y perseguir bandas de trata de personas y tala ilegal.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_05",
+      "categoria": "Entorno de Operaciones",
+      "escenario": "Se te asigna a una operación en el Altiplano andino a más de 4,000 metros de altitud con bajas temperaturas. ¿Qué rol te atrae más?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Coordinar estaciones de radar y sensores de altitud para vigilar los vuelos transfronterizos no identificados.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Participar en la Capitanía de Puerto del Lago Titicaca realizando interdicción de naves en aguas navegables.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Realizar marchas de montaña de largo alcance con equipo de campaña y armamento pesado de infantería.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Ejecutar operativos contra el contrabando de mercancías y resguardar la tranquilidad de ferias y pueblos andinos.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_06",
+      "categoria": "Entorno de Operaciones",
+      "escenario": "En una expedición científica y de soberanía nacional hacia la base 'Machu Picchu' en la Antártida, ¿cuál consideras tu aporte?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Planificar la navegación aérea polar y el soporte meteorológico para vuelos de transporte Hércules C-130.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Gobernar el B.A.P. Carrasco en mares gélidos, maniobrando entre hielos y coordinando estudios oceanográficos.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Encargarte de la logística terrestre, campamentos polares y maniobras de supervivencia en glaciares.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Garantizar la seguridad física y protocolos de protección a delegaciones científicas e investigadores.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_07",
+      "categoria": "Entorno de Operaciones",
+      "escenario": "En un entorno netamente urbano densamente poblado con alta conflictividad social, ¿qué tipo de labor te entusiasma liderar?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Realizar vigilancia aérea con helicópteros tácticos equipados con cámaras térmicas transmitiendo video en vivo.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Proteger infraestructuras portuarias estratégicas, terminales de hidrocarburos y aduanas marítimas.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Apoyar en el control de puntos críticos y puentes vitales ante declaratorias de estado de emergencia.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Liderar patrullas policiales de a pie e intervenir directamente para neutralizar la delincuencia y pacificar la zona.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_08",
+      "categoria": "Entorno de Operaciones",
+      "escenario": "Durante una maniobra de rescate de rehenes en una instalación tomada por delincuentes armados, ¿cuál sería tu puesto táctico ideal?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Proveer fuego de supresión y cobertura aérea precisa desde una plataforma de vuelo hovering.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Infiltrarte como comando anfibio o buzo táctico a través de ductos acuáticos o muelles adyacentes.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Formar parte del equipo de asalto frontal con explosivos de brecha y armas automáticas de asalto.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Integrar la unidad de élite policial (SUAT), combinando negociación táctica y tiro de precisión milimétrica.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_09",
+      "categoria": "Entorno de Operaciones",
+      "escenario": "En una base militar ubicada en la costa desértica del norte peruano, ¿qué misión operacional preferirías?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Realizar entrenamientos de combate aéreo aire-aire y bombardeo de precisión en polígonos de tiro.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Coordinar maniobras combinadas de desembarco con vehículos anfibios y patrullaje costero intensivo.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Conducir maniobras de tanques y blindados orugas en maniobras tácticas de desierto y dunas.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Fiscalizar las carreteras de la Panamericana Norte interceptando cargamentos ilegales y prófugos de la justicia.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_10",
+      "categoria": "Entorno de Operaciones",
+      "escenario": "En una misión de protección de recursos naturales contra la minería ilegal en ríos de Madre de Dios, ¿qué rol te parece más apasionante?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Geolocalizar campamentos clandestinos mediante imágenes aéreas multiespectrales y drones de ala fija.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Comandar patrulleras fluviales para destruir dragas y motores que contaminan las cuencas con mercurio.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Incursionar por tierra con fuerzas especiales en los campamentos mineros en medio de la selva virgen.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Ejecutar la detención legal de los cabecillas de la mafia y levantar actas fiscales de incautación de maquinaria.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_11",
+      "categoria": "Entorno de Operaciones",
+      "escenario": "Si tuvieras que elegir tu base de servicio permanente por dos años continuos, ¿cuál escogerías?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Una base aérea moderna con pistas de aterrizaje, hangares de reactores y torres de control de vuelo.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Una base naval con muelles, dársenas, submarinos atracados y zarpes prolongados hacia el océano.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Un fuerte militar de armas combinadas en el interior del país con polígonos de maniobra de infantería.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Una comisaría o división de investigación criminal en el corazón de una metrópoli provincial.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_12",
+      "categoria": "Entorno de Operaciones",
+      "escenario": "Durante una catástrofe por huaicos e inundaciones en la vertiente occidental de los Andes, ¿dónde prefieres ubicarte?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "En la cabina de un helicóptero ejecutando rescates con torno de izaje en techos y laderas inundadas.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "En una embarcación de salvamento marítimo socorriendo a caletas y puertos aislados por el colapso de vías.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Operando maquinaria pesada de ingeniería militar y armando puentes bailey para restablecer el tránsito.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Rescatando familias atrapadas en el lodo con cuerdas y resguardando los enseres para evitar hurtos.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_13",
+      "categoria": "Entorno de Operaciones",
+      "escenario": "En un escenario de vigilancia nocturna en condiciones de visibilidad cero, ¿qué plataforma operativa te brinda mayor motivación?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Navegación nocturna a gran altitud mediante visores infrarrojos y aviónica avanzada de combate.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Guardia de puente en mar abierto operando radares de superficie y sonares pasivos en completa oscuridad.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Puesto de centinela avanzado en trinchera con fusil de asalto equipado con mira térmica y de visión nocturna.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Patrullaje motorizado en callejones y zonas oscuras de alta peligrosidad para prevenir asaltos.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_14",
+      "categoria": "Entorno de Operaciones",
+      "escenario": "Ante la misión de resguardar una cumbre estratégica en la cordillera a 5,000 m.s.n.m., ¿qué aspecto de la operación te atrae?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Efectuar lanzamientos de suministros en paracaídas con alta precisión balística desde aviones de carga.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Monitorear las comunicaciones de enlace satelital con los centros de mando de la costa peruana.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Emplazar nidos de ametralladoras y puestos de observación resistiendo vientos helados y nieve.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Coordinar con las rondas campesinas y comunidades altoandinas el paso seguro y la alerta temprana.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_15",
+      "categoria": "Entorno de Operaciones",
+      "escenario": "En una operación de interdicción contra piratas marítimos que asaltan embarcaciones pesqueras en el norte peruano, ¿qué rol prefieres?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Volar en aeronaves de patrulla marítima para avistar y dar seguimiento visual a las embarcaciones sospechosas.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Abordar con lanchas rápidas y grupos de interdicción naval para reducir a los tripulantes armados en cubierta.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Proteger las caletas y embarcaderos costeros impidiendo el desembarco de armamento y mercadería robada.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Desarticular la organización criminal en tierra rastreando a los compradores ilegales de la carga.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_16",
+      "categoria": "Entorno de Operaciones",
+      "escenario": "Si tuvieras que participar en un ejercicio militar combinado internacional (como UNITAS o Cruzex), ¿en qué área te gustaría destacar?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "En combates aéreos simulados y tácticas de supresión de defensas aéreas con fuerzas aéreas aliadas.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "En tácticas de guerra antisubmarina y maniobras de formación táctica naval en altamar.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "En interoperabilidad de infantería de combate y tiro táctico avanzado con ejércitos de la región.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "En intercambio de inteligencia contra el crimen organizado y técnicas de respuesta a crisis policiales.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_17",
+      "categoria": "Entorno de Operaciones",
+      "escenario": "En un operativo para desarticular pistas de aterrizaje clandestinas utilizadas por el narcotráfico en la selva, ¿qué labor te atrae?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Identificar las coordenadas satelitales y brindar cobertura aérea artillada durante la detonación de la pista.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Bloquear las vías fluviales adyacentes para que ningún delincuente pueda escapar en botes de alta velocidad.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Sembrar cargas de dinamita militar en el terreno y detonar cráteres que inhabiliten por completo el aeródromo.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Realizar peritajes criminalísticos, confiscar narcoavionetas y detener a los pilotos y custodios ilegales.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_18",
+      "categoria": "Entorno de Operaciones",
+      "escenario": "Si pudieras elegir tu bautizo de fuego operacional en las fuerzas peruanas, ¿en cuál te visualizas?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Completando con éxito tu primer vuelo solo en una aeronave de combate a alta velocidad.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Zarpando a mar abierto como Oficial de Guardia al mando de un buque de guerra surcando aguas bravas.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Marchando al frente de tu pelotón de fusileros en una zona de operaciones de selva o frontera.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Liderando una captura exitosa de una banda peligrosa en un operativo de alto impacto en la capital.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_19",
+      "categoria": "Entorno de Operaciones",
+      "escenario": "En una misión de ayuda humanitaria a comunidades nativas aisladas en la frontera de Loreto, ¿qué actividad te resulta más gratificante?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Aterrizar en pistas de tierra o acuatizar con aviones Twin Otter llevando personal médico y medicinas.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Llegar a bordo de una Plataforma Itinerante de Acción Social (PIAS) brindando atención médica dental y de salud.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Construir instalaciones comunitarias, escuelas y pozos de agua mediante batallones de ingeniería.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Brindar servicios de registro de identidad, seguridad y protección a niños y ancianos de la etnia.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_20",
+      "categoria": "Entorno de Operaciones",
+      "escenario": "Ante la hipótesis de un bloqueo marítimo o aéreo que amenace el abastecimiento energético de la nación, ¿dónde preferirías combatir?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "En el aire, disputando la superioridad aérea y neutralizando radares y baterías antiaéreas hostiles.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "En el mar, escoltando convoyes mercantes y cazando submarinos que intenten cortar las líneas de comunicación.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "En tierra firme, fortificando refinerías, plantas eléctricas y centros neurálgicos ante sabotajes.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "En las urbes, neutralizando células de espionaje, sabotaje urbano y manteniendo la calma ciudadana.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_21",
+      "categoria": "Tecnología y Armamento",
+      "escenario": "¿Qué tipo de tecnología militar de vanguardia despierta mayor curiosidad técnica en ti?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Sistemas de propulsión a reacción de turbinas aeronáuticas, aviónica digital y misiles aire-aire.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Sistemas de dirección de tiro naval, sonares de profundidad variable y torpedos pesados guiados por cable.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Sistemas de blindaje reactivo para tanques, cañones de artillería autopropulsada y cohetes de largo alcance.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Tecnología de identificación balística computarizada (IBIS), reconocimiento facial y dactiloscopia forense.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_22",
+      "categoria": "Tecnología y Armamento",
+      "escenario": "Si tuvieras que especializarte en el mantenimiento técnico de un armamento, ¿cuál preferirías dominar?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Sistemas de control de vuelo 'fly-by-wire' y cabinas de cristal de cazabombarderos.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Plantas motrices diésel marinas de gran tonelaje y sistemas de control de propulsión de buques.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Mecanismos de cierre y tubos cañón de obuses de campaña y morteros pesados de infantería.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Armamento individual táctico de asalto policial (fusiles SCAR, pistolas Sig Sauer y subfusiles MP5).",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_23",
+      "categoria": "Tecnología y Armamento",
+      "escenario": "En el campo de la ciberguerra y la defensa informática, ¿qué ámbito te gustaría liderar?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Blindar los enlaces satelitales y sistemas de mando y control del tráfico aéreo militar contra hackeos.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Asegurar la red informática táctica de las unidades de superficie y submarinos ante interferencias electrónicas.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Proteger las comunicaciones de radio táctica VHF/HF de las brigadas terrestres en operaciones.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Rastrear ciberdelitos, delitos informáticos, fraudes digitales y suplantaciones en la División de Delitos de Alta Tecnología.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_24",
+      "categoria": "Tecnología y Armamento",
+      "escenario": "¿Qué tipo de vehículo táctico te entusiasmaría operar y conducir en misiones reales?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Un avión de transporte táctico C-27J Spartan aterrizando en pistas cortas y no preparadas.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Un aerodeslizador 'Hovercraft' o lancha rápida patrullando esteros y playas con armamento pesado.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Un vehículo blindado portatropas sobre ruedas o tanqueta de combate superando zanjas y terraplenes.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Un vehículo blindado antimotines o patrullero inteligente equipado con cámaras de 360 grados.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_25",
+      "categoria": "Tecnología y Armamento",
+      "escenario": "En la planificación de un ataque de precisión a distancia, ¿qué arma táctica emplearías?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Bombas guiadas por láser o satélite (JDAM) lanzadas desde gran altitud por aeronaves de combate.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Misiles antibuque superficie-superficie Exocet lanzados desde más de 70 kilómetros de distancia en el mar.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Baterías de lanzacohetes múltiples de 122 mm barriendo posiciones fortificadas con fuego concentrado.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Equipos de tiradores designados con fusiles de francotirador de precisión milimétrica a media distancia.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_26",
+      "categoria": "Tecnología y Armamento",
+      "escenario": "Si te asignaran a un centro de investigación y desarrollo tecnológico militar, ¿qué proyecto elegirías?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Diseño y fabricación de drones aéreos no tripulados (UAV) de vigilancia y telemetría avanzada.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Construcción y modernización de buques auxiliares e investigación oceanográfica en los astilleros del SIMA.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Desarrollo de nuevos chalecos antibalas, blindajes ligeros y robots desminadores terrestres.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Creación de software de análisis predictivo del crimen y bases de datos integradas de personas requisitoriadas.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_27",
+      "categoria": "Tecnología y Armamento",
+      "escenario": "En la guerra electrónica (EW), ¿cuál consideras tu especialidad más atractiva?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Interferir las señales de radar enemigo y radares antiaéreos desde cápsulas de guerra electrónica en vuelo.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Generar señuelos acústicos y magnéticos para desviar torpedos y misiles guiados hacia buques aliados.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Interrumpir los enlaces de radiocomunicación táctica de las patrullas enemigas en tierra mediante perturbadores.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Intervenir y triangular señales de radio o telefonía de organizaciones criminales mediante equipos de escucha legal.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_28",
+      "categoria": "Tecnología y Armamento",
+      "escenario": "¿Qué tipo de simulador de entrenamiento avanzado desearías operar con mayor frecuencia?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Simulador de vuelo de cabina completa con gráficos inmersivos de combate y fallas de vuelo.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Simulador de puente de comando naval y control de averías con simulación de tormentas en altamar.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Polígono virtual de tiro táctico y simulador de tiro de tanques en escenarios de combate urbano.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Simulador de tiro situacional de polígono virtual para toma de decisiones de uso proporcional de la fuerza policial.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_29",
+      "categoria": "Tecnología y Armamento",
+      "escenario": "En relación con el paracaidismo y operaciones aerotransportadas, ¿qué rol prefieres?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Comandar la aeronave nodriza regulando altitud, velocidad y viento para el salto masivo de tropas.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Realizar saltos navales al mar con paracaídas para inserción rápida con botes neumáticos hacia costas enemigas.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Ejecutar saltos tácticos de enganche automático de combate terrestre integrando la brigada paracaidista del Ejército.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Realizar descenso con soga rápida (fast-rope) desde helicópteros para allanar azoteas de inmuebles en operativos.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_30",
+      "categoria": "Tecnología y Armamento",
+      "escenario": "Al trabajar con explosivos y desactivación de artefactos peligrosos, ¿qué campo te atrae más?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Montaje y calibración de armamento guiado y munición inteligente bajo alas de aeronaves en línea de vuelo.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Desactivación y barrido de minas submarinas magnéticas y de contacto en canales de navegación marítima.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Desminado humanitario en campos minados de frontera terrestre y voladuras de ingeniería militar.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Neutralización de coches bomba o paquetes sospechosos en ciudades como miembro de la UDEX policial.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_31",
+      "categoria": "Tecnología y Armamento",
+      "escenario": "¿Qué tipo de instrumentos y sensores de navegación disfrutas manipular?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Sistemas de navegación inercial (INS), horizontes artificiales y receptores GPS tácticos de aviación.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Cartas náuticas electrónicas, ecosondas, giroscopios y compases magnéticos de navegación en altamar.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Brújulas de rumbo militar, telémetros láser de artillería y mapas topográficos a escala 1:50,000.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Sistemas de geolocalización de patrulleros en tiempo real y cámaras de videovigilancia ciudadana integrada.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_32",
+      "categoria": "Tecnología y Armamento",
+      "escenario": "En el área de armamento antiaéreo, ¿en qué posición sientes mayor eficacia?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Operando baterías de misiles tierra-aire de alta cota para crear una cúpula de protección aérea sobre bases clave.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Comandando cañones automáticos antimisil tipo CIWS (Goalkeeper o Phalanx) en la popa de una fragata.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Operando misiles antiaéreos portátiles (MANPADS tipo Igla) en trincheras para derribar helicópteros enemigos.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Coordinando la evacuación y repliegue seguro de la población civil en refugios urbanos ante una alerta aérea.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_33",
+      "categoria": "Tecnología y Armamento",
+      "escenario": "Si te apasionan las telecomunicaciones militares, ¿qué infraestructura preferirías administrar?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Redes de enlace de datos 'Data-link' que transmiten información en milisegundos entre radares y aviones cazas.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Comunicaciones navales por radio de muy baja frecuencia (VLF) capaces de transmitir mensajes a submarinos sumergidos.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Redes de radioenlace por microondas y telefonía de campaña desplegadas a lo largo de los teatros de operaciones.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "La central de radiocomunicaciones policiales de emergencia (Central 105), despachando unidades a tiempo récord.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_34",
+      "categoria": "Tecnología y Armamento",
+      "escenario": "En un laboratorio de criminalística o peritaje técnico, ¿en qué área te gustaría ser especialista?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Investigación de accidentes e incidentes aéreos mediante lectura de cajas negras (FDR y CVR).",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Peritaje de colisiones y siniestros marítimos, análisis de cascos y resistencia de materiales náuticos.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Análisis de fallas mecánicas en tanques, fatiga de metales en cañones y trazabilidad de munición de guerra.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Balística forense, reactivación de huellas con luces forenses, grafotecnia y análisis de ADN criminal.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_35",
+      "categoria": "Tecnología y Armamento",
+      "escenario": "¿Qué tipo de armamento personal te genera mayor afinidad y destreza de empleo?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Arma de supervivencia y pistola reglamentaria de dotación de cabina para pilotos en caso de eyección.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Fusil de asalto marino resistente a la corrosión del agua salada y equipo de combate para abordajes anfibios.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Fusil de asalto Galil / Scar con lanzagranadas acoplado de 40 mm y ametralladora pesada de pelotón.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Arma de fuego corta para porte encubierto combinada con equipamiento de control no letal (taser, gas pimienta).",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_36",
+      "categoria": "Tecnología y Armamento",
+      "escenario": "En el empleo de drones tácticos no tripulados en misiones peruanas, ¿qué misión priorizarías?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Vuelos de gran autonomía a alta altitud para detectar pistas clandestinas y pasos fronterizos ilegales.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Drones de despegue vertical desde la cubierta de patrulleras para vigilar pesqueros extranjeros a gran distancia.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Microdrones de reconocimiento de bolsillo operados por soldados en patrulla para mirar detrás de cerros y quebradas.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Drones urbanos con cámaras de visión nocturna para seguir vehículos de asaltantes en persecuciones en la ciudad.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_37",
+      "categoria": "Tecnología y Armamento",
+      "escenario": "Si pudieras liderar la adquisición de nueva tecnología para tu institución, ¿por cuál votarías?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Una nueva escuadrilla de aviones caza supersónicos multifunción de última generación para la defensa del cielo patrio.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Nuevas corbetas misileras y patrulleras oceánicas construidas en el Perú con radares 3D.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Sistemas modernos de blindados 8x8 con cañones de tiro rápido y sistemas antimaterial para el Ejército.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Patrulleros con computadoras a bordo conectadas a Reniec, cámaras corporales 'bodycam' y pistolas eléctricas no letales.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_38",
+      "categoria": "Tecnología y Armamento",
+      "escenario": "¿Qué tipo de mantenimiento técnico preventivo te resulta más interesante?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Calibrar los instrumentos de aviónica y probar turbinas en bancos de prueba de alta potencia en hangares.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Efectuar pruebas de estanqueidad de casco, válvulas de inmersión y sistemas de control de averías navales.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Revisar los trenes de rodaje, orugas de tanques y sistemas de amortiguación de vehículos blindados de campaña.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Supervisar el mantenimiento mecánico de flotas de patrulleros y armamento reglamentario de comisarías.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_39",
+      "categoria": "Tecnología y Armamento",
+      "escenario": "En caso de un corte general de energía por sabotaje, ¿qué habilidad técnica aplicarías?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Activar los generadores auxiliares de emergencia para mantener encendidos los radares y balizas de aterrizaje.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Operar las plantas eléctricas diésel marinas para que el buque continúe navegando y combatiendo con autonomía.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Encender grupos electrógenos de campaña y desplegar líneas alámbricas para restablecer la comunicación táctica.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Desplegar inmediatamente cordones de seguridad para custodiar bancos, hospitales y evitar saqueos masivos en la ciudad.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_40",
+      "categoria": "Tecnología y Armamento",
+      "escenario": "Respecto a los sistemas de visión nocturna y optrónica militar, ¿cuál preferirías emplear?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Cámaras infrarrojas FLIR montadas bajo el morro de aeronaves que detectan firmas de calor a decenas de kilómetros.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Periscopios optrónicos de submarinos con visión térmica y telémetros para navegación sigilosa.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Monoculares térmicos y visores nocturnos montados en el casco del combatiente de infantería.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Cámaras térmicas portátiles para registrar allanamientos nocturnos y detectar delincuentes ocultos en techos.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_41",
+      "categoria": "Liderazgo Táctico",
+      "escenario": "Durante una misión, tu unidad recibe fuego hostil sorpresivo. ¿Cuál es tu reacción natural como líder?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Maniobrar inmediatamente con potencia aérea para ganar altitud, romper contacto y preparar un contraataque coordinado.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Ordenar zafarrancho de combate, maniobrar el timón para presentar el ángulo óptimo y abrir fuego con la artillería naval.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Ordenar a la tropa lanzarse a tierra, buscar cobertura, devolver el fuego de fusilería e iniciar el asalto por el flanco.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Proteger a los ciudadanos civiles presentes, parapetarte en un punto seguro, repeler la agresión y pedir refuerzos inmediatos.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_42",
+      "categoria": "Liderazgo Táctico",
+      "escenario": "Tu escuadrón o patrulla debe cumplir una misión con equipo limitado y condiciones meteorológicas adversas. ¿Cómo actúas?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Calculas con rigor los márgenes de combustible y peso de la aeronave para cumplir la misión con estricta seguridad aérea.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Refuerzas la disciplina de a bordo, organizas guardias rotativas estrictas y confías en la solidez del buque y la marinería.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Das el ejemplo cargando el mismo peso que tus soldados, infundiéndoles coraje espartano para no claudicar.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Mantienes la serenidad de tu equipo policial, priorizando el resguardo de la vida y el cumplimiento de la ley con ingenio.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_43",
+      "categoria": "Liderazgo Táctico",
+      "escenario": "Un subordinado muestra signos evidentes de desánimo o pánico antes de entrar en una operación de alto riesgo. ¿Qué haces?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Le recuerdas con voz serena y firme los cientos de horas de entrenamiento en simulador y los protocolos que garantizan el éxito.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Apelas al honor naval y la tradición de Grau, encomendándole una tarea concreta de combate para enfocar su mente.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Le hablas con energía fraterna, le ajustas el correaje y le transmites que en la patrulla nadie pelea solo.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Le recuerdas la promesa jurada de servir y proteger al ciudadano, tranquilizándolo con autoridad moral y respaldo profesional.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_44",
+      "categoria": "Liderazgo Táctico",
+      "escenario": "En un momento crítico, las comunicaciones con el Comando General se cortan por completo. ¿Cómo tomas la decisión?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Aplicas la doctrina aérea y la 'intención del comandante' para continuar la misión aérea o regresar con la aeronave a salvo.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Asumes el mando del buque como única autoridad en la inmensidad del mar y ejecutas las órdenes preestablecidas de combate.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Evalúas el terreno táctico terrestre y tomas la ofensiva para asegurar la posición sin esperar que te digan qué hacer.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Actúas conforme a la Constitución, el Código Procesal Penal y los principios de legalidad para preservar el orden.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_45",
+      "categoria": "Liderazgo Táctico",
+      "escenario": "Durante una operación conjunta, surge un desacuerdo táctico entre los oficiales sobre la mejor vía de aproximación. ¿Cómo procedes?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Presentas datos objetivos de cartas meteorológicas, techos de nubes y tiempos de vuelo para elegir la ruta más segura.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Propones una maniobra que minimice la exposición al fuego enemigo aprovechando la cobertura del mar y el sigilo.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Priorizas la velocidad y la sorpresa terrestre, decidiéndote por la ruta que permita mayor volumen de fuego de infantería.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Buscas la opción que garantice cero víctimas colaterales entre la población civil circundante.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_46",
+      "categoria": "Liderazgo Táctico",
+      "escenario": "Al finalizar una misión de alta intensidad, ¿cuál es tu primera prioridad como comandante de unidad?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Verificar el estado de las aeronaves, registrar novedades mecánicas y coordinar el reabastecimiento inmediato.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Pasar revista a la tripulación, inspeccionar los sistemas del buque y asegurar que todos los heridos sean atendidos en enfermería.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Contar el armamento, munición y pertrechos de la patrulla, asegurando que la tropa reciba alimentación caliente y descanso.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Elaborar el parte policial detallado, poner a los detenidos a disposición fiscal con cadena de custodia impecable.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_47",
+      "categoria": "Liderazgo Táctico",
+      "escenario": "En un ejercicio de supervivencia donde se han agotado las raciones de campaña, ¿cómo mantienes la moral?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Optimizas los recursos energéticos del equipo de supervivencia aeronáutico y transmites señales de auxilio con disciplina.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Racionas estrictamente las reservas de agua potable del bote salvavidas y recuerdas las épicas travesías navales de resistencia.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Enseñas a tu patrulla a recolectar frutos silvestres, cazar y construir refugios con técnicas de supervivencia militar.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Mantienes la serenidad de tu grupo, buscando contacto pacífico y respetuoso con pobladores locales para abastecerte.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_48",
+      "categoria": "Liderazgo Táctico",
+      "escenario": "¿Qué cualidad de liderazgo consideras más indispensable en un oficial o suboficial?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Precisión milimétrica, reflejos veloces y un cálculo mental impecable en condiciones de alta velocidad.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Temple sereno ante la tempestad, caballerosidad en el trato y visión estratégica a largo plazo.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Coraje combativo indomable, resistencia física sobrehumana y entrega total a sus soldados en el combate.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Integridad ética a toda prueba, sentido de justicia implacable y cercanía protectora hacia la ciudadanía.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_49",
+      "categoria": "Liderazgo Táctico",
+      "escenario": "Tu unidad sufre una baja en combate o servicio. ¿Cómo manejas el impacto psicológico en la tropa?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Rindes honores al camarada caído con vuelo ceremonial y enfocas a la escuadrilla en cumplir con excelencia la misión que él inició.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Realizas el toque de silencio naval con gallardía patriótica y fortaleces el juramento de no claudicar ante la adversidad.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Convocas a la tropa, permites el duelo con solemnidad y transformas el dolor en energía moral y disciplina de combate.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Acompañas a la familia del efectivo policial caído, garantizas su protección institucional y redoblas el compromiso con la justicia.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_50",
+      "categoria": "Liderazgo Táctico",
+      "escenario": "En una persecución en caliente de delincuentes que huyen hacia un área peligrosa, ¿cuál es tu orden táctica?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Cerrar las rutas de escape desde el aire con helicóptero e iluminar el área con faro de búsqueda de alta potencia.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Bloquear las salidas acuáticas o marítimas con patrulleras impidiendo que empleen embarcaciones para fugar.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Desplegar un cerco perimétrico militar en las vías de escape terrestres con puntos de control inexpugnables.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Ingresar con patrullas policiales de intervención rápida en formación táctica en cuña, neutralizando y reduciendo a los sospechosos.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_51",
+      "categoria": "Liderazgo Táctico",
+      "escenario": "Durante una inspección general de revista militar, ¿qué detalle evalúas con mayor rigurosidad?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "El cumplimiento exacto de las listas de chequeo de vuelo y la ausencia de objetos extraños en pistas y motores.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "La limpieza impecable de la cubierta, el zafarrancho de incendio y el lustre impecable de los metales del buque.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "El mantenimiento y engrase del armamento de combate, el brillo de las botas y el porte marcial de la tropa.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "La correcta presentación del uniforme policial, la operatividad de los grilletes, chalecos y la vigencia del carné de identidad.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_52",
+      "categoria": "Liderazgo Táctico",
+      "escenario": "Si te encomiendan formar a la nueva promoción de cadetes o alumnos, ¿cuál sería tu lema formativo?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "'Hacia las alturas con honor, ciencia aeronáutica y dominio del cielo de Quiñones.'",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "'Caballerosidad, disciplina naval inquebrantable y amor a las glorias de Grau y el mar.'",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "'Hasta quemar el último cartucho: coraje, subordinación y sacrificio por la patria terrestre.'",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "'Dios, Patria y Ley: defender a la sociedad con integridad, honor y valentía en las calles.'",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_53",
+      "categoria": "Liderazgo Táctico",
+      "escenario": "En un operativo donde un sospechoso utiliza a un rehén como escudo humano, ¿cómo actúas?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Mantienes la posición perimétrica con apoyo aéreo para brindar telemetría exacta a las fuerzas de asalto.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Aseguras que no existan vías de escape hacia el agua o litoral mientras los especialistas en crisis toman el control.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Tomas posición encubierta con fusil con mira óptica listo para actuar si la vida de inocentes corre peligro inminente.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Inicias protocolos de negociación policial de rehenes para inducir la rendición voluntaria del captor sin bajas.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_54",
+      "categoria": "Liderazgo Táctico",
+      "escenario": "Si debes coordinar un ataque conjunto a un enclave del narcoterrorismo en la selva, ¿qué aspecto asumes personalmente?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "La sincronización al segundo de los ataques aéreos de precisión para destruir los búnkeres antes del asalto.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "La inserción y extracción fluvial sigilosa de las patrullas en playas y riachuelos estratégicos.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "El asalto de infantería terrestre cuerpo a tierra, tomando trinchera por trinchera la posición fortificada.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "El cerco policial perimétrico exterior para capturar a los financistas y asegurar todas las pruebas incriminatorias.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_55",
+      "categoria": "Liderazgo Táctico",
+      "escenario": "Cuando un miembro de tu equipo comete una falta disciplinaria menor por descuido, ¿cómo la corriges?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Le exiges repasar los manuales de procedimientos técnicos y le asignas una sesión intensiva de entrenamiento controlado.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Le impones un servicio extra de guardia en muelle o cubierta, recordándole que en el mar el descuido de uno arriesga a todos.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Le aplicas de inmediato ejercicios físicos militares correctivos (planchas, trote con equipo) y sanción reglamentaria.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Le llamas la atención con firmeza institucional, registrando la falta conforme al régimen disciplinario policial.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_56",
+      "categoria": "Liderazgo Táctico",
+      "escenario": "Durante una marcha nocturna, tu unidad descubre que el camino principal está minado con artefactos explosivos improvisados. ¿Qué ordenas?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Solicitar apoyo aéreo inmediato para cartografiar con cámaras térmicas rutas alternas seguras libres de amenazas.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Desviar el avance hacia el eje fluvial más cercano para continuar la aproximación por agua protegidos en lanchas.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Detener la marcha, señalizar el área minada, ordenar a los zapadores de ingeniería abrir una brecha segura y avanzar.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Acordonar la zona, evacuar a pobladores locales que transiten por ahí y coordinar la neutralización con peritos UDEX.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_57",
+      "categoria": "Liderazgo Táctico",
+      "escenario": "En un combate cercano en área urbana o selvática, ¿qué principio táctico aplicas con mayor énfasis?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Dominio del aire y velocidad de reacción vertical para frustrar las maniobras del oponente.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Aseguramiento de los accesos acuáticos y control de puntos nodales con fuego naval sostenido.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Fuego y maniobra coordinada: una sección fija al enemigo con fuego mientras la otra asalta su retaguardia.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Control del entorno, identificación certera de blancos y uso gradual de la fuerza diferenciando civiles de agresores.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_58",
+      "categoria": "Liderazgo Táctico",
+      "escenario": "Si debes planificar una evacuación aeromédica de urgencia (MEDEVAC) bajo condiciones hostiles, ¿qué tarea asumes?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Pilotar el helicóptero de rescate aterrizando en una zona caliente para extraer al herido en segundos.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Coordinar la recepción del helicóptero en la cubierta de vuelo de una fragata y preparar el quirófano naval de a bordo.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Asegurar el perímetro terrestre con fusileros formando un anillo defensivo impenetrable alrededor del helicóptero.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Brindar los primeros auxilios tácticos de combate (TCCC), torniquetes y estabilización de signos vitales al herido.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_59",
+      "categoria": "Liderazgo Táctico",
+      "escenario": "Al recibir una orden de repliegue táctico temporal frente a una fuerza enemiga abrumadoramente superior, ¿cómo procedes?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Efectúas vuelos rasantes de distracción para proteger la retirada ordenada de las fuerzas terrestres aliadas.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Lanzas cortinas de humo naval y maniobras en zigzag para desenganchar los buques sin sufrir daños críticos.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Organizas una retaguardia combativa escalonada que frene el avance enemigo mientras el grueso de la tropa se reagrupa.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Evacúas al personal policial y a civiles resguardando todo el armamento y documentos clasificados para evitar su captura.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_60",
+      "categoria": "Liderazgo Táctico",
+      "escenario": "¿Qué reconocimiento militar o policial te llenaría de mayor orgullo recibir al culminar tu carrera?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Las Alas de Oro de Piloto Militar de Caza por haber defendido con gloria el espacio aéreo del Perú.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "El distintivo de Comando de Superficie o Submarinos por haber navegado custodiando el Mar de Grau con honor.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "La insignia de Comando de las Fuerzas Especiales del Ejército por haber vencido en el campo de batalla terrestre.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "La Medalla al Mérito Policial por haber desarticulado organizaciones criminales y devuelto la paz y seguridad a la ciudadanía.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_61",
+      "categoria": "Estilo de Vida",
+      "escenario": "¿Qué tipo de régimen de vida y convivencia cuartelaria se adapta mejor a tu personalidad?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Vivir en bases aéreas con régimen de alerta rápida, donde la disciplina técnica y los chequeos de vuelo marcan la rutina diaria.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Convivir meses confinado en alta mar a bordo de un buque de guerra, compartiendo camarotes reducidos con una hermandad de marineros.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "La vida ruda de campamento en cuarteles de campaña, durmiendo en carpas o trincheras bajo lluvia, sol o frío andino.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Vivir en comisarías y destacamentos urbanos, en contacto diario y directo con la realidad social y problemas de la calle.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_62",
+      "categoria": "Estilo de Vida",
+      "escenario": "Respecto a los periodos prolongados lejos de tu hogar y familia, ¿qué circunstancia tolerarías con mayor entereza?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Guardias de alerta continua en hangares a la espera de una orden de despegue inmediato para interceptar aeronaves.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Zarpar en comisiones de navegación internacional durante tres a seis meses sin tocar tierra firme.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Estar destacado en bases contraterroristas en la selva o puestos de vigilancia de frontera sin señal telefónica.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Servicios continuos de patrullaje callejero de 24x24 horas lidiando con emergencias ciudadanas y criminalidad constante.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_63",
+      "categoria": "Estilo de Vida",
+      "escenario": "¿Cuál de los siguientes uniformes institucionales portarías con mayor orgullo y vocación?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "El mameluco térmico de vuelo verde oliva o el uniforme azul de gala con insignias doradas de la FAP.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "El uniforme blanco de marina con gorra de plato o el mameluco azul marino naval de faena a bordo.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "El uniforme de campaña camuflado pixelado con boina negra o roja y botas de combate del Ejército.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "El uniforme verde policial con chaleco táctico, correaje y placa de autoridad policial en el pecho.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_64",
+      "categoria": "Estilo de Vida",
+      "escenario": "¿Qué tipo de actividad física diaria disfrutas más en tu entrenamiento personal?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Entrenamiento de fuerza isométrica, tolerancia a la gravedad (G) en centrífuga y natación para capacidad pulmonar.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Natación de larga distancia en mar abierto, saltos de borda y pruebas de supervivencia acuática militar.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Marchas forzadas de 25 kilómetros con mochila de 20 kg, carreras a campo traviesa y calistenia en barras.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Artes marciales mixtas, defensa personal policial, reducción de agresores y tiro en polígono bajo estrés.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_65",
+      "categoria": "Estilo de Vida",
+      "escenario": "En cuanto al ambiente acústico y sensorial de trabajo, ¿en cuál te sientes más enfocado?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "El rugido ensordecedor de las turbinas de propulsión a chorro en la línea de vuelo antes del despegue.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "El golpeteo constante del oleaje contra el casco de acero y el zumbido continuo de las máquinas del buque.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "El retumbar de los cañones de artillería pesada y el sonido del viento azotando las colinas de instrucción militar.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "El sonido de sirenas de patrulleros, radios policiales y la dinámica vibrante del tráfico y la calle urbana.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_66",
+      "categoria": "Estilo de Vida",
+      "escenario": "¿Cómo visualizas tu círculo social y de camaradería más íntimo?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Un grupo selecto de aviadores y mecánicos aeronáuticos unidos por el amor al vuelo y la ciencia aeroespacial.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Una tripulación naval unida por la tradición marítima, donde cada miembro conoce su puesto exacto en la nave.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Una hermandad de soldados de infantería y blindados que han compartido el sudor, lodo y sacrificio en la trinchera.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Un equipo de compañeros policías que se cuidan las espaldas día a día en los operativos peligrosos de la ciudad.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_67",
+      "categoria": "Estilo de Vida",
+      "escenario": "Respecto a los traslados y mudanzas frecuentes a lo largo de tu carrera, ¿qué perspectiva te motiva más?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Conocer las principales bases aéreas del país: Piura, Arequipa, Chiclayo, Pisco, Iquitos y Lima.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Prestar servicio en los puertos del Perú (Callao, Paita, Ilo, Chimbote) y navegar en misiones al extranjero.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Rotar por las diversas regiones militares: costa norte, selva amazónica, sierra central y frontera sur.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Servir en comisarías distritales, comisarías rurales, regiones policiales y frentes policiales del país.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_68",
+      "categoria": "Estilo de Vida",
+      "escenario": "¿Qué tipo de ceremonia militar te genera mayor emoción patriótica?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "El pase rasante a baja altitud de una formación de aviones cazabombarderos rompiendo el cielo en la Parada Militar.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "La revista naval en la Bahía de Miraflores con las fragatas y submarinos alineados rindiendo honores al Almirante Grau.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "El desfile marcial con paso de parada enérgico de las tropas del Ejército al compás de la banda de guerra en la Av. Brasil.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "La ceremonia de graduación de alféreces y suboficiales de la Policía jurando defender a la sociedad hasta ofrendar la vida.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_69",
+      "categoria": "Estilo de Vida",
+      "escenario": "Frente a la disciplina espartana y las exigencias de etiqueta militar, ¿qué ambiente prefieres?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Un ambiente donde prima la precisión técnica, la concentración en cabina y la serenidad analítica de la aviación.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Un régimen protocolar naval muy estricto, con códigos de etiqueta marítima, tradiciones centenarias y cortesía de a bordo.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Una disciplina castrense de mando directo, subordinación vertical sin fisuras y rigor en la vida de campaña.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Una disciplina orientada al respeto de la legalidad, el trato formal con autoridades judiciales y el servicio comunitario.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_70",
+      "categoria": "Estilo de Vida",
+      "escenario": "¿Cuál de las siguientes comidas de campaña tolerarías mejor durante semanas de misión?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Raciones deshidratadas de aviación y suplementos energéticos calculados para mantener la lucidez en vuelo.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Raciones de rancho preparadas en la cocina de un buque balanceándose sobre aguas bravas.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Raciones de combate militar enlatadas (MRE) calentadas con calentadores químicos en medio de la selva o puna.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Almorzar en el comedor de una comisaría o consumir refrigerios rápidos en el patrullero durante el servicio de vigilancia.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_71",
+      "categoria": "Estilo de Vida",
+      "escenario": "¿Qué tipo de exigencia física extrema consideras que supera mejor tu organismo?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Soportar la fuerza de gravedad acelerada (fuerzas G) que comprime el cuerpo durante maniobras acrobáticas aéreas.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Superar el mareo provocado por olas de cinco metros en tormentas en el Pacífico Sur manteniéndote de guardia.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Soportar marchas de varios días cargando armamento pesado en terrenos con fango hasta las rodillas o frío gélido.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Mantenerte de pie durante jornadas extensas de control de multitudes bajo sol intenso con chaleco y casco blindado.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_72",
+      "categoria": "Estilo de Vida",
+      "escenario": "En tus momentos de descanso tras una jornada de servicio, ¿qué ambiente disfrutas más?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "El silencio de una base aérea moderna revisando manuales de aerodinámica y simulaciones de navegación.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "La cubierta de popa de un buque contemplando el horizonte infinito del mar abierto al atardecer.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "La camaradería de la cuadra o barraca militar compartiendo anécdotas de maniobras junto a los camaradas de armas.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "El ambiente dinámico de la ciudad, interactuando con tu familia y conociendo la vida de tu comunidad local.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_73",
+      "categoria": "Estilo de Vida",
+      "escenario": "Respecto a los riesgos inherentes de la profesión, ¿cuál asumes con mayor determinación?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "El riesgo inherente al vuelo a alta velocidad, fallas de motor en altitud y condiciones climáticas severas.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "El peligro de averías en compartimientos estancos, vías de agua e incendios a bordo en medio del océano.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "El peligro directo del combate terrestre: emboscadas, fuego cruzado y artefactos explosivos improvisados.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "El riesgo cotidiano de enfrentarte a criminales armados en calles y callejones en defensa de la ciudadanía.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_74",
+      "categoria": "Estilo de Vida",
+      "escenario": "¿Qué valor moral o lema patrio guía con mayor fuerza tu proyecto de vida?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "'El valor no tiene límites en el cielo peruano', como el sacrificio de Quiñones en Quebrada Seca.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "'Caballerosidad, lealtad y gloria en el mar', honrando la memoria de Grau en el Combate de Angamos.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "'Pelear hasta quemar el último cartucho', siguiendo el ejemplo inmortal de Bolognesi en Arica.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "'El honor es mi divisa', defendiendo la paz y la justicia social como el valiente Mariano Santos Mateo.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_75",
+      "categoria": "Estilo de Vida",
+      "escenario": "Si pudieras elegir una especialidad secundaria para estudiar dentro de tu formación, ¿cuál elegirías?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Ingeniería aeronáutica, meteorología de aviación o control de tránsito aéreo.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Ciencias marítimas navales, oceanografía física o hidrografía y navegación de precisión.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Ciencias militares terrestres, táctica de infantería de armas combinadas o blindados.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Administración y ciencias policiales, derecho penal, criminología e investigación de homicidios.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_76",
+      "categoria": "Estilo de Vida",
+      "escenario": "En relación con el trabajo en equipo, ¿qué dinámica te resulta más cómoda?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Coordinación en cabina de dos pilotos (piloto y copiloto) sincronizados con el navegante y controladores aéreos.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Trabajo en una cadena de mando naval escalonada con cientos de marinos donde cada engranaje es vital para el buque.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Trabajo en una patrulla de 8 a 12 combatientes que viven, comen y combaten juntos en el terreno como hermanos.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Trabajo en binomio policial (conductor y operador de patrulla) actuando coordinadamente ante llamados del 105.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_77",
+      "categoria": "Estilo de Vida",
+      "escenario": "¿Qué tipo de instrucción militar te motivaría más dominar durante tu formación de cadete o alumno?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Prácticas de vuelo real, acrobacias de instrucción básica y procedimientos de emergencia en cabina.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "El viaje de instrucción en el Buque Escuela a Vela B.A.P. Unión aprendiendo navegación astronómica y cabuyería.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "El campamento militar de supervivencia y maniobras de tiro táctico en polígonos de terreno quebrado.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Prácticas de tiro defensivo policial, control de disturbios callejeros y técnicas de esposamiento y reducción.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_78",
+      "categoria": "Estilo de Vida",
+      "escenario": "Frente a la exigencia de una guardia militar de 24 horas continuas, ¿en cuál sientes mayor plenitud de servicio?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Guardia de alerta aeronáutica en la sala de operaciones aéreas, lista para scramble y despegue en menos de 5 minutos.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Guardia de mar en el puente de navegación o cuarto de control de máquinas supervisando la derrota del buque.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Guardia perimétrica y rondas tácticas en el cuartel o puesto de avanzada terrestre vigilando el horizonte.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Servicio de patrullaje de guardia en comisarías atendiendo denuncias ciudadanas y saliendo a responder emergencias.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_79",
+      "categoria": "Estilo de Vida",
+      "escenario": "¿Cómo prefieres que sea tu entorno físico habitual de trabajo durante los próximos 10 años?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Bases aéreas y pistas de aterrizaje, con tecnología avanzada y vistas abiertas al cielo peruano.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Cubiertas de buques, submarinos y puertos navales, oliendo la brisa marina y mirando el oleaje del océano.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Terrenos campestres, polígonos de maniobra, cerros, ríos y valles donde se forja el combatiente terrestre.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Calles, plazas, avenidas y comisarías de ciudades del Perú, inmerso en la vida y el contacto directo con la gente.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_80",
+      "categoria": "Estilo de Vida",
+      "escenario": "Al mirar hacia el futuro, ¿cómo te gustaría ser recordado por tus camaradas de armas?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Como un aviador de élite con nervios de acero que conquistó los cielos patrios con maestría técnica.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Como un marino ejemplar que surcó mares bravos con caballerosidad, protegiendo con honor el dominio marítimo.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Como un combatiente infatigable que nunca dio un paso atrás en la defensa de la soberanía e integridad territorial.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Como un policía incorruptible y valiente que devolvió la seguridad y tranquilidad a miles de ciudadanos peruanos.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_81",
+      "categoria": "Trato Civil y Leyes",
+      "escenario": "En una situación de disturbios graves y bloqueo de carreteras por protestas sociales, ¿cuál es tu función preferida?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Brindar puentes aéreos de transporte para trasladar alimentos de primera necesidad y medicinas a ciudades desabastecidas.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Custodiar los terminales marítimos de combustible y alimentos para que el comercio naval exterior no se paralice.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Resguardar activos críticos nacionales (plantas hidroeléctricas, aeropuertos y refinerías) en apoyo a la PNP.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Liderar a la Unidad de Servicios Especiales (USE) policial en el lugar, despejando la vía con diálogo y uso gradual de la fuerza.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_82",
+      "categoria": "Trato Civil y Leyes",
+      "escenario": "Al intervenir a un sospechoso que comete un delito flagrante en la vía pública, ¿cómo procedes?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Transmitir la posición del sospechoso a las unidades de superficie desde tu aeronave en misión de patrulla.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Asegurar el perímetro del puerto o muelle si el sospechoso intenta abordar una nave o fugar por mar.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Mantener la custodia de las instalaciones militares adyacentes para que no sean vulneradas durante la persecución.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Reducir al delincuente con técnicas de defensa personal, leerle sus derechos constitucionales y trasladarlo a la comisaría.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_83",
+      "categoria": "Trato Civil y Leyes",
+      "escenario": "En un caso donde se te ofrece un soborno o dádiva cuantiosa para pasar por alto una infracción grave, ¿cuál es tu proceder?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Rechazarlo categóricamente con desprecio ético e informar al comando de la base aérea para sanción penal.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Detener al infractor de inmediato por intento de cohecho a la autoridad naval y ponerlo en manos de la fiscalía.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Impedir el soborno con autoridad militar tajante, levantar el acta correspondiente y reportar a la superioridad.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Colocarle los grilletes al infractor por delito de cohecho activo en el acto y ponerlo a disposición de la fiscalía anticorrupción.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_84",
+      "categoria": "Trato Civil y Leyes",
+      "escenario": "En una intervención de rescate humanitario ante una inundación donde pobladores se niegan a evacuar por temor a robos, ¿cómo actúas?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Brindar apoyo con helicópteros mostrando que el tiempo corre y evacuar primero a los niños y personas de tercera edad.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Comprometer embarcaciones de la Marina en la zona para vigilar sus viviendas mientras ellos son puestos a salvo.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Establecer un campamento de albergue seguro del Ejército con vigilancia armada que garantice la protección de sus bienes.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Conversar con los dirigentes vecinales, garantizarles un servicio de patrullaje policial permanente en su barrio y evacuarlos.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_85",
+      "categoria": "Trato Civil y Leyes",
+      "escenario": "¿Qué principio constitucional peruano defenderías con mayor fervor patriótico?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "La soberanía e inviolabilidad del espacio aéreo nacional frente a incursiones de potencias extranjeras.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "La soberanía sobre el Mar de Grau hasta las 200 millas marinas y el lecho oceánico peruano.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "La integridad territorial y soberanía de las fronteras terrestres del Perú reconocidas por tratados.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "La defensa de la persona humana y el respeto de su dignidad como fin supremo de la sociedad y del Estado.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_86",
+      "categoria": "Trato Civil y Leyes",
+      "escenario": "En una acción cívica donde las fuerzas armadas construyen carreteras o postas en zonas altoandinas, ¿en qué área te ves?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Trasladando maquinaria especializada y equipos de telecomunicaciones por vía aérea en zonas inaccesibles.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Coordinando con las capitanías lacustres o fluviales el transporte de cemento y fierro por vías de agua.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Operando tractores y cargadores frontales de los Batallones de Ingeniería de Combate abriendo trochas en la roca.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Brindando seguridad integral en el perímetro de la obra e integrándote a la comunidad con programas de prevención social.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_87",
+      "categoria": "Trato Civil y Leyes",
+      "escenario": "Al enfrentarte a una denuncia de violencia familiar en una comunidad rural, ¿cómo procedes profesionalmente?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Facilitar el transporte aéreo de emergencia si la víctima requiere atención quirúrgica urgente en la capital.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Prestar auxilio en puestos de capitanía fluvial si el agresor intenta fugar por río y coordinar con autoridades civiles.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Coordinar con las autoridades de la guarnición para brindar refugio provisional a los agraviados si no hay comisaría cercana.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Intervenir de inmediato, detener al agresor en flagrancia, proteger a la víctima con medidas de protección y derivar a fiscalía.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_88",
+      "categoria": "Trato Civil y Leyes",
+      "escenario": "En una investigación sobre crimen organizado y extorsión a comerciantes, ¿qué fase del trabajo te resulta más apasionante?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "El soporte de vigilancia aérea discreta con cámaras de largo alcance siguiendo los movimientos de la banda.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "El control e inspección de contenedores y naves sospechosas en puertos donde los criminales intentan sacar drogas.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "El resguardo de depósitos de armas y apoyo táctico armado cuando se ejecuten operativos de alta peligrosidad.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "La inteligencia encubierta policial, el seguimiento de los delincuentes, escuchas legales y allanamiento de sus guaridas.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_89",
+      "categoria": "Trato Civil y Leyes",
+      "escenario": "Durante un conflicto limítrofe entre comunidades campesinas por linderos de tierras, ¿cuál es tu aporte?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Tomar fotografías aéreas de alta resolución y ortofotos georreferenciadas para que las autoridades delimiten con precisión.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Garantizar el libre tránsito de embarcaciones comunales si el conflicto involucra accesos a ríos o lagunas.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Mantener la neutralidad militar patriótica en el cuartel local sin tomar partido y garantizando la paz general.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Instalar mesas de diálogo policial y comunal, evitando enfrentamientos con armas blancas y preservando la armonía.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_90",
+      "categoria": "Trato Civil y Leyes",
+      "escenario": "Al capacitar a ciudadanos en temas de defensa y seguridad nacional, ¿en qué tema prefieres enfocarte?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Cultura aeroespacial, satélites peruanos y la importancia de defender el espacio aéreo soberano.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Conciencia marítima, la riqueza de las 200 millas del Mar de Grau y la presencia histórica en la Antártida.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Patriotismo, servicio militar voluntario y la defensa territorial ante cualquier agresión externa.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Seguridad ciudadana preventiva, juntas vecinales, derechos humanos y denuncia oportuna del delito.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_91",
+      "categoria": "Trato Civil y Leyes",
+      "escenario": "En un escenario electoral donde se te encomienda custodiar el material electoral (ánforas y cédulas), ¿cómo actúas?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Garantizar el transporte aéreo seguro de las actas electorales desde las localidades más remotas de la selva.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Custodiar el transporte marítimo y fluvial de las ánforas a lo largo del litoral y ríos fronterizos.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Brindar seguridad armada estricta en el exterior de los locales de votación de las provincias asignadas.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Mantener el orden público en el perímetro de los colegios electorales, evitando grescas y fiscalizando la ley seca.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_92",
+      "categoria": "Trato Civil y Leyes",
+      "escenario": "Ante el hallazgo de un cargamento ilícito de madera protegida talada en un parque nacional, ¿qué acción priorizas?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Patrullar desde el aire para geolocalizar los aserraderos clandestinos y las trochas de extracción ilegales.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Intervenir los convoyes de balsas y naves fluviales que transportan la madera por los ríos amazónicos.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Proteger a los guardaparques del SERNANP con presencia militar disuasiva en las reservas naturales.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Levantar el acta de incautación policial con la Fiscalía de Medio Ambiente e iniciar proceso penal a los taladores.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_93",
+      "categoria": "Trato Civil y Leyes",
+      "escenario": "Si te encuentras con un ciudadano extranjero indocumentado que ingresó al país por un paso clandestino, ¿cómo actúas?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Transmitir la información a los puestos de frontera desde patrullajes de reconocimiento aéreo.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Verificar si ingresó en embarcaciones pesqueras no registradas y controlar la bahía o caleta de llegada.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Custodiar militarmente el hito fronterizo para impedir el cruce masivo e irregular de personas.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Intervenirlo respetando sus derechos humanos, verificar antecedentes en Interpol y derivarlo a Migraciones para su expulsión legal.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_94",
+      "categoria": "Trato Civil y Leyes",
+      "escenario": "En una situación de conflicto armado donde capturan combatientes enemigos rendidos, ¿cómo aplicas el Derecho Internacional Humanitario?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Garantizar la evacuación segura de prisioneros heridos por vía aérea hacia centros de atención médica neutral.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Custodiar a los náufragos o prisioneros a bordo brindándoles abrigo, alimento y trato digno según la Convención de Ginebra.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Desarmarlos de inmediato, resguardar su integridad física como prisioneros de guerra y entregarlos al Comité Internacional de la Cruz Roja.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Actuar con estricto apego a las garantías legales, documentando su estado físico y entregándolos a las autoridades jurisdiccionales.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_95",
+      "categoria": "Trato Civil y Leyes",
+      "escenario": "Al participar en el rescate de víctimas de trata de personas en bares clandestinos de la selva o sierra, ¿qué rol te llena de mayor compromiso?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Operar aeronaves de extracción urgente para alejar a las víctimas rescatadas de la zona de peligro de los captores.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Impedir la fuga de las embarcaciones de los tratantes a través de ríos fronterizos con patrulleras marítimas y fluviales.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Asegurar el área exterior del campamento para repeler cualquier intento de ataque por sicarios de la mafia.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Irrumpir en el inmueble, liberar a las víctimas, capturar a los explotadores y brindar contención emocional a las agraviadas.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_96",
+      "categoria": "Trato Civil y Leyes",
+      "escenario": "En un operativo contra el contrabando de combustible en la frontera norte o sur del Perú, ¿en qué fase prefieres actuar?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Realizar vigilancia aérea infrarroja de noche para detectar las caravanas de camiones cisterna clandestinos.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Interceptar embarcaciones que transportan combustible adulterado en caletas costeras y desembocaduras.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Instalar retenes militares blindados en las rutas secundarias del desierto para bloquear el paso de los contrabandistas.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Allanar los grifos clandestinos, incautar el combustible adulterado y detener a los cabecillas de la red criminal.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_97",
+      "categoria": "Trato Civil y Leyes",
+      "escenario": "Al presentarse un caso de motín en un penal con rehenes, ¿qué tipo de intervención te gustaría liderar?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Mantener sobrevuelos disuasivos con helicópteros para coordinar las entradas tácticas desde el aire.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Custodiar el penal si está ubicado en una isla (como El Frontón históricamente) impidiendo cualquier evasión marítima.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Proveer un anillo perimétrico militar exterior blindado para evitar la fuga masiva hacia las afueras.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Ingresar con escudos y gases tácticos al interior del penal para reducir a los amotinados y liberar ilesos a los rehenes.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_98",
+      "categoria": "Trato Civil y Leyes",
+      "escenario": "Si te designan a un programa de acercamiento con jóvenes en riesgo de delincuencia en barrios difíciles, ¿qué les enseñarías?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "La disciplina de la aviación militar, el estudio de las ciencias aeroespaciales y el sueño de volar alto por el Perú.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "El respeto al mar, la navegación a vela, la natación y los valores de honor y caballerosidad naval.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "La disciplina del Ejército, el acondicionamiento físico, la perseverancia y el orgullo por la historia y la patria.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Educación cívica, respeto a las leyes, prevención de drogas y la importancia de forjar una vida de trabajo honesto.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_99",
+      "categoria": "Trato Civil y Leyes",
+      "escenario": "En un caso de investigación de corrupción dentro de una institución pública, ¿cuál es tu postura y proceder?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Cero tolerancia ética: auditar rigurosamente los presupuestos aeronáuticos y denunciar cualquier desvío de fondos.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Preservar el honor naval intachable, colaborando abiertamente con los inspectores para erradicar cualquier deshonestidad.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Honrar la memoria de los héroes del Ejército, manteniendo la pulcritud absoluta en el manejo de ranchos y pertrechos.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Liderar pesquisas de inteligencia en la Dirección contra la Corrupción (DIRCOCOR) para detener a funcionarios deshonestos.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    },
+    {
+      "id_dilema": "VOC_100",
+      "categoria": "Trato Civil y Leyes",
+      "escenario": "Al culminar tu formación y prestar juramento a la bandera nacional en la Plaza de Armas, ¿qué compromiso sella tu vocación?",
+      "opciones": [
+        {
+          "id_opcion": "A",
+          "texto_respuesta": "Ser custodio celoso del cielo de Quiñones, surcando el espacio aéreo con honor y soberanía indiscutible.",
+          "pesos_afinidad": {
+            "FAP": 10,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "B",
+          "texto_respuesta": "Proteger el Mar de Grau, surcando las 200 millas y los ríos amazónicos con la caballerosidad y entrega de Miguel Grau.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 10,
+            "Ejercito": 0,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "C",
+          "texto_respuesta": "Defender cada palmo de tierra del territorio peruano con lealtad inquebrantable, hasta quemar el último cartucho.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 10,
+            "PNP": 0
+          }
+        },
+        {
+          "id_opcion": "D",
+          "texto_respuesta": "Garantizar el orden interno, la paz social y la justicia, sirviendo a la comunidad peruana aun a costa de la propia vida.",
+          "pesos_afinidad": {
+            "FAP": 0,
+            "Marina": 0,
+            "Ejercito": 0,
+            "PNP": 10
+          }
+        }
+      ]
+    }
+  ]
+}

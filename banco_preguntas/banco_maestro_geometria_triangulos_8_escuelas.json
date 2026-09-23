@@ -1,0 +1,4338 @@
+{
+  "EMCH": [
+    {
+      "id_pregunta": "EMCH_GEO_TRI_001",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 1,
+      "enunciado": "En el examen de admisión de Escuela Militar de Chorrillos (EMCH - Oficiales), se plantea el siguiente problema: En un triángulo $ABC$, las medidas de sus ángulos internos son $x$, $2x + 10^\\circ$ y $3x - 10^\\circ$. Calcule la medida del menor ángulo interno.",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$30^\\circ$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$25^\\circ$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$35^\\circ$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$40^\\circ$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$20^\\circ$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Suma de ángulos internos: $x + (2x + 10^\\circ) + (3x - 10^\\circ) = 180^\\circ \\implies 6x = 180^\\circ \\implies x = 30^\\circ$. Los ángulos miden $30^\\circ, 70^\\circ, 80^\\circ$. El menor es $30^\\circ$."
+    },
+    {
+      "id_pregunta": "EMCH_GEO_TRI_002",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 1,
+      "enunciado": "En un triángulo rectángulo, la hipotenusa mide $25\\text{ m}$ y uno de sus catetos mide $15\\text{ m}$. Calcule la longitud del otro cateto.",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$20\\text{ m}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$18\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$22\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$16\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$12\\text{ m}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Por el teorema de Pitágoras: $c^2 = a^2 + b^2 \\implies 25^2 = 15^2 + b^2 \\implies 625 = 225 + b^2 \\implies b^2 = 400 \\implies b = 20\\text{ m}$."
+    },
+    {
+      "id_pregunta": "EMCH_GEO_TRI_003",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 1,
+      "enunciado": "Dos lados de un triángulo miden $6\\text{ cm}$ y $11\\text{ cm}$. ¿Cuántos valores enteros puede tomar la longitud del tercer lado?",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$11$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$10$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$12$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$9$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$8$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Teorema de existencia triangular: $11 - 6 < x < 11 + 6 \\implies 5 < x < 17$. Valores enteros: $x \\in \\{6, 7, \\dots, 16\\}$. Total $= 16 - 6 + 1 = 11$ valores."
+    },
+    {
+      "id_pregunta": "EMCH_GEO_TRI_004",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 1,
+      "enunciado": "En un triángulo rectángulo notable de $30^\\circ$ y $60^\\circ$, el cateto opuesto al ángulo de $30^\\circ$ mide $8\\sqrt{3}\\text{ cm}$. Calcule la longitud del cateto mayor.",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$24\\text{ cm}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$16\\sqrt{3}\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$16\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$12\\sqrt{3}\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$18\\text{ cm}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "En el triángulo notable $30^\\circ - 60^\\circ$, los catetos son $k$ y $k\\sqrt{3}$. Si $k = 8\\sqrt{3}\\text{ cm}$, el cateto opuesto a $60^\\circ$ mide $k\\sqrt{3} = 8\\sqrt{3} \\times \\sqrt{3} = 8(3) = 24\\text{ cm}$."
+    },
+    {
+      "id_pregunta": "EMCH_GEO_TRI_005",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 2,
+      "enunciado": "En un triángulo rectángulo, las proyecciones de los catetos sobre la hipotenusa miden $9\\text{ cm}$ y $16\\text{ cm}$. Calcule la longitud de la altura relativa a la hipotenusa.",
+      "apoyo_visual": {
+        "requiere_grafico": true,
+        "imagen_url": null,
+        "descripcion_para_diseñador": "Triángulo rectángulo con altura BH trazada a la hipotenusa AC dividida en segmentos AH = 9 cm y HC = 16 cm."
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$12\\text{ cm}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$10\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$14\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$15\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$12.5\\text{ cm}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Por relación métrica: $h^2 = m \\cdot n = 9 \\times 16 = 144 \\implies h = \\sqrt{144} = 12\\text{ cm}$."
+    },
+    {
+      "id_pregunta": "EMCH_GEO_TRI_006",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 2,
+      "enunciado": "En un triángulo $ABC$, los lados $AB$ y $BC$ miden $10\\text{ cm}$ y $15\\text{ cm}$ respectivamente. Si la base $AC$ mide $20\\text{ cm}$ y se traza la bisectriz interior $BD$, calcule la longitud del segmento menor determinado en la base ($AD$).",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$8\\text{ cm}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$12\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$6\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$9\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$7.5\\text{ cm}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Teorema de la bisectriz interior: $\\frac{AB}{BC} = \\frac{AD}{DC} \\implies \\frac{10}{15} = \\frac{2}{3} = \\frac{AD}{DC}$. Con $AD + DC = 20 \\implies 2k + 3k = 20 \\implies 5k = 20 \\implies k = 4$. Por tanto $AD = 2(4) = 8\\text{ cm}$."
+    },
+    {
+      "id_pregunta": "EMCH_GEO_TRI_007",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 2,
+      "enunciado": "En un triángulo rectángulo $ABC$ recto en $B$, se traza la mediana relativa a la hipotenusa $BM$ y la altura $BH$. Si $AC = 50\\text{ cm}$ y $BH = 24\\text{ cm}$, calcule la longitud del segmento $HM$.",
+      "apoyo_visual": {
+        "requiere_grafico": true,
+        "imagen_url": null,
+        "descripcion_para_diseñador": "Triángulo rectángulo ABC recto en B con hipotenusa AC = 50 cm, altura BH = 24 cm y mediana BM a la hipotenusa."
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$7\\text{ cm}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$9\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$6\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$8\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$10\\text{ cm}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Por teorema de la mediana a la hipotenusa: $BM = \\frac{AC}{2} = 25\\text{ cm}$. En el triángulo rectángulo $BHM$, la hipotenusa es $BM = 25\\text{ cm}$ y el cateto es $BH = 24\\text{ cm}$. Por Pitágoras: $HM = \\sqrt{25^2 - 24^2} = \\sqrt{625 - 576} = \\sqrt{49} = 7\\text{ cm}$."
+    },
+    {
+      "id_pregunta": "EMCH_GEO_TRI_008",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 2,
+      "enunciado": "Los catetos de un triángulo rectángulo miden $20\\text{ m}$ y $15\\text{ m}$. Calcule la longitud exacta de la altura relativa a la hipotenusa.",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$12\\text{ m}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$10\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$14\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$9\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$13.5\\text{ m}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Hipotenusa: $c = \\sqrt{20^2 + 15^2} = \\sqrt{400 + 225} = 25\\text{ m}$. Por relación métrica $a \\cdot b = c \\cdot h \\implies 20 \\times 15 = 25 \\times h \\implies 300 = 25h \\implies h = 12\\text{ m}$."
+    },
+    {
+      "id_pregunta": "EMCH_GEO_TRI_009",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 3,
+      "enunciado": "[Triangulación Balística de Observación de Artillería Obús D-30]: Dos puestos de observación $P_1$ y $P_2$ distanciados $1400\\text{ m}$ divisan un objetivo hostil $T$. El ángulo de visión en $P_1$ es de $53^\\circ$ respecto a la línea base $P_1 P_2$ y en $P_2$ es de $37^\\circ$. Sabiendo que forman un triángulo rectángulo ($53^\\circ + 37^\\circ = 90^\\circ$), determine la distancia directa desde el puesto $P_1$ hacia el objetivo $T$.",
+      "apoyo_visual": {
+        "requiere_grafico": true,
+        "imagen_url": null,
+        "descripcion_para_diseñador": "Triángulo rectángulo con hipotenusa P1-P2 = 1400 m, ángulo en P1 de 53° y en P2 de 37° con vértice del ángulo recto en T."
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$840\\text{ m}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$1120\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$960\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$700\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$1050\\text{ m}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Como los ángulos son $53^\\circ$ y $37^\\circ$, el ángulo en $T$ es recto ($90^\\circ$). En el triángulo notable $37^\\circ - 53^\\circ$, la hipotenusa es $5k = 1400\\text{ m} \\implies k = 280\\text{ m}$. El cateto adyacente a $53^\\circ$ (distancia $P_1 T$) es opuesto a $37^\\circ$, luego mide $3k = 3(280) = 840\\text{ m}$."
+    },
+    {
+      "id_pregunta": "EMCH_GEO_TRI_010",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 3,
+      "enunciado": "[Relaciones Métricas en Posicionamiento de Puesto de Observación Avanzado]: Un equipo de despliegue establece un perímetro triangular $ABC$ recto en $B$. Desde la posición $B$ se mide la distancia perpendicular hacia la línea de enlace $AC$ (hipotenusa), obteniéndose $h = 60\\text{ m}$. Si la proyección de la avanzada izquierda sobre $AC$ es $45\\text{ m}$, ¿cuál es la longitud total de la línea de enlace $AC$?",
+      "apoyo_visual": {
+        "requiere_grafico": true,
+        "imagen_url": null,
+        "descripcion_para_diseñador": "Triángulo rectángulo ABC recto en B con altura BH = 60 m a la hipotenusa AC y proyección AH = 45 m."
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$125\\text{ m}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$105\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$140\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$115\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$135\\text{ m}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Por relación métrica: $h^2 = m \\cdot n \\implies 60^2 = 45 \\cdot n \\implies 3600 = 45n \\implies n = 80\\text{ m}$. La hipotenusa total $AC = m + n = 45 + 80 = 125\\text{ m}$."
+    },
+    {
+      "id_pregunta": "EMCH_GEO_TRI_011",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 3,
+      "enunciado": "[Perímetro y Área de Vivac Táctico de Campaña]: Un área de confinamiento triangular $ABC$ tiene lados que miden $13\\text{ m}$, $14\\text{ m}$ y $15\\text{ m}$. Determine la longitud de la altura relativa al lado intermedio ($14\\text{ m}$) empleada como eje de penetración táctica.",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$12\\text{ m}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$10\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$11\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$13\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$9.5\\text{ m}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Por fórmula de Herón: semiperímetro $p = \\frac{13 + 14 + 15}{2} = 21\\text{ m}$. Área $S = \\sqrt{21(21 - 13)(21 - 14)(21 - 15)} = \\sqrt{21 \\times 8 \\times 7 \\times 6} = \\sqrt{7056} = 84\\text{ m}^2$. Como $S = \\frac{b \\cdot h}{2} \\implies 84 = \\frac{14 \\cdot h}{2} \\implies 84 = 7h \\implies h = 12\\text{ m}$."
+    },
+    {
+      "id_pregunta": "EMCH_GEO_TRI_012",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 3,
+      "enunciado": "[Ubicación del Centro de Gravedad (Baricentro) de una Zona de Aterrizaje de Helicópteros (LZ)]: Se requiere ubicar el centro de abastecimiento en el baricentro $G$ de un sector triangular $ABC$. Si la mediana principal trazada desde el vértice $B$ hacia el lado $AC$ tiene una longitud total de $36\\text{ metros}$, determine la distancia desde el vértice $B$ hasta el baricentro $G$.",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$24\\text{ metros}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$18\\text{ metros}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$12\\text{ metros}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$27\\text{ metros}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$20\\text{ metros}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Propiedad del baricentro: divide a cada mediana en la relación de $2$ a $1$ medida desde el vértice: $BG = 2GM$. Por tanto, $BG = \\frac{2}{3}(BM) = \\frac{2}{3}(36\\text{ m}) = 24\\text{ metros}$."
+    }
+  ],
+  "ETE": [
+    {
+      "id_pregunta": "ETE_GEO_TRI_001",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 1,
+      "enunciado": "En el examen de admisión de Escuela Técnica del Ejército (ETE - Suboficiales), se plantea el siguiente problema: En un triángulo $ABC$, las medidas de sus ángulos internos son $x$, $2x + 10^\\circ$ y $3x - 10^\\circ$. Calcule la medida del menor ángulo interno.",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$30^\\circ$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$25^\\circ$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$35^\\circ$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$40^\\circ$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$20^\\circ$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Suma de ángulos internos: $x + (2x + 10^\\circ) + (3x - 10^\\circ) = 180^\\circ \\implies 6x = 180^\\circ \\implies x = 30^\\circ$. Los ángulos miden $30^\\circ, 70^\\circ, 80^\\circ$. El menor es $30^\\circ$."
+    },
+    {
+      "id_pregunta": "ETE_GEO_TRI_002",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 1,
+      "enunciado": "En un triángulo rectángulo, la hipotenusa mide $25\\text{ m}$ y uno de sus catetos mide $15\\text{ m}$. Calcule la longitud del otro cateto.",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$20\\text{ m}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$18\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$22\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$16\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$12\\text{ m}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Por el teorema de Pitágoras: $c^2 = a^2 + b^2 \\implies 25^2 = 15^2 + b^2 \\implies 625 = 225 + b^2 \\implies b^2 = 400 \\implies b = 20\\text{ m}$."
+    },
+    {
+      "id_pregunta": "ETE_GEO_TRI_003",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 1,
+      "enunciado": "Dos lados de un triángulo miden $6\\text{ cm}$ y $11\\text{ cm}$. ¿Cuántos valores enteros puede tomar la longitud del tercer lado?",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$11$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$10$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$12$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$9$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$8$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Teorema de existencia triangular: $11 - 6 < x < 11 + 6 \\implies 5 < x < 17$. Valores enteros: $x \\in \\{6, 7, \\dots, 16\\}$. Total $= 16 - 6 + 1 = 11$ valores."
+    },
+    {
+      "id_pregunta": "ETE_GEO_TRI_004",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 1,
+      "enunciado": "En un triángulo rectángulo notable de $30^\\circ$ y $60^\\circ$, el cateto opuesto al ángulo de $30^\\circ$ mide $8\\sqrt{3}\\text{ cm}$. Calcule la longitud del cateto mayor.",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$24\\text{ cm}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$16\\sqrt{3}\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$16\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$12\\sqrt{3}\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$18\\text{ cm}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "En el triángulo notable $30^\\circ - 60^\\circ$, los catetos son $k$ y $k\\sqrt{3}$. Si $k = 8\\sqrt{3}\\text{ cm}$, el cateto opuesto a $60^\\circ$ mide $k\\sqrt{3} = 8\\sqrt{3} \\times \\sqrt{3} = 8(3) = 24\\text{ cm}$."
+    },
+    {
+      "id_pregunta": "ETE_GEO_TRI_005",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 2,
+      "enunciado": "En un triángulo rectángulo, las proyecciones de los catetos sobre la hipotenusa miden $9\\text{ cm}$ y $16\\text{ cm}$. Calcule la longitud de la altura relativa a la hipotenusa.",
+      "apoyo_visual": {
+        "requiere_grafico": true,
+        "imagen_url": null,
+        "descripcion_para_diseñador": "Triángulo rectángulo con altura BH trazada a la hipotenusa AC dividida en segmentos AH = 9 cm y HC = 16 cm."
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$12\\text{ cm}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$10\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$14\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$15\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$12.5\\text{ cm}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Por relación métrica: $h^2 = m \\cdot n = 9 \\times 16 = 144 \\implies h = \\sqrt{144} = 12\\text{ cm}$."
+    },
+    {
+      "id_pregunta": "ETE_GEO_TRI_006",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 2,
+      "enunciado": "En un triángulo $ABC$, los lados $AB$ y $BC$ miden $10\\text{ cm}$ y $15\\text{ cm}$ respectivamente. Si la base $AC$ mide $20\\text{ cm}$ y se traza la bisectriz interior $BD$, calcule la longitud del segmento menor determinado en la base ($AD$).",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$8\\text{ cm}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$12\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$6\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$9\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$7.5\\text{ cm}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Teorema de la bisectriz interior: $\\frac{AB}{BC} = \\frac{AD}{DC} \\implies \\frac{10}{15} = \\frac{2}{3} = \\frac{AD}{DC}$. Con $AD + DC = 20 \\implies 2k + 3k = 20 \\implies 5k = 20 \\implies k = 4$. Por tanto $AD = 2(4) = 8\\text{ cm}$."
+    },
+    {
+      "id_pregunta": "ETE_GEO_TRI_007",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 2,
+      "enunciado": "En un triángulo rectángulo $ABC$ recto en $B$, se traza la mediana relativa a la hipotenusa $BM$ y la altura $BH$. Si $AC = 50\\text{ cm}$ y $BH = 24\\text{ cm}$, calcule la longitud del segmento $HM$.",
+      "apoyo_visual": {
+        "requiere_grafico": true,
+        "imagen_url": null,
+        "descripcion_para_diseñador": "Triángulo rectángulo ABC recto en B con hipotenusa AC = 50 cm, altura BH = 24 cm y mediana BM a la hipotenusa."
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$7\\text{ cm}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$9\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$6\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$8\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$10\\text{ cm}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Por teorema de la mediana a la hipotenusa: $BM = \\frac{AC}{2} = 25\\text{ cm}$. En el triángulo rectángulo $BHM$, la hipotenusa es $BM = 25\\text{ cm}$ y el cateto es $BH = 24\\text{ cm}$. Por Pitágoras: $HM = \\sqrt{25^2 - 24^2} = \\sqrt{625 - 576} = \\sqrt{49} = 7\\text{ cm}$."
+    },
+    {
+      "id_pregunta": "ETE_GEO_TRI_008",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 2,
+      "enunciado": "Los catetos de un triángulo rectángulo miden $20\\text{ m}$ y $15\\text{ m}$. Calcule la longitud exacta de la altura relativa a la hipotenusa.",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$12\\text{ m}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$10\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$14\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$9\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$13.5\\text{ m}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Hipotenusa: $c = \\sqrt{20^2 + 15^2} = \\sqrt{400 + 225} = 25\\text{ m}$. Por relación métrica $a \\cdot b = c \\cdot h \\implies 20 \\times 15 = 25 \\times h \\implies 300 = 25h \\implies h = 12\\text{ m}$."
+    },
+    {
+      "id_pregunta": "ETE_GEO_TRI_009",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 3,
+      "enunciado": "[Tirantes de Fijación de Antena de Transmisiones de Campaña]: Dos puestos de observación $P_1$ y $P_2$ distanciados $1400\\text{ m}$ divisan un objetivo hostil $T$. El ángulo de visión en $P_1$ es de $53^\\circ$ respecto a la línea base $P_1 P_2$ y en $P_2$ es de $37^\\circ$. Sabiendo que forman un triángulo rectángulo ($53^\\circ + 37^\\circ = 90^\\circ$), determine la distancia directa desde el puesto $P_1$ hacia el objetivo $T$.",
+      "apoyo_visual": {
+        "requiere_grafico": true,
+        "imagen_url": null,
+        "descripcion_para_diseñador": "Triángulo rectángulo con hipotenusa P1-P2 = 1400 m, ángulo en P1 de 53° y en P2 de 37° con vértice del ángulo recto en T."
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$840\\text{ m}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$1120\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$960\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$700\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$1050\\text{ m}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Como los ángulos son $53^\\circ$ y $37^\\circ$, el ángulo en $T$ es recto ($90^\\circ$). En el triángulo notable $37^\\circ - 53^\\circ$, la hipotenusa es $5k = 1400\\text{ m} \\implies k = 280\\text{ m}$. El cateto adyacente a $53^\\circ$ (distancia $P_1 T$) es opuesto a $37^\\circ$, luego mide $3k = 3(280) = 840\\text{ m}$."
+    },
+    {
+      "id_pregunta": "ETE_GEO_TRI_010",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 3,
+      "enunciado": "[Rampa de Desembarco y Carga de Blindados M-113]: Un equipo de despliegue establece un perímetro triangular $ABC$ recto en $B$. Desde la posición $B$ se mide la distancia perpendicular hacia la línea de enlace $AC$ (hipotenusa), obteniéndose $h = 60\\text{ m}$. Si la proyección de la avanzada izquierda sobre $AC$ es $45\\text{ m}$, ¿cuál es la longitud total de la línea de enlace $AC$?",
+      "apoyo_visual": {
+        "requiere_grafico": true,
+        "imagen_url": null,
+        "descripcion_para_diseñador": "Triángulo rectángulo ABC recto en B con altura BH = 60 m a la hipotenusa AC y proyección AH = 45 m."
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$125\\text{ m}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$105\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$140\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$115\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$135\\text{ m}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Por relación métrica: $h^2 = m \\cdot n \\implies 60^2 = 45 \\cdot n \\implies 3600 = 45n \\implies n = 80\\text{ m}$. La hipotenusa total $AC = m + n = 45 + 80 = 125\\text{ m}$."
+    },
+    {
+      "id_pregunta": "ETE_GEO_TRI_011",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 3,
+      "enunciado": "[Cerramiento Perimétrico con Concertina en Base Contrasubversiva]: Un área de confinamiento triangular $ABC$ tiene lados que miden $13\\text{ m}$, $14\\text{ m}$ y $15\\text{ m}$. Determine la longitud de la altura relativa al lado intermedio ($14\\text{ m}$) empleada como eje de penetración táctica.",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$12\\text{ m}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$10\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$11\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$13\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$9.5\\text{ m}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Por fórmula de Herón: semiperímetro $p = \\frac{13 + 14 + 15}{2} = 21\\text{ m}$. Área $S = \\sqrt{21(21 - 13)(21 - 14)(21 - 15)} = \\sqrt{21 \\times 8 \\times 7 \\times 6} = \\sqrt{7056} = 84\\text{ m}^2$. Como $S = \\frac{b \\cdot h}{2} \\implies 84 = \\frac{14 \\cdot h}{2} \\implies 84 = 7h \\implies h = 12\\text{ m}$."
+    },
+    {
+      "id_pregunta": "ETE_GEO_TRI_012",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 3,
+      "enunciado": "[Estructura Triangular de Soporte en Puente Mecano Tipo Bailey]: Se requiere ubicar el centro de abastecimiento en el baricentro $G$ de un sector triangular $ABC$. Si la mediana principal trazada desde el vértice $B$ hacia el lado $AC$ tiene una longitud total de $36\\text{ metros}$, determine la distancia desde el vértice $B$ hasta el baricentro $G$.",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$24\\text{ metros}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$18\\text{ metros}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$12\\text{ metros}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$27\\text{ metros}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$20\\text{ metros}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Propiedad del baricentro: divide a cada mediana en la relación de $2$ a $1$ medida desde el vértice: $BG = 2GM$. Por tanto, $BG = \\frac{2}{3}(BM) = \\frac{2}{3}(36\\text{ m}) = 24\\text{ metros}$."
+    }
+  ],
+  "ENP": [
+    {
+      "id_pregunta": "ENP_GEO_TRI_001",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 1,
+      "enunciado": "En el examen de admisión de Escuela Naval del Perú (ENP - Oficiales), se plantea el siguiente problema: En un triángulo $ABC$, las medidas de sus ángulos internos son $x$, $2x + 10^\\circ$ y $3x - 10^\\circ$. Calcule la medida del menor ángulo interno.",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$30^\\circ$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$25^\\circ$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$35^\\circ$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$40^\\circ$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$20^\\circ$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Suma de ángulos internos: $x + (2x + 10^\\circ) + (3x - 10^\\circ) = 180^\\circ \\implies 6x = 180^\\circ \\implies x = 30^\\circ$. Los ángulos miden $30^\\circ, 70^\\circ, 80^\\circ$. El menor es $30^\\circ$."
+    },
+    {
+      "id_pregunta": "ENP_GEO_TRI_002",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 1,
+      "enunciado": "En un triángulo rectángulo, la hipotenusa mide $25\\text{ m}$ y uno de sus catetos mide $15\\text{ m}$. Calcule la longitud del otro cateto.",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$20\\text{ m}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$18\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$22\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$16\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$12\\text{ m}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Por el teorema de Pitágoras: $c^2 = a^2 + b^2 \\implies 25^2 = 15^2 + b^2 \\implies 625 = 225 + b^2 \\implies b^2 = 400 \\implies b = 20\\text{ m}$."
+    },
+    {
+      "id_pregunta": "ENP_GEO_TRI_003",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 1,
+      "enunciado": "Dos lados de un triángulo miden $6\\text{ cm}$ y $11\\text{ cm}$. ¿Cuántos valores enteros puede tomar la longitud del tercer lado?",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$11$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$10$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$12$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$9$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$8$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Teorema de existencia triangular: $11 - 6 < x < 11 + 6 \\implies 5 < x < 17$. Valores enteros: $x \\in \\{6, 7, \\dots, 16\\}$. Total $= 16 - 6 + 1 = 11$ valores."
+    },
+    {
+      "id_pregunta": "ENP_GEO_TRI_004",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 1,
+      "enunciado": "En un triángulo rectángulo notable de $30^\\circ$ y $60^\\circ$, el cateto opuesto al ángulo de $30^\\circ$ mide $8\\sqrt{3}\\text{ cm}$. Calcule la longitud del cateto mayor.",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$24\\text{ cm}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$16\\sqrt{3}\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$16\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$12\\sqrt{3}\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$18\\text{ cm}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "En el triángulo notable $30^\\circ - 60^\\circ$, los catetos son $k$ y $k\\sqrt{3}$. Si $k = 8\\sqrt{3}\\text{ cm}$, el cateto opuesto a $60^\\circ$ mide $k\\sqrt{3} = 8\\sqrt{3} \\times \\sqrt{3} = 8(3) = 24\\text{ cm}$."
+    },
+    {
+      "id_pregunta": "ENP_GEO_TRI_005",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 2,
+      "enunciado": "En un triángulo rectángulo, las proyecciones de los catetos sobre la hipotenusa miden $9\\text{ cm}$ y $16\\text{ cm}$. Calcule la longitud de la altura relativa a la hipotenusa.",
+      "apoyo_visual": {
+        "requiere_grafico": true,
+        "imagen_url": null,
+        "descripcion_para_diseñador": "Triángulo rectángulo con altura BH trazada a la hipotenusa AC dividida en segmentos AH = 9 cm y HC = 16 cm."
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$12\\text{ cm}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$10\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$14\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$15\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$12.5\\text{ cm}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Por relación métrica: $h^2 = m \\cdot n = 9 \\times 16 = 144 \\implies h = \\sqrt{144} = 12\\text{ cm}$."
+    },
+    {
+      "id_pregunta": "ENP_GEO_TRI_006",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 2,
+      "enunciado": "En un triángulo $ABC$, los lados $AB$ y $BC$ miden $10\\text{ cm}$ y $15\\text{ cm}$ respectivamente. Si la base $AC$ mide $20\\text{ cm}$ y se traza la bisectriz interior $BD$, calcule la longitud del segmento menor determinado en la base ($AD$).",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$8\\text{ cm}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$12\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$6\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$9\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$7.5\\text{ cm}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Teorema de la bisectriz interior: $\\frac{AB}{BC} = \\frac{AD}{DC} \\implies \\frac{10}{15} = \\frac{2}{3} = \\frac{AD}{DC}$. Con $AD + DC = 20 \\implies 2k + 3k = 20 \\implies 5k = 20 \\implies k = 4$. Por tanto $AD = 2(4) = 8\\text{ cm}$."
+    },
+    {
+      "id_pregunta": "ENP_GEO_TRI_007",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 2,
+      "enunciado": "En un triángulo rectángulo $ABC$ recto en $B$, se traza la mediana relativa a la hipotenusa $BM$ y la altura $BH$. Si $AC = 50\\text{ cm}$ y $BH = 24\\text{ cm}$, calcule la longitud del segmento $HM$.",
+      "apoyo_visual": {
+        "requiere_grafico": true,
+        "imagen_url": null,
+        "descripcion_para_diseñador": "Triángulo rectángulo ABC recto en B con hipotenusa AC = 50 cm, altura BH = 24 cm y mediana BM a la hipotenusa."
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$7\\text{ cm}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$9\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$6\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$8\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$10\\text{ cm}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Por teorema de la mediana a la hipotenusa: $BM = \\frac{AC}{2} = 25\\text{ cm}$. En el triángulo rectángulo $BHM$, la hipotenusa es $BM = 25\\text{ cm}$ y el cateto es $BH = 24\\text{ cm}$. Por Pitágoras: $HM = \\sqrt{25^2 - 24^2} = \\sqrt{625 - 576} = \\sqrt{49} = 7\\text{ cm}$."
+    },
+    {
+      "id_pregunta": "ENP_GEO_TRI_008",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 2,
+      "enunciado": "Los catetos de un triángulo rectángulo miden $20\\text{ m}$ y $15\\text{ m}$. Calcule la longitud exacta de la altura relativa a la hipotenusa.",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$12\\text{ m}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$10\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$14\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$9\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$13.5\\text{ m}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Hipotenusa: $c = \\sqrt{20^2 + 15^2} = \\sqrt{400 + 225} = 25\\text{ m}$. Por relación métrica $a \\cdot b = c \\cdot h \\implies 20 \\times 15 = 25 \\times h \\implies 300 = 25h \\implies h = 12\\text{ m}$."
+    },
+    {
+      "id_pregunta": "ENP_GEO_TRI_009",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 3,
+      "enunciado": "[Triangulación Náutica Radar desde Buque Insignia hacia Contacto Desconocido]: Dos puestos de observación $P_1$ y $P_2$ distanciados $1400\\text{ m}$ divisan un objetivo hostil $T$. El ángulo de visión en $P_1$ es de $53^\\circ$ respecto a la línea base $P_1 P_2$ y en $P_2$ es de $37^\\circ$. Sabiendo que forman un triángulo rectángulo ($53^\\circ + 37^\\circ = 90^\\circ$), determine la distancia directa desde el puesto $P_1$ hacia el objetivo $T$.",
+      "apoyo_visual": {
+        "requiere_grafico": true,
+        "imagen_url": null,
+        "descripcion_para_diseñador": "Triángulo rectángulo con hipotenusa P1-P2 = 1400 m, ángulo en P1 de 53° y en P2 de 37° con vértice del ángulo recto en T."
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$840\\text{ m}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$1120\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$960\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$700\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$1050\\text{ m}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Como los ángulos son $53^\\circ$ y $37^\\circ$, el ángulo en $T$ es recto ($90^\\circ$). En el triángulo notable $37^\\circ - 53^\\circ$, la hipotenusa es $5k = 1400\\text{ m} \\implies k = 280\\text{ m}$. El cateto adyacente a $53^\\circ$ (distancia $P_1 T$) es opuesto a $37^\\circ$, luego mide $3k = 3(280) = 840\\text{ m}$."
+    },
+    {
+      "id_pregunta": "ENP_GEO_TRI_010",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 3,
+      "enunciado": "[Senda de Aproximación Helitransportada a Cubierta de Vuelo de Fragata Misilera]: Un equipo de despliegue establece un perímetro triangular $ABC$ recto en $B$. Desde la posición $B$ se mide la distancia perpendicular hacia la línea de enlace $AC$ (hipotenusa), obteniéndose $h = 60\\text{ m}$. Si la proyección de la avanzada izquierda sobre $AC$ es $45\\text{ m}$, ¿cuál es la longitud total de la línea de enlace $AC$?",
+      "apoyo_visual": {
+        "requiere_grafico": true,
+        "imagen_url": null,
+        "descripcion_para_diseñador": "Triángulo rectángulo ABC recto en B con altura BH = 60 m a la hipotenusa AC y proyección AH = 45 m."
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$125\\text{ m}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$105\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$140\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$115\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$135\\text{ m}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Por relación métrica: $h^2 = m \\cdot n \\implies 60^2 = 45 \\cdot n \\implies 3600 = 45n \\implies n = 80\\text{ m}$. La hipotenusa total $AC = m + n = 45 + 80 = 125\\text{ m}$."
+    },
+    {
+      "id_pregunta": "ENP_GEO_TRI_011",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 3,
+      "enunciado": "[Área de Exploración Triangular Sonar en Búsqueda Antisubmarina]: Un área de confinamiento triangular $ABC$ tiene lados que miden $13\\text{ m}$, $14\\text{ m}$ y $15\\text{ m}$. Determine la longitud de la altura relativa al lado intermedio ($14\\text{ m}$) empleada como eje de penetración táctica.",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$12\\text{ m}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$10\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$11\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$13\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$9.5\\text{ m}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Por fórmula de Herón: semiperímetro $p = \\frac{13 + 14 + 15}{2} = 21\\text{ m}$. Área $S = \\sqrt{21(21 - 13)(21 - 14)(21 - 15)} = \\sqrt{21 \\times 8 \\times 7 \\times 6} = \\sqrt{7056} = 84\\text{ m}^2$. Como $S = \\frac{b \\cdot h}{2} \\implies 84 = \\frac{14 \\cdot h}{2} \\implies 84 = 7h \\implies h = 12\\text{ m}$."
+    },
+    {
+      "id_pregunta": "ENP_GEO_TRI_012",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 3,
+      "enunciado": "[Triángulo de Velocidades de Navegación y Deriva por Viento y Corriente]: Se requiere ubicar el centro de abastecimiento en el baricentro $G$ de un sector triangular $ABC$. Si la mediana principal trazada desde el vértice $B$ hacia el lado $AC$ tiene una longitud total de $36\\text{ metros}$, determine la distancia desde el vértice $B$ hasta el baricentro $G$.",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$24\\text{ metros}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$18\\text{ metros}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$12\\text{ metros}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$27\\text{ metros}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$20\\text{ metros}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Propiedad del baricentro: divide a cada mediana en la relación de $2$ a $1$ medida desde el vértice: $BG = 2GM$. Por tanto, $BG = \\frac{2}{3}(BM) = \\frac{2}{3}(36\\text{ m}) = 24\\text{ metros}$."
+    }
+  ],
+  "CITEN": [
+    {
+      "id_pregunta": "CITEN_GEO_TRI_001",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 1,
+      "enunciado": "En el examen de admisión de Centro de Instrucción Técnica y Entrenamiento Naval (CITEN - Suboficiales), se plantea el siguiente problema: En un triángulo $ABC$, las medidas de sus ángulos internos son $x$, $2x + 10^\\circ$ y $3x - 10^\\circ$. Calcule la medida del menor ángulo interno.",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$30^\\circ$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$25^\\circ$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$35^\\circ$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$40^\\circ$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$20^\\circ$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Suma de ángulos internos: $x + (2x + 10^\\circ) + (3x - 10^\\circ) = 180^\\circ \\implies 6x = 180^\\circ \\implies x = 30^\\circ$. Los ángulos miden $30^\\circ, 70^\\circ, 80^\\circ$. El menor es $30^\\circ$."
+    },
+    {
+      "id_pregunta": "CITEN_GEO_TRI_002",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 1,
+      "enunciado": "En un triángulo rectángulo, la hipotenusa mide $25\\text{ m}$ y uno de sus catetos mide $15\\text{ m}$. Calcule la longitud del otro cateto.",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$20\\text{ m}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$18\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$22\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$16\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$12\\text{ m}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Por el teorema de Pitágoras: $c^2 = a^2 + b^2 \\implies 25^2 = 15^2 + b^2 \\implies 625 = 225 + b^2 \\implies b^2 = 400 \\implies b = 20\\text{ m}$."
+    },
+    {
+      "id_pregunta": "CITEN_GEO_TRI_003",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 1,
+      "enunciado": "Dos lados de un triángulo miden $6\\text{ cm}$ y $11\\text{ cm}$. ¿Cuántos valores enteros puede tomar la longitud del tercer lado?",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$11$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$10$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$12$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$9$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$8$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Teorema de existencia triangular: $11 - 6 < x < 11 + 6 \\implies 5 < x < 17$. Valores enteros: $x \\in \\{6, 7, \\dots, 16\\}$. Total $= 16 - 6 + 1 = 11$ valores."
+    },
+    {
+      "id_pregunta": "CITEN_GEO_TRI_004",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 1,
+      "enunciado": "En un triángulo rectángulo notable de $30^\\circ$ y $60^\\circ$, el cateto opuesto al ángulo de $30^\\circ$ mide $8\\sqrt{3}\\text{ cm}$. Calcule la longitud del cateto mayor.",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$24\\text{ cm}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$16\\sqrt{3}\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$16\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$12\\sqrt{3}\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$18\\text{ cm}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "En el triángulo notable $30^\\circ - 60^\\circ$, los catetos son $k$ y $k\\sqrt{3}$. Si $k = 8\\sqrt{3}\\text{ cm}$, el cateto opuesto a $60^\\circ$ mide $k\\sqrt{3} = 8\\sqrt{3} \\times \\sqrt{3} = 8(3) = 24\\text{ cm}$."
+    },
+    {
+      "id_pregunta": "CITEN_GEO_TRI_005",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 2,
+      "enunciado": "En un triángulo rectángulo, las proyecciones de los catetos sobre la hipotenusa miden $9\\text{ cm}$ y $16\\text{ cm}$. Calcule la longitud de la altura relativa a la hipotenusa.",
+      "apoyo_visual": {
+        "requiere_grafico": true,
+        "imagen_url": null,
+        "descripcion_para_diseñador": "Triángulo rectángulo con altura BH trazada a la hipotenusa AC dividida en segmentos AH = 9 cm y HC = 16 cm."
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$12\\text{ cm}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$10\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$14\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$15\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$12.5\\text{ cm}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Por relación métrica: $h^2 = m \\cdot n = 9 \\times 16 = 144 \\implies h = \\sqrt{144} = 12\\text{ cm}$."
+    },
+    {
+      "id_pregunta": "CITEN_GEO_TRI_006",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 2,
+      "enunciado": "En un triángulo $ABC$, los lados $AB$ y $BC$ miden $10\\text{ cm}$ y $15\\text{ cm}$ respectivamente. Si la base $AC$ mide $20\\text{ cm}$ y se traza la bisectriz interior $BD$, calcule la longitud del segmento menor determinado en la base ($AD$).",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$8\\text{ cm}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$12\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$6\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$9\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$7.5\\text{ cm}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Teorema de la bisectriz interior: $\\frac{AB}{BC} = \\frac{AD}{DC} \\implies \\frac{10}{15} = \\frac{2}{3} = \\frac{AD}{DC}$. Con $AD + DC = 20 \\implies 2k + 3k = 20 \\implies 5k = 20 \\implies k = 4$. Por tanto $AD = 2(4) = 8\\text{ cm}$."
+    },
+    {
+      "id_pregunta": "CITEN_GEO_TRI_007",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 2,
+      "enunciado": "En un triángulo rectángulo $ABC$ recto en $B$, se traza la mediana relativa a la hipotenusa $BM$ y la altura $BH$. Si $AC = 50\\text{ cm}$ y $BH = 24\\text{ cm}$, calcule la longitud del segmento $HM$.",
+      "apoyo_visual": {
+        "requiere_grafico": true,
+        "imagen_url": null,
+        "descripcion_para_diseñador": "Triángulo rectángulo ABC recto en B con hipotenusa AC = 50 cm, altura BH = 24 cm y mediana BM a la hipotenusa."
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$7\\text{ cm}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$9\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$6\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$8\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$10\\text{ cm}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Por teorema de la mediana a la hipotenusa: $BM = \\frac{AC}{2} = 25\\text{ cm}$. En el triángulo rectángulo $BHM$, la hipotenusa es $BM = 25\\text{ cm}$ y el cateto es $BH = 24\\text{ cm}$. Por Pitágoras: $HM = \\sqrt{25^2 - 24^2} = \\sqrt{625 - 576} = \\sqrt{49} = 7\\text{ cm}$."
+    },
+    {
+      "id_pregunta": "CITEN_GEO_TRI_008",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 2,
+      "enunciado": "Los catetos de un triángulo rectángulo miden $20\\text{ m}$ y $15\\text{ m}$. Calcule la longitud exacta de la altura relativa a la hipotenusa.",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$12\\text{ m}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$10\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$14\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$9\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$13.5\\text{ m}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Hipotenusa: $c = \\sqrt{20^2 + 15^2} = \\sqrt{400 + 225} = 25\\text{ m}$. Por relación métrica $a \\cdot b = c \\cdot h \\implies 20 \\times 15 = 25 \\times h \\implies 300 = 25h \\implies h = 12\\text{ m}$."
+    },
+    {
+      "id_pregunta": "CITEN_GEO_TRI_009",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 3,
+      "enunciado": "[Ángulo de Izaje en Grúas de Maniobra Naval de SIMA Callao]: Dos puestos de observación $P_1$ y $P_2$ distanciados $1400\\text{ m}$ divisan un objetivo hostil $T$. El ángulo de visión en $P_1$ es de $53^\\circ$ respecto a la línea base $P_1 P_2$ y en $P_2$ es de $37^\\circ$. Sabiendo que forman un triángulo rectángulo ($53^\\circ + 37^\\circ = 90^\\circ$), determine la distancia directa desde el puesto $P_1$ hacia el objetivo $T$.",
+      "apoyo_visual": {
+        "requiere_grafico": true,
+        "imagen_url": null,
+        "descripcion_para_diseñador": "Triángulo rectángulo con hipotenusa P1-P2 = 1400 m, ángulo en P1 de 53° y en P2 de 37° con vértice del ángulo recto en T."
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$840\\text{ m}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$1120\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$960\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$700\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$1050\\text{ m}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Como los ángulos son $53^\\circ$ y $37^\\circ$, el ángulo en $T$ es recto ($90^\\circ$). En el triángulo notable $37^\\circ - 53^\\circ$, la hipotenusa es $5k = 1400\\text{ m} \\implies k = 280\\text{ m}$. El cateto adyacente a $53^\\circ$ (distancia $P_1 T$) es opuesto a $37^\\circ$, luego mide $3k = 3(280) = 840\\text{ m}$."
+    },
+    {
+      "id_pregunta": "CITEN_GEO_TRI_010",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 3,
+      "enunciado": "[Trazado y Alineación de Cuadernas Trianguladas en Astillero Naval]: Un equipo de despliegue establece un perímetro triangular $ABC$ recto en $B$. Desde la posición $B$ se mide la distancia perpendicular hacia la línea de enlace $AC$ (hipotenusa), obteniéndose $h = 60\\text{ m}$. Si la proyección de la avanzada izquierda sobre $AC$ es $45\\text{ m}$, ¿cuál es la longitud total de la línea de enlace $AC$?",
+      "apoyo_visual": {
+        "requiere_grafico": true,
+        "imagen_url": null,
+        "descripcion_para_diseñador": "Triángulo rectángulo ABC recto en B con altura BH = 60 m a la hipotenusa AC y proyección AH = 45 m."
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$125\\text{ m}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$105\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$140\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$115\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$135\\text{ m}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Por relación métrica: $h^2 = m \\cdot n \\implies 60^2 = 45 \\cdot n \\implies 3600 = 45n \\implies n = 80\\text{ m}$. La hipotenusa total $AC = m + n = 45 + 80 = 125\\text{ m}$."
+    },
+    {
+      "id_pregunta": "CITEN_GEO_TRI_011",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 3,
+      "enunciado": "[Radio de Borneo y Tensión de Cadena de Fondeo en Bahía]: Un área de confinamiento triangular $ABC$ tiene lados que miden $13\\text{ m}$, $14\\text{ m}$ y $15\\text{ m}$. Determine la longitud de la altura relativa al lado intermedio ($14\\text{ m}$) empleada como eje de penetración táctica.",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$12\\text{ m}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$10\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$11\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$13\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$9.5\\text{ m}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Por fórmula de Herón: semiperímetro $p = \\frac{13 + 14 + 15}{2} = 21\\text{ m}$. Área $S = \\sqrt{21(21 - 13)(21 - 14)(21 - 15)} = \\sqrt{21 \\times 8 \\times 7 \\times 6} = \\sqrt{7056} = 84\\text{ m}^2$. Como $S = \\frac{b \\cdot h}{2} \\implies 84 = \\frac{14 \\cdot h}{2} \\implies 84 = 7h \\implies h = 12\\text{ m}$."
+    },
+    {
+      "id_pregunta": "CITEN_GEO_TRI_012",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 3,
+      "enunciado": "[Tensores de Mástil de Telecomunicaciones en Estación Costera de Chimbote]: Se requiere ubicar el centro de abastecimiento en el baricentro $G$ de un sector triangular $ABC$. Si la mediana principal trazada desde el vértice $B$ hacia el lado $AC$ tiene una longitud total de $36\\text{ metros}$, determine la distancia desde el vértice $B$ hasta el baricentro $G$.",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$24\\text{ metros}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$18\\text{ metros}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$12\\text{ metros}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$27\\text{ metros}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$20\\text{ metros}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Propiedad del baricentro: divide a cada mediana en la relación de $2$ a $1$ medida desde el vértice: $BG = 2GM$. Por tanto, $BG = \\frac{2}{3}(BM) = \\frac{2}{3}(36\\text{ m}) = 24\\text{ metros}$."
+    }
+  ],
+  "EOFAP": [
+    {
+      "id_pregunta": "EOFAP_GEO_TRI_001",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 1,
+      "enunciado": "En el examen de admisión de Escuela de Oficiales FAP (EOFAP - Oficiales), se plantea el siguiente problema: En un triángulo $ABC$, las medidas de sus ángulos internos son $x$, $2x + 10^\\circ$ y $3x - 10^\\circ$. Calcule la medida del menor ángulo interno.",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$30^\\circ$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$25^\\circ$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$35^\\circ$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$40^\\circ$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$20^\\circ$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Suma de ángulos internos: $x + (2x + 10^\\circ) + (3x - 10^\\circ) = 180^\\circ \\implies 6x = 180^\\circ \\implies x = 30^\\circ$. Los ángulos miden $30^\\circ, 70^\\circ, 80^\\circ$. El menor es $30^\\circ$."
+    },
+    {
+      "id_pregunta": "EOFAP_GEO_TRI_002",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 1,
+      "enunciado": "En un triángulo rectángulo, la hipotenusa mide $25\\text{ m}$ y uno de sus catetos mide $15\\text{ m}$. Calcule la longitud del otro cateto.",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$20\\text{ m}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$18\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$22\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$16\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$12\\text{ m}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Por el teorema de Pitágoras: $c^2 = a^2 + b^2 \\implies 25^2 = 15^2 + b^2 \\implies 625 = 225 + b^2 \\implies b^2 = 400 \\implies b = 20\\text{ m}$."
+    },
+    {
+      "id_pregunta": "EOFAP_GEO_TRI_003",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 1,
+      "enunciado": "Dos lados de un triángulo miden $6\\text{ cm}$ y $11\\text{ cm}$. ¿Cuántos valores enteros puede tomar la longitud del tercer lado?",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$11$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$10$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$12$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$9$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$8$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Teorema de existencia triangular: $11 - 6 < x < 11 + 6 \\implies 5 < x < 17$. Valores enteros: $x \\in \\{6, 7, \\dots, 16\\}$. Total $= 16 - 6 + 1 = 11$ valores."
+    },
+    {
+      "id_pregunta": "EOFAP_GEO_TRI_004",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 1,
+      "enunciado": "En un triángulo rectángulo notable de $30^\\circ$ y $60^\\circ$, el cateto opuesto al ángulo de $30^\\circ$ mide $8\\sqrt{3}\\text{ cm}$. Calcule la longitud del cateto mayor.",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$24\\text{ cm}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$16\\sqrt{3}\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$16\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$12\\sqrt{3}\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$18\\text{ cm}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "En el triángulo notable $30^\\circ - 60^\\circ$, los catetos son $k$ y $k\\sqrt{3}$. Si $k = 8\\sqrt{3}\\text{ cm}$, el cateto opuesto a $60^\\circ$ mide $k\\sqrt{3} = 8\\sqrt{3} \\times \\sqrt{3} = 8(3) = 24\\text{ cm}$."
+    },
+    {
+      "id_pregunta": "EOFAP_GEO_TRI_005",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 2,
+      "enunciado": "En un triángulo rectángulo, las proyecciones de los catetos sobre la hipotenusa miden $9\\text{ cm}$ y $16\\text{ cm}$. Calcule la longitud de la altura relativa a la hipotenusa.",
+      "apoyo_visual": {
+        "requiere_grafico": true,
+        "imagen_url": null,
+        "descripcion_para_diseñador": "Triángulo rectángulo con altura BH trazada a la hipotenusa AC dividida en segmentos AH = 9 cm y HC = 16 cm."
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$12\\text{ cm}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$10\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$14\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$15\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$12.5\\text{ cm}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Por relación métrica: $h^2 = m \\cdot n = 9 \\times 16 = 144 \\implies h = \\sqrt{144} = 12\\text{ cm}$."
+    },
+    {
+      "id_pregunta": "EOFAP_GEO_TRI_006",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 2,
+      "enunciado": "En un triángulo $ABC$, los lados $AB$ y $BC$ miden $10\\text{ cm}$ y $15\\text{ cm}$ respectivamente. Si la base $AC$ mide $20\\text{ cm}$ y se traza la bisectriz interior $BD$, calcule la longitud del segmento menor determinado en la base ($AD$).",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$8\\text{ cm}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$12\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$6\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$9\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$7.5\\text{ cm}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Teorema de la bisectriz interior: $\\frac{AB}{BC} = \\frac{AD}{DC} \\implies \\frac{10}{15} = \\frac{2}{3} = \\frac{AD}{DC}$. Con $AD + DC = 20 \\implies 2k + 3k = 20 \\implies 5k = 20 \\implies k = 4$. Por tanto $AD = 2(4) = 8\\text{ cm}$."
+    },
+    {
+      "id_pregunta": "EOFAP_GEO_TRI_007",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 2,
+      "enunciado": "En un triángulo rectángulo $ABC$ recto en $B$, se traza la mediana relativa a la hipotenusa $BM$ y la altura $BH$. Si $AC = 50\\text{ cm}$ y $BH = 24\\text{ cm}$, calcule la longitud del segmento $HM$.",
+      "apoyo_visual": {
+        "requiere_grafico": true,
+        "imagen_url": null,
+        "descripcion_para_diseñador": "Triángulo rectángulo ABC recto en B con hipotenusa AC = 50 cm, altura BH = 24 cm y mediana BM a la hipotenusa."
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$7\\text{ cm}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$9\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$6\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$8\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$10\\text{ cm}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Por teorema de la mediana a la hipotenusa: $BM = \\frac{AC}{2} = 25\\text{ cm}$. En el triángulo rectángulo $BHM$, la hipotenusa es $BM = 25\\text{ cm}$ y el cateto es $BH = 24\\text{ cm}$. Por Pitágoras: $HM = \\sqrt{25^2 - 24^2} = \\sqrt{625 - 576} = \\sqrt{49} = 7\\text{ cm}$."
+    },
+    {
+      "id_pregunta": "EOFAP_GEO_TRI_008",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 2,
+      "enunciado": "Los catetos de un triángulo rectángulo miden $20\\text{ m}$ y $15\\text{ m}$. Calcule la longitud exacta de la altura relativa a la hipotenusa.",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$12\\text{ m}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$10\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$14\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$9\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$13.5\\text{ m}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Hipotenusa: $c = \\sqrt{20^2 + 15^2} = \\sqrt{400 + 225} = 25\\text{ m}$. Por relación métrica $a \\cdot b = c \\cdot h \\implies 20 \\times 15 = 25 \\times h \\implies 300 = 25h \\implies h = 12\\text{ m}$."
+    },
+    {
+      "id_pregunta": "EOFAP_GEO_TRI_009",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 3,
+      "enunciado": "[Senda de Planeo Instrumental (Glide Slope) de Caza Mirage 2000P]: Dos puestos de observación $P_1$ y $P_2$ distanciados $1400\\text{ m}$ divisan un objetivo hostil $T$. El ángulo de visión en $P_1$ es de $53^\\circ$ respecto a la línea base $P_1 P_2$ y en $P_2$ es de $37^\\circ$. Sabiendo que forman un triángulo rectángulo ($53^\\circ + 37^\\circ = 90^\\circ$), determine la distancia directa desde el puesto $P_1$ hacia el objetivo $T$.",
+      "apoyo_visual": {
+        "requiere_grafico": true,
+        "imagen_url": null,
+        "descripcion_para_diseñador": "Triángulo rectángulo con hipotenusa P1-P2 = 1400 m, ángulo en P1 de 53° y en P2 de 37° con vértice del ángulo recto en T."
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$840\\text{ m}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$1120\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$960\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$700\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$1050\\text{ m}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Como los ángulos son $53^\\circ$ y $37^\\circ$, el ángulo en $T$ es recto ($90^\\circ$). En el triángulo notable $37^\\circ - 53^\\circ$, la hipotenusa es $5k = 1400\\text{ m} \\implies k = 280\\text{ m}$. El cateto adyacente a $53^\\circ$ (distancia $P_1 T$) es opuesto a $37^\\circ$, luego mide $3k = 3(280) = 840\\text{ m}$."
+    },
+    {
+      "id_pregunta": "EOFAP_GEO_TRI_010",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 3,
+      "enunciado": "[Triangulación Radar 3D TPS-78 en Interceptación de Traza Fronteriza]: Un equipo de despliegue establece un perímetro triangular $ABC$ recto en $B$. Desde la posición $B$ se mide la distancia perpendicular hacia la línea de enlace $AC$ (hipotenusa), obteniéndose $h = 60\\text{ m}$. Si la proyección de la avanzada izquierda sobre $AC$ es $45\\text{ m}$, ¿cuál es la longitud total de la línea de enlace $AC$?",
+      "apoyo_visual": {
+        "requiere_grafico": true,
+        "imagen_url": null,
+        "descripcion_para_diseñador": "Triángulo rectángulo ABC recto en B con altura BH = 60 m a la hipotenusa AC y proyección AH = 45 m."
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$125\\text{ m}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$105\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$140\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$115\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$135\\text{ m}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Por relación métrica: $h^2 = m \\cdot n \\implies 60^2 = 45 \\cdot n \\implies 3600 = 45n \\implies n = 80\\text{ m}$. La hipotenusa total $AC = m + n = 45 + 80 = 125\\text{ m}$."
+    },
+    {
+      "id_pregunta": "EOFAP_GEO_TRI_011",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 3,
+      "enunciado": "[Sector Triangular de Reconocimiento Aéreo Táctico en el VRAEM]: Un área de confinamiento triangular $ABC$ tiene lados que miden $13\\text{ m}$, $14\\text{ m}$ y $15\\text{ m}$. Determine la longitud de la altura relativa al lado intermedio ($14\\text{ m}$) empleada como eje de penetración táctica.",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$12\\text{ m}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$10\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$11\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$13\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$9.5\\text{ m}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Por fórmula de Herón: semiperímetro $p = \\frac{13 + 14 + 15}{2} = 21\\text{ m}$. Área $S = \\sqrt{21(21 - 13)(21 - 14)(21 - 15)} = \\sqrt{21 \\times 8 \\times 7 \\times 6} = \\sqrt{7056} = 84\\text{ m}^2$. Como $S = \\frac{b \\cdot h}{2} \\implies 84 = \\frac{14 \\cdot h}{2} \\implies 84 = 7h \\implies h = 12\\text{ m}$."
+    },
+    {
+      "id_pregunta": "EOFAP_GEO_TRI_012",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 3,
+      "enunciado": "[Geometría de Semialas en Flecha y Flecha Triangular en Avión Supersónico]: Se requiere ubicar el centro de abastecimiento en el baricentro $G$ de un sector triangular $ABC$. Si la mediana principal trazada desde el vértice $B$ hacia el lado $AC$ tiene una longitud total de $36\\text{ metros}$, determine la distancia desde el vértice $B$ hasta el baricentro $G$.",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$24\\text{ metros}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$18\\text{ metros}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$12\\text{ metros}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$27\\text{ metros}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$20\\text{ metros}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Propiedad del baricentro: divide a cada mediana en la relación de $2$ a $1$ medida desde el vértice: $BG = 2GM$. Por tanto, $BG = \\frac{2}{3}(BM) = \\frac{2}{3}(36\\text{ m}) = 24\\text{ metros}$."
+    }
+  ],
+  "ESOFA": [
+    {
+      "id_pregunta": "ESOFA_GEO_TRI_001",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 1,
+      "enunciado": "En el examen de admisión de Escuela de Suboficiales FAP (ESOFA - Suboficiales), se plantea el siguiente problema: En un triángulo $ABC$, las medidas de sus ángulos internos son $x$, $2x + 10^\\circ$ y $3x - 10^\\circ$. Calcule la medida del menor ángulo interno.",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$30^\\circ$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$25^\\circ$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$35^\\circ$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$40^\\circ$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$20^\\circ$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Suma de ángulos internos: $x + (2x + 10^\\circ) + (3x - 10^\\circ) = 180^\\circ \\implies 6x = 180^\\circ \\implies x = 30^\\circ$. Los ángulos miden $30^\\circ, 70^\\circ, 80^\\circ$. El menor es $30^\\circ$."
+    },
+    {
+      "id_pregunta": "ESOFA_GEO_TRI_002",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 1,
+      "enunciado": "En un triángulo rectángulo, la hipotenusa mide $25\\text{ m}$ y uno de sus catetos mide $15\\text{ m}$. Calcule la longitud del otro cateto.",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$20\\text{ m}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$18\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$22\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$16\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$12\\text{ m}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Por el teorema de Pitágoras: $c^2 = a^2 + b^2 \\implies 25^2 = 15^2 + b^2 \\implies 625 = 225 + b^2 \\implies b^2 = 400 \\implies b = 20\\text{ m}$."
+    },
+    {
+      "id_pregunta": "ESOFA_GEO_TRI_003",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 1,
+      "enunciado": "Dos lados de un triángulo miden $6\\text{ cm}$ y $11\\text{ cm}$. ¿Cuántos valores enteros puede tomar la longitud del tercer lado?",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$11$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$10$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$12$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$9$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$8$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Teorema de existencia triangular: $11 - 6 < x < 11 + 6 \\implies 5 < x < 17$. Valores enteros: $x \\in \\{6, 7, \\dots, 16\\}$. Total $= 16 - 6 + 1 = 11$ valores."
+    },
+    {
+      "id_pregunta": "ESOFA_GEO_TRI_004",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 1,
+      "enunciado": "En un triángulo rectángulo notable de $30^\\circ$ y $60^\\circ$, el cateto opuesto al ángulo de $30^\\circ$ mide $8\\sqrt{3}\\text{ cm}$. Calcule la longitud del cateto mayor.",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$24\\text{ cm}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$16\\sqrt{3}\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$16\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$12\\sqrt{3}\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$18\\text{ cm}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "En el triángulo notable $30^\\circ - 60^\\circ$, los catetos son $k$ y $k\\sqrt{3}$. Si $k = 8\\sqrt{3}\\text{ cm}$, el cateto opuesto a $60^\\circ$ mide $k\\sqrt{3} = 8\\sqrt{3} \\times \\sqrt{3} = 8(3) = 24\\text{ cm}$."
+    },
+    {
+      "id_pregunta": "ESOFA_GEO_TRI_005",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 2,
+      "enunciado": "En un triángulo rectángulo, las proyecciones de los catetos sobre la hipotenusa miden $9\\text{ cm}$ y $16\\text{ cm}$. Calcule la longitud de la altura relativa a la hipotenusa.",
+      "apoyo_visual": {
+        "requiere_grafico": true,
+        "imagen_url": null,
+        "descripcion_para_diseñador": "Triángulo rectángulo con altura BH trazada a la hipotenusa AC dividida en segmentos AH = 9 cm y HC = 16 cm."
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$12\\text{ cm}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$10\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$14\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$15\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$12.5\\text{ cm}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Por relación métrica: $h^2 = m \\cdot n = 9 \\times 16 = 144 \\implies h = \\sqrt{144} = 12\\text{ cm}$."
+    },
+    {
+      "id_pregunta": "ESOFA_GEO_TRI_006",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 2,
+      "enunciado": "En un triángulo $ABC$, los lados $AB$ y $BC$ miden $10\\text{ cm}$ y $15\\text{ cm}$ respectivamente. Si la base $AC$ mide $20\\text{ cm}$ y se traza la bisectriz interior $BD$, calcule la longitud del segmento menor determinado en la base ($AD$).",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$8\\text{ cm}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$12\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$6\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$9\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$7.5\\text{ cm}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Teorema de la bisectriz interior: $\\frac{AB}{BC} = \\frac{AD}{DC} \\implies \\frac{10}{15} = \\frac{2}{3} = \\frac{AD}{DC}$. Con $AD + DC = 20 \\implies 2k + 3k = 20 \\implies 5k = 20 \\implies k = 4$. Por tanto $AD = 2(4) = 8\\text{ cm}$."
+    },
+    {
+      "id_pregunta": "ESOFA_GEO_TRI_007",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 2,
+      "enunciado": "En un triángulo rectángulo $ABC$ recto en $B$, se traza la mediana relativa a la hipotenusa $BM$ y la altura $BH$. Si $AC = 50\\text{ cm}$ y $BH = 24\\text{ cm}$, calcule la longitud del segmento $HM$.",
+      "apoyo_visual": {
+        "requiere_grafico": true,
+        "imagen_url": null,
+        "descripcion_para_diseñador": "Triángulo rectángulo ABC recto en B con hipotenusa AC = 50 cm, altura BH = 24 cm y mediana BM a la hipotenusa."
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$7\\text{ cm}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$9\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$6\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$8\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$10\\text{ cm}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Por teorema de la mediana a la hipotenusa: $BM = \\frac{AC}{2} = 25\\text{ cm}$. En el triángulo rectángulo $BHM$, la hipotenusa es $BM = 25\\text{ cm}$ y el cateto es $BH = 24\\text{ cm}$. Por Pitágoras: $HM = \\sqrt{25^2 - 24^2} = \\sqrt{625 - 576} = \\sqrt{49} = 7\\text{ cm}$."
+    },
+    {
+      "id_pregunta": "ESOFA_GEO_TRI_008",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 2,
+      "enunciado": "Los catetos de un triángulo rectángulo miden $20\\text{ m}$ y $15\\text{ m}$. Calcule la longitud exacta de la altura relativa a la hipotenusa.",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$12\\text{ m}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$10\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$14\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$9\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$13.5\\text{ m}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Hipotenusa: $c = \\sqrt{20^2 + 15^2} = \\sqrt{400 + 225} = 25\\text{ m}$. Por relación métrica $a \\cdot b = c \\cdot h \\implies 20 \\times 15 = 25 \\times h \\implies 300 = 25h \\implies h = 12\\text{ m}$."
+    },
+    {
+      "id_pregunta": "ESOFA_GEO_TRI_009",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 3,
+      "enunciado": "[Alineación y Simetría Estructural en Aviones de Entrenamiento KT-1P Torito]: Dos puestos de observación $P_1$ y $P_2$ distanciados $1400\\text{ m}$ divisan un objetivo hostil $T$. El ángulo de visión en $P_1$ es de $53^\\circ$ respecto a la línea base $P_1 P_2$ y en $P_2$ es de $37^\\circ$. Sabiendo que forman un triángulo rectángulo ($53^\\circ + 37^\\circ = 90^\\circ$), determine la distancia directa desde el puesto $P_1$ hacia el objetivo $T$.",
+      "apoyo_visual": {
+        "requiere_grafico": true,
+        "imagen_url": null,
+        "descripcion_para_diseñador": "Triángulo rectángulo con hipotenusa P1-P2 = 1400 m, ángulo en P1 de 53° y en P2 de 37° con vértice del ángulo recto en T."
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$840\\text{ m}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$1120\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$960\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$700\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$1050\\text{ m}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Como los ángulos son $53^\\circ$ y $37^\\circ$, el ángulo en $T$ es recto ($90^\\circ$). En el triángulo notable $37^\\circ - 53^\\circ$, la hipotenusa es $5k = 1400\\text{ m} \\implies k = 280\\text{ m}$. El cateto adyacente a $53^\\circ$ (distancia $P_1 T$) es opuesto a $37^\\circ$, luego mide $3k = 3(280) = 840\\text{ m}$."
+    },
+    {
+      "id_pregunta": "ESOFA_GEO_TRI_010",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 3,
+      "enunciado": "[Triángulo de Apoyo de Gatos Hidráulicos para Mantenimiento de Cazas Su-25]: Un equipo de despliegue establece un perímetro triangular $ABC$ recto en $B$. Desde la posición $B$ se mide la distancia perpendicular hacia la línea de enlace $AC$ (hipotenusa), obteniéndose $h = 60\\text{ m}$. Si la proyección de la avanzada izquierda sobre $AC$ es $45\\text{ m}$, ¿cuál es la longitud total de la línea de enlace $AC$?",
+      "apoyo_visual": {
+        "requiere_grafico": true,
+        "imagen_url": null,
+        "descripcion_para_diseñador": "Triángulo rectángulo ABC recto en B con altura BH = 60 m a la hipotenusa AC y proyección AH = 45 m."
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$125\\text{ m}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$105\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$140\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$115\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$135\\text{ m}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Por relación métrica: $h^2 = m \\cdot n \\implies 60^2 = 45 \\cdot n \\implies 3600 = 45n \\implies n = 80\\text{ m}$. La hipotenusa total $AC = m + n = 45 + 80 = 125\\text{ m}$."
+    },
+    {
+      "id_pregunta": "ESOFA_GEO_TRI_011",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 3,
+      "enunciado": "[Tensores Estructurales de Hangar Aeronáutico en Base Aérea Las Palmas]: Un área de confinamiento triangular $ABC$ tiene lados que miden $13\\text{ m}$, $14\\text{ m}$ y $15\\text{ m}$. Determine la longitud de la altura relativa al lado intermedio ($14\\text{ m}$) empleada como eje de penetración táctica.",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$12\\text{ m}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$10\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$11\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$13\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$9.5\\text{ m}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Por fórmula de Herón: semiperímetro $p = \\frac{13 + 14 + 15}{2} = 21\\text{ m}$. Área $S = \\sqrt{21(21 - 13)(21 - 14)(21 - 15)} = \\sqrt{21 \\times 8 \\times 7 \\times 6} = \\sqrt{7056} = 84\\text{ m}^2$. Como $S = \\frac{b \\cdot h}{2} \\implies 84 = \\frac{14 \\cdot h}{2} \\implies 84 = 7h \\implies h = 12\\text{ m}$."
+    },
+    {
+      "id_pregunta": "ESOFA_GEO_TRI_012",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 3,
+      "enunciado": "[Ángulo de Inclinación de Palas de Rotor en Helicópteros Mi-171Sh]: Se requiere ubicar el centro de abastecimiento en el baricentro $G$ de un sector triangular $ABC$. Si la mediana principal trazada desde el vértice $B$ hacia el lado $AC$ tiene una longitud total de $36\\text{ metros}$, determine la distancia desde el vértice $B$ hasta el baricentro $G$.",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$24\\text{ metros}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$18\\text{ metros}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$12\\text{ metros}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$27\\text{ metros}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$20\\text{ metros}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Propiedad del baricentro: divide a cada mediana en la relación de $2$ a $1$ medida desde el vértice: $BG = 2GM$. Por tanto, $BG = \\frac{2}{3}(BM) = \\frac{2}{3}(36\\text{ m}) = 24\\text{ metros}$."
+    }
+  ],
+  "EO_PNP": [
+    {
+      "id_pregunta": "EO_PNP_GEO_TRI_001",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 1,
+      "enunciado": "En el examen de admisión de Escuela de Oficiales de la Policía Nacional (EO-PNP - Oficiales), se plantea el siguiente problema: En un triángulo $ABC$, las medidas de sus ángulos internos son $x$, $2x + 10^\\circ$ y $3x - 10^\\circ$. Calcule la medida del menor ángulo interno.",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$30^\\circ$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$25^\\circ$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$35^\\circ$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$40^\\circ$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$20^\\circ$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Suma de ángulos internos: $x + (2x + 10^\\circ) + (3x - 10^\\circ) = 180^\\circ \\implies 6x = 180^\\circ \\implies x = 30^\\circ$. Los ángulos miden $30^\\circ, 70^\\circ, 80^\\circ$. El menor es $30^\\circ$."
+    },
+    {
+      "id_pregunta": "EO_PNP_GEO_TRI_002",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 1,
+      "enunciado": "En un triángulo rectángulo, la hipotenusa mide $25\\text{ m}$ y uno de sus catetos mide $15\\text{ m}$. Calcule la longitud del otro cateto.",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$20\\text{ m}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$18\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$22\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$16\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$12\\text{ m}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Por el teorema de Pitágoras: $c^2 = a^2 + b^2 \\implies 25^2 = 15^2 + b^2 \\implies 625 = 225 + b^2 \\implies b^2 = 400 \\implies b = 20\\text{ m}$."
+    },
+    {
+      "id_pregunta": "EO_PNP_GEO_TRI_003",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 1,
+      "enunciado": "Dos lados de un triángulo miden $6\\text{ cm}$ y $11\\text{ cm}$. ¿Cuántos valores enteros puede tomar la longitud del tercer lado?",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$11$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$10$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$12$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$9$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$8$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Teorema de existencia triangular: $11 - 6 < x < 11 + 6 \\implies 5 < x < 17$. Valores enteros: $x \\in \\{6, 7, \\dots, 16\\}$. Total $= 16 - 6 + 1 = 11$ valores."
+    },
+    {
+      "id_pregunta": "EO_PNP_GEO_TRI_004",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 1,
+      "enunciado": "En un triángulo rectángulo notable de $30^\\circ$ y $60^\\circ$, el cateto opuesto al ángulo de $30^\\circ$ mide $8\\sqrt{3}\\text{ cm}$. Calcule la longitud del cateto mayor.",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$24\\text{ cm}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$16\\sqrt{3}\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$16\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$12\\sqrt{3}\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$18\\text{ cm}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "En el triángulo notable $30^\\circ - 60^\\circ$, los catetos son $k$ y $k\\sqrt{3}$. Si $k = 8\\sqrt{3}\\text{ cm}$, el cateto opuesto a $60^\\circ$ mide $k\\sqrt{3} = 8\\sqrt{3} \\times \\sqrt{3} = 8(3) = 24\\text{ cm}$."
+    },
+    {
+      "id_pregunta": "EO_PNP_GEO_TRI_005",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 2,
+      "enunciado": "En un triángulo rectángulo, las proyecciones de los catetos sobre la hipotenusa miden $9\\text{ cm}$ y $16\\text{ cm}$. Calcule la longitud de la altura relativa a la hipotenusa.",
+      "apoyo_visual": {
+        "requiere_grafico": true,
+        "imagen_url": null,
+        "descripcion_para_diseñador": "Triángulo rectángulo con altura BH trazada a la hipotenusa AC dividida en segmentos AH = 9 cm y HC = 16 cm."
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$12\\text{ cm}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$10\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$14\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$15\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$12.5\\text{ cm}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Por relación métrica: $h^2 = m \\cdot n = 9 \\times 16 = 144 \\implies h = \\sqrt{144} = 12\\text{ cm}$."
+    },
+    {
+      "id_pregunta": "EO_PNP_GEO_TRI_006",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 2,
+      "enunciado": "En un triángulo $ABC$, los lados $AB$ y $BC$ miden $10\\text{ cm}$ y $15\\text{ cm}$ respectivamente. Si la base $AC$ mide $20\\text{ cm}$ y se traza la bisectriz interior $BD$, calcule la longitud del segmento menor determinado en la base ($AD$).",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$8\\text{ cm}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$12\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$6\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$9\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$7.5\\text{ cm}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Teorema de la bisectriz interior: $\\frac{AB}{BC} = \\frac{AD}{DC} \\implies \\frac{10}{15} = \\frac{2}{3} = \\frac{AD}{DC}$. Con $AD + DC = 20 \\implies 2k + 3k = 20 \\implies 5k = 20 \\implies k = 4$. Por tanto $AD = 2(4) = 8\\text{ cm}$."
+    },
+    {
+      "id_pregunta": "EO_PNP_GEO_TRI_007",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 2,
+      "enunciado": "En un triángulo rectángulo $ABC$ recto en $B$, se traza la mediana relativa a la hipotenusa $BM$ y la altura $BH$. Si $AC = 50\\text{ cm}$ y $BH = 24\\text{ cm}$, calcule la longitud del segmento $HM$.",
+      "apoyo_visual": {
+        "requiere_grafico": true,
+        "imagen_url": null,
+        "descripcion_para_diseñador": "Triángulo rectángulo ABC recto en B con hipotenusa AC = 50 cm, altura BH = 24 cm y mediana BM a la hipotenusa."
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$7\\text{ cm}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$9\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$6\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$8\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$10\\text{ cm}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Por teorema de la mediana a la hipotenusa: $BM = \\frac{AC}{2} = 25\\text{ cm}$. En el triángulo rectángulo $BHM$, la hipotenusa es $BM = 25\\text{ cm}$ y el cateto es $BH = 24\\text{ cm}$. Por Pitágoras: $HM = \\sqrt{25^2 - 24^2} = \\sqrt{625 - 576} = \\sqrt{49} = 7\\text{ cm}$."
+    },
+    {
+      "id_pregunta": "EO_PNP_GEO_TRI_008",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 2,
+      "enunciado": "Los catetos de un triángulo rectángulo miden $20\\text{ m}$ y $15\\text{ m}$. Calcule la longitud exacta de la altura relativa a la hipotenusa.",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$12\\text{ m}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$10\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$14\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$9\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$13.5\\text{ m}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Hipotenusa: $c = \\sqrt{20^2 + 15^2} = \\sqrt{400 + 225} = 25\\text{ m}$. Por relación métrica $a \\cdot b = c \\cdot h \\implies 20 \\times 15 = 25 \\times h \\implies 300 = 25h \\implies h = 12\\text{ m}$."
+    },
+    {
+      "id_pregunta": "EO_PNP_GEO_TRI_009",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 3,
+      "enunciado": "[Planimetría Forense DIRINCRI: Triangulación de Indicios Balísticos]: Dos puestos de observación $P_1$ y $P_2$ distanciados $1400\\text{ m}$ divisan un objetivo hostil $T$. El ángulo de visión en $P_1$ es de $53^\\circ$ respecto a la línea base $P_1 P_2$ y en $P_2$ es de $37^\\circ$. Sabiendo que forman un triángulo rectángulo ($53^\\circ + 37^\\circ = 90^\\circ$), determine la distancia directa desde el puesto $P_1$ hacia el objetivo $T$.",
+      "apoyo_visual": {
+        "requiere_grafico": true,
+        "imagen_url": null,
+        "descripcion_para_diseñador": "Triángulo rectángulo con hipotenusa P1-P2 = 1400 m, ángulo en P1 de 53° y en P2 de 37° con vértice del ángulo recto en T."
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$840\\text{ m}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$1120\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$960\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$700\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$1050\\text{ m}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Como los ángulos son $53^\\circ$ y $37^\\circ$, el ángulo en $T$ es recto ($90^\\circ$). En el triángulo notable $37^\\circ - 53^\\circ$, la hipotenusa es $5k = 1400\\text{ m} \\implies k = 280\\text{ m}$. El cateto adyacente a $53^\\circ$ (distancia $P_1 T$) es opuesto a $37^\\circ$, luego mide $3k = 3(280) = 840\\text{ m}$."
+    },
+    {
+      "id_pregunta": "EO_PNP_GEO_TRI_010",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 3,
+      "enunciado": "[Cerco Táctico Triangular de Intervención SUAT en Inmueble Confinado]: Un equipo de despliegue establece un perímetro triangular $ABC$ recto en $B$. Desde la posición $B$ se mide la distancia perpendicular hacia la línea de enlace $AC$ (hipotenusa), obteniéndose $h = 60\\text{ m}$. Si la proyección de la avanzada izquierda sobre $AC$ es $45\\text{ m}$, ¿cuál es la longitud total de la línea de enlace $AC$?",
+      "apoyo_visual": {
+        "requiere_grafico": true,
+        "imagen_url": null,
+        "descripcion_para_diseñador": "Triángulo rectángulo ABC recto en B con altura BH = 60 m a la hipotenusa AC y proyección AH = 45 m."
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$125\\text{ m}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$105\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$140\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$115\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$135\\text{ m}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Por relación métrica: $h^2 = m \\cdot n \\implies 60^2 = 45 \\cdot n \\implies 3600 = 45n \\implies n = 80\\text{ m}$. La hipotenusa total $AC = m + n = 45 + 80 = 125\\text{ m}$."
+    },
+    {
+      "id_pregunta": "EO_PNP_GEO_TRI_011",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 3,
+      "enunciado": "[Cono Triangular de Cobertura Óptica en Cámaras de Videovigilancia Urbana]: Un área de confinamiento triangular $ABC$ tiene lados que miden $13\\text{ m}$, $14\\text{ m}$ y $15\\text{ m}$. Determine la longitud de la altura relativa al lado intermedio ($14\\text{ m}$) empleada como eje de penetración táctica.",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$12\\text{ m}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$10\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$11\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$13\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$9.5\\text{ m}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Por fórmula de Herón: semiperímetro $p = \\frac{13 + 14 + 15}{2} = 21\\text{ m}$. Área $S = \\sqrt{21(21 - 13)(21 - 14)(21 - 15)} = \\sqrt{21 \\times 8 \\times 7 \\times 6} = \\sqrt{7056} = 84\\text{ m}^2$. Como $S = \\frac{b \\cdot h}{2} \\implies 84 = \\frac{14 \\cdot h}{2} \\implies 84 = 7h \\implies h = 12\\text{ m}$."
+    },
+    {
+      "id_pregunta": "EO_PNP_GEO_TRI_012",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 3,
+      "enunciado": "[Análisis Planimétrico de Huellas de Frenado en Accidentes de Tránsito (DIAT)]: Se requiere ubicar el centro de abastecimiento en el baricentro $G$ de un sector triangular $ABC$. Si la mediana principal trazada desde el vértice $B$ hacia el lado $AC$ tiene una longitud total de $36\\text{ metros}$, determine la distancia desde el vértice $B$ hasta el baricentro $G$.",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$24\\text{ metros}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$18\\text{ metros}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$12\\text{ metros}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$27\\text{ metros}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$20\\text{ metros}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Propiedad del baricentro: divide a cada mediana en la relación de $2$ a $1$ medida desde el vértice: $BG = 2GM$. Por tanto, $BG = \\frac{2}{3}(BM) = \\frac{2}{3}(36\\text{ m}) = 24\\text{ metros}$."
+    }
+  ],
+  "EESTP_PNP": [
+    {
+      "id_pregunta": "EESTP_PNP_GEO_TRI_001",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 1,
+      "enunciado": "En el examen de admisión de Escuelas de Educación Superior Técnico Profesional PNP (EESTP-PNP - Suboficiales), se plantea el siguiente problema: En un triángulo $ABC$, las medidas de sus ángulos internos son $x$, $2x + 10^\\circ$ y $3x - 10^\\circ$. Calcule la medida del menor ángulo interno.",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$30^\\circ$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$25^\\circ$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$35^\\circ$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$40^\\circ$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$20^\\circ$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Suma de ángulos internos: $x + (2x + 10^\\circ) + (3x - 10^\\circ) = 180^\\circ \\implies 6x = 180^\\circ \\implies x = 30^\\circ$. Los ángulos miden $30^\\circ, 70^\\circ, 80^\\circ$. El menor es $30^\\circ$."
+    },
+    {
+      "id_pregunta": "EESTP_PNP_GEO_TRI_002",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 1,
+      "enunciado": "En un triángulo rectángulo, la hipotenusa mide $25\\text{ m}$ y uno de sus catetos mide $15\\text{ m}$. Calcule la longitud del otro cateto.",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$20\\text{ m}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$18\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$22\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$16\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$12\\text{ m}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Por el teorema de Pitágoras: $c^2 = a^2 + b^2 \\implies 25^2 = 15^2 + b^2 \\implies 625 = 225 + b^2 \\implies b^2 = 400 \\implies b = 20\\text{ m}$."
+    },
+    {
+      "id_pregunta": "EESTP_PNP_GEO_TRI_003",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 1,
+      "enunciado": "Dos lados de un triángulo miden $6\\text{ cm}$ y $11\\text{ cm}$. ¿Cuántos valores enteros puede tomar la longitud del tercer lado?",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$11$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$10$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$12$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$9$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$8$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Teorema de existencia triangular: $11 - 6 < x < 11 + 6 \\implies 5 < x < 17$. Valores enteros: $x \\in \\{6, 7, \\dots, 16\\}$. Total $= 16 - 6 + 1 = 11$ valores."
+    },
+    {
+      "id_pregunta": "EESTP_PNP_GEO_TRI_004",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 1,
+      "enunciado": "En un triángulo rectángulo notable de $30^\\circ$ y $60^\\circ$, el cateto opuesto al ángulo de $30^\\circ$ mide $8\\sqrt{3}\\text{ cm}$. Calcule la longitud del cateto mayor.",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$24\\text{ cm}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$16\\sqrt{3}\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$16\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$12\\sqrt{3}\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$18\\text{ cm}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "En el triángulo notable $30^\\circ - 60^\\circ$, los catetos son $k$ y $k\\sqrt{3}$. Si $k = 8\\sqrt{3}\\text{ cm}$, el cateto opuesto a $60^\\circ$ mide $k\\sqrt{3} = 8\\sqrt{3} \\times \\sqrt{3} = 8(3) = 24\\text{ cm}$."
+    },
+    {
+      "id_pregunta": "EESTP_PNP_GEO_TRI_005",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 2,
+      "enunciado": "En un triángulo rectángulo, las proyecciones de los catetos sobre la hipotenusa miden $9\\text{ cm}$ y $16\\text{ cm}$. Calcule la longitud de la altura relativa a la hipotenusa.",
+      "apoyo_visual": {
+        "requiere_grafico": true,
+        "imagen_url": null,
+        "descripcion_para_diseñador": "Triángulo rectángulo con altura BH trazada a la hipotenusa AC dividida en segmentos AH = 9 cm y HC = 16 cm."
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$12\\text{ cm}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$10\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$14\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$15\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$12.5\\text{ cm}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Por relación métrica: $h^2 = m \\cdot n = 9 \\times 16 = 144 \\implies h = \\sqrt{144} = 12\\text{ cm}$."
+    },
+    {
+      "id_pregunta": "EESTP_PNP_GEO_TRI_006",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 2,
+      "enunciado": "En un triángulo $ABC$, los lados $AB$ y $BC$ miden $10\\text{ cm}$ y $15\\text{ cm}$ respectivamente. Si la base $AC$ mide $20\\text{ cm}$ y se traza la bisectriz interior $BD$, calcule la longitud del segmento menor determinado en la base ($AD$).",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$8\\text{ cm}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$12\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$6\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$9\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$7.5\\text{ cm}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Teorema de la bisectriz interior: $\\frac{AB}{BC} = \\frac{AD}{DC} \\implies \\frac{10}{15} = \\frac{2}{3} = \\frac{AD}{DC}$. Con $AD + DC = 20 \\implies 2k + 3k = 20 \\implies 5k = 20 \\implies k = 4$. Por tanto $AD = 2(4) = 8\\text{ cm}$."
+    },
+    {
+      "id_pregunta": "EESTP_PNP_GEO_TRI_007",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 2,
+      "enunciado": "En un triángulo rectángulo $ABC$ recto en $B$, se traza la mediana relativa a la hipotenusa $BM$ y la altura $BH$. Si $AC = 50\\text{ cm}$ y $BH = 24\\text{ cm}$, calcule la longitud del segmento $HM$.",
+      "apoyo_visual": {
+        "requiere_grafico": true,
+        "imagen_url": null,
+        "descripcion_para_diseñador": "Triángulo rectángulo ABC recto en B con hipotenusa AC = 50 cm, altura BH = 24 cm y mediana BM a la hipotenusa."
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$7\\text{ cm}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$9\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$6\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$8\\text{ cm}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$10\\text{ cm}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Por teorema de la mediana a la hipotenusa: $BM = \\frac{AC}{2} = 25\\text{ cm}$. En el triángulo rectángulo $BHM$, la hipotenusa es $BM = 25\\text{ cm}$ y el cateto es $BH = 24\\text{ cm}$. Por Pitágoras: $HM = \\sqrt{25^2 - 24^2} = \\sqrt{625 - 576} = \\sqrt{49} = 7\\text{ cm}$."
+    },
+    {
+      "id_pregunta": "EESTP_PNP_GEO_TRI_008",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 2,
+      "enunciado": "Los catetos de un triángulo rectángulo miden $20\\text{ m}$ y $15\\text{ m}$. Calcule la longitud exacta de la altura relativa a la hipotenusa.",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$12\\text{ m}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$10\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$14\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$9\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$13.5\\text{ m}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Hipotenusa: $c = \\sqrt{20^2 + 15^2} = \\sqrt{400 + 225} = 25\\text{ m}$. Por relación métrica $a \\cdot b = c \\cdot h \\implies 20 \\times 15 = 25 \\times h \\implies 300 = 25h \\implies h = 12\\text{ m}$."
+    },
+    {
+      "id_pregunta": "EESTP_PNP_GEO_TRI_009",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 3,
+      "enunciado": "[Triangulación de Móviles de Radio Patrulla en Cierre de Vías Metropolitanas]: Dos puestos de observación $P_1$ y $P_2$ distanciados $1400\\text{ m}$ divisan un objetivo hostil $T$. El ángulo de visión en $P_1$ es de $53^\\circ$ respecto a la línea base $P_1 P_2$ y en $P_2$ es de $37^\\circ$. Sabiendo que forman un triángulo rectángulo ($53^\\circ + 37^\\circ = 90^\\circ$), determine la distancia directa desde el puesto $P_1$ hacia el objetivo $T$.",
+      "apoyo_visual": {
+        "requiere_grafico": true,
+        "imagen_url": null,
+        "descripcion_para_diseñador": "Triángulo rectángulo con hipotenusa P1-P2 = 1400 m, ángulo en P1 de 53° y en P2 de 37° con vértice del ángulo recto en T."
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$840\\text{ m}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$1120\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$960\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$700\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$1050\\text{ m}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Como los ángulos son $53^\\circ$ y $37^\\circ$, el ángulo en $T$ es recto ($90^\\circ$). En el triángulo notable $37^\\circ - 53^\\circ$, la hipotenusa es $5k = 1400\\text{ m} \\implies k = 280\\text{ m}$. El cateto adyacente a $53^\\circ$ (distancia $P_1 T$) es opuesto a $37^\\circ$, luego mide $3k = 3(280) = 840\\text{ m}$."
+    },
+    {
+      "id_pregunta": "EESTP_PNP_GEO_TRI_010",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 3,
+      "enunciado": "[Ángulo de Apoyo Seguro de Escalera Táctica de Asalto Policial]: Un equipo de despliegue establece un perímetro triangular $ABC$ recto en $B$. Desde la posición $B$ se mide la distancia perpendicular hacia la línea de enlace $AC$ (hipotenusa), obteniéndose $h = 60\\text{ m}$. Si la proyección de la avanzada izquierda sobre $AC$ es $45\\text{ m}$, ¿cuál es la longitud total de la línea de enlace $AC$?",
+      "apoyo_visual": {
+        "requiere_grafico": true,
+        "imagen_url": null,
+        "descripcion_para_diseñador": "Triángulo rectángulo ABC recto en B con altura BH = 60 m a la hipotenusa AC y proyección AH = 45 m."
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$125\\text{ m}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$105\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$140\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$115\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$135\\text{ m}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Por relación métrica: $h^2 = m \\cdot n \\implies 60^2 = 45 \\cdot n \\implies 3600 = 45n \\implies n = 80\\text{ m}$. La hipotenusa total $AC = m + n = 45 + 80 = 125\\text{ m}$."
+    },
+    {
+      "id_pregunta": "EESTP_PNP_GEO_TRI_011",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 3,
+      "enunciado": "[Acordonamiento Triangular de Seguridad en Zona de Operaciones de Emergencia]: Un área de confinamiento triangular $ABC$ tiene lados que miden $13\\text{ m}$, $14\\text{ m}$ y $15\\text{ m}$. Determine la longitud de la altura relativa al lado intermedio ($14\\text{ m}$) empleada como eje de penetración táctica.",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$12\\text{ m}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$10\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$11\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$13\\text{ m}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$9.5\\text{ m}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Por fórmula de Herón: semiperímetro $p = \\frac{13 + 14 + 15}{2} = 21\\text{ m}$. Área $S = \\sqrt{21(21 - 13)(21 - 14)(21 - 15)} = \\sqrt{21 \\times 8 \\times 7 \\times 6} = \\sqrt{7056} = 84\\text{ m}^2$. Como $S = \\frac{b \\cdot h}{2} \\implies 84 = \\frac{14 \\cdot h}{2} \\implies 84 = 7h \\implies h = 12\\text{ m}$."
+    },
+    {
+      "id_pregunta": "EESTP_PNP_GEO_TRI_012",
+      "curso": "Geometría",
+      "tema": "Triángulos y Relaciones Métricas",
+      "nivel_dificultad": 3,
+      "enunciado": "[Línea de Visibilidad desde Torreta de Puesto de Vigilancia Fronterizo]: Se requiere ubicar el centro de abastecimiento en el baricentro $G$ de un sector triangular $ABC$. Si la mediana principal trazada desde el vértice $B$ hacia el lado $AC$ tiene una longitud total de $36\\text{ metros}$, determine la distancia desde el vértice $B$ hasta el baricentro $G$.",
+      "apoyo_visual": {
+        "requiere_grafico": false,
+        "imagen_url": null,
+        "descripcion_para_diseñador": null
+      },
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "$24\\text{ metros}$",
+          "es_correcta": true
+        },
+        {
+          "id": "B",
+          "texto": "$18\\text{ metros}$",
+          "es_correcta": false
+        },
+        {
+          "id": "C",
+          "texto": "$12\\text{ metros}$",
+          "es_correcta": false
+        },
+        {
+          "id": "D",
+          "texto": "$27\\text{ metros}$",
+          "es_correcta": false
+        },
+        {
+          "id": "E",
+          "texto": "$20\\text{ metros}$",
+          "es_correcta": false
+        }
+      ],
+      "metricas": {
+        "segundos_limite": 72,
+        "pts_correcta": 20,
+        "pts_incorrecta": -1.25
+      },
+      "resolucion_corta": "Propiedad del baricentro: divide a cada mediana en la relación de $2$ a $1$ medida desde el vértice: $BG = 2GM$. Por tanto, $BG = \\frac{2}{3}(BM) = \\frac{2}{3}(36\\text{ m}) = 24\\text{ metros}$."
+    }
+  ]
+}

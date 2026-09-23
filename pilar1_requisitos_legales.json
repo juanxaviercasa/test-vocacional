@@ -1,0 +1,334 @@
+[
+  {
+    "institucion_nombre": "Escuela Militar de Chorrillos Coronel Francisco Bolognesi",
+    "rama_fuerza": "Ejército del Perú",
+    "rango_formacion": "Oficial",
+    "url_oficial": "https://emch.jedu.pe/admision/entrar",
+    "requisitos_basicos": {
+      "edad_minima_anios": 15,
+      "edad_maxima_anios": 21,
+      "talla_minima_masculina_cm": 168,
+      "talla_minima_femenina_cm": 158,
+      "restricciones_medicas_peso": "Índice de masa corporal requerida indispensable",
+      "estado_civil_exigido": "Soltero(a), sin hijos ni dependientes directos",
+      "grado_instruccion": "Haber culminado la educación básica secundaria"
+    },
+    "cronograma_postulacion": {
+      "fecha_inicio_inscripcion": "2026-08-31",
+      "fecha_cierre_inscripcion": "2026-10-02",
+      "fecha_examen_conocimientos": "2026-10-24",
+      "fecha_examen_fisico": "2026-10-07"
+    },
+    "costos_y_pagos_soles": {
+      "costo_inscripcion": 281.9,
+      "cuota_ingreso_o_fianza": 30900.0
+    },
+    "evaluacion_fisica": [
+      "Abdominales en 1 minuto",
+      "Carrera 1500 m planos",
+      "Natación 50 m en 1 minuto",
+      "Salto largo sin impulso",
+      "Planchas en 1 minuto"
+    ],
+    "temario_examen_conocimientos": [
+      "Ciencias",
+      "Humanidades"
+    ],
+    "grados_y_beneficios": {
+      "grado_militar_egreso": "Oficial del Ejército",
+      "titulo_civil_obtenido": "Licenciado en Ciencias Militares"
+    }
+  },
+  {
+    "institucion_nombre": "Instituto de Educación Superior Tecnológico Público del Ejército - ETE",
+    "rama_fuerza": "Ejército del Perú",
+    "rango_formacion": "Suboficial",
+    "url_oficial": "https://ete.edu.pe/",
+    "requisitos_basicos": {
+      "edad_minima_anios": 15,
+      "edad_maxima_anios": 23,
+      "talla_minima_masculina_cm": 160,
+      "talla_minima_femenina_cm": 155,
+      "restricciones_medicas_peso": "De conformidad con la tabla antropométrica y aptitud psicosomática",
+      "estado_civil_exigido": "Soltero(a), sin hijos ni dependientes directos",
+      "grado_instruccion": "Secundaria completa"
+    },
+    "cronograma_postulacion": {
+      "fecha_inicio_inscripcion": "2025-12-01",
+      "fecha_cierre_inscripcion": "2026-02-06",
+      "fecha_examen_conocimientos": "2026-02-23",
+      "fecha_examen_fisico": "2026-02-16"
+    },
+    "costos_y_pagos_soles": {
+      "costo_inscripcion": 189.6,
+      "cuota_ingreso_o_fianza": 5150.0
+    },
+    "evaluacion_fisica": [
+      "Pruebas de suspensión",
+      "Barras",
+      "Abdominales",
+      "Carrera"
+    ],
+    "temario_examen_conocimientos": [
+      "Razonamiento Matemático",
+      "Razonamiento Verbal"
+    ],
+    "grados_y_beneficios": {
+      "grado_militar_egreso": "Suboficial",
+      "titulo_civil_obtenido": "Profesional Técnico"
+    }
+  },
+  {
+    "institucion_nombre": "Escuela Naval del Perú",
+    "rama_fuerza": "Marina de Guerra del Perú",
+    "rango_formacion": "Oficial",
+    "url_oficial": "https://www.escuelanaval.edu.pe/admision",
+    "requisitos_basicos": {
+      "edad_minima_anios": 15,
+      "edad_maxima_anios": 21,
+      "talla_minima_masculina_cm": 168,
+      "talla_minima_femenina_cm": 158,
+      "restricciones_medicas_peso": "Peso y talla de conformidad con la tabla antropométrica",
+      "estado_civil_exigido": "Ser soltero(a), nunca casado(a), sin hijos ni dependientes directos",
+      "grado_instruccion": "Haber culminado los cinco años de educación básica secundaria o cursando el 5to año"
+    },
+    "cronograma_postulacion": {
+      "fecha_inicio_inscripcion": "2026-07-01",
+      "fecha_cierre_inscripcion": "2026-08-14",
+      "fecha_examen_conocimientos": "2026-09-14",
+      "fecha_examen_fisico": "2026-09-18"
+    },
+    "costos_y_pagos_soles": {
+      "costo_inscripcion": 238.8,
+      "cuota_ingreso_o_fianza": 25000.0
+    },
+    "evaluacion_fisica": [
+      "Abdominales",
+      "Planchas",
+      "Natación 50 metros (salto al mar en Poza Castelli)",
+      "Atletismo 1500 metros",
+      "Salto largo sin impulso",
+      "Barras (Hombres)",
+      "Suspensión en barras (Mujeres)"
+    ],
+    "temario_examen_conocimientos": [
+      "Aritmética",
+      "Álgebra",
+      "Geometría",
+      "Trigonometría",
+      "Física",
+      "Química",
+      "Historia del Perú y el Mundo",
+      "Lenguaje",
+      "Geografía del Perú"
+    ],
+    "grados_y_beneficios": {
+      "grado_militar_egreso": "Alférez de Fragata",
+      "titulo_civil_obtenido": "Licenciado en Ciencias Marítimas Navales"
+    }
+  },
+  {
+    "institucion_nombre": "Instituto de Educación Superior Tecnológico Público Naval - CITEN",
+    "rama_fuerza": "Marina de Guerra del Perú",
+    "rango_formacion": "Suboficial",
+    "url_oficial": "https://www.citen.edu.pe/",
+    "requisitos_basicos": {
+      "edad_minima_anios": 15,
+      "edad_maxima_anios": 23,
+      "talla_minima_masculina_cm": 160,
+      "talla_minima_femenina_cm": 155,
+      "restricciones_medicas_peso": "De conformidad con la tabla antropométrica y aptitud psicofísica",
+      "estado_civil_exigido": "Soltero (a), sin hijos ni dependientes directos",
+      "grado_instruccion": "Haber culminado la educación básica secundaria"
+    },
+    "cronograma_postulacion": {
+      "fecha_inicio_inscripcion": "2026-09-01",
+      "fecha_cierre_inscripcion": "2026-10-16",
+      "fecha_examen_conocimientos": "2026-11-28",
+      "fecha_examen_fisico": "2026-09-28"
+    },
+    "costos_y_pagos_soles": {
+      "costo_inscripcion": 198.6,
+      "cuota_ingreso_o_fianza": 7500.0
+    },
+    "evaluacion_fisica": [
+      "Natación 50 metros",
+      "1500 metros planos",
+      "Salto largo sin impulso",
+      "Abdominales (1 minuto)",
+      "Planchas (1 minuto) / Semi-planchas damas",
+      "Barras (varones) / Suspensión (damas)"
+    ],
+    "temario_examen_conocimientos": [
+      "Trigonometría",
+      "Física"
+    ],
+    "grados_y_beneficios": {
+      "grado_militar_egreso": "Oficial de Mar",
+      "titulo_civil_obtenido": "Profesional Técnico Naval"
+    }
+  },
+  {
+    "institucion_nombre": "Escuela de Oficiales de la Fuerza Aérea del Perú - EOFAP",
+    "rama_fuerza": "Fuerza Aérea del Perú",
+    "rango_formacion": "Oficial",
+    "url_oficial": "https://eofap.edu.pe/admision/oficiales",
+    "requisitos_basicos": {
+      "edad_minima_anios": 15,
+      "edad_maxima_anios": 21,
+      "talla_minima_masculina_cm": 168,
+      "talla_minima_femenina_cm": 158,
+      "restricciones_medicas_peso": "Conformidad con la tabla antropométrica para la especialidad de pilotaje",
+      "estado_civil_exigido": "Soltero(a), sin hijos ni dependientes directos",
+      "grado_instruccion": "Haber culminado los cinco años de educación secundaria"
+    },
+    "cronograma_postulacion": {
+      "fecha_inicio_inscripcion": "2025-09-15",
+      "fecha_cierre_inscripcion": "2026-01-15",
+      "fecha_examen_conocimientos": "2026-02-08",
+      "fecha_examen_fisico": "2026-02-18"
+    },
+    "costos_y_pagos_soles": {
+      "costo_inscripcion": 1026.2,
+      "cuota_ingreso_o_fianza": 32200.0
+    },
+    "evaluacion_fisica": [
+      "Carrera 1500 m",
+      "Planchas",
+      "Natación 50 m"
+    ],
+    "temario_examen_conocimientos": [
+      "Inglés",
+      "Comunicaciones",
+      "Ciencias Sociales",
+      "Física"
+    ],
+    "grados_y_beneficios": {
+      "grado_militar_egreso": "Oficial FAP",
+      "titulo_civil_obtenido": "Licenciado en Ciencias Aeroespaciales"
+    }
+  },
+  {
+    "institucion_nombre": "Escuela de Suboficiales de la Fuerza Aérea del Perú - ESOFA",
+    "rama_fuerza": "Fuerza Aérea del Perú",
+    "rango_formacion": "Suboficial",
+    "url_oficial": "https://esofa.edu.pe/admision/",
+    "requisitos_basicos": {
+      "edad_minima_anios": 15,
+      "edad_maxima_anios": 23,
+      "talla_minima_masculina_cm": 160,
+      "talla_minima_femenina_cm": 155,
+      "restricciones_medicas_peso": "De conformidad con la Tabla Antropométrica",
+      "estado_civil_exigido": "Soltero, no tener hijos ni dependientes directos",
+      "grado_instruccion": "Haber culminado la educación secundaria"
+    },
+    "cronograma_postulacion": {
+      "fecha_inicio_inscripcion": "2025-10-01",
+      "fecha_cierre_inscripcion": "2026-01-15",
+      "fecha_examen_conocimientos": "2026-01-20",
+      "fecha_examen_fisico": "2026-01-28"
+    },
+    "costos_y_pagos_soles": {
+      "costo_inscripcion": 366.2,
+      "cuota_ingreso_o_fianza": 10700.0
+    },
+    "evaluacion_fisica": [
+      "Carrera de 1500 metros",
+      "Planchas (01 minuto)",
+      "Natación 50 metros (Crawl)"
+    ],
+    "temario_examen_conocimientos": [
+      "Aritmética",
+      "Álgebra",
+      "Geometría",
+      "Trigonometría",
+      "Física",
+      "Química",
+      "Informática"
+    ],
+    "grados_y_beneficios": {
+      "grado_militar_egreso": "Suboficial FAP",
+      "titulo_civil_obtenido": "Técnico Profesional"
+    }
+  },
+  {
+    "institucion_nombre": "Escuela de Oficiales de la Policía Nacional del Perú",
+    "rama_fuerza": "Policía Nacional del Perú",
+    "rango_formacion": "Oficial",
+    "url_oficial": "https://direddoc.pnp.edu.pe/escuela-de-oficiales/",
+    "requisitos_basicos": {
+      "edad_minima_anios": 17,
+      "edad_maxima_anios": 22,
+      "talla_minima_masculina_cm": 167,
+      "talla_minima_femenina_cm": 161,
+      "restricciones_medicas_peso": "Aprobación de evaluación de talla y peso",
+      "estado_civil_exigido": "Soltero(a), no tener hijos",
+      "grado_instruccion": "Educación secundaria completa"
+    },
+    "cronograma_postulacion": {
+      "fecha_inicio_inscripcion": "2026-09-10",
+      "fecha_cierre_inscripcion": "2026-10-05",
+      "fecha_examen_conocimientos": "2026-11-15",
+      "fecha_examen_fisico": "2026-10-20"
+    },
+    "costos_y_pagos_soles": {
+      "costo_inscripcion": 1000.2,
+      "cuota_ingreso_o_fianza": 4500.0
+    },
+    "evaluacion_fisica": [
+      "Prueba de 100 metros planos"
+    ],
+    "temario_examen_conocimientos": [
+      "Conocimientos Generales",
+      "Aptitud Académica",
+      "Persona Familia y Relaciones Humanas",
+      "Cultura de Paz",
+      "Derechos Humanos"
+    ],
+    "grados_y_beneficios": {
+      "grado_militar_egreso": "Oficial PNP",
+      "titulo_civil_obtenido": "Licenciado en Administración y Ciencias Policiales"
+    }
+  },
+  {
+    "institucion_nombre": "Escuelas de Educación Superior Técnico Profesional PNP",
+    "rama_fuerza": "Policía Nacional del Perú",
+    "rango_formacion": "Suboficial",
+    "url_oficial": "https://direddoc.pnp.edu.pe/escuelas-de-educacion-superior-tenico-profesional/",
+    "requisitos_basicos": {
+      "edad_minima_anios": 18,
+      "edad_maxima_anios": 24,
+      "talla_minima_masculina_cm": 164,
+      "talla_minima_femenina_cm": 158,
+      "restricciones_medicas_peso": "Aprobación de la evaluación de talla y peso",
+      "estado_civil_exigido": "Ser soltero(a), no tener hijos ni dependientes directos, ni encontrarse en estado de gestación",
+      "grado_instruccion": "Educación secundaria completa"
+    },
+    "cronograma_postulacion": {
+      "fecha_inicio_inscripcion": "2026-02-10",
+      "fecha_cierre_inscripcion": "2026-02-28",
+      "fecha_examen_conocimientos": "2026-03-25",
+      "fecha_examen_fisico": "2026-03-15"
+    },
+    "costos_y_pagos_soles": {
+      "costo_inscripcion": 984.0,
+      "cuota_ingreso_o_fianza": 2500.0
+    },
+    "evaluacion_fisica": [
+      "Ejecución de 4 pruebas físicas diferenciadas para varones y damas"
+    ],
+    "temario_examen_conocimientos": [
+      "Matemáticas (Aritmética, Álgebra, Geometría, Trigonometría)",
+      "Comunicación (Gramática, Ortografía, Lenguaje y Literatura)",
+      "Ciencias Sociales (Historia del Perú, Geografía)",
+      "Ciencia, Tecnología y Ambiente",
+      "Persona, Familia y Relaciones Humanas (Derechos Humanos y Cultura de Paz)",
+      "Razonamiento Matemático",
+      "Razonamiento Verbal"
+    ],
+    "grados_y_beneficios": {
+      "grado_militar_egreso": "Suboficial de armas",
+      "titulo_civil_obtenido": "Profesional Técnico en Ciencias Administrativas y Policiales"
+    }
+  }
+]
