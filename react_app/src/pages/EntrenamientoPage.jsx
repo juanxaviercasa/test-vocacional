@@ -96,22 +96,35 @@ export default function EntrenamientoPage() {
   return (
     <div className="w-full max-w-7xl mx-auto px-3 sm:px-6 py-6 sm:py-8 space-y-8 sm:space-y-10">
       
-      {/* 1. HERO BANNER: HUB ESTRATÉGICO DE PREPARACIÓN */}
-      <div className="relative overflow-hidden rounded-3xl bg-white dark:bg-[#101424] text-slate-900 dark:text-white p-6 sm:p-10 border border-slate-200 dark:border-gray-800 shadow-xl transition-colors">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-cyan-500/10 dark:bg-cyan-500/15 rounded-full blur-3xl pointer-events-none" />
+      {/* 1. HERO BANNER: CENTRO DE ENTRENAMIENTO TÁCTICO */}
+      <div className="relative overflow-hidden rounded-3xl text-white p-6 sm:p-10 border border-slate-700/80 dark:border-cyan-500/40 shadow-2xl transition-colors bg-night-deep min-h-[340px] flex flex-col justify-between">
+        
+        {/* Fotografía de Fondo: Sala de Mando y Operaciones Estratégicas */}
+        <img
+          src="/assets/general/tactical-command-room.jpg"
+          alt="Centro de Operaciones y Mando Estratégico Militar"
+          className="absolute inset-0 w-full h-full object-cover object-center z-0 scale-105"
+        />
 
-        <div className="relative z-10 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-50 dark:bg-cyan-950/80 border border-cyan-200 dark:border-cyan-500/40 text-cyan-700 dark:text-cyan-300 text-xs sm:text-sm font-rajdhani font-bold tracking-widest uppercase shadow-sm">
-            <Compass className="w-4 h-4 text-cyan-600 dark:text-neon-cyan flex-shrink-0" />
-            <span>CENTRO DE ENTRENAMIENTO TÁCTICO · HUB DE PREPARACIÓN INTEGRAL 2026</span>
+        {/* Overlay Degradado Táctico de Alto Contraste */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0B101E]/95 via-[#0B101E]/90 to-[#0B101E]/75 z-10" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-cyan-500/15 rounded-full blur-3xl pointer-events-none z-10" />
+
+        <div className="relative z-20 space-y-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0B101E]/90 border border-neon-cyan/50 text-neon-cyan text-xs sm:text-sm font-rajdhani font-bold tracking-widest uppercase shadow-cyan-glow">
+            <Compass className="w-4 h-4 text-neon-cyan flex-shrink-0" />
+            <span>CENTRO DE ENTRENAMIENTO TÁCTICO · PREPARACIÓN INTEGRAL 2026</span>
           </div>
 
-          <h1 className="text-2xl sm:text-4xl lg:text-5xl font-sans font-black text-slate-900 dark:text-white uppercase tracking-tight leading-tight">
-            MAPA ESTRATÉGICO DE FORMACIÓN MILITAR & POLICIAL
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-sans font-black text-white uppercase tracking-tight leading-tight max-w-4xl text-balance">
+            <span className="block text-slate-100">MAPA ESTRATÉGICO DE</span>
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-teal-300 to-cyan-200 mt-1">
+              FORMACIÓN & PREPARACIÓN TÁCTICA 2026
+            </span>
           </h1>
 
-          <p className="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-300 font-inter max-w-3xl leading-relaxed">
-            Ruta de alto rendimiento diseñada para aspirantes a Oficiales y Suboficiales de las Fuerzas Armadas y Policía Nacional. La admisión no se logra memorizando claves: requiere un acondicionamiento integral en tres ejes indisolubles: <strong className="text-cyan-600 dark:text-cyan-300">cognitivo</strong>, <strong className="text-emerald-600 dark:text-emerald-400">somático-físico</strong> y <strong className="text-amber-600 dark:text-amber-300">psicológico de combate</strong>.
+          <p className="text-sm sm:text-base md:text-lg text-slate-200 font-inter max-w-3xl leading-relaxed font-medium drop-shadow-sm">
+            Ruta de alto rendimiento diseñada para aspirantes a Oficiales y Suboficiales de las Fuerzas Armadas y Policía Nacional. La admisión no se logra memorizando claves: requiere un acondicionamiento integral en tres ejes indisolubles: <strong className="text-cyan-300">cognitivo</strong>, <strong className="text-emerald-400">somático-físico</strong> y <strong className="text-amber-300">psicológico de combate</strong>.
           </p>
 
           {/* Filtro Rápido de Ejes */}
@@ -129,7 +142,7 @@ export default function EntrenamientoPage() {
                 className={`px-3.5 sm:px-4 py-2 rounded-xl text-xs font-rajdhani font-bold uppercase tracking-wider transition-all cursor-pointer ${
                   activeTab === tab.id
                     ? 'bg-neon-cyan text-night-deep shadow-[0_0_15px_rgba(0,240,255,0.4)] font-black'
-                    : 'bg-slate-100 dark:bg-white/5 hover:bg-slate-200 dark:hover:bg-white/10 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800'
+                    : 'bg-black/60 hover:bg-black/80 text-slate-200 border border-slate-700 hover:border-slate-500 backdrop-blur-sm'
                 }`}
               >
                 {tab.label}
@@ -139,80 +152,124 @@ export default function EntrenamientoPage() {
         </div>
       </div>
 
-      {/* 2. MAPA CONCEPTUAL INTERACTIVO (Ruta Conectada por Nodos Tácticos) */}
+      {/* 2. MAPA CONCEPTUAL INTERACTIVO ILUSTRADO (3 Nodos Enciclopédicos con Fotografía) */}
       <div className="space-y-4">
-        <div className="text-[11px] font-rajdhani font-black text-slate-500 dark:text-gray-400 uppercase tracking-widest px-1">
-          LÍNEA DE PREPARACIÓN SECUENCIAL TÁCTICA (3 EJES)
+        <div className="flex items-center justify-between px-1">
+          <span className="text-[11px] font-rajdhani font-black text-slate-500 dark:text-gray-400 uppercase tracking-widest">
+            LÍNEA DE PREPARACIÓN SECUENCIAL TÁCTICA (3 EJES METODOLÓGICOS)
+          </span>
+          <span className="text-[10px] font-mono text-cyan-600 dark:text-cyan-400 uppercase font-bold hidden sm:inline">
+            DOCTRINA CCFFAA / PNP
+          </span>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
           
           {/* NODO 1: COGNITIVO */}
-          <div className="p-6 rounded-3xl bg-white dark:bg-[#121624] border-2 border-cyan-500/40 dark:border-cyan-500/30 shadow-md hover:border-cyan-500 transition-all flex flex-col justify-between">
-            <div>
-              <div className="flex items-center justify-between mb-3">
-                <span className="w-9 h-9 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-600 dark:text-cyan-400 font-sans font-black">
+          <div className="group rounded-3xl bg-white dark:bg-[#121624] border-2 border-cyan-500/40 dark:border-cyan-500/30 shadow-lg hover:border-cyan-500 hover:shadow-cyan-glow/20 transition-all flex flex-col justify-between overflow-hidden">
+            {/* Imagen Fotográfica Oficial */}
+            <div className="relative h-44 w-full overflow-hidden bg-slate-900">
+              <img
+                src="/assets/general/cadets-study-habits.jpg"
+                alt="Cadetes en estudio técnico militar y resolución DECO"
+                className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#121624] via-transparent to-black/30" />
+              <div className="absolute top-3 left-3 flex items-center gap-2">
+                <span className="w-8 h-8 rounded-lg bg-black/70 backdrop-blur-md border border-cyan-400/50 flex items-center justify-center text-cyan-300 font-sans font-black text-xs">
                   01
                 </span>
-                <span className="px-2.5 py-0.5 rounded-full bg-cyan-50 dark:bg-cyan-950/80 border border-cyan-300 dark:border-cyan-500/30 text-cyan-700 dark:text-cyan-300 text-[10px] font-rajdhani font-black tracking-wider uppercase">
+                <span className="px-2.5 py-1 rounded-full bg-cyan-950/90 backdrop-blur-md border border-cyan-400/50 text-cyan-300 text-[10px] font-rajdhani font-black tracking-wider uppercase">
                   EJE COGNITIVO
                 </span>
               </div>
-              <h3 className="font-sans font-black text-lg sm:text-xl text-slate-900 dark:text-white uppercase tracking-tight">
-                TÉCNICAS Y HÁBITOS DE ESTUDIO
-              </h3>
-              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-inter mt-2 leading-relaxed">
-                Pomodoro militar 50/10, Active Recall sin distractores, simulacros con cronómetro a 72s y protocolo de consolidación circadiana.
-              </p>
             </div>
-            <div className="mt-4 pt-3 border-t border-slate-100 dark:border-gray-800 text-[11px] font-rajdhani font-bold text-cyan-600 dark:text-cyan-400 uppercase">
-              • Fase Base: Reactivos DECO
+
+            <div className="p-5 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 className="font-sans font-black text-lg sm:text-xl text-slate-900 dark:text-white uppercase tracking-tight">
+                  TÉCNICAS Y HÁBITOS DE ESTUDIO
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-inter mt-2 leading-relaxed">
+                  Pomodoro militar 50/10, Active Recall sin distractores, simulacros con cronómetro estricto a 72s y protocolo de consolidación circadiana de la memoria.
+                </p>
+              </div>
+              <div className="mt-4 pt-3 border-t border-slate-100 dark:border-gray-800 text-[11px] font-rajdhani font-bold text-cyan-600 dark:text-cyan-400 uppercase flex items-center justify-between">
+                <span>• Fase Base: Reactivos DECO</span>
+                <span className="font-mono text-[10px]">50m / 10m</span>
+              </div>
             </div>
           </div>
 
           {/* NODO 2: FÍSICO */}
-          <div className="p-6 rounded-3xl bg-white dark:bg-[#121624] border-2 border-emerald-500/40 dark:border-emerald-500/30 shadow-md hover:border-emerald-500 transition-all flex flex-col justify-between">
-            <div>
-              <div className="flex items-center justify-between mb-3">
-                <span className="w-9 h-9 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-600 dark:text-emerald-400 font-sans font-black">
+          <div className="group rounded-3xl bg-white dark:bg-[#121624] border-2 border-emerald-500/40 dark:border-emerald-500/30 shadow-lg hover:border-emerald-500 hover:shadow-emerald-glow/20 transition-all flex flex-col justify-between overflow-hidden">
+            {/* Imagen Fotográfica Oficial */}
+            <div className="relative h-44 w-full overflow-hidden bg-slate-900">
+              <img
+                src="/assets/general/cadets-physical-training.jpg"
+                alt="Cadetes en pista de combate y esfuerzo físico de alto rendimiento"
+                className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#121624] via-transparent to-black/30" />
+              <div className="absolute top-3 left-3 flex items-center gap-2">
+                <span className="w-8 h-8 rounded-lg bg-black/70 backdrop-blur-md border border-emerald-400/50 flex items-center justify-center text-emerald-300 font-sans font-black text-xs">
                   02
                 </span>
-                <span className="px-2.5 py-0.5 rounded-full bg-emerald-50 dark:bg-emerald-950/80 border border-emerald-300 dark:border-emerald-500/30 text-emerald-700 dark:text-emerald-300 text-[10px] font-rajdhani font-black tracking-wider uppercase">
+                <span className="px-2.5 py-1 rounded-full bg-emerald-950/90 backdrop-blur-md border border-emerald-400/50 text-emerald-300 text-[10px] font-rajdhani font-black tracking-wider uppercase">
                   EJE SOMÁTICO
                 </span>
               </div>
-              <h3 className="font-sans font-black text-lg sm:text-xl text-slate-900 dark:text-white uppercase tracking-tight">
-                PLANIFICACIÓN FÍSICA Y BAREMOS
-              </h3>
-              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-inter mt-2 leading-relaxed">
-                Malla de trote Cooper 2,400m fraccionado, dominadas estrictas sin balanceo, natación de supervivencia y salto de valor desde 5m.
-              </p>
             </div>
-            <div className="mt-4 pt-3 border-t border-slate-100 dark:border-gray-800 text-[11px] font-rajdhani font-bold text-emerald-600 dark:text-emerald-400 uppercase">
-              • Fase Somática: Esfuerzo Máximo
+
+            <div className="p-5 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 className="font-sans font-black text-lg sm:text-xl text-slate-900 dark:text-white uppercase tracking-tight">
+                  PLANIFICACIÓN FÍSICA Y BAREMOS
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-inter mt-2 leading-relaxed">
+                  Malla de trote Cooper 2,400m fraccionado, dominadas estrictas sin balanceo, natación de supervivencia militar y salto de valor desde plataforma de 5m.
+                </p>
+              </div>
+              <div className="mt-4 pt-3 border-t border-slate-100 dark:border-gray-800 text-[11px] font-rajdhani font-bold text-emerald-600 dark:text-emerald-400 uppercase flex items-center justify-between">
+                <span>• Fase Somática: Esfuerzo Máximo</span>
+                <span className="font-mono text-[10px]">2,400 Metros</span>
+              </div>
             </div>
           </div>
 
           {/* NODO 3: PSICOLÓGICO */}
-          <div className="p-6 rounded-3xl bg-white dark:bg-[#121624] border-2 border-amber-500/40 dark:border-amber-500/30 shadow-md hover:border-amber-500 transition-all flex flex-col justify-between">
-            <div>
-              <div className="flex items-center justify-between mb-3">
-                <span className="w-9 h-9 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-600 dark:text-amber-400 font-sans font-black">
+          <div className="group rounded-3xl bg-white dark:bg-[#121624] border-2 border-amber-500/40 dark:border-amber-500/30 shadow-lg hover:border-amber-500 hover:shadow-amber-glow/20 transition-all flex flex-col justify-between overflow-hidden">
+            {/* Imagen Fotográfica Oficial */}
+            <div className="relative h-44 w-full overflow-hidden bg-slate-900">
+              <img
+                src="/assets/general/military-psychological-board.jpg"
+                alt="Junta examinadora y entrevista de admisión con oficiales superiores"
+                className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#121624] via-transparent to-black/30" />
+              <div className="absolute top-3 left-3 flex items-center gap-2">
+                <span className="w-8 h-8 rounded-lg bg-black/70 backdrop-blur-md border border-amber-400/50 flex items-center justify-center text-amber-300 font-sans font-black text-xs">
                   03
                 </span>
-                <span className="px-2.5 py-0.5 rounded-full bg-amber-50 dark:bg-amber-950/80 border border-amber-300 dark:border-amber-500/30 text-amber-700 dark:text-amber-300 text-[10px] font-rajdhani font-black tracking-wider uppercase">
+                <span className="px-2.5 py-1 rounded-full bg-amber-950/90 backdrop-blur-md border border-amber-400/50 text-amber-300 text-[10px] font-rajdhani font-black tracking-wider uppercase">
                   EJE CONDUCTUAL
                 </span>
               </div>
-              <h3 className="font-sans font-black text-lg sm:text-xl text-slate-900 dark:text-white uppercase tracking-tight">
-                ESTRATEGIA PSICOLÓGICA Y MANDO
-              </h3>
-              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-inter mt-2 leading-relaxed">
-                Respiración Box Breathing (4-4-4-4), control de pánico en entrevista personal, proyección de voz y lenguaje no verbal marcial.
-              </p>
             </div>
-            <div className="mt-4 pt-3 border-t border-slate-100 dark:border-gray-800 text-[11px] font-rajdhani font-bold text-amber-600 dark:text-amber-400 uppercase">
-              • Fase Mental: Consejo de Admisión
+
+            <div className="p-5 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 className="font-sans font-black text-lg sm:text-xl text-slate-900 dark:text-white uppercase tracking-tight">
+                  ESTRATEGIA PSICOLÓGICA Y MANDO
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-inter mt-2 leading-relaxed">
+                  Respiración Box Breathing (4-4-4-4), control de pánico en entrevista personal ante el Estado Mayor, proyección de voz diafragmática y porte marcial.
+                </p>
+              </div>
+              <div className="mt-4 pt-3 border-t border-slate-100 dark:border-gray-800 text-[11px] font-rajdhani font-bold text-amber-600 dark:text-amber-400 uppercase flex items-center justify-between">
+                <span>• Fase Mental: Consejo de Admisión</span>
+                <span className="font-mono text-[10px]">Box 4x4</span>
+              </div>
             </div>
           </div>
 
@@ -531,9 +588,24 @@ export default function EntrenamientoPage() {
             </div>
 
             {/* Pautas Clave de Entrevista ante el Estado Mayor */}
-            <div className="p-6 sm:p-8 rounded-3xl bg-white dark:bg-[#121624] border border-slate-200 dark:border-gray-800 shadow-sm space-y-4 flex flex-col justify-between">
-              <div>
-                <div className="flex items-center gap-2 text-amber-600 dark:text-amber-400 mb-2">
+            <div className="p-6 sm:p-8 rounded-3xl bg-white dark:bg-[#121624] border border-slate-200 dark:border-gray-800 shadow-sm space-y-4 flex flex-col justify-between overflow-hidden relative">
+              <div className="space-y-4">
+                <div className="relative h-36 w-full rounded-2xl overflow-hidden bg-slate-900 border border-amber-500/20">
+                  <img
+                    src="/assets/general/military-psychological-board.jpg"
+                    alt="Consejo de Admisión y Entrevista Personal"
+                    className="w-full h-full object-cover object-center"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                  <div className="absolute bottom-2.5 left-3 right-3 flex items-center justify-between">
+                    <span className="text-[10px] font-rajdhani font-black text-amber-300 uppercase tracking-widest bg-black/60 px-2 py-0.5 rounded backdrop-blur-sm">
+                      JUNTA EXAMINADORA DE ADMISIÓN
+                    </span>
+                    <span className="text-[10px] font-mono text-slate-300">ESTÁNDAR MINDEF</span>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-2 text-amber-600 dark:text-amber-400">
                   <Eye className="w-5 h-5 flex-shrink-0" />
                   <h4 className="font-rajdhani font-bold text-lg text-slate-900 dark:text-white uppercase tracking-wider">
                     Lenguaje No Verbal ante el Consejo Evaluador

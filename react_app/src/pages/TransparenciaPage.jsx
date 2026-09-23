@@ -17,8 +17,21 @@ import {
   CheckCircle2,
   FileCheck2,
   GraduationCap,
-  Shield
+  Shield,
+  Activity,
+  X
 } from 'lucide-react';
+
+const SCHOOL_IMAGES = {
+  EMCH: '/assets/schools/emch-bg.jpg',
+  ETE: '/assets/schools/ete-bg.jpg',
+  ENP: '/assets/schools/enp-bg.jpg',
+  CITEN: '/assets/schools/citen-bg.jpg',
+  EOFAP: '/assets/schools/eofap-bg.jpg',
+  ESOFA: '/assets/schools/esofa-bg.jpg',
+  EO_PNP: '/assets/schools/eo_pnp-bg.jpg',
+  EESTP_PNP: '/assets/schools/eestp_pnp-bg.jpg'
+};
 
 const BRANCHES = [
   {
@@ -78,7 +91,7 @@ const BRANCHES = [
 export default function TransparenciaPage() {
   const [selectedBranch, setSelectedBranch] = useState('ALL');
   const [searchQuery, setSearchQuery] = useState('');
-  const [expandedSchool, setExpandedSchool] = useState(null);
+  const [activeModalProspecto, setActiveModalProspecto] = useState(null);
   const { startAcademicDiagnostic } = useAssessmentStore();
 
   // Scroll suave automático al hash si se llega con #pdf-emch, etc.
@@ -90,10 +103,20 @@ export default function TransparenciaPage() {
       if (el) {
         setTimeout(() => {
           el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          setExpandedSchool(targetId.replace('pdf-', '').toUpperCase());
         }, 150);
       }
     }
+  }, []);
+
+  // Cerrar modal con tecla Escape
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        setActiveModalProspecto(null);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
   const filteredBranches = selectedBranch === 'ALL'
@@ -104,7 +127,7 @@ export default function TransparenciaPage() {
     <div className="w-full max-w-7xl mx-auto px-3 sm:px-6 py-6 sm:py-8 space-y-8 sm:space-y-10">
       
       {/* 1. HEADER INSTITUCIONAL CON FOTOGRAFÍA MILITAR Y CENTRO DE PROSPECTOS */}
-      <div className="relative overflow-hidden rounded-3xl text-white p-6 sm:p-10 border border-slate-700/80 dark:border-cyan-500/40 shadow-2xl transition-colors bg-night-deep min-h-[320px] flex flex-col justify-between">
+      <div className="relative overflow-hidden rounded-3xl text-white p-6 sm:p-10 border border-slate-700/80 dark:border-cyan-500/40 shadow-2xl transition-colors bg-night-deep min-h-[340px] flex flex-col justify-between">
         
         {/* Fotografía de Fondo: Archivo y Centro de Documentación Estratégica CCFFAA */}
         <img
@@ -123,8 +146,12 @@ export default function TransparenciaPage() {
             <span>DESCARGA DE PROSPECTOS OFICIALES · FUERZAS ARMADAS Y POLICÍA NACIONAL</span>
           </div>
 
-          <h1 className="text-2xl sm:text-4xl lg:text-5xl font-sans font-black text-white uppercase tracking-tight leading-tight drop-shadow-md">
-            CENTRO OFICIAL DE DESCARGA DE PROSPECTOS 2026
+          {/* Título Principal con Distribución Perfecta y Equilibrada */}
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-sans font-black text-white uppercase tracking-tight leading-tight drop-shadow-md max-w-4xl text-balance">
+            <span className="block">CENTRO OFICIAL DE DESCARGA</span>
+            <span className="block text-cyan-400 dark:text-[#00F0FF]">
+              PROSPECTOS & TEMARIOS MILITARES 2026
+            </span>
           </h1>
 
           <p className="text-sm sm:text-base md:text-lg text-slate-200 font-inter max-w-3xl leading-relaxed font-medium drop-shadow-sm">
@@ -213,7 +240,7 @@ export default function TransparenciaPage() {
         </div>
       </div>
 
-      {/* 3. DIRECTORIO INSTITUCIONAL DE DESCARGA DE PROSPECTOS POR FUERZA (ALINEACIÓN PROFESIONAL Y RIGUROSA) */}
+      {/* 3. DIRECTORIO INSTITUCIONAL CON FOTOGRAFÍAS REALES EN LAS 8 ESCUELAS */}
       <div className="space-y-8">
         {filteredBranches.map((branch) => {
           const branchProspectuses = OFFICIAL_PROSPECTUSES.filter((p) => {
@@ -267,79 +294,92 @@ export default function TransparenciaPage() {
                 </div>
               </div>
 
-              {/* Cuadrícula Simétrica de las Escuelas Matrices (Misma Altura y Alineación de Botones) */}
+              {/* Cuadrícula Simétrica de Escuelas con Imágenes y Altura Idéntica */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
                 {branchProspectuses.map((prospecto) => {
-                  const isExpanded = expandedSchool === prospecto.sigla;
                   const cardAnchorId = `pdf-${prospecto.sigla.toLowerCase().replace(/[-_]/g, '')}`;
                   const isOficiales = ['EMCH', 'ENP', 'EOFAP', 'EO_PNP'].includes(prospecto.id);
+                  const schoolImage = SCHOOL_IMAGES[prospecto.id] || '/assets/general/hero-joint-forces.jpg';
 
                   return (
                     <div
                       key={prospecto.id}
                       id={cardAnchorId}
-                      className={`h-full flex flex-col justify-between rounded-2xl transition-all duration-300 overflow-hidden border ${
-                        isExpanded
-                          ? 'bg-white dark:bg-[#141b2e] border-neon-cyan shadow-xl scale-[1.01]'
-                          : 'bg-white dark:bg-[#111625] border-slate-200 dark:border-gray-800 hover:border-slate-400 dark:hover:border-cyan-500/40 shadow-sm'
-                      }`}
+                      className="h-full flex flex-col justify-between rounded-2xl transition-all duration-300 overflow-hidden border bg-white dark:bg-[#111625] border-slate-200 dark:border-gray-800 hover:border-slate-400 dark:hover:border-cyan-500/50 shadow-md group"
                     >
-                      {/* Cabecera y Datos de la Escuela */}
-                      <div className="p-6 flex-1 flex flex-col justify-between">
-                        <div>
-                          {/* Nivel de Formación */}
-                          <div className="flex items-center justify-between gap-2 mb-3">
-                            <span className="text-2xl select-none">{prospecto.icono}</span>
-                            <span className={`text-[10px] font-rajdhani font-black px-2.5 py-1 rounded-full border uppercase tracking-wider ${
-                              isOficiales
-                                ? 'bg-cyan-50 dark:bg-cyan-950/80 text-cyan-700 dark:text-cyan-300 border-cyan-300 dark:border-cyan-500/40'
-                                : 'bg-amber-50 dark:bg-amber-950/80 text-amber-700 dark:text-amber-300 border-amber-300 dark:border-amber-500/40'
-                            }`}>
-                              {isOficiales ? 'CARRERA DE OFICIALES (5 AÑOS)' : 'CARRERA DE SUBOFICIALES (3 AÑOS)'}
-                            </span>
-                          </div>
+                      {/* Cabecera Fotográfica Panorámica de la Escuela Matriz */}
+                      <div className="relative h-44 sm:h-48 w-full overflow-hidden bg-slate-900 flex-shrink-0">
+                        <img
+                          src={schoolImage}
+                          alt={`Campus y Cadetes de ${prospecto.sigla}`}
+                          className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#111625] via-[#111625]/60 to-transparent z-10" />
 
-                          {/* Sigla y Nombre Oficial */}
-                          <div className="min-h-[68px]">
-                            <h4 className="font-sans font-black text-2xl text-slate-900 dark:text-white uppercase tracking-tight leading-tight">
-                              {prospecto.sigla}
-                            </h4>
-                            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-inter mt-1 leading-relaxed line-clamp-2">
-                              {prospecto.nombre}
-                            </p>
-                          </div>
+                        {/* Badges Flotantes sobre la Fotografía */}
+                        <div className="absolute top-3 left-3 right-3 flex items-center justify-between z-20">
+                          <span className="w-10 h-10 rounded-xl bg-black/60 backdrop-blur-md border border-white/20 flex items-center justify-center text-xl shadow-md">
+                            {prospecto.icono}
+                          </span>
+                          <span className={`text-[10px] font-rajdhani font-black px-2.5 py-1 rounded-full border backdrop-blur-md uppercase tracking-wider shadow-sm ${
+                            isOficiales
+                              ? 'bg-cyan-950/80 text-cyan-300 border-cyan-500/50'
+                              : 'bg-amber-950/80 text-amber-300 border-amber-500/50'
+                          }`}>
+                            {isOficiales ? 'OFICIALES · 5 AÑOS' : 'SUBOFICIALES · 3 AÑOS'}
+                          </span>
                         </div>
 
-                        {/* Pie de Ficha con Resolución y Botones de Acción Estandarizados */}
-                        <div className="mt-5 pt-4 border-t border-slate-100 dark:border-gray-800 space-y-3">
+                        {/* Rótulo de Sigla y Fuerza */}
+                        <div className="absolute bottom-3 left-4 right-4 z-20">
+                          <div className="flex items-baseline gap-2">
+                            <h4 className="font-sans font-black text-2xl text-white uppercase tracking-tight drop-shadow-md">
+                              {prospecto.sigla}
+                            </h4>
+                            <span className="text-xs font-rajdhani font-bold text-cyan-400 uppercase tracking-wider">
+                              {prospecto.fuerza}
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Cuerpo de la Tarjeta con Textos Estandarizados */}
+                      <div className="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                          <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-inter leading-relaxed line-clamp-2 min-h-[40px]">
+                            {prospecto.nombre}
+                          </p>
+                        </div>
+
+                        {/* Pie de Tarjeta con Resolución y Acciones Estandarizadas */}
+                        <div className="mt-4 pt-3 border-t border-slate-100 dark:border-gray-800 space-y-3">
                           
-                          {/* Resolución Directoral Oficial */}
-                          <div className="min-h-[36px] flex items-center text-[11px] font-mono text-slate-500 dark:text-slate-400 leading-snug line-clamp-2" title={prospecto.resolucionOficial}>
+                          {/* Decreto Legal */}
+                          <div className="min-h-[32px] flex items-center text-[11px] font-mono text-slate-500 dark:text-slate-400 leading-snug line-clamp-1" title={prospecto.resolucionOficial}>
                             <span>⚖️ {prospecto.resolucionOficial}</span>
                           </div>
 
-                          {/* Botón Principal: Descargar Prospecto Oficial PDF */}
+                          {/* Botón Principal: Descargar PDF Oficial */}
                           <a
                             href={prospecto.pdfUrl}
                             download={`${prospecto.sigla}_Prospecto_Oficial_2026.pdf`}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-500 hover:to-blue-600 text-white font-rajdhani font-black text-xs sm:text-sm uppercase tracking-wider shadow-md hover:shadow-cyan-glow transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer group select-none"
+                            className="w-full py-2.5 px-4 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-500 hover:to-blue-600 text-white font-rajdhani font-black text-xs sm:text-sm uppercase tracking-wider shadow-md hover:shadow-cyan-glow transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer select-none"
                           >
-                            <Download className="w-4 h-4 group-hover:translate-y-0.5 transition-transform" />
+                            <Download className="w-4 h-4" />
                             <span>Descargar Prospecto Oficial PDF</span>
                           </a>
 
-                          {/* Acciones Secundarias: Ver Temario DECO y Simular */}
+                          {/* Acciones Secundarias: Apertura de Modal DECO y Simulación */}
                           <div className="flex items-center justify-between pt-1 text-xs">
                             <button
                               type="button"
-                              onClick={() => setExpandedSchool(isExpanded ? null : prospecto.sigla)}
-                              className="font-rajdhani font-bold text-cyan-600 dark:text-neon-cyan hover:underline flex items-center gap-1 cursor-pointer py-1"
+                              onClick={() => setActiveModalProspecto(prospecto)}
+                              className="font-rajdhani font-bold text-cyan-600 dark:text-neon-cyan hover:underline flex items-center gap-1.5 cursor-pointer py-1"
                             >
                               <BookOpen className="w-3.5 h-3.5" />
-                              <span>{isExpanded ? 'Ocultar Temario' : 'Ver Temario Oficial'}</span>
-                              <ChevronDown className={`w-3.5 h-3.5 transition-transform ${isExpanded ? 'rotate-180' : ''}`} />
+                              <span>Ver Temario DECO & Baremos</span>
                             </button>
 
                             <button
@@ -352,35 +392,9 @@ export default function TransparenciaPage() {
                               <ArrowRight className="w-3.5 h-3.5" />
                             </button>
                           </div>
+
                         </div>
                       </div>
-
-                      {/* Desglose Expandible de Temario Oficial y Baremos */}
-                      {isExpanded && (
-                        <div className="p-5 bg-slate-50 dark:bg-black/60 border-t border-slate-200 dark:border-gray-800 text-xs font-inter space-y-3 text-slate-700 dark:text-slate-300 animate-in fade-in duration-200">
-                          <div>
-                            <strong className="text-slate-900 dark:text-white block font-rajdhani text-xs uppercase tracking-wider mb-1">
-                              📚 Balotario Oficial de Ciencias:
-                            </strong>
-                            <p className="leading-relaxed text-slate-600 dark:text-slate-300">{prospecto.paginasTemario}</p>
-                          </div>
-                          <div>
-                            <strong className="text-slate-900 dark:text-white block font-rajdhani text-xs uppercase tracking-wider mb-1">
-                              🏃 Baremos de Aptitud Física:
-                            </strong>
-                            <p className="leading-relaxed text-slate-600 dark:text-slate-300">{prospecto.paginasFisico}</p>
-                          </div>
-                          <div>
-                            <strong className="text-slate-900 dark:text-white block font-rajdhani text-xs uppercase tracking-wider mb-1">
-                              🩺 Tabla Médica Antropométrica:
-                            </strong>
-                            <p className="leading-relaxed text-slate-600 dark:text-slate-300">{prospecto.paginasMedico}</p>
-                          </div>
-                          <div className="pt-2 border-t border-slate-200 dark:border-gray-800 text-[10px] text-slate-500 font-mono">
-                            Verificado con: {prospecto.notaAuditoria}
-                          </div>
-                        </div>
-                      )}
 
                     </div>
                   );
@@ -392,7 +406,103 @@ export default function TransparenciaPage() {
         })}
       </div>
 
-      {/* 4. FOOTER TÉCNICO Y RETORNO */}
+      {/* 4. MODAL TÁCTICO DE TEMARIO OFICIAL Y BAREMOS (MANTIENE LA SIMETRÍA DEL GRID) */}
+      {activeModalProspecto && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-in fade-in duration-200">
+          <div className="relative w-full max-w-2xl bg-white dark:bg-[#0e1424] border-2 border-cyan-500/50 rounded-3xl shadow-[0_0_50px_rgba(0,240,255,0.2)] overflow-hidden flex flex-col max-h-[90vh]">
+            
+            {/* Cabecera del Modal con Fotografía y Emblema */}
+            <div className="p-6 bg-gradient-to-r from-slate-900 via-[#141d34] to-slate-900 border-b border-cyan-500/30 flex items-center justify-between text-white">
+              <div className="flex items-center gap-3">
+                <span className="text-3xl select-none">{activeModalProspecto.icono}</span>
+                <div>
+                  <div className="flex items-center gap-2">
+                    <span className="font-sans font-black text-xl text-white uppercase tracking-tight">
+                      {activeModalProspecto.sigla} · TEMARIO & BAREMOS
+                    </span>
+                    <span className="px-2 py-0.5 rounded bg-cyan-950/80 border border-cyan-500/40 text-neon-cyan text-[10px] font-mono font-bold">
+                      OFICIAL 2026
+                    </span>
+                  </div>
+                  <p className="text-xs text-slate-300 font-inter line-clamp-1">
+                    {activeModalProspecto.nombre}
+                  </p>
+                </div>
+              </div>
+
+              <button
+                type="button"
+                onClick={() => setActiveModalProspecto(null)}
+                className="p-2 rounded-xl bg-white/10 hover:bg-white/20 text-white transition-colors cursor-pointer"
+                aria-label="Cerrar ventana"
+              >
+                <X className="w-5 h-5 text-slate-300 hover:text-white" />
+              </button>
+            </div>
+
+            {/* Contenido con Scroll Suave y Pestañas / Bloques */}
+            <div className="p-6 overflow-y-auto space-y-5 text-slate-800 dark:text-slate-200 text-sm font-inter">
+              <div className="p-4 rounded-2xl bg-cyan-500/10 border border-cyan-500/30">
+                <div className="flex items-center gap-2 text-cyan-600 dark:text-neon-cyan font-rajdhani font-black text-sm uppercase tracking-wider mb-1">
+                  <BookOpen className="w-4 h-4" />
+                  <span>📚 Balotario Oficial de Ciencias y Letras:</span>
+                </div>
+                <p className="text-xs sm:text-sm leading-relaxed">{activeModalProspecto.paginasTemario}</p>
+              </div>
+
+              <div className="p-4 rounded-2xl bg-emerald-500/10 border border-emerald-500/30">
+                <div className="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-rajdhani font-black text-sm uppercase tracking-wider mb-1">
+                  <Activity className="w-4 h-4" />
+                  <span>🏃 Baremos de Aptitud Física de Combate:</span>
+                </div>
+                <p className="text-xs sm:text-sm leading-relaxed">{activeModalProspecto.paginasFisico}</p>
+              </div>
+
+              <div className="p-4 rounded-2xl bg-amber-500/10 border border-amber-500/30">
+                <div className="flex items-center gap-2 text-amber-600 dark:text-amber-400 font-rajdhani font-black text-sm uppercase tracking-wider mb-1">
+                  <ShieldCheck className="w-4 h-4" />
+                  <span>🩺 Tabla Médica y Perfil Antropométrico:</span>
+                </div>
+                <p className="text-xs sm:text-sm leading-relaxed">{activeModalProspecto.paginasMedico}</p>
+              </div>
+
+              <div className="p-3 rounded-xl bg-slate-100 dark:bg-black/40 border border-slate-200 dark:border-gray-800 text-xs font-mono text-slate-500 dark:text-slate-400">
+                ⚖️ <strong>Marco Legal Oficial:</strong> {activeModalProspecto.resolucionOficial} · {activeModalProspecto.notaAuditoria}
+              </div>
+            </div>
+
+            {/* Acciones Rápidas del Modal */}
+            <div className="p-4 bg-slate-50 dark:bg-[#0a0e1a] border-t border-slate-200 dark:border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-3">
+              <a
+                href={activeModalProspecto.pdfUrl}
+                download={`${activeModalProspecto.sigla}_Prospecto_Oficial_2026.pdf`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-neon-cyan text-night-deep font-rajdhani font-black text-xs uppercase tracking-wider shadow-cyan-glow hover:bg-cyan-300 transition-all cursor-pointer"
+              >
+                <Download className="w-4 h-4" />
+                <span>Descargar PDF Completo</span>
+              </a>
+
+              <button
+                type="button"
+                onClick={() => {
+                  const sigla = activeModalProspecto.sigla;
+                  setActiveModalProspecto(null);
+                  startAcademicDiagnostic(sigla);
+                }}
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl border border-slate-300 dark:border-gray-700 bg-white dark:bg-[#141518] hover:border-neon-cyan text-slate-700 dark:text-white font-rajdhani font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer"
+              >
+                <span>Simular Examen de Admisión</span>
+                <ArrowRight className="w-4 h-4" />
+              </button>
+            </div>
+
+          </div>
+        </div>
+      )}
+
+      {/* 5. FOOTER TÉCNICO Y RETORNO */}
       <div className="p-6 rounded-2xl bg-white dark:bg-[#121624] border border-slate-200 dark:border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
         <div className="flex items-center gap-3">
           <Scale className="w-6 h-6 text-cyan-600 dark:text-neon-cyan flex-shrink-0" />

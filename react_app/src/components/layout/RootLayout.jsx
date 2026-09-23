@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
   const NAV_ITEMS = [
     { href: '/', label: 'Evaluación', sub: 'Test y Diagnóstico', icon: Target },
     { href: '/transparencia', label: 'Descarga Prospectos', sub: '8 Escuelas Matrices', icon: Download },
-    { href: '/entrenamiento', label: 'Hub Entrenamiento', sub: 'Preparación 360°', icon: Compass },
+    { href: '/entrenamiento', label: 'Entrenamiento', sub: 'Preparación Táctica', icon: Compass },
     { href: '/glosario', label: 'Glosario', sub: 'Términos Militares', icon: BookOpen }
   ];
 
@@ -250,7 +250,7 @@ export default function RootLayout({ children }) {
               <span className="text-slate-400">/</span>
               <span className="text-cyan-600 dark:text-neon-cyan truncate max-w-[200px] sm:max-w-none">
                 {currentPath === '/transparencia' && 'Descarga de Prospectos Oficiales 2026'}
-                {currentPath === '/entrenamiento' && 'Hub Estratégico de Entrenamiento'}
+                {currentPath === '/entrenamiento' && 'Centro de Entrenamiento Táctico'}
                 {currentPath === '/glosario' && 'Glosario Técnico de Términos Militares'}
               </span>
             </div>
@@ -292,7 +292,7 @@ export default function RootLayout({ children }) {
             <span className="hidden sm:inline text-slate-300 dark:text-gray-700">•</span>
             <Link href="/transparencia" className="hover:text-cyan-500 transition-colors">Descarga de Prospectos</Link>
             <span className="hidden sm:inline text-slate-300 dark:text-gray-700">•</span>
-            <Link href="/entrenamiento" className="hover:text-cyan-500 transition-colors">Hub de Entrenamiento</Link>
+            <Link href="/entrenamiento" className="hover:text-cyan-500 transition-colors">Entrenamiento Militar</Link>
             <span className="hidden sm:inline text-slate-300 dark:text-gray-700">•</span>
             <Link href="/glosario" className="hover:text-cyan-500 transition-colors">Glosario Técnico</Link>
           </div>
