@@ -28,8 +28,8 @@ const MILITARY_SCHOOLS = [
     fuerza: 'FUERZA AÉREA',
     rango: 'Oficial',
     icono: '✈️',
-    bgImage: 'https://images.unsplash.com/photo-1569154941061-e231b4725ef1?auto=format&fit=crop&q=80&w=600',
-    descripcion: 'Balotario oficial para futuros pilotos de caza, transporte, helicópteros y defensa aérea.'
+    bgImage: '/assets/schools/eofap-bg.jpg',
+    descripcion: 'Formación de oficiales pilotos de caza, transporte, helicópteros y defensa aérea. Evaluación rigurosa en Matemáticas (Álgebra, Geometría, Trigonometría), Física aplicada, Lenguaje, Historia del Perú y Geografía nacional.'
   },
   {
     id: 'EMCH',
@@ -39,8 +39,8 @@ const MILITARY_SCHOOLS = [
     fuerza: 'EJÉRCITO',
     rango: 'Oficial',
     icono: '⚔️',
-    bgImage: 'https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&q=80&w=600',
-    descripcion: 'Alma mater del Ejército. Ciencias militares, infantería, blindados e ingeniería de combate.'
+    bgImage: '/assets/schools/emch-bg.jpg',
+    descripcion: 'Alma mater del Ejército del Perú. Forma oficiales de comando en Infantería, Caballería, Artillería, Blindados e Ingeniería. Balotario oficial en Ciencias Exactas, Historia Militar del Perú, Realidad Nacional y Aptitud Académica.'
   },
   {
     id: 'ENP',
@@ -50,8 +50,8 @@ const MILITARY_SCHOOLS = [
     fuerza: 'MARINA',
     rango: 'Oficial',
     icono: '⚓',
-    bgImage: 'https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&q=80&w=600',
-    descripcion: 'Formación náutica, comando naval, ingeniería de propulsión y operaciones en altamar.'
+    bgImage: '/assets/schools/enp-bg.jpg',
+    descripcion: 'Formación de oficiales navales de comando, propulsión y maniobra en altamar. Balotario con fuerte ponderación en Cálculo, Física Clásica, Navegación, Inglés Técnico y Ciencias Marítimas para las fuerzas de superficie y submarinos.'
   },
   {
     id: 'CITEN',
@@ -61,8 +61,8 @@ const MILITARY_SCHOOLS = [
     fuerza: 'MARINA',
     rango: 'Suboficial',
     icono: '🚢',
-    bgImage: 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&q=80&w=600',
-    descripcion: 'Carreras técnicas navales: sistemas de control, electrónica, armamento y maquinaria marina.'
+    bgImage: '/assets/schools/citen-bg.jpg',
+    descripcion: 'Centro de instrucción técnica de la Marina de Guerra del Perú. Especialidades en control de tiro, electrónica marina, sistemas de combate y telemática naval. Evaluación en Aritmética, Geometría, Física y Razonamiento Lógico.'
   },
   {
     id: 'ESOFA',
@@ -72,8 +72,8 @@ const MILITARY_SCHOOLS = [
     fuerza: 'FUERZA AÉREA',
     rango: 'Suboficial',
     icono: '🚀',
-    bgImage: 'https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&q=80&w=600',
-    descripcion: 'Mantenimiento de aeronaves de combate, aviónica, radares y telemetría espacial.'
+    bgImage: '/assets/schools/esofa-bg.jpg',
+    descripcion: 'Formación de suboficiales técnicos de la Fuerza Aérea del Perú. Especialistas en mantenimiento de aeronaves de combate, aviónica digital, radares y telemetría aeroespacial. Balotario en Ciencias, Electricidad y Mecánica.'
   },
   {
     id: 'ETE',
@@ -83,8 +83,8 @@ const MILITARY_SCHOOLS = [
     fuerza: 'EJÉRCITO',
     rango: 'Suboficial',
     icono: '🛡️',
-    bgImage: 'https://images.unsplash.com/photo-1579829366248-204fe8413f31?auto=format&fit=crop&q=80&w=600',
-    descripcion: 'Suboficiales técnicos de armamento, telecomunicaciones tácticas y mecatrónica.'
+    bgImage: '/assets/schools/ete-bg.jpg',
+    descripcion: 'Suboficiales técnicos del Ejército del Perú en armamento pesado, telecomunicaciones tácticas, mecatrónica de blindados y geomática. Examen en Matemáticas Básicas, Física, Comunicación y Cultura General.'
   },
   {
     id: 'EO_PNP',
@@ -94,8 +94,8 @@ const MILITARY_SCHOOLS = [
     fuerza: 'POLICÍA',
     rango: 'Oficial',
     icono: '👮',
-    bgImage: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=600',
-    descripcion: 'Liderazgo policial, investigación criminalística, orden público y seguridad ciudadana.'
+    bgImage: '/assets/schools/eo_pnp-bg.jpg',
+    descripcion: 'Formación de oficiales de la Policía Nacional del Perú para el comando de unidades policiales, investigación criminalística, orden público y seguridad ciudadana. Balotario en Derecho Constitucional, DD.HH. y Realidad Nacional.'
   },
   {
     id: 'EESTP_PNP',
@@ -105,8 +105,8 @@ const MILITARY_SCHOOLS = [
     fuerza: 'POLICÍA',
     rango: 'Suboficial',
     icono: '🚓',
-    bgImage: 'https://images.unsplash.com/photo-1471958680802-1345a694ba6d?auto=format&fit=crop&q=80&w=600',
-    descripcion: 'Suboficiales de intervención táctica, tránsito, patrullaje y rescate de emergencia.'
+    bgImage: '/assets/schools/eestp_pnp-bg.jpg',
+    descripcion: 'Formación de suboficiales técnicos de la Policía Nacional para patrullaje integrado, intervención táctica, tránsito y rescate de emergencia. Evaluación en Razonamiento Matemático, Verbal, Ética Policial y Geografía del Perú.'
   },
 ];
 
@@ -335,23 +335,23 @@ export default function Pillar4Knowledge() {
           })}
         </div>
 
-        {/* 2. CUADRÍCULA EN FORMATO PANORÁMICO (16:9, 2 Columnas) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+        {/* 2. CUADRÍCULA EN FORMATO PANORÁMICO (2 Columnas con Tarjetas Estructuradas) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <AnimatePresence mode="popLayout">
             {filteredSchools.map((esc) => {
               return (
                 <motion.div
                   key={esc.id}
                   layout
-                  initial={{ opacity: 0, scale: 0.95 }}
+                  initial={{ opacity: 0, scale: 0.96 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.95 }}
+                  exit={{ opacity: 0, scale: 0.96 }}
                   transition={{ duration: 0.2 }}
                   onClick={() => handleStartTest(esc.id)}
-                  className="group relative overflow-hidden rounded-2xl aspect-video bg-slate-200 dark:bg-slate-800 border border-slate-200 dark:border-gray-800 shadow-md hover:shadow-2xl transition-all duration-300 cursor-pointer select-none flex flex-col justify-end"
+                  className="group relative overflow-hidden rounded-2xl bg-white dark:bg-[#121624] border border-slate-200 dark:border-gray-800 shadow-md hover:shadow-2xl hover:border-slate-300 dark:hover:border-gray-700 transition-all duration-300 cursor-pointer flex flex-col select-none"
                 >
-                  {/* FONDO (Imagen en formato 16:9 con fallback) */}
-                  <div className="absolute inset-0 w-full h-full bg-slate-200 dark:bg-slate-800 overflow-hidden">
+                  {/* SECCIÓN SUPERIOR: FOTOGRAFÍA PANORÁMICA 16:9 AUTÉNTICA (Sin manchar la imagen) */}
+                  <div className="relative aspect-[16/9] w-full overflow-hidden bg-slate-200 dark:bg-slate-800">
                     <img
                       src={esc.bgImage}
                       alt={esc.name}
@@ -359,42 +359,75 @@ export default function Pillar4Knowledge() {
                       onError={(e) => {
                         e.currentTarget.classList.add('opacity-0');
                       }}
-                      className="object-cover w-full h-full absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-105"
+                      className="object-cover w-full h-full transition-transform duration-700 ease-out group-hover:scale-105"
                     />
-                  </div>
 
-                  {/* CAPA DE DEGRADADO (Overlay inferior oscuro que se hace más alto en hover) */}
-                  <div className="absolute inset-x-0 bottom-0 h-3/5 group-hover:h-full bg-gradient-to-t from-white via-white/90 to-transparent dark:from-[#0B101E] dark:via-[#0B101E]/90 dark:to-transparent pointer-events-none transition-all duration-300 z-10" />
-
-                  {/* 3. MICRO-INTERACCIÓN DE SIGLAS (Hover Reveal UX) */}
-                  <div className="relative p-5 sm:p-6 w-full flex items-end justify-between gap-4 z-20">
-                    <div className="flex-1 min-w-0">
-                      {/* Etiqueta Rama Militar */}
-                      <span className="text-[#D91023] dark:text-red-400 font-bold text-xs tracking-widest uppercase font-rajdhani block mb-1">
-                        {esc.rama}
+                    {/* Badges superiores flotantes */}
+                    <div className="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between pointer-events-none z-10">
+                      <span className="px-2.5 py-1 rounded-md bg-black/75 backdrop-blur-md text-white border border-white/15 text-[11px] font-rajdhani font-bold uppercase tracking-widest flex items-center gap-1.5 shadow-sm">
+                        <span>{esc.icono}</span>
+                        <span>{esc.rama}</span>
                       </span>
 
-                      {/* Bloque de Sigla con traslación group-hover:-translate-y-2 */}
-                      <div className="transition-transform duration-300 ease-out group-hover:-translate-y-2">
-                        <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black font-sans tracking-tight text-slate-900 dark:text-white leading-none">
+                      <span className={`px-2.5 py-1 rounded-md text-[10px] font-rajdhani font-extrabold uppercase tracking-wider backdrop-blur-md border shadow-sm ${
+                        esc.rango === 'Oficial'
+                          ? "bg-amber-500/25 text-amber-200 border-amber-400/40"
+                          : "bg-cyan-500/25 text-cyan-200 border-cyan-400/40"
+                      }`}>
+                        {esc.rango.toUpperCase()}
+                      </span>
+                    </div>
+
+                    {/* Franja de Título sobre la base de la fotografía */}
+                    <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/85 via-black/40 to-transparent pointer-events-none z-10 flex items-end p-4">
+                      <div className="flex items-baseline gap-2.5">
+                        <h3 className="text-3xl font-black font-sans tracking-tight text-white leading-none drop-shadow-md">
                           {esc.sigla}
                         </h3>
-
-                        {/* Revelado suave del significado de las siglas en hover */}
-                        <p className="text-xs sm:text-sm text-slate-700 dark:text-gray-300 font-inter font-medium leading-snug opacity-0 group-hover:opacity-100 transition-opacity duration-300 max-h-0 group-hover:max-h-12 overflow-hidden mt-0 group-hover:mt-1.5 max-w-sm line-clamp-2">
+                        <span className="text-xs text-gray-200 font-inter font-medium truncate max-w-[320px] drop-shadow-sm hidden sm:inline">
                           {esc.name}
-                        </p>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* SECCIÓN INFERIOR: PANEL DESCRIPTIVO DEDICADO (Limpio, sin sobreponerse a la foto) */}
+                  <div className="p-5 sm:p-6 flex-1 flex flex-col justify-between bg-white dark:bg-[#121624] transition-colors duration-300">
+                    <div>
+                      {/* Nombre completo en pantallas móviles si estaba oculto en la foto */}
+                      <h4 className="text-xs font-bold font-inter text-slate-800 dark:text-gray-200 leading-snug sm:hidden mb-2">
+                        {esc.name}
+                      </h4>
+
+                      {/* Descripción adecuada del balotario y perfil de formación */}
+                      <p className="text-xs sm:text-sm text-slate-600 dark:text-gray-300 font-inter leading-relaxed line-clamp-3">
+                        {esc.descripcion}
+                      </p>
+
+                      {/* Metadatos Tácticos del Reactivo */}
+                      <div className="flex flex-wrap items-center gap-3 mt-4 pt-3 border-t border-slate-100 dark:border-gray-800/80 text-[11px] font-rajdhani font-bold uppercase tracking-wider text-slate-500 dark:text-gray-400">
+                        <span className="flex items-center gap-1.5 text-emerald-600 dark:text-emerald-400">
+                          <CheckCircle2 className="w-3.5 h-3.5" />
+                          <span>20 Reactivos Oficiales</span>
+                        </span>
+                        <span className="text-slate-300 dark:text-gray-700">•</span>
+                        <span className="flex items-center gap-1.5 text-cyan-600 dark:text-[#00F0FF]">
+                          <Clock className="w-3.5 h-3.5" />
+                          <span>72s por Reactivo</span>
+                        </span>
                       </div>
                     </div>
 
-                    {/* Botón "INICIAR" */}
-                    <button
-                      type="button"
-                      className="flex-shrink-0 py-2.5 px-5 rounded-xl bg-slate-900 text-white dark:bg-[#00F0FF]/10 dark:text-[#00F0FF] dark:border dark:border-[#00F0FF]/30 hover:scale-105 transition-transform flex items-center justify-center gap-2 font-rajdhani font-bold text-xs sm:text-sm uppercase tracking-wider cursor-pointer shadow-sm"
-                    >
-                      <span>INICIAR</span>
-                      <ArrowRight className="w-4 h-4" />
-                    </button>
+                    {/* Botón de Acción Táctico */}
+                    <div className="mt-5 pt-1">
+                      <button
+                        type="button"
+                        className="w-full py-2.5 px-4 rounded-xl bg-slate-900 text-white dark:bg-[#00F0FF]/10 dark:text-[#00F0FF] dark:border dark:border-[#00F0FF]/30 group-hover:bg-peru-red dark:group-hover:bg-neon-cyan dark:group-hover:text-night-deep dark:group-hover:border-transparent group-hover:scale-[1.01] transition-all duration-200 flex items-center justify-center gap-2 font-rajdhani font-bold text-xs sm:text-sm uppercase tracking-wider cursor-pointer shadow-sm"
+                      >
+                        <span>INICIAR SIMULACRO OFICIAL</span>
+                        <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                      </button>
+                    </div>
                   </div>
                 </motion.div>
               );
