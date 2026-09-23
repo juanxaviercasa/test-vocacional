@@ -30,7 +30,7 @@ export default function MinimalStepper() {
               </span>
               <span className="w-1.5 h-1.5 rounded-full bg-peru-red animate-pulse" />
             </div>
-            <h2 className="font-rajdhani text-sm sm:text-base font-bold text-white tracking-wide uppercase truncate max-w-[190px] sm:max-w-none leading-none mt-0.5">
+            <h2 className="font-rajdhani text-sm sm:text-base font-bold text-slate-900 dark:text-white tracking-wide uppercase truncate max-w-[190px] sm:max-w-none leading-none mt-0.5">
               {activeMeta.name}
             </h2>
           </div>
@@ -50,8 +50,8 @@ export default function MinimalStepper() {
                   isActive
                     ? "bg-peru-red text-white shadow-tactical-red scale-105"
                     : isCompleted
-                    ? "bg-emerald-950/60 text-emerald-400 border border-emerald-500/40 hover:scale-102"
-                    : "bg-[#141518]/80 text-gray-400 border border-gray-800 hover:border-gray-700 hover:text-white"
+                    ? "bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-400 border border-emerald-300 dark:border-emerald-500/40 hover:scale-102"
+                    : "bg-white/80 dark:bg-[#141518]/80 text-slate-600 dark:text-gray-400 border border-slate-300 dark:border-gray-800 hover:border-slate-400 dark:hover:border-gray-700 hover:text-slate-900 dark:hover:text-white"
                 }`}
               >
                 <span>{p.id}</span>
@@ -64,7 +64,7 @@ export default function MinimalStepper() {
       </div>
 
       {/* Barra de Progreso Patriótica Tricolor */}
-      <div className="w-full h-1 bg-gray-900 relative overflow-hidden">
+      <div className="w-full h-1 bg-slate-200 dark:bg-gray-900 relative overflow-hidden">
         <div
           className="h-full bg-gradient-to-r from-peru-red via-yellow-400 to-peru-red transition-all duration-500 shadow-sm"
           style={{ width: `${(currentPillar / 5) * 100}%` }}

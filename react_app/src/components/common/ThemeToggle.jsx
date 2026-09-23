@@ -21,10 +21,10 @@ export default function ThemeToggle({ className = "" }) {
     );
   }
 
-  const isDark = resolvedTheme === 'dark' || theme === 'dark';
+  const isDark = theme === 'dark';
 
   const toggleTheme = () => {
-    setTheme(isDark ? 'light' : 'dark');
+    setTheme(theme === 'dark' ? 'light' : 'dark');
   };
 
   return (
@@ -33,7 +33,7 @@ export default function ThemeToggle({ className = "" }) {
       onClick={toggleTheme}
       aria-label={isDark ? "Cambiar a Modo Día (Day Ops)" : "Cambiar a Modo Noche (Night Ops)"}
       title={isDark ? "Modo Activo: NIGHT OPS · Clic para DAY OPS" : "Modo Activo: DAY OPS · Clic para NIGHT OPS"}
-      className={`relative group flex items-center justify-between px-2.5 py-1.5 rounded-xl border border-gray-800 bg-[#141518]/90 hover:border-peru-red/60 text-gray-200 shadow-[0_0_15px_rgba(0,0,0,0.4)] transition-all duration-300 cursor-pointer select-none ${className}`}
+      className={`relative group flex items-center justify-between px-2.5 py-1.5 rounded-xl border border-slate-300 dark:border-gray-800 bg-white/90 dark:bg-[#141518]/90 hover:border-peru-red/60 text-slate-800 dark:text-gray-200 shadow-sm dark:shadow-[0_0_15px_rgba(0,0,0,0.4)] transition-all duration-300 cursor-pointer select-none ${className}`}
     >
       {/* Retícula Táctica de Fondo (Crosshairs en las 4 esquinas) */}
       <span className="absolute top-0.5 left-0.5 w-1.5 h-1.5 border-t border-l border-peru-red/50 pointer-events-none" />
