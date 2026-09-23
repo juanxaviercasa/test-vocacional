@@ -4,9 +4,12 @@ import AnimatePillarContainer from './layout/AnimatePillarContainer';
 import Pillar1Legal from './pillars/Pillar1Legal/Pillar1Legal';
 import Pillar2Psychometric from './pillars/Pillar2Psychometric/Pillar2Psychometric';
 import Pillar3Interests from './pillars/Pillar3Interests/Pillar3Interests';
-import Pillar4Knowledge from './pillars/Pillar4Knowledge/Pillar4Knowledge';
-import Pillar5Consolidated from './pillars/Pillar5Consolidated/Pillar5Consolidated';
+import Pillar4VocationalResult from './pillars/Pillar4VocationalResult/Pillar4VocationalResult';
 
+/**
+ * Módulo 1: Wizard Vocacional (4 Pasos)
+ * 1. Filtro Legal & Físico -> 2. Psicometría IPIP-NEO -> 3. Intereses Operacionales -> 4. Resultado Vocacional
+ */
 export default function MilitaryAssessmentWizard() {
   const { currentPillar, direction } = useAssessmentStore();
 
@@ -19,9 +22,7 @@ export default function MilitaryAssessmentWizard() {
       case 3:
         return <Pillar3Interests />;
       case 4:
-        return <Pillar4Knowledge />;
-      case 5:
-        return <Pillar5Consolidated />;
+        return <Pillar4VocationalResult />;
       default:
         return <Pillar1Legal />;
     }
@@ -29,7 +30,7 @@ export default function MilitaryAssessmentWizard() {
 
   return (
     <div className="w-full">
-      <AnimatePillarContainer animationKey={`main-pillar-${currentPillar}`} direction={direction}>
+      <AnimatePillarContainer animationKey={`main-vocational-step-${currentPillar}`} direction={direction}>
         {renderActivePillar()}
       </AnimatePillarContainer>
     </div>

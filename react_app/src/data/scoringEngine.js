@@ -149,3 +149,70 @@ export function computeConsolidatedViability(candidate, psychAnswers, interestsA
     topSchool
   };
 }
+
+/**
+ * Motor Vocacional Puro (Módulo 1)
+ * Evalúa compatibilidad institucional basada únicamente en Filtro Legal, Personalidad Big Five e Intereses Operacionales.
+ */
+export function computeVocationalViability(candidate, psychAnswers, interestsAnswers, dilemmas) {
+  const legalEval = evaluateLegalCandidate(candidate);
+  const psychScores = calculatePsychometricScores(psychAnswers);
+  const interestsEval = calculateInterestsAffinity(interestsAnswers, dilemmas);
+
+  const schoolScores = legalEval.results.map(item => {
+    const esc = item.escuela;
+    const ideal = esc.perfilIdeal;
+
+    // Distancia Euclidiana normalizada en Big Five (0 a 100%)
+    const distSq = 
+      Math.pow(psychScores.N - ideal.N, 2) +
+      Math.pow(psychScores.E - ideal.E, 2) +
+      Math.pow(psychScores.O - ideal.O, 2) +
+      Math.pow(psychScores.A - ideal.A, 2) +
+      Math.pow(psychScores.C - ideal.C, 2);
+    const maxDistSq = 5 * Math.pow(100, 2);
+    const psychFit = Math.max(0, Math.min(100, Math.round(100 - (Math.sqrt(distSq) / Math.sqrt(maxDistSq)) * 100)));
+
+    // Afinidad de Intereses (Rama)
+    let ramaKey = "Ejército";
+    if (esc.rama.includes("Aérea")) ramaKey = "FAP";
+    else if (esc.rama.includes("Marina")) ramaKey = "Marina";
+    else if (esc.rama.includes("Policía")) ramaKey = "PNP";
+    const interestFit = interestsEval.affinity[ramaKey] || 50;
+
+    // Ponderación Vocacional: Psicométrico (55%) + Intereses (45%)
+    let compatibilidad = Math.round(psychFit * 0.55 + interestFit * 0.45);
+
+    // Penalización reglamentaria si no cumple requisitos legales
+    if (!item.esApto) {
+      compatibilidad = Math.min(compatibilidad, 45);
+    }
+
+    return {
+      escuela: esc,
+      esApto: item.esApto,
+      motivo: item.motivo,
+      compatibilidad,
+      psychFit,
+      interestFit,
+      radarData: {
+        user: [100 - psychScores.N, psychScores.E, psychScores.O, psychScores.C, interestFit],
+        ideal: [100 - ideal.N, ideal.E, ideal.O, ideal.C, 85]
+      }
+    };
+  });
+
+  // Ordenar de mayor a menor compatibilidad
+  schoolScores.sort((a, b) => b.compatibilidad - a.compatibilidad);
+  const topSchool = schoolScores[0];
+
+  return {
+    candidate,
+    legalEval,
+    psychScores,
+    interestsEval,
+    schoolScores,
+    topSchool
+  };
+}
+

@@ -2,13 +2,16 @@ import React from 'react';
 import InsigniaConjunta from '../common/InsigniaConjunta';
 import ThemeToggle from '../common/ThemeToggle';
 import MinimalStepper from './MinimalStepper';
+import { useAssessmentStore } from '../../store/useAssessmentStore';
+import { GraduationCap, ArrowLeft, BookOpen, BarChart3, CheckCircle } from 'lucide-react';
 
 /**
  * RootLayout Global:
- * Componente envolvente que persiste el Header Institucional (Logo Insignia Conjunta + ThemeToggle + Stepper)
- * y el Footer Técnico con atribución oficial a través de todos los pilares sin recargas.
+ * Envolvente institucional persistente con soporte dinámico para Módulo 1 (Vocacional) y Módulo 2 (Académico).
  */
 export default function RootLayout({ children }) {
+  const { activeModule, switchToModule, academicStep, academicSchool } = useAssessmentStore();
+
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 dark:bg-[#0B101E] text-slate-900 dark:text-gray-100 overflow-x-hidden transition-colors duration-300">
       
@@ -58,12 +61,47 @@ export default function RootLayout({ children }) {
         </div>
       </header>
 
-      {/* 3. Stepper de Progresión Táctica (Persistente) */}
+      {/* 3. Barra de Progresión Táctica (Dinámica según Módulo) */}
       <div className="w-full bg-slate-100/90 dark:bg-[#0B101E]/80 border-b border-slate-200 dark:border-gray-800 backdrop-blur-sm transition-colors duration-300">
-        <MinimalStepper />
+        {activeModule === 'vocational' ? (
+          <MinimalStepper />
+        ) : (
+          /* HUD Stepper para Módulo 2: Diagnóstico Académico */
+          <div className="max-w-6xl mx-auto px-4 py-2.5 flex items-center justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 rounded-lg bg-cyan-500/10 border border-cyan-500/40 flex items-center justify-center text-cyan-600 dark:text-[#00F0FF] shadow-sm flex-shrink-0">
+                <GraduationCap className="w-4 h-4" />
+              </div>
+              <div>
+                <div className="flex items-center gap-2">
+                  <span className="font-teko text-xs uppercase font-bold text-cyan-600 dark:text-[#00F0FF] tracking-widest leading-none">
+                    MÓDULO 2 · DIAGNÓSTICO ACADÉMICO
+                  </span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-cyan-500 animate-pulse" />
+                </div>
+                <h2 className="font-rajdhani text-sm sm:text-base font-bold text-slate-900 dark:text-white tracking-wide uppercase truncate max-w-[200px] sm:max-w-none leading-none mt-0.5">
+                  {academicStep === 'catalog' && "Catálogo de 8 Escuelas Matrices"}
+                  {academicStep === 'exam' && `Simulacro Oficial en Curso · ${academicSchool}`}
+                  {academicStep === 'strategy' && `Dashboard Estratégico · Reporte de Brechas (${academicSchool})`}
+                </h2>
+              </div>
+            </div>
+
+            {/* Botón Puente de Retorno al Test Vocacional */}
+            <button
+              type="button"
+              onClick={() => switchToModule('vocational')}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-300 dark:border-gray-700 bg-white dark:bg-[#141518] text-slate-700 dark:text-gray-300 hover:text-slate-900 dark:hover:text-white hover:border-slate-400 font-rajdhani font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer"
+            >
+              <ArrowLeft className="w-3.5 h-3.5" />
+              <span className="hidden sm:inline">Volver a</span>
+              <span>Test Vocacional</span>
+            </button>
+          </div>
+        )}
       </div>
 
-      {/* 4. Lienzo Principal de los Pilares */}
+      {/* 4. Lienzo Principal */}
       <main className="flex-1 w-full max-w-6xl mx-auto px-3 sm:px-6 py-6 flex flex-col justify-center">
         {children}
       </main>

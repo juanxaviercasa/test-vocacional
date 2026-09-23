@@ -144,7 +144,7 @@ export default function Pillar3Interests() {
               : "bg-slate-800 text-slate-500 cursor-not-allowed border border-white/5"
           }`}
         >
-          <span>{interestsIndex < total - 1 ? "Siguiente Dilema" : "Completar Pilar 3 y Pasar a Conocimientos"}</span>
+          <span>{interestsIndex < total - 1 ? "Siguiente Dilema" : "VER MI RESULTADO VOCACIONAL"}</span>
           <ArrowRight className="w-4 h-4" />
         </button>
       </div>
