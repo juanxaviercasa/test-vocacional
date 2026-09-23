@@ -4,6 +4,7 @@ import TacticalRadarChart from '../Pillar5Consolidated/TacticalRadarChart';
 import TacticalFODAMap from '../../report/TacticalFODAMap';
 import { generateTacticalPDF } from '../../../utils/pdfGenerator';
 import Tooltip from '../../common/Tooltip';
+import ReproductorInstitucional from '../../common/ReproductorInstitucional';
 import {
   ShieldCheck,
   Award,
@@ -117,8 +118,13 @@ export default function Pillar4VocationalResult() {
               Postulante <strong className="text-white">{candidate.nombre}</strong> (DNI: {candidate.dni}). Tras el análisis multi-factorial de tu biometría reglamentaria (<Tooltip termino="Antropometría">Antropometría</Tooltip>), rasgos de personalidad <Tooltip termino="Big Five">Big Five</Tooltip> e intereses operacionales, tu perfil presenta la más alta correlación táctica bajo el <Tooltip termino="Baremo">Baremo Oficial</Tooltip> para formarte como <strong className="text-emerald-300 font-semibold">{topSchool.escuela.rango} en el/la {topSchool.escuela.rama}</strong>.
             </p>
 
+            {/* Affordance Sonora: Reproductor del Himno Institucional Oficial */}
+            <div className="mt-4 flex items-center">
+              <ReproductorInstitucional escuela={topSigla} />
+            </div>
+
             {/* BOTÓN PRINCIPAL DESTACADO (CALL TO ACTION REQUERIDO) */}
-            <div className="mt-6 pt-2 flex flex-col sm:flex-row items-center gap-4">
+            <div className="mt-5 pt-1 flex flex-col sm:flex-row items-center gap-4">
               <button
                 type="button"
                 onClick={() => startAcademicDiagnostic(topSigla)}

@@ -6,6 +6,7 @@ import AcademicModule from './components/academic/AcademicModule';
 import GlosarioPage from './pages/GlosarioPage';
 import TransparenciaPage from './pages/TransparenciaPage';
 import EntrenamientoPage from './pages/EntrenamientoPage';
+import { ErrorBoundary } from './components/common/ErrorBoundary';
 import { useAssessmentStore } from './store/useAssessmentStore';
 
 /**
@@ -47,7 +48,9 @@ export default function App() {
   return (
     <RouterProvider>
       <RootLayout>
-        <AppContent />
+        <ErrorBoundary>
+          <AppContent />
+        </ErrorBoundary>
       </RootLayout>
     </RouterProvider>
   );

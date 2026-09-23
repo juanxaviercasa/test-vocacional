@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { TACTICAL_GLOSSARY } from '../components/common/Tooltip';
-import { useAppRouter, Link } from '../router/AppRouter';
+import { useAppRouter } from '../router/AppRouter';
 import {
   BookOpen,
   Search,
@@ -8,10 +8,6 @@ import {
   Sparkles,
   ExternalLink,
   Shield,
-  Tag,
-  CheckCircle2,
-  Check,
-  Copy,
   Brain,
   Scale,
   Target,
@@ -100,7 +96,16 @@ export default function GlosarioPage() {
   const [activeCategory, setActiveCategory] = useState('TODAS');
   const [highlightedId, setHighlightedId] = useState('');
 
-  const termsList = Object.values(TACTICAL_GLOSSARY);
+  // Deduplicar términos por su ID único para evitar tarjetas repetidas
+  const termsList = React.useMemo(() => {
+    const uniqueTermsMap = new Map();
+    Object.values(TACTICAL_GLOSSARY).forEach((term) => {
+      if (term && term.id && !uniqueTermsMap.has(term.id)) {
+        uniqueTermsMap.set(term.id, term);
+      }
+    });
+    return Array.from(uniqueTermsMap.values());
+  }, []);
 
   // Detectar y resaltar el término solicitado por el hash de la URL
   useEffect(() => {
@@ -120,14 +125,18 @@ export default function GlosarioPage() {
   }, [currentHash]);
 
   const filteredTerms = termsList.filter((item) => {
+    const termName = item?.termino || '';
+    const termDef = item?.definicion || '';
+    const termCat = item?.categoria || '';
+
     const matchesSearch =
-      item.termino.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      item.definicion.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      item.categoria.toLowerCase().includes(searchTerm.toLowerCase());
+      termName.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      termDef.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      termCat.toLowerCase().includes(searchTerm.toLowerCase());
 
     const matchesCategory =
       activeCategory === 'TODAS' ||
-      item.categoria.toLowerCase() === activeCategory.toLowerCase();
+      termCat.toLowerCase() === activeCategory.toLowerCase();
 
     return matchesSearch && matchesCategory;
   });
@@ -224,7 +233,6 @@ export default function GlosarioPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
         {filteredTerms.map((item) => {
           const isTargeted = highlightedId === item.id;
-          const isCopied = copiedId === item.id;
           const visual = TERM_ILLUSTRATIONS[item.id] || {
             image: '/assets/general/military-doctrine-library.jpg',
             badge: item.categoria.toUpperCase(),

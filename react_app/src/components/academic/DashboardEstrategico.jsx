@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useAssessmentStore } from '../../store/useAssessmentStore';
 import { SCHOOL_PHYSICAL_BENCHMARKS, TACTICAL_STUDY_HABITS } from '../../data/strategicBenchmarks';
 import Tooltip from '../common/Tooltip';
+import ReproductorInstitucional from '../common/ReproductorInstitucional';
 import { Link } from '../../router/AppRouter';
 import {
   Award,
@@ -90,7 +91,7 @@ export default function DashboardEstrategico({ results, onRestart, onSelectOther
               Postulante <strong className="text-white font-semibold">{candidate.nombre}</strong> (DNI: {candidate.dni}). Hemos procesado tu rendimiento en los 20 reactivos oficiales de la <strong className="text-cyan-300 font-semibold">{schoolMeta.name}</strong> bajo la metodología <Tooltip termino="DECO">DECO</Tooltip>. A continuación se detallan tus brechas académicas, metas de acondicionamiento físico reglamentario y pautas de disciplina táctica.
             </p>
 
-            {/* Enlace Directo a Fuentes Oficiales en Centro de Transparencia */}
+            {/* Enlace Directo a Fuentes Oficiales en Centro de Transparencia y Reproductor del Himno */}
             <div className="mt-4 flex flex-wrap items-center gap-3">
               <Link
                 href={`/transparencia#pdf-${schoolSigla.toLowerCase().replace(/[-_]/g, '')}`}
@@ -99,6 +100,7 @@ export default function DashboardEstrategico({ results, onRestart, onSelectOther
                 <FileText className="w-4 h-4" />
                 <span>Fuentes y Validez Oficial · Prospecto {schoolMeta.sigla} 2026</span>
               </Link>
+              <ReproductorInstitucional escuela={schoolSigla} />
             </div>
           </div>
 
