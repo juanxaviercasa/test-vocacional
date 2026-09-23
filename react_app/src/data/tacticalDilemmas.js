@@ -7,7 +7,9 @@ export const TACTICAL_DILEMMAS = [
   {
     id: "DIL_01",
     titulo: "Respuesta ante Desastre Natural en Alta Montaña",
-    escenario: "Un sismo de gran magnitud incomunica varias comunidades en los Andes peruanos, destruyendo carreteras y puentes. Tu brigada debe ser desplegada de inmediato para mitigar la emergencia.",
+    teatro: "ANDES PERUANOS // ALTA MONTAÑA",
+    bgImage: "/assets/dilemmas/dilemma-mountain-rescue.jpg",
+    escenario: "Un sismo de gran magnitud incomunica varias comunidades en los Andes peruanos, destruyendo carreteras y puentes. Tu brigada debe ser desplegada de inmediato para mitigar la emergencia con apoyo aerotransportado y rescate terrestre.",
     opciones: [
       {
         id: "A",
@@ -42,7 +44,9 @@ export const TACTICAL_DILEMMAS = [
   {
     id: "DIL_02",
     titulo: "Intercepción de Tráfico Ilícito Transnacional",
-    escenario: "Se detecta una red transnacional movilizando cargamentos no declarados que vulneran la soberanía peruana. ¿Qué misión operativa prefieres liderar?",
+    teatro: "MAR DE GRAU // 200 MILLAS TERRITORIALES",
+    bgImage: "/assets/dilemmas/dilemma-maritime-patrol.jpg",
+    escenario: "Se detecta una red transnacional movilizando cargamentos clandestinos que vulneran la soberanía marítima y aérea del Perú. ¿Qué teatro operativo decides comandar?",
     opciones: [
       {
         id: "A",
@@ -77,7 +81,9 @@ export const TACTICAL_DILEMMAS = [
   {
     id: "DIL_03",
     titulo: "Defensa Tecnológica y Guerra Electrónica",
-    escenario: "Una amenaza cibernética y electromagnética intenta anular las comunicaciones de defensa del país durante un ejercicio trinacional.",
+    teatro: "CIBERDEFENSA & RADARES // COMANDO CONJUNTO",
+    bgImage: "/assets/dilemmas/dilemma-electronic-defense.jpg",
+    escenario: "Una amenaza cibernética y electromagnética intenta anular las comunicaciones de defensa del país durante un ejercicio trinacional de alta complejidad.",
     opciones: [
       {
         id: "A",
@@ -112,7 +118,9 @@ export const TACTICAL_DILEMMAS = [
   {
     id: "DIL_04",
     titulo: "Misión de Paz y Estabilidad Internacional (ONU)",
-    escenario: "El Perú enviará un contingente de Cascos Azules a una zona de conflicto en el extranjero. ¿En qué rol sientes tu mayor vocación?",
+    teatro: "DESPLIEGUE INTERNACIONAL // CASCOS AZULES PERÚ",
+    bgImage: "/assets/dilemmas/dilemma-peacekeepers.jpg",
+    escenario: "El Perú enviará un contingente de Cascos Azules de las Fuerzas Armadas a una zona de conflicto en el extranjero bajo mandato de las Naciones Unidas.",
     opciones: [
       {
         id: "A",

@@ -19,6 +19,20 @@ import {
   BookOpen
 } from 'lucide-react';
 
+const SCHOOL_IMAGE_MAP = {
+  EOFAP: '/assets/schools/eofap-bg.jpg',
+  EMCH: '/assets/schools/emch-bg.jpg',
+  ENP: '/assets/schools/enp-bg.jpg',
+  CITEN: '/assets/schools/citen-bg.jpg',
+  ESOFA: '/assets/schools/esofa-bg.jpg',
+  ETE: '/assets/schools/ete-bg.jpg',
+  EO_PNP: '/assets/schools/eo_pnp-bg.jpg',
+  'EO-PNP': '/assets/schools/eo_pnp-bg.jpg',
+  EESTP: '/assets/schools/eestp_pnp-bg.jpg',
+  'EESTP-PNP': '/assets/schools/eestp_pnp-bg.jpg',
+  EESTP_PNP: '/assets/schools/eestp_pnp-bg.jpg',
+};
+
 export default function DashboardEstrategico({ results, onRestart, onSelectOtherSchool }) {
   const { candidate, switchToModule, vocationalVerdict } = useAssessmentStore();
 
@@ -44,11 +58,21 @@ export default function DashboardEstrategico({ results, onRestart, onSelectOther
   return (
     <div className="w-full max-w-6xl mx-auto px-3 sm:px-4 py-6 space-y-8">
       
-      {/* 1. HERO BANNER: INFORME ESTRATÉGICO Y REPORTE DE BRECHAS */}
-      <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-900 via-[#0B101E] to-[#12182b] text-white p-6 sm:p-8 border border-neon-cyan/40 shadow-2xl">
-        <div className="absolute top-0 right-0 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
+      {/* 1. HERO BANNER: INFORME ESTRATÉGICO Y REPORTE DE BRECHAS CON FONDO FOTOGRÁFICO */}
+      <div className="relative overflow-hidden rounded-3xl bg-slate-900 text-white p-6 sm:p-8 border border-neon-cyan/40 shadow-2xl">
+        {/* Imagen Fotográfica de la Escuela Seleccionada */}
+        <img
+          src={SCHOOL_IMAGE_MAP[schoolSigla] || '/assets/general/hero-joint-forces.jpg'}
+          alt={schoolMeta.name}
+          className="absolute inset-0 w-full h-full object-cover object-center z-0 transition-transform duration-1000 scale-105"
+        />
+        {/* Overlays Degradados Tácticos de Alto Contraste */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0B101E] via-[#0B101E]/95 to-[#0B101E]/80 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0B101E] via-transparent to-black/40 z-10" />
+        
+        <div className="absolute top-0 right-0 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none z-10" />
 
-        <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="relative z-20 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex-1 text-center md:text-left">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/80 border border-cyan-500/50 text-cyan-300 text-xs font-rajdhani font-bold tracking-widest uppercase mb-3 shadow-sm">
               <Zap className="w-3.5 h-3.5 text-neon-cyan" />
@@ -227,6 +251,24 @@ export default function DashboardEstrategico({ results, onRestart, onSelectOther
               </div>
             </div>
 
+            {/* Banner Fotográfico: Acondicionamiento Físico de Cadetes */}
+            <div className="relative h-28 sm:h-32 w-full rounded-xl overflow-hidden mt-4 mb-3 border border-emerald-500/30">
+              <img
+                src="/assets/general/cadets-physical-training.jpg"
+                alt="Acondicionamiento Físico de Cadetes Militares del Perú"
+                className="w-full h-full object-cover object-center"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent" />
+              <div className="absolute bottom-2 left-2 right-2 flex items-center justify-between text-white">
+                <span className="text-[10px] font-rajdhani font-black uppercase tracking-wider text-emerald-400 drop-shadow">
+                  DISCIPLINA FÍSICA // BATALLÓN DE CADETES
+                </span>
+                <span className="text-[9px] font-mono bg-emerald-950/80 px-1.5 py-0.5 rounded border border-emerald-500/40 text-emerald-300">
+                  ESFUERZO MÁXIMO
+                </span>
+              </div>
+            </div>
+
             <div className="mt-4 p-3 rounded-xl bg-slate-50 dark:bg-[#181d2e] border border-slate-200 dark:border-gray-700/60 text-xs">
               <span className="font-rajdhani font-bold text-slate-500 dark:text-gray-400 uppercase tracking-wider block mb-1">
                 OBJETIVO OPERACIONAL PRINCIPAL:
@@ -325,6 +367,24 @@ export default function DashboardEstrategico({ results, onRestart, onSelectOther
                 <h3 className="font-rajdhani text-base sm:text-lg font-bold text-slate-900 dark:text-white uppercase leading-none mt-0.5">
                   Protocolos de Estudio Táctico
                 </h3>
+              </div>
+            </div>
+
+            {/* Banner Fotográfico: Disciplina Intelectual y Hábitos de Cadetes */}
+            <div className="relative h-28 sm:h-32 w-full rounded-xl overflow-hidden mt-4 mb-3 border border-amber-500/30">
+              <img
+                src="/assets/general/cadets-study-habits.jpg"
+                alt="Rigor Intelectual y Estudio de Cadetes Militares del Perú"
+                className="w-full h-full object-cover object-center"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent" />
+              <div className="absolute bottom-2 left-2 right-2 flex items-center justify-between text-white">
+                <span className="text-[10px] font-rajdhani font-black uppercase tracking-wider text-yellow-400 drop-shadow">
+                  RIGOR INTELECTUAL // BALOTARIO Y HORAS SILLA
+                </span>
+                <span className="text-[9px] font-mono bg-amber-950/80 px-1.5 py-0.5 rounded border border-amber-500/40 text-yellow-300">
+                  BALOTARIO 2026
+                </span>
               </div>
             </div>
 

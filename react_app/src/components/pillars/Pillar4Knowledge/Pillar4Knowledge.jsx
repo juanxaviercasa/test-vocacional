@@ -457,9 +457,19 @@ export default function Pillar4Knowledge() {
   if (isCompleted) {
     return (
       <div className="w-full max-w-4xl mx-auto px-4 py-6">
-        <div className="bg-[#141518] p-6 sm:p-10 rounded-2xl border border-gray-700 shadow-2xl">
+        <div className="bg-[#141518] p-6 sm:p-10 rounded-2xl border border-gray-700 shadow-2xl relative overflow-hidden">
+          {activeSchoolMeta?.bgImage && (
+            <div className="absolute inset-0 pointer-events-none opacity-15 overflow-hidden">
+              <img
+                src={activeSchoolMeta.bgImage}
+                alt=""
+                className="w-full h-full object-cover object-center filter grayscale mix-blend-luminosity scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#141518] via-[#141518]/90 to-transparent" />
+            </div>
+          )}
           
-          <div className="text-center max-w-2xl mx-auto mb-8">
+          <div className="relative z-10 text-center max-w-2xl mx-auto mb-8">
             <div className="w-16 h-16 rounded-2xl bg-cyan-950/60 border border-neon-cyan/40 flex items-center justify-center text-neon-cyan mx-auto mb-4 shadow-cyan-glow">
               <Award className="w-8 h-8" />
             </div>
@@ -657,10 +667,21 @@ export default function Pillar4Knowledge() {
             exit="exit"
             className="w-full"
           >
-            <div className="bg-[#141518] border border-gray-700 rounded-2xl p-6 sm:p-8 shadow-2xl relative">
+            <div className="bg-[#141518] border border-gray-700 rounded-2xl p-6 sm:p-8 shadow-2xl relative overflow-hidden">
+              
+              {/* Marca de Agua Táctica Institucional de Fondo */}
+              {activeSchoolMeta?.bgImage && (
+                <div className="absolute inset-0 pointer-events-none opacity-5 overflow-hidden">
+                  <img
+                    src={activeSchoolMeta.bgImage}
+                    alt=""
+                    className="w-full h-full object-cover object-center filter grayscale mix-blend-luminosity scale-110"
+                  />
+                </div>
+              )}
               
               {/* Encabezado del Reactivo */}
-              <div className="flex flex-wrap items-center justify-between gap-2 border-b border-gray-800 pb-3 mb-5">
+              <div className="relative z-10 flex flex-wrap items-center justify-between gap-2 border-b border-gray-800 pb-3 mb-5">
                 <div className="flex items-center gap-2">
                   <span className="px-2.5 py-1 rounded bg-black/60 border border-gray-700 text-neon-cyan text-xs font-rajdhani font-bold uppercase tracking-wider">
                     {currentQuestion?.curso}

@@ -35,14 +35,25 @@ export default function Pillar2Psychometric() {
         
         <div className="glass-panel p-8 sm:p-12 rounded-3xl border border-white/15 shadow-tactical-card relative overflow-hidden text-center">
           
-          {/* Luz sutil de fondo según dominio */}
-          <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-96 h-96 bg-neon-cyan/5 rounded-full blur-3xl pointer-events-none" />
-
-          {/* Badge del Dominio Psicológico */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-950/60 border border-neon-cyan/40 text-neon-cyan text-xs font-rajdhani font-bold uppercase tracking-widest mb-6">
-            <Brain className="w-3.5 h-3.5" />
-            <span>Dimensión Evaluada: {currentQ.dominio}</span>
+          {/* Fondo Inmersivo de Sala de Operaciones Tácticas CCFFAA Perú */}
+          <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+            <img
+              src="/assets/general/tactical-command-room.jpg"
+              alt="Sala de Operaciones del Comando Conjunto de las FFAA del Perú"
+              className="w-full h-full object-cover object-center opacity-15 dark:opacity-25 blur-[1px] scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#0B101E]/90 via-[#0B101E]/80 to-[#0B101E]/95" />
           </div>
+
+          <div className="relative z-10">
+            {/* Luz sutil de fondo según dominio */}
+            <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-96 h-96 bg-neon-cyan/5 rounded-full blur-3xl pointer-events-none" />
+
+            {/* Badge del Dominio Psicológico */}
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-950/80 border border-neon-cyan/40 text-neon-cyan text-xs font-rajdhani font-bold uppercase tracking-widest mb-6 shadow-sm">
+              <Brain className="w-3.5 h-3.5" />
+              <span>Dimensión Evaluada: {currentQ.dominio}</span>
+            </div>
 
           {/* Afirmación Central en Modo Enfoque */}
           <h2 className="text-xl sm:text-3xl font-rajdhani font-bold text-white leading-relaxed tracking-wide max-w-2xl mx-auto my-4 min-h-[90px] flex items-center justify-center">
@@ -94,6 +105,8 @@ export default function Pillar2Psychometric() {
             <Sparkles className="w-3.5 h-3.5 text-neon-cyan animate-pulse" />
             <span>Auto-avance instantáneo activado (300ms)</span>
           </div>
+
+        </div>
 
         </div>
 

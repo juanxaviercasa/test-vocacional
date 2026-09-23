@@ -14,6 +14,20 @@ import {
   AlertTriangle
 } from 'lucide-react';
 
+const SCHOOL_IMAGE_MAP = {
+  EOFAP: '/assets/schools/eofap-bg.jpg',
+  EMCH: '/assets/schools/emch-bg.jpg',
+  ENP: '/assets/schools/enp-bg.jpg',
+  CITEN: '/assets/schools/citen-bg.jpg',
+  ESOFA: '/assets/schools/esofa-bg.jpg',
+  ETE: '/assets/schools/ete-bg.jpg',
+  EO_PNP: '/assets/schools/eo_pnp-bg.jpg',
+  'EO-PNP': '/assets/schools/eo_pnp-bg.jpg',
+  EESTP: '/assets/schools/eestp_pnp-bg.jpg',
+  'EESTP-PNP': '/assets/schools/eestp_pnp-bg.jpg',
+  EESTP_PNP: '/assets/schools/eestp_pnp-bg.jpg',
+};
+
 export default function Pillar4VocationalResult() {
   const {
     vocationalVerdict,
@@ -47,12 +61,22 @@ export default function Pillar4VocationalResult() {
   return (
     <div className="w-full max-w-6xl mx-auto px-3 sm:px-4 py-6 space-y-8">
       
-      {/* 1. TARJETA HERO DEL RESULTADO VOCACIONAL */}
-      <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-900 via-[#0B101E] to-[#12182b] text-white p-6 sm:p-10 border border-neon-cyan/40 shadow-2xl">
-        {/* Glow de fondo decorativo */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
+      {/* 1. TARJETA HERO DEL RESULTADO VOCACIONAL CON IMAGEN AUTÉNTICA */}
+      <div className="relative overflow-hidden rounded-3xl bg-slate-900 text-white p-6 sm:p-10 border border-neon-cyan/40 shadow-2xl">
+        {/* Imagen Fotográfica de la Institución Recomendada */}
+        <img
+          src={SCHOOL_IMAGE_MAP[topSigla] || '/assets/general/hero-joint-forces.jpg'}
+          alt={topSchool.escuela.nombre}
+          className="absolute inset-0 w-full h-full object-cover object-center z-0 transition-transform duration-1000 scale-105"
+        />
+        {/* Overlays Degradados Tácticos de Alto Contraste */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0B101E] via-[#0B101E]/95 to-[#0B101E]/75 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0B101E] via-transparent to-black/40 z-10" />
         
-        <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
+        {/* Glow de fondo decorativo */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none z-10" />
+        
+        <div className="relative z-20 flex flex-col lg:flex-row items-center justify-between gap-8">
           
           {/* Columna Izquierda: Veredicto Institucional */}
           <div className="flex-1 text-center lg:text-left">
@@ -236,8 +260,23 @@ export default function Pillar4VocationalResult() {
                 }`}
               >
                 <div>
+                  {/* Mini-Banner Fotográfico Institucional */}
+                  <div className="relative h-24 w-full rounded-xl overflow-hidden mb-3 border border-slate-200 dark:border-gray-800">
+                    <img
+                      src={SCHOOL_IMAGE_MAP[escSigla] || '/assets/general/hero-joint-forces.jpg'}
+                      alt={esc.nombre}
+                      className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
+                    <span className="absolute bottom-1.5 left-2 text-[11px] font-rajdhani font-black text-white uppercase tracking-wider drop-shadow">
+                      {escSigla} · {esc.fuerza || esc.rama}
+                    </span>
+                    <span className="absolute top-1.5 right-1.5 text-lg select-none drop-shadow">
+                      {esc.icon}
+                    </span>
+                  </div>
+
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-2xl select-none">{esc.icon}</span>
                     <span className={`text-xs font-rajdhani font-bold px-2 py-0.5 rounded border uppercase ${
                       item.esApto
                         ? "border-emerald-500/50 text-emerald-700 dark:text-emerald-400 bg-emerald-100 dark:bg-emerald-950/60"

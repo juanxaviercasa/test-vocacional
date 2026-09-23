@@ -36,30 +36,52 @@ export default function Pillar3Interests() {
 
       <AnimatePillarContainer animationKey={`dil-q-${interestsIndex}`} direction={direction}>
         
-        {/* Tarjeta de Escenario Inmersivo */}
-        <div className="glass-panel p-6 sm:p-8 rounded-3xl border border-white/15 shadow-tactical-card mb-6 relative overflow-hidden">
+        {/* Tarjeta de Escenario Inmersivo con Imagen Táctica Auténtica */}
+        <div className="relative rounded-3xl border border-white/20 shadow-tactical-card mb-6 overflow-hidden bg-night-deep/90">
           
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-white/10 pb-4 mb-4">
-            <div className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-lg bg-amber-950/50 border border-alert-amber/40 flex items-center justify-center text-alert-amber">
-                <Crosshair className="w-4 h-4" />
+          {/* Contenedor de Imagen Panorámica con Overlay */}
+          <div className="relative w-full h-44 sm:h-56 md:h-64 overflow-hidden">
+            <img
+              src={currentDilemma.bgImage}
+              alt={currentDilemma.titulo}
+              className="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-105"
+            />
+            {/* Gradientes para máxima legibilidad táctica */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0B101E] via-[#0B101E]/60 to-black/40" />
+            
+            {/* Badge de Teatro de Operaciones Flotante */}
+            <div className="absolute top-4 left-4 sm:top-5 sm:left-5 flex flex-wrap items-center gap-2 z-10">
+              <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-night-deep/80 backdrop-blur-md border border-alert-amber/50 text-alert-amber text-xs font-rajdhani font-bold tracking-widest uppercase shadow-lg">
+                <Crosshair className="w-3.5 h-3.5 animate-pulse" />
+                <span>ESCENARIO // {currentDilemma.id}</span>
               </div>
-              <span className="text-xs font-rajdhani font-bold text-alert-amber tracking-widest uppercase">
-                ESCENARIO OPERATIVO CLASIFICADO // {currentDilemma.id}
-              </span>
+              {currentDilemma.teatro && (
+                <div className="px-3 py-1.5 rounded-xl bg-cyan-950/80 backdrop-blur-md border border-neon-cyan/40 text-neon-cyan text-xs font-rajdhani font-bold tracking-wider uppercase shadow-lg">
+                  <span>TEATRO: {currentDilemma.teatro}</span>
+                </div>
+              )}
             </div>
-            <span className="text-xs font-rajdhani text-slate-400 uppercase tracking-wider">
-              Baremos Operacionales FFAA & PNP
-            </span>
+
+            {/* Título integrado sobre el degradado inferior */}
+            <div className="absolute bottom-4 left-4 right-4 sm:bottom-5 sm:left-6 sm:right-6 z-10">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-rajdhani font-extrabold text-white uppercase tracking-wide drop-shadow-md">
+                {currentDilemma.titulo}
+              </h2>
+            </div>
           </div>
 
-          <h2 className="text-xl sm:text-2xl font-rajdhani font-bold text-white uppercase tracking-wide mb-3">
-            {currentDilemma.titulo}
-          </h2>
-
-          <p className="text-sm sm:text-base text-slate-200 font-inter leading-relaxed bg-night-deep/60 p-4 rounded-xl border border-white/5">
-            {currentDilemma.escenario}
-          </p>
+          {/* Cuerpo del Escenario y Misión */}
+          <div className="p-5 sm:p-6 bg-[#0B101E]/95 border-t border-white/10">
+            <div className="flex items-center gap-2 mb-2">
+              <span className="w-2 h-2 rounded-full bg-alert-amber animate-ping" />
+              <span className="text-[11px] font-rajdhani font-bold text-slate-400 uppercase tracking-widest">
+                DIRECTIVA OPERATIVA DEL COMANDO CONJUNTO // ELECCIÓN DE RUTA TÁCTICA:
+              </span>
+            </div>
+            <p className="text-sm sm:text-base text-slate-100 font-inter leading-relaxed">
+              {currentDilemma.escenario}
+            </p>
+          </div>
 
         </div>
 
