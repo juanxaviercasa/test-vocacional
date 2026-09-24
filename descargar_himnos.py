@@ -25,6 +25,19 @@ import tempfile
 import subprocess
 from pathlib import Path
 
+# Asegurar codificación UTF-8 en terminales de Windows
+if sys.stdout and hasattr(sys.stdout, 'reconfigure'):
+    sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+if sys.stderr and hasattr(sys.stderr, 'reconfigure'):
+    sys.stderr.reconfigure(encoding='utf-8', errors='replace')
+
+# Soporte automático para binarios estáticos de FFmpeg en caso de entornos sin FFmpeg en PATH
+try:
+    import static_ffmpeg
+    static_ffmpeg.add_paths()
+except Exception:
+    pass
+
 # Definición del diccionario canónico de escuelas matrices y sus enlaces oficiales
 HIMNOS_OFICIALES = {
     "EMCH": "https://www.youtube.com/watch?v=4JEc2rG4ja8",

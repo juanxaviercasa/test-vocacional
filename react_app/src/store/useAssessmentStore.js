@@ -1,4 +1,5 @@
 import { create } from 'zustand';
+import { persist, createJSONStorage } from 'zustand/middleware';
 import { PSICOMETRIC_QUESTIONS } from '../data/psychometricQuestions.js';
 import { TACTICAL_DILEMMAS, getAdaptedDilemmas } from '../data/tacticalDilemmas.js';
 import { KNOWLEDGE_QUESTIONS } from '../data/knowledgeQuestions.js';
@@ -7,6 +8,8 @@ import { computeConsolidatedViability, computeVocationalViability } from '../dat
 export const INITIAL_CANDIDATE = {
   nombre: '',
   dni: '',
+  telefono: '',
+  email: '',
   edad: 0,
   age: 0,
   sexo: '',
@@ -28,6 +31,8 @@ export const INITIAL_CANDIDATE = {
 export const DEMO_CANDIDATE = {
   nombre: 'Carlos Mendoza',
   dni: '73491820',
+  telefono: '984512345',
+  email: 'carlos.mendoza.cadete@gmail.com',
   edad: 19,
   age: 19,
   sexo: 'M',
@@ -46,11 +51,13 @@ export const DEMO_CANDIDATE = {
   daltonismo: false,
 };
 
-export const useAssessmentStore = create((set, get) => {
-  const urlPillar = typeof window !== 'undefined' ? parseInt(new URLSearchParams(window.location.search).get('pillar') || '1', 10) : 1;
-  const initialPillar = Math.min(4, Math.max(1, urlPillar));
+export const useAssessmentStore = create(
+  persist(
+    (set, get) => {
+      const urlPillar = typeof window !== 'undefined' ? parseInt(new URLSearchParams(window.location.search).get('pillar') || '1', 10) : 1;
+      const initialPillar = Math.min(4, Math.max(1, urlPillar));
 
-  return {
+      return {
     // =========================================================================
     // ENRUTAMIENTO MODULAR (Módulo 1: Vocacional vs Módulo 2: Académico)
     // =========================================================================
@@ -198,7 +205,22 @@ export const useAssessmentStore = create((set, get) => {
     },
 
     resetCandidate: () => {
-      set({ candidate: { ...INITIAL_CANDIDATE } });
+      set({
+        candidate: { ...INITIAL_CANDIDATE },
+        pilar1SubStep: 1,
+        psychIndex: 0,
+        psychAnswers: {},
+        interestsIndex: 0,
+        interestsAnswers: {},
+        vocationalVerdict: null,
+      });
+      if (typeof window !== 'undefined') {
+        try {
+          localStorage.removeItem('militar_assessment_storage');
+        } catch (e) {
+          console.error(e);
+        }
+      }
     },
 
     // Sistema de Onboarding Interactivo (Guía de Usuario)
@@ -363,6 +385,7 @@ export const useAssessmentStore = create((set, get) => {
 
     resetAll: () => {
       set({
+        candidate: { ...INITIAL_CANDIDATE },
         activeModule: 'vocational',
         currentPillar: 1,
         direction: 1,
@@ -381,6 +404,26 @@ export const useAssessmentStore = create((set, get) => {
         knowledgeTimer: 72,
         finalVerdict: null,
       });
+      if (typeof window !== 'undefined') {
+        try {
+          localStorage.removeItem('militar_assessment_storage');
+        } catch (e) {
+          console.error(e);
+        }
+      }
     }
   };
-});
+},
+{
+  name: 'militar_assessment_storage',
+  storage: createJSONStorage(() => localStorage),
+  partialize: (state) => ({
+    candidate: state.candidate,
+    psychAnswers: state.psychAnswers,
+    interestsAnswers: state.interestsAnswers,
+    vocationalVerdict: state.vocationalVerdict,
+    currentPillar: state.currentPillar,
+  }),
+}
+));
+

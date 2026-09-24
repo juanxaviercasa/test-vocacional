@@ -16,6 +16,8 @@ import json
 import urllib.parse
 import time
 import random
+import shutil
+import re
 from http.server import HTTPServer, SimpleHTTPRequestHandler
 from typing import Dict, Any, List, Optional
 
@@ -152,6 +154,60 @@ class MilitaryHttpHandler(SimpleHTTPRequestHandler):
                 self._send_json_response(syl)
             else:
                 self._send_json_response({"error": "Institución no encontrada"}, status=404)
+            return
+
+        # Servidor dedicado de audios institucionales con soporte Range (bytes)
+        if path.startswith("/audio/") or path.startswith("/react_app/audio/"):
+            fname = os.path.basename(path)
+            candidate_paths = [
+                os.path.join(CURRENT_DIR, "audio", fname),
+                os.path.join(CURRENT_DIR, "public", "audio", fname),
+                os.path.join(CURRENT_DIR, "web_platform", "audio", fname),
+                os.path.join(CURRENT_DIR, "web_platform", "react_app", "audio", fname),
+                os.path.join(CURRENT_DIR, "react_app", "public", "audio", fname),
+            ]
+            target_file = None
+            for cp in candidate_paths:
+                if os.path.exists(cp):
+                    target_file = cp
+                    break
+
+            if not target_file:
+                self.send_error(404, f"Archivo de audio {fname} no localizado")
+                return
+
+            file_size = os.path.getsize(target_file)
+            range_header = self.headers.get("Range")
+
+            if range_header:
+                match = re.match(r"bytes=(\d+)-(\d*)", range_header)
+                if match:
+                    start = int(match.group(1))
+                    end = int(match.group(2)) if match.group(2) else file_size - 1
+                    end = min(end, file_size - 1)
+                    length = end - start + 1
+
+                    self.send_response(206)
+                    self.send_header("Content-Type", "audio/mpeg")
+                    self.send_header("Content-Range", f"bytes {start}-{end}/{file_size}")
+                    self.send_header("Content-Length", str(length))
+                    self.send_header("Accept-Ranges", "bytes")
+                    self.send_header("Access-Control-Allow-Origin", "*")
+                    self.end_headers()
+
+                    with open(target_file, "rb") as f:
+                        f.seek(start)
+                        self.wfile.write(f.read(length))
+                    return
+
+            self.send_response(200)
+            self.send_header("Content-Type", "audio/mpeg")
+            self.send_header("Content-Length", str(file_size))
+            self.send_header("Accept-Ranges", "bytes")
+            self.send_header("Access-Control-Allow-Origin", "*")
+            self.end_headers()
+            with open(target_file, "rb") as f:
+                shutil.copyfileobj(f, self.wfile)
             return
 
         # Servir archivos estáticos por defecto

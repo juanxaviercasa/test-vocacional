@@ -39,7 +39,7 @@ const slideVariants = {
 };
 
 export default function Pillar1Legal() {
-  const { candidate, updateCandidate, nextPillar, loadDemoCandidate } = useAssessmentStore();
+  const { candidate, updateCandidate, nextPillar, loadDemoCandidate, resetCandidate } = useAssessmentStore();
   
   // Regla 2: Estado currentStep
   // 0: Hero Banner, 1: Biometría, 2: Aptitud Médica y Legal, 3: Dictamen de Elegibilidad
@@ -48,11 +48,15 @@ export default function Pillar1Legal() {
   const [direction, setDirection] = useState(1);
   const [isProcessing, setIsProcessing] = useState(false);
   const [demoLoadedNotification, setDemoLoadedNotification] = useState(false);
+  const [resetNotification, setResetNotification] = useState(false);
   const [evaluationResult, setEvaluationResult] = useState(() => urlParamStep === 3 ? evaluateLegalCandidate(candidate) : null);
 
-  // Validación en tiempo real Fase A (Parámetros Biométricos)
+  // Validación en tiempo real Fase A (Parámetros Biométricos y Datos de Contacto/Embudo)
   const isStep1Valid = Boolean(
     candidate.nombre?.trim() &&
+    candidate.dni?.trim().length === 8 &&
+    candidate.telefono?.trim().length >= 9 &&
+    candidate.email?.trim() && candidate.email.includes('@') &&
     (candidate.sexo === 'M' || candidate.sexo === 'F') &&
     Number(candidate.talla_cm) >= 120 &&
     Number(candidate.peso_kg) >= 30 &&
@@ -85,6 +89,15 @@ export default function Pillar1Legal() {
     setDemoLoadedNotification(true);
     setTimeout(() => {
       setDemoLoadedNotification(false);
+    }, 2500);
+  };
+
+  // Manejador del botón Borrar y Empezar de Cero
+  const handleResetForm = () => {
+    resetCandidate();
+    setResetNotification(true);
+    setTimeout(() => {
+      setResetNotification(false);
     }, 2500);
   };
 
@@ -443,7 +456,17 @@ export default function Pillar1Legal() {
                       className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-transparent border border-gray-700 text-gray-300 hover:text-white hover:border-[#00F0FF] hover:bg-cyan-950/20 text-xs font-rajdhani font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer shadow-sm shrink-0"
                       title="Cargar automáticamente datos de prueba válidos"
                     >
+                      <Sparkles className="w-3.5 h-3.5 text-neon-cyan" />
                       <span>⚡ CARGAR PERFIL DE PRUEBA</span>
+                    </button>
+                    <button
+                      type="button"
+                      onClick={handleResetForm}
+                      className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-transparent border border-red-500/40 text-red-400 hover:text-white hover:border-red-400 hover:bg-red-950/30 text-xs font-rajdhani font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer shadow-sm shrink-0"
+                      title="Borrar todos los campos ingresados y reiniciar desde cero"
+                    >
+                      <RotateCcw className="w-3.5 h-3.5" />
+                      <span>REINICIAR DATOS</span>
                     </button>
                   </div>
                 </div>
@@ -478,6 +501,14 @@ export default function Pillar1Legal() {
                     </div>
                   )}
 
+                  {/* Notificación de reseteo de formulario */}
+                  {resetNotification && (
+                    <div className="absolute top-3 right-4 px-3 py-1 rounded-lg bg-red-950/90 border border-red-500/60 text-red-400 text-xs font-rajdhani font-bold tracking-wider uppercase flex items-center gap-1.5 shadow-sm animate-in fade-in slide-in-from-top duration-200 z-30">
+                      <RotateCcw className="w-3.5 h-3.5" />
+                      <span>FORMULARIO RESTABLECIDO A CERO</span>
+                    </div>
+                  )}
+
                   <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-white/10 pb-4 mb-6">
                     <div>
                       <span className="text-xs font-rajdhani font-bold text-neon-cyan tracking-widest uppercase">
@@ -496,7 +527,19 @@ export default function Pillar1Legal() {
                         className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-transparent border border-gray-700 text-gray-400 hover:text-white hover:border-[#00F0FF] hover:bg-cyan-950/20 text-xs font-rajdhani font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer shadow-sm"
                         title="Cargar automáticamente un set de datos de prueba completo"
                       >
+                        <Sparkles className="w-3.5 h-3.5 text-neon-cyan" />
                         <span>⚡ CARGAR PERFIL DE PRUEBA</span>
+                      </button>
+
+                      {/* Botón Borrar y Empezar de Cero */}
+                      <button
+                        type="button"
+                        onClick={handleResetForm}
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-transparent border border-red-500/40 text-red-400 hover:text-white hover:border-red-400 hover:bg-red-950/30 text-xs font-rajdhani font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer shadow-sm"
+                        title="Borrar todos los campos ingresados y reiniciar desde cero"
+                      >
+                        <RotateCcw className="w-3.5 h-3.5" />
+                        <span>REINICIAR DATOS</span>
                       </button>
 
                       <div className={`px-3 py-1.5 rounded-xl border text-xs font-rajdhani font-bold tracking-wider uppercase flex items-center gap-2 ${imcColor}`}>
@@ -506,42 +549,108 @@ export default function Pillar1Legal() {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {/* Fila 1: Datos de Identidad Oficial (Nombre y DNI) */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
                     {/* Nombre Completo */}
                     <div>
-                      <label className="block text-sm font-rajdhani font-bold text-slate-200 uppercase tracking-wider mb-2">
-                        Nombre y Apellidos del Postulante <span className="text-peru-red">*</span>
+                      <label className="block text-xs font-rajdhani font-bold text-slate-200 uppercase tracking-wider mb-2 flex items-center justify-between">
+                        <span>Nombre y Apellidos del Postulante <span className="text-peru-red">*</span></span>
+                        <span className="text-[10px] font-mono text-slate-400">EXPEDIENTE OFICIAL</span>
                       </label>
                       <input
                         type="text"
                         value={candidate.nombre || ''}
                         onChange={(e) => updateCandidate('nombre', e.target.value)}
-                        placeholder="Ej. Carlos Mendoza"
-                        className="w-full px-4 py-3 rounded-xl bg-night-deep/80 border border-white/15 focus:border-neon-cyan focus:ring-1 focus:ring-neon-cyan text-white text-base outline-none transition-all placeholder:text-slate-600"
+                        placeholder="Ej. Carlos Mendoza Ramos"
+                        className="w-full px-4 py-3 rounded-xl bg-night-deep/90 border border-white/20 focus:border-neon-cyan focus:ring-1 focus:ring-neon-cyan text-white text-base outline-none transition-all placeholder:text-slate-500 shadow-inner"
                       />
                     </div>
 
-                    {/* Sexo Biológico */}
+                    {/* DNI Oficial */}
                     <div>
-                      <label className="block text-sm font-rajdhani font-bold text-slate-200 uppercase tracking-wider mb-2">
-                        Sexo Biológico (Según DNI) <span className="text-peru-red">*</span>
+                      <label className="block text-xs font-rajdhani font-bold text-slate-200 uppercase tracking-wider mb-2 flex items-center justify-between">
+                        <span>Documento de Identidad (DNI) <span className="text-peru-red">*</span></span>
+                        <span className="text-[10px] font-mono text-cyan-400">8 DÍGITOS RENIEC</span>
                       </label>
-                      <div className="grid grid-cols-2 gap-3">
-                        <TacticalRadioCard
-                          selected={candidate.sexo === 'M'}
-                          onClick={() => updateCandidate('sexo', 'M')}
-                          title="Varón"
-                          subtitle="Baremo masculino"
-                          icon="♂"
-                        />
-                        <TacticalRadioCard
-                          selected={candidate.sexo === 'F'}
-                          onClick={() => updateCandidate('sexo', 'F')}
-                          title="Dama"
-                          subtitle="Baremo femenino"
-                          icon="♀"
-                        />
-                      </div>
+                      <input
+                        type="text"
+                        maxLength={8}
+                        value={candidate.dni || ''}
+                        onChange={(e) => {
+                          const val = e.target.value.replace(/\D/g, '').slice(0, 8);
+                          updateCandidate('dni', val);
+                        }}
+                        placeholder="Ej. 73491820"
+                        className="w-full px-4 py-3 rounded-xl bg-night-deep/90 border border-white/20 focus:border-neon-cyan focus:ring-1 focus:ring-neon-cyan text-white font-mono text-base outline-none transition-all placeholder:text-slate-500 tracking-wider shadow-inner"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Fila 2: Canales de Envío de Resultados / Embudo Vocacional */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-6">
+                    {/* WhatsApp */}
+                    <div>
+                      <label className="block text-xs font-rajdhani font-bold text-slate-200 uppercase tracking-wider mb-2 flex items-center justify-between">
+                        <span>WhatsApp / Teléfono Móvil <span className="text-peru-red">*</span></span>
+                        <span className="text-[10px] font-mono text-emerald-400">📲 INFORME DIRECTO</span>
+                      </label>
+                      <input
+                        type="tel"
+                        maxLength={12}
+                        value={candidate.telefono || ''}
+                        onChange={(e) => {
+                          const val = e.target.value.replace(/[^\d+]/g, '');
+                          updateCandidate('telefono', val);
+                        }}
+                        placeholder="Ej. 984512345"
+                        className="w-full px-4 py-3 rounded-xl bg-night-deep/90 border border-white/20 focus:border-neon-cyan focus:ring-1 focus:ring-neon-cyan text-white text-base outline-none transition-all placeholder:text-slate-500 shadow-inner"
+                      />
+                      <span className="text-[11px] text-slate-400 font-inter mt-1.5 block leading-normal">
+                        Para el envío automático de tu dictamen de viabilidad militar y alertas de admisión.
+                      </span>
+                    </div>
+
+                    {/* Correo Electrónico */}
+                    <div>
+                      <label className="block text-xs font-rajdhani font-bold text-slate-200 uppercase tracking-wider mb-2 flex items-center justify-between">
+                        <span>Correo Electrónico <span className="text-peru-red">*</span></span>
+                        <span className="text-[10px] font-mono text-cyan-400">📧 DOSSIER EN PDF</span>
+                      </label>
+                      <input
+                        type="email"
+                        value={candidate.email || ''}
+                        onChange={(e) => updateCandidate('email', e.target.value)}
+                        placeholder="Ej. postulante@gmail.com"
+                        className="w-full px-4 py-3 rounded-xl bg-night-deep/90 border border-white/20 focus:border-neon-cyan focus:ring-1 focus:ring-neon-cyan text-white text-base outline-none transition-all placeholder:text-slate-500 shadow-inner"
+                      />
+                      <span className="text-[11px] text-slate-400 font-inter mt-1.5 block leading-normal">
+                        Para la recepción de tu balotario de conocimientos y prospectos oficiales 2026.
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Fila 3: Sexo Biológico (Según DNI) */}
+                  <div className="mb-6">
+                    <label className="block text-xs font-rajdhani font-bold text-slate-200 uppercase tracking-wider mb-2">
+                      Sexo Biológico (Según DNI para baremos antropométricos) <span className="text-peru-red">*</span>
+                    </label>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                      <TacticalRadioCard
+                        selected={candidate.sexo === 'M'}
+                        onClick={() => updateCandidate('sexo', 'M')}
+                        title="Varón"
+                        subtitle="Baremo militar masculino (Cooper 2,400m, barras de tracción, salto de valor)"
+                        icon="♂"
+                        badge="BAREMO MASCULINO"
+                      />
+                      <TacticalRadioCard
+                        selected={candidate.sexo === 'F'}
+                        onClick={() => updateCandidate('sexo', 'F')}
+                        title="Dama"
+                        subtitle="Baremo militar femenino (Cooper 2,400m, flexiones de brazo, salto de valor)"
+                        icon="♀"
+                        badge="BAREMO FEMENINO"
+                      />
                     </div>
                   </div>
 
@@ -697,6 +806,24 @@ export default function Pillar1Legal() {
                   <div className="p-5 space-y-3 flex-1 flex flex-col justify-between">
                     <div className="space-y-2 text-xs">
                       <div className="flex items-center justify-between border-b border-white/10 pb-2">
+                        <span className="font-rajdhani text-slate-400 uppercase">Postulante:</span>
+                        <span className="font-mono font-bold text-white truncate max-w-[160px]">
+                          {candidate.nombre || "--"}
+                        </span>
+                      </div>
+                      <div className="flex items-center justify-between border-b border-white/10 pb-2">
+                        <span className="font-rajdhani text-slate-400 uppercase">DNI:</span>
+                        <span className="font-mono font-bold text-cyan-300">
+                          {candidate.dni || "--"}
+                        </span>
+                      </div>
+                      <div className="flex items-center justify-between border-b border-white/10 pb-2">
+                        <span className="font-rajdhani text-slate-400 uppercase">WhatsApp:</span>
+                        <span className="font-mono font-bold text-emerald-400">
+                          {candidate.telefono || "--"}
+                        </span>
+                      </div>
+                      <div className="flex items-center justify-between border-b border-white/10 pb-2">
                         <span className="font-rajdhani text-slate-400 uppercase">Estatura Actual:</span>
                         <span className="font-mono font-bold text-white">
                           {candidate.talla_cm > 0 ? `${candidate.talla_cm} cm` : "--"}
@@ -750,6 +877,14 @@ export default function Pillar1Legal() {
                     </div>
                   )}
 
+                  {/* Notificación de reseteo de formulario */}
+                  {resetNotification && (
+                    <div className="absolute top-3 right-4 px-3 py-1 rounded-lg bg-red-950/90 border border-red-500/60 text-red-400 text-xs font-rajdhani font-bold tracking-wider uppercase flex items-center gap-1.5 shadow-sm animate-in fade-in slide-in-from-top duration-200 z-30">
+                      <RotateCcw className="w-3.5 h-3.5" />
+                      <span>FORMULARIO RESTABLECIDO A CERO</span>
+                    </div>
+                  )}
+
                   <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-white/10 pb-4 mb-6">
                     <div>
                       <span className="text-xs font-rajdhani font-bold text-neon-cyan tracking-widest uppercase">
@@ -768,7 +903,19 @@ export default function Pillar1Legal() {
                         className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-transparent border border-gray-700 text-gray-400 hover:text-white hover:border-[#00F0FF] hover:bg-cyan-950/20 text-xs font-rajdhani font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer shadow-sm"
                         title="Cargar automáticamente un set de datos de prueba completo"
                       >
+                        <Sparkles className="w-3.5 h-3.5 text-neon-cyan" />
                         <span>⚡ CARGAR PERFIL DE PRUEBA</span>
+                      </button>
+
+                      {/* Botón Borrar y Empezar de Cero */}
+                      <button
+                        type="button"
+                        onClick={handleResetForm}
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-transparent border border-red-500/40 text-red-400 hover:text-white hover:border-red-400 hover:bg-red-950/30 text-xs font-rajdhani font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer shadow-sm"
+                        title="Borrar todos los campos ingresados y reiniciar desde cero"
+                      >
+                        <RotateCcw className="w-3.5 h-3.5" />
+                        <span>REINICIAR DATOS</span>
                       </button>
 
                       <div className="px-3 py-1 rounded-lg bg-amber-950/40 border border-alert-amber/40 text-alert-amber text-xs font-rajdhani font-bold uppercase tracking-wider">

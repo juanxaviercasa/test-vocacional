@@ -29,7 +29,9 @@ if (fs.existsSync(path.join(rootDir, 'index.html'))) {
 }
 fs.writeFileSync(path.join(rootDir, '.nojekyll'), '# Disable Jekyll\n');
 
-// 3. Sincronizar hacia web_platform/react_app
+// 3. Sincronizar hacia web_platform/react_app y web_platform/audio
 copyRecursive(distDir, webPlatformDir);
+copyRecursive(path.resolve(__dirname, '../public/audio'), path.resolve(__dirname, '../../web_platform/audio'));
+copyRecursive(path.resolve(__dirname, '../public/audio'), path.resolve(__dirname, '../../public/audio'));
 
 console.log('✓ Build sincronizado automáticamente con la raíz del repositorio y web_platform/react_app');
