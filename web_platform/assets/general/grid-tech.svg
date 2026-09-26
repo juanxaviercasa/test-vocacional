@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+  <defs>
+    <!-- Subcuadrícula milimétrica -->
+    <pattern id="small-grid" width="16" height="16" patternUnits="userSpaceOnUse">
+      <path d="M 16 0 L 0 0 0 16" fill="none" stroke="#00F0FF" stroke-width="0.5" stroke-opacity="0.12"/>
+    </pattern>
+    <!-- Cuadrícula principal con cruces tácticas -->
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <rect width="80" height="80" fill="url(#small-grid)" />
+      <path d="M 80 0 L 0 0 0 80" fill="none" stroke="#00F0FF" stroke-width="1" stroke-opacity="0.28"/>
+      <!-- Cruces tácticas en las intersecciones -->
+      <path d="M 0 4 L 0 0 4 0 M 76 0 L 80 0 80 4 M 80 76 L 80 80 76 80 M 4 80 L 0 80 0 76" fill="none" stroke="#00F0FF" stroke-width="1.5" stroke-opacity="0.5"/>
+      <!-- Destellos y puntos de coordenadas -->
+      <circle cx="40" cy="40" r="1.5" fill="#00F0FF" fill-opacity="0.45"/>
+      <circle cx="0" cy="0" r="2" fill="#00F0FF" fill-opacity="0.7"/>
+    </pattern>
+  </defs>
+  <rect width="80" height="80" fill="url(#grid)"/>
+</svg>

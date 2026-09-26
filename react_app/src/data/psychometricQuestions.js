@@ -102,6 +102,49 @@ export const PSICOMETRIC_QUESTIONS = [
     enunciado: "A veces postergo tareas de mantenimiento asignadas si considero que nadie las supervisará de inmediato.",
     dominio: "Responsabilidad",
     polaridad: -1
+  },
+
+  // Escala L (Control de Mentira / Deseabilidad Social)
+  {
+    id: "VAL_01",
+    enunciado: "Jamás en mi vida he sentido rencor, cólera o enojo hacia otra persona, ni he tenido un pensamiento egoísta.",
+    dominio: "Control de Validez",
+    polaridad: 1,
+    esControlMentira: true
+  },
+  {
+    id: "VAL_02",
+    enunciado: "Siempre digo la verdad absoluta en todo momento, sin importar las consecuencias o dificultades que me genere.",
+    dominio: "Control de Validez",
+    polaridad: 1,
+    esControlMentira: true
+  },
+  {
+    id: "VAL_03",
+    enunciado: "Nunca he desobedecido una orden, norma escolar o indicación de mis padres desde mi infancia.",
+    dominio: "Control de Validez",
+    polaridad: 1,
+    esControlMentira: true
+  },
+
+  // Banderas Rojas Clínicas (Seguridad, Impulsos y Confinamiento)
+  {
+    id: "CLI_ARM_01",
+    enunciado: "Cuando alguien me ofende gravemente, siento un impulso casi incontrolable de responder con violencia física o venganza.",
+    dominio: "Control Clínico",
+    polaridad: 1,
+    esClinica: true,
+    riesgo: "PORTE_ARMAS",
+    umbral: 4
+  },
+  {
+    id: "CLI_CLA_01",
+    enunciado: "Estar encerrado en espacios reducidos y sin luz exterior (como un compartimento submarino o tanque blindado) me genera pánico y angustia extrema.",
+    dominio: "Control Clínico",
+    polaridad: 1,
+    esClinica: true,
+    riesgo: "CLAUSTROFOBIA",
+    umbral: 4
   }
 ];
 

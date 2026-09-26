@@ -34,7 +34,7 @@ const CATEGORIES = [
  */
 const TERM_ILLUSTRATIONS = {
   'ipip-neo': {
-    image: '/assets/general/glossary-psychometrics.jpg',
+    image: '/assets/general/psychometric-evaluation-cadet.jpg',
     badge: 'EVALUACIÓN PSICOMÉTRICA',
     icon: Brain
   },
@@ -44,7 +44,7 @@ const TERM_ILLUSTRATIONS = {
     icon: Scale
   },
   'deco': {
-    image: '/assets/general/cadets-study-habits.jpg',
+    image: '/assets/general/mock-exam-auditorium.jpg',
     badge: 'DESTREZAS COGNITIVAS',
     icon: Target
   },
@@ -74,7 +74,7 @@ const TERM_ILLUSTRATIONS = {
     icon: Award
   },
   'test-de-cooper': {
-    image: '/assets/general/cadets-physical-training.jpg',
+    image: '/assets/general/physical-test-cooper.jpg',
     badge: '2,400 METROS PLANOS',
     icon: Flame
   },

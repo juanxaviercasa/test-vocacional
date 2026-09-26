@@ -9,6 +9,8 @@ import { useAssessmentStore } from '../../store/useAssessmentStore';
 import {
   GraduationCap,
   ArrowLeft,
+  ArrowRight,
+  Home,
   BookOpen,
   ShieldCheck,
   Compass,
@@ -49,19 +51,19 @@ export default function RootLayout({ children }) {
         <div className="max-w-7xl mx-auto px-3 sm:px-6 py-2.5 flex items-center justify-between gap-3 sm:gap-4">
           
           {/* Logo Oficial + Títulos Institucionales Reestructurados y Legibles */}
-          <Link href="/" className="flex items-center gap-2.5 sm:gap-3 group shrink-0 select-none">
-            <InsigniaConjunta className="w-10 h-10 sm:w-12 sm:h-12 shrink-0" glow={true} />
+          <Link href="/" className="flex items-center gap-2 sm:gap-3 group shrink min-w-0 select-none">
+            <InsigniaConjunta className="w-9 h-9 sm:w-11 sm:h-11 lg:w-12 lg:h-12 shrink-0" glow={true} />
 
-            <div className="flex flex-col shrink-0">
-              <span className="text-[11px] sm:text-xs font-rajdhani font-black tracking-wider text-peru-red dark:text-peru-red-light uppercase leading-none">
-                FUERZAS ARMADAS Y POLICÍA NACIONAL DEL PERÚ
+            <div className="flex flex-col min-w-0">
+              <span className="text-[10px] sm:text-xs font-rajdhani font-black tracking-wider text-peru-red dark:text-peru-red-light uppercase leading-none truncate max-w-[200px] sm:max-w-[320px] md:max-w-none">
+                FUERZAS ARMADAS Y PNP
               </span>
 
-              <span className="font-sans font-black text-base sm:text-lg lg:text-xl text-slate-900 dark:text-white uppercase tracking-tight leading-tight group-hover:text-cyan-600 dark:group-hover:text-neon-cyan transition-colors whitespace-nowrap mt-0.5">
+              <span className="font-sans font-black text-sm sm:text-base lg:text-xl text-slate-900 dark:text-white uppercase tracking-tight leading-tight group-hover:text-cyan-600 dark:group-hover:text-neon-cyan transition-colors whitespace-nowrap mt-0.5">
                 COMANDO DE ADMISIÓN
               </span>
 
-              <span className="text-[11px] sm:text-xs font-rajdhani font-bold text-cyan-600 dark:text-[#00F0FF] uppercase tracking-wider leading-none whitespace-nowrap mt-0.5">
+              <span className="text-[10px] sm:text-xs font-rajdhani font-bold text-cyan-600 dark:text-[#00F0FF] uppercase tracking-wider leading-none whitespace-nowrap mt-0.5">
                 TEST VOCACIONAL & SIMULADOR ACADÉMICO
               </span>
             </div>
@@ -243,25 +245,62 @@ export default function RootLayout({ children }) {
         </div>
       ) : (
         /* Barra de Navegación Secundaria / Breadcrumb Táctico */
-        <div className="w-full bg-slate-100/90 dark:bg-[#0B101E]/80 border-b border-slate-200 dark:border-gray-800 backdrop-blur-sm transition-colors duration-300">
-          <div className="max-w-6xl mx-auto px-4 py-2 flex items-center justify-between text-xs font-rajdhani font-bold uppercase tracking-wider">
-            <div className="flex items-center gap-2 text-slate-600 dark:text-slate-300">
-              <Link href="/" className="hover:text-cyan-500 transition-colors">Comando de Admisión</Link>
-              <span className="text-slate-400">/</span>
-              <span className="text-cyan-600 dark:text-neon-cyan truncate max-w-[200px] sm:max-w-none">
-                {currentPath === '/transparencia' && 'Descarga de Prospectos Oficiales 2026'}
-                {currentPath === '/entrenamiento' && 'Centro de Entrenamiento Táctico'}
-                {currentPath === '/glosario' && 'Glosario Técnico de Términos Militares'}
-              </span>
+        <div className="w-full bg-slate-100/90 dark:bg-[#0B101E]/90 border-b border-slate-200 dark:border-gray-800/80 backdrop-blur-md transition-colors duration-300">
+          <div className="max-w-7xl mx-auto px-3 sm:px-6 py-1.5 sm:py-2 flex items-center justify-between gap-2 text-xs font-rajdhani font-bold uppercase tracking-wider overflow-hidden">
+            
+            {/* Lado Izquierdo: Ruta Jerárquica con Truncado Elástico */}
+            <div className="min-w-0 flex-1 flex items-center gap-1.5 sm:gap-2 text-slate-600 dark:text-slate-400 overflow-hidden">
+              <Link
+                href="/"
+                className="shrink-0 inline-flex items-center gap-1 sm:gap-1.5 text-slate-500 hover:text-cyan-600 dark:text-slate-400 dark:hover:text-neon-cyan transition-colors"
+                title="Volver al Comando de Admisión y Evaluación"
+              >
+                <Home className="w-3.5 h-3.5 shrink-0" />
+                <span className="hidden sm:inline">Comando de Admisión</span>
+                <span className="sm:hidden font-mono text-[10px]">INICIO</span>
+              </Link>
+
+              <ChevronRight className="w-3 h-3 text-slate-400/60 dark:text-gray-600 shrink-0" />
+
+              {/* Indicador de Sección Activa (Adaptativo por Dispositivo) */}
+              <div className="min-w-0 flex-1 flex items-center overflow-hidden">
+                <span className="text-cyan-600 dark:text-neon-cyan font-bold truncate text-[11px] sm:text-xs tracking-wider">
+                  {currentPath === '/transparencia' && (
+                    <>
+                      <span className="hidden md:inline">Descarga de Prospectos Oficiales 2026</span>
+                      <span className="hidden sm:inline md:hidden">Prospectos Oficiales 2026</span>
+                      <span className="sm:hidden">Prospectos Oficiales</span>
+                    </>
+                  )}
+                  {currentPath === '/entrenamiento' && (
+                    <>
+                      <span className="hidden md:inline">Centro de Entrenamiento Táctico</span>
+                      <span className="hidden sm:inline md:hidden">Entrenamiento Táctico 2026</span>
+                      <span className="sm:hidden">Entrenamiento Táctico</span>
+                    </>
+                  )}
+                  {currentPath === '/glosario' && (
+                    <>
+                      <span className="hidden md:inline">Glosario Técnico de Términos Militares</span>
+                      <span className="hidden sm:inline md:hidden">Glosario Técnico Militar</span>
+                      <span className="sm:hidden">Glosario Militar</span>
+                    </>
+                  )}
+                </span>
+              </div>
             </div>
 
+            {/* Lado Derecho: Botón Táctico "Ir al Test" Estilizado y Ultra-Resiliente */}
             <Link
               href="/"
-              className="text-xs font-rajdhani font-bold text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white flex items-center gap-1 transition-colors"
+              className="shrink-0 inline-flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-lg sm:rounded-xl bg-gradient-to-r from-cyan-500/15 via-blue-500/15 to-cyan-500/10 hover:from-cyan-500/25 hover:to-blue-500/25 border border-cyan-500/40 hover:border-cyan-400 text-cyan-600 dark:text-cyan-300 text-[11px] sm:text-xs font-rajdhani font-black tracking-wider uppercase transition-all duration-200 shadow-sm active:scale-95"
+              title="Iniciar o Continuar la Evaluación Vocacional Militar"
             >
+              <Target className="w-3 h-3 text-cyan-500 dark:text-neon-cyan shrink-0" />
               <span>Ir al Test</span>
-              <ChevronRight className="w-3.5 h-3.5" />
+              <ArrowRight className="w-3 h-3 text-cyan-500 dark:text-neon-cyan shrink-0" />
             </Link>
+
           </div>
         </div>
       )}

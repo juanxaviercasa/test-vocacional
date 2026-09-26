@@ -36,7 +36,7 @@ export default function Pillar3Interests() {
       <TopoProgressBar
         current={interestsIndex + 1}
         total={total}
-        label={`Pilar 3 // Intereses Operacionales: Dilema Táctico ${interestsIndex + 1} de ${total}`}
+        label={`Pilar 4 // Intereses Operacionales: Dilema Táctico ${interestsIndex + 1} de ${total}`}
       />
 
       {/* Indicador de Calibración Biométrica Activa (Contexto Pilar 1) */}
@@ -200,7 +200,7 @@ export default function Pillar3Interests() {
           className="flex items-center gap-2 px-5 py-2.5 rounded-xl border border-slate-300 dark:border-white/15 bg-white dark:bg-white/5 text-slate-700 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/10 font-rajdhani font-bold text-xs tracking-wider uppercase transition-all shadow-sm cursor-pointer"
         >
           <ArrowLeft className="w-3.5 h-3.5" />
-          <span>{interestsIndex > 0 ? "Dilema Anterior" : "Volver a Pilar 2"}</span>
+          <span>{interestsIndex > 0 ? "Dilema Anterior" : "Volver a Pilar 3 (Cognitivo)"}</span>
         </button>
 
         <button
@@ -213,7 +213,7 @@ export default function Pillar3Interests() {
               : "bg-slate-200 dark:bg-slate-800 text-slate-400 dark:text-slate-500 cursor-not-allowed border border-slate-300 dark:border-white/5"
           }`}
         >
-          <span>{interestsIndex < total - 1 ? "Siguiente Dilema" : "VER MI RESULTADO VOCACIONAL"}</span>
+          <span>{interestsIndex < total - 1 ? "Siguiente Dilema" : "VER DICTAMEN INTEGRAL 360°"}</span>
           <ArrowRight className="w-4 h-4" />
         </button>
       </div>

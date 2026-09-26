@@ -21,7 +21,17 @@ export default function Pillar5Consolidated() {
       
       {/* TARJETA HERO DEL DICTAMEN FINAL */}
       <div className="glass-panel-cyan p-6 sm:p-8 rounded-3xl relative overflow-hidden">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
+        {/* Fondo Inmersivo de Ceremonia Oficial de Graduación y Acreditación Militar */}
+        <div className="absolute inset-0 pointer-events-none opacity-20 overflow-hidden">
+          <img
+            src="/assets/general/vocational-verdict-merit.jpg"
+            alt="Ceremonia Oficial de Acreditación y Entrega de Dictamen Militar CCFFAA"
+            className="w-full h-full object-cover object-center scale-105"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0B101E] via-[#0B101E]/85 to-[#0B101E]/60" />
+        </div>
+
+        <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-6">
           
           {/* Veredicto y Compatibilidad */}
           <div className="flex-1 text-center lg:text-left">

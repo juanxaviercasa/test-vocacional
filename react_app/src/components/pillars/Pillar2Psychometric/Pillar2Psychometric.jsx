@@ -4,7 +4,7 @@ import { PSICOMETRIC_QUESTIONS, LIKERT_OPTIONS } from '../../../data/psychometri
 import TopoProgressBar from '../../common/TopoProgressBar';
 import AnimatePillarContainer from '../../layout/AnimatePillarContainer';
 import Tooltip from '../../common/Tooltip';
-import { ArrowLeft, Brain, Sparkles } from 'lucide-react';
+import { ArrowLeft, Brain, Sparkles, ShieldAlert, AlertTriangle } from 'lucide-react';
 
 export default function Pillar2Psychometric() {
   const {
@@ -28,7 +28,7 @@ export default function Pillar2Psychometric() {
       <TopoProgressBar
         current={psychIndex + 1}
         total={total}
-        label={`Pilar 2 // Evaluación Psicométrica IPIP-NEO: Reactivo ${psychIndex + 1} de ${total}`}
+        label={`Pilar 2 // Evaluación Psicométrica & Control Clínico: Reactivo ${psychIndex + 1} de ${total}`}
       />
 
       {/* Contenedor con Animación Deslizante de la Pregunta */}
@@ -36,12 +36,12 @@ export default function Pillar2Psychometric() {
         
         <div className="glass-panel p-8 sm:p-12 rounded-3xl border border-white/15 shadow-tactical-card relative overflow-hidden text-center">
           
-          {/* Fondo Inmersivo de Sala de Operaciones Tácticas CCFFAA Perú */}
+          {/* Fondo Inmersivo de Laboratorio Psicométrico Militar IPIP-NEO */}
           <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
             <img
-              src="/assets/general/tactical-command-room.jpg"
-              alt="Sala de Operaciones del Comando Conjunto de las FFAA del Perú"
-              className="w-full h-full object-cover object-center opacity-15 dark:opacity-25 blur-[1px] scale-105"
+              src="/assets/general/psychometric-evaluation-cadet.jpg"
+              alt="Evaluación Psicométrica de Personalidad e Integridad Militar (IPIP-NEO)"
+              className="w-full h-full object-cover object-center opacity-20 dark:opacity-30 blur-[1px] scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-[#0B101E]/90 via-[#0B101E]/80 to-[#0B101E]/95" />
           </div>
@@ -50,11 +50,23 @@ export default function Pillar2Psychometric() {
             {/* Luz sutil de fondo según dominio */}
             <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-96 h-96 bg-neon-cyan/5 rounded-full blur-3xl pointer-events-none" />
 
-            {/* Badge del Dominio Psicológico */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-950/80 border border-neon-cyan/40 text-neon-cyan text-xs sm:text-sm font-rajdhani font-bold uppercase tracking-widest mb-6 shadow-sm">
-              <Brain className="w-4 h-4" />
-              <span>Dimensión <Tooltip termino="Big Five">Big Five</Tooltip>: {currentQ.dominio}</span>
-            </div>
+            {/* Badge del Dominio Psicológico / Control Táctico */}
+            {currentQ.esControlMentira ? (
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-950/80 border border-amber-500/50 text-amber-400 text-xs sm:text-sm font-rajdhani font-bold uppercase tracking-widest mb-6 shadow-sm">
+                <ShieldAlert className="w-4 h-4" />
+                <span>Control de Sinceridad // Escala L (Anti-Deseabilidad Social)</span>
+              </div>
+            ) : currentQ.esClinica ? (
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-rose-950/80 border border-rose-500/50 text-rose-400 text-xs sm:text-sm font-rajdhani font-bold uppercase tracking-widest mb-6 shadow-sm">
+                <AlertTriangle className="w-4 h-4" />
+                <span>Control Clínico Operativo // Sanidad Militar</span>
+              </div>
+            ) : (
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-950/80 border border-neon-cyan/40 text-neon-cyan text-xs sm:text-sm font-rajdhani font-bold uppercase tracking-widest mb-6 shadow-sm">
+                <Brain className="w-4 h-4" />
+                <span>Dimensión <Tooltip termino="Big Five">Big Five</Tooltip>: {currentQ.dominio}</span>
+              </div>
+            )}
 
             {/* Afirmación Central en Modo Enfoque con Escala Accesible AAA */}
             <h2 className="text-2xl sm:text-4xl font-rajdhani font-bold text-white leading-relaxed tracking-wide max-w-3xl mx-auto my-6 min-h-[90px] flex items-center justify-center">
@@ -62,7 +74,11 @@ export default function Pillar2Psychometric() {
             </h2>
 
             <p className="text-sm sm:text-base text-slate-200 font-inter max-w-xl mx-auto mb-10 leading-relaxed">
-              Responde con espontaneidad según el inventario <Tooltip termino="IPIP-NEO">IPIP-NEO</Tooltip>. El sistema computa tu consistencia conductual bajo el <Tooltip termino="Baremo">Baremo</Tooltip> institucional.
+              {currentQ.esControlMentira
+                ? "Responde con total veracidad y realismo. Este reactivo audita la sinceridad y autenticidad del perfil frente a sesgos de deseabilidad."
+                : currentQ.esClinica
+                ? "Evaluación estricta de estabilidad emocional bajo presión y seguridad operativa para el servicio en las Fuerzas Armadas y PNP."
+                : <>Responde con espontaneidad según el inventario <Tooltip termino="IPIP-NEO">IPIP-NEO</Tooltip>. El sistema computa tu consistencia conductual bajo el <Tooltip termino="Baremo">Baremo</Tooltip> institucional.</>}
             </p>
 
             {/* Opciones Likert Horizontales Estilizadas con Alto Contraste */}

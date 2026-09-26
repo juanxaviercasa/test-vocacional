@@ -21,7 +21,7 @@ export default function TacticalHUDLayout({ children }) {
                 SISTEMA INTEGRAL DE EVALUACIÓN MILITAR
               </h1>
               <p className="text-[11px] text-yellow-400/90 font-inter tracking-wide mt-1">
-                Fuerzas Armadas y Policía Nacional del Perú
+                Fuerzas Armadas y PNP
               </p>
             </div>
           </div>

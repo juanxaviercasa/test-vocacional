@@ -18,7 +18,7 @@ import time
 import random
 import shutil
 import re
-from http.server import HTTPServer, SimpleHTTPRequestHandler
+from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 from typing import Dict, Any, List, Optional
 
 # Agregar directorio actual al sys.path para importar engine
@@ -75,6 +75,29 @@ class MilitaryHttpHandler(SimpleHTTPRequestHandler):
         parsed_url = urllib.parse.urlparse(self.path)
         path = parsed_url.path
         query = urllib.parse.parse_qs(parsed_url.query)
+
+        if path == "/" or path == "/index.html":
+            self.send_response(302)
+            self.send_header("Location", "/react_app/")
+            self.end_headers()
+            return
+
+        # Redirección inteligente de rutas cliente (SPA)
+        spa_routes = ["/entrenamiento", "/glosario", "/transparencia"]
+        clean_path = path.rstrip("/")
+        if clean_path in spa_routes:
+            self.send_response(302)
+            self.send_header("Location", f"/react_app/#{clean_path}")
+            self.end_headers()
+            return
+
+        if path.startswith("/react_app/") and path not in ["/react_app/", "/react_app/index.html"]:
+            sub = path.replace("/react_app", "").rstrip("/")
+            if sub in spa_routes:
+                self.send_response(302)
+                self.send_header("Location", f"/react_app/#{sub}")
+                self.end_headers()
+                return
 
         if path == "/api/institutions":
             insts = EXAM_ENGINE.get_supported_institutions()
@@ -243,9 +266,9 @@ class MilitaryHttpHandler(SimpleHTTPRequestHandler):
             self.send_error(404, "Endpoint no encontrado")
 
     def handle_api_vocational_init(self, payload: Dict[str, Any]):
-        """Inicializa la prueba vocacional con los 4 pilares:
+        """Inicializa la prueba vocacional con los pilares integrales:
         - Evalúa datos básicos y médicos contra el Pilar 1.
-        - Extrae 15 Big Five + 3 Escala L + 10 P3 + 20 P4.
+        - Extrae 15 Big Five + 3 Escala L + 2 Banderas Clínicas + 10 P3 + 20 P4 + 6 Cognitivos Superiores.
         """
         try:
             candidate = payload.get("candidate", {})
@@ -255,30 +278,40 @@ class MilitaryHttpHandler(SimpleHTTPRequestHandler):
             VOCATIONAL_SESSIONS[session_id] = {
                 "candidate": candidate,
                 "legal_eval": legal_eval,
-                "validity_ids": battery["validity_ids"],
-                "answer_key_p4": battery["pilar4_answer_key"]
+                "validity_ids": battery.get("validity_ids", []),
+                "clinical_ids": battery.get("clinical_ids", []),
+                "answer_key_p4": battery.get("pilar4_answer_key", {}),
+                "answer_key_cognitive": battery.get("cognitive_answer_key", {})
             }
             self._send_json_response({
                 "session_id": session_id,
                 "legal_evaluation": legal_eval,
                 "pilar2_questions": battery["pilar2_psicometria"],
                 "pilar3_dilemmas": battery["pilar3_intereses"],
-                "pilar4_questions": battery["pilar4_conocimientos"]
+                "pilar4_questions": battery["pilar4_conocimientos"],
+                "pilar_cognitivo": battery.get("pilar_cognitivo", [])
             })
         except Exception as e:
             self._send_json_response({"error": str(e)}, status=500)
 
     def handle_api_vocational_evaluate(self, payload: Dict[str, Any]):
-        """Consolida matemáticamente los 4 pilares + Físico/IGAC + Escala L + Penalización."""
+        """Consolida matemáticamente el Diagnóstico Integral 360°:
+        Antropometría + Físico 0-20 + Raven/Bennett + Big Five + Escala L + Banderas Rojas + Intereses + Conocimientos.
+        """
         try:
             session_id = payload.get("session_id", "")
             session_data = VOCATIONAL_SESSIONS.get(session_id, {})
             candidate = payload.get("candidate") or session_data.get("candidate", {})
             answer_key = session_data.get("answer_key_p4") or payload.get("answer_key_p4", {})
             validity_ids = session_data.get("validity_ids") or payload.get("validity_ids", [])
+            clinical_ids = session_data.get("clinical_ids") or payload.get("clinical_ids", [])
+            answer_key_cognitive = session_data.get("answer_key_cognitive") or payload.get("answer_key_cognitive", {})
+
             answers_p2 = payload.get("answers_p2", {})
             answers_p3 = payload.get("answers_p3", {})
             answers_p4 = payload.get("answers_p4", {})
+            answers_cognitive = payload.get("answers_cognitive", {})
+            times_cognitive = payload.get("times_cognitive", {})
             physical_marks = payload.get("physical_marks", {})
 
             verdict = VOCATIONAL_ENGINE.evaluate_full_battery(
@@ -288,6 +321,10 @@ class MilitaryHttpHandler(SimpleHTTPRequestHandler):
                 answers_p4=answers_p4,
                 answer_key_p4=answer_key,
                 validity_ids=validity_ids,
+                clinical_ids=clinical_ids,
+                answers_cognitive=answers_cognitive,
+                answer_key_cognitive=answer_key_cognitive,
+                times_cognitive=times_cognitive,
                 physical_marks=physical_marks
             )
             self._send_json_response(verdict)
@@ -492,7 +529,7 @@ def run_server(port: int = 8080):
             pass
 
     server_address = ("", port)
-    httpd = HTTPServer(server_address, MilitaryHttpHandler)
+    httpd = ThreadingHTTPServer(server_address, MilitaryHttpHandler)
     print("=" * 80)
     print("[PERÚ] SISTEMA INTEGRAL DE ADMISIÓN MILITAR Y VOCACIONAL")
     print(f"Servidor web y APIs REST activos en: http://localhost:{port}")

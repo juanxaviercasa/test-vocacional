@@ -1,6 +1,7 @@
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 import { PSICOMETRIC_QUESTIONS } from '../data/psychometricQuestions.js';
+import { COGNITIVE_QUESTIONS } from '../data/cognitiveQuestions.js';
 import { TACTICAL_DILEMMAS, getAdaptedDilemmas } from '../data/tacticalDilemmas.js';
 import { KNOWLEDGE_QUESTIONS } from '../data/knowledgeQuestions.js';
 import { computeConsolidatedViability, computeVocationalViability } from '../data/scoringEngine.js';
@@ -26,6 +27,10 @@ export const INITIAL_CANDIDATE = {
   agudeza_visual_20_20: null,
   hasGlasses: null,
   daltonismo: null,
+  promedio_fisico: 15.0,
+  carrera_1500m: '5m_30s',
+  natacion_50m: 'apto',
+  flexiones: 35,
 };
 
 export const DEMO_CANDIDATE = {
@@ -49,13 +54,17 @@ export const DEMO_CANDIDATE = {
   agudeza_visual_20_20: true,
   hasGlasses: false,
   daltonismo: false,
+  promedio_fisico: 16.5,
+  carrera_1500m: 'menos_5m',
+  natacion_50m: 'apto',
+  flexiones: 45,
 };
 
 export const useAssessmentStore = create(
   persist(
     (set, get) => {
       const urlPillar = typeof window !== 'undefined' ? parseInt(new URLSearchParams(window.location.search).get('pillar') || '1', 10) : 1;
-      const initialPillar = Math.min(4, Math.max(1, urlPillar));
+      const initialPillar = Math.min(5, Math.max(1, urlPillar));
 
       return {
     // =========================================================================
@@ -64,9 +73,9 @@ export const useAssessmentStore = create(
     activeModule: 'vocational', // 'vocational' | 'academic'
 
     // =========================================================================
-    // MÓDULO 1: WIZARD VOCACIONAL (4 PASOS)
+    // MÓDULO 1: WIZARD VOCACIONAL (5 PASOS)
     // =========================================================================
-    currentPillar: initialPillar, // 1: Legal, 2: Psico, 3: Intereses, 4: Resultado Vocacional
+    currentPillar: initialPillar, // 1: Legal/Físico, 2: Psico/Clínico, 3: Cognitivo/Mecánica, 4: Intereses, 5: Dictamen 360°
     direction: 1, // 1: adelante, -1: atrás (para Framer Motion)
 
     // Sub-pantallas de Paso 1 (Filtro Legal / Divulgación Progresiva)
@@ -79,16 +88,21 @@ export const useAssessmentStore = create(
     isTourOpen: false,
     tourStep: 0,
 
-    // Paso 2: Psicométrico IPIP-NEO (Modo Enfoque)
+    // Paso 2: Psicométrico IPIP-NEO + Control Clínico & Escala L
     psychIndex: 0,
     psychAnswers: {}, // { [qId]: value }
     isPsychAdvancing: false,
 
-    // Paso 3: Intereses Operacionales (Dilemas Tácticos)
+    // Paso 3: Facultades Cognitivas Superiores (Raven + Bennett)
+    cognitiveIndex: 0,
+    cognitiveAnswers: {}, // { [qId]: optionId }
+    isCognitiveAdvancing: false,
+
+    // Paso 4: Intereses Operacionales (Dilemas Tácticos)
     interestsIndex: 0,
     interestsAnswers: {}, // { [dilemmaId]: optionId }
 
-    // Paso 4: Veredicto Vocacional Puro (Compatibilidad con 8 escuelas)
+    // Paso 5: Veredicto Vocacional Integral 360°
     vocationalVerdict: null,
 
     // =========================================================================
@@ -141,21 +155,21 @@ export const useAssessmentStore = create(
     // ACCIONES DEL WIZARD VOCACIONAL (MÓDULO 1)
     // =========================================================================
     goToPillar: (pillarNumber) => {
-      const clamped = Math.min(4, Math.max(1, pillarNumber));
+      const clamped = Math.min(5, Math.max(1, pillarNumber));
       const current = get().currentPillar;
       const dir = clamped >= current ? 1 : -1;
       set({ currentPillar: clamped, direction: dir });
-      if (clamped === 4) {
+      if (clamped === 5) {
         get().calculateVocationalResults();
       }
     },
 
     nextPillar: () => {
       const current = get().currentPillar;
-      if (current < 4) {
+      if (current < 5) {
         const next = current + 1;
         set({ currentPillar: next, direction: 1 });
-        if (next === 4) {
+        if (next === 5) {
           get().calculateVocationalResults();
         }
       }
@@ -201,7 +215,26 @@ export const useAssessmentStore = create(
 
     // Inyección de Perfil de Prueba (Demo Mode) y Reseteo
     loadDemoCandidate: () => {
-      set({ candidate: { ...DEMO_CANDIDATE } });
+      set({
+        candidate: { ...DEMO_CANDIDATE },
+        psychAnswers: {
+          IPIP_EST_01: 2, IPIP_EST_02: 1, IPIP_EST_03: 2,
+          IPIP_EXT_01: 5, IPIP_EXT_02: 4, IPIP_EXT_03: 4,
+          IPIP_APE_01: 4, IPIP_APE_02: 4, IPIP_APE_03: 4,
+          IPIP_CON_01: 5, IPIP_CON_02: 5, IPIP_CON_03: 5,
+          IPIP_AGR_01: 4, IPIP_AGR_02: 4, IPIP_AGR_03: 4,
+          VAL_01: 2, VAL_02: 2, VAL_03: 2,
+          CLI_ARM_01: 1, CLI_CLA_01: 1
+        },
+        cognitiveAnswers: {
+          COG_RAV_01: 'A', COG_RAV_02: 'A', COG_RAV_03: 'A',
+          COG_MEC_01: 'A', COG_MEC_02: 'A', COG_MEC_03: 'A'
+        },
+        interestsAnswers: {
+          DIL_01: 'OPT_1A', DIL_02: 'OPT_2A', DIL_03: 'OPT_3A',
+          DIL_04: 'OPT_4A', DIL_05: 'OPT_5A'
+        }
+      });
     },
 
     resetCandidate: () => {
@@ -210,6 +243,8 @@ export const useAssessmentStore = create(
         pilar1SubStep: 1,
         psychIndex: 0,
         psychAnswers: {},
+        cognitiveIndex: 0,
+        cognitiveAnswers: {},
         interestsIndex: 0,
         interestsAnswers: {},
         vocationalVerdict: null,
@@ -315,7 +350,7 @@ export const useAssessmentStore = create(
         if (psychIndex < PSICOMETRIC_QUESTIONS.length - 1) {
           set({ psychIndex: psychIndex + 1, direction: 1, isPsychAdvancing: false });
         } else {
-          // Fin de Paso 2 -> pasar al Paso 3 (Intereses)
+          // Fin de Paso 2 -> pasar al Paso 3 (Cognitivo Superior)
           set({ isPsychAdvancing: false });
           get().nextPillar();
         }
@@ -327,7 +362,46 @@ export const useAssessmentStore = create(
       set({ psychIndex: index, direction: index >= current ? 1 : -1 });
     },
 
-    // Acciones Paso 3 (Intereses)
+    // Acciones Paso 3 (Facultades Cognitivas Superiores: Raven & Bennett)
+    answerCognitiveQuestion: (questionId, optionId) => {
+      set((state) => ({
+        cognitiveAnswers: { ...state.cognitiveAnswers, [questionId]: optionId },
+        isCognitiveAdvancing: true
+      }));
+
+      setTimeout(() => {
+        const { cognitiveIndex } = get();
+        if (cognitiveIndex < COGNITIVE_QUESTIONS.length - 1) {
+          set({ cognitiveIndex: cognitiveIndex + 1, direction: 1, isCognitiveAdvancing: false });
+        } else {
+          set({ isCognitiveAdvancing: false });
+          get().nextPillar(); // Pasa a Paso 4 (Intereses)
+        }
+      }, 350);
+    },
+
+    goToCognitiveQuestion: (index) => {
+      const current = get().cognitiveIndex;
+      set({ cognitiveIndex: index, direction: index >= current ? 1 : -1 });
+    },
+
+    nextCognitiveQuestion: () => {
+      const { cognitiveIndex } = get();
+      if (cognitiveIndex < COGNITIVE_QUESTIONS.length - 1) {
+        set({ cognitiveIndex: cognitiveIndex + 1, direction: 1 });
+      } else {
+        get().nextPillar();
+      }
+    },
+
+    prevCognitiveQuestion: () => {
+      const { cognitiveIndex } = get();
+      if (cognitiveIndex > 0) {
+        set({ cognitiveIndex: cognitiveIndex - 1, direction: -1 });
+      }
+    },
+
+    // Acciones Paso 4 (Intereses Operacionales)
     answerInterestDilemma: (dilemmaId, optionId) => {
       set((state) => ({
         interestsAnswers: { ...state.interestsAnswers, [dilemmaId]: optionId }
@@ -339,7 +413,7 @@ export const useAssessmentStore = create(
       if (interestsIndex < TACTICAL_DILEMMAS.length - 1) {
         set({ interestsIndex: interestsIndex + 1, direction: 1 });
       } else {
-        get().nextPillar(); // Pasa a Paso 4 (Resultado Vocacional)
+        get().nextPillar(); // Pasa a Paso 5 (Dictamen Vocacional 360°)
       }
     },
 
@@ -354,21 +428,23 @@ export const useAssessmentStore = create(
     // CÁLCULO DE RESULTADOS
     // =========================================================================
     calculateVocationalResults: () => {
-      const { candidate, psychAnswers, interestsAnswers, getPhysicalRestrictions } = get();
+      const { candidate, psychAnswers, interestsAnswers, cognitiveAnswers, getPhysicalRestrictions } = get();
       const restrictions = getPhysicalRestrictions();
       const adaptedDilemmas = getAdaptedDilemmas(TACTICAL_DILEMMAS, restrictions);
       const verdict = computeVocationalViability(
         candidate,
         psychAnswers,
         interestsAnswers,
-        adaptedDilemmas
+        adaptedDilemmas,
+        cognitiveAnswers,
+        { promedio_fisico: candidate.promedio_fisico || 15.0 }
       );
       set({ vocationalVerdict: verdict });
       return verdict;
     },
 
     calculateFinalResults: () => {
-      const { candidate, psychAnswers, interestsAnswers, knowledgeAnswers, getPhysicalRestrictions } = get();
+      const { candidate, psychAnswers, interestsAnswers, cognitiveAnswers, knowledgeAnswers, getPhysicalRestrictions } = get();
       const restrictions = getPhysicalRestrictions();
       const adaptedDilemmas = getAdaptedDilemmas(TACTICAL_DILEMMAS, restrictions);
       const verdict = computeConsolidatedViability(
@@ -392,6 +468,8 @@ export const useAssessmentStore = create(
         pilar1SubStep: 1,
         psychIndex: 0,
         psychAnswers: {},
+        cognitiveIndex: 0,
+        cognitiveAnswers: {},
         interestsIndex: 0,
         interestsAnswers: {},
         vocationalVerdict: null,
@@ -420,6 +498,7 @@ export const useAssessmentStore = create(
   partialize: (state) => ({
     candidate: state.candidate,
     psychAnswers: state.psychAnswers,
+    cognitiveAnswers: state.cognitiveAnswers,
     interestsAnswers: state.interestsAnswers,
     vocationalVerdict: state.vocationalVerdict,
     currentPillar: state.currentPillar,

@@ -269,10 +269,20 @@ export default function AcademicExamView({ schoolId, onComplete, onCancel }) {
             exit="exit"
             className="w-full"
           >
-            <div className="bg-[#141518] border border-gray-700 rounded-2xl p-6 sm:p-8 shadow-2xl relative">
+            <div className="bg-[#141518] border border-gray-700 rounded-2xl p-6 sm:p-8 shadow-2xl relative overflow-hidden">
               
+              {/* Fondo Sutil del Aula Magna de Examen Oficial de Admisión */}
+              <div className="absolute inset-0 pointer-events-none opacity-10 overflow-hidden">
+                <img
+                  src="/assets/general/mock-exam-auditorium.jpg"
+                  alt=""
+                  className="w-full h-full object-cover object-center filter grayscale mix-blend-luminosity scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#141518] via-[#141518]/90 to-[#141518]/80" />
+              </div>
+
               {/* Encabezado del Reactivo */}
-              <div className="flex flex-wrap items-center justify-between gap-2 border-b border-gray-800 pb-3 mb-5">
+              <div className="relative z-10 flex flex-wrap items-center justify-between gap-2 border-b border-gray-800 pb-3 mb-5">
                 <div className="flex items-center gap-2">
                   <span className="px-2.5 py-1 rounded bg-black/60 border border-gray-700 text-neon-cyan text-xs font-rajdhani font-bold uppercase tracking-wider">
                     {currentQuestion?.curso}

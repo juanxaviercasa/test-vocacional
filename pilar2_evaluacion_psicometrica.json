@@ -1003,6 +1003,56 @@
       "respuesta_alerta": "Verdadero"
     }
   ],
+  "banco_banderas_rojas_clinicas": [
+    {
+      "id_reactivo": "CLI_ARM_01",
+      "enunciado": "Cuando alguien me ofende gravemente, siento un impulso incontrolable de responder con violencia física o hacérselo pagar cueste lo que cueste.",
+      "dominio_clinico": "CONTROL_IMPULSOS_ARMAS",
+      "riesgo": "CRITICO_PORTE_ARMAS",
+      "polaridad_riesgo": 1,
+      "umbral_alerta": 4
+    },
+    {
+      "id_reactivo": "CLI_ARM_02",
+      "enunciado": "He tenido fantasías recurrentes de usar un arma de fuego para vengarme de personas que me han perjudicado en el pasado.",
+      "dominio_clinico": "CONTROL_IMPULSOS_ARMAS",
+      "riesgo": "CRITICO_PORTE_ARMAS",
+      "polaridad_riesgo": 1,
+      "umbral_alerta": 3
+    },
+    {
+      "id_reactivo": "CLI_LAB_01",
+      "enunciado": "Frente a un grito o una llamada de atención severa de una autoridad, me quiebro en llanto, pierdo el control o me paralizo totalmente sin poder reaccionar.",
+      "dominio_clinico": "LABILIDAD_CRISIS_ESTRES",
+      "riesgo": "COLAPSO_BAJO_FUEGO",
+      "polaridad_riesgo": 1,
+      "umbral_alerta": 4
+    },
+    {
+      "id_reactivo": "CLI_LAB_02",
+      "enunciado": "En momentos de intensa soledad o castigo disciplinario prolongado, he contemplado hacerme daño físico a mí mismo para escapar de la situación.",
+      "dominio_clinico": "LABILIDAD_CRISIS_ESTRES",
+      "riesgo": "IDEACION_AUTOLITICA",
+      "polaridad_riesgo": 1,
+      "umbral_alerta": 2
+    },
+    {
+      "id_reactivo": "CLI_CLA_01",
+      "enunciado": "Estar encerrado en un espacio reducido y sin ventanas (como la cabina estanca de un submarino o el interior de un tanque blindado) me provoca ataques de pánico incontrolable y dificultad para respirar.",
+      "dominio_clinico": "CLAUSTROFOBIA_CONFINAMIENTO",
+      "riesgo": "INCOMPATIBILIDAD_NAVAL_BLINDADOS_AEREA",
+      "polaridad_riesgo": 1,
+      "umbral_alerta": 4
+    },
+    {
+      "id_reactivo": "CLI_CLA_02",
+      "enunciado": "Siento un terror paralizante ante la idea de estar sumergido bajo el agua o confinado en la oscuridad por varias horas seguidas.",
+      "dominio_clinico": "CLAUSTROFOBIA_CONFINAMIENTO",
+      "riesgo": "INCOMPATIBILIDAD_SUBMARINA_BUCEO",
+      "polaridad_riesgo": 1,
+      "umbral_alerta": 4
+    }
+  ],
   "perfiles_institucionales_esperados": {
     "Ejercito_Peru": {
       "Neuroticismo": {

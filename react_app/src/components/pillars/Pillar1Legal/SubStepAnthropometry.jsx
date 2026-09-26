@@ -130,6 +130,57 @@ export default function SubStepAnthropometry() {
             </span>
           </div>
 
+          {/* Autoevaluación de Aptitud Física Militar (Escala Vigesimal 0-20) */}
+          <div className="p-4 rounded-xl bg-night-deep/80 border border-emerald-500/30">
+            <div className="flex justify-between items-center mb-2">
+              <div>
+                <span className="text-[10px] font-rajdhani font-bold text-emerald-400 uppercase tracking-widest block">
+                  TABLA MILITAR DE APTITUD FÍSICA (1500M, NATACIÓN, PLANCHAS)
+                </span>
+                <label className="text-xs font-rajdhani font-bold text-white uppercase tracking-wider">
+                  Nota de Rendimiento Físico Estimada (0 - 20)
+                </label>
+              </div>
+              <div className="text-right">
+                <span className="text-2xl font-sans font-black text-emerald-400">
+                  {candidate.promedio_fisico || 15.0}
+                </span>
+                <span className="text-[10px] text-slate-400 block">/ 20 Vigesimal</span>
+              </div>
+            </div>
+
+            <input
+              type="range"
+              min="8"
+              max="20"
+              step="0.5"
+              value={candidate.promedio_fisico || 15.0}
+              onChange={(e) => updateCandidate('promedio_fisico', parseFloat(e.target.value))}
+              className="w-full accent-emerald-400 cursor-pointer"
+            />
+
+            <div className="grid grid-cols-3 gap-2 mt-3 text-center">
+              <div className="p-2 rounded-lg bg-black/40 border border-white/5">
+                <span className="text-[10px] text-slate-400 font-rajdhani block">1,500m Carrera</span>
+                <span className="text-[11px] font-rajdhani font-bold text-emerald-300">
+                  {(candidate.promedio_fisico || 15) >= 16 ? "< 5:15 min" : (candidate.promedio_fisico || 15) >= 13 ? "5:30 - 6:00 min" : "> 6:15 min"}
+                </span>
+              </div>
+              <div className="p-2 rounded-lg bg-black/40 border border-white/5">
+                <span className="text-[10px] text-slate-400 font-rajdhani block">50m Natación Crol</span>
+                <span className="text-[11px] font-rajdhani font-bold text-cyan-300">
+                  {(candidate.promedio_fisico || 15) >= 15 ? "Apto (< 45s)" : (candidate.promedio_fisico || 15) >= 12 ? "Apto Básico" : "Riesgo"}
+                </span>
+              </div>
+              <div className="p-2 rounded-lg bg-black/40 border border-white/5">
+                <span className="text-[10px] text-slate-400 font-rajdhani block">Planchas / Flex</span>
+                <span className="text-[11px] font-rajdhani font-bold text-amber-300">
+                  {(candidate.promedio_fisico || 15) >= 16 ? "+40 reps" : (candidate.promedio_fisico || 15) >= 13 ? "28 - 38 reps" : "< 25 reps"}
+                </span>
+              </div>
+            </div>
+          </div>
+
         </div>
 
         {/* Columna Derecha: SVG de Escaneo Humano Holográfico */}

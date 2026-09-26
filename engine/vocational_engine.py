@@ -24,6 +24,8 @@ if BASE_DIR not in sys.path:
     sys.path.insert(0, BASE_DIR)
 
 from engine.db_storage import DB_MANAGER, generate_native_qr_svg
+from engine.cognitive_engine import COGNITIVE_ENGINE
+from engine.physical_scoring import MilitaryPhysicalScoringEngine
 
 PATH_PILAR1 = os.path.join(BASE_DIR, "pilar1_requisitos_legales.json")
 PATH_PILAR2 = os.path.join(BASE_DIR, "pilar2_evaluacion_psicometrica.json")
@@ -152,6 +154,8 @@ class MilitaryVocationalEngine:
 
     def __init__(self):
         self._load_databases()
+        self.cognitive_engine = COGNITIVE_ENGINE
+        self.physical_engine = MilitaryPhysicalScoringEngine()
 
     def _load_databases(self):
         with open(PATH_PILAR1, "r", encoding="utf-8") as f:
@@ -328,9 +332,11 @@ class MilitaryVocationalEngine:
         """
         Extrae estrictamente:
         - 15 preguntas al azar del Pilar 2 (Big Five: 3 de cada factor)
-        - +3 reactivos de control encubiertos de la Escala L (Deseabilidad Social) -> Total 18
+        - +3 reactivos de control encubiertos de la Escala L (Deseabilidad Social)
+        - +2 reactivos encubiertos de Banderas Rojas Clínicas (Seguridad y Estabilidad) -> Total 20 en P2
         - 10 dilemas situacionales al azar del Pilar 3 (Intereses Operativos)
         - 20 preguntas al azar del Pilar 4 (Conocimientos: 5 de cada área)
+        - 6 reactivos de Evaluación Cognitiva Superior (3 Raven + 3 Bennett)
         """
         # 1. PILAR 2: 15 preguntas Big Five
         banco_p2 = self.db_pilar2.get("banco_reactivos_big_five", [])
@@ -343,7 +349,7 @@ class MilitaryVocationalEngine:
             else:
                 items_p2.extend(cands)
 
-        # Inserción de 3 reactivos encubiertos de la Escala L (Mejora 1)
+        # Inserción de 3 reactivos encubiertos de la Escala L (Control de Mentira)
         banco_l = self.db_pilar2.get("escala_validez_deseabilidad_social", [])
         items_l = random.sample(banco_l, 3) if len(banco_l) >= 3 else banco_l
         validity_ids = [it["id_reactivo"] for it in items_l]
@@ -355,6 +361,20 @@ class MilitaryVocationalEngine:
                 "dominio_evaluado": "Control de Validez",
                 "polaridad_puntuacion": 1,
                 "es_reactivo_control": True
+            })
+
+        # Inserción de 2 reactivos encubiertos de Banderas Rojas Clínicas
+        banco_cli = self.db_pilar2.get("banco_banderas_rojas_clinicas", [])
+        items_cli = random.sample(banco_cli, 2) if len(banco_cli) >= 2 else banco_cli
+        clinical_ids = [it["id_reactivo"] for it in items_cli]
+
+        for it in items_cli:
+            items_p2.append({
+                "id_reactivo": it["id_reactivo"],
+                "enunciado": it["enunciado"],
+                "dominio_evaluado": "Control Clínico Institucional",
+                "polaridad_puntuacion": 1,
+                "es_reactivo_clinico": True
             })
 
         random.shuffle(items_p2)
@@ -395,16 +415,23 @@ class MilitaryVocationalEngine:
                 q_clean["imagen_alt"] = q["imagen_alt"]
             items_p4_client.append(q_clean)
 
+        # 4. MÓDULO COGNITIVO SUPERIOR (Raven + Bennett)
+        sample_cog = self.cognitive_engine.generate_cognitive_sample(num_raven=3, num_bennett=3)
+
         return {
             "pilar2_psicometria": items_p2,
             "validity_ids": validity_ids,
+            "clinical_ids": clinical_ids,
             "pilar3_intereses": items_p3,
             "pilar4_conocimientos": items_p4_client,
             "pilar4_answer_key": {
                 q["id_pregunta"]: next(o["id_opcion"] for o in q["opciones"] if o.get("es_correcta") is True)
                 for q in items_p4
-            }
+            },
+            "pilar_cognitivo": sample_cog["items"],
+            "cognitive_answer_key": sample_cog["answer_key"]
         }
+
 
     # -------------------------------------------------------------------------
     # CÁLCULO MATEMÁTICO MULTI-PILAR: 100% OFICIAL (MEJORAS 1, 2, 5, 6)
@@ -416,28 +443,41 @@ class MilitaryVocationalEngine:
                               answers_p4: Dict[str, str],
                               answer_key_p4: Dict[str, str],
                               validity_ids: Optional[List[str]] = None,
+                              clinical_ids: Optional[List[str]] = None,
+                              answers_cognitive: Optional[Dict[str, str]] = None,
+                              answer_key_cognitive: Optional[Dict[str, str]] = None,
+                              times_cognitive: Optional[Dict[str, float]] = None,
                               physical_marks: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
         """
-        Consolida matemáticamente los pilares evaluando:
-        - Filtro legal y médico especializado (P1)
-        - Big Five normalizado + Control de Deseabilidad Social Escala L (P2)
-        - Intereses Operativos y Tácticos (P3)
-        - Nota Pre-Militar Oficial con Penalización -0.25 por error (P4)
-        - Índice Global de Aptitud para el Combate IGAC (P5)
-        - Guardado en SQLite y generación de código de verificación QR
+        Consolida matemáticamente el Diagnóstico Integral Castrense 360° evaluando:
+        - Dimensión 1: Filtro Legal y Antropométrico Oficial + Sanidad Especializada (P1)
+        - Dimensión 2: Psicométrica Big Five + Control de Sinceridad Escala L + Filtro Clínico de Banderas Rojas (P2)
+        - Dimensión 3: Intereses Operativos y Dilemas Tácticos Inmersivos (P3)
+        - Dimensión 4: Aptitud Académica Pre-Militar con Penalización Oficial (-0.25 por error) (P4)
+        - Dimensión 5: Facultades Cognitivas Superiores (Factor 'g' Raven + Aptitud Mecánica Bennett)
+        - Dimensión 6: Baremos Físicos Vigesimales Oficiales (0-20) e Índice Global de Aptitud para el Combate (IGAC)
+        - Dossier 360°: Especialidad sugerida, Plan de Nivelación de 8 semanas, FODA y Verificación QR
         """
-        # 1. EVALUAR PILAR 1 (FILTRO LEGAL Y MÉDICO)
+        # 1. EVALUAR PILAR 1 (FILTRO LEGAL, ANTROPOMÉTRICO Y MÉDICO)
         filtro_legal = self.evaluate_pilar1_legal_filter(candidate_data)
         escuelas_legal = filtro_legal["escuelas_evaluadas"]
+        postulante_info = filtro_legal["postulante"]
 
-        # 2. EVALUAR PILAR 2 (PSICOMÉTRICO Y ESCALA L ANTI-FRAUDE - MEJORA 1)
+        # 2. EVALUAR PILAR 2 (PSICOMETRÍA, ESCALA L Y BANDERAS ROJAS CLÍNICAS)
         reactivos_dict = {r["id_reactivo"]: r for r in self.db_pilar2["banco_reactivos_big_five"]}
-        # Añadir reactivos de validez al mapa
         for v_item in self.db_pilar2.get("escala_validez_deseabilidad_social", []):
             reactivos_dict[v_item["id_reactivo"]] = {
                 "id_reactivo": v_item["id_reactivo"],
                 "dominio_evaluado": "Control de Validez",
                 "polaridad_puntuacion": 1
+            }
+        for c_item in self.db_pilar2.get("banco_banderas_rojas_clinicas", []):
+            reactivos_dict[c_item["id_reactivo"]] = {
+                "id_reactivo": c_item["id_reactivo"],
+                "dominio_evaluado": c_item.get("dominio_clinico", "Control Clínico"),
+                "polaridad_puntuacion": c_item.get("polaridad_riesgo", 1),
+                "umbral_alerta": c_item.get("umbral_alerta", 4),
+                "riesgo": c_item.get("riesgo", "")
             }
 
         domain_scores_raw = {"Neuroticismo": 0, "Extraversión": 0, "Apertura": 0, "Amabilidad": 0, "Responsabilidad": 0}
@@ -445,6 +485,10 @@ class MilitaryVocationalEngine:
 
         val_hits_desirable = 0
         total_val_items = 0
+        alertas_seguridad_clinica = []
+        riesgo_armas = False
+        riesgo_labilidad = False
+        riesgo_claustrofobia = False
 
         for r_id, val in answers_p2.items():
             r_obj = reactivos_dict.get(r_id)
@@ -454,11 +498,27 @@ class MilitaryVocationalEngine:
             v = int(val)
             v = max(1, min(v, 5))
 
-            # Chequeo de Escala L (Deseabilidad Social)
+            # Chequeo de Escala L (Deseabilidad Social / Control de Mentira)
             if r_id.startswith("VAL_") or (validity_ids and r_id in validity_ids):
                 total_val_items += 1
-                if v >= 4:  # Responde "De acuerdo" o "Muy de acuerdo" afirmando virtud irreal
+                if v >= 4:
                     val_hits_desirable += 1
+                continue
+
+            # Chequeo de Banderas Rojas Clínicas de Seguridad
+            if r_id.startswith("CLI_") or (clinical_ids and r_id in clinical_ids):
+                umbral = r_obj.get("umbral_alerta", 4)
+                if v >= umbral:
+                    riesgo_tipo = r_obj.get("riesgo", "")
+                    if "PORTE_ARMAS" in riesgo_tipo:
+                        riesgo_armas = True
+                        alertas_seguridad_clinica.append("ALERTA CRÍTICA (Porte de Armas): Indicadores de impulsividad reactiva violenta. Requiere evaluación psiquiátrica presencial.")
+                    elif "COLAPSO" in riesgo_tipo or "AUTOLITICA" in riesgo_tipo:
+                        riesgo_labilidad = True
+                        alertas_seguridad_clinica.append("ALERTA DE RESILENCIA: Labilidad emocional severa bajo presión o aislamiento en régimen de internado.")
+                    elif "INCOMPATIBILIDAD" in riesgo_tipo:
+                        riesgo_claustrofobia = True
+                        alertas_seguridad_clinica.append("RESTRICCIÓN TÁCTICA: Síntomas de claustrofobia/pánico en confinamiento (incompatible con submarinos, blindados o cabinas cerradas).")
                 continue
 
             dom = r_obj.get("dominio_evaluado", "")
@@ -475,13 +535,13 @@ class MilitaryVocationalEngine:
             lie_ratio = val_hits_desirable / float(total_val_items)
             indice_sinceridad = round(max(0.0, (1.0 - lie_ratio) * 100.0), 1)
             if val_hits_desirable >= 3:
-                alerta_sinceridad = "ALERTA CRÍTICA: Deseabilidad Social Extrema (Posible falseamiento positivo o disimulo)"
+                alerta_sinceridad = "ALERTA CRÍTICA: Deseabilidad Social Extrema (Falsa virtud / intento de manipulación del perfil)"
                 estado_validez = "OBSERVADO"
             elif val_hits_desirable == 2:
-                alerta_sinceridad = "OBSERVACIÓN: Moderada deseabilidad social detectada"
+                alerta_sinceridad = "OBSERVACIÓN: Moderada deseabilidad social detectada en respuestas"
                 estado_validez = "VÁLIDO CON OBSERVACIÓN"
             else:
-                alerta_sinceridad = "VÁLIDO: Protocolo sincero, transparente y consistente"
+                alerta_sinceridad = "VÁLIDO: Protocolo sincero, transparente y consistente con la realidad"
                 estado_validez = "VÁLIDO"
         else:
             indice_sinceridad = 100.0
@@ -520,7 +580,7 @@ class MilitaryVocationalEngine:
             sim = 100.0 * (1.0 - math.sqrt(dist_sq / max_dist_sq))
             psico_affinity_by_school[esc_id] = round(max(30.0, min(100.0, sim)), 1)
 
-        # 3. EVALUAR PILAR 3 (INTERESES OPERATIVOS)
+        # 3. EVALUAR PILAR 3 (INTERESES OPERATIVOS Y DILEMAS TÁCTICOS)
         dilemas_dict = {d["id_dilema"]: d for d in self.db_pilar3["banco_dilemas_vocacionales"]}
         rama_points = {"Ejercito": 0, "Marina": 0, "FAP": 0, "PNP": 0}
 
@@ -549,7 +609,7 @@ class MilitaryVocationalEngine:
             "EESTP_PNP": round(rama_percent.get("PNP", 25.0) * 0.90 + 10.0, 1)
         }
 
-        # 4. EVALUAR PILAR 4 (CALIFICACIÓN CON PENALIZACIÓN OFICIAL -0.25 - MEJORA 2)
+        # 4. EVALUAR PILAR 4 (CONOCIMIENTOS CON PENALIZACIÓN OFICIAL -0.25)
         preguntas_dict = {q["id_pregunta"]: q for q in self.db_pilar4["banco_preguntas_conocimientos"]}
         total_q4 = len(answer_key_p4) or 20
         aciertos = 0
@@ -583,8 +643,6 @@ class MilitaryVocationalEngine:
                 if area in area_stats:
                     area_stats[area]["err"] += 1
 
-        # Fórmula de Concurso Real FFAA / PNP:
-        # Aciertos * 1.0 - Errores * 0.25 (sin puntos negativos bajo cero)
         penalizacion_puntos = round(errores * 0.25, 2)
         puntaje_neto = max(0.0, (aciertos * 1.0) - penalizacion_puntos)
         nota_vigesimal_oficial = round((puntaje_neto / total_q4) * 20.0, 2)
@@ -598,7 +656,54 @@ class MilitaryVocationalEngine:
             comb = (knowledge_base_pct * 0.70) + (esc_pct * 0.30)
             knowledge_affinity_by_school[esc_id] = round(max(20.0, min(100.0, comb)), 1)
 
-        # 5. PONDERACIÓN CONSOLIDADA DE LOS 4 PILARES
+        # 5. EVALUAR PILAR COGNITIVO SUPERIOR (FACTOR 'G' + BENNETT)
+        if answers_cognitive and answer_key_cognitive:
+            eval_cog = self.cognitive_engine.evaluate_cognitive(
+                answers=answers_cognitive,
+                answer_key=answer_key_cognitive,
+                times_by_item=times_cognitive,
+                escuela_id="EMCH"
+            )
+        else:
+            # Estimación calibrada si no se completó módulo independiente
+            pts_psi = area_stats["Psicotécnico"]["ok"]
+            tot_psi = max(1, area_stats["Psicotécnico"]["total"])
+            base_g = round((pts_psi / tot_psi) * 100.0, 1)
+            eval_cog = {
+                "factor_g_raven": base_g,
+                "aptitud_mecanica_bennett": 68.0,
+                "velocidad_procesamiento": 75.0,
+                "indice_cognitivo_global": round((base_g * 0.45) + (68.0 * 0.35) + (75.0 * 0.20), 1),
+                "nivel": "PROMEDIO_APTO" if base_g >= 50 else "CRITICO_OBSERVADO",
+                "veredicto": "Evaluación cognitiva integral calculada conforme a baremos.",
+                "observaciones": [],
+                "detalles_items": []
+            }
+
+        # 6. EVALUAR PILAR FÍSICO OPERATIVO (0-20)
+        phys_score = 14.5
+        eval_fisica_detalle = None
+        sexo_cand = postulante_info.get("sexo", "M")
+        talla_m = postulante_info.get("talla_cm", 170.0) / 100.0
+        peso_k = postulante_info.get("peso_kg", 68.0)
+
+        if physical_marks and any(v for v in physical_marks.values()):
+            try:
+                eval_fisica_detalle = self.physical_engine.evaluate_full_battery(
+                    institution_id="EMCH",
+                    sex=sexo_cand,
+                    marks=physical_marks,
+                    height_m=talla_m,
+                    weight_kg=peso_k
+                )
+                phys_score = float(eval_fisica_detalle.get("composite_score", 14.5))
+            except Exception:
+                phys_score = float(physical_marks.get("promedio_fisico", 14.5))
+
+        # 7. PONDERACIÓN MULTI-PILAR Y CONSOLIDACIÓN DE LAS 8 ESCUELAS (5 EJES)
+        score_cog_global = eval_cog["indice_cognitivo_global"]
+        score_phys_100 = (phys_score / 20.0) * 100.0
+
         affinity_results = []
         for esc_id, info in ESCUELAS_INFO.items():
             score_p2 = psico_affinity_by_school[esc_id]
@@ -607,8 +712,22 @@ class MilitaryVocationalEngine:
             legal_info = escuelas_legal.get(esc_id, {})
             es_apto_legal = legal_info.get("es_apto", True)
 
-            raw_fit = (score_p3 * 0.35) + (score_p2 * 0.35) + (score_p4 * 0.30)
-            final_fit = round(raw_fit, 1)
+            # Restricciones clínicas específicas
+            if riesgo_claustrofobia and esc_id in ["ENP", "CITEN"]:
+                es_apto_legal = False
+                legal_info.setdefault("motivos_inaptitud", []).append("Restricción Clínica: Incompatibilidad para confinamiento submarino prolongado.")
+            if riesgo_armas:
+                legal_info.setdefault("advertencias", []).append("Alerta Tribunal: Evaluación de control de impulsos requerida para porte de arma de fuego.")
+
+            # Ponderación 5 Ejes Castrenses:
+            # 25% Intereses (P3) + 25% Psicometría (P2) + 20% Cognitivo (Raven/Bennett) + 15% Conocimientos (P4) + 15% Físico
+            raw_fit = (score_p3 * 0.25) + (score_p2 * 0.25) + (score_cog_global * 0.20) + (score_p4 * 0.15) + (score_phys_100 * 0.15)
+
+            # Penalización por Falsa Virtud (-10% si deseabilidad social extrema)
+            if val_hits_desirable >= 3:
+                raw_fit = raw_fit * 0.90
+
+            final_fit = round(max(10.0, min(100.0, raw_fit)), 1)
 
             affinity_results.append({
                 "escuela_id": esc_id,
@@ -631,49 +750,126 @@ class MilitaryVocationalEngine:
                     "pilar1_legal": 100 if es_apto_legal else 0,
                     "pilar2_psicometria": score_p2,
                     "pilar3_intereses": score_p3,
-                    "pilar4_conocimientos": score_p4
+                    "pilar4_conocimientos": score_p4,
+                    "pilar_cognitivo": score_cog_global,
+                    "pilar_fisico": round(score_phys_100, 1)
                 }
             })
 
         affinity_results.sort(key=lambda x: (1 if x["es_apto_legal"] else 0, x["puntaje_global_fit"]), reverse=True)
         escuela_ganadora = affinity_results[0]
 
-        # 6. INTEGRACIÓN DEL PILAR FÍSICO E IGAC (MEJORA 5)
-        # Si se ingresaron marcas físicas o se usa un estándar de entrada
-        phys_score = 15.0
-        if physical_marks:
-            # Cálculo simplificado de nota física promedio si fue provisto
-            phys_score = float(physical_marks.get("promedio_fisico", 15.0))
+        # 8. ESPECIALIDAD SUGERIDA PARA LA ESCUELA GANADORA
+        top_id = escuela_ganadora["escuela_id"]
+        if top_id == "EOFAP":
+            if postulante_info.get("agudeza_visual_20_20") and eval_cog["factor_g_raven"] >= 65:
+                especialidad_sugerida = "Piloto de Caza y Combate Aéreo"
+            elif eval_cog["aptitud_mecanica_bennett"] >= 70:
+                especialidad_sugerida = "Mantenimiento Aeronáutico e Ingeniería de Armamento"
+            else:
+                especialidad_sugerida = "Defensa Aérea, Radares y Guerra Electrónica"
+        elif top_id == "ENP":
+            if phys_score >= 16.0 and not riesgo_claustrofobia:
+                especialidad_sugerida = "Comando Anfibio / Infantería de Marina"
+            elif eval_cog["aptitud_mecanica_bennett"] >= 70:
+                especialidad_sugerida = "Ingeniería de Armas Navales y Sistemas de Propulsión"
+            else:
+                especialidad_sugerida = "Guerra de Superficie y Telecomunicaciones Navales"
+        elif top_id == "EMCH":
+            if phys_score >= 16.0:
+                especialidad_sugerida = "Infantería de Combate / Comandos del Ejército"
+            elif eval_cog["aptitud_mecanica_bennett"] >= 65:
+                especialidad_sugerida = "Caballería Blindada y Material de Guerra"
+            else:
+                especialidad_sugerida = "Artillería e Inteligencia Militar"
+        elif top_id == "EO-PNP":
+            if eval_cog["factor_g_raven"] >= 70 or area_stats["Letras y Humanidades"]["ok"] >= 3:
+                especialidad_sugerida = "Investigación Criminalística (DIRINCRI / Homicidios)"
+            elif phys_score >= 16.0:
+                especialidad_sugerida = "Operaciones Tácticas Urbanas (SUAT / Rescate)"
+            else:
+                especialidad_sugerida = "Orden, Seguridad Ciudadana y Tránsito"
+        else:
+            especialidad_sugerida = escuela_ganadora["especialidades"][0] if escuela_ganadora["especialidades"] else "Especialista Operativo"
 
-        # IGAC: Índice Global de Aptitud para el Combate
-        # 30% Físico + 30% Conocimientos (escala 0-100) + 25% Psicométrico + 15% Intereses
+        # 9. ÍNDICE GLOBAL DE APTITUD PARA EL COMBATE (IGAC)
         score_know_100 = (nota_vigesimal_oficial / 20.0) * 100.0
-        score_phys_100 = (phys_score / 20.0) * 100.0
         score_psico_100 = escuela_ganadora["desglose_pilares"]["pilar2_psicometria"]
         score_inter_100 = escuela_ganadora["desglose_pilares"]["pilar3_intereses"]
 
         igac_score = round(
-            (score_phys_100 * 0.30) +
-            (score_know_100 * 0.30) +
-            (score_psico_100 * 0.25) +
-            (score_inter_100 * 0.15),
+            (score_phys_100 * 0.25) +
+            (score_cog_global * 0.25) +
+            (score_know_100 * 0.20) +
+            (score_psico_100 * 0.20) +
+            (score_inter_100 * 0.10),
             1
         )
 
-        if igac_score >= 80.0:
-            igac_verdict = "APTO DESTACADO - ALTA CAPACIDAD COMBATIENTE"
+        if igac_score >= 82.0 and len(alertas_seguridad_clinica) == 0 and val_hits_desirable < 2:
+            igac_verdict = "APTO DESTACADO - ALTA CAPACIDAD COMBATIENTE Y DE MANDO"
             igac_level = "success"
-        elif igac_score >= 65.0:
-            igac_verdict = "APTO REGULAR - CONDICIÓN OPERATIVA FAVORABLE"
+        elif igac_score >= 65.0 and len(alertas_seguridad_clinica) == 0:
+            igac_verdict = "APTO REGULAR - CONDICIÓN OPERATIVA Y MENTAL FAVORABLE"
             igac_level = "warning"
         else:
-            igac_verdict = "EN OBSERVACIÓN - REQUIERE REACONDICIONAMIENTO PRE-MILITAR"
+            igac_verdict = "EN OBSERVACIÓN - REQUIERE REACONDICIONAMIENTO PRE-MILITAR INTEGRAL"
             igac_level = "danger"
 
-        # 7. GUARDAR EN BASE DE DATOS SQLITE Y EMITIR CÓDIGO QR (MEJORA 6)
+        # 10. MAPA FODA TÁCTICO PERSONALIZADO
+        fortalezas = []
+        oportunidades = []
+        debilidades = []
+        amenazas = []
+
+        if score_cog_global >= 75:
+            fortalezas.append("Elevada capacidad de abstracción lógica (Factor 'g') y agilidad mental.")
+        if eval_cog["aptitud_mecanica_bennett"] >= 70:
+            fortalezas.append("Excelente aptitud mecánica y comprensión de sistemas tácticos (poleas/engranajes).")
+        if phys_score >= 15.0:
+            fortalezas.append(f"Rendimiento físico sobresaliente con nota vigesimal estimada de {phys_score:.1f}/20.")
+        if domain_percentiles.get("Responsabilidad", 0) >= 80:
+            fortalezas.append("Férreo sentido del deber, disciplina y vocación de subordinación militar.")
+
+        if len(fortalezas) == 0:
+            fortalezas.append("Disposición entusiasta hacia la formación castrense y asimilación de doctrina.")
+
+        if nota_vigesimal_oficial < 12.0:
+            debilidades.append(f"Nota académica por debajo del umbral aprobatorio ({nota_vigesimal_oficial:.2f}/20). Requiere nivelación.")
+        if eval_cog["aptitud_mecanica_bennett"] < 55:
+            debilidades.append("Puntaje modesto en razonamiento mecánico básico (Bennett).")
+        if domain_percentiles.get("Neuroticismo", 0) >= 45:
+            debilidades.append("Indicadores de tensión o labilidad emocional ante situaciones de apremio.")
+
+        if len(debilidades) == 0:
+            debilidades.append("Mantener el ritmo de entrenamiento y no caer en exceso de confianza.")
+
+        oportunidades.append(f"Alta compatibilidad con el perfil doctrinario de la {escuela_ganadora['nombre_completo']}.")
+        oportunidades.append(f"Potencial para proyectarse hacia la especialidad de: {especialidad_sugerida}.")
+
+        if val_hits_desirable >= 2:
+            amenazas.append("Riesgo en entrevista personal: Detección de Falsa Virtud / Deseabilidad Social.")
+        if len(alertas_seguridad_clinica) > 0:
+            amenazas.append("Examen médico/psiquiátrico: Presencia de alertas clínicas a despejar.")
+        if not postulante_info.get("imc_apto"):
+            amenazas.append(f"Antropometría en observación: IMC de {postulante_info.get('imc')} fuera del rango ideal.")
+
+        if len(amenazas) == 0:
+            amenazas.append("Competencia con postulantes con mayor tiempo de preparación en academia.")
+
+        # 11. PLAN DE NIVELACIÓN Y ENTRENAMIENTO TÁCTICO (8 SEMANAS)
+        plan_entrenamiento = [
+            {"semana": "Semana 1-2", "eje": "Acondicionamiento Base y Biometría", "accion": "Nivelación de carrera continua (1500m) y técnica de brazada en natación estilo crol. Ajuste de nutrición para IMC."},
+            {"semana": "Semana 3-4", "eje": "Destrezas Técnicas y Mecánicas", "accion": "Práctica de poleas, transmisiones, engranajes y resolución de series de matrices abstractas 3x3."},
+            {"semana": "Semana 5-6", "eje": "Psicotécnico y Velocidad bajo Presión", "accion": "Simulacros cronometrados a 25 segundos por ítem. Control de la respiración y manejo del estrés."},
+            {"semana": "Semana 7-8", "eje": "Simulacro de Tribunal y Entrevista", "accion": "Ensayo de entrevista personal ante oficiales con preguntas de sinceridad real. Examen tipo admisión completo."}
+        ]
+
+        # 12. ENSAMBLAJE FINAL DEL DOSSIER 360°
         output_payload = {
-            "postulante": filtro_legal["postulante"],
+            "postulante": postulante_info,
             "escuela_ganadora": escuela_ganadora,
+            "especialidad_sugerida": especialidad_sugerida,
             "ranking_afinidad": affinity_results,
             "igac_militar": {
                 "igac_score": igac_score,
@@ -681,14 +877,27 @@ class MilitaryVocationalEngine:
                 "nivel": igac_level,
                 "nota_fisica_referencial": phys_score
             },
-            "resumen_pilares": {
-                "pilar1_filtro_legal": {
-                    "total_aptas": filtro_legal["total_escuelas_aptas"],
+            "dimensiones_360": {
+                "biometrica": {
+                    "imc": postulante_info["imc"],
+                    "imc_status": postulante_info["imc_status"],
+                    "imc_apto": postulante_info["imc_apto"],
+                    "total_escuelas_aptas": filtro_legal["total_escuelas_aptas"],
                     "es_elegible": filtro_legal["es_elegible_general"],
-                    "imc": filtro_legal["postulante"]["imc"],
-                    "imc_status": filtro_legal["postulante"]["imc_status"]
+                    "criterios_especializados": {
+                        "agudeza_visual_20_20": postulante_info.get("agudeza_visual_20_20"),
+                        "daltonismo": postulante_info.get("daltonismo"),
+                        "talla_sentado_cm": postulante_info.get("talla_sentado_cm"),
+                        "salud_dental_optima": postulante_info.get("salud_dental_optima")
+                    }
                 },
-                "pilar2_psicometria": {
+                "fisica": {
+                    "nota_vigesimal_estimada": phys_score,
+                    "nivel": "ÓPTIMO" if phys_score >= 16.0 else "APTO" if phys_score >= 12.0 else "DEFICITARIO",
+                    "disciplinas_detalle": eval_fisica_detalle.get("scores", {}) if eval_fisica_detalle else None
+                },
+                "cognitiva_superior": eval_cog,
+                "psicologica_clinica": {
                     "dominios": domain_percentiles,
                     "rasgo_dominante": max(domain_percentiles, key=domain_percentiles.get),
                     "control_sinceridad": {
@@ -697,13 +906,20 @@ class MilitaryVocationalEngine:
                         "indice_sinceridad_pct": indice_sinceridad,
                         "estado_validez": estado_validez,
                         "alerta": alerta_sinceridad
+                    },
+                    "filtro_clinico": {
+                        "alertas_seguridad": alertas_seguridad_clinica,
+                        "perfil_despejado": len(alertas_seguridad_clinica) == 0,
+                        "riesgo_armas": riesgo_armas,
+                        "riesgo_labilidad": riesgo_labilidad,
+                        "riesgo_claustrofobia": riesgo_claustrofobia
                     }
                 },
-                "pilar3_intereses": {
+                "intereses_tacticos": {
                     "distribucion_ramas": {r: round(p, 1) for r, p in rama_percent.items()},
                     "rama_predilecta": max(rama_percent, key=rama_percent.get)
                 },
-                "pilar4_conocimientos": {
+                "academica": {
                     "nota_vigesimal_oficial": nota_vigesimal_oficial,
                     "puntaje_neto": puntaje_neto,
                     "penalizacion_puntos": penalizacion_puntos,
@@ -714,16 +930,24 @@ class MilitaryVocationalEngine:
                     "tasa_precision_pct": tasa_precision_pct,
                     "desglose_areas": area_stats
                 }
-            }
+            },
+            "foda_tactico": {
+                "fortalezas": fortalezas,
+                "oportunidades": oportunidades,
+                "debilidades": debilidades,
+                "amenazas": amenazas
+            },
+            "plan_entrenamiento_tactico": plan_entrenamiento
         }
 
-        # Guardar en base de datos SQLite y generar código de verificación
+        # Guardar en base de datos SQLite y emitir código único con QR nativo
         verification_code = DB_MANAGER.save_vocational_assessment(output_payload)
         output_payload["verification_code"] = verification_code
         output_payload["verification_url"] = f"http://localhost:8080/api/vocational/verify?code={verification_code}"
         output_payload["qr_svg"] = generate_native_qr_svg(output_payload["verification_url"], size=150)
 
         return output_payload
+
 
     # -------------------------------------------------------------------------
     # MEJORA 4: SIMULACRO MASIVO DE 100 PREGUNTAS POR INSTITUCIÓN

@@ -111,9 +111,13 @@ export default function EntrenamientoPage() {
         <div className="absolute top-0 right-0 w-96 h-96 bg-cyan-500/15 rounded-full blur-3xl pointer-events-none z-10" />
 
         <div className="relative z-20 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0B101E]/90 border border-neon-cyan/50 text-neon-cyan text-xs sm:text-sm font-rajdhani font-bold tracking-widest uppercase shadow-cyan-glow">
-            <Compass className="w-4 h-4 text-neon-cyan flex-shrink-0" />
-            <span>CENTRO DE ENTRENAMIENTO TÁCTICO · PREPARACIÓN INTEGRAL 2026</span>
+          <div className="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-full bg-[#0B101E]/90 border border-neon-cyan/50 text-neon-cyan text-xs sm:text-sm font-rajdhani font-bold tracking-wider sm:tracking-widest uppercase shadow-cyan-glow max-w-full">
+            <Compass className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-neon-cyan shrink-0" />
+            <span className="truncate">
+              <span className="hidden md:inline">CENTRO DE ENTRENAMIENTO TÁCTICO · PREPARACIÓN INTEGRAL 2026</span>
+              <span className="hidden sm:inline md:hidden">CENTRO DE ENTRENAMIENTO TÁCTICO 2026</span>
+              <span className="sm:hidden">ENTRENAMIENTO TÁCTICO 2026</span>
+            </span>
           </div>
 
           <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-sans font-black text-white uppercase tracking-tight leading-tight max-w-4xl text-balance">
@@ -393,9 +397,9 @@ export default function EntrenamientoPage() {
       {/* ========================================================= */}
       {(activeTab === 'all' || activeTab === 'fisico') && (
         <div className="space-y-6">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-200 dark:border-gray-800 pb-3">
+          <div className="flex flex-col xl:flex-row xl:items-center justify-between gap-3 border-b border-slate-200 dark:border-gray-800 pb-3">
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-600 dark:text-emerald-400">
+              <div className="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-600 dark:text-emerald-400 flex-shrink-0">
                 <Dumbbell className="w-5 h-5" />
               </div>
               <div>
@@ -408,8 +412,8 @@ export default function EntrenamientoPage() {
               </div>
             </div>
 
-            {/* Selector de Escuela para Baremos Responsivo */}
-            <div className="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0 scrollbar-none">
+            {/* Selector de Escuela para Baremos Responsivo (Envuelto en flex-wrap para tablet y móvil) */}
+            <div className="flex flex-wrap items-center gap-1.5 pt-1 xl:pt-0 max-w-full">
               {['EMCH', 'EOFAP', 'ENP', 'EO_PNP', 'CITEN', 'ESOFA', 'ETE', 'EESTP_PNP'].map((key) => {
                 const isSelected = selectedSchoolKey === key;
                 return (
@@ -439,8 +443,8 @@ export default function EntrenamientoPage() {
                 {/* Imagen 16:9 Oficial del Trote Cooper Militar */}
                 <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-slate-900 mb-3 border border-slate-200 dark:border-slate-800 shadow-inner">
                   <img
-                    src="/assets/general/cadets-physical-training.jpg"
-                    alt="Trote de Cooper 2,400m Militar"
+                    src="/assets/general/physical-test-cooper.jpg"
+                    alt="Prueba de Resistencia Aeróbica - Trote de Cooper 2,400m Militar en Pista"
                     className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
@@ -697,9 +701,10 @@ export default function EntrenamientoPage() {
 
         <Link
           href="/"
-          className="px-6 py-3 rounded-xl bg-gradient-to-r from-neon-cyan to-blue-600 text-night-deep font-rajdhani font-black text-xs uppercase tracking-wider shadow-md hover:scale-[1.02] transition-transform whitespace-nowrap"
+          className="w-full sm:w-auto px-6 py-3 rounded-xl bg-gradient-to-r from-neon-cyan to-blue-600 text-night-deep font-rajdhani font-black text-xs uppercase tracking-wider shadow-md hover:scale-[1.02] transition-transform whitespace-nowrap text-center flex items-center justify-center gap-2"
         >
-          Ir al Test Vocacional &rarr;
+          <span>Ir al Test Vocacional</span>
+          <span className="font-sans font-bold">&rarr;</span>
         </Link>
       </div>
 
